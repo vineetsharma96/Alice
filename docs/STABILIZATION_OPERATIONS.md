@@ -28,7 +28,7 @@ The call limit is per inhabitant for the lifetime of this controller state. Re-r
 Pause/stop the current writer first. Preserve the original with a named SQLite backup, then explicitly hand the backup to the new controller:
 
 ```powershell
-# Replace the source filename with a compatible UW6/DB7 run you own.
+# Replace the source filename with a compatible current UW7/DB8 run you own. Historical UW6/DB7 runs require their original pinned runtime and are not migrated.
 .venv/Scripts/python.exe -c "from underworld import storage; storage.save('data/your-run.sqlite', 'stabilization_handoff', 'data/stabilized-existing.sqlite')"
 .venv/Scripts/python.exe -m underworld.stabilization attach --db data/stabilized-existing.sqlite --calls 0
 .venv/Scripts/python.exe -m underworld.stabilization run --db data/stabilized-existing.sqlite --seconds 120
