@@ -1,0 +1,4823 @@
+{
+  "config": {
+    "schema_version": 1,
+    "seed": 20261020,
+    "mode": "closed",
+    "world": {
+      "width_m": 16.0,
+      "height_m": 16.0,
+      "dt_s": 0.2,
+      "population": 4,
+      "population_limit": 8
+    },
+    "cognition": {
+      "provider": "disabled",
+      "interval_ticks": 50,
+      "max_concurrency": 1,
+      "max_input_tokens": 1024,
+      "max_output_tokens": 128,
+      "timeout_s": 10.0,
+      "calls_per_simulated_day": 24
+    },
+    "logging": {
+      "level": "INFO",
+      "event_retention_count": 10000,
+      "max_payload_bytes": 16384
+    },
+    "agency": {
+      "bodies_enabled": true,
+      "policy": "none",
+      "interval_ticks": 25,
+      "food_kg": 8.0,
+      "water_kg": 16.0,
+      "food_regen_kg_s": 0.0,
+      "water_regen_kg_s": 0.0,
+      "tree_growth_kg_s": 0.005
+    }
+  },
+  "stages": [
+    {
+      "status": "target_reached",
+      "initial_tick": "0",
+      "tick": "10",
+      "simulated_s": 2.0,
+      "wall_s": 1.3951020000022254,
+      "state_hash": "aeba299d55b6b5590cfba89af8ba6ab1568734332181835632724c864089c446",
+      "replay": {
+        "replay_matches": true,
+        "tick": "10",
+        "state_hash": "aeba299d55b6b5590cfba89af8ba6ab1568734332181835632724c864089c446"
+      }
+    },
+    {
+      "status": "target_reached",
+      "initial_tick": "10",
+      "tick": "50",
+      "simulated_s": 8.0,
+      "wall_s": 6.65841619999992,
+      "state_hash": "055eb5a2814ccdecd6363f0831cd97fa1886eeea00ab2890bd174d722727e9f1",
+      "replay": {
+        "replay_matches": true,
+        "tick": "50",
+        "state_hash": "055eb5a2814ccdecd6363f0831cd97fa1886eeea00ab2890bd174d722727e9f1"
+      }
+    },
+    {
+      "status": "target_reached",
+      "initial_tick": "50",
+      "tick": "150",
+      "simulated_s": 20.0,
+      "wall_s": 20.73138490000565,
+      "state_hash": "b6a4e537cea623ca3ab23b14bf560c5055a55f57ab298f305a1fc1f612457cfc",
+      "replay": {
+        "replay_matches": true,
+        "tick": "150",
+        "state_hash": "b6a4e537cea623ca3ab23b14bf560c5055a55f57ab298f305a1fc1f612457cfc"
+      }
+    },
+    {
+      "status": "target_reached",
+      "initial_tick": "150",
+      "tick": "600",
+      "simulated_s": 90.0,
+      "wall_s": 78.19595620000473,
+      "state_hash": "f0717cbdb8187206b48b15fe17c1ceea0951593cd11d83854d9a05c6cc0ce56d",
+      "replay": {
+        "replay_matches": true,
+        "tick": "600",
+        "state_hash": "f0717cbdb8187206b48b15fe17c1ceea0951593cd11d83854d9a05c6cc0ce56d"
+      }
+    }
+  ],
+  "model_calls": 0,
+  "db": "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\data\\living-world-c-four-release-20261020\\run.sqlite",
+  "backup": "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\data\\living-world-c-four-release-20261020\\resumed.sqlite",
+  "note": "One continuous four-inhabitant world. Finite food/water; no resets. Tree growth has an explicit biomass boundary source.",
+  "primary_wall_s": 107.25043439999718,
+  "final": {
+    "schema_version": 1,
+    "kind": "world_snapshot",
+    "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+    "culture": {
+      "enabled": false,
+      "skills": {},
+      "agreements": [],
+      "validated_batches": [],
+      "departed": []
+    },
+    "branch_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+    "tick": "600",
+    "observation_version": "600",
+    "last_event_seq": "638",
+    "seed": "20261020",
+    "dt_s": 0.2,
+    "simulated_time_s": 120.0,
+    "laws_version": "culture-6/65b8a96c1136",
+    "thermal": {
+      "enabled": false,
+      "open_boundaries": false,
+      "cells": [],
+      "ambient_temperature_k": 0.0,
+      "stored_energy_j": 0.0,
+      "initial_energy_j": 0.0,
+      "heater_input_j": 0.0,
+      "radiation_in_j": 0.0,
+      "radiation_out_j": 0.0,
+      "outflow_energy_j": 0.0,
+      "solar_transferred_j": 0.0,
+      "burned_fuel_ug": "0",
+      "outflow_water_ug": "0",
+      "balance_error_j": 0.0,
+      "global_balance_error_j": 0.0,
+      "energy_tolerance_j": 1e-05
+    },
+    "build_id": "8c10de9ec672c0fd37baf6a7262d96a234ee7341b9bf0523d3a63dbb84cc35af",
+    "world_bounds_m": {
+      "width": 16.0,
+      "height": 16.0
+    },
+    "entities": [
+      {
+        "entity_id": "terrain-1",
+        "kind": "rock",
+        "position_m": [
+          8.0,
+          8.0
+        ],
+        "radius_m": 1.0,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "tree-1",
+        "kind": "tree",
+        "position_m": [
+          2.0,
+          14.0
+        ],
+        "radius_m": 0.6,
+        "mass_kg": 2.6,
+        "mass_ug": "2600000000",
+        "stage": "young",
+        "health": 1.0,
+        "biomass_ug": "2600000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "tree-2",
+        "kind": "tree",
+        "position_m": [
+          14.0,
+          2.0
+        ],
+        "radius_m": 0.6,
+        "mass_kg": 8.0,
+        "mass_ug": "8000000000",
+        "stage": "mature",
+        "health": 1.0,
+        "biomass_ug": "8000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "tree-3",
+        "kind": "tree",
+        "position_m": [
+          14.0,
+          14.0
+        ],
+        "radius_m": 0.6,
+        "mass_kg": 8.0,
+        "mass_ug": "8000000000",
+        "stage": "mature",
+        "health": 1.0,
+        "biomass_ug": "8000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "agent-1",
+        "kind": "actor",
+        "position_m": [
+          2.0,
+          3.0
+        ],
+        "radius_m": 0.25,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "workmanship": 0,
+        "inventory_ug": {
+          "water": "0"
+        },
+        "alive": true,
+        "body": {
+          "hunger": 0.46999999999998676,
+          "thirst": 0.0771,
+          "fatigue": 0.2959999999999961,
+          "health": 1.0,
+          "alive": true,
+          "food_ingested_ug": "0",
+          "water_ingested_ug": "300000000"
+        },
+        "present": true
+      },
+      {
+        "entity_id": "agent-2",
+        "kind": "actor",
+        "position_m": [
+          3.3711677830671776,
+          3.035487555122222
+        ],
+        "radius_m": 0.25,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "workmanship": 0,
+        "inventory_ug": {
+          "water": "0"
+        },
+        "alive": true,
+        "body": {
+          "hunger": 0.46999999999998676,
+          "thirst": 0.07320000000000007,
+          "fatigue": 0.2970399999999964,
+          "health": 1.0,
+          "alive": true,
+          "food_ingested_ug": "0",
+          "water_ingested_ug": "300000000"
+        },
+        "present": true
+      },
+      {
+        "entity_id": "agent-3",
+        "kind": "actor",
+        "position_m": [
+          4.089572499564005,
+          1.7276068751089988
+        ],
+        "radius_m": 0.25,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "workmanship": 0,
+        "inventory_ug": {
+          "water": "0"
+        },
+        "alive": true,
+        "body": {
+          "hunger": 0.46999999999998676,
+          "thirst": 0.06480000000000022,
+          "fatigue": 0.2992799999999971,
+          "health": 1.0,
+          "alive": true,
+          "food_ingested_ug": "0",
+          "water_ingested_ug": "300000000"
+        },
+        "present": true
+      },
+      {
+        "entity_id": "agent-4",
+        "kind": "actor",
+        "position_m": [
+          3.843438982190042,
+          2.70612370256367
+        ],
+        "radius_m": 0.25,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "workmanship": 0,
+        "inventory_ug": {
+          "water": "0"
+        },
+        "alive": true,
+        "body": {
+          "hunger": 0.46999999999998676,
+          "thirst": 0.06990000000000013,
+          "fatigue": 0.2979199999999967,
+          "health": 1.0,
+          "alive": true,
+          "food_ingested_ug": "0",
+          "water_ingested_ug": "300000000"
+        },
+        "present": true
+      },
+      {
+        "entity_id": "resource-1",
+        "kind": "food",
+        "position_m": [
+          2.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 8.0,
+        "mass_ug": "8000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "resource-2",
+        "kind": "water",
+        "position_m": [
+          3.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 14.8,
+        "mass_ug": "14800000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "resource-3",
+        "kind": "inert_material",
+        "position_m": [
+          4.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 32.0,
+        "mass_ug": "32000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "resource-4",
+        "kind": "stone",
+        "position_m": [
+          5.0,
+          2.0
+        ],
+        "radius_m": 0.15,
+        "mass_kg": 4.0,
+        "mass_ug": "4000000000",
+        "inventory_ug": {}
+      }
+    ],
+    "outstanding_actions": [],
+    "material_totals_ug": {
+      "food": "8000000000",
+      "fuel_X": "0",
+      "inert_material": "32000000000",
+      "oxygen": "0",
+      "product_P": "0",
+      "stone": "4000000000",
+      "tree": "18600000000",
+      "water": "16000000000"
+    },
+    "event_counts": {
+      "action_accepted": 15,
+      "action_completed": 15,
+      "consumption": 4,
+      "mass_transfer": 4,
+      "tick": 600
+    },
+    "solar_input_j": 13381.703659189312,
+    "environment_energy_j": 13381.703659189312,
+    "operator_energy_input_j": 0.0,
+    "operator_sources_ug": {
+      "food": 0,
+      "fuel_X": 0,
+      "inert_material": 0,
+      "oxygen": 0,
+      "product_P": 0,
+      "stone": 0,
+      "water": 0
+    },
+    "mode": "closed",
+    "hearing_range_m": 6.0,
+    "sunlight_w_m2": 0.8726535498373935,
+    "scripted": false,
+    "next_script_tick": "0",
+    "bodies_enabled": true,
+    "initial_mass_ug": {
+      "food": 8000000000,
+      "fuel_X": 0,
+      "inert_material": 32000000000,
+      "oxygen": 0,
+      "product_P": 0,
+      "stone": 4000000000,
+      "tree": 18000000000,
+      "water": 16000000000
+    },
+    "boundary_sources_ug": {
+      "food": 0,
+      "fuel_X": 0,
+      "inert_material": 0,
+      "oxygen": 0,
+      "product_P": 0,
+      "stone": 0,
+      "tree": 600000000,
+      "water": 0
+    },
+    "config_hash": "4f6f9812b8e8a731425e1588543732e4be347f817e39881b43a41b72fbe3d94f",
+    "state_hash": "f0717cbdb8187206b48b15fe17c1ceea0951593cd11d83854d9a05c6cc0ce56d",
+    "parent_branch_id": null,
+    "interventions": 0,
+    "retained_events": 638,
+    "recorded_decisions": 15,
+    "cognitive_hash": "4429448ae317baf9963612fffe0d9ef4c86ae2575adb0ef6a24ae3666bab271f",
+    "cognition_calls": 0,
+    "episodes": 15
+  },
+  "child_returncode": 0,
+  "child_wall_s": 77.82826190000196,
+  "child_result": {
+    "status": "target_reached",
+    "initial_tick": "150",
+    "tick": "600",
+    "simulated_s": 90.0,
+    "wall_s": 77.31523029999516,
+    "state_hash": "f0717cbdb8187206b48b15fe17c1ceea0951593cd11d83854d9a05c6cc0ce56d",
+    "replay": {
+      "replay_matches": true,
+      "tick": "600",
+      "state_hash": "f0717cbdb8187206b48b15fe17c1ceea0951593cd11d83854d9a05c6cc0ce56d"
+    }
+  },
+  "native_resume_matches": true,
+  "memory_and_scheduler_tables_match": {
+    "identities": true,
+    "episodes": true,
+    "relationships": true,
+    "plans": true,
+    "social_observations": true,
+    "stabilization_meta": true,
+    "stabilization_agents": true,
+    "stabilization_events": true
+  },
+  "agents": [
+    {
+      "agent": "agent-1",
+      "authored_steps": 2,
+      "call_limit": 0,
+      "calls": 0,
+      "fallback_goals": 0,
+      "goal": null,
+      "goals_blocked": 0,
+      "goals_completed": 1,
+      "last_tick": 599,
+      "model": false,
+      "model_goals": 0,
+      "model_latency_s": 0.0,
+      "navigation": {},
+      "next_call_tick": 0,
+      "next_goal_tick": 344,
+      "pending": null,
+      "sequence": 3,
+      "submitted": 2
+    },
+    {
+      "agent": "agent-2",
+      "authored_steps": 3,
+      "call_limit": 0,
+      "calls": 0,
+      "fallback_goals": 0,
+      "goal": null,
+      "goals_blocked": 0,
+      "goals_completed": 1,
+      "last_tick": 599,
+      "model": false,
+      "model_goals": 0,
+      "model_latency_s": 0.0,
+      "navigation": {},
+      "next_call_tick": 0,
+      "next_goal_tick": 357,
+      "pending": null,
+      "sequence": 4,
+      "submitted": 3
+    },
+    {
+      "agent": "agent-3",
+      "authored_steps": 6,
+      "call_limit": 0,
+      "calls": 0,
+      "fallback_goals": 0,
+      "goal": null,
+      "goals_blocked": 0,
+      "goals_completed": 1,
+      "last_tick": 599,
+      "model": false,
+      "model_goals": 0,
+      "model_latency_s": 0.0,
+      "navigation": {
+        "search": 1
+      },
+      "next_call_tick": 0,
+      "next_goal_tick": 385,
+      "pending": null,
+      "sequence": 7,
+      "submitted": 6
+    },
+    {
+      "agent": "agent-4",
+      "authored_steps": 4,
+      "call_limit": 0,
+      "calls": 0,
+      "fallback_goals": 0,
+      "goal": null,
+      "goals_blocked": 0,
+      "goals_completed": 1,
+      "last_tick": 599,
+      "model": false,
+      "model_goals": 0,
+      "model_latency_s": 0.0,
+      "navigation": {},
+      "next_call_tick": 0,
+      "next_goal_tick": 368,
+      "pending": null,
+      "sequence": 5,
+      "submitted": 4
+    }
+  ],
+  "outcomes": [
+    {
+      "agent": "agent-1",
+      "data": {
+        "authored_executor": true,
+        "model": false,
+        "previous_policy": "none"
+      },
+      "kind": "explicit_handoff",
+      "previous": null,
+      "tick": 0
+    },
+    {
+      "agent": "agent-2",
+      "data": {
+        "authored_executor": true,
+        "model": false,
+        "previous_policy": "none"
+      },
+      "kind": "explicit_handoff",
+      "previous": "16c09606c5b0cbe1abb199576bb38dfc905f7f091867a46f2d03ef599dd08f34",
+      "tick": 0
+    },
+    {
+      "agent": "agent-3",
+      "data": {
+        "authored_executor": true,
+        "model": false,
+        "previous_policy": "none"
+      },
+      "kind": "explicit_handoff",
+      "previous": "670c8ad055d30c01e00b39c28dd4bdf51b3b2ae265508877b7b1f04db1659137",
+      "tick": 0
+    },
+    {
+      "agent": "agent-4",
+      "data": {
+        "authored_executor": true,
+        "model": false,
+        "previous_policy": "none"
+      },
+      "kind": "explicit_handoff",
+      "previous": "c62af6011ec21866bf3f4aec9559e04981c775dc77756461cacb37e94b977a02",
+      "tick": 0
+    },
+    {
+      "agent": "agent-1",
+      "data": {
+        "created_tick": 334,
+        "failures": 0,
+        "fallback_reason": null,
+        "id": 1,
+        "initial_ingested_ug": 0,
+        "kind": "drink",
+        "origin": "authored_need_selection",
+        "phase": "locate",
+        "raw": null,
+        "steps": 0,
+        "target": null,
+        "target_mass_ug": 300000000
+      },
+      "kind": "goal_selected",
+      "previous": "59393a8b4e33779565f7c0a0dd78aed995bfb57d289a700f660c341d83994993",
+      "tick": 334
+    },
+    {
+      "agent": "agent-1",
+      "data": {
+        "executor": "authored_prerequisite_executor",
+        "goal_id": 1,
+        "goal_origin": "authored_need_selection",
+        "own_observation": {
+          "agent_id": "agent-1",
+          "audible_reports": [],
+          "dt_s": 0.2,
+          "hearing_range_m": 6.0,
+          "observation_version": "334",
+          "omissions": {
+            "older_results": 0
+          },
+          "own_state": {
+            "alive": true,
+            "body": {
+              "alive": true,
+              "fatigue": 0.25343999999999783,
+              "food_ingested_ug": "0",
+              "health": 1.0,
+              "hunger": 0.4167999999999926,
+              "thirst": 0.5002000000000075,
+              "water_ingested_ug": "0"
+            },
+            "busy": false,
+            "carried_mass_ug": "0",
+            "entity_id": "agent-1",
+            "inventory_ug": {},
+            "kind": "actor",
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "position_m": [
+              2.0,
+              3.0
+            ],
+            "radius_m": 0.25,
+            "shared_event_refs": [],
+            "tools": [],
+            "workmanship": 0
+          },
+          "read_reports": [],
+          "recent_action_results": [],
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "sight_range_m": 8,
+          "social_reports": [],
+          "task_offers": [],
+          "tick": "334",
+          "visible_entities": [
+            {
+              "alive": true,
+              "entity_id": "agent-2",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                4.204972057643818,
+                5.361642973561538
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "alive": true,
+              "entity_id": "agent-4",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                7.444944490471588,
+                5.721289539110467
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 16.0,
+              "mass_ug": "16000000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-3",
+              "kind": "inert_material",
+              "mass_kg": 32.0,
+              "mass_ug": "32000000000",
+              "position_m": [
+                4.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-4",
+              "kind": "stone",
+              "mass_kg": 4.0,
+              "mass_ug": "4000000000",
+              "position_m": [
+                5.0,
+                2.0
+              ],
+              "radius_m": 0.15
+            },
+            {
+              "entity_id": "terrain-1",
+              "kind": "rock",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                8.0,
+                8.0
+              ],
+              "radius_m": 1.0
+            }
+          ],
+          "world_bounds_m": {
+            "height": 16.0,
+            "width": 16.0
+          }
+        },
+        "request": {
+          "action_type": "gather",
+          "agent_id": "agent-1",
+          "observation_version": "334",
+          "parameters": {
+            "mass_kg": 0.3
+          },
+          "request_id": "stable-agent-1-2",
+          "requested_duration": 1,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": [
+            "resource-2"
+          ]
+        }
+      },
+      "kind": "request_reserved",
+      "previous": "499da59e3c9118cf87953e8558f15410fd884b5ba4710712d756ab2dbe7f1e28",
+      "tick": 334
+    },
+    {
+      "agent": "agent-2",
+      "data": {
+        "created_tick": 334,
+        "failures": 0,
+        "fallback_reason": null,
+        "id": 1,
+        "initial_ingested_ug": 0,
+        "kind": "drink",
+        "origin": "authored_need_selection",
+        "phase": "locate",
+        "raw": null,
+        "steps": 0,
+        "target": null,
+        "target_mass_ug": 300000000
+      },
+      "kind": "goal_selected",
+      "previous": "c32e4b1c08648be34e2481c5e0163340817e05bf49e343e998da5e3ef288afbe",
+      "tick": 334
+    },
+    {
+      "agent": "agent-2",
+      "data": {
+        "executor": "authored_prerequisite_executor",
+        "goal_id": 1,
+        "goal_origin": "authored_need_selection",
+        "own_observation": {
+          "agent_id": "agent-2",
+          "audible_reports": [],
+          "dt_s": 0.2,
+          "hearing_range_m": 6.0,
+          "observation_version": "334",
+          "omissions": {
+            "older_results": 0
+          },
+          "own_state": {
+            "alive": true,
+            "body": {
+              "alive": true,
+              "fatigue": 0.25343999999999783,
+              "food_ingested_ug": "0",
+              "health": 1.0,
+              "hunger": 0.4167999999999926,
+              "thirst": 0.5002000000000075,
+              "water_ingested_ug": "0"
+            },
+            "busy": false,
+            "carried_mass_ug": "0",
+            "entity_id": "agent-2",
+            "inventory_ug": {},
+            "kind": "actor",
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "position_m": [
+              4.204972057643818,
+              5.361642973561538
+            ],
+            "radius_m": 0.25,
+            "shared_event_refs": [],
+            "tools": [],
+            "workmanship": 0
+          },
+          "read_reports": [],
+          "recent_action_results": [],
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "sight_range_m": 8,
+          "social_reports": [],
+          "task_offers": [],
+          "tick": "334",
+          "visible_entities": [
+            {
+              "alive": true,
+              "entity_id": "agent-1",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                2.0,
+                3.0
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "alive": true,
+              "entity_id": "agent-4",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                7.444944490471588,
+                5.721289539110467
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 16.0,
+              "mass_ug": "16000000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-3",
+              "kind": "inert_material",
+              "mass_kg": 32.0,
+              "mass_ug": "32000000000",
+              "position_m": [
+                4.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-4",
+              "kind": "stone",
+              "mass_kg": 4.0,
+              "mass_ug": "4000000000",
+              "position_m": [
+                5.0,
+                2.0
+              ],
+              "radius_m": 0.15
+            },
+            {
+              "entity_id": "terrain-1",
+              "kind": "rock",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                8.0,
+                8.0
+              ],
+              "radius_m": 1.0
+            }
+          ],
+          "world_bounds_m": {
+            "height": 16.0,
+            "width": 16.0
+          }
+        },
+        "request": {
+          "action_type": "move",
+          "agent_id": "agent-2",
+          "observation_version": "334",
+          "parameters": {
+            "x_m": 3.3711677830671776,
+            "y_m": 3.035487555122222
+          },
+          "request_id": "stable-agent-2-2",
+          "requested_duration": 2.6,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": []
+        }
+      },
+      "kind": "request_reserved",
+      "previous": "086a3a616b6201304dcfb9becead5f3ff194794f01392a1154484b70b4f00267",
+      "tick": 334
+    },
+    {
+      "agent": "agent-3",
+      "data": {
+        "created_tick": 334,
+        "failures": 0,
+        "fallback_reason": null,
+        "id": 1,
+        "initial_ingested_ug": 0,
+        "kind": "drink",
+        "origin": "authored_need_selection",
+        "phase": "locate",
+        "raw": null,
+        "steps": 0,
+        "target": null,
+        "target_mass_ug": 300000000
+      },
+      "kind": "goal_selected",
+      "previous": "c4dfc9d2b6de7dacb38ae55dcdf2f59c7108ddd3377cacc51b016c9b9b581cd2",
+      "tick": 334
+    },
+    {
+      "agent": "agent-3",
+      "data": {
+        "executor": "authored_prerequisite_executor",
+        "goal_id": 1,
+        "goal_origin": "authored_need_selection",
+        "own_observation": {
+          "agent_id": "agent-3",
+          "audible_reports": [],
+          "dt_s": 0.2,
+          "hearing_range_m": 6.0,
+          "observation_version": "334",
+          "omissions": {
+            "older_results": 0
+          },
+          "own_state": {
+            "alive": true,
+            "body": {
+              "alive": true,
+              "fatigue": 0.25343999999999783,
+              "food_ingested_ug": "0",
+              "health": 1.0,
+              "hunger": 0.4167999999999926,
+              "thirst": 0.5002000000000075,
+              "water_ingested_ug": "0"
+            },
+            "busy": false,
+            "carried_mass_ug": "0",
+            "entity_id": "agent-3",
+            "inventory_ug": {},
+            "kind": "actor",
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "position_m": [
+              11.873758355500392,
+              1.873546906129069
+            ],
+            "radius_m": 0.25,
+            "shared_event_refs": [],
+            "tools": [],
+            "workmanship": 0
+          },
+          "read_reports": [],
+          "recent_action_results": [],
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "sight_range_m": 8,
+          "social_reports": [],
+          "task_offers": [],
+          "tick": "334",
+          "visible_entities": [
+            {
+              "alive": true,
+              "entity_id": "agent-4",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                7.444944490471588,
+                5.721289539110467
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "entity_id": "resource-3",
+              "kind": "inert_material",
+              "mass_kg": 32.0,
+              "mass_ug": "32000000000",
+              "position_m": [
+                4.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-4",
+              "kind": "stone",
+              "mass_kg": 4.0,
+              "mass_ug": "4000000000",
+              "position_m": [
+                5.0,
+                2.0
+              ],
+              "radius_m": 0.15
+            },
+            {
+              "entity_id": "terrain-1",
+              "kind": "rock",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                8.0,
+                8.0
+              ],
+              "radius_m": 1.0
+            },
+            {
+              "biomass_ug": "8000000000",
+              "entity_id": "tree-2",
+              "health": 1.0,
+              "kind": "tree",
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000",
+              "position_m": [
+                14.0,
+                2.0
+              ],
+              "radius_m": 0.6,
+              "stage": "mature"
+            }
+          ],
+          "world_bounds_m": {
+            "height": 16.0,
+            "width": 16.0
+          }
+        },
+        "request": {
+          "action_type": "move",
+          "agent_id": "agent-3",
+          "observation_version": "334",
+          "parameters": {
+            "x_m": 8.883392395178692,
+            "y_m": 1.6333148863038969
+          },
+          "request_id": "stable-agent-3-2",
+          "requested_duration": 3.2,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": []
+        }
+      },
+      "kind": "request_reserved",
+      "previous": "b471439d39c9d970b14d0a71cae9f9cc5ccec04f46377e1057850aefd6c6119f",
+      "tick": 334
+    },
+    {
+      "agent": "agent-4",
+      "data": {
+        "created_tick": 334,
+        "failures": 0,
+        "fallback_reason": null,
+        "id": 1,
+        "initial_ingested_ug": 0,
+        "kind": "drink",
+        "origin": "authored_need_selection",
+        "phase": "locate",
+        "raw": null,
+        "steps": 0,
+        "target": null,
+        "target_mass_ug": 300000000
+      },
+      "kind": "goal_selected",
+      "previous": "a125b9c85b0446535501c013517002ba76b7b072c8dff1b2565b7e6a4dd24549",
+      "tick": 334
+    },
+    {
+      "agent": "agent-4",
+      "data": {
+        "executor": "authored_prerequisite_executor",
+        "goal_id": 1,
+        "goal_origin": "authored_need_selection",
+        "own_observation": {
+          "agent_id": "agent-4",
+          "audible_reports": [],
+          "dt_s": 0.2,
+          "hearing_range_m": 6.0,
+          "observation_version": "334",
+          "omissions": {
+            "older_results": 0
+          },
+          "own_state": {
+            "alive": true,
+            "body": {
+              "alive": true,
+              "fatigue": 0.25343999999999783,
+              "food_ingested_ug": "0",
+              "health": 1.0,
+              "hunger": 0.4167999999999926,
+              "thirst": 0.5002000000000075,
+              "water_ingested_ug": "0"
+            },
+            "busy": false,
+            "carried_mass_ug": "0",
+            "entity_id": "agent-4",
+            "inventory_ug": {},
+            "kind": "actor",
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "position_m": [
+              7.444944490471588,
+              5.721289539110467
+            ],
+            "radius_m": 0.25,
+            "shared_event_refs": [],
+            "tools": [],
+            "workmanship": 0
+          },
+          "read_reports": [],
+          "recent_action_results": [],
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "sight_range_m": 8,
+          "social_reports": [],
+          "task_offers": [],
+          "tick": "334",
+          "visible_entities": [
+            {
+              "alive": true,
+              "entity_id": "agent-1",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                2.0,
+                3.0
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "alive": true,
+              "entity_id": "agent-2",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                4.204972057643818,
+                5.361642973561538
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "alive": true,
+              "entity_id": "agent-3",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                11.873758355500392,
+                1.873546906129069
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 16.0,
+              "mass_ug": "16000000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-3",
+              "kind": "inert_material",
+              "mass_kg": 32.0,
+              "mass_ug": "32000000000",
+              "position_m": [
+                4.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-4",
+              "kind": "stone",
+              "mass_kg": 4.0,
+              "mass_ug": "4000000000",
+              "position_m": [
+                5.0,
+                2.0
+              ],
+              "radius_m": 0.15
+            },
+            {
+              "entity_id": "terrain-1",
+              "kind": "rock",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                8.0,
+                8.0
+              ],
+              "radius_m": 1.0
+            },
+            {
+              "biomass_ug": "8000000000",
+              "entity_id": "tree-2",
+              "health": 1.0,
+              "kind": "tree",
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000",
+              "position_m": [
+                14.0,
+                2.0
+              ],
+              "radius_m": 0.6,
+              "stage": "mature"
+            }
+          ],
+          "world_bounds_m": {
+            "height": 16.0,
+            "width": 16.0
+          }
+        },
+        "request": {
+          "action_type": "move",
+          "agent_id": "agent-4",
+          "observation_version": "334",
+          "parameters": {
+            "x_m": 5.144656357226019,
+            "y_m": 3.7954976230277317
+          },
+          "request_id": "stable-agent-4-2",
+          "requested_duration": 3.0,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": []
+        }
+      },
+      "kind": "request_reserved",
+      "previous": "7928d95b49e8e307b1bf108df7da75c3ecdeb9bed38258ae35ef91619d607aab",
+      "tick": 334
+    },
+    {
+      "agent": "agent-1",
+      "data": {
+        "receipt": {
+          "agent_id": "agent-1",
+          "completed_tick": "339",
+          "error_code": "",
+          "event_refs": [
+            "335",
+            "343",
+            "344"
+          ],
+          "observable_effects": {
+            "description": "gather:300000000ug"
+          },
+          "observation_version": "339",
+          "reason": "",
+          "request_id": "stable-agent-1-2",
+          "schema_version": 1,
+          "started_tick": "334",
+          "status": "completed"
+        },
+        "request": {
+          "action_type": "gather",
+          "agent_id": "agent-1",
+          "observation_version": "334",
+          "parameters": {
+            "mass_kg": 0.3
+          },
+          "request_id": "stable-agent-1-2",
+          "requested_duration": 1,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": [
+            "resource-2"
+          ]
+        }
+      },
+      "kind": "terminal_receipt",
+      "previous": "2a322992c6f5532d92075723715ba6f23615b3afb8495257a202f8214e673b98",
+      "tick": 339
+    },
+    {
+      "agent": "agent-1",
+      "data": {
+        "executor": "authored_prerequisite_executor",
+        "goal_id": 1,
+        "goal_origin": "authored_need_selection",
+        "own_observation": {
+          "agent_id": "agent-1",
+          "audible_reports": [],
+          "dt_s": 0.2,
+          "hearing_range_m": 6.0,
+          "observation_version": "339",
+          "omissions": {
+            "older_results": 0
+          },
+          "own_state": {
+            "alive": true,
+            "body": {
+              "alive": true,
+              "fatigue": 0.2542399999999978,
+              "food_ingested_ug": "0",
+              "health": 1.0,
+              "hunger": 0.4177999999999925,
+              "thirst": 0.5017000000000074,
+              "water_ingested_ug": "0"
+            },
+            "busy": false,
+            "carried_mass_ug": "300000000",
+            "entity_id": "agent-1",
+            "inventory_ug": {
+              "water": "300000000"
+            },
+            "kind": "actor",
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "position_m": [
+              2.0,
+              3.0
+            ],
+            "radius_m": 0.25,
+            "shared_event_refs": [],
+            "tools": [],
+            "workmanship": 0
+          },
+          "read_reports": [],
+          "recent_action_results": [
+            {
+              "agent_id": "agent-1",
+              "completed_tick": "339",
+              "error_code": "",
+              "event_refs": [
+                "335",
+                "343",
+                "344"
+              ],
+              "observable_effects": {
+                "description": "gather:300000000ug"
+              },
+              "observation_version": "339",
+              "reason": "",
+              "request_id": "stable-agent-1-2",
+              "schema_version": 1,
+              "started_tick": "334",
+              "status": "completed"
+            }
+          ],
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "sight_range_m": 8,
+          "social_reports": [],
+          "task_offers": [],
+          "tick": "339",
+          "visible_entities": [
+            {
+              "alive": true,
+              "entity_id": "agent-2",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                3.867546800310021,
+                4.420290650723153
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "alive": true,
+              "entity_id": "agent-4",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                6.678181779389732,
+                5.079358900416223
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 15.7,
+              "mass_ug": "15700000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-3",
+              "kind": "inert_material",
+              "mass_kg": 32.0,
+              "mass_ug": "32000000000",
+              "position_m": [
+                4.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-4",
+              "kind": "stone",
+              "mass_kg": 4.0,
+              "mass_ug": "4000000000",
+              "position_m": [
+                5.0,
+                2.0
+              ],
+              "radius_m": 0.15
+            },
+            {
+              "entity_id": "terrain-1",
+              "kind": "rock",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                8.0,
+                8.0
+              ],
+              "radius_m": 1.0
+            }
+          ],
+          "world_bounds_m": {
+            "height": 16.0,
+            "width": 16.0
+          }
+        },
+        "request": {
+          "action_type": "drink",
+          "agent_id": "agent-1",
+          "observation_version": "339",
+          "parameters": {
+            "mass_kg": 0.3
+          },
+          "request_id": "stable-agent-1-3",
+          "requested_duration": 1.0,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": []
+        }
+      },
+      "kind": "request_reserved",
+      "previous": "7c8b7773795f46f848381993102884ecf4c9c90d7f40e6b49461731ef608a3b2",
+      "tick": 339
+    },
+    {
+      "agent": "agent-1",
+      "data": {
+        "receipt": {
+          "agent_id": "agent-1",
+          "completed_tick": "344",
+          "error_code": "",
+          "event_refs": [
+            "346",
+            "351",
+            "352"
+          ],
+          "observable_effects": {
+            "description": "ingested_ug=300000000"
+          },
+          "observation_version": "344",
+          "reason": "",
+          "request_id": "stable-agent-1-3",
+          "schema_version": 1,
+          "started_tick": "339",
+          "status": "completed"
+        },
+        "request": {
+          "action_type": "drink",
+          "agent_id": "agent-1",
+          "observation_version": "339",
+          "parameters": {
+            "mass_kg": 0.3
+          },
+          "request_id": "stable-agent-1-3",
+          "requested_duration": 1.0,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": []
+        }
+      },
+      "kind": "terminal_receipt",
+      "previous": "004179f5ece6b47b1b1eea8285d835d16d93f804e0c01167e44b9a5dd959149f",
+      "tick": 344
+    },
+    {
+      "agent": "agent-1",
+      "data": {
+        "consumption_request_id": "stable-agent-1-3",
+        "created_tick": 334,
+        "failures": 0,
+        "id": 1,
+        "initial_ingested_ug": 0,
+        "kind": "drink",
+        "origin": "authored_need_selection",
+        "phase": "consume",
+        "raw": null,
+        "reason": "native_ingested_reservoir_delta",
+        "steps": 0,
+        "target": "resource-2",
+        "target_mass_ug": 300000000
+      },
+      "kind": "goal_completed",
+      "previous": "18ce78383b0479a17deb851508293192f0c86e0861dc727bcb28e2737684a45d",
+      "tick": 344
+    },
+    {
+      "agent": "agent-2",
+      "data": {
+        "receipt": {
+          "agent_id": "agent-2",
+          "completed_tick": "347",
+          "error_code": "",
+          "event_refs": [
+            "336",
+            "356"
+          ],
+          "observable_effects": {
+            "description": ""
+          },
+          "observation_version": "347",
+          "reason": "",
+          "request_id": "stable-agent-2-2",
+          "schema_version": 1,
+          "started_tick": "334",
+          "status": "completed"
+        },
+        "request": {
+          "action_type": "move",
+          "agent_id": "agent-2",
+          "observation_version": "334",
+          "parameters": {
+            "x_m": 3.3711677830671776,
+            "y_m": 3.035487555122222
+          },
+          "request_id": "stable-agent-2-2",
+          "requested_duration": 2.6,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": []
+        }
+      },
+      "kind": "terminal_receipt",
+      "previous": "32c3280d71e9d0b3b8d0e813d7f5e522fa51b951a63476ff9efa875fe88861e4",
+      "tick": 347
+    },
+    {
+      "agent": "agent-2",
+      "data": {
+        "executor": "authored_prerequisite_executor",
+        "goal_id": 1,
+        "goal_origin": "authored_need_selection",
+        "own_observation": {
+          "agent_id": "agent-2",
+          "audible_reports": [],
+          "dt_s": 0.2,
+          "hearing_range_m": 6.0,
+          "observation_version": "347",
+          "omissions": {
+            "older_results": 0
+          },
+          "own_state": {
+            "alive": true,
+            "body": {
+              "alive": true,
+              "fatigue": 0.25655999999999807,
+              "food_ingested_ug": "0",
+              "health": 1.0,
+              "hunger": 0.41939999999999233,
+              "thirst": 0.5041000000000071,
+              "water_ingested_ug": "0"
+            },
+            "busy": false,
+            "carried_mass_ug": "0",
+            "entity_id": "agent-2",
+            "inventory_ug": {},
+            "kind": "actor",
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "position_m": [
+              3.3711677830671776,
+              3.035487555122222
+            ],
+            "radius_m": 0.25,
+            "shared_event_refs": [],
+            "tools": [],
+            "workmanship": 0
+          },
+          "read_reports": [],
+          "recent_action_results": [
+            {
+              "agent_id": "agent-2",
+              "completed_tick": "347",
+              "error_code": "",
+              "event_refs": [
+                "336",
+                "356"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "347",
+              "reason": "",
+              "request_id": "stable-agent-2-2",
+              "schema_version": 1,
+              "started_tick": "334",
+              "status": "completed"
+            }
+          ],
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "sight_range_m": 8,
+          "social_reports": [],
+          "task_offers": [],
+          "tick": "347",
+          "visible_entities": [
+            {
+              "alive": true,
+              "entity_id": "agent-1",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                2.0,
+                3.0
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "alive": true,
+              "entity_id": "agent-3",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                9.282107856554916,
+                1.6653458222805861
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "alive": true,
+              "entity_id": "agent-4",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                5.4513614416587615,
+                4.05226987850543
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 15.7,
+              "mass_ug": "15700000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-3",
+              "kind": "inert_material",
+              "mass_kg": 32.0,
+              "mass_ug": "32000000000",
+              "position_m": [
+                4.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-4",
+              "kind": "stone",
+              "mass_kg": 4.0,
+              "mass_ug": "4000000000",
+              "position_m": [
+                5.0,
+                2.0
+              ],
+              "radius_m": 0.15
+            },
+            {
+              "entity_id": "terrain-1",
+              "kind": "rock",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                8.0,
+                8.0
+              ],
+              "radius_m": 1.0
+            }
+          ],
+          "world_bounds_m": {
+            "height": 16.0,
+            "width": 16.0
+          }
+        },
+        "request": {
+          "action_type": "gather",
+          "agent_id": "agent-2",
+          "observation_version": "347",
+          "parameters": {
+            "mass_kg": 0.3
+          },
+          "request_id": "stable-agent-2-3",
+          "requested_duration": 1,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": [
+            "resource-2"
+          ]
+        }
+      },
+      "kind": "request_reserved",
+      "previous": "445b4ba9d8b66829b8aaf47aa0ed88e526b03e882ec1d93b582b69f251da9c57",
+      "tick": 347
+    },
+    {
+      "agent": "agent-3",
+      "data": {
+        "receipt": {
+          "agent_id": "agent-3",
+          "completed_tick": "349",
+          "error_code": "",
+          "event_refs": [
+            "337",
+            "360"
+          ],
+          "observable_effects": {
+            "description": ""
+          },
+          "observation_version": "349",
+          "reason": "",
+          "request_id": "stable-agent-3-2",
+          "schema_version": 1,
+          "started_tick": "334",
+          "status": "completed"
+        },
+        "request": {
+          "action_type": "move",
+          "agent_id": "agent-3",
+          "observation_version": "334",
+          "parameters": {
+            "x_m": 8.883392395178692,
+            "y_m": 1.6333148863038969
+          },
+          "request_id": "stable-agent-3-2",
+          "requested_duration": 3.2,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": []
+        }
+      },
+      "kind": "terminal_receipt",
+      "previous": "382a37f78cbc07d6ca62ed8139ece0b89dcee22e64ac26c69ec66bee394f29ac",
+      "tick": 349
+    },
+    {
+      "agent": "agent-3",
+      "data": {
+        "executor": "authored_prerequisite_executor",
+        "goal_id": 1,
+        "goal_origin": "authored_need_selection",
+        "own_observation": {
+          "agent_id": "agent-3",
+          "audible_reports": [],
+          "dt_s": 0.2,
+          "hearing_range_m": 6.0,
+          "observation_version": "349",
+          "omissions": {
+            "older_results": 0
+          },
+          "own_state": {
+            "alive": true,
+            "body": {
+              "alive": true,
+              "fatigue": 0.2570399999999981,
+              "food_ingested_ug": "0",
+              "health": 1.0,
+              "hunger": 0.4197999999999923,
+              "thirst": 0.504700000000007,
+              "water_ingested_ug": "0"
+            },
+            "busy": false,
+            "carried_mass_ug": "0",
+            "entity_id": "agent-3",
+            "inventory_ug": {},
+            "kind": "actor",
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "position_m": [
+              8.883392395178692,
+              1.6333148863038969
+            ],
+            "radius_m": 0.25,
+            "shared_event_refs": [],
+            "tools": [],
+            "workmanship": 0
+          },
+          "read_reports": [],
+          "recent_action_results": [
+            {
+              "agent_id": "agent-3",
+              "completed_tick": "349",
+              "error_code": "",
+              "event_refs": [
+                "337",
+                "360"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "349",
+              "reason": "",
+              "request_id": "stable-agent-3-2",
+              "schema_version": 1,
+              "started_tick": "334",
+              "status": "completed"
+            }
+          ],
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "sight_range_m": 8,
+          "social_reports": [],
+          "task_offers": [],
+          "tick": "349",
+          "visible_entities": [
+            {
+              "alive": true,
+              "entity_id": "agent-1",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                2.0,
+                3.0
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "alive": true,
+              "entity_id": "agent-2",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                3.3711677830671776,
+                3.035487555122222
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "alive": true,
+              "entity_id": "agent-4",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                5.144656357226019,
+                3.7954976230277317
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 15.7,
+              "mass_ug": "15700000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-3",
+              "kind": "inert_material",
+              "mass_kg": 32.0,
+              "mass_ug": "32000000000",
+              "position_m": [
+                4.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-4",
+              "kind": "stone",
+              "mass_kg": 4.0,
+              "mass_ug": "4000000000",
+              "position_m": [
+                5.0,
+                2.0
+              ],
+              "radius_m": 0.15
+            },
+            {
+              "entity_id": "terrain-1",
+              "kind": "rock",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                8.0,
+                8.0
+              ],
+              "radius_m": 1.0
+            },
+            {
+              "biomass_ug": "8000000000",
+              "entity_id": "tree-2",
+              "health": 1.0,
+              "kind": "tree",
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000",
+              "position_m": [
+                14.0,
+                2.0
+              ],
+              "radius_m": 0.6,
+              "stage": "mature"
+            }
+          ],
+          "world_bounds_m": {
+            "height": 16.0,
+            "width": 16.0
+          }
+        },
+        "request": {
+          "action_type": "move",
+          "agent_id": "agent-3",
+          "observation_version": "349",
+          "parameters": {
+            "x_m": 8,
+            "y_m": 1
+          },
+          "request_id": "stable-agent-3-3",
+          "requested_duration": 1.2000000000000002,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": []
+        }
+      },
+      "kind": "request_reserved",
+      "previous": "9477abd12336fe0d1d89c01d005221cb5aca15b8d1529b6192ddc5e89c120871",
+      "tick": 349
+    },
+    {
+      "agent": "agent-4",
+      "data": {
+        "receipt": {
+          "agent_id": "agent-4",
+          "completed_tick": "349",
+          "error_code": "",
+          "event_refs": [
+            "338",
+            "361"
+          ],
+          "observable_effects": {
+            "description": ""
+          },
+          "observation_version": "349",
+          "reason": "",
+          "request_id": "stable-agent-4-2",
+          "schema_version": 1,
+          "started_tick": "334",
+          "status": "completed"
+        },
+        "request": {
+          "action_type": "move",
+          "agent_id": "agent-4",
+          "observation_version": "334",
+          "parameters": {
+            "x_m": 5.144656357226019,
+            "y_m": 3.7954976230277317
+          },
+          "request_id": "stable-agent-4-2",
+          "requested_duration": 3.0,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": []
+        }
+      },
+      "kind": "terminal_receipt",
+      "previous": "0c318321def732cce42d85b01a665a641867ca7976753fad5ba2d9f1969bf278",
+      "tick": 349
+    },
+    {
+      "agent": "agent-4",
+      "data": {
+        "executor": "authored_prerequisite_executor",
+        "goal_id": 1,
+        "goal_origin": "authored_need_selection",
+        "own_observation": {
+          "agent_id": "agent-4",
+          "audible_reports": [],
+          "dt_s": 0.2,
+          "hearing_range_m": 6.0,
+          "observation_version": "349",
+          "omissions": {
+            "older_results": 0
+          },
+          "own_state": {
+            "alive": true,
+            "body": {
+              "alive": true,
+              "fatigue": 0.2570399999999981,
+              "food_ingested_ug": "0",
+              "health": 1.0,
+              "hunger": 0.4197999999999923,
+              "thirst": 0.504700000000007,
+              "water_ingested_ug": "0"
+            },
+            "busy": false,
+            "carried_mass_ug": "0",
+            "entity_id": "agent-4",
+            "inventory_ug": {},
+            "kind": "actor",
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "position_m": [
+              5.144656357226019,
+              3.7954976230277317
+            ],
+            "radius_m": 0.25,
+            "shared_event_refs": [],
+            "tools": [],
+            "workmanship": 0
+          },
+          "read_reports": [],
+          "recent_action_results": [
+            {
+              "agent_id": "agent-4",
+              "completed_tick": "349",
+              "error_code": "",
+              "event_refs": [
+                "338",
+                "361"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "349",
+              "reason": "",
+              "request_id": "stable-agent-4-2",
+              "schema_version": 1,
+              "started_tick": "334",
+              "status": "completed"
+            }
+          ],
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "sight_range_m": 8,
+          "social_reports": [],
+          "task_offers": [],
+          "tick": "349",
+          "visible_entities": [
+            {
+              "alive": true,
+              "entity_id": "agent-1",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                2.0,
+                3.0
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "alive": true,
+              "entity_id": "agent-2",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                3.3711677830671776,
+                3.035487555122222
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "alive": true,
+              "entity_id": "agent-3",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                8.883392395178692,
+                1.6333148863038969
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 15.7,
+              "mass_ug": "15700000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-3",
+              "kind": "inert_material",
+              "mass_kg": 32.0,
+              "mass_ug": "32000000000",
+              "position_m": [
+                4.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-4",
+              "kind": "stone",
+              "mass_kg": 4.0,
+              "mass_ug": "4000000000",
+              "position_m": [
+                5.0,
+                2.0
+              ],
+              "radius_m": 0.15
+            },
+            {
+              "entity_id": "terrain-1",
+              "kind": "rock",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                8.0,
+                8.0
+              ],
+              "radius_m": 1.0
+            }
+          ],
+          "world_bounds_m": {
+            "height": 16.0,
+            "width": 16.0
+          }
+        },
+        "request": {
+          "action_type": "move",
+          "agent_id": "agent-4",
+          "observation_version": "349",
+          "parameters": {
+            "x_m": 3.843438982190042,
+            "y_m": 2.70612370256367
+          },
+          "request_id": "stable-agent-4-3",
+          "requested_duration": 1.8,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": []
+        }
+      },
+      "kind": "request_reserved",
+      "previous": "812554bbfc63d9113821a3ba8177ef991405a4b9a7211a7d33b5d0e52fc3190a",
+      "tick": 349
+    },
+    {
+      "agent": "agent-2",
+      "data": {
+        "receipt": {
+          "agent_id": "agent-2",
+          "completed_tick": "352",
+          "error_code": "",
+          "event_refs": [
+            "358",
+            "367",
+            "368"
+          ],
+          "observable_effects": {
+            "description": "gather:300000000ug"
+          },
+          "observation_version": "352",
+          "reason": "",
+          "request_id": "stable-agent-2-3",
+          "schema_version": 1,
+          "started_tick": "347",
+          "status": "completed"
+        },
+        "request": {
+          "action_type": "gather",
+          "agent_id": "agent-2",
+          "observation_version": "347",
+          "parameters": {
+            "mass_kg": 0.3
+          },
+          "request_id": "stable-agent-2-3",
+          "requested_duration": 1,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": [
+            "resource-2"
+          ]
+        }
+      },
+      "kind": "terminal_receipt",
+      "previous": "9c46aadb15f47b990db1aeb53df0ef10a7eeafd0664c4a60c5d07965e46abec6",
+      "tick": 352
+    },
+    {
+      "agent": "agent-2",
+      "data": {
+        "executor": "authored_prerequisite_executor",
+        "goal_id": 1,
+        "goal_origin": "authored_need_selection",
+        "own_observation": {
+          "agent_id": "agent-2",
+          "audible_reports": [],
+          "dt_s": 0.2,
+          "hearing_range_m": 6.0,
+          "observation_version": "352",
+          "omissions": {
+            "older_results": 0
+          },
+          "own_state": {
+            "alive": true,
+            "body": {
+              "alive": true,
+              "fatigue": 0.25735999999999803,
+              "food_ingested_ug": "0",
+              "health": 1.0,
+              "hunger": 0.4203999999999922,
+              "thirst": 0.5056000000000069,
+              "water_ingested_ug": "0"
+            },
+            "busy": false,
+            "carried_mass_ug": "300000000",
+            "entity_id": "agent-2",
+            "inventory_ug": {
+              "water": "300000000"
+            },
+            "kind": "actor",
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "position_m": [
+              3.3711677830671776,
+              3.035487555122222
+            ],
+            "radius_m": 0.25,
+            "shared_event_refs": [],
+            "tools": [],
+            "workmanship": 0
+          },
+          "read_reports": [],
+          "recent_action_results": [
+            {
+              "agent_id": "agent-2",
+              "completed_tick": "347",
+              "error_code": "",
+              "event_refs": [
+                "336",
+                "356"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "347",
+              "reason": "",
+              "request_id": "stable-agent-2-2",
+              "schema_version": 1,
+              "started_tick": "334",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-2",
+              "completed_tick": "352",
+              "error_code": "",
+              "event_refs": [
+                "358",
+                "367",
+                "368"
+              ],
+              "observable_effects": {
+                "description": "gather:300000000ug"
+              },
+              "observation_version": "352",
+              "reason": "",
+              "request_id": "stable-agent-2-3",
+              "schema_version": 1,
+              "started_tick": "347",
+              "status": "completed"
+            }
+          ],
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "sight_range_m": 8,
+          "social_reports": [],
+          "task_offers": [],
+          "tick": "352",
+          "visible_entities": [
+            {
+              "alive": true,
+              "entity_id": "agent-1",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                2.0,
+                3.0
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "alive": true,
+              "entity_id": "agent-3",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                8.395758841467094,
+                1.2837243868697739
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "alive": true,
+              "entity_id": "agent-4",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                4.684598730576905,
+                3.4103392398111843
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 15.4,
+              "mass_ug": "15400000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-3",
+              "kind": "inert_material",
+              "mass_kg": 32.0,
+              "mass_ug": "32000000000",
+              "position_m": [
+                4.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-4",
+              "kind": "stone",
+              "mass_kg": 4.0,
+              "mass_ug": "4000000000",
+              "position_m": [
+                5.0,
+                2.0
+              ],
+              "radius_m": 0.15
+            },
+            {
+              "entity_id": "terrain-1",
+              "kind": "rock",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                8.0,
+                8.0
+              ],
+              "radius_m": 1.0
+            }
+          ],
+          "world_bounds_m": {
+            "height": 16.0,
+            "width": 16.0
+          }
+        },
+        "request": {
+          "action_type": "drink",
+          "agent_id": "agent-2",
+          "observation_version": "352",
+          "parameters": {
+            "mass_kg": 0.3
+          },
+          "request_id": "stable-agent-2-4",
+          "requested_duration": 1.0,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": []
+        }
+      },
+      "kind": "request_reserved",
+      "previous": "604565939691153b0e75a573b8ec7313ff82654a53cc0ed3e3da790aed724226",
+      "tick": 352
+    },
+    {
+      "agent": "agent-3",
+      "data": {
+        "receipt": {
+          "agent_id": "agent-3",
+          "completed_tick": "355",
+          "error_code": "",
+          "event_refs": [
+            "363",
+            "373"
+          ],
+          "observable_effects": {
+            "description": ""
+          },
+          "observation_version": "355",
+          "reason": "",
+          "request_id": "stable-agent-3-3",
+          "schema_version": 1,
+          "started_tick": "349",
+          "status": "completed"
+        },
+        "request": {
+          "action_type": "move",
+          "agent_id": "agent-3",
+          "observation_version": "349",
+          "parameters": {
+            "x_m": 8,
+            "y_m": 1
+          },
+          "request_id": "stable-agent-3-3",
+          "requested_duration": 1.2000000000000002,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": []
+        }
+      },
+      "kind": "terminal_receipt",
+      "previous": "5b1e093970825c8bfb33248de45ccacf651e206c73800625d047ed850dcc9179",
+      "tick": 355
+    },
+    {
+      "agent": "agent-3",
+      "data": {
+        "executor": "authored_prerequisite_executor",
+        "goal_id": 1,
+        "goal_origin": "authored_need_selection",
+        "own_observation": {
+          "agent_id": "agent-3",
+          "audible_reports": [],
+          "dt_s": 0.2,
+          "hearing_range_m": 6.0,
+          "observation_version": "355",
+          "omissions": {
+            "older_results": 0
+          },
+          "own_state": {
+            "alive": true,
+            "body": {
+              "alive": true,
+              "fatigue": 0.2584799999999982,
+              "food_ingested_ug": "0",
+              "health": 1.0,
+              "hunger": 0.42099999999999216,
+              "thirst": 0.5065000000000068,
+              "water_ingested_ug": "0"
+            },
+            "busy": false,
+            "carried_mass_ug": "0",
+            "entity_id": "agent-3",
+            "inventory_ug": {},
+            "kind": "actor",
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "position_m": [
+              8.0,
+              1.0
+            ],
+            "radius_m": 0.25,
+            "shared_event_refs": [],
+            "tools": [],
+            "workmanship": 0
+          },
+          "read_reports": [],
+          "recent_action_results": [
+            {
+              "agent_id": "agent-3",
+              "completed_tick": "349",
+              "error_code": "",
+              "event_refs": [
+                "337",
+                "360"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "349",
+              "reason": "",
+              "request_id": "stable-agent-3-2",
+              "schema_version": 1,
+              "started_tick": "334",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-3",
+              "completed_tick": "355",
+              "error_code": "",
+              "event_refs": [
+                "363",
+                "373"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "355",
+              "reason": "",
+              "request_id": "stable-agent-3-3",
+              "schema_version": 1,
+              "started_tick": "349",
+              "status": "completed"
+            }
+          ],
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "sight_range_m": 8,
+          "social_reports": [],
+          "task_offers": [],
+          "tick": "355",
+          "visible_entities": [
+            {
+              "alive": true,
+              "entity_id": "agent-1",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                2.0,
+                3.0
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "alive": true,
+              "entity_id": "agent-2",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                3.3711677830671776,
+                3.035487555122222
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "alive": true,
+              "entity_id": "agent-4",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                4.224541103927791,
+                3.0251808565946368
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 15.4,
+              "mass_ug": "15400000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-3",
+              "kind": "inert_material",
+              "mass_kg": 32.0,
+              "mass_ug": "32000000000",
+              "position_m": [
+                4.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-4",
+              "kind": "stone",
+              "mass_kg": 4.0,
+              "mass_ug": "4000000000",
+              "position_m": [
+                5.0,
+                2.0
+              ],
+              "radius_m": 0.15
+            },
+            {
+              "entity_id": "terrain-1",
+              "kind": "rock",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                8.0,
+                8.0
+              ],
+              "radius_m": 1.0
+            },
+            {
+              "biomass_ug": "8000000000",
+              "entity_id": "tree-2",
+              "health": 1.0,
+              "kind": "tree",
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000",
+              "position_m": [
+                14.0,
+                2.0
+              ],
+              "radius_m": 0.6,
+              "stage": "mature"
+            }
+          ],
+          "world_bounds_m": {
+            "height": 16.0,
+            "width": 16.0
+          }
+        },
+        "request": {
+          "action_type": "move",
+          "agent_id": "agent-3",
+          "observation_version": "355",
+          "parameters": {
+            "x_m": 7,
+            "y_m": 1
+          },
+          "request_id": "stable-agent-3-4",
+          "requested_duration": 1.0,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": []
+        }
+      },
+      "kind": "request_reserved",
+      "previous": "28ba12e31d39c7bf1264b1c5c07df996a387f6c2cccd132c2061719c8985ad59",
+      "tick": 355
+    },
+    {
+      "agent": "agent-2",
+      "data": {
+        "receipt": {
+          "agent_id": "agent-2",
+          "completed_tick": "357",
+          "error_code": "",
+          "event_refs": [
+            "370",
+            "377",
+            "378"
+          ],
+          "observable_effects": {
+            "description": "ingested_ug=300000000"
+          },
+          "observation_version": "357",
+          "reason": "",
+          "request_id": "stable-agent-2-4",
+          "schema_version": 1,
+          "started_tick": "352",
+          "status": "completed"
+        },
+        "request": {
+          "action_type": "drink",
+          "agent_id": "agent-2",
+          "observation_version": "352",
+          "parameters": {
+            "mass_kg": 0.3
+          },
+          "request_id": "stable-agent-2-4",
+          "requested_duration": 1.0,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": []
+        }
+      },
+      "kind": "terminal_receipt",
+      "previous": "5dfbd35e6b4ad53d94fe0a75d0a21720b9a8298519a43f3119d305c649e9d2c9",
+      "tick": 357
+    },
+    {
+      "agent": "agent-2",
+      "data": {
+        "consumption_request_id": "stable-agent-2-4",
+        "created_tick": 334,
+        "failures": 0,
+        "id": 1,
+        "initial_ingested_ug": 0,
+        "kind": "drink",
+        "origin": "authored_need_selection",
+        "phase": "consume",
+        "raw": null,
+        "reason": "native_ingested_reservoir_delta",
+        "steps": 1,
+        "target": "resource-2",
+        "target_mass_ug": 300000000
+      },
+      "kind": "goal_completed",
+      "previous": "985301435bc03f634506b3989459ed1be5db412debfb554abe671d34c0414042",
+      "tick": 357
+    },
+    {
+      "agent": "agent-4",
+      "data": {
+        "receipt": {
+          "agent_id": "agent-4",
+          "completed_tick": "358",
+          "error_code": "",
+          "event_refs": [
+            "364",
+            "380"
+          ],
+          "observable_effects": {
+            "description": ""
+          },
+          "observation_version": "358",
+          "reason": "",
+          "request_id": "stable-agent-4-3",
+          "schema_version": 1,
+          "started_tick": "349",
+          "status": "completed"
+        },
+        "request": {
+          "action_type": "move",
+          "agent_id": "agent-4",
+          "observation_version": "349",
+          "parameters": {
+            "x_m": 3.843438982190042,
+            "y_m": 2.70612370256367
+          },
+          "request_id": "stable-agent-4-3",
+          "requested_duration": 1.8,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": []
+        }
+      },
+      "kind": "terminal_receipt",
+      "previous": "ee5c74a2b09c937e5c64261e7b9fcdda2e79a044f3146a7320fefa1a8dad7e08",
+      "tick": 358
+    },
+    {
+      "agent": "agent-4",
+      "data": {
+        "executor": "authored_prerequisite_executor",
+        "goal_id": 1,
+        "goal_origin": "authored_need_selection",
+        "own_observation": {
+          "agent_id": "agent-4",
+          "audible_reports": [],
+          "dt_s": 0.2,
+          "hearing_range_m": 6.0,
+          "observation_version": "358",
+          "omissions": {
+            "older_results": 0
+          },
+          "own_state": {
+            "alive": true,
+            "body": {
+              "alive": true,
+              "fatigue": 0.25919999999999827,
+              "food_ingested_ug": "0",
+              "health": 1.0,
+              "hunger": 0.4215999999999921,
+              "thirst": 0.5074000000000067,
+              "water_ingested_ug": "0"
+            },
+            "busy": false,
+            "carried_mass_ug": "0",
+            "entity_id": "agent-4",
+            "inventory_ug": {},
+            "kind": "actor",
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "position_m": [
+              3.843438982190042,
+              2.70612370256367
+            ],
+            "radius_m": 0.25,
+            "shared_event_refs": [],
+            "tools": [],
+            "workmanship": 0
+          },
+          "read_reports": [],
+          "recent_action_results": [
+            {
+              "agent_id": "agent-4",
+              "completed_tick": "349",
+              "error_code": "",
+              "event_refs": [
+                "338",
+                "361"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "349",
+              "reason": "",
+              "request_id": "stable-agent-4-2",
+              "schema_version": 1,
+              "started_tick": "334",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-4",
+              "completed_tick": "358",
+              "error_code": "",
+              "event_refs": [
+                "364",
+                "380"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "358",
+              "reason": "",
+              "request_id": "stable-agent-4-3",
+              "schema_version": 1,
+              "started_tick": "349",
+              "status": "completed"
+            }
+          ],
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "sight_range_m": 8,
+          "social_reports": [],
+          "task_offers": [],
+          "tick": "358",
+          "visible_entities": [
+            {
+              "alive": true,
+              "entity_id": "agent-1",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                2.0,
+                3.0
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "alive": true,
+              "entity_id": "agent-2",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                3.3711677830671776,
+                3.035487555122222
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "alive": true,
+              "entity_id": "agent-3",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                7.3999999999999995,
+                1.0
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 15.4,
+              "mass_ug": "15400000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-3",
+              "kind": "inert_material",
+              "mass_kg": 32.0,
+              "mass_ug": "32000000000",
+              "position_m": [
+                4.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-4",
+              "kind": "stone",
+              "mass_kg": 4.0,
+              "mass_ug": "4000000000",
+              "position_m": [
+                5.0,
+                2.0
+              ],
+              "radius_m": 0.15
+            },
+            {
+              "entity_id": "terrain-1",
+              "kind": "rock",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                8.0,
+                8.0
+              ],
+              "radius_m": 1.0
+            }
+          ],
+          "world_bounds_m": {
+            "height": 16.0,
+            "width": 16.0
+          }
+        },
+        "request": {
+          "action_type": "gather",
+          "agent_id": "agent-4",
+          "observation_version": "358",
+          "parameters": {
+            "mass_kg": 0.3
+          },
+          "request_id": "stable-agent-4-4",
+          "requested_duration": 1,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": [
+            "resource-2"
+          ]
+        }
+      },
+      "kind": "request_reserved",
+      "previous": "c2a9f6ae5624777d8023f63281fabf7d85bf6f1a16d3481add1c6296c497466d",
+      "tick": 358
+    },
+    {
+      "agent": "agent-3",
+      "data": {
+        "receipt": {
+          "agent_id": "agent-3",
+          "completed_tick": "360",
+          "error_code": "",
+          "event_refs": [
+            "375",
+            "384"
+          ],
+          "observable_effects": {
+            "description": ""
+          },
+          "observation_version": "360",
+          "reason": "",
+          "request_id": "stable-agent-3-4",
+          "schema_version": 1,
+          "started_tick": "355",
+          "status": "completed"
+        },
+        "request": {
+          "action_type": "move",
+          "agent_id": "agent-3",
+          "observation_version": "355",
+          "parameters": {
+            "x_m": 7,
+            "y_m": 1
+          },
+          "request_id": "stable-agent-3-4",
+          "requested_duration": 1.0,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": []
+        }
+      },
+      "kind": "terminal_receipt",
+      "previous": "2a9730037cf340c039e45dc9a6e9cf05722e9cc9f0df65ba5e9a3eed6f0d0793",
+      "tick": 360
+    },
+    {
+      "agent": "agent-3",
+      "data": {
+        "executor": "authored_prerequisite_executor",
+        "goal_id": 1,
+        "goal_origin": "authored_need_selection",
+        "own_observation": {
+          "agent_id": "agent-3",
+          "audible_reports": [],
+          "dt_s": 0.2,
+          "hearing_range_m": 6.0,
+          "observation_version": "360",
+          "omissions": {
+            "older_results": 0
+          },
+          "own_state": {
+            "alive": true,
+            "body": {
+              "alive": true,
+              "fatigue": 0.2596799999999983,
+              "food_ingested_ug": "0",
+              "health": 1.0,
+              "hunger": 0.42199999999999205,
+              "thirst": 0.5080000000000067,
+              "water_ingested_ug": "0"
+            },
+            "busy": false,
+            "carried_mass_ug": "0",
+            "entity_id": "agent-3",
+            "inventory_ug": {},
+            "kind": "actor",
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "position_m": [
+              7.0,
+              1.0
+            ],
+            "radius_m": 0.25,
+            "shared_event_refs": [],
+            "tools": [],
+            "workmanship": 0
+          },
+          "read_reports": [],
+          "recent_action_results": [
+            {
+              "agent_id": "agent-3",
+              "completed_tick": "349",
+              "error_code": "",
+              "event_refs": [
+                "337",
+                "360"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "349",
+              "reason": "",
+              "request_id": "stable-agent-3-2",
+              "schema_version": 1,
+              "started_tick": "334",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-3",
+              "completed_tick": "355",
+              "error_code": "",
+              "event_refs": [
+                "363",
+                "373"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "355",
+              "reason": "",
+              "request_id": "stable-agent-3-3",
+              "schema_version": 1,
+              "started_tick": "349",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-3",
+              "completed_tick": "360",
+              "error_code": "",
+              "event_refs": [
+                "375",
+                "384"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "360",
+              "reason": "",
+              "request_id": "stable-agent-3-4",
+              "schema_version": 1,
+              "started_tick": "355",
+              "status": "completed"
+            }
+          ],
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "sight_range_m": 8,
+          "social_reports": [],
+          "task_offers": [],
+          "tick": "360",
+          "visible_entities": [
+            {
+              "alive": true,
+              "entity_id": "agent-1",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                2.0,
+                3.0
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "alive": true,
+              "entity_id": "agent-2",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                3.3711677830671776,
+                3.035487555122222
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "alive": true,
+              "entity_id": "agent-4",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                3.843438982190042,
+                2.70612370256367
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 15.4,
+              "mass_ug": "15400000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-3",
+              "kind": "inert_material",
+              "mass_kg": 32.0,
+              "mass_ug": "32000000000",
+              "position_m": [
+                4.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-4",
+              "kind": "stone",
+              "mass_kg": 4.0,
+              "mass_ug": "4000000000",
+              "position_m": [
+                5.0,
+                2.0
+              ],
+              "radius_m": 0.15
+            },
+            {
+              "entity_id": "terrain-1",
+              "kind": "rock",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                8.0,
+                8.0
+              ],
+              "radius_m": 1.0
+            },
+            {
+              "biomass_ug": "8000000000",
+              "entity_id": "tree-2",
+              "health": 1.0,
+              "kind": "tree",
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000",
+              "position_m": [
+                14.0,
+                2.0
+              ],
+              "radius_m": 0.6,
+              "stage": "mature"
+            }
+          ],
+          "world_bounds_m": {
+            "height": 16.0,
+            "width": 16.0
+          }
+        },
+        "request": {
+          "action_type": "move",
+          "agent_id": "agent-3",
+          "observation_version": "360",
+          "parameters": {
+            "x_m": 4.089572499564005,
+            "y_m": 1.7276068751089988
+          },
+          "request_id": "stable-agent-3-5",
+          "requested_duration": 3.0,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": []
+        }
+      },
+      "kind": "request_reserved",
+      "previous": "0f8d4e1a9d89be411a392ab98cc48a2f37bd7c3727545ee3bc2e68627864725e",
+      "tick": 360
+    },
+    {
+      "agent": "agent-4",
+      "data": {
+        "receipt": {
+          "agent_id": "agent-4",
+          "completed_tick": "363",
+          "error_code": "",
+          "event_refs": [
+            "382",
+            "389",
+            "390"
+          ],
+          "observable_effects": {
+            "description": "gather:300000000ug"
+          },
+          "observation_version": "363",
+          "reason": "",
+          "request_id": "stable-agent-4-4",
+          "schema_version": 1,
+          "started_tick": "358",
+          "status": "completed"
+        },
+        "request": {
+          "action_type": "gather",
+          "agent_id": "agent-4",
+          "observation_version": "358",
+          "parameters": {
+            "mass_kg": 0.3
+          },
+          "request_id": "stable-agent-4-4",
+          "requested_duration": 1,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": [
+            "resource-2"
+          ]
+        }
+      },
+      "kind": "terminal_receipt",
+      "previous": "851ce2b12547de62da3599ba14f7b6de80ed50a2dd0137fa36817d4e68689317",
+      "tick": 363
+    },
+    {
+      "agent": "agent-4",
+      "data": {
+        "executor": "authored_prerequisite_executor",
+        "goal_id": 1,
+        "goal_origin": "authored_need_selection",
+        "own_observation": {
+          "agent_id": "agent-4",
+          "audible_reports": [],
+          "dt_s": 0.2,
+          "hearing_range_m": 6.0,
+          "observation_version": "363",
+          "omissions": {
+            "older_results": 0
+          },
+          "own_state": {
+            "alive": true,
+            "body": {
+              "alive": true,
+              "fatigue": 0.25999999999999823,
+              "food_ingested_ug": "0",
+              "health": 1.0,
+              "hunger": 0.422599999999992,
+              "thirst": 0.5089000000000066,
+              "water_ingested_ug": "0"
+            },
+            "busy": false,
+            "carried_mass_ug": "300000000",
+            "entity_id": "agent-4",
+            "inventory_ug": {
+              "water": "300000000"
+            },
+            "kind": "actor",
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "position_m": [
+              3.843438982190042,
+              2.70612370256367
+            ],
+            "radius_m": 0.25,
+            "shared_event_refs": [],
+            "tools": [],
+            "workmanship": 0
+          },
+          "read_reports": [],
+          "recent_action_results": [
+            {
+              "agent_id": "agent-4",
+              "completed_tick": "349",
+              "error_code": "",
+              "event_refs": [
+                "338",
+                "361"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "349",
+              "reason": "",
+              "request_id": "stable-agent-4-2",
+              "schema_version": 1,
+              "started_tick": "334",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-4",
+              "completed_tick": "358",
+              "error_code": "",
+              "event_refs": [
+                "364",
+                "380"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "358",
+              "reason": "",
+              "request_id": "stable-agent-4-3",
+              "schema_version": 1,
+              "started_tick": "349",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-4",
+              "completed_tick": "363",
+              "error_code": "",
+              "event_refs": [
+                "382",
+                "389",
+                "390"
+              ],
+              "observable_effects": {
+                "description": "gather:300000000ug"
+              },
+              "observation_version": "363",
+              "reason": "",
+              "request_id": "stable-agent-4-4",
+              "schema_version": 1,
+              "started_tick": "358",
+              "status": "completed"
+            }
+          ],
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "sight_range_m": 8,
+          "social_reports": [],
+          "task_offers": [],
+          "tick": "363",
+          "visible_entities": [
+            {
+              "alive": true,
+              "entity_id": "agent-1",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                2.0,
+                3.0
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "alive": true,
+              "entity_id": "agent-2",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                3.3711677830671776,
+                3.035487555122222
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "alive": true,
+              "entity_id": "agent-3",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                6.417914499912801,
+                1.1455213750217998
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 15.1,
+              "mass_ug": "15100000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-3",
+              "kind": "inert_material",
+              "mass_kg": 32.0,
+              "mass_ug": "32000000000",
+              "position_m": [
+                4.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-4",
+              "kind": "stone",
+              "mass_kg": 4.0,
+              "mass_ug": "4000000000",
+              "position_m": [
+                5.0,
+                2.0
+              ],
+              "radius_m": 0.15
+            },
+            {
+              "entity_id": "terrain-1",
+              "kind": "rock",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                8.0,
+                8.0
+              ],
+              "radius_m": 1.0
+            }
+          ],
+          "world_bounds_m": {
+            "height": 16.0,
+            "width": 16.0
+          }
+        },
+        "request": {
+          "action_type": "drink",
+          "agent_id": "agent-4",
+          "observation_version": "363",
+          "parameters": {
+            "mass_kg": 0.3
+          },
+          "request_id": "stable-agent-4-5",
+          "requested_duration": 1.0,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": []
+        }
+      },
+      "kind": "request_reserved",
+      "previous": "90b82d2dc8f7e2a7965c221610fabaff08ab2ee56616eb2d60a47a4e264d1268",
+      "tick": 363
+    },
+    {
+      "agent": "agent-4",
+      "data": {
+        "receipt": {
+          "agent_id": "agent-4",
+          "completed_tick": "368",
+          "error_code": "",
+          "event_refs": [
+            "392",
+            "397",
+            "398"
+          ],
+          "observable_effects": {
+            "description": "ingested_ug=300000000"
+          },
+          "observation_version": "368",
+          "reason": "",
+          "request_id": "stable-agent-4-5",
+          "schema_version": 1,
+          "started_tick": "363",
+          "status": "completed"
+        },
+        "request": {
+          "action_type": "drink",
+          "agent_id": "agent-4",
+          "observation_version": "363",
+          "parameters": {
+            "mass_kg": 0.3
+          },
+          "request_id": "stable-agent-4-5",
+          "requested_duration": 1.0,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": []
+        }
+      },
+      "kind": "terminal_receipt",
+      "previous": "07c63d94eeb84c139f3fed21b9f5446632844445d92c19151ef3df9765e7ae9b",
+      "tick": 368
+    },
+    {
+      "agent": "agent-4",
+      "data": {
+        "consumption_request_id": "stable-agent-4-5",
+        "created_tick": 334,
+        "failures": 0,
+        "id": 1,
+        "initial_ingested_ug": 0,
+        "kind": "drink",
+        "origin": "authored_need_selection",
+        "phase": "consume",
+        "raw": null,
+        "reason": "native_ingested_reservoir_delta",
+        "steps": 2,
+        "target": "resource-2",
+        "target_mass_ug": 300000000
+      },
+      "kind": "goal_completed",
+      "previous": "49f9d8875e21c980257139f246c303f4c3db61526c28892c5a812c1858882f2e",
+      "tick": 368
+    },
+    {
+      "agent": "agent-3",
+      "data": {
+        "receipt": {
+          "agent_id": "agent-3",
+          "completed_tick": "375",
+          "error_code": "",
+          "event_refs": [
+            "386",
+            "406"
+          ],
+          "observable_effects": {
+            "description": ""
+          },
+          "observation_version": "375",
+          "reason": "",
+          "request_id": "stable-agent-3-5",
+          "schema_version": 1,
+          "started_tick": "360",
+          "status": "completed"
+        },
+        "request": {
+          "action_type": "move",
+          "agent_id": "agent-3",
+          "observation_version": "360",
+          "parameters": {
+            "x_m": 4.089572499564005,
+            "y_m": 1.7276068751089988
+          },
+          "request_id": "stable-agent-3-5",
+          "requested_duration": 3.0,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": []
+        }
+      },
+      "kind": "terminal_receipt",
+      "previous": "a1c856c84dcadbf971aa3cac783dd0d80d28a7b22d7f3591098ef7a32c728ee0",
+      "tick": 375
+    },
+    {
+      "agent": "agent-3",
+      "data": {
+        "executor": "authored_prerequisite_executor",
+        "goal_id": 1,
+        "goal_origin": "authored_need_selection",
+        "own_observation": {
+          "agent_id": "agent-3",
+          "audible_reports": [],
+          "dt_s": 0.2,
+          "hearing_range_m": 6.0,
+          "observation_version": "375",
+          "omissions": {
+            "older_results": 0
+          },
+          "own_state": {
+            "alive": true,
+            "body": {
+              "alive": true,
+              "fatigue": 0.26327999999999857,
+              "food_ingested_ug": "0",
+              "health": 1.0,
+              "hunger": 0.4249999999999917,
+              "thirst": 0.5125000000000062,
+              "water_ingested_ug": "0"
+            },
+            "busy": false,
+            "carried_mass_ug": "0",
+            "entity_id": "agent-3",
+            "inventory_ug": {},
+            "kind": "actor",
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "position_m": [
+              4.089572499564005,
+              1.7276068751089988
+            ],
+            "radius_m": 0.25,
+            "shared_event_refs": [],
+            "tools": [],
+            "workmanship": 0
+          },
+          "read_reports": [],
+          "recent_action_results": [
+            {
+              "agent_id": "agent-3",
+              "completed_tick": "349",
+              "error_code": "",
+              "event_refs": [
+                "337",
+                "360"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "349",
+              "reason": "",
+              "request_id": "stable-agent-3-2",
+              "schema_version": 1,
+              "started_tick": "334",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-3",
+              "completed_tick": "355",
+              "error_code": "",
+              "event_refs": [
+                "363",
+                "373"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "355",
+              "reason": "",
+              "request_id": "stable-agent-3-3",
+              "schema_version": 1,
+              "started_tick": "349",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-3",
+              "completed_tick": "360",
+              "error_code": "",
+              "event_refs": [
+                "375",
+                "384"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "360",
+              "reason": "",
+              "request_id": "stable-agent-3-4",
+              "schema_version": 1,
+              "started_tick": "355",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-3",
+              "completed_tick": "375",
+              "error_code": "",
+              "event_refs": [
+                "386",
+                "406"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "375",
+              "reason": "",
+              "request_id": "stable-agent-3-5",
+              "schema_version": 1,
+              "started_tick": "360",
+              "status": "completed"
+            }
+          ],
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "sight_range_m": 8,
+          "social_reports": [],
+          "task_offers": [],
+          "tick": "375",
+          "visible_entities": [
+            {
+              "alive": true,
+              "entity_id": "agent-1",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                2.0,
+                3.0
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "alive": true,
+              "entity_id": "agent-2",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                3.3711677830671776,
+                3.035487555122222
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "alive": true,
+              "entity_id": "agent-4",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                3.843438982190042,
+                2.70612370256367
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 15.1,
+              "mass_ug": "15100000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-3",
+              "kind": "inert_material",
+              "mass_kg": 32.0,
+              "mass_ug": "32000000000",
+              "position_m": [
+                4.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-4",
+              "kind": "stone",
+              "mass_kg": 4.0,
+              "mass_ug": "4000000000",
+              "position_m": [
+                5.0,
+                2.0
+              ],
+              "radius_m": 0.15
+            },
+            {
+              "entity_id": "terrain-1",
+              "kind": "rock",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                8.0,
+                8.0
+              ],
+              "radius_m": 1.0
+            }
+          ],
+          "world_bounds_m": {
+            "height": 16.0,
+            "width": 16.0
+          }
+        },
+        "request": {
+          "action_type": "gather",
+          "agent_id": "agent-3",
+          "observation_version": "375",
+          "parameters": {
+            "mass_kg": 0.3
+          },
+          "request_id": "stable-agent-3-6",
+          "requested_duration": 1,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": [
+            "resource-2"
+          ]
+        }
+      },
+      "kind": "request_reserved",
+      "previous": "ef9beacc4174251b8d8ac0f3318632833c33aedcd005ee3d28ad61b9f581baa8",
+      "tick": 375
+    },
+    {
+      "agent": "agent-3",
+      "data": {
+        "receipt": {
+          "agent_id": "agent-3",
+          "completed_tick": "380",
+          "error_code": "",
+          "event_refs": [
+            "408",
+            "413",
+            "414"
+          ],
+          "observable_effects": {
+            "description": "gather:300000000ug"
+          },
+          "observation_version": "380",
+          "reason": "",
+          "request_id": "stable-agent-3-6",
+          "schema_version": 1,
+          "started_tick": "375",
+          "status": "completed"
+        },
+        "request": {
+          "action_type": "gather",
+          "agent_id": "agent-3",
+          "observation_version": "375",
+          "parameters": {
+            "mass_kg": 0.3
+          },
+          "request_id": "stable-agent-3-6",
+          "requested_duration": 1,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": [
+            "resource-2"
+          ]
+        }
+      },
+      "kind": "terminal_receipt",
+      "previous": "dd6c32a4d292a1c46789f5fc02fcd63ebbcbbb95e9c8f68d78ef3bc02eda8059",
+      "tick": 380
+    },
+    {
+      "agent": "agent-3",
+      "data": {
+        "executor": "authored_prerequisite_executor",
+        "goal_id": 1,
+        "goal_origin": "authored_need_selection",
+        "own_observation": {
+          "agent_id": "agent-3",
+          "audible_reports": [],
+          "dt_s": 0.2,
+          "hearing_range_m": 6.0,
+          "observation_version": "380",
+          "omissions": {
+            "older_results": 0
+          },
+          "own_state": {
+            "alive": true,
+            "body": {
+              "alive": true,
+              "fatigue": 0.26407999999999854,
+              "food_ingested_ug": "0",
+              "health": 1.0,
+              "hunger": 0.4259999999999916,
+              "thirst": 0.514000000000006,
+              "water_ingested_ug": "0"
+            },
+            "busy": false,
+            "carried_mass_ug": "300000000",
+            "entity_id": "agent-3",
+            "inventory_ug": {
+              "water": "300000000"
+            },
+            "kind": "actor",
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "position_m": [
+              4.089572499564005,
+              1.7276068751089988
+            ],
+            "radius_m": 0.25,
+            "shared_event_refs": [],
+            "tools": [],
+            "workmanship": 0
+          },
+          "read_reports": [],
+          "recent_action_results": [
+            {
+              "agent_id": "agent-3",
+              "completed_tick": "349",
+              "error_code": "",
+              "event_refs": [
+                "337",
+                "360"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "349",
+              "reason": "",
+              "request_id": "stable-agent-3-2",
+              "schema_version": 1,
+              "started_tick": "334",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-3",
+              "completed_tick": "355",
+              "error_code": "",
+              "event_refs": [
+                "363",
+                "373"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "355",
+              "reason": "",
+              "request_id": "stable-agent-3-3",
+              "schema_version": 1,
+              "started_tick": "349",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-3",
+              "completed_tick": "360",
+              "error_code": "",
+              "event_refs": [
+                "375",
+                "384"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "360",
+              "reason": "",
+              "request_id": "stable-agent-3-4",
+              "schema_version": 1,
+              "started_tick": "355",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-3",
+              "completed_tick": "375",
+              "error_code": "",
+              "event_refs": [
+                "386",
+                "406"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "375",
+              "reason": "",
+              "request_id": "stable-agent-3-5",
+              "schema_version": 1,
+              "started_tick": "360",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-3",
+              "completed_tick": "380",
+              "error_code": "",
+              "event_refs": [
+                "408",
+                "413",
+                "414"
+              ],
+              "observable_effects": {
+                "description": "gather:300000000ug"
+              },
+              "observation_version": "380",
+              "reason": "",
+              "request_id": "stable-agent-3-6",
+              "schema_version": 1,
+              "started_tick": "375",
+              "status": "completed"
+            }
+          ],
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "sight_range_m": 8,
+          "social_reports": [],
+          "task_offers": [],
+          "tick": "380",
+          "visible_entities": [
+            {
+              "alive": true,
+              "entity_id": "agent-1",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                2.0,
+                3.0
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "alive": true,
+              "entity_id": "agent-2",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                3.3711677830671776,
+                3.035487555122222
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "alive": true,
+              "entity_id": "agent-4",
+              "kind": "actor",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                3.843438982190042,
+                2.70612370256367
+              ],
+              "radius_m": 0.25
+            },
+            {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 14.8,
+              "mass_ug": "14800000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-3",
+              "kind": "inert_material",
+              "mass_kg": 32.0,
+              "mass_ug": "32000000000",
+              "position_m": [
+                4.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-4",
+              "kind": "stone",
+              "mass_kg": 4.0,
+              "mass_ug": "4000000000",
+              "position_m": [
+                5.0,
+                2.0
+              ],
+              "radius_m": 0.15
+            },
+            {
+              "entity_id": "terrain-1",
+              "kind": "rock",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                8.0,
+                8.0
+              ],
+              "radius_m": 1.0
+            }
+          ],
+          "world_bounds_m": {
+            "height": 16.0,
+            "width": 16.0
+          }
+        },
+        "request": {
+          "action_type": "drink",
+          "agent_id": "agent-3",
+          "observation_version": "380",
+          "parameters": {
+            "mass_kg": 0.3
+          },
+          "request_id": "stable-agent-3-7",
+          "requested_duration": 1.0,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": []
+        }
+      },
+      "kind": "request_reserved",
+      "previous": "b74e6f0535aa4bc4634b06e6a76fdc1336ad95403229c3cd45c3de0c1619d8e7",
+      "tick": 380
+    },
+    {
+      "agent": "agent-3",
+      "data": {
+        "receipt": {
+          "agent_id": "agent-3",
+          "completed_tick": "385",
+          "error_code": "",
+          "event_refs": [
+            "416",
+            "421",
+            "422"
+          ],
+          "observable_effects": {
+            "description": "ingested_ug=300000000"
+          },
+          "observation_version": "385",
+          "reason": "",
+          "request_id": "stable-agent-3-7",
+          "schema_version": 1,
+          "started_tick": "380",
+          "status": "completed"
+        },
+        "request": {
+          "action_type": "drink",
+          "agent_id": "agent-3",
+          "observation_version": "380",
+          "parameters": {
+            "mass_kg": 0.3
+          },
+          "request_id": "stable-agent-3-7",
+          "requested_duration": 1.0,
+          "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+          "schema_version": 1,
+          "target_ids": []
+        }
+      },
+      "kind": "terminal_receipt",
+      "previous": "071ef94946a3aaf57b1eaaa93673b232b320743d756fc0bf88b36572ee4a4c6a",
+      "tick": 385
+    },
+    {
+      "agent": "agent-3",
+      "data": {
+        "consumption_request_id": "stable-agent-3-7",
+        "created_tick": 334,
+        "failures": 0,
+        "id": 1,
+        "initial_ingested_ug": 0,
+        "kind": "drink",
+        "origin": "authored_need_selection",
+        "phase": "consume",
+        "raw": null,
+        "reason": "native_ingested_reservoir_delta",
+        "steps": 4,
+        "target": "resource-2",
+        "target_mass_ug": 300000000
+      },
+      "kind": "goal_completed",
+      "previous": "39ea43a216f4fe94edcf5a37dd0da6b4f3c4c4249d779f34f1b0f9508ed9b444",
+      "tick": 385
+    }
+  ],
+  "decisions": [
+    {
+      "request": {
+        "action_type": "gather",
+        "agent_id": "agent-1",
+        "observation_version": "334",
+        "parameters": {
+          "mass_kg": 0.3
+        },
+        "request_id": "stable-agent-1-2",
+        "requested_duration": 1,
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "target_ids": [
+          "resource-2"
+        ]
+      },
+      "result": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "335"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "334",
+        "reason": "",
+        "request_id": "stable-agent-1-2",
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "started_tick": "334",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-2",
+        "observation_version": "334",
+        "parameters": {
+          "x_m": 3.3711677830671776,
+          "y_m": 3.035487555122222
+        },
+        "request_id": "stable-agent-2-2",
+        "requested_duration": 2.6,
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "result": {
+        "agent_id": "agent-2",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "336"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "334",
+        "reason": "",
+        "request_id": "stable-agent-2-2",
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "started_tick": "334",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-3",
+        "observation_version": "334",
+        "parameters": {
+          "x_m": 8.883392395178692,
+          "y_m": 1.6333148863038969
+        },
+        "request_id": "stable-agent-3-2",
+        "requested_duration": 3.2,
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "result": {
+        "agent_id": "agent-3",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "337"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "334",
+        "reason": "",
+        "request_id": "stable-agent-3-2",
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "started_tick": "334",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-4",
+        "observation_version": "334",
+        "parameters": {
+          "x_m": 5.144656357226019,
+          "y_m": 3.7954976230277317
+        },
+        "request_id": "stable-agent-4-2",
+        "requested_duration": 3.0,
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "result": {
+        "agent_id": "agent-4",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "338"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "334",
+        "reason": "",
+        "request_id": "stable-agent-4-2",
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "started_tick": "334",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "drink",
+        "agent_id": "agent-1",
+        "observation_version": "339",
+        "parameters": {
+          "mass_kg": 0.3
+        },
+        "request_id": "stable-agent-1-3",
+        "requested_duration": 1.0,
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "result": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "346"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "339",
+        "reason": "",
+        "request_id": "stable-agent-1-3",
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "started_tick": "339",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "gather",
+        "agent_id": "agent-2",
+        "observation_version": "347",
+        "parameters": {
+          "mass_kg": 0.3
+        },
+        "request_id": "stable-agent-2-3",
+        "requested_duration": 1,
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "target_ids": [
+          "resource-2"
+        ]
+      },
+      "result": {
+        "agent_id": "agent-2",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "358"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "347",
+        "reason": "",
+        "request_id": "stable-agent-2-3",
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "started_tick": "347",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-3",
+        "observation_version": "349",
+        "parameters": {
+          "x_m": 8,
+          "y_m": 1
+        },
+        "request_id": "stable-agent-3-3",
+        "requested_duration": 1.2000000000000002,
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "result": {
+        "agent_id": "agent-3",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "363"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "349",
+        "reason": "",
+        "request_id": "stable-agent-3-3",
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "started_tick": "349",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-4",
+        "observation_version": "349",
+        "parameters": {
+          "x_m": 3.843438982190042,
+          "y_m": 2.70612370256367
+        },
+        "request_id": "stable-agent-4-3",
+        "requested_duration": 1.8,
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "result": {
+        "agent_id": "agent-4",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "364"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "349",
+        "reason": "",
+        "request_id": "stable-agent-4-3",
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "started_tick": "349",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "drink",
+        "agent_id": "agent-2",
+        "observation_version": "352",
+        "parameters": {
+          "mass_kg": 0.3
+        },
+        "request_id": "stable-agent-2-4",
+        "requested_duration": 1.0,
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "result": {
+        "agent_id": "agent-2",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "370"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "352",
+        "reason": "",
+        "request_id": "stable-agent-2-4",
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "started_tick": "352",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-3",
+        "observation_version": "355",
+        "parameters": {
+          "x_m": 7,
+          "y_m": 1
+        },
+        "request_id": "stable-agent-3-4",
+        "requested_duration": 1.0,
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "result": {
+        "agent_id": "agent-3",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "375"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "355",
+        "reason": "",
+        "request_id": "stable-agent-3-4",
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "started_tick": "355",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "gather",
+        "agent_id": "agent-4",
+        "observation_version": "358",
+        "parameters": {
+          "mass_kg": 0.3
+        },
+        "request_id": "stable-agent-4-4",
+        "requested_duration": 1,
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "target_ids": [
+          "resource-2"
+        ]
+      },
+      "result": {
+        "agent_id": "agent-4",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "382"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "358",
+        "reason": "",
+        "request_id": "stable-agent-4-4",
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "started_tick": "358",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-3",
+        "observation_version": "360",
+        "parameters": {
+          "x_m": 4.089572499564005,
+          "y_m": 1.7276068751089988
+        },
+        "request_id": "stable-agent-3-5",
+        "requested_duration": 3.0,
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "result": {
+        "agent_id": "agent-3",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "386"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "360",
+        "reason": "",
+        "request_id": "stable-agent-3-5",
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "started_tick": "360",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "drink",
+        "agent_id": "agent-4",
+        "observation_version": "363",
+        "parameters": {
+          "mass_kg": 0.3
+        },
+        "request_id": "stable-agent-4-5",
+        "requested_duration": 1.0,
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "result": {
+        "agent_id": "agent-4",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "392"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "363",
+        "reason": "",
+        "request_id": "stable-agent-4-5",
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "started_tick": "363",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "gather",
+        "agent_id": "agent-3",
+        "observation_version": "375",
+        "parameters": {
+          "mass_kg": 0.3
+        },
+        "request_id": "stable-agent-3-6",
+        "requested_duration": 1,
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "target_ids": [
+          "resource-2"
+        ]
+      },
+      "result": {
+        "agent_id": "agent-3",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "408"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "375",
+        "reason": "",
+        "request_id": "stable-agent-3-6",
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "started_tick": "375",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "drink",
+        "agent_id": "agent-3",
+        "observation_version": "380",
+        "parameters": {
+          "mass_kg": 0.3
+        },
+        "request_id": "stable-agent-3-7",
+        "requested_duration": 1.0,
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "result": {
+        "agent_id": "agent-3",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "416"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "380",
+        "reason": "",
+        "request_id": "stable-agent-3-7",
+        "run_id": "438fc983-cc6a-485b-9b28-f0d119bb1ba0",
+        "schema_version": 1,
+        "started_tick": "380",
+        "status": "accepted"
+      }
+    }
+  ],
+  "passed": true
+}

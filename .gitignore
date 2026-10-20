@@ -8,3 +8,5 @@ models/
 .playwright-mcp/
 .tools/
 node_modules/
+
+dist/

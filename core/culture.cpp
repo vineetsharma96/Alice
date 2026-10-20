@@ -63,7 +63,7 @@ std::string World::validate_culture_action(const Entity& actor,const Action& a) 
         if(!a.text.empty()||a.mass_ug<=0||a.mass_ug>kg||(a.material!="food"&&a.material!="water"&&a.material!="inert_material"))return "INVALID_ARGUMENT";
         auto stock=actor.inventory.find(a.material);
         if(stock==actor.inventory.end()||stock->second<a.mass_ug)return "INSUFFICIENT_RESOURCE";
-        std::int64_t held=0;for(const auto& [kind,mass]:peer->inventory)held+=mass;
+        const auto held=carried_mass(*peer);
         return held+a.mass_ug>2*kg?"CAPACITY_EXCEEDED":"";
     }
     if(a.type=="offer_task"&&(a.text.empty()||a.text.size()>160||culture_.agreements.size()>=64||culture_.agreements.contains(a.request_id)))return "INVALID_ARGUMENT";

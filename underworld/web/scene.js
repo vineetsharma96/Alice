@@ -27,12 +27,20 @@ export class WorldView {
  material(color){if(!this.materials.has(color))this.materials.set(color,new THREE.MeshLambertMaterial({color}));return this.materials.get(color);}
  mesh(group,shape,color,position,scale){const m=new THREE.Mesh(this.geo[shape],this.material(color));m.position.set(...position);m.scale.set(...scale);group.add(m);return m;}
  create(e){
-  const g=new THREE.Group();g.userData.id=e.entity_id;const radius=Math.max(.12,e.radius_m||.25);
+  const g=new THREE.Group();g.userData.id=e.entity_id;g.userData.appearance=`${e.kind}/${e.stage??''}`;const radius=Math.max(.12,e.radius_m||.25);
   if(e.kind==='actor'||e.kind==='operator_avatar'){
    const color=e.kind==='operator_avatar'?'#d9e8d2':e.alive===false?'#746e6d':'#90aea4';
    this.mesh(g,'body',color,[0,.5,0],[radius,.72,radius]);this.mesh(g,'head',color,[0,1.07,0],[.17,.17,.17]);
    g.userData.health=this.mesh(g,'box','#b2d9bc',[0,1.4,0],[.5,.04,.07]);
    g.userData.busy=this.mesh(g,'head','#f0bf78',[.29,1.12,0],[.05,.05,.05]);
+  }else if(e.kind==='animal'){
+   const hen=e.entity_id==='animal-2',color=e.alive===false?'#736b62':hen?'#c5a06f':'#b8c2ae';
+   this.mesh(g,'head',color,[0,hen?.26:.38,0],hen?[.2,.23,.18]:[.2,.23,.32]);
+   this.mesh(g,'head',color,[0,hen?.48:.53,-.19],hen?[.1,.12,.1]:[.12,.14,.16]);
+   if(hen)this.mesh(g,'box','#c88748',[0,.47,-.31],[.06,.04,.1]);
+   for(const x of [-.12,.12])for(const z of (hen?[0]:[-.18,.18]))this.mesh(g,'body','#726d53',[x,.12,z],[.035,.23,.035]);
+  }else if(e.kind==='forage'){
+   for(const [x,z] of [[-.2,0],[0,.16],[.2,-.1]])this.mesh(g,'body','#7b9863',[x,.12,z],[.07,.24,.07]);
   }else if(e.kind==='book'){
    this.mesh(g,'box','#d3c5a3',[0,.16,0],[.65,.12,.46]);this.mesh(g,'box','#718b81',[-.3,.17,0],[.06,.15,.48]);
    }else if(e.kind==='thermal_cell'){
@@ -41,6 +49,13 @@ export class WorldView {
     const stump=e.stage==='stump',mature=e.stage==='mature';
     this.mesh(g,'body',stump?'#72513b':'#79523a',[0,radius*.8,0],[radius*.42,radius*1.8,radius*.42]);
     if(!stump)this.mesh(g,'head',mature?'#5f8c5b':'#789c63',[0,radius*2.1,0],[radius*(mature?1.55:1.05),radius*(mature?1.35:1.0),radius*(mature?1.55:1.05)]);
+   }else if(['construction','storage_box','trough','fence','gate'].includes(e.kind)){
+    const colors={construction:'#b49e79',storage_box:'#a87545',trough:'#778e95',fence:'#927052',gate:'#ac8c68'};
+    this.mesh(g,'box',colors[e.kind],[0,.35,0],[.9,.7,e.kind==='fence'||e.kind==='gate'?.25:.9]);
+   }else if(e.kind==='tool'){
+    this.mesh(g,'box','#98704c',[0,.15,0],[.5,.08,.08]);this.mesh(g,'box','#969e9e',[.2,.15,0],[.16,.2,.12]);
+   }else if(e.kind==='spent_tool'||e.kind==='cancelled_site'){
+    g.visible=false;
    }else if(e.kind==='food'||e.kind==='water'){
     const color=e.kind==='food'?'#b99c6b':'#688d9b';this.mesh(g,'body',color,[0,.13,0],[.5,.26,.5]);
     this.mesh(g,'box',e.kind==='food'?'#dcc391':'#9db9bd',[0,.28,0],[.23,.04,.23]);
@@ -60,8 +75,8 @@ export class WorldView {
    const size=Math.max(b.width,b.height);this.grid=new THREE.GridHelper(size,Math.min(64,Math.ceil(size)),0x79938a,0x536d65);this.grid.position.set(b.width/2,-.015,-b.height/2);this.scene.add(this.grid);this.fit();
   }
   const live=new Set();for(const e of snapshot.entities){
-   live.add(e.entity_id);let g=this.objects.get(e.entity_id);if(!g){g=this.create(e);this.objects.set(e.entity_id,g);}
-   g.position.set(e.position_m[0],0,-e.position_m[1]);g.visible=e.present!==false;
+   live.add(e.entity_id);let g=this.objects.get(e.entity_id);if(g&&g.userData.appearance!==`${e.kind}/${e.stage??''}`){this.scene.remove(g);this.objects.delete(e.entity_id);g=null;}if(!g){g=this.create(e);this.objects.set(e.entity_id,g);}
+   g.position.set(e.position_m[0],0,-e.position_m[1]);g.visible=e.present!==false&&!['spent_tool','cancelled_site'].includes(e.kind);if(e.kind==='forage')g.scale.setScalar(Math.max(.05,Math.min(1,Number(e.mass_ug)/2e9)));if(e.kind==='animal'){g.rotation.z=e.alive===false?Math.PI/2:0;for(const child of g.children)if(child.geometry===this.geo.head)child.material=this.material(e.alive===false?'#736b62':e.entity_id==='animal-2'?'#c5a06f':'#b8c2ae');}if(e.kind==='gate')g.rotation.y=e.radius_m===0?Math.PI/2:0;
    if(g.userData.health){g.userData.health.scale.x=.5*(e.body?.health??1);g.userData.health.visible=e.alive!==false;g.userData.busy.visible=snapshot.outstanding_actions.some(a=>a.agent_id===e.entity_id);if(e.kind==='actor'){const m=this.material(e.alive===false?'#746e6d':'#90aea4');g.children[0].material=m;g.children[1].material=m;}}
   }
   for(const [id,g] of this.objects)if(!live.has(id)){this.scene.remove(g);this.objects.delete(id);}

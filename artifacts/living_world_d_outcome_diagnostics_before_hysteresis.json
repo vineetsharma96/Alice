@@ -1,0 +1,560 @@
+[
+  {
+    "file": "data\\living-world-d-evaluation-20261020\\101-caretaking-final.txt",
+    "state_sha256": "07815e4ddc48c0238fa4e544efea11df2d528147439727aff1f62be71744ea1d",
+    "animals": [
+      {
+        "entity_id": "animal-1",
+        "body": {
+          "hunger": 0.375,
+          "thirst": 0.5,
+          "fatigue": 0.05840000000000007,
+          "health": 1.0,
+          "alive": true,
+          "food_ingested_ug": "0",
+          "water_ingested_ug": "0"
+        },
+        "position_m": [
+          6.808083984145114,
+          8.188878196710652
+        ],
+        "stage": "domestic",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "animal-2",
+        "body": {
+          "hunger": 0.89,
+          "thirst": 0.5,
+          "fatigue": 0.04560000000000002,
+          "health": 0.6995999999999953,
+          "alive": true,
+          "food_ingested_ug": "0",
+          "water_ingested_ug": "0"
+        },
+        "position_m": [
+          8.242078443383884,
+          7.514007364921346
+        ],
+        "stage": "domestic",
+        "inventory_ug": {
+          "eggs": "0"
+        }
+      }
+    ],
+    "ecology": {
+      "enabled": true,
+      "controller_origin": "authored_native_ecology_v1",
+      "animals": {
+        "animal-1": {
+          "species": "mossgrazer",
+          "mode": "wander",
+          "age_s": 419.9999999999835,
+          "life_stage": "adult",
+          "laying_s": 0.0,
+          "food_reserve_ug": "250000000",
+          "water_reserve_ug": "150000000",
+          "food_metabolized_ug": "300000000",
+          "water_metabolized_ug": "450000000",
+          "eggs_laid_ug": "0",
+          "familiarity": {
+            "agent-1": 3
+          },
+          "last_feed": {
+            "agent-1": 811
+          },
+          "handler": "",
+          "guide_until": "0"
+        },
+        "animal-2": {
+          "species": "reedhen",
+          "mode": "wander",
+          "age_s": 419.9999999999835,
+          "life_stage": "adult",
+          "laying_s": 30.0,
+          "food_reserve_ug": "44000000",
+          "water_reserve_ug": "150000000",
+          "food_metabolized_ug": "286000000",
+          "water_metabolized_ug": "450000000",
+          "eggs_laid_ug": "240000000",
+          "familiarity": {
+            "agent-1": 4
+          },
+          "last_feed": {
+            "agent-1": 1221
+          },
+          "handler": "",
+          "guide_until": "0"
+        }
+      },
+      "freshness_s": {},
+      "structural_body_initial_ug": "2800000000",
+      "food_residue_ug": "786000000",
+      "water_waste_ug": "900000000",
+      "egg_input_ug": "320000000",
+      "eggs_produced_ug": "240000000",
+      "forage_regeneration_kg_s": 0.0
+    }
+  },
+  {
+    "file": "data\\living-world-d-evaluation-20261020\\101-deprived-final.txt",
+    "state_sha256": "754f03d092c8fc304e928badf6a5c47d9be6985c7f7f53e8ff851f2cfb5122e7",
+    "animals": [
+      {
+        "entity_id": "animal-1",
+        "body": {
+          "hunger": 0.933,
+          "thirst": 1.0,
+          "fatigue": 0.0,
+          "health": 0.0,
+          "alive": false,
+          "food_ingested_ug": "0",
+          "water_ingested_ug": "0"
+        },
+        "position_m": [
+          6.990064463493737,
+          7.445860950975468
+        ],
+        "stage": "wild",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "animal-2",
+        "body": {
+          "hunger": 1.0,
+          "thirst": 1.0,
+          "fatigue": 0.0,
+          "health": 0.0,
+          "alive": false,
+          "food_ingested_ug": "0",
+          "water_ingested_ug": "0"
+        },
+        "position_m": [
+          6.499178547157463,
+          7.392033576016302
+        ],
+        "stage": "wild",
+        "inventory_ug": {
+          "eggs": "0"
+        }
+      }
+    ],
+    "ecology": {
+      "enabled": true,
+      "controller_origin": "authored_native_ecology_v1",
+      "animals": {
+        "animal-1": {
+          "species": "mossgrazer",
+          "mode": "dead",
+          "age_s": 419.9999999999835,
+          "life_stage": "adult",
+          "laying_s": 0.0,
+          "food_reserve_ug": "26800000",
+          "water_reserve_ug": "0",
+          "food_metabolized_ug": "223200000",
+          "water_metabolized_ug": "200000000",
+          "eggs_laid_ug": "0",
+          "familiarity": {},
+          "last_feed": {},
+          "handler": "",
+          "guide_until": "0"
+        },
+        "animal-2": {
+          "species": "reedhen",
+          "mode": "dead",
+          "age_s": 419.9999999999835,
+          "life_stage": "adult",
+          "laying_s": 30.0,
+          "food_reserve_ug": "0",
+          "water_reserve_ug": "0",
+          "food_metabolized_ug": "170000000",
+          "water_metabolized_ug": "200000000",
+          "eggs_laid_ug": "60000000",
+          "familiarity": {},
+          "last_feed": {},
+          "handler": "",
+          "guide_until": "0"
+        }
+      },
+      "freshness_s": {},
+      "structural_body_initial_ug": "2800000000",
+      "food_residue_ug": "473200000",
+      "water_waste_ug": "400000000",
+      "egg_input_ug": "80000000",
+      "eggs_produced_ug": "60000000",
+      "forage_regeneration_kg_s": 0.0
+    }
+  },
+  {
+    "file": "data\\living-world-d-evaluation-20261020\\202-caretaking-final.txt",
+    "state_sha256": "cf319031aface09071ca4288a8a6c842d7fe4250b767387fe5dd6a7d6725fb49",
+    "animals": [
+      {
+        "entity_id": "animal-1",
+        "body": {
+          "hunger": 0.375,
+          "thirst": 0.5266666666666666,
+          "fatigue": 0.0,
+          "health": 1.0,
+          "alive": true,
+          "food_ingested_ug": "0",
+          "water_ingested_ug": "0"
+        },
+        "position_m": [
+          5.745274573257279,
+          8.289909898699133
+        ],
+        "stage": "domestic",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "animal-2",
+        "body": {
+          "hunger": 1.0,
+          "thirst": 0.49,
+          "fatigue": 0.0008,
+          "health": 0.0,
+          "alive": false,
+          "food_ingested_ug": "0",
+          "water_ingested_ug": "0"
+        },
+        "position_m": [
+          7.32134611417097,
+          7.952901403586534
+        ],
+        "stage": "wild",
+        "inventory_ug": {
+          "eggs": "0"
+        }
+      }
+    ],
+    "ecology": {
+      "enabled": true,
+      "controller_origin": "authored_native_ecology_v1",
+      "animals": {
+        "animal-1": {
+          "species": "mossgrazer",
+          "mode": "seek_water",
+          "age_s": 419.9999999999835,
+          "life_stage": "adult",
+          "laying_s": 0.0,
+          "food_reserve_ug": "250000000",
+          "water_reserve_ug": "142000000",
+          "food_metabolized_ug": "300000000",
+          "water_metabolized_ug": "450000000",
+          "eggs_laid_ug": "0",
+          "familiarity": {
+            "agent-1": 3
+          },
+          "last_feed": {
+            "agent-1": 836
+          },
+          "handler": "",
+          "guide_until": "0"
+        },
+        "animal-2": {
+          "species": "reedhen",
+          "mode": "dead",
+          "age_s": 419.9999999999835,
+          "life_stage": "adult",
+          "laying_s": 30.0,
+          "food_reserve_ug": "0",
+          "water_reserve_ug": "153000000",
+          "food_metabolized_ug": "210000000",
+          "water_metabolized_ug": "435000000",
+          "eggs_laid_ug": "180000000",
+          "familiarity": {
+            "agent-1": 2
+          },
+          "last_feed": {
+            "agent-1": 843
+          },
+          "handler": "",
+          "guide_until": "0"
+        }
+      },
+      "freshness_s": {},
+      "structural_body_initial_ug": "2800000000",
+      "food_residue_ug": "630000000",
+      "water_waste_ug": "885000000",
+      "egg_input_ug": "240000000",
+      "eggs_produced_ug": "180000000",
+      "forage_regeneration_kg_s": 0.0
+    }
+  },
+  {
+    "file": "data\\living-world-d-evaluation-20261020\\202-deprived-final.txt",
+    "state_sha256": "d2cd605f40e6eb7e36721b3c686fd0b7c3bfc9ac8eed75c2711f984e7902a006",
+    "animals": [
+      {
+        "entity_id": "animal-1",
+        "body": {
+          "hunger": 0.933,
+          "thirst": 1.0,
+          "fatigue": 0.0,
+          "health": 0.0,
+          "alive": false,
+          "food_ingested_ug": "0",
+          "water_ingested_ug": "0"
+        },
+        "position_m": [
+          4.707558414926087,
+          7.8891436738788165
+        ],
+        "stage": "wild",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "animal-2",
+        "body": {
+          "hunger": 1.0,
+          "thirst": 1.0,
+          "fatigue": 0.0,
+          "health": 0.0,
+          "alive": false,
+          "food_ingested_ug": "0",
+          "water_ingested_ug": "0"
+        },
+        "position_m": [
+          4.8215531909937255,
+          8.275050697934907
+        ],
+        "stage": "wild",
+        "inventory_ug": {
+          "eggs": "0"
+        }
+      }
+    ],
+    "ecology": {
+      "enabled": true,
+      "controller_origin": "authored_native_ecology_v1",
+      "animals": {
+        "animal-1": {
+          "species": "mossgrazer",
+          "mode": "dead",
+          "age_s": 419.9999999999835,
+          "life_stage": "adult",
+          "laying_s": 0.0,
+          "food_reserve_ug": "26800000",
+          "water_reserve_ug": "0",
+          "food_metabolized_ug": "223200000",
+          "water_metabolized_ug": "200000000",
+          "eggs_laid_ug": "0",
+          "familiarity": {},
+          "last_feed": {},
+          "handler": "",
+          "guide_until": "0"
+        },
+        "animal-2": {
+          "species": "reedhen",
+          "mode": "dead",
+          "age_s": 419.9999999999835,
+          "life_stage": "adult",
+          "laying_s": 30.0,
+          "food_reserve_ug": "0",
+          "water_reserve_ug": "0",
+          "food_metabolized_ug": "170000000",
+          "water_metabolized_ug": "200000000",
+          "eggs_laid_ug": "60000000",
+          "familiarity": {},
+          "last_feed": {},
+          "handler": "",
+          "guide_until": "0"
+        }
+      },
+      "freshness_s": {},
+      "structural_body_initial_ug": "2800000000",
+      "food_residue_ug": "473200000",
+      "water_waste_ug": "400000000",
+      "egg_input_ug": "80000000",
+      "eggs_produced_ug": "60000000",
+      "forage_regeneration_kg_s": 0.0
+    }
+  },
+  {
+    "file": "data\\living-world-d-evaluation-20261020\\21-caretaking-final.txt",
+    "state_sha256": "5423c556f1e2ad8506db5316cd89d4643eba00fc65f656a245bf5cee381ac970",
+    "animals": [
+      {
+        "entity_id": "animal-1",
+        "body": {
+          "hunger": 0.375,
+          "thirst": 0.5823333333333334,
+          "fatigue": 0.0,
+          "health": 0.9555999999999878,
+          "alive": true,
+          "food_ingested_ug": "0",
+          "water_ingested_ug": "0"
+        },
+        "position_m": [
+          6.700139106355407,
+          7.341707425019434
+        ],
+        "stage": "domestic",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "animal-2",
+        "body": {
+          "hunger": 1.0,
+          "thirst": 0.5,
+          "fatigue": 0.04560000000000002,
+          "health": 0.0999999999999992,
+          "alive": true,
+          "food_ingested_ug": "0",
+          "water_ingested_ug": "0"
+        },
+        "position_m": [
+          7.172711957942559,
+          7.423973929001101
+        ],
+        "stage": "domestic",
+        "inventory_ug": {
+          "eggs": "0"
+        }
+      }
+    ],
+    "ecology": {
+      "enabled": true,
+      "controller_origin": "authored_native_ecology_v1",
+      "animals": {
+        "animal-1": {
+          "species": "mossgrazer",
+          "mode": "seek_water",
+          "age_s": 419.9999999999835,
+          "life_stage": "adult",
+          "laying_s": 0.0,
+          "food_reserve_ug": "250000000",
+          "water_reserve_ug": "125300000",
+          "food_metabolized_ug": "300000000",
+          "water_metabolized_ug": "442700000",
+          "eggs_laid_ug": "0",
+          "familiarity": {
+            "agent-1": 3
+          },
+          "last_feed": {
+            "agent-1": 811
+          },
+          "handler": "",
+          "guide_until": "0"
+        },
+        "animal-2": {
+          "species": "reedhen",
+          "mode": "wander",
+          "age_s": 419.9999999999835,
+          "life_stage": "adult",
+          "laying_s": 30.0,
+          "food_reserve_ug": "0",
+          "water_reserve_ug": "150000000",
+          "food_metabolized_ug": "230000000",
+          "water_metabolized_ug": "450000000",
+          "eggs_laid_ug": "240000000",
+          "familiarity": {
+            "agent-1": 3
+          },
+          "last_feed": {
+            "agent-1": 818
+          },
+          "handler": "",
+          "guide_until": "0"
+        }
+      },
+      "freshness_s": {},
+      "structural_body_initial_ug": "2800000000",
+      "food_residue_ug": "730000000",
+      "water_waste_ug": "892700000",
+      "egg_input_ug": "320000000",
+      "eggs_produced_ug": "240000000",
+      "forage_regeneration_kg_s": 0.0
+    }
+  },
+  {
+    "file": "data\\living-world-d-evaluation-20261020\\21-deprived-final.txt",
+    "state_sha256": "aead9745a1efc1d728ded8f6d3d3c7f9df93165f85e27d69c90ab57c6106d357",
+    "animals": [
+      {
+        "entity_id": "animal-1",
+        "body": {
+          "hunger": 0.933,
+          "thirst": 1.0,
+          "fatigue": 0.027999999999999983,
+          "health": 0.0,
+          "alive": false,
+          "food_ingested_ug": "0",
+          "water_ingested_ug": "0"
+        },
+        "position_m": [
+          6.700787473514739,
+          7.938971069902475
+        ],
+        "stage": "wild",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "animal-2",
+        "body": {
+          "hunger": 1.0,
+          "thirst": 1.0,
+          "fatigue": 0.033599999999999984,
+          "health": 0.0,
+          "alive": false,
+          "food_ingested_ug": "0",
+          "water_ingested_ug": "0"
+        },
+        "position_m": [
+          7.0712174385312245,
+          7.783257861278336
+        ],
+        "stage": "wild",
+        "inventory_ug": {
+          "eggs": "0"
+        }
+      }
+    ],
+    "ecology": {
+      "enabled": true,
+      "controller_origin": "authored_native_ecology_v1",
+      "animals": {
+        "animal-1": {
+          "species": "mossgrazer",
+          "mode": "dead",
+          "age_s": 419.9999999999835,
+          "life_stage": "adult",
+          "laying_s": 0.0,
+          "food_reserve_ug": "26800000",
+          "water_reserve_ug": "0",
+          "food_metabolized_ug": "223200000",
+          "water_metabolized_ug": "200000000",
+          "eggs_laid_ug": "0",
+          "familiarity": {},
+          "last_feed": {},
+          "handler": "",
+          "guide_until": "0"
+        },
+        "animal-2": {
+          "species": "reedhen",
+          "mode": "dead",
+          "age_s": 419.9999999999835,
+          "life_stage": "adult",
+          "laying_s": 30.0,
+          "food_reserve_ug": "0",
+          "water_reserve_ug": "0",
+          "food_metabolized_ug": "170000000",
+          "water_metabolized_ug": "200000000",
+          "eggs_laid_ug": "60000000",
+          "familiarity": {},
+          "last_feed": {},
+          "handler": "",
+          "guide_until": "0"
+        }
+      },
+      "freshness_s": {},
+      "structural_body_initial_ug": "2800000000",
+      "food_residue_ug": "473200000",
+      "water_waste_ug": "400000000",
+      "egg_input_ug": "80000000",
+      "eggs_produced_ug": "60000000",
+      "forage_regeneration_kg_s": 0.0
+    }
+  }
+]

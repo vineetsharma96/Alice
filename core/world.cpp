@@ -61,7 +61,8 @@ World::World(U64 seed,unsigned population,double width,double height,double dt,U
         for(unsigned trial=0;trial<10000&&!placed;++trial) {
             auto coordinate=[this](double extent){return 1+(static_cast<double>(rng_()>>11)/9007199254740992.0)*(extent-2);};
             e.position = (i==0&&trial==0) ? Point{2,3} : Point{coordinate(width),coordinate(height)};
-            placed=std::all_of(entities_.begin(),entities_.end(),[&e](const Entity& other){
+            // Reserve the stone pile footprint before placing random inhabitants.
+            placed=distance(e.position,{5,2})>=e.radius+.15&&std::all_of(entities_.begin(),entities_.end(),[&e](const Entity& other){
                 return distance(e.position,other.position)>=e.radius+other.radius;
             });
         }
@@ -158,6 +159,13 @@ Result World::submit(const Action& a) {
     if(a.version!=tick_) return record(reject("STALE_OBSERVATION"));
     if(!std::isfinite(a.duration_s)||a.duration_s<.1||a.duration_s>60||
        !std::isfinite(a.destination.x)||!std::isfinite(a.destination.y)) return record(reject("INVALID_ARGUMENT"));
+    if(a.type=="cancel_action") {
+        if(!a.target_id.empty()||!a.text.empty()||!a.destination_id.empty()||!a.material.empty()||a.evidence_seq||a.mass_ug||a.destination.x||a.destination.y)return record(reject("INVALID_ARGUMENT"));
+        auto old=pending_.find(a.agent_id);
+        if(old==pending_.end())return record(reject("NO_PENDING_ACTION"));
+        finish(a.agent_id,false,"CANCELLED");pending_.erase(old);
+        r.status="completed";event("action_completed",a.agent_id,a.request_id,"cancel_action");r.event_refs.push_back(seq_);requests_[key]={a,r};return r;
+    }
     if(pending_.contains(a.agent_id)) return record(reject("BUSY"));
     for(const auto& prefix:{std::string("utility-"),std::string("script-")})
         if(a.request_id.starts_with(prefix)&&a.request_id!=prefix+std::to_string(a.version)+"-"+a.agent_id)return record(reject("INVALID_ARGUMENT"));
@@ -173,15 +181,15 @@ Result World::submit(const Action& a) {
         const auto it=actor->inventory.find(target->kind);
         auto available=a.type=="gather"?target->mass_ug:(it==actor->inventory.end()?0:it->second);
         if(available<a.mass_ug) return record(reject("INSUFFICIENT_RESOURCE"));
-        std::int64_t held=0;for(const auto& pair:actor->inventory)held+=pair.second;
+        const auto held=carried_mass(*actor);
         if(bodies_&&a.type=="gather"&&held+a.mass_ug>2*kg)return record(reject("CAPACITY_EXCEEDED"));
     } else {
         auto error=validate_body_action(*actor,a);
         if(!error.empty())return record(reject(error));
     }
     if(a.type!="speak"&&a.type!="write_book"&&a.evidence_seq!=0)return record(reject("INVALID_ARGUMENT"));
-    if(a.type!="move_material"&&a.type!="give"&&a.type!="collect_wood"&&(!a.destination_id.empty()))return record(reject("INVALID_ARGUMENT"));
-    if(a.type!="move_material"&&a.type!="give"&&a.type!="collect_wood"&&(!a.material.empty()))return record(reject("INVALID_ARGUMENT"));
+    if(!crafting_action(a.type)&&a.type!="fell_tree"&&a.type!="move_material"&&a.type!="give"&&a.type!="collect_wood"&&(!a.destination_id.empty()))return record(reject("INVALID_ARGUMENT"));
+    if(!ecology_action(a.type)&&a.type!="eat"&&!crafting_action(a.type)&&a.type!="move_material"&&a.type!="give"&&a.type!="collect_wood"&&(!a.material.empty()))return record(reject("INVALID_ARGUMENT"));
     r.status="accepted";
     r.completed=0;
     pending_[a.agent_id]={a,static_cast<U64>(std::ceil(a.duration_s/dt_-1e-12)),tick_};
@@ -231,6 +239,11 @@ std::vector<Event> World::step(unsigned ticks) {
                 else {failed=true;error="COLLISION";}
             }
             if(p.action.type=="process_batch")p.exposure_s=process_conditions(id,p.action)?p.exposure_s+dt_:0;
+            if(p.action.type=="work_construction") {
+                error=validate_crafting_action(*actor,p.action);
+                if(!error.empty())failed=true;
+                else work_construction(*actor,p.action);
+            }
             --p.remaining;
             bool body_completed=false;
             if(!failed&&p.remaining==0&&p.action.type!="move"&&p.action.type!="gather"&&p.action.type!="deposit") {
@@ -244,6 +257,7 @@ std::vector<Event> World::step(unsigned ticks) {
                     const auto held=it==actor->inventory.end()?0:it->second;
                     auto available=p.action.type=="gather"?target->mass_ug:held;
                     if(available<p.action.mass_ug) {failed=true;error="INSUFFICIENT_RESOURCE";}
+                    else if(bodies_&&p.action.type=="gather"&&carried_mass(*actor)+p.action.mass_ug>2*kg){failed=true;error="CAPACITY_EXCEEDED";}
                     else {
                         const auto amount=p.action.mass_ug;
                         if(p.action.type=="gather") {target->mass_ug-=amount;actor->inventory[target->kind]+=amount;}
@@ -261,7 +275,11 @@ std::vector<Event> World::step(unsigned ticks) {
                 p.remaining=0;
             }
         }
+        for(auto& e:entities_)if(e.kind=="tool"&&!e.owner_id.empty())e.position=find(e.owner_id)->position;
+        rebuild_grid();
         update_bodies();
+        update_ecology();
+        age_food();
         std::erase_if(pending_,[](const auto& pair){return pair.second.remaining==0;});
         event("tick");
     }
@@ -269,7 +287,7 @@ std::vector<Event> World::step(unsigned ticks) {
 }
 std::string World::serialize() const {
     std::ostringstream out;out.imbue(std::locale::classic());out<<std::setprecision(17);
-    out<<"UW7 "<<UW_BUILD_ID<<" previous=UW6 "<<seed_<<' '<<tick_<<' '<<seq_<<' '<<next_id_<<' '<<interval_
+    out<<"UW9 "<<UW_BUILD_ID<<" previous=UW8 "<<seed_<<' '<<tick_<<' '<<seq_<<' '<<next_id_<<' '<<interval_
        <<' '<<next_script_tick_<<' '<<width_<<' '<<height_<<' '<<dt_<<' '<<energy_j_<<' '<<scripted_<<' '
        <<bodies_<<' '<<food_regen_<<' '<<water_regen_<<' '<<food_remainder_<<' '<<water_remainder_
        <<' '<<tree_growth_kg_s_<<' '<<tree_growth_remainder_ug_<<'\n';
@@ -282,7 +300,10 @@ std::string World::serialize() const {
         for(const auto& [kind,mass]:e.inventory) out<<' '<<std::quoted(kind)<<' '<<mass;
         out<<' '<<e.body.hunger<<' '<<e.body.thirst<<' '<<e.body.fatigue<<' '<<e.body.health<<' '<<e.body.alive
            <<' '<<e.body.food_ingested_ug<<' '<<e.body.water_ingested_ug<<' '
-           <<std::quoted(e.stage)<<' '<<e.health<<' '<<e.biomass_ug<<'\n';
+           <<std::quoted(e.stage)<<' '<<e.health<<' '<<e.biomass_ug<<' '
+           <<std::quoted(e.recipe_id)<<' '<<std::quoted(e.owner_id)<<' '<<e.work_s<<' '<<e.durability<<' '<<e.workmanship<<' '<<e.composition.size();
+        for(const auto& [kind,mass]:e.composition)out<<' '<<std::quoted(kind)<<' '<<mass;
+        out<<'\n';
     }
     out<<requests_.size()<<'\n';
     for(const auto&[key,pair]:requests_) {
@@ -312,13 +333,14 @@ std::string World::serialize() const {
     for(const auto&[id,p]:interventions_)out<<std::quoted(id)<<' '<<std::quoted(p.first)<<' '<<p.second<<'\n';
     out<<solar_input_j_<<'\n';thermal_.write(out);write_culture(out);
     out<<event_counts_.size()<<'\n';for(const auto& [kind,n]:event_counts_)out<<std::quoted(kind)<<' '<<n<<'\n';
+    write_ecology(out);
     return out.str();
 }
 World World::restore(const std::string& state) {
     if(state.size()>8*1024*1024) throw std::invalid_argument("checkpoint too large");
     std::istringstream in(state);in.imbue(std::locale::classic());
     std::string magic,build,previous;in>>magic>>build>>previous;
-    if(magic!="UW7"||build!=UW_BUILD_ID||previous!="previous=UW6") throw std::invalid_argument("incompatible checkpoint format/build");
+    if(magic!="UW9"||build!=UW_BUILD_ID||previous!="previous=UW8") throw std::invalid_argument("incompatible checkpoint format/build");
     World w;in>>w.seed_>>w.tick_>>w.seq_>>w.next_id_>>w.interval_>>w.next_script_tick_>>w.width_>>w.height_>>w.dt_>>w.energy_j_>>w.scripted_
       >>w.bodies_>>w.food_regen_>>w.water_regen_>>w.food_remainder_>>w.water_remainder_>>w.tree_growth_kg_s_>>w.tree_growth_remainder_ug_;
     for(const auto&kind:{"food","water","inert_material","fuel_X","oxygen","product_P","tree","stone"})in>>w.initial_mass_[kind]>>w.source_mass_[kind];
@@ -328,10 +350,12 @@ World World::restore(const std::string& state) {
     auto n=count(200);
     for(std::size_t i=0;i<n;++i) {
         Entity e;in>>std::quoted(e.id)>>std::quoted(e.kind)>>e.position.x>>e.position.y>>e.radius>>e.mass_ug;
-        auto inv=count(3);
+        auto inv=count(16);
         for(std::size_t j=0;j<inv;++j) {std::string kind;std::int64_t mass;in>>std::quoted(kind)>>mass;if(!e.inventory.emplace(kind,mass).second)throw std::invalid_argument("duplicate inventory");}
         in>>e.body.hunger>>e.body.thirst>>e.body.fatigue>>e.body.health>>e.body.alive>>e.body.food_ingested_ug>>e.body.water_ingested_ug
-          >>std::quoted(e.stage)>>e.health>>e.biomass_ug;
+          >>std::quoted(e.stage)>>e.health>>e.biomass_ug
+          >>std::quoted(e.recipe_id)>>std::quoted(e.owner_id)>>e.work_s>>e.durability>>e.workmanship;
+        auto parts=count(8);for(std::size_t j=0;j<parts;++j){std::string kind;std::int64_t mass;in>>std::quoted(kind)>>mass;if(!e.composition.emplace(kind,mass).second)throw std::invalid_argument("duplicate composition");}
         w.entities_.push_back(e);
     }
     w.requests_.clear();n=count(10000);
@@ -362,6 +386,7 @@ World World::restore(const std::string& state) {
     in>>w.solar_input_j_;w.thermal_.read(in);w.read_culture(in);
     w.event_counts_.clear();n=count(64);
     for(std::size_t i=0;i<n;++i){std::string kind;U64 value;in>>std::quoted(kind)>>value;if(!w.event_counts_.emplace(kind,value).second)throw std::invalid_argument("duplicate event counter");}
+    w.read_ecology(in);
     if(!in) throw std::invalid_argument("truncated checkpoint");
     in>>std::ws;if(!in.eof())throw std::invalid_argument("trailing checkpoint data");
     w.check_invariants();w.rebuild_grid();return w;
@@ -380,6 +405,8 @@ void World::check_invariants() const {
            e.position.x>width_-e.radius||e.position.y>height_-e.radius||e.mass_ug<0||e.mass_ug>1000000*kg)
             throw std::invalid_argument("invalid entity state");
         if(e.kind=="actor") {++actors;if(e.radius!=actor_radius||e.mass_ug!=0||e.biomass_ug!=0||e.stage!="none"||e.health!=1)throw std::invalid_argument("invalid actor");}
+        else if(e.kind=="animal")total["animal_body"]+=e.mass_ug;
+        else if(e.kind=="forage")total["forage"]+=e.mass_ug;
         else if(e.kind=="rock") {if(e.radius!=1||e.mass_ug!=0||e.biomass_ug!=0||e.stage!="none"||e.health!=1||!e.inventory.empty())throw std::invalid_argument("invalid rock");}
         else if(e.kind=="food"||e.kind=="water"||e.kind=="inert_material") {if(e.radius!=0||!e.inventory.empty())throw std::invalid_argument("invalid resource");total[e.kind]+=e.mass_ug;}
         else if(e.kind=="book"||e.kind=="object") {if(!e.inventory.empty()||e.radius!=(e.kind=="book"?0:.5)||(e.kind=="book"&&!books_.contains(e.id)))throw std::invalid_argument("invalid introduced object");total["inert_material"]+=e.mass_ug;}
@@ -395,12 +422,28 @@ void World::check_invariants() const {
             if(e.radius!=.15||e.biomass_ug!=0||e.stage!="none"||e.health!=1||!e.inventory.empty())throw std::invalid_argument("invalid material pile");
             total[e.kind]+=e.mass_ug;
         }
+        else if(e.kind=="tool"||e.kind=="spent_tool"||e.kind=="construction"||e.kind=="cancelled_site"||e.kind=="storage_box"||e.kind=="trough"||e.kind=="fence"||e.kind=="gate") {
+            const auto recipe=std::find_if(recipes().begin(),recipes().end(),[&](const auto& r){return r.id==e.recipe_id;});
+            if(recipe==recipes().end()||!std::isfinite(e.work_s)||e.work_s<0||e.work_s>recipe->work_s+1e-9||e.durability>8)throw std::invalid_argument("invalid crafting state");
+            const bool empty=e.kind=="spent_tool"||e.kind=="cancelled_site";
+            if((!empty&&e.composition!=recipe->inputs)||(empty&&(!e.composition.empty()||e.mass_ug)))throw std::invalid_argument("invalid composition");
+            std::int64_t parts=0;for(const auto& [kind,mass]:e.composition){total[kind]+=mass;parts+=mass;}
+            if(parts!=e.mass_ug)throw std::invalid_argument("product mass mismatch");
+            if(e.kind=="tool"&&(!find(e.owner_id)||find(e.owner_id)->kind!="actor"||e.radius!=0||!e.durability||!e.inventory.empty()))throw std::invalid_argument("invalid tool ownership");
+            if(e.kind=="construction"&&e.radius!=.5)throw std::invalid_argument("invalid site footprint");
+            if((e.kind=="storage_box"||e.kind=="trough"||e.kind=="fence")&&e.radius!=.5)throw std::invalid_argument("invalid structure footprint");
+            if(e.kind=="gate"&&e.radius!=0&&e.radius!=.5)throw std::invalid_argument("invalid gate footprint");
+            if(e.kind!="storage_box"&&e.kind!="trough"&&!e.inventory.empty())throw std::invalid_argument("unexpected stored contents");
+            std::int64_t stored=0;for(const auto& [kind,mass]:e.inventory){stored+=mass;if(e.kind=="trough"&&kind!="water")throw std::invalid_argument("invalid trough contents");}
+            if(stored>4*kg)throw std::invalid_argument("storage capacity invariant");
+        }
         else throw std::invalid_argument("unknown entity kind");
         for(const auto&[kind,mass]:e.inventory) {
-            if((kind!="food"&&kind!="water"&&kind!="inert_material"&&kind!="wood"&&kind!="fiber"&&kind!="wood_offcut"&&kind!="stone")||mass<0||mass>1000000*kg)throw std::invalid_argument("invalid inventory");
+            if((kind!="food"&&kind!="water"&&kind!="inert_material"&&kind!="wood"&&kind!="fiber"&&kind!="wood_offcut"&&kind!="stone"&&kind!="plank"&&kind!="plant_food"&&kind!="eggs")||mass<0||mass>1000000*kg)throw std::invalid_argument("invalid inventory");
             total[kind]+=mass;
         }
         if(e.kind=="actor") {
+            if(bodies_&&carried_mass(e)>2*kg)throw std::invalid_argument("carried capacity invariant");
             const auto& b=e.body;
             for(double need:{b.hunger,b.thirst,b.fatigue,b.health})if(!std::isfinite(need)||need<0||need>1)throw std::invalid_argument("invalid body");
             if(b.alive!=(b.health>0)||b.food_ingested_ug<0||b.water_ingested_ug<0||b.food_ingested_ug>1000000*kg||b.water_ingested_ug>1000000*kg)
@@ -417,12 +460,13 @@ void World::check_invariants() const {
         if(vessels!=4)throw std::invalid_argument("invalid thermal vessel count");
         for(unsigned i=0;i<4;++i){auto e=find("thermal-"+std::to_string(i+1));if(!e||e->kind!="thermal_cell"||e->position.x!=2.+2*(i%2)||e->position.y!=4.+2*(i/2))throw std::invalid_argument("invalid thermal vessel identity");}
     }
+    check_ecology(total);
     if(thermal_.enabled)for(const auto&[kind,mass]:thermal_.masses())total[kind]+=mass;
     std::map<std::string,std::int64_t> delta{{"fuel_X",-thermal_.burned_fuel},{"oxygen",-2*thermal_.burned_fuel},{"product_P",3*thermal_.burned_fuel},{"water",-thermal_.outflow_water},{"stone",0}};
     for(const auto&kind:{"food","water","inert_material","fuel_X","oxygen","product_P","stone"})
         if(initial_mass_.at(kind)<0||source_mass_.at(kind)<0||operator_mass_.at(kind)<0||operator_mass_.at(kind)>source_mass_.at(kind)||total[kind]!=initial_mass_.at(kind)+source_mass_.at(kind)+delta[kind])throw std::invalid_argument("mass/reaction/outflow ledger invariant failed");
     if(initial_mass_.at("tree")<0||source_mass_.at("tree")<0||
-       total["tree"]+total["wood"]+total["fiber"]+total["wood_offcut"]!=initial_mass_.at("tree")+source_mass_.at("tree"))
+       total["tree"]+total["wood"]+total["fiber"]+total["wood_offcut"]+total["plank"]!=initial_mass_.at("tree")+source_mass_.at("tree"))
         throw std::invalid_argument("tree/material ledger invariant failed");
     thermal_.check();check_culture();
     U64 counted=0;for(const auto& [kind,n]:event_counts_){if(kind.empty()||kind.size()>64||n>seq_-counted)throw std::invalid_argument("invalid event counter");counted+=n;}

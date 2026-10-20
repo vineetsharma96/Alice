@@ -11,12 +11,28 @@ from urllib.parse import parse_qs, urlsplit
 
 from . import storage
 from . import teaching
-from . import culture
 from .wire import loads
+
+
+def controller_projection(db,selected):
+    attached=db.execute("SELECT 1 FROM sqlite_master WHERE name='stabilization_meta'").fetchone()
+    if not attached:return {'active':'legacy','stabilization':None}
+    from .stabilization import _load
+    from .stabilization import verify_event_chain
+    verify_event_chain(db)
+    managed=db.execute('SELECT 1 FROM stabilization_agents WHERE agent=?',(selected,)).fetchone()
+    return {'active':'stabilization','selected_managed':bool(managed),
+            'stabilization':_load(db,selected) if managed else None}
 
 
 class Controller:
     def __init__(self,path,readonly=False):
+        if not readonly:
+            db=storage._connect(path,readonly=True)
+            try:
+                stabilized=db.execute("SELECT 1 FROM sqlite_master WHERE name='stabilization_meta'").fetchone()
+            finally:db.close()
+            if stabilized:raise ValueError('stabilized world requires --read-only; use living-world run for its scheduler')
         if readonly:storage.inspect(path)
         else:storage.recover(path)
         self.readonly=readonly
@@ -39,32 +55,14 @@ class Controller:
         self.worker.start()
 
     def state(self,agent=None):
-        with self.lock:
-            snapshot=storage.inspect(self.path)
-            ids=[e["entity_id"] for e in snapshot["entities"] if e["kind"]=="actor"]
-            selected=agent or ids[0]
-            if selected not in ids:raise ValueError("unknown selected agent")
-            observation=storage.observe(self.path,[selected])[0]
-            # Annotate operator history from the actual journal, not from guessed request names.
-            db=storage._connect(self.path,readonly=True)
-            try:
-                is_stabilized=db.execute("SELECT 1 FROM sqlite_master WHERE name='stabilization_meta'").fetchone() is not None
-                for receipt in observation["recent_action_results"]:
-                    row=db.execute("SELECT request FROM decisions WHERE json_extract(request,'$.agent_id')=? "
-                                   "AND json_extract(request,'$.request_id')=? ORDER BY id LIMIT 1",
-                                   (selected,receipt["request_id"])).fetchone()
-                    if row:receipt["action_type"]=json.loads(row[0])["action_type"]
-            finally:db.close()
-            stabilization_state=None
-            if is_stabilized:
-                from . import stabilization
-                stabilization_state=stabilization.status(self.path,selected)
-            controller={"active":"stabilization" if stabilization_state is not None else "legacy",
-                        "stabilization":stabilization_state}
-            return {"snapshot":snapshot,"selected":observation,"mind":storage.mind(self.path,selected),"controller":controller,
-                    "procedure":culture.recall(self.path,selected) if snapshot["culture"]["enabled"] else None,
-                    "operator_history":teaching.history(self.path),"controls":{"paused":self.paused,
-                    "speed":self.speed,"error":self.error,"speed_semantics":"target simulated seconds per wall second"}}
+        # Both UIs read one SQLite snapshot, even while the CLI advances the world.
+        from .viewer import packet
+        result=packet(self,agent)
+        state={key:result[key] for key in ("snapshot","selected","mind","controller","procedure","controls")}
+        snapshot=result['snapshot']
+        state['operator_history']={key:snapshot.get(key) for key in ('branch_id','laws_version','parent_branch_id')}
+        state['operator_history']['interventions']=list(reversed(result['operator_history']))
+        return state
 
     def control(self,payload):
         if type(payload) is not dict or "command" not in payload:raise ValueError("invalid command")

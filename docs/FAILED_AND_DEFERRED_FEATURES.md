@@ -1,10 +1,28 @@
+# Food execution repair — 21 October 2026
+
+**Fixed:** the persistent executor overlooked carried plant food/eggs and visible
+forage, and required a full meal before consuming any food. It now requests real
+native forage gathering and freshness-aware partial consumption, retaining the
+unchanged full-goal ingestion threshold. [Repair report](FOOD_EXECUTION_REPAIR.md)
+records separate confirmation cases, native receipts, remaining limitations and
+the corrected evaluation fixture. This is authored execution, not learned skill.
+The historical learning/teaching gates below remain unchanged.
+
+# Milestone D update — 20 October 2026
+
+Native animals, finite forage, physical containment, care actions, reserve-funded eggs and food freshness are implemented in the opt-in D profile. [D report](LIVING_WORLD_D_REPORT.md) records the current evidence and failures. Breeding and cooking are **deferred**, not implemented. A fixed care route may overfeed or collide; the native validator reports those failures. General autonomous husbandry, long-horizon sustainability and fair recurring/global model budgets remain incomplete. Earlier statements that animal behavior is unimplemented describe the historical C boundary below. The sealed failed Phase 9 result remains unchanged.
+
+---
+
 # Failed checks, incomplete features, and their causes
 
-Updated: 20 October 2026, after Phase 9.
+Updated: 20 October 2026. Phase 9 results below remain historical and unchanged. The living-world B review and current C capability/limits are in [LIVING_WORLD_C_REPORT.md](LIVING_WORLD_C_REPORT.md).
+
+Living-world follow-up: B's regression suite passed but did not cover maturity overshoot, inventories with more than three species, the viewer's stale tree mesh, or the entity quota. C adds those corrections and crafting/construction regression coverage. The A recurring/global model-budget/fairness requirement remains incomplete. Animal containment, autonomous woodcraft planning and new teaching experiments are later work. No failed scientific gate has been relaxed.
 
 The main unresolved result is that the experimental learning policy **did not outperform memory-only controls and failed one retention requirement**. Its code runs, but it has not earned integration into autonomous inhabitants. Local-model action reliability and consistently successful teaching also remain limited.
 
-The final regression run passed **122 Python tests and 4 native checks**. Those checks establish the tested software behavior; they do not establish that every research objective succeeded.
+The historical Phase 9 regression run passed **122 Python tests and 4 native checks**. Those checks establish the tested software behavior; they do not establish that every research objective succeeded.
 
 Status meanings:
 

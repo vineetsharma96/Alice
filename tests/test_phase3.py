@@ -10,7 +10,7 @@ import unittest
 from unittest.mock import patch
 
 from underworld import storage, memory, cognition
-from underworld.config import load, validate
+from underworld.config import load
 from underworld.wire import dumps, loads
 
 ROOT = Path(__file__).resolve().parents[1]

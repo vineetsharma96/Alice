@@ -1,6 +1,5 @@
 import copy
 from contextlib import closing
-import json
 import os
 from pathlib import Path
 import sqlite3
@@ -13,7 +12,6 @@ import unittest
 
 from underworld import storage,runtime,memory,cognition
 from underworld.config import load,validate
-from underworld.lease import Lease
 from underworld.native import load_native
 from underworld.supervisor import run_isolated
 from underworld.wire import dumps,loads
@@ -100,7 +98,12 @@ class SupervisionTests(unittest.TestCase):
             except Exception as error:errors.append(str(error))
         threads=[threading.Thread(target=launch,args=(path,)) for path in (self.path,other)]
         for thread in threads:thread.start()
-        for thread in threads:thread.join(timeout=30)
+        # The worker's 20 s budget excludes serialized AppContainer setup and
+        # ACL cleanup. Await the whole workflow before inspecting its results;
+        # never race TemporaryDirectory cleanup against a still-running launch.
+        deadline=time.monotonic()+90
+        for thread in threads:thread.join(timeout=max(0,deadline-time.monotonic()))
+        self.assertFalse(any(thread.is_alive() for thread in threads),'isolated launch workflow did not finish within 90 s')
         self.assertFalse(errors,errors);self.assertEqual(len(results),2)
         self.assertTrue(all(r['status']=='target_reached' and r['isolation_profile']['cleaned'] for r in results),[(r['status'],r.get('error'),r['isolation_profile']) for r in results])
 
@@ -132,10 +135,12 @@ class SupervisionTests(unittest.TestCase):
 
     def test_writer_lease_excludes_process_and_releases_after_kill(self):
         self.create()
-        script='from underworld.lease import Lease; import sys,time;\nwith Lease(sys.argv[1]):\n print("owned",flush=True);time.sleep(60)'
-        child=subprocess.Popen([sys.executable,'-c',script,str(self.path)],stdout=subprocess.PIPE,text=True,cwd=ROOT)
+        # Kill/wait the real lease owner, not a Windows venv redirector process.
+        executable=getattr(sys,"_base_executable",sys.executable) if os.name=="nt" else sys.executable
+        script='from underworld.lease import Lease; import sys,time,os;\nwith Lease(sys.argv[1]):\n print("owned "+str(os.getpid()),flush=True);time.sleep(60)'
+        child=subprocess.Popen([executable,'-c',script,str(self.path)],stdout=subprocess.PIPE,text=True,cwd=ROOT)
         try:
-            self.assertEqual(child.stdout.readline().strip(),'owned')
+            self.assertEqual(child.stdout.readline().strip(),f'owned {child.pid}')
             with self.assertRaisesRegex(ValueError,'another writer'):storage._advance(self.path,1)
             self.assertEqual(storage.inspect(self.path)['tick'],'0')
         finally:child.kill();child.wait();child.stdout.close()

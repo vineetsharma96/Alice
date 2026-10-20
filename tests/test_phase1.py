@@ -1,8 +1,6 @@
-import copy
 from contextlib import closing
 import json
 import math
-import os
 from pathlib import Path
 import sqlite3
 import subprocess
@@ -13,7 +11,7 @@ import unittest
 from underworld.config import load
 from underworld.native import load_native
 from underworld import storage
-from underworld.wire import loads, dumps
+from underworld.wire import loads
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -157,7 +155,7 @@ class MechanicsTests(unittest.TestCase):
 
     def test_checkpoint_corruption_rejected(self):
         world = self.world()
-        for state in ("",world.checkpoint()[:100],world.checkpoint()+"garbage",world.checkpoint().replace("UW6","UW99",1)):
+        for state in ("",world.checkpoint()[:100],world.checkpoint()+"garbage",world.checkpoint().replace("UW9","UW99",1)):
             with self.assertRaises(ValueError):self.native.World.restore(state)
 
 

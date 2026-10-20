@@ -4,12 +4,12 @@ One world writer lease covers perception, reservations and native tick commits.
 Control rows commit separately; recovery reconciles recorded native request IDs.
 """
 import argparse
+import copy
 from contextlib import closing
 import hashlib
 import json
 import math
 from pathlib import Path
-import sqlite3
 import time
 
 from . import storage, memory, cognition
@@ -17,10 +17,10 @@ from .lease import Lease
 from .policy import _waypoint, _segment_clear
 from .wire import dumps
 
-VERSION='stabilization/2'
+VERSION='stabilization/3'
 
 
-def source_id(): return hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+def source_id(): return hashlib.sha256(Path(__file__).with_suffix(".py").read_bytes()).hexdigest()
 
 
 def _save(db,agent,state):
@@ -47,14 +47,36 @@ def _load(db,agent):
     return json.loads(row[0])
 
 
+def verify_event_chain(db):
+    previous=None
+    for payload,checksum in db.execute('SELECT payload,checksum FROM stabilization_events ORDER BY id'):
+        if storage.digest(payload)!=checksum or json.loads(payload)['previous']!=previous: raise ValueError('stabilization event chain')
+        previous=checksum
+
+
 def status(path,agent='agent-1'):
     with closing(storage._connect(path,readonly=True)) as db:
         db.execute('BEGIN');storage._head(db);state=_load(db,agent)
-        previous=None
-        for payload,checksum in db.execute('SELECT payload,checksum FROM stabilization_events ORDER BY id'):
-            if storage.digest(payload)!=checksum or json.loads(payload)['previous']!=previous: raise ValueError('stabilization event chain')
-            previous=checksum
+        verify_event_chain(db)
         return state
+
+
+def validate_options(model,call_limit):
+    if type(model) is not bool:raise ValueError('model must be boolean')
+    if type(call_limit) is not int or not 0<=call_limit<=16:raise ValueError('inference attempt bound')
+
+
+def initialize(path,config,model=False,call_limit=2):
+    """Validate the entire handoff before creating a new physical world."""
+    from .config import validate
+    validate_options(model,call_limit)
+    config=copy.deepcopy(config);validate(config)
+    if not config.get('agency',{}).get('bodies_enabled'):raise ValueError('body-enabled world required')
+    if any(p.name.startswith('phase9-study') for p in (Path(path),*Path(path).parents)):
+        raise ValueError('protected Phase 9 study; use a new stabilization world')
+    config['agency']['policy']='none'
+    storage.create(path,config,scripted=False)
+    return attach(path,model=model,call_limit=call_limit)
 
 
 def attach(path,agents=None,model=False,call_limit=2):
@@ -62,7 +84,7 @@ def attach(path,agents=None,model=False,call_limit=2):
     path=Path(path).resolve()
     if any(p.name.startswith('phase9-study') for p in (path,*path.parents)):
         raise ValueError('protected Phase 9 study; use a new stabilization world')
-    if type(call_limit) is not int or not 0<=call_limit<=16: raise ValueError('inference attempt bound')
+    validate_options(model,call_limit)
     with Lease(path),closing(storage._connect(path)) as db:
         db.execute('BEGIN IMMEDIATE');world,config,metadata,head=storage._head(db)
         if db.execute("SELECT 1 FROM sqlite_master WHERE name='stabilization_meta'").fetchone():
@@ -149,14 +171,28 @@ def _action(s,o,kind,params=None,target=None,duration=1):
 def _next(s,o,own_memory_ids=()):
     g=s['goal'];kind=g['kind'];own=o['own_state'];pos=own['position_m'];dt=o['dt_s']
     if kind in ('eat','drink'):
-        material='food' if kind=='eat' else 'water';wanted=g['target_mass_ug']
-        held=int(own['inventory_ug'].get(material,'0'))
-        if held>=wanted:
+        material='food' if kind=='eat' else 'water'
+        ingested=int(own['body'][material+'_ingested_ug'])-g['initial_ingested_ug']
+        wanted=max(0,g['target_mass_ug']-ingested)
+        duration=math.ceil((2 if kind=='eat' else 1)/dt)*dt
+        # Consume real smaller portions too. Perishable materials share the food
+        # ingestion reservoir; the goal still needs the full recorded mass delta.
+        edible=['water'] if kind=='drink' else sorted(
+            ('food','plant_food','eggs'),key=lambda m:(own.get('freshness_s',{}).get(m,float('inf')),m))
+        for carried in edible:
+            available=int(own['inventory_ug'].get(carried,'0'))
+            freshness=own.get('freshness_s',{}).get(carried,float('inf'))
+            if available<=0 or freshness<=duration+dt:continue
+            amount=min(available,wanted)
+            if amount<=0:return None,'ingestion_target_already_met'
             g['phase']='consume'
-            return _action(s,o,kind,{'mass_kg':wanted/1e9},duration=math.ceil((2 if kind=='eat' else 1)/dt)*dt),None
-        resources=sorted((e for e in o['visible_entities'] if e['kind']==material and int(e['mass_ug'])>0),
+            params={'mass_kg':amount/1e9}
+            if carried not in ('food','water'):params['material']=carried
+            return _action(s,o,kind,params,duration=duration),None
+        kinds=('food','forage') if kind=='eat' else ('water',)
+        resources=sorted((e for e in o['visible_entities'] if e['kind'] in kinds and int(e['mass_ug'])>0),
                          key=lambda e:(math.dist(pos,e['position_m']),e['entity_id']))
-        capacity=2000000000-sum(int(v) for v in own['inventory_ug'].values())
+        capacity=2000000000-int(own.get('carried_mass_ug',sum(int(v) for v in own['inventory_ug'].values())))
         if capacity<=0:return None,'capacity_blocked'
         if not resources:
             # No hidden resource map. Bounded perceived-space search only.
@@ -171,10 +207,11 @@ def _next(s,o,own_memory_ids=()):
         for resource in resources:
             g['target']=resource['entity_id']
             if math.dist(pos,resource['position_m'])<=1.45:
-                amount=min(wanted-held,int(resource['mass_ug']),capacity)
+                amount=min(wanted,int(resource['mass_ug']),capacity)
                 if amount<=0:continue
                 g['phase']='gather'
-                return _action(s,o,'gather',{'mass_kg':amount/1e9},resource['entity_id'],max(1,dt)),None
+                action='gather_plant' if resource['kind']=='forage' else 'gather'
+                return _action(s,o,action,{'mass_kg':amount/1e9},resource['entity_id'],max(1,dt)),None
             # Stop short of the resource; native collision and reach remain authoritative.
             distance=math.dist(pos,resource['position_m'])
             radial=tuple(resource['position_m'][i]+(pos[i]-resource['position_m'][i])*1.1/distance for i in (0,1))
@@ -285,13 +322,14 @@ def step(path,agents=None,provider=None,fault=None,external=()):
         return result
 
 
-def run(path,seconds,wall_seconds=240,provider=None,agents=None):
+def run(path,seconds,wall_seconds=240,provider=None,agents=None,stop_requested=None):
     if type(seconds) not in (int,float) or not 0<seconds<=3600:raise ValueError('bounded duration required')
     if type(wall_seconds) not in (int,float) or not 0<wall_seconds<=3600:raise ValueError('bounded wall duration required')
-    start=time.perf_counter();initial=storage.inspect(path);target=int(initial['tick'])+math.ceil(seconds/initial['dt_s'])
     outcome='target_reached'
     with Lease(path):
+        start=time.perf_counter();initial=storage.inspect(path);target=int(initial['tick'])+math.ceil(seconds/initial['dt_s'])
         while int(storage.inspect(path)['tick'])<target:
+            if stop_requested and stop_requested():outcome='stopped';break
             if time.perf_counter()-start>=wall_seconds:outcome='wall_limit';break
             step(path,agents,provider)
     final=storage.inspect(path)
@@ -307,9 +345,8 @@ def main():
     p.add_argument('--endpoint',default='http://127.0.0.1:8081');args=p.parse_args()
     if args.command=='init':
         from .config import load
-        cfg=load(args.config);cfg['agency']['policy']='none'
-        storage.create(args.db,cfg,scripted=False)
-    if args.command in ('init','attach'):result=attach(args.db,model=args.model,call_limit=args.calls)
+        result=initialize(args.db,load(args.config),model=args.model,call_limit=args.calls)
+    elif args.command=='attach':result=attach(args.db,model=args.model,call_limit=args.calls)
     elif args.command=='status':result=status(args.db)
     else:result=run(args.db,args.seconds,args.wall_seconds,cognition.LlamaCpp(args.endpoint) if args.model else None)
     print(json.dumps(result,indent=2))

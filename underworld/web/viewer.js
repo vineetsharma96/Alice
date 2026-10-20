@@ -13,6 +13,12 @@ function inspect(){
  const cell=s.thermal?.cells.find(c=>c.entity_id===selected);const fields=[['Position',`${e.position_m[0].toFixed(2)}, ${e.position_m[1].toFixed(2)} m`],['Mass',`${(e.mass_kg??0).toFixed(3)} kg`],['Physical radius',`${e.radius_m?.toFixed(2)??'0'} m`]];
   if(cell)fields.push(['Temperature',`${cell.temperature_k.toFixed(2)} K`],['Heater',cell.heater],['Water',`${(Number(cell.water_ug)/1e6).toFixed(2)} g`]);
   if(e.kind==='tree')fields.push(['Stage',e.stage||'unknown'],['Health',`${Math.round((e.health??0)*100)}%`],['Tracked biomass',`${(Number(e.biomass_ug||0)/1e9).toFixed(3)} kg`]);
+ if(e.kind==='animal'){
+   const animal=s.ecology?.animals?.[selected];
+   fields.push(['Handling state',e.stage],['Condition',e.condition],['Controller','Authored native rules']);
+   if(animal)fields.push(['Species',animal.species],['Age',`${animal.age_s.toFixed(1)} s`],['Activity',animal.mode],['Food reserve',`${(Number(animal.food_reserve_ug)/1e9).toFixed(3)} kg`],['Water reserve',`${(Number(animal.water_reserve_ug)/1e9).toFixed(3)} kg`]);
+  }
+ if(e.recipe_id)fields.push(['Recipe',e.recipe_id],['Work',`${e.work_s.toFixed(1)} s`],['Durability',String(e.durability)],['Owner',e.owner_id]);
  if(e.kind==='actor')fields.push(['State',e.present===false?'Departed':e.alive===false?'Dead':'Alive']);
  $('entity-facts').replaceChildren(...fields.flatMap(([key,value])=>{const a=document.createElement('dt'),b=document.createElement('dd');a.textContent=key;b.textContent=value;return[a,b];}));
  $('entity-record').textContent=json(cell?{entity:e,thermal:cell}:e);
@@ -29,6 +35,7 @@ function draw(packet){
  const actors=s.entities.filter(e=>e.kind==='actor');$('population').textContent=`${actors.filter(e=>e.alive!==false&&e.present!==false).length}/${actors.length}`;
  const signature=s.entities.map(e=>e.entity_id).join('|');if($('entities').dataset.signature!==signature){$('entities').dataset.signature=signature;$('entities').replaceChildren(...s.entities.map(e=>new Option(`${e.entity_id} / ${e.kind.replaceAll('_',' ')}`,e.entity_id)));$('agent').replaceChildren(...actors.map(e=>new Option(e.entity_id,e.entity_id)));}
  if(!s.entities.some(e=>e.entity_id===selected))selected=agent;$('agent').value=agent;
+ const ctl=packet.controller,cs=ctl?.stabilization,g=cs?.goal;$('controller-status').textContent=ctl?`Controller: ${ctl.active}${cs?` / ${g?`${g.kind} / ${g.phase} / ${g.origin}`:'idle'} / model calls ${cs.calls}/${cs.call_limit} / fallback goals ${cs.fallback_goals} / authored steps ${cs.authored_steps}`:''}`:'';
  $('clock').textContent=`Tick ${s.tick} / ${s.simulated_time_s.toFixed(1)} simulated s`;$('mode').textContent=`${s.mode} mode`;$('branch').textContent=`Branch ${s.branch_id.slice(0,10)}`;
  $('world-size').textContent=`Region / ${s.world_bounds_m.width} x ${s.world_bounds_m.height} m`;
  $('source').textContent=`Snapshot ${s.state_hash.slice(0,12)} / event ${s.last_event_seq}`;

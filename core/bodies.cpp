@@ -16,7 +16,7 @@ bool pile_kind(const std::string& kind) {
 }
 bool World::unobstructed(Point a,Point b,const std::string& target) const {
     const double dx=b.x-a.x,dy=b.y-a.y,len=dx*dx+dy*dy;
-    for(const auto&e:entities_) if((e.kind=="rock"||e.kind=="object"||e.kind=="tree")&&e.id!=target) {
+    for(const auto&e:entities_) if((e.kind=="rock"||e.kind=="object"||e.kind=="tree"||e.kind=="construction"||e.kind=="storage_box"||e.kind=="trough"||e.kind=="fence"||(e.kind=="gate"&&e.radius>0))&&e.id!=target) {
         const double t=len==0?0:std::clamp(((e.position.x-a.x)*dx+(e.position.y-a.y)*dy)/len,0.0,1.0);
         if(separation({a.x+t*dx,a.y+t*dy},e.position)<e.radius) return false;
     }
@@ -28,15 +28,18 @@ bool World::visible(const std::string& observer,const std::string& target,double
         separation(a->position,b->position)<=range&&(!bodies_||unobstructed(a->position,b->position,target));
 }
 std::string World::validate_body_action(const Entity& actor,const Action& a) const {
+    if(ecology_action(a.type))return validate_ecology_action(actor,a);
+    if(crafting_action(a.type))return validate_crafting_action(actor,a);
     if(a.type=="inspect_tree"||a.type=="harvest_branch"||a.type=="fell_tree"||a.type=="collect_wood")
         return validate_tree_action(actor,a);
     if(!bodies_)return "UNKNOWN_ACTION";
     if(a.type=="operate_heat"||a.type=="move_material")return validate_thermal_action(actor,a);
     if(a.type=="give"||a.type=="offer_task"||a.type=="respond_task"||a.type=="process_batch"||a.type=="write_book"||a.type=="depart")return validate_culture_action(actor,a);
     if(a.type=="eat"||a.type=="drink") {
-        const auto kind=a.type=="eat"?"food":"water";
+        const std::string kind=a.type=="eat"?(a.material.empty()?"food":a.material):"water";
         if(!a.target_id.empty()||a.mass_ug<=0||a.mass_ug>kg||a.destination.x!=0||a.destination.y!=0||!a.text.empty())return "INVALID_ARGUMENT";
         if(a.duration_s<(a.type=="eat"?2.0:1.0))return "INVALID_ARGUMENT";
+        if(a.type=="eat"&&kind!="food"&&kind!="plant_food"&&kind!="eggs")return "INVALID_ARGUMENT";
         auto it=actor.inventory.find(kind);
         return it==actor.inventory.end()||it->second<a.mass_ug?"INSUFFICIENT_RESOURCE":"";
     }
@@ -79,21 +82,29 @@ std::string World::validate_tree_action(const Entity& actor,const Action& a) con
            a.destination.x!=0||a.destination.y!=0||!a.destination_id.empty()||a.material!=target->kind||separation(actor.position,target->position)>1.5)
             return "INVALID_ARGUMENT";
         if(target->mass_ug<a.mass_ug)return "INSUFFICIENT_RESOURCE";
-        std::int64_t held=0;for(const auto& [kind,mass]:actor.inventory)held+=mass;
+        const auto held=carried_mass(actor);
         return held>inventory_capacity-a.mass_ug?"CAPACITY_EXCEEDED":"";
     }
     if(target->kind!="tree")return "TARGET_UNAVAILABLE";
-    if(!a.text.empty()||a.mass_ug<0||a.destination_id.size()!=0||!a.material.empty()||separation(actor.position,target->position)>1.5)
+    if((a.destination.x!=0||a.destination.y!=0)&&separation(target->position,a.destination)>1.8)
+        return "INVALID_ARGUMENT";
+    if(!a.text.empty()||a.mass_ug<0||(!a.destination_id.empty()&&!fell)||!a.material.empty()||separation(actor.position,target->position)>1.5)
         return "INVALID_ARGUMENT";
     if(target->stage=="stump"||target->biomass_ug==0||target->mass_ug==0)return "TREE_DEPLETED";
     if(harvest) {
         if(a.mass_ug<=0||a.duration_s<1)return "INVALID_ARGUMENT";
         return a.mass_ug>target->biomass_ug?"INSUFFICIENT_RESOURCE":"";
     }
-    if(fell) return a.mass_ug==0&&a.duration_s>=5?"":"INVALID_ARGUMENT";
+    if(fell) {
+        auto tool=find(a.destination_id);
+        if(!tool||tool->kind!="tool"||tool->owner_id!=actor.id||!tool->durability)return "MISSING_TOOL";
+        return a.mass_ug==0&&a.duration_s>=5?"":"INVALID_ARGUMENT";
+    }
     return "UNKNOWN_ACTION";
 }
 void World::complete_body_action(Entity& actor,const Action& a) {
+    if(ecology_action(a.type)){complete_ecology_action(actor,a);return;}
+    if(crafting_action(a.type)){complete_crafting_action(actor,a);return;}
     if(a.type=="inspect_tree"||a.type=="harvest_branch"||a.type=="fell_tree"||a.type=="collect_wood") {
         complete_tree_action(actor,a);return;
     }
@@ -101,7 +112,7 @@ void World::complete_body_action(Entity& actor,const Action& a) {
     if(a.type=="operate_heat"||a.type=="move_material") {complete_thermal_action(actor,a);return;}
     if(a.type=="give"||a.type=="offer_task"||a.type=="respond_task"||a.type=="process_batch"||a.type=="write_book"||a.type=="depart") {complete_culture_action(actor,a);return;}
     if(a.type=="eat"||a.type=="drink") {
-        const auto kind=a.type=="eat"?"food":"water";
+        const std::string kind=a.type=="eat"?(a.material.empty()?"food":a.material):"water";
         auto it=actor.inventory.find(kind);
         if(it==actor.inventory.end()||it->second<a.mass_ug) {finish(actor.id,false,"INSUFFICIENT_RESOURCE");return;}
         it->second-=a.mass_ug;
@@ -173,7 +184,7 @@ void World::complete_tree_action(Entity& actor,const Action& a) {
     if(a.type=="collect_wood") {
         const auto amount=a.mass_ug;
         if(target->mass_ug<amount){fail("INSUFFICIENT_RESOURCE");return;}
-        std::int64_t held=0;for(const auto& [kind,mass]:actor.inventory)held+=mass;
+        const auto held=carried_mass(actor);
         if(held>inventory_capacity-amount){fail("CAPACITY_EXCEEDED");return;}
         target->mass_ug-=amount;actor.inventory[target->kind]+=amount;
         event("mass_transfer",actor_id,a.request_id,"collect_wood:"+target->kind+":"+std::to_string(amount)+"ug");
@@ -191,7 +202,7 @@ void World::complete_tree_action(Entity& actor,const Action& a) {
         if(a.mass_ug<=0||a.mass_ug>target->biomass_ug){fail("INSUFFICIENT_RESOURCE");return;}
         removed=a.mass_ug;wood=removed*9/10;fiber=removed-wood;stump=target->biomass_ug-removed;
     } else {
-        // Authored bootstrap rule: felling is a slow no-tool action. Native
+        // Authored rule: felling spends one owned usable axe use. Native
         // validation remains authoritative, so bindings cannot bypass reach,
         // stage, biomass, placement, or the five-second minimum.
         if(a.duration_s<5){fail("INVALID_ARGUMENT");return;}
@@ -202,6 +213,7 @@ void World::complete_tree_action(Entity& actor,const Action& a) {
     std::vector<std::pair<std::string,std::int64_t>> products;
     if(wood>0)products.emplace_back("wood",wood);
     if(fiber>0)products.emplace_back("fiber",fiber);
+    if(entities_.size()+products.size()>200){fail("ENTITY_LIMIT");return;}
     std::vector<Point> positions;
     auto clear_for_pile=[&](Point p) {
         if(!std::isfinite(p.x)||!std::isfinite(p.y)||p.x<pile_radius||p.y<pile_radius||p.x>width_-pile_radius||p.y>height_-pile_radius)return false;
@@ -228,6 +240,7 @@ void World::complete_tree_action(Entity& actor,const Action& a) {
         positions.push_back(placement);
     }
     if(removed>target->biomass_ug){fail("INSUFFICIENT_RESOURCE");return;}
+    if(a.type=="fell_tree")use_axe(actor,a.destination_id,a.request_id);
     target->mass_ug-=removed;target->biomass_ug=target->mass_ug;
     target->health=std::max(0.0,target->health-.1*static_cast<double>(removed)/std::max<std::int64_t>(original,1));
     if(a.type=="fell_tree"||target->mass_ug==0||stump==0) {target->stage="stump";target->health=target->mass_ug==0?0:.1;}
@@ -285,7 +298,8 @@ void World::grow_trees() {
         tree_growth_remainder_ug_-=static_cast<double>(amount);
         if(amount<=0)continue;
         if(tree.mass_ug>std::numeric_limits<std::int64_t>::max()-amount)throw std::invalid_argument("tree biomass overflow");
-        tree.mass_ug+=amount;tree.biomass_ug=tree.mass_ug;source_mass_.at("tree")+=amount;
+        const auto granted=std::min(amount,8*kg-tree.mass_ug);
+        tree.mass_ug+=granted;tree.biomass_ug=tree.mass_ug;source_mass_.at("tree")+=granted;
         if(tree.mass_ug>=8*kg)tree.stage="mature";
     }
 }

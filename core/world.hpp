@@ -28,6 +28,10 @@ struct Entity {
     std::string stage{"none"};
     double health{1};
     std::int64_t biomass_ug{};
+    std::string recipe_id{}, owner_id{};
+    std::map<std::string,std::int64_t> composition;
+    double work_s{};
+    unsigned durability{}, workmanship{};
 };
 struct Action {
     std::string request_id, agent_id, type, target_id;
@@ -52,8 +56,36 @@ struct Message {
 struct Book { U64 origin_seq{}; std::string text; std::string author{"book-author"}; U64 parent_seq{}; };
 struct Event { U64 seq{}, tick{}; std::string type, agent_id, request_id, detail; };
 struct Pending { Action action; U64 remaining{}, started{}; double exposure_s{}; };
+struct Recipe {
+    std::string id, kind;
+    std::map<std::string,std::int64_t> inputs, outputs;
+    double work_s{};
+    bool axe{};
+    unsigned skill{};
+};
+const std::vector<Recipe>& recipes();
+bool crafting_action(const std::string& type);
+bool ecology_action(const std::string& type);
+struct Animal {
+    std::string species, mode{"rest"}, handler;
+    double age_s{120}, laying_s{};
+    U64 guide_until{};
+    std::int64_t food{250000000}, water{200000000}, metabolized_food{}, metabolized_water{}, laid{};
+    double food_remainder{}, water_remainder{};
+    std::map<std::string,unsigned> familiarity;
+    std::map<std::string,U64> last_feed;
+};
+struct Ecology {
+    bool enabled{};
+    double forage_rate{}, forage_remainder{};
+    std::int64_t body_initial{}, food_residue{}, water_waste{}, egg_input{}, eggs_produced{};
+    std::map<std::string,Animal> animals;
+    std::map<std::pair<std::string,std::string>,double> freshness;
+};
 class World {
 public:
+    void configure_ecology(double forage_kg=2,double regeneration_kg_s=0);
+    const Ecology& ecology() const {return ecology_;}
     World(U64 seed=20261019, unsigned population=8, double width=64, double height=64,
            double dt=.1, U64 interval=50, bool scripted=true, bool bodies=false,
            double food_kg=16, double water_kg=64, double food_regen_kg_s=0, double water_regen_kg_s=0,
@@ -101,7 +133,17 @@ public:
     const std::map<std::string,std::int64_t>& source_mass() const { return source_mass_; }
     bool visible(const std::string& observer,const std::string& target,double range=8) const;
     void check_invariants() const;
+    std::int64_t carried_mass(const Entity& actor) const;
 private:
+    Ecology ecology_;
+    void update_ecology();
+    void age_food();
+    void transfer_freshness(const std::string& source,const std::string& destination,const std::string& material,double initial=0);
+    std::string validate_ecology_action(const Entity&,const Action&) const;
+    void complete_ecology_action(Entity&,const Action&);
+    void write_ecology(std::ostream&) const;
+    void read_ecology(std::istream&);
+    void check_ecology(std::map<std::string,std::int64_t>&) const;
     U64 seed_{}, tick_{}, seq_{}, next_id_{}, interval_{50}, next_script_tick_{};
     double width_{}, height_{}, dt_{}, energy_j_{}, solar_input_j_{};
     ThermalModel thermal_;
@@ -140,6 +182,11 @@ private:
     void complete_body_action(Entity& actor,const Action& action);
     std::string validate_tree_action(const Entity& actor,const Action& action) const;
     void complete_tree_action(Entity& actor,const Action& action);
+    std::string validate_crafting_action(const Entity& actor,const Action& action) const;
+    void complete_crafting_action(Entity& actor,const Action& action);
+    void work_construction(Entity& actor,const Action& action);
+    bool clear_placement(Point p,double radius,const std::string& ignore="") const;
+    void use_axe(Entity& actor,const std::string& id,const std::string& request_id);
     const Message* known_report(const std::string& agent, U64 seq) const;
     std::string validate_culture_action(const Entity& actor,const Action& action) const;
     void complete_culture_action(Entity& actor,const Action& action);

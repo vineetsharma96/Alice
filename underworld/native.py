@@ -20,7 +20,10 @@ def load_native():
             if Path(candidate).is_dir():
                 _dll_directories.append(os.add_dll_directory(candidate))
     try:
-        return importlib.import_module("_underworld")
+        module=importlib.import_module("_underworld")
+        if getattr(module,"world_format",None)!="UW9":
+            raise RuntimeError("Native format mismatch: this source requires UW9. Rebuild or set UNDERWORLD_BUILD to build/living-d; preserve old worlds with their pinned runtime.")
+        return module
     except ImportError as error:
         raise RuntimeError("Native module unavailable. Run scripts/bootstrap.ps1 or documented CMake build; "
                            "set UNDERWORLD_BUILD / UNDERWORLD_TOOLCHAIN for custom paths.") from error

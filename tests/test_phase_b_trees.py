@@ -130,8 +130,8 @@ class TreePersistenceTests(unittest.TestCase):
             self.assertEqual(storage.inspect(path)["state_hash"], storage.inspect(backup)["state_hash"])
             db = sqlite3.connect(backup)
             try:
-                self.assertEqual(db.execute("PRAGMA user_version").fetchone()[0], 8)
-                self.assertEqual(db.execute("SELECT schema_version FROM checkpoints WHERE name='initial'").fetchone()[0], 7)
+                self.assertEqual(db.execute("PRAGMA user_version").fetchone()[0], 10)
+                self.assertEqual(db.execute("SELECT schema_version FROM checkpoints WHERE name='initial'").fetchone()[0], 9)
             finally:
                 db.close()
 

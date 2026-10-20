@@ -8,17 +8,17 @@ from .config import load
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Underworld Lab bounded unattended experiments (Phase 7)")
+    parser = argparse.ArgumentParser(description="Underworld Lab: persistent worlds, verified actions and local viewers")
     commands = parser.add_subparsers(dest="command", required=True)
     new = commands.add_parser("new", help="create a new run without overwriting existing files")
     new.add_argument("--db", type=Path, required=True)
-    new.add_argument("--config", type=Path, default=Path("config/survival.toml"))
+    new.add_argument("--config", type=Path, default=Path(__file__).resolve().parents[1]/"config/survival.toml")
     new.add_argument("--manual", action="store_true", help="disable authored scripted movement")
     inspect = commands.add_parser("inspect", help="read-only state; never advances time")
     inspect.add_argument("--db", type=Path)
     inspect.add_argument("--agent", action="append", default=[])
     inspect.add_argument("--core", type=Path, help="legacy Phase 0 initialization probe")
-    inspect.add_argument("--config", type=Path, default=Path("config/baseline.toml"))
+    inspect.add_argument("--config", type=Path, default=Path(__file__).resolve().parents[1]/"config/baseline.toml")
     for name in ("advance", "resume"):
         sub = commands.add_parser(name)
         sub.add_argument("--db", type=Path, required=True)
@@ -68,7 +68,7 @@ def main():
     for name in ("init","attach","run","status"):
         sub=living_commands.add_parser(name)
         sub.add_argument("--db",type=Path,required=True)
-        if name=="init":sub.add_argument("--config",type=Path,default=Path("config/living-world.toml"))
+        if name=="init":sub.add_argument("--config",type=Path,default=Path(__file__).resolve().parents[1]/"config/living-world.toml")
         if name in ("init","attach"):sub.add_argument("--model",action="store_true");sub.add_argument("--calls",type=int,default=2)
         if name=="run":
             sub.add_argument("--seconds",type=float,required=True)
@@ -88,8 +88,7 @@ def main():
         if args.command=="living-world":
             from . import stabilization
             if args.living_command=="init":
-                cfg=load(args.config);cfg["agency"]["policy"]="none";storage.create(args.db,cfg,scripted=False)
-                value=stabilization.attach(args.db,model=args.model,call_limit=args.calls)
+                value=stabilization.initialize(args.db,load(args.config),model=args.model,call_limit=args.calls)
             elif args.living_command=="attach":
                 value=stabilization.attach(args.db,model=args.model,call_limit=args.calls)
             elif args.living_command=="run":

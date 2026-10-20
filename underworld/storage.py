@@ -9,6 +9,7 @@ import threading
 import time
 from datetime import datetime, timezone
 
+from . import __version__
 from .config import validate,episodic_enabled
 from .native import load_native
 from .wire import dumps, loads, counter
@@ -16,7 +17,8 @@ from .policy import choose
 from . import memory, cognition
 from .lease import Lease
 
-DB_VERSION = 8
+DB_VERSION = 10
+CHECKPOINT_SCHEMA = 9
 INFERENCE_LOCK = threading.Lock()
 MAX_DECISIONS = 10000
 MAX_CHECKPOINT_BYTES = 8*1024*1024  # Same bound as native restore; never commit an unreadable head.
@@ -39,6 +41,7 @@ def orchestration_id():
 def laws_version(config):
     laws={"hearing_range_m":float(config.get("laws",{}).get("hearing_range_m",6))}
     laws["thermal"]=config.get("thermal",{"enabled":False})
+    laws["ecology"]=config.get("ecology",{"enabled":False})
     laws["culture"]=config.get("culture",{"enabled":False})
     return "culture-6/"+digest(dumps(laws))[:12]
 
@@ -104,6 +107,9 @@ def _head(db):
     memory.verify(db)
     world = native.World.restore(state, run_id)
     snapshot=world.snapshot()
+    ecology=config.get("ecology",{})
+    if snapshot["ecology"]["enabled"]!=ecology.get("enabled",False) or (ecology.get("enabled") and snapshot["ecology"]["forage_regeneration_kg_s"]!=ecology["regeneration_kg_s"]):
+        raise ValueError("native/config ecology mismatch")
     thermal=config.get("thermal",{})
     culture=config.get("culture",{})
     if snapshot["culture"]["enabled"]!=culture.get("enabled",False) or (culture.get("enabled") and snapshot["culture"]["hidden_apparatus"]["seed"]!=str(culture["apparatus_seed"])):
@@ -120,9 +126,7 @@ def create(path, config, scripted=True):
     validate(config)
     path = Path(path).resolve()
     path.parent.mkdir(parents=True, exist_ok=True)
-    # Exclusive creation avoids clobbering an existing experiment.
-    with path.open("xb"):
-        pass
+    if path.exists():raise FileExistsError(f"run already exists: {path}")
     native = load_native()
     run_id = str(uuid.uuid4())
     w = config["world"]
@@ -138,20 +142,24 @@ def create(path, config, scripted=True):
     thermal=config.get("thermal",{})
     if thermal.get("enabled"):
         world.configure_thermal(thermal["open_boundaries"],thermal["water_kg"],thermal["fuel_kg"],thermal["oxygen_kg"],thermal["temperature_k"])
+    if config.get("ecology",{}).get("enabled"):
+        world.configure_ecology(config["ecology"]["forage_kg"],config["ecology"]["regeneration_kg_s"])
     if config.get("culture",{}).get("enabled"):
         world.configure_culture(config["culture"]["apparatus_seed"])
     state = world.checkpoint()
     metadata = {"schema_version": 1, "created_at_utc": datetime.now(timezone.utc).isoformat(),
                 "build_id": native.build_id, "orchestration_id": orchestration_id(),
                 "config_hash": digest(dumps(config)), "scripted": scripted,
-                "laws_version": laws_version(config), "package_version": "0.9.0", "policy":policy,
+                "laws_version": laws_version(config), "package_version": __version__, "policy":policy,
                 "commit_boundary": "one physical tick, cognition reservation/result, operator action or retention transaction", "parent_run_id": None,
                 "branch_id":run_id,"replay_after_id":0}
+    # Publish only after native/config validation; exclusive creation still wins races.
+    with path.open("xb"):pass
     db = sqlite3.connect(path, isolation_level=None)
     try:
         db.execute("PRAGMA journal_mode=DELETE")
         db.execute("PRAGMA synchronous=FULL")
-        db.executescript("""
+        db.executescript(f"""
             BEGIN IMMEDIATE;
             CREATE TABLE run(singleton INTEGER PRIMARY KEY CHECK(singleton=1), run_id TEXT NOT NULL,
                 config TEXT NOT NULL, metadata TEXT NOT NULL, state TEXT NOT NULL, state_hash TEXT NOT NULL,
@@ -166,13 +174,13 @@ def create(path, config, scripted=True):
             CREATE TABLE runtime_state(singleton INTEGER PRIMARY KEY CHECK(singleton=1),payload TEXT NOT NULL,checksum TEXT NOT NULL);
             CREATE TABLE runtime_epochs(epoch INTEGER PRIMARY KEY,payload TEXT NOT NULL);
             CREATE TABLE cognition_queue(agent TEXT PRIMARY KEY,due_tick INTEGER NOT NULL);
-            PRAGMA user_version=8;
+            PRAGMA user_version={DB_VERSION};
         """)
         # executescript commits the schema transaction; initialization is not published until a valid head exists.
         memory.initialize(db, config["seed"], w["population"])
         db.execute("BEGIN IMMEDIATE")
         db.execute("INSERT INTO run VALUES(1,?,?,?,?,?,?)", (run_id,dumps(config),dumps(metadata),state,digest(state),"{}"))
-        db.execute("INSERT INTO checkpoints VALUES('initial',0,?,?,7,'{}')", (state,digest(state)))
+        db.execute("INSERT INTO checkpoints VALUES('initial',0,?,?,?,'{}')", (state,digest(state),CHECKPOINT_SCHEMA))
         runtime_payload=dumps({"epoch":0,"last_rotation_tick":0,"queue_dropped":0,"queue_served":0,"status":"ready"})
         db.execute("INSERT INTO runtime_state VALUES(1,?,?)",(runtime_payload,digest(runtime_payload+dumps([]))))
         db.commit()
@@ -185,22 +193,26 @@ def create(path, config, scripted=True):
     return inspect(path)
 
 
+def snapshot_projection(db,world,metadata,state_hash):
+    snapshot = world.snapshot()
+    snapshot.update(config_hash=metadata["config_hash"], state_hash=state_hash,
+                    branch_id=metadata["branch_id"],laws_version=metadata["laws_version"],
+                    parent_branch_id=metadata.get("parent_branch_id"),
+                    interventions=db.execute("SELECT COUNT(*) FROM decisions WHERE source='operator'").fetchone()[0],
+                    retained_events=db.execute("SELECT COUNT(*) FROM events").fetchone()[0],
+                    recorded_decisions=db.execute("SELECT COUNT(*) FROM decisions").fetchone()[0],
+                    cognitive_hash=memory.checksum(db),
+                    cognition_calls=db.execute("SELECT COUNT(*) FROM cognition_calls").fetchone()[0],
+                    episodes=db.execute("SELECT COUNT(*) FROM episodes").fetchone()[0])
+    return snapshot
+
+
 def inspect(path):
     db = _connect(path, readonly=True)
     try:
         db.execute("BEGIN")
         world, config, metadata, state_hash = _head(db)
-        snapshot = world.snapshot()
-        snapshot.update(config_hash=metadata["config_hash"], state_hash=state_hash,
-                        branch_id=metadata["branch_id"],laws_version=metadata["laws_version"],
-                        parent_branch_id=metadata.get("parent_branch_id"),
-                        interventions=db.execute("SELECT COUNT(*) FROM decisions WHERE source='operator'").fetchone()[0],
-                        retained_events=db.execute("SELECT COUNT(*) FROM events").fetchone()[0],
-                        recorded_decisions=db.execute("SELECT COUNT(*) FROM decisions").fetchone()[0],
-                        cognitive_hash=memory.checksum(db),
-                        cognition_calls=db.execute("SELECT COUNT(*) FROM cognition_calls").fetchone()[0],
-                        episodes=db.execute("SELECT COUNT(*) FROM episodes").fetchone()[0])
-        return snapshot
+        return snapshot_projection(db,world,metadata,state_hash)
     finally:
         db.close()
 
@@ -354,6 +366,7 @@ def advance(path, ticks, decisions=(), fault=None):
         start = int(world.snapshot()["tick"])
     finally:
         db.close()
+    decisions=tuple(decisions)  # Validation must not consume one-shot external action iterators.
     if config["cognition"]["provider"] == "disabled" or not metadata["scripted"]:
         return _advance(path, ticks, decisions, fault)
     if any(type(t) is not int or not start <= t < start+ticks for t, _ in decisions):
@@ -377,7 +390,7 @@ def _advance(path, ticks, decisions=(), fault=None, stop_requested=None):
     db = _connect(path)
     try:
         db.execute("BEGIN IMMEDIATE")
-        world, config, metadata, _ = _head(db)
+        world, config, metadata, state_hash = _head(db)
         policy_state=metadata["runtime_policy_state"]
         start = int(world.snapshot()["tick"])
         if start + ticks > 1000000:
@@ -482,8 +495,8 @@ def save(path, name, output=None, _automated=False):
         world, _, metadata, state_hash = _head(db)
         if db.execute("SELECT COUNT(*) FROM checkpoints").fetchone()[0] >= 16:
             raise ValueError("checkpoint limit reached (16 including initial)")
-        db.execute("INSERT INTO checkpoints VALUES(?,?,?,?,7,?)",
-                   (name,int(world.snapshot()["tick"]),world.checkpoint(),state_hash,dumps(metadata["runtime_policy_state"])))
+        db.execute("INSERT INTO checkpoints VALUES(?,?,?,?,?,?)",
+                   (name,int(world.snapshot()["tick"]),world.checkpoint(),state_hash,CHECKPOINT_SCHEMA,dumps(metadata["runtime_policy_state"])))
         db.commit()
         if output is not None:
             output = Path(output).resolve()

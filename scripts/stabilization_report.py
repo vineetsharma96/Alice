@@ -9,13 +9,13 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from underworld import stabilization as stable
-from stabilization_common import read,write
+from stabilization_common import write
 
 
 def main():
     def load(name):return json.loads((ROOT/'artifacts'/name).read_text(encoding='utf-8-sig'))
     evaluation=load('stabilization_heldout_v3.json');continuity=load('stabilization_continuity.json')
-    verification=load('stabilization_checks.json');baseline=load('stabilization_baseline.json')
+    verification=load('stabilization_checks.json')
     registration=load('stabilization_registration.json');freeze=load('stabilization_heldout_v3_freeze.json')
     if len(evaluation['cases'])!=60:raise ValueError('incomplete amended evaluation')
     if stable.source_id()!=freeze['controller_source_id']:raise ValueError('controller changed after held-out freeze')

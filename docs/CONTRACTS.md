@@ -38,3 +38,17 @@ The UW7 native contract adds these validated action types; all use the existing 
 | `collect_wood` | one visible wood/fiber/wood-offcut/stone pile | `{material,mass_kg}` | transfers an existing pile quantity into carried inventory under capacity/reach checks |
 
 Tree-derived material placement is checked against occupied geometry. A failed or interrupted action does not create products; competing terminal completions revalidate remaining biomass. The native checkpoint is `UW7`; the durable coordinator is SQLite user_version 8 with checkpoint schema 7. See [PHASE_B_TREES.md](PHASE_B_TREES.md) for limits and exact ledgers.
+
+## Current Milestone C action contract (UW8 / DB9)
+
+The B table above is historical. C `fell_tree` requires `{tool_id}` and optional `{x_m,y_m}`. `craft` takes no target and `{recipe_id}` plus `{tool_id}` when required. `begin_construction` takes no target and `{recipe_id,x_m,y_m}`. `work_construction`, `cancel_construction` and `toggle_gate` take one target and empty parameters. `store_item`, `take_item` and `fill_trough` take one target and `{material,mass_kg}`. `cancel_action` takes no target/parameters and terminates the actor's current pending request as failed/CANCELLED. Every action uses the existing strict schema-1 envelope, canonical observation tick and bounded `requested_duration`.
+
+Native recipes specify ingredients, tool, initial skill requirement, work and products. Construction transfers ingredients to a persistent site; fixed-step work is saved every tick. Native tool composition and owned-tool capacity, contents capacities, output geometry, cancellation, terminal revalidation and exact quantities are specified in [PHASE_C_CRAFTING.md](PHASE_C_CRAFTING.md). Added reasons include UNKNOWN_RECIPE, INSUFFICIENT_WORK, INSUFFICIENT_SKILL, MISSING_TOOL, TARGET_BUSY, ENTITY_LIMIT and NO_PENDING_ACTION. Existing validation order still determines which legitimate rejection is reported. Visibility may reject before an occupied-placement check.
+
+Recipes are not automatically cognition input. Agent own state includes owned tools, total carried mass and an authored successful-work counter; the privileged recipe registry requires the operator channel. No Phase 9 learner is used. Native UW8 and SQLite user_version 9/checkpoint schema 8 reject older source/format identities rather than modifying old saves.
+
+## Milestone D actions (UW9 / DB10 / checkpoint 9)
+
+All use the existing strict schema-1 action envelope. One target and empty parameters: observe_animal (>=0.2 s), guide_or_lure (>=1 s). One target and {mass_kg}: gather_plant (>=1 s). One target and {material,mass_kg}: offer_feed and collect_eggs (>=1 s); collection requires material eggs. Existing fill_trough retains its real water-only transfer. Care reach is 1.5 m; observation is bounded to 4 m and line of sight. Prerequisites are checked again on terminal completion. New reasons include DEAD_TARGET and UNFAMILIAR; native validation order is preserved.
+
+Eating retains the historical {mass_kg} food default and adds optional material plant_food or eggs. Those two materials can be stored/taken through boxes. Their remaining lifetimes mix by minimum, halve aging rate in boxes, and transfer to non-edible retained residue on expiry. Historical abstract food remains nonperishable. Source forage is gathered by gather_plant, not the generic gather contract. All animal reserve, egg, waste, life/familiarity/guide state and food freshness persist. No breeding or cook_food contract is exposed.

@@ -1,0 +1,24 @@
+{
+  "regressions": true,
+  "package_smoke": true,
+  "packaged_viewer": true,
+  "desktop_replay": true,
+  "desktop_native_parity": true,
+  "executable_hash_matches": true,
+  "phase9_hashes_match": {
+    "underworld\\learning.py": true,
+    "config\\phase9_study.json": true,
+    "docs\\PHASE9_PREREGISTRATION.md": true,
+    "docs\\PHASE9_REPORT.md": true,
+    "artifacts\\phase9_summary.json": true,
+    "data\\phase9-study-20261020\\file_hashes.json": true
+  },
+  "archive_drift": [],
+  "original_D_head_unchanged": true,
+  "local_links": 36,
+  "missing_links": [],
+  "owned_viewer_stopped": true,
+  "source_files": 168,
+  "python_static_findings": "",
+  "passed": true
+}

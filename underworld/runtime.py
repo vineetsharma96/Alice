@@ -7,7 +7,6 @@ import math
 import os
 from pathlib import Path
 import re
-import signal
 import sqlite3
 import threading
 import time
@@ -137,7 +136,7 @@ def rotate(path,limits=None,fault=None):
             metadata.update(replay_after_id=0,retained_replay_start_tick=tick,epoch=number)
             db.execute("DELETE FROM decisions");db.execute("DELETE FROM policy_frames")
             db.execute("DELETE FROM checkpoints WHERE name='initial' OR name GLOB 'auto_epoch_*'")
-            db.execute("INSERT INTO checkpoints VALUES('initial',?,?,?,?,?)",(tick,native,hashed,7,dumps(policy)))
+            db.execute("INSERT INTO checkpoints VALUES('initial',?,?,?,?,?)",(tick,native,hashed,storage.CHECKPOINT_SCHEMA,dumps(policy)))
             db.execute("UPDATE run SET metadata=?,state=?,state_hash=? WHERE singleton=1",(dumps(metadata),native,hashed))
             db.executemany("INSERT INTO events VALUES(?,?,?)",[(int(e["seq"]),int(e["tick"]),dumps(e)) for e in events])
             record={"epoch":number,"tick":tick,"before_hash":before,"after_hash":hashed,"archive":output.name,"archive_sha256":archive_hash,

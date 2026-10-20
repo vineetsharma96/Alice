@@ -1,0 +1,5068 @@
+{
+  "assignment": {
+    "version": "woodcraft-demo/1",
+    "agent": "agent-1",
+    "source": "operator_assigned_procedure",
+    "task": "bootstrap axe, fell tree, cut planks, build box and store offcuts",
+    "learned": false,
+    "model_calls": 0,
+    "executor": "authored_fixture_route",
+    "source_sha256": "36264221b7f1c16193f6cc3d47ef57daaceb53698f39ccdbc1005a459f5c1a1e"
+  },
+  "config": {
+    "schema_version": 1,
+    "seed": 20261020,
+    "mode": "closed",
+    "world": {
+      "width_m": 8.0,
+      "height_m": 8.0,
+      "dt_s": 0.2,
+      "population": 1,
+      "population_limit": 8
+    },
+    "cognition": {
+      "provider": "disabled",
+      "interval_ticks": 50,
+      "max_concurrency": 1,
+      "max_input_tokens": 1024,
+      "max_output_tokens": 128,
+      "timeout_s": 10.0,
+      "calls_per_simulated_day": 24
+    },
+    "logging": {
+      "level": "INFO",
+      "event_retention_count": 10000,
+      "max_payload_bytes": 16384
+    },
+    "agency": {
+      "bodies_enabled": true,
+      "policy": "none",
+      "interval_ticks": 25,
+      "food_kg": 8.0,
+      "water_kg": 16.0,
+      "food_regen_kg_s": 0.0,
+      "water_regen_kg_s": 0.0,
+      "tree_growth_kg_s": 0
+    }
+  },
+  "db": "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\data\\living-world-c-final-20261020\\run.sqlite",
+  "initial": {
+    "schema_version": 1,
+    "kind": "world_snapshot",
+    "run_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+    "culture": {
+      "enabled": false,
+      "skills": {},
+      "agreements": [],
+      "validated_batches": [],
+      "departed": []
+    },
+    "branch_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+    "tick": "0",
+    "observation_version": "0",
+    "last_event_seq": "0",
+    "seed": "20261020",
+    "dt_s": 0.2,
+    "simulated_time_s": 0.0,
+    "laws_version": "culture-6/65b8a96c1136",
+    "thermal": {
+      "enabled": false,
+      "open_boundaries": false,
+      "cells": [],
+      "ambient_temperature_k": 0.0,
+      "stored_energy_j": 0.0,
+      "initial_energy_j": 0.0,
+      "heater_input_j": 0.0,
+      "radiation_in_j": 0.0,
+      "radiation_out_j": 0.0,
+      "outflow_energy_j": 0.0,
+      "solar_transferred_j": 0.0,
+      "burned_fuel_ug": "0",
+      "outflow_water_ug": "0",
+      "balance_error_j": 0.0,
+      "global_balance_error_j": 0.0,
+      "energy_tolerance_j": 1e-05
+    },
+    "build_id": "e198d651df85a2830d7db8dadecadda7255c9e1554d2548a254fa03170dbed11",
+    "world_bounds_m": {
+      "width": 8.0,
+      "height": 8.0
+    },
+    "entities": [
+      {
+        "entity_id": "terrain-1",
+        "kind": "rock",
+        "position_m": [
+          4.0,
+          4.0
+        ],
+        "radius_m": 1.0,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "tree-1",
+        "kind": "tree",
+        "position_m": [
+          2.0,
+          6.0
+        ],
+        "radius_m": 0.6,
+        "mass_kg": 2.0,
+        "mass_ug": "2000000000",
+        "stage": "young",
+        "health": 1.0,
+        "biomass_ug": "2000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "tree-2",
+        "kind": "tree",
+        "position_m": [
+          6.0,
+          2.0
+        ],
+        "radius_m": 0.6,
+        "mass_kg": 8.0,
+        "mass_ug": "8000000000",
+        "stage": "mature",
+        "health": 1.0,
+        "biomass_ug": "8000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "tree-3",
+        "kind": "tree",
+        "position_m": [
+          6.0,
+          6.0
+        ],
+        "radius_m": 0.6,
+        "mass_kg": 8.0,
+        "mass_ug": "8000000000",
+        "stage": "mature",
+        "health": 1.0,
+        "biomass_ug": "8000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "agent-1",
+        "kind": "actor",
+        "position_m": [
+          2.0,
+          3.0
+        ],
+        "radius_m": 0.25,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "workmanship": 0,
+        "inventory_ug": {},
+        "alive": true,
+        "body": {
+          "hunger": 0.35,
+          "thirst": 0.4,
+          "fatigue": 0.2,
+          "health": 1.0,
+          "alive": true,
+          "food_ingested_ug": "0",
+          "water_ingested_ug": "0"
+        },
+        "present": true
+      },
+      {
+        "entity_id": "resource-1",
+        "kind": "food",
+        "position_m": [
+          2.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 8.0,
+        "mass_ug": "8000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "resource-2",
+        "kind": "water",
+        "position_m": [
+          3.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 16.0,
+        "mass_ug": "16000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "resource-3",
+        "kind": "inert_material",
+        "position_m": [
+          4.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 32.0,
+        "mass_ug": "32000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "resource-4",
+        "kind": "stone",
+        "position_m": [
+          5.0,
+          2.0
+        ],
+        "radius_m": 0.15,
+        "mass_kg": 4.0,
+        "mass_ug": "4000000000",
+        "inventory_ug": {}
+      }
+    ],
+    "outstanding_actions": [],
+    "material_totals_ug": {
+      "food": "8000000000",
+      "fuel_X": "0",
+      "inert_material": "32000000000",
+      "oxygen": "0",
+      "product_P": "0",
+      "stone": "4000000000",
+      "tree": "18000000000",
+      "water": "16000000000"
+    },
+    "event_counts": {},
+    "solar_input_j": 0.0,
+    "environment_energy_j": 0.0,
+    "operator_energy_input_j": 0.0,
+    "operator_sources_ug": {
+      "food": 0,
+      "fuel_X": 0,
+      "inert_material": 0,
+      "oxygen": 0,
+      "product_P": 0,
+      "stone": 0,
+      "water": 0
+    },
+    "mode": "closed",
+    "hearing_range_m": 6.0,
+    "sunlight_w_m2": 0.0,
+    "scripted": false,
+    "next_script_tick": "0",
+    "bodies_enabled": true,
+    "initial_mass_ug": {
+      "food": 8000000000,
+      "fuel_X": 0,
+      "inert_material": 32000000000,
+      "oxygen": 0,
+      "product_P": 0,
+      "stone": 4000000000,
+      "tree": 18000000000,
+      "water": 16000000000
+    },
+    "boundary_sources_ug": {
+      "food": 0,
+      "fuel_X": 0,
+      "inert_material": 0,
+      "oxygen": 0,
+      "product_P": 0,
+      "stone": 0,
+      "tree": 0,
+      "water": 0
+    },
+    "config_hash": "c654d2736a7667d1cd611e2a72f56ccbc34500e8dc207c77c18c7633259c8fd9",
+    "state_hash": "4f83fc91e232ca71989e1152f07fbc73ed988dc0522dffc2c46a7817fb47d075",
+    "parent_branch_id": null,
+    "interventions": 0,
+    "retained_events": 0,
+    "recorded_decisions": 0,
+    "cognitive_hash": "057a4ef5aab5a61957d1fa8bd61d12c1ec5e4765332cce0552c7afc5aaf3f88e",
+    "cognition_calls": 0,
+    "episodes": 0
+  },
+  "partial": {
+    "schema_version": 1,
+    "kind": "world_snapshot",
+    "run_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+    "culture": {
+      "enabled": false,
+      "skills": {},
+      "agreements": [],
+      "validated_batches": [],
+      "departed": []
+    },
+    "branch_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+    "tick": "231",
+    "observation_version": "231",
+    "last_event_seq": "279",
+    "seed": "20261020",
+    "dt_s": 0.2,
+    "simulated_time_s": 46.2,
+    "laws_version": "culture-6/65b8a96c1136",
+    "thermal": {
+      "enabled": false,
+      "open_boundaries": false,
+      "cells": [],
+      "ambient_temperature_k": 0.0,
+      "stored_energy_j": 0.0,
+      "initial_energy_j": 0.0,
+      "heater_input_j": 0.0,
+      "radiation_in_j": 0.0,
+      "radiation_out_j": 0.0,
+      "outflow_energy_j": 0.0,
+      "solar_transferred_j": 0.0,
+      "burned_fuel_ug": "0",
+      "outflow_water_ug": "0",
+      "balance_error_j": 0.0,
+      "global_balance_error_j": 0.0,
+      "energy_tolerance_j": 1e-05
+    },
+    "build_id": "e198d651df85a2830d7db8dadecadda7255c9e1554d2548a254fa03170dbed11",
+    "world_bounds_m": {
+      "width": 8.0,
+      "height": 8.0
+    },
+    "entities": [
+      {
+        "entity_id": "terrain-1",
+        "kind": "rock",
+        "position_m": [
+          4.0,
+          4.0
+        ],
+        "radius_m": 1.0,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "tree-1",
+        "kind": "tree",
+        "position_m": [
+          2.0,
+          6.0
+        ],
+        "radius_m": 0.6,
+        "mass_kg": 1.5,
+        "mass_ug": "1500000000",
+        "stage": "young",
+        "health": 0.975,
+        "biomass_ug": "1500000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "tree-2",
+        "kind": "tree",
+        "position_m": [
+          6.0,
+          2.0
+        ],
+        "radius_m": 0.6,
+        "mass_kg": 0.8,
+        "mass_ug": "800000000",
+        "stage": "stump",
+        "health": 0.1,
+        "biomass_ug": "800000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "tree-3",
+        "kind": "tree",
+        "position_m": [
+          6.0,
+          6.0
+        ],
+        "radius_m": 0.6,
+        "mass_kg": 8.0,
+        "mass_ug": "8000000000",
+        "stage": "mature",
+        "health": 1.0,
+        "biomass_ug": "8000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "agent-1",
+        "kind": "actor",
+        "position_m": [
+          7.2,
+          3.4
+        ],
+        "radius_m": 0.25,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "workmanship": 2,
+        "inventory_ug": {
+          "fiber": "0",
+          "plank": "0",
+          "stone": "0",
+          "wood": "0",
+          "wood_offcut": "200000000"
+        },
+        "alive": true,
+        "body": {
+          "hunger": 0.3961999999999949,
+          "thirst": 0.4693000000000052,
+          "fatigue": 0.2423199999999983,
+          "health": 1.0,
+          "alive": true,
+          "food_ingested_ug": "0",
+          "water_ingested_ug": "0"
+        },
+        "present": true
+      },
+      {
+        "entity_id": "resource-1",
+        "kind": "food",
+        "position_m": [
+          2.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 8.0,
+        "mass_ug": "8000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "resource-2",
+        "kind": "water",
+        "position_m": [
+          3.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 16.0,
+        "mass_ug": "16000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "resource-3",
+        "kind": "inert_material",
+        "position_m": [
+          4.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 32.0,
+        "mass_ug": "32000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "resource-4",
+        "kind": "stone",
+        "position_m": [
+          5.0,
+          2.0
+        ],
+        "radius_m": 0.15,
+        "mass_kg": 3.8,
+        "mass_ug": "3800000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "pile-10",
+        "kind": "wood",
+        "position_m": [
+          3.2,
+          6.0
+        ],
+        "radius_m": 0.15,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "pile-11",
+        "kind": "fiber",
+        "position_m": [
+          0.8,
+          6.0
+        ],
+        "radius_m": 0.15,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "crafted-12",
+        "kind": "tool",
+        "position_m": [
+          7.2,
+          3.4
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 0.7,
+        "mass_ug": "700000000",
+        "recipe_id": "crude_axe",
+        "owner_id": "agent-1",
+        "work_s": 0.0,
+        "durability": 6,
+        "composition_ug": {
+          "fiber": "50000000",
+          "stone": "200000000",
+          "wood": "450000000"
+        },
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "pile-13",
+        "kind": "wood",
+        "position_m": [
+          7.2,
+          2.0
+        ],
+        "radius_m": 0.15,
+        "mass_kg": 5.4,
+        "mass_ug": "5400000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "pile-14",
+        "kind": "fiber",
+        "position_m": [
+          6.0,
+          3.2
+        ],
+        "radius_m": 0.15,
+        "mass_kg": 0.8,
+        "mass_ug": "800000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "crafted-16",
+        "kind": "construction",
+        "position_m": [
+          6.7,
+          4.3
+        ],
+        "radius_m": 0.5,
+        "mass_kg": 0.8,
+        "mass_ug": "800000000",
+        "recipe_id": "storage_box",
+        "owner_id": "agent-1",
+        "work_s": 2.1999999999999997,
+        "durability": 0,
+        "composition_ug": {
+          "plank": "800000000"
+        },
+        "inventory_ug": {}
+      }
+    ],
+    "outstanding_actions": [
+      {
+        "agent_id": "agent-1",
+        "request_id": "c-work_construction-220-18",
+        "remaining_ticks": "29"
+      }
+    ],
+    "material_totals_ug": {
+      "fiber": "850000000",
+      "food": "8000000000",
+      "fuel_X": "0",
+      "inert_material": "32000000000",
+      "oxygen": "0",
+      "plank": "800000000",
+      "product_P": "0",
+      "stone": "4000000000",
+      "tree": "10300000000",
+      "water": "16000000000",
+      "wood": "5850000000",
+      "wood_offcut": "200000000"
+    },
+    "event_counts": {
+      "action_accepted": 19,
+      "action_completed": 18,
+      "crafting_effect": 3,
+      "mass_transfer": 6,
+      "tick": 231,
+      "tool_wear": 2
+    },
+    "solar_input_j": 494.5560336472347,
+    "environment_energy_j": 494.5560336472347,
+    "operator_energy_input_j": 0.0,
+    "operator_sources_ug": {
+      "food": 0,
+      "fuel_X": 0,
+      "inert_material": 0,
+      "oxygen": 0,
+      "product_P": 0,
+      "stone": 0,
+      "water": 0
+    },
+    "mode": "closed",
+    "hearing_range_m": 6.0,
+    "sunlight_w_m2": 0.3359752489278023,
+    "scripted": false,
+    "next_script_tick": "0",
+    "bodies_enabled": true,
+    "initial_mass_ug": {
+      "food": 8000000000,
+      "fuel_X": 0,
+      "inert_material": 32000000000,
+      "oxygen": 0,
+      "product_P": 0,
+      "stone": 4000000000,
+      "tree": 18000000000,
+      "water": 16000000000
+    },
+    "boundary_sources_ug": {
+      "food": 0,
+      "fuel_X": 0,
+      "inert_material": 0,
+      "oxygen": 0,
+      "product_P": 0,
+      "stone": 0,
+      "tree": 0,
+      "water": 0
+    },
+    "config_hash": "c654d2736a7667d1cd611e2a72f56ccbc34500e8dc207c77c18c7633259c8fd9",
+    "state_hash": "74662772eab56188190fec16b9e9cc26992145feae0105a56a46145f59c6388e",
+    "parent_branch_id": null,
+    "interventions": 0,
+    "retained_events": 279,
+    "recorded_decisions": 19,
+    "cognitive_hash": "4726d3526d8c7379f0305f09ee7667c2523eb3eee9298b9b00411dabf175fe0f",
+    "cognition_calls": 0,
+    "episodes": 18
+  },
+  "final": {
+    "schema_version": 1,
+    "kind": "world_snapshot",
+    "run_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+    "culture": {
+      "enabled": false,
+      "skills": {},
+      "agreements": [],
+      "validated_batches": [],
+      "departed": []
+    },
+    "branch_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+    "tick": "278",
+    "observation_version": "278",
+    "last_event_seq": "334",
+    "seed": "20261020",
+    "dt_s": 0.2,
+    "simulated_time_s": 55.6,
+    "laws_version": "culture-6/65b8a96c1136",
+    "thermal": {
+      "enabled": false,
+      "open_boundaries": false,
+      "cells": [],
+      "ambient_temperature_k": 0.0,
+      "stored_energy_j": 0.0,
+      "initial_energy_j": 0.0,
+      "heater_input_j": 0.0,
+      "radiation_in_j": 0.0,
+      "radiation_out_j": 0.0,
+      "outflow_energy_j": 0.0,
+      "solar_transferred_j": 0.0,
+      "burned_fuel_ug": "0",
+      "outflow_water_ug": "0",
+      "balance_error_j": 0.0,
+      "global_balance_error_j": 0.0,
+      "energy_tolerance_j": 1e-05
+    },
+    "build_id": "e198d651df85a2830d7db8dadecadda7255c9e1554d2548a254fa03170dbed11",
+    "world_bounds_m": {
+      "width": 8.0,
+      "height": 8.0
+    },
+    "entities": [
+      {
+        "entity_id": "terrain-1",
+        "kind": "rock",
+        "position_m": [
+          4.0,
+          4.0
+        ],
+        "radius_m": 1.0,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "tree-1",
+        "kind": "tree",
+        "position_m": [
+          2.0,
+          6.0
+        ],
+        "radius_m": 0.6,
+        "mass_kg": 1.5,
+        "mass_ug": "1500000000",
+        "stage": "young",
+        "health": 0.975,
+        "biomass_ug": "1500000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "tree-2",
+        "kind": "tree",
+        "position_m": [
+          6.0,
+          2.0
+        ],
+        "radius_m": 0.6,
+        "mass_kg": 0.8,
+        "mass_ug": "800000000",
+        "stage": "stump",
+        "health": 0.1,
+        "biomass_ug": "800000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "tree-3",
+        "kind": "tree",
+        "position_m": [
+          6.0,
+          6.0
+        ],
+        "radius_m": 0.6,
+        "mass_kg": 8.0,
+        "mass_ug": "8000000000",
+        "stage": "mature",
+        "health": 1.0,
+        "biomass_ug": "8000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "agent-1",
+        "kind": "actor",
+        "position_m": [
+          7.2,
+          3.4
+        ],
+        "radius_m": 0.25,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "workmanship": 3,
+        "inventory_ug": {
+          "fiber": "0",
+          "plank": "0",
+          "stone": "0",
+          "wood": "0",
+          "wood_offcut": "200000000"
+        },
+        "alive": true,
+        "body": {
+          "hunger": 0.40559999999999385,
+          "thirst": 0.48340000000000627,
+          "fatigue": 0.24983999999999798,
+          "health": 1.0,
+          "alive": true,
+          "food_ingested_ug": "0",
+          "water_ingested_ug": "0"
+        },
+        "present": true
+      },
+      {
+        "entity_id": "resource-1",
+        "kind": "food",
+        "position_m": [
+          2.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 8.0,
+        "mass_ug": "8000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "resource-2",
+        "kind": "water",
+        "position_m": [
+          3.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 16.0,
+        "mass_ug": "16000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "resource-3",
+        "kind": "inert_material",
+        "position_m": [
+          4.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 32.0,
+        "mass_ug": "32000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "resource-4",
+        "kind": "stone",
+        "position_m": [
+          5.0,
+          2.0
+        ],
+        "radius_m": 0.15,
+        "mass_kg": 3.8,
+        "mass_ug": "3800000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "pile-10",
+        "kind": "wood",
+        "position_m": [
+          3.2,
+          6.0
+        ],
+        "radius_m": 0.15,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "pile-11",
+        "kind": "fiber",
+        "position_m": [
+          0.8,
+          6.0
+        ],
+        "radius_m": 0.15,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "crafted-12",
+        "kind": "tool",
+        "position_m": [
+          7.2,
+          3.4
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 0.7,
+        "mass_ug": "700000000",
+        "recipe_id": "crude_axe",
+        "owner_id": "agent-1",
+        "work_s": 0.0,
+        "durability": 6,
+        "composition_ug": {
+          "fiber": "50000000",
+          "stone": "200000000",
+          "wood": "450000000"
+        },
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "pile-13",
+        "kind": "wood",
+        "position_m": [
+          7.2,
+          2.0
+        ],
+        "radius_m": 0.15,
+        "mass_kg": 5.4,
+        "mass_ug": "5400000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "pile-14",
+        "kind": "fiber",
+        "position_m": [
+          6.0,
+          3.2
+        ],
+        "radius_m": 0.15,
+        "mass_kg": 0.8,
+        "mass_ug": "800000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "crafted-16",
+        "kind": "storage_box",
+        "position_m": [
+          6.7,
+          4.3
+        ],
+        "radius_m": 0.5,
+        "mass_kg": 0.8,
+        "mass_ug": "800000000",
+        "recipe_id": "storage_box",
+        "owner_id": "agent-1",
+        "work_s": 8.0,
+        "durability": 0,
+        "composition_ug": {
+          "plank": "800000000"
+        },
+        "inventory_ug": {
+          "wood_offcut": "0"
+        }
+      }
+    ],
+    "outstanding_actions": [],
+    "material_totals_ug": {
+      "fiber": "850000000",
+      "food": "8000000000",
+      "fuel_X": "0",
+      "inert_material": "32000000000",
+      "oxygen": "0",
+      "plank": "800000000",
+      "product_P": "0",
+      "stone": "4000000000",
+      "tree": "10300000000",
+      "water": "16000000000",
+      "wood": "5850000000",
+      "wood_offcut": "200000000"
+    },
+    "event_counts": {
+      "action_accepted": 21,
+      "action_completed": 21,
+      "crafting_effect": 6,
+      "mass_transfer": 6,
+      "tick": 278,
+      "tool_wear": 2
+    },
+    "solar_input_j": 716.8034236365428,
+    "environment_energy_j": 716.8034236365428,
+    "operator_energy_input_j": 0.0,
+    "operator_sources_ug": {
+      "food": 0,
+      "fuel_X": 0,
+      "inert_material": 0,
+      "oxygen": 0,
+      "product_P": 0,
+      "stone": 0,
+      "water": 0
+    },
+    "mode": "closed",
+    "hearing_range_m": 6.0,
+    "sunlight_w_m2": 0.4043335083255723,
+    "scripted": false,
+    "next_script_tick": "0",
+    "bodies_enabled": true,
+    "initial_mass_ug": {
+      "food": 8000000000,
+      "fuel_X": 0,
+      "inert_material": 32000000000,
+      "oxygen": 0,
+      "product_P": 0,
+      "stone": 4000000000,
+      "tree": 18000000000,
+      "water": 16000000000
+    },
+    "boundary_sources_ug": {
+      "food": 0,
+      "fuel_X": 0,
+      "inert_material": 0,
+      "oxygen": 0,
+      "product_P": 0,
+      "stone": 0,
+      "tree": 0,
+      "water": 0
+    },
+    "config_hash": "c654d2736a7667d1cd611e2a72f56ccbc34500e8dc207c77c18c7633259c8fd9",
+    "state_hash": "4598b7d2715d4615bc7436609f5a1a0556a6da536d311e8023137719135a01d1",
+    "parent_branch_id": null,
+    "interventions": 0,
+    "retained_events": 334,
+    "recorded_decisions": 21,
+    "cognitive_hash": "58096e4f2dc4f9a7979cabe31dad6aa350e194eed30a22ce17dd703ef77fb2e3",
+    "cognition_calls": 0,
+    "episodes": 21
+  },
+  "receipts": [
+    {
+      "request": {
+        "schema_version": 1,
+        "run_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+        "agent_id": "agent-1",
+        "request_id": "c-move-0-0",
+        "observation_version": "0",
+        "action_type": "move",
+        "target_ids": [],
+        "parameters": {
+          "x_m": 2,
+          "y_m": 5
+        },
+        "requested_duration": 3.0
+      },
+      "submitted": {
+        "schema_version": 1,
+        "request_id": "c-move-0-0",
+        "agent_id": "agent-1",
+        "status": "accepted",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "0",
+        "completed_tick": "0",
+        "observation_version": "0",
+        "event_refs": [
+          "1"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      },
+      "terminal": {
+        "schema_version": 1,
+        "request_id": "c-move-0-0",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "0",
+        "completed_tick": "10",
+        "observation_version": "10",
+        "event_refs": [
+          "1",
+          "11"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "run_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+        "agent_id": "agent-1",
+        "request_id": "c-harvest_branch-16-1",
+        "observation_version": "16",
+        "action_type": "harvest_branch",
+        "target_ids": [
+          "tree-1"
+        ],
+        "parameters": {
+          "mass_kg": 0.5
+        },
+        "requested_duration": 1
+      },
+      "submitted": {
+        "schema_version": 1,
+        "request_id": "c-harvest_branch-16-1",
+        "agent_id": "agent-1",
+        "status": "accepted",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "16",
+        "completed_tick": "0",
+        "observation_version": "16",
+        "event_refs": [
+          "19"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      },
+      "terminal": {
+        "schema_version": 1,
+        "request_id": "c-harvest_branch-16-1",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "16",
+        "completed_tick": "21",
+        "observation_version": "21",
+        "event_refs": [
+          "19",
+          "24",
+          "25"
+        ],
+        "observable_effects": {
+          "description": "wood_ug=450000000:fiber_ug=50000000"
+        }
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "run_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+        "agent_id": "agent-1",
+        "request_id": "c-move-22-2",
+        "observation_version": "22",
+        "action_type": "move",
+        "target_ids": [],
+        "parameters": {
+          "x_m": 2.5,
+          "y_m": 4.8
+        },
+        "requested_duration": 1.5385164807134504
+      },
+      "submitted": {
+        "schema_version": 1,
+        "request_id": "c-move-22-2",
+        "agent_id": "agent-1",
+        "status": "accepted",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "22",
+        "completed_tick": "0",
+        "observation_version": "22",
+        "event_refs": [
+          "28"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      },
+      "terminal": {
+        "schema_version": 1,
+        "request_id": "c-move-22-2",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "22",
+        "completed_tick": "25",
+        "observation_version": "25",
+        "event_refs": [
+          "28",
+          "31"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "run_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+        "agent_id": "agent-1",
+        "request_id": "c-collect_wood-31-3",
+        "observation_version": "31",
+        "action_type": "collect_wood",
+        "target_ids": [
+          "pile-10"
+        ],
+        "parameters": {
+          "material": "wood",
+          "mass_kg": 0.45
+        },
+        "requested_duration": 1
+      },
+      "submitted": {
+        "schema_version": 1,
+        "request_id": "c-collect_wood-31-3",
+        "agent_id": "agent-1",
+        "status": "accepted",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "31",
+        "completed_tick": "0",
+        "observation_version": "31",
+        "event_refs": [
+          "39"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      },
+      "terminal": {
+        "schema_version": 1,
+        "request_id": "c-collect_wood-31-3",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "31",
+        "completed_tick": "36",
+        "observation_version": "36",
+        "event_refs": [
+          "39",
+          "44",
+          "45"
+        ],
+        "observable_effects": {
+          "description": "collected:wood:450000000ug"
+        }
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "run_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+        "agent_id": "agent-1",
+        "request_id": "c-move-37-4",
+        "observation_version": "37",
+        "action_type": "move",
+        "target_ids": [],
+        "parameters": {
+          "x_m": 1.2,
+          "y_m": 4.8
+        },
+        "requested_duration": 2.3
+      },
+      "submitted": {
+        "schema_version": 1,
+        "request_id": "c-move-37-4",
+        "agent_id": "agent-1",
+        "status": "accepted",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "37",
+        "completed_tick": "0",
+        "observation_version": "37",
+        "event_refs": [
+          "48"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      },
+      "terminal": {
+        "schema_version": 1,
+        "request_id": "c-move-37-4",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "37",
+        "completed_tick": "44",
+        "observation_version": "44",
+        "event_refs": [
+          "48",
+          "55"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "run_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+        "agent_id": "agent-1",
+        "request_id": "c-collect_wood-50-5",
+        "observation_version": "50",
+        "action_type": "collect_wood",
+        "target_ids": [
+          "pile-11"
+        ],
+        "parameters": {
+          "material": "fiber",
+          "mass_kg": 0.05
+        },
+        "requested_duration": 1
+      },
+      "submitted": {
+        "schema_version": 1,
+        "request_id": "c-collect_wood-50-5",
+        "agent_id": "agent-1",
+        "status": "accepted",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "50",
+        "completed_tick": "0",
+        "observation_version": "50",
+        "event_refs": [
+          "63"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      },
+      "terminal": {
+        "schema_version": 1,
+        "request_id": "c-collect_wood-50-5",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "50",
+        "completed_tick": "55",
+        "observation_version": "55",
+        "event_refs": [
+          "63",
+          "68",
+          "69"
+        ],
+        "observable_effects": {
+          "description": "collected:fiber:50000000ug"
+        }
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "run_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+        "agent_id": "agent-1",
+        "request_id": "c-move-56-6",
+        "observation_version": "56",
+        "action_type": "move",
+        "target_ids": [],
+        "parameters": {
+          "x_m": 1.2,
+          "y_m": 2.6
+        },
+        "requested_duration": 3.1999999999999997
+      },
+      "submitted": {
+        "schema_version": 1,
+        "request_id": "c-move-56-6",
+        "agent_id": "agent-1",
+        "status": "accepted",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "56",
+        "completed_tick": "0",
+        "observation_version": "56",
+        "event_refs": [
+          "72"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      },
+      "terminal": {
+        "schema_version": 1,
+        "request_id": "c-move-56-6",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "56",
+        "completed_tick": "67",
+        "observation_version": "67",
+        "event_refs": [
+          "72",
+          "83"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "run_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+        "agent_id": "agent-1",
+        "request_id": "c-move-73-7",
+        "observation_version": "73",
+        "action_type": "move",
+        "target_ids": [],
+        "parameters": {
+          "x_m": 4.5,
+          "y_m": 2.7
+        },
+        "requested_duration": 4.301514803843835
+      },
+      "submitted": {
+        "schema_version": 1,
+        "request_id": "c-move-73-7",
+        "agent_id": "agent-1",
+        "status": "accepted",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "73",
+        "completed_tick": "0",
+        "observation_version": "73",
+        "event_refs": [
+          "91"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      },
+      "terminal": {
+        "schema_version": 1,
+        "request_id": "c-move-73-7",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "73",
+        "completed_tick": "90",
+        "observation_version": "90",
+        "event_refs": [
+          "91",
+          "108"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "run_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+        "agent_id": "agent-1",
+        "request_id": "c-collect_wood-96-8",
+        "observation_version": "96",
+        "action_type": "collect_wood",
+        "target_ids": [
+          "resource-4"
+        ],
+        "parameters": {
+          "material": "stone",
+          "mass_kg": 0.2
+        },
+        "requested_duration": 1
+      },
+      "submitted": {
+        "schema_version": 1,
+        "request_id": "c-collect_wood-96-8",
+        "agent_id": "agent-1",
+        "status": "accepted",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "96",
+        "completed_tick": "0",
+        "observation_version": "96",
+        "event_refs": [
+          "116"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      },
+      "terminal": {
+        "schema_version": 1,
+        "request_id": "c-collect_wood-96-8",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "96",
+        "completed_tick": "101",
+        "observation_version": "101",
+        "event_refs": [
+          "116",
+          "121",
+          "122"
+        ],
+        "observable_effects": {
+          "description": "collected:stone:200000000ug"
+        }
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "run_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+        "agent_id": "agent-1",
+        "request_id": "c-craft-102-9",
+        "observation_version": "102",
+        "action_type": "craft",
+        "target_ids": [],
+        "parameters": {
+          "recipe_id": "crude_axe"
+        },
+        "requested_duration": 4
+      },
+      "submitted": {
+        "schema_version": 1,
+        "request_id": "c-craft-102-9",
+        "agent_id": "agent-1",
+        "status": "accepted",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "102",
+        "completed_tick": "0",
+        "observation_version": "102",
+        "event_refs": [
+          "125"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      },
+      "terminal": {
+        "schema_version": 1,
+        "request_id": "c-craft-102-9",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "102",
+        "completed_tick": "122",
+        "observation_version": "122",
+        "event_refs": [
+          "125",
+          "145",
+          "146"
+        ],
+        "observable_effects": {
+          "description": "recipe=crude_axe:entity=crafted-12"
+        }
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "run_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+        "agent_id": "agent-1",
+        "request_id": "c-move-123-10",
+        "observation_version": "123",
+        "action_type": "move",
+        "target_ids": [],
+        "parameters": {
+          "x_m": 5.5,
+          "y_m": 3
+        },
+        "requested_duration": 2.044030650891055
+      },
+      "submitted": {
+        "schema_version": 1,
+        "request_id": "c-move-123-10",
+        "agent_id": "agent-1",
+        "status": "accepted",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "123",
+        "completed_tick": "0",
+        "observation_version": "123",
+        "event_refs": [
+          "149"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      },
+      "terminal": {
+        "schema_version": 1,
+        "request_id": "c-move-123-10",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "123",
+        "completed_tick": "129",
+        "observation_version": "129",
+        "event_refs": [
+          "149",
+          "155"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "run_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+        "agent_id": "agent-1",
+        "request_id": "c-fell_tree-135-11",
+        "observation_version": "135",
+        "action_type": "fell_tree",
+        "target_ids": [
+          "tree-2"
+        ],
+        "parameters": {
+          "tool_id": "crafted-12"
+        },
+        "requested_duration": 5
+      },
+      "submitted": {
+        "schema_version": 1,
+        "request_id": "c-fell_tree-135-11",
+        "agent_id": "agent-1",
+        "status": "accepted",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "135",
+        "completed_tick": "0",
+        "observation_version": "135",
+        "event_refs": [
+          "163"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      },
+      "terminal": {
+        "schema_version": 1,
+        "request_id": "c-fell_tree-135-11",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "135",
+        "completed_tick": "160",
+        "observation_version": "160",
+        "event_refs": [
+          "163",
+          "189",
+          "190"
+        ],
+        "observable_effects": {
+          "description": "wood_ug=6400000000:fiber_ug=800000000"
+        }
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "run_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+        "agent_id": "agent-1",
+        "request_id": "c-move-161-12",
+        "observation_version": "161",
+        "action_type": "move",
+        "target_ids": [],
+        "parameters": {
+          "x_m": 5.5,
+          "y_m": 3.7
+        },
+        "requested_duration": 1.7000000000000002
+      },
+      "submitted": {
+        "schema_version": 1,
+        "request_id": "c-move-161-12",
+        "agent_id": "agent-1",
+        "status": "accepted",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "161",
+        "completed_tick": "0",
+        "observation_version": "161",
+        "event_refs": [
+          "193"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      },
+      "terminal": {
+        "schema_version": 1,
+        "request_id": "c-move-161-12",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "161",
+        "completed_tick": "165",
+        "observation_version": "165",
+        "event_refs": [
+          "193",
+          "197"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "run_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+        "agent_id": "agent-1",
+        "request_id": "c-move-171-13",
+        "observation_version": "171",
+        "action_type": "move",
+        "target_ids": [],
+        "parameters": {
+          "x_m": 6.7,
+          "y_m": 3.7
+        },
+        "requested_duration": 2.2
+      },
+      "submitted": {
+        "schema_version": 1,
+        "request_id": "c-move-171-13",
+        "agent_id": "agent-1",
+        "status": "accepted",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "171",
+        "completed_tick": "0",
+        "observation_version": "171",
+        "event_refs": [
+          "205"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      },
+      "terminal": {
+        "schema_version": 1,
+        "request_id": "c-move-171-13",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "171",
+        "completed_tick": "177",
+        "observation_version": "177",
+        "event_refs": [
+          "205",
+          "211"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "run_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+        "agent_id": "agent-1",
+        "request_id": "c-move-183-14",
+        "observation_version": "183",
+        "action_type": "move",
+        "target_ids": [],
+        "parameters": {
+          "x_m": 7.2,
+          "y_m": 3.4
+        },
+        "requested_duration": 1.5830951894845302
+      },
+      "submitted": {
+        "schema_version": 1,
+        "request_id": "c-move-183-14",
+        "agent_id": "agent-1",
+        "status": "accepted",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "183",
+        "completed_tick": "0",
+        "observation_version": "183",
+        "event_refs": [
+          "219"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      },
+      "terminal": {
+        "schema_version": 1,
+        "request_id": "c-move-183-14",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "183",
+        "completed_tick": "186",
+        "observation_version": "186",
+        "event_refs": [
+          "219",
+          "222"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "run_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+        "agent_id": "agent-1",
+        "request_id": "c-collect_wood-192-15",
+        "observation_version": "192",
+        "action_type": "collect_wood",
+        "target_ids": [
+          "pile-13"
+        ],
+        "parameters": {
+          "material": "wood",
+          "mass_kg": 1
+        },
+        "requested_duration": 1
+      },
+      "submitted": {
+        "schema_version": 1,
+        "request_id": "c-collect_wood-192-15",
+        "agent_id": "agent-1",
+        "status": "accepted",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "192",
+        "completed_tick": "0",
+        "observation_version": "192",
+        "event_refs": [
+          "230"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      },
+      "terminal": {
+        "schema_version": 1,
+        "request_id": "c-collect_wood-192-15",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "192",
+        "completed_tick": "197",
+        "observation_version": "197",
+        "event_refs": [
+          "230",
+          "235",
+          "236"
+        ],
+        "observable_effects": {
+          "description": "collected:wood:1000000000ug"
+        }
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "run_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+        "agent_id": "agent-1",
+        "request_id": "c-craft-198-16",
+        "observation_version": "198",
+        "action_type": "craft",
+        "target_ids": [],
+        "parameters": {
+          "recipe_id": "planks",
+          "tool_id": "crafted-12"
+        },
+        "requested_duration": 3
+      },
+      "submitted": {
+        "schema_version": 1,
+        "request_id": "c-craft-198-16",
+        "agent_id": "agent-1",
+        "status": "accepted",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "198",
+        "completed_tick": "0",
+        "observation_version": "198",
+        "event_refs": [
+          "239"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      },
+      "terminal": {
+        "schema_version": 1,
+        "request_id": "c-craft-198-16",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "198",
+        "completed_tick": "213",
+        "observation_version": "213",
+        "event_refs": [
+          "239",
+          "255",
+          "256"
+        ],
+        "observable_effects": {
+          "description": "recipe=planks:carried_outputs_and_waste"
+        }
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "run_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+        "agent_id": "agent-1",
+        "request_id": "c-begin_construction-214-17",
+        "observation_version": "214",
+        "action_type": "begin_construction",
+        "target_ids": [],
+        "parameters": {
+          "recipe_id": "storage_box",
+          "x_m": 6.7,
+          "y_m": 4.3
+        },
+        "requested_duration": 1
+      },
+      "submitted": {
+        "schema_version": 1,
+        "request_id": "c-begin_construction-214-17",
+        "agent_id": "agent-1",
+        "status": "accepted",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "214",
+        "completed_tick": "0",
+        "observation_version": "214",
+        "event_refs": [
+          "259"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      },
+      "terminal": {
+        "schema_version": 1,
+        "request_id": "c-begin_construction-214-17",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "214",
+        "completed_tick": "219",
+        "observation_version": "219",
+        "event_refs": [
+          "259",
+          "264",
+          "265"
+        ],
+        "observable_effects": {
+          "description": "recipe=storage_box:entity=crafted-16"
+        }
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "run_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+        "agent_id": "agent-1",
+        "request_id": "c-work_construction-220-18",
+        "observation_version": "220",
+        "action_type": "work_construction",
+        "target_ids": [
+          "crafted-16"
+        ],
+        "parameters": {},
+        "requested_duration": 8
+      },
+      "submitted": {
+        "schema_version": 1,
+        "request_id": "c-work_construction-220-18",
+        "agent_id": "agent-1",
+        "status": "accepted",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "220",
+        "completed_tick": "0",
+        "observation_version": "220",
+        "event_refs": [
+          "268"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "run_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+        "agent_id": "agent-1",
+        "request_id": "c-store_item-266-19",
+        "observation_version": "266",
+        "action_type": "store_item",
+        "target_ids": [
+          "crafted-16"
+        ],
+        "parameters": {
+          "material": "wood_offcut",
+          "mass_kg": 0.2
+        },
+        "requested_duration": 1
+      },
+      "submitted": {
+        "schema_version": 1,
+        "request_id": "c-store_item-266-19",
+        "agent_id": "agent-1",
+        "status": "accepted",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "266",
+        "completed_tick": "0",
+        "observation_version": "266",
+        "event_refs": [
+          "317"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      },
+      "terminal": {
+        "schema_version": 1,
+        "request_id": "c-store_item-266-19",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "266",
+        "completed_tick": "271",
+        "observation_version": "271",
+        "event_refs": [
+          "317",
+          "322",
+          "323"
+        ],
+        "observable_effects": {
+          "description": "wood_offcut:200000000ug:store_item"
+        }
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "run_id": "1a58c798-e8de-4f52-9c62-e2b60db0fe20",
+        "agent_id": "agent-1",
+        "request_id": "c-take_item-272-20",
+        "observation_version": "272",
+        "action_type": "take_item",
+        "target_ids": [
+          "crafted-16"
+        ],
+        "parameters": {
+          "material": "wood_offcut",
+          "mass_kg": 0.2
+        },
+        "requested_duration": 1
+      },
+      "submitted": {
+        "schema_version": 1,
+        "request_id": "c-take_item-272-20",
+        "agent_id": "agent-1",
+        "status": "accepted",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "272",
+        "completed_tick": "0",
+        "observation_version": "272",
+        "event_refs": [
+          "326"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      },
+      "terminal": {
+        "schema_version": 1,
+        "request_id": "c-take_item-272-20",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "272",
+        "completed_tick": "277",
+        "observation_version": "277",
+        "event_refs": [
+          "326",
+          "331",
+          "332"
+        ],
+        "observable_effects": {
+          "description": "wood_offcut:200000000ug:take_item"
+        }
+      }
+    }
+  ],
+  "stored_contents_ug": {
+    "wood_offcut": "200000000"
+  },
+  "fresh_process_resume_matches": true,
+  "child_returncode": 0,
+  "child_wall_s": 0.8386128000056488,
+  "simulated_s": 55.6,
+  "wall_s": 8.059656199999154,
+  "replay": {
+    "replay_matches": true,
+    "tick": "278",
+    "state_hash": "4598b7d2715d4615bc7436609f5a1a0556a6da536d311e8023137719135a01d1"
+  },
+  "learned_planning": false,
+  "model_calls": 0,
+  "native_events": [
+    {
+      "agent_id": "agent-1",
+      "detail": "move",
+      "request_id": "c-move-0-0",
+      "schema_version": 1,
+      "seq": "1",
+      "tick": "0",
+      "type": "action_accepted"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "2",
+      "tick": "1",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "3",
+      "tick": "2",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "4",
+      "tick": "3",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "5",
+      "tick": "4",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "6",
+      "tick": "5",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "7",
+      "tick": "6",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "8",
+      "tick": "7",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "9",
+      "tick": "8",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "10",
+      "tick": "9",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "",
+      "request_id": "c-move-0-0",
+      "schema_version": 1,
+      "seq": "11",
+      "tick": "10",
+      "type": "action_completed"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "12",
+      "tick": "10",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "13",
+      "tick": "11",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "14",
+      "tick": "12",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "15",
+      "tick": "13",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "16",
+      "tick": "14",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "17",
+      "tick": "15",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "18",
+      "tick": "16",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "harvest_branch",
+      "request_id": "c-harvest_branch-16-1",
+      "schema_version": 1,
+      "seq": "19",
+      "tick": "16",
+      "type": "action_accepted"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "20",
+      "tick": "17",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "21",
+      "tick": "18",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "22",
+      "tick": "19",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "23",
+      "tick": "20",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "harvest_branch:wood=450000000:fiber=50000000",
+      "request_id": "c-harvest_branch-16-1",
+      "schema_version": 1,
+      "seq": "24",
+      "tick": "21",
+      "type": "mass_transfer"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "",
+      "request_id": "c-harvest_branch-16-1",
+      "schema_version": 1,
+      "seq": "25",
+      "tick": "21",
+      "type": "action_completed"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "26",
+      "tick": "21",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "27",
+      "tick": "22",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "move",
+      "request_id": "c-move-22-2",
+      "schema_version": 1,
+      "seq": "28",
+      "tick": "22",
+      "type": "action_accepted"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "29",
+      "tick": "23",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "30",
+      "tick": "24",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "",
+      "request_id": "c-move-22-2",
+      "schema_version": 1,
+      "seq": "31",
+      "tick": "25",
+      "type": "action_completed"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "32",
+      "tick": "25",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "33",
+      "tick": "26",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "34",
+      "tick": "27",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "35",
+      "tick": "28",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "36",
+      "tick": "29",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "37",
+      "tick": "30",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "38",
+      "tick": "31",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "collect_wood",
+      "request_id": "c-collect_wood-31-3",
+      "schema_version": 1,
+      "seq": "39",
+      "tick": "31",
+      "type": "action_accepted"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "40",
+      "tick": "32",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "41",
+      "tick": "33",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "42",
+      "tick": "34",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "43",
+      "tick": "35",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "collect_wood:wood:450000000ug",
+      "request_id": "c-collect_wood-31-3",
+      "schema_version": 1,
+      "seq": "44",
+      "tick": "36",
+      "type": "mass_transfer"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "",
+      "request_id": "c-collect_wood-31-3",
+      "schema_version": 1,
+      "seq": "45",
+      "tick": "36",
+      "type": "action_completed"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "46",
+      "tick": "36",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "47",
+      "tick": "37",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "move",
+      "request_id": "c-move-37-4",
+      "schema_version": 1,
+      "seq": "48",
+      "tick": "37",
+      "type": "action_accepted"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "49",
+      "tick": "38",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "50",
+      "tick": "39",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "51",
+      "tick": "40",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "52",
+      "tick": "41",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "53",
+      "tick": "42",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "54",
+      "tick": "43",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "",
+      "request_id": "c-move-37-4",
+      "schema_version": 1,
+      "seq": "55",
+      "tick": "44",
+      "type": "action_completed"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "56",
+      "tick": "44",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "57",
+      "tick": "45",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "58",
+      "tick": "46",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "59",
+      "tick": "47",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "60",
+      "tick": "48",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "61",
+      "tick": "49",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "62",
+      "tick": "50",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "collect_wood",
+      "request_id": "c-collect_wood-50-5",
+      "schema_version": 1,
+      "seq": "63",
+      "tick": "50",
+      "type": "action_accepted"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "64",
+      "tick": "51",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "65",
+      "tick": "52",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "66",
+      "tick": "53",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "67",
+      "tick": "54",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "collect_wood:fiber:50000000ug",
+      "request_id": "c-collect_wood-50-5",
+      "schema_version": 1,
+      "seq": "68",
+      "tick": "55",
+      "type": "mass_transfer"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "",
+      "request_id": "c-collect_wood-50-5",
+      "schema_version": 1,
+      "seq": "69",
+      "tick": "55",
+      "type": "action_completed"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "70",
+      "tick": "55",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "71",
+      "tick": "56",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "move",
+      "request_id": "c-move-56-6",
+      "schema_version": 1,
+      "seq": "72",
+      "tick": "56",
+      "type": "action_accepted"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "73",
+      "tick": "57",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "74",
+      "tick": "58",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "75",
+      "tick": "59",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "76",
+      "tick": "60",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "77",
+      "tick": "61",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "78",
+      "tick": "62",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "79",
+      "tick": "63",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "80",
+      "tick": "64",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "81",
+      "tick": "65",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "82",
+      "tick": "66",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "",
+      "request_id": "c-move-56-6",
+      "schema_version": 1,
+      "seq": "83",
+      "tick": "67",
+      "type": "action_completed"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "84",
+      "tick": "67",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "85",
+      "tick": "68",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "86",
+      "tick": "69",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "87",
+      "tick": "70",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "88",
+      "tick": "71",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "89",
+      "tick": "72",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "90",
+      "tick": "73",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "move",
+      "request_id": "c-move-73-7",
+      "schema_version": 1,
+      "seq": "91",
+      "tick": "73",
+      "type": "action_accepted"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "92",
+      "tick": "74",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "93",
+      "tick": "75",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "94",
+      "tick": "76",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "95",
+      "tick": "77",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "96",
+      "tick": "78",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "97",
+      "tick": "79",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "98",
+      "tick": "80",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "99",
+      "tick": "81",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "100",
+      "tick": "82",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "101",
+      "tick": "83",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "102",
+      "tick": "84",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "103",
+      "tick": "85",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "104",
+      "tick": "86",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "105",
+      "tick": "87",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "106",
+      "tick": "88",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "107",
+      "tick": "89",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "",
+      "request_id": "c-move-73-7",
+      "schema_version": 1,
+      "seq": "108",
+      "tick": "90",
+      "type": "action_completed"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "109",
+      "tick": "90",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "110",
+      "tick": "91",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "111",
+      "tick": "92",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "112",
+      "tick": "93",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "113",
+      "tick": "94",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "114",
+      "tick": "95",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "115",
+      "tick": "96",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "collect_wood",
+      "request_id": "c-collect_wood-96-8",
+      "schema_version": 1,
+      "seq": "116",
+      "tick": "96",
+      "type": "action_accepted"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "117",
+      "tick": "97",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "118",
+      "tick": "98",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "119",
+      "tick": "99",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "120",
+      "tick": "100",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "collect_wood:stone:200000000ug",
+      "request_id": "c-collect_wood-96-8",
+      "schema_version": 1,
+      "seq": "121",
+      "tick": "101",
+      "type": "mass_transfer"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "",
+      "request_id": "c-collect_wood-96-8",
+      "schema_version": 1,
+      "seq": "122",
+      "tick": "101",
+      "type": "action_completed"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "123",
+      "tick": "101",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "124",
+      "tick": "102",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "craft",
+      "request_id": "c-craft-102-9",
+      "schema_version": 1,
+      "seq": "125",
+      "tick": "102",
+      "type": "action_accepted"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "126",
+      "tick": "103",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "127",
+      "tick": "104",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "128",
+      "tick": "105",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "129",
+      "tick": "106",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "130",
+      "tick": "107",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "131",
+      "tick": "108",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "132",
+      "tick": "109",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "133",
+      "tick": "110",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "134",
+      "tick": "111",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "135",
+      "tick": "112",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "136",
+      "tick": "113",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "137",
+      "tick": "114",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "138",
+      "tick": "115",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "139",
+      "tick": "116",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "140",
+      "tick": "117",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "141",
+      "tick": "118",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "142",
+      "tick": "119",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "143",
+      "tick": "120",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "144",
+      "tick": "121",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "recipe=crude_axe:entity=crafted-12",
+      "request_id": "c-craft-102-9",
+      "schema_version": 1,
+      "seq": "145",
+      "tick": "122",
+      "type": "crafting_effect"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "",
+      "request_id": "c-craft-102-9",
+      "schema_version": 1,
+      "seq": "146",
+      "tick": "122",
+      "type": "action_completed"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "147",
+      "tick": "122",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "148",
+      "tick": "123",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "move",
+      "request_id": "c-move-123-10",
+      "schema_version": 1,
+      "seq": "149",
+      "tick": "123",
+      "type": "action_accepted"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "150",
+      "tick": "124",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "151",
+      "tick": "125",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "152",
+      "tick": "126",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "153",
+      "tick": "127",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "154",
+      "tick": "128",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "",
+      "request_id": "c-move-123-10",
+      "schema_version": 1,
+      "seq": "155",
+      "tick": "129",
+      "type": "action_completed"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "156",
+      "tick": "129",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "157",
+      "tick": "130",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "158",
+      "tick": "131",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "159",
+      "tick": "132",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "160",
+      "tick": "133",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "161",
+      "tick": "134",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "162",
+      "tick": "135",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "fell_tree",
+      "request_id": "c-fell_tree-135-11",
+      "schema_version": 1,
+      "seq": "163",
+      "tick": "135",
+      "type": "action_accepted"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "164",
+      "tick": "136",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "165",
+      "tick": "137",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "166",
+      "tick": "138",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "167",
+      "tick": "139",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "168",
+      "tick": "140",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "169",
+      "tick": "141",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "170",
+      "tick": "142",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "171",
+      "tick": "143",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "172",
+      "tick": "144",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "173",
+      "tick": "145",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "174",
+      "tick": "146",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "175",
+      "tick": "147",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "176",
+      "tick": "148",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "177",
+      "tick": "149",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "178",
+      "tick": "150",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "179",
+      "tick": "151",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "180",
+      "tick": "152",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "181",
+      "tick": "153",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "182",
+      "tick": "154",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "183",
+      "tick": "155",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "184",
+      "tick": "156",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "185",
+      "tick": "157",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "186",
+      "tick": "158",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "187",
+      "tick": "159",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "crafted-12:7",
+      "request_id": "c-fell_tree-135-11",
+      "schema_version": 1,
+      "seq": "188",
+      "tick": "160",
+      "type": "tool_wear"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "fell_tree:wood=6400000000:fiber=800000000",
+      "request_id": "c-fell_tree-135-11",
+      "schema_version": 1,
+      "seq": "189",
+      "tick": "160",
+      "type": "mass_transfer"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "",
+      "request_id": "c-fell_tree-135-11",
+      "schema_version": 1,
+      "seq": "190",
+      "tick": "160",
+      "type": "action_completed"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "191",
+      "tick": "160",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "192",
+      "tick": "161",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "move",
+      "request_id": "c-move-161-12",
+      "schema_version": 1,
+      "seq": "193",
+      "tick": "161",
+      "type": "action_accepted"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "194",
+      "tick": "162",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "195",
+      "tick": "163",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "196",
+      "tick": "164",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "",
+      "request_id": "c-move-161-12",
+      "schema_version": 1,
+      "seq": "197",
+      "tick": "165",
+      "type": "action_completed"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "198",
+      "tick": "165",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "199",
+      "tick": "166",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "200",
+      "tick": "167",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "201",
+      "tick": "168",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "202",
+      "tick": "169",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "203",
+      "tick": "170",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "204",
+      "tick": "171",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "move",
+      "request_id": "c-move-171-13",
+      "schema_version": 1,
+      "seq": "205",
+      "tick": "171",
+      "type": "action_accepted"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "206",
+      "tick": "172",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "207",
+      "tick": "173",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "208",
+      "tick": "174",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "209",
+      "tick": "175",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "210",
+      "tick": "176",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "",
+      "request_id": "c-move-171-13",
+      "schema_version": 1,
+      "seq": "211",
+      "tick": "177",
+      "type": "action_completed"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "212",
+      "tick": "177",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "213",
+      "tick": "178",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "214",
+      "tick": "179",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "215",
+      "tick": "180",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "216",
+      "tick": "181",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "217",
+      "tick": "182",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "218",
+      "tick": "183",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "move",
+      "request_id": "c-move-183-14",
+      "schema_version": 1,
+      "seq": "219",
+      "tick": "183",
+      "type": "action_accepted"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "220",
+      "tick": "184",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "221",
+      "tick": "185",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "",
+      "request_id": "c-move-183-14",
+      "schema_version": 1,
+      "seq": "222",
+      "tick": "186",
+      "type": "action_completed"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "223",
+      "tick": "186",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "224",
+      "tick": "187",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "225",
+      "tick": "188",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "226",
+      "tick": "189",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "227",
+      "tick": "190",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "228",
+      "tick": "191",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "229",
+      "tick": "192",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "collect_wood",
+      "request_id": "c-collect_wood-192-15",
+      "schema_version": 1,
+      "seq": "230",
+      "tick": "192",
+      "type": "action_accepted"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "231",
+      "tick": "193",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "232",
+      "tick": "194",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "233",
+      "tick": "195",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "234",
+      "tick": "196",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "collect_wood:wood:1000000000ug",
+      "request_id": "c-collect_wood-192-15",
+      "schema_version": 1,
+      "seq": "235",
+      "tick": "197",
+      "type": "mass_transfer"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "",
+      "request_id": "c-collect_wood-192-15",
+      "schema_version": 1,
+      "seq": "236",
+      "tick": "197",
+      "type": "action_completed"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "237",
+      "tick": "197",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "238",
+      "tick": "198",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "craft",
+      "request_id": "c-craft-198-16",
+      "schema_version": 1,
+      "seq": "239",
+      "tick": "198",
+      "type": "action_accepted"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "240",
+      "tick": "199",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "241",
+      "tick": "200",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "242",
+      "tick": "201",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "243",
+      "tick": "202",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "244",
+      "tick": "203",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "245",
+      "tick": "204",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "246",
+      "tick": "205",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "247",
+      "tick": "206",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "248",
+      "tick": "207",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "249",
+      "tick": "208",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "250",
+      "tick": "209",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "251",
+      "tick": "210",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "252",
+      "tick": "211",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "253",
+      "tick": "212",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "crafted-12:6",
+      "request_id": "c-craft-198-16",
+      "schema_version": 1,
+      "seq": "254",
+      "tick": "213",
+      "type": "tool_wear"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "recipe=planks:carried_outputs_and_waste",
+      "request_id": "c-craft-198-16",
+      "schema_version": 1,
+      "seq": "255",
+      "tick": "213",
+      "type": "crafting_effect"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "",
+      "request_id": "c-craft-198-16",
+      "schema_version": 1,
+      "seq": "256",
+      "tick": "213",
+      "type": "action_completed"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "257",
+      "tick": "213",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "258",
+      "tick": "214",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "begin_construction",
+      "request_id": "c-begin_construction-214-17",
+      "schema_version": 1,
+      "seq": "259",
+      "tick": "214",
+      "type": "action_accepted"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "260",
+      "tick": "215",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "261",
+      "tick": "216",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "262",
+      "tick": "217",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "263",
+      "tick": "218",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "recipe=storage_box:entity=crafted-16",
+      "request_id": "c-begin_construction-214-17",
+      "schema_version": 1,
+      "seq": "264",
+      "tick": "219",
+      "type": "crafting_effect"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "",
+      "request_id": "c-begin_construction-214-17",
+      "schema_version": 1,
+      "seq": "265",
+      "tick": "219",
+      "type": "action_completed"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "266",
+      "tick": "219",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "267",
+      "tick": "220",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "work_construction",
+      "request_id": "c-work_construction-220-18",
+      "schema_version": 1,
+      "seq": "268",
+      "tick": "220",
+      "type": "action_accepted"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "269",
+      "tick": "221",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "270",
+      "tick": "222",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "271",
+      "tick": "223",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "272",
+      "tick": "224",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "273",
+      "tick": "225",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "274",
+      "tick": "226",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "275",
+      "tick": "227",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "276",
+      "tick": "228",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "277",
+      "tick": "229",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "278",
+      "tick": "230",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "279",
+      "tick": "231",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "280",
+      "tick": "232",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "281",
+      "tick": "233",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "282",
+      "tick": "234",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "283",
+      "tick": "235",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "284",
+      "tick": "236",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "285",
+      "tick": "237",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "286",
+      "tick": "238",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "287",
+      "tick": "239",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "288",
+      "tick": "240",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "289",
+      "tick": "241",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "290",
+      "tick": "242",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "291",
+      "tick": "243",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "292",
+      "tick": "244",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "293",
+      "tick": "245",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "294",
+      "tick": "246",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "295",
+      "tick": "247",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "296",
+      "tick": "248",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "297",
+      "tick": "249",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "298",
+      "tick": "250",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "299",
+      "tick": "251",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "300",
+      "tick": "252",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "301",
+      "tick": "253",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "302",
+      "tick": "254",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "303",
+      "tick": "255",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "304",
+      "tick": "256",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "305",
+      "tick": "257",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "306",
+      "tick": "258",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "307",
+      "tick": "259",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "site=crafted-16:work_s=8.000000:built=storage_box",
+      "request_id": "c-work_construction-220-18",
+      "schema_version": 1,
+      "seq": "308",
+      "tick": "260",
+      "type": "crafting_effect"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "",
+      "request_id": "c-work_construction-220-18",
+      "schema_version": 1,
+      "seq": "309",
+      "tick": "260",
+      "type": "action_completed"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "310",
+      "tick": "260",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "311",
+      "tick": "261",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "312",
+      "tick": "262",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "313",
+      "tick": "263",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "314",
+      "tick": "264",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "315",
+      "tick": "265",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "316",
+      "tick": "266",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "store_item",
+      "request_id": "c-store_item-266-19",
+      "schema_version": 1,
+      "seq": "317",
+      "tick": "266",
+      "type": "action_accepted"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "318",
+      "tick": "267",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "319",
+      "tick": "268",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "320",
+      "tick": "269",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "321",
+      "tick": "270",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "wood_offcut:200000000ug:store_item",
+      "request_id": "c-store_item-266-19",
+      "schema_version": 1,
+      "seq": "322",
+      "tick": "271",
+      "type": "crafting_effect"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "",
+      "request_id": "c-store_item-266-19",
+      "schema_version": 1,
+      "seq": "323",
+      "tick": "271",
+      "type": "action_completed"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "324",
+      "tick": "271",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "325",
+      "tick": "272",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "take_item",
+      "request_id": "c-take_item-272-20",
+      "schema_version": 1,
+      "seq": "326",
+      "tick": "272",
+      "type": "action_accepted"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "327",
+      "tick": "273",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "328",
+      "tick": "274",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "329",
+      "tick": "275",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "330",
+      "tick": "276",
+      "type": "tick"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "wood_offcut:200000000ug:take_item",
+      "request_id": "c-take_item-272-20",
+      "schema_version": 1,
+      "seq": "331",
+      "tick": "277",
+      "type": "crafting_effect"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "",
+      "request_id": "c-take_item-272-20",
+      "schema_version": 1,
+      "seq": "332",
+      "tick": "277",
+      "type": "action_completed"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "333",
+      "tick": "277",
+      "type": "tick"
+    },
+    {
+      "agent_id": "",
+      "detail": "",
+      "request_id": "",
+      "schema_version": 1,
+      "seq": "334",
+      "tick": "278",
+      "type": "tick"
+    }
+  ]
+}

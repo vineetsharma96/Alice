@@ -17,7 +17,7 @@ def validate(config):
                       "max_output_tokens", "timeout_s", "calls_per_simulated_day"},
         "logging": {"level", "event_retention_count", "max_payload_bytes"},
     }
-    if set(config) - {"agency", "laws", "thermal", "culture", "execution"} != {"schema_version", "seed", "mode", *expected}:
+    if set(config) - {"agency", "laws", "thermal", "culture", "execution", "ecology"} != {"schema_version", "seed", "mode", *expected}:
         raise ValueError("unknown or missing configuration keys")
     if type(config["schema_version"]) is not int or config["schema_version"] != 1:
         raise ValueError("unsupported schema_version")
@@ -62,6 +62,15 @@ def validate(config):
             _number(agency[kind+"_kg"],0,1000,kind+"_kg")
             _number(agency[kind+"_regen_kg_s"],0,.01,kind+"_regen_kg_s")
         _number(agency["tree_growth_kg_s"],0,.01,"tree_growth_kg_s")
+    if "ecology" in config:
+        ecology=config["ecology"]
+        if type(ecology) is not dict or set(ecology)!={"enabled","forage_kg","regeneration_kg_s"}:
+            raise ValueError("unknown or missing ecology fields")
+        if type(ecology["enabled"]) is not bool:raise ValueError("ecology enabled must be boolean")
+        _number(ecology["forage_kg"],0,2,"forage_kg")
+        _number(ecology["regeneration_kg_s"],0,.01,"regeneration_kg_s")
+        if ecology["enabled"] and not config.get("agency",{}).get("bodies_enabled"):
+            raise ValueError("ecology requires bodies")
     if "thermal" in config:
         thermal=config["thermal"]
         if type(thermal) is not dict or set(thermal)!={"enabled","open_boundaries","water_kg","fuel_kg","oxygen_kg","temperature_k"}:

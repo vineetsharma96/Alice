@@ -48,9 +48,15 @@ py::dict entity(const uw::Entity& e,bool inventory=true,bool bodies=false) {
     py::dict d("entity_id"_a=e.id,"kind"_a=e.kind,"position_m"_a=py::make_tuple(e.position.x,e.position.y),
                "radius_m"_a=e.radius,"mass_kg"_a=static_cast<double>(e.mass_ug)/1e9,
                "mass_ug"_a=std::to_string(e.mass_ug));
+    if(e.kind=="animal") {d["stage"]=e.stage;d["alive"]=e.body.alive;d["condition"]=e.body.health>.7?"good":"poor";}
     if(e.kind=="tree")d["stage"]=e.stage,d["health"]=e.health,d["biomass_ug"]=std::to_string(e.biomass_ug);
+    if(!e.recipe_id.empty()) {
+        d["recipe_id"]=e.recipe_id;d["owner_id"]=e.owner_id;d["work_s"]=e.work_s;d["durability"]=e.durability;
+        py::dict parts;for(const auto& [k,v]:e.composition)parts[py::str(k)]=std::to_string(v);d["composition_ug"]=parts;
+    }
+    if(inventory&&e.kind=="actor")d["workmanship"]=e.workmanship;
     if(inventory) {py::dict inv;for(auto&[kind,mass]:e.inventory)inv[py::str(kind)]=std::to_string(mass);d["inventory_ug"]=inv;}
-    if(bodies&&e.kind=="actor") {
+    if(bodies&&(e.kind=="actor"||e.kind=="animal")) {
         d["alive"]=e.body.alive;
         if(inventory)d["body"]=py::dict("hunger"_a=e.body.hunger,"thirst"_a=e.body.thirst,
             "fatigue"_a=e.body.fatigue,"health"_a=e.body.health,"alive"_a=e.body.alive,
@@ -69,6 +75,11 @@ py::dict result(const uw::Result& r) {
 }
 PYBIND11_MODULE(_underworld,m) {
     m.attr("build_id")=UW_BUILD_ID;
+    m.attr("world_format")="UW9";
+    m.def("recipe_registry",[](const std::string& principal){
+        if(principal!="operator")throw py::value_error("UNAUTHORIZED");
+        py::list out;for(const auto& r:uw::recipes())out.append(py::dict("recipe_id"_a=r.id,"kind"_a=r.kind,"inputs_ug"_a=r.inputs,"outputs_ug"_a=r.outputs,"work_s"_a=r.work_s,"axe_required"_a=r.axe,"min_skill"_a=r.skill));return out;
+    },"principal"_a);
     py::class_<BoundWorld>(m,"World")
         .def(py::init<uw::U64,unsigned,double,double,double,uw::U64,bool,std::string,bool,double,double,double,double,bool,double,double>(),
              "seed"_a=20261019,"population"_a=8,"width"_a=64,"height"_a=64,"dt"_a=.1,
@@ -81,6 +92,7 @@ PYBIND11_MODULE(_underworld,m) {
         .def("_configure_branch",[](BoundWorld&w,bool guided,double hearing){w.core.configure_branch(guided,hearing);})
         .def("configure_thermal",[](BoundWorld&w,bool open,double water,double fuel,double oxygen,double temperature){w.core.configure_thermal(open,water,fuel,oxygen,temperature);},
              "open_boundaries"_a=false,"water_kg"_a=.02,"fuel_kg"_a=.02,"oxygen_kg"_a=.04,"temperature_k"_a=293.15)
+        .def("configure_ecology",[](BoundWorld&w,double forage,double rate){w.core.configure_ecology(forage,rate);},"forage_kg"_a=2,"regeneration_kg_s"_a=0)
         .def("configure_culture",[](BoundWorld&w,uw::U64 seed){w.core.configure_culture(seed);},"apparatus_seed"_a)
         .def("intervene",[](BoundWorld&w,py::dict d,const std::string& principal){
             if(principal!="operator")throw py::value_error("UNAUTHORIZED: operator channel required");
@@ -117,8 +129,9 @@ PYBIND11_MODULE(_underworld,m) {
                 auto projected=entity(e,true,w.core.bodies_enabled());
                 if(e.kind=="actor")projected["present"]=!w.core.culture().departed.contains(e.id);
                 entities.append(projected);
-                if(e.kind!="actor"&&e.kind!="rock"&&e.kind!="operator_avatar"&&e.kind!="thermal_cell")masses[e.kind=="book"||e.kind=="object"?"inert_material":e.kind]+=e.mass_ug;
+                if(e.recipe_id.empty()&&e.kind!="actor"&&e.kind!="rock"&&e.kind!="operator_avatar"&&e.kind!="thermal_cell")masses[e.kind=="book"||e.kind=="object"?"inert_material":e.kind]+=e.mass_ug;
                 for(const auto&[kind,mass]:e.inventory)masses[kind]+=mass;
+                for(const auto&[kind,mass]:e.composition)masses[kind]+=mass;
                 if(e.kind=="actor") {masses["food"]+=e.body.food_ingested_ug;masses["water"]+=e.body.water_ingested_ug;}
             }
             for(const auto&[id,p]:w.core.pending())pending.append(py::dict("agent_id"_a=id,"request_id"_a=p.action.request_id,"remaining_ticks"_a=std::to_string(p.remaining)));
@@ -148,7 +161,11 @@ PYBIND11_MODULE(_underworld,m) {
             for(const auto& b:culture.batches)batches.append(py::dict("event_seq"_a=std::to_string(b.seq),"tick"_a=std::to_string(b.tick),"agent"_a=b.agent,"dial"_a=b.dial,"measured_k"_a=b.measured_k,"work_s"_a=b.work_s));
             py::dict cultural("enabled"_a=culture.enabled,"skills"_a=skills,"agreements"_a=agreements,"validated_batches"_a=batches,"departed"_a=std::vector<std::string>(culture.departed.begin(),culture.departed.end()));
             if(culture.enabled)cultural["hidden_apparatus"]=py::dict("seed"_a=std::to_string(culture.apparatus_seed),"target_k"_a=culture.target_k,"dial"_a=culture.dials.at(culture.correct_dial));
-            return py::dict("schema_version"_a=1,"kind"_a="world_snapshot","run_id"_a=w.run_id,"culture"_a=cultural,
+            const auto& eco=w.core.ecology();py::dict animals,freshness;
+            for(const auto& [id,a]:eco.animals)animals[py::str(id)]=py::dict("species"_a=a.species,"mode"_a=a.mode,"age_s"_a=a.age_s,"life_stage"_a=(a.age_s>=60?"adult":"juvenile"),"laying_s"_a=a.laying_s,"food_reserve_ug"_a=std::to_string(a.food),"water_reserve_ug"_a=std::to_string(a.water),"food_metabolized_ug"_a=std::to_string(a.metabolized_food),"water_metabolized_ug"_a=std::to_string(a.metabolized_water),"eggs_laid_ug"_a=std::to_string(a.laid),"familiarity"_a=a.familiarity,"last_feed"_a=a.last_feed,"handler"_a=a.handler,"guide_until"_a=std::to_string(a.guide_until));
+            for(const auto& [key,life]:eco.freshness)freshness[py::str(key.first+":"+key.second)]=life;
+            py::dict ecology("enabled"_a=eco.enabled,"controller_origin"_a="authored_native_ecology_v1","animals"_a=animals,"freshness_s"_a=freshness,"structural_body_initial_ug"_a=std::to_string(eco.body_initial),"food_residue_ug"_a=std::to_string(eco.food_residue),"water_waste_ug"_a=std::to_string(eco.water_waste),"egg_input_ug"_a=std::to_string(eco.egg_input),"eggs_produced_ug"_a=std::to_string(eco.eggs_produced),"forage_regeneration_kg_s"_a=eco.forage_rate);
+            return py::dict("schema_version"_a=1,"kind"_a="world_snapshot","run_id"_a=w.run_id,"culture"_a=cultural,"ecology"_a=ecology,
                 "branch_id"_a=w.run_id,"tick"_a=std::to_string(w.core.tick()),
                 "observation_version"_a=std::to_string(w.core.tick()),"last_event_seq"_a=std::to_string(w.core.seq()),
                 "seed"_a=std::to_string(w.core.seed()),"dt_s"_a=w.core.dt(),
@@ -170,6 +187,9 @@ PYBIND11_MODULE(_underworld,m) {
                 for(const auto&e:nearby)visible.append(entity(e,false,w.core.bodies_enabled()));
                 py::dict own;
                 for(const auto&e:w.core.entities())if(e.id==id)own=entity(e,true,w.core.bodies_enabled());
+                py::list owned;for(const auto& e:w.core.entities())if(e.kind=="tool"&&e.owner_id==id)owned.append(entity(e,true,false));
+                py::dict freshness;for(const auto& [key,life]:w.core.ecology().freshness)if(key.first==id)freshness[py::str(key.second)]=life;own["freshness_s"]=freshness;
+                own["tools"]=owned;own["carried_mass_ug"]=std::to_string(w.core.carried_mass(*std::find_if(w.core.entities().begin(),w.core.entities().end(),[&](const auto& e){return e.id==id;})));
                 own["busy"]=w.core.pending().contains(id);
                 py::list social,offers;
                 const auto& culture=w.core.culture();
@@ -220,15 +240,38 @@ PYBIND11_MODULE(_underworld,m) {
             a.version=counter(d["observation_version"]);a.type=str(d["action_type"]);a.duration_s=number(d["requested_duration"]);
             if(!py::isinstance<py::list>(d["target_ids"])||!py::isinstance<py::dict>(d["parameters"]))throw py::value_error("INVALID_ARGUMENT");
             auto targets=py::cast<py::list>(d["target_ids"]);auto params=py::cast<py::dict>(d["parameters"]);
-            if(a.type=="move") {
+            if(a.type=="craft"||a.type=="begin_construction") {
+                if(!targets.empty())throw py::value_error("INVALID_ARGUMENT");
+                if(a.type=="begin_construction"){keys(params,{"recipe_id","x_m","y_m"});a.destination={number(params["x_m"]),number(params["y_m"])};}
+                else if(params.contains("tool_id")){keys(params,{"recipe_id","tool_id"});a.destination_id=str(params["tool_id"]);}
+                else keys(params,{"recipe_id"});
+                a.text=str(params["recipe_id"]);
+            } else if(a.type=="work_construction"||a.type=="cancel_construction"||a.type=="toggle_gate") {
+                if(targets.size()!=1)throw py::value_error("INVALID_ARGUMENT");keys(params,{});a.target_id=str(targets[0]);
+            } else if(a.type=="cancel_action") {
+                if(!targets.empty())throw py::value_error("INVALID_ARGUMENT");keys(params,{});
+            } else if(a.type=="store_item"||a.type=="take_item"||a.type=="fill_trough") {
+                if(targets.size()!=1)throw py::value_error("INVALID_ARGUMENT");keys(params,{"material","mass_kg"});a.target_id=str(targets[0]);a.material=str(params["material"]);
+                const double mass=number(params["mass_kg"]);if(mass<=0||mass>2||std::abs(mass*1e9-std::round(mass*1e9))>1e-5)throw py::value_error("INVALID_ARGUMENT");a.mass_ug=static_cast<std::int64_t>(std::llround(mass*1e9));
+            } else if(a.type=="move") {
                 if(!targets.empty())throw py::value_error("INVALID_ARGUMENT");
                 keys(params,{"x_m","y_m"});a.destination={number(params["x_m"]),number(params["y_m"])};
             } else if(a.type=="gather"||a.type=="deposit"||a.type=="eat"||a.type=="drink") {
                 const bool consumption=a.type=="eat"||a.type=="drink";
                 if(targets.size()!=(consumption?0:1))throw py::value_error("INVALID_ARGUMENT");
-                if(!consumption)a.target_id=str(targets[0]);keys(params,{"mass_kg"});double mass=number(params["mass_kg"]);
+                if(!consumption)a.target_id=str(targets[0]);if(a.type=="eat"&&params.contains("material")){keys(params,{"mass_kg","material"});a.material=str(params["material"]);}else keys(params,{"mass_kg"});double mass=number(params["mass_kg"]);
                 if(mass<=0||mass>10||std::abs(mass*1e9-std::round(mass*1e9))>1e-5)throw py::value_error("INVALID_ARGUMENT: mass resolution is 1 microgram");
                 a.mass_ug=static_cast<std::int64_t>(std::llround(mass*1e9));
+            } else if(uw::ecology_action(a.type)) {
+                if(targets.size()!=1)throw py::value_error("INVALID_ARGUMENT");a.target_id=str(targets[0]);
+                if(a.type=="observe_animal"||a.type=="guide_or_lure")keys(params,{});
+                else {
+                    if(a.type=="gather_plant")keys(params,{"mass_kg"});
+                    else {keys(params,{"mass_kg","material"});a.material=str(params["material"]);}
+                    const double mass=number(params["mass_kg"]);
+                    if(mass<=0||mass>1||std::abs(mass*1e9-std::round(mass*1e9))>1e-5)throw py::value_error("INVALID_ARGUMENT: mass resolution");
+                    a.mass_ug=static_cast<std::int64_t>(std::llround(mass*1e9));
+                }
             } else if(a.type=="inspect_tree") {
                 if(targets.size()!=1)throw py::value_error("INVALID_ARGUMENT");
                 a.target_id=str(targets[0]);keys(params,{});
@@ -244,8 +287,9 @@ PYBIND11_MODULE(_underworld,m) {
             } else if(a.type=="fell_tree") {
                 if(targets.size()!=1)throw py::value_error("INVALID_ARGUMENT");
                 a.target_id=str(targets[0]);
-                if(params.contains("x_m")||params.contains("y_m")) {keys(params,{"x_m","y_m"});a.destination={number(params["x_m"]),number(params["y_m"])};}
-                else keys(params,{});
+                if(params.contains("x_m")||params.contains("y_m")) {keys(params,{"tool_id","x_m","y_m"});a.destination={number(params["x_m"]),number(params["y_m"])};}
+                else keys(params,{"tool_id"});
+                a.destination_id=str(params["tool_id"]);
             } else if(a.type=="collect_wood") {
                 if(targets.size()!=1)throw py::value_error("INVALID_ARGUMENT");
                 a.target_id=str(targets[0]);keys(params,{"material","mass_kg"});a.material=str(params["material"]);

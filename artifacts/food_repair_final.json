@@ -1,0 +1,34 @@
+{
+  "regressions": true,
+  "package_smoke": true,
+  "viewer": true,
+  "food_confirmation": true,
+  "continuity": true,
+  "phase9_hashes_match": {
+    "underworld\\learning.py": true,
+    "config\\phase9_study.json": true,
+    "docs\\PHASE9_PREREGISTRATION.md": true,
+    "docs\\PHASE9_REPORT.md": true,
+    "artifacts\\phase9_summary.json": true,
+    "data\\phase9-study-20261020\\file_hashes.json": true
+  },
+  "archive_drift": [],
+  "exe_hash_matches": true,
+  "static_connection_errors": [],
+  "owned_viewer_stopped": true,
+  "source_hashes": {
+    "underworld/stabilization.py": "84afdf02cf7c17db8df91ca915cfc8b89c28be4e7b9b7145b1fcd0335d925017",
+    "underworld/workshop.py": "c35c33c3d2fe0423fa49141fd45374421f73026f624b281a1951f4fd4e4eeb45",
+    "tests/test_food_execution.py": "3cd9535a14371bc25eea6b76b58a97934a1a6af0464892af232898cd58b89481",
+    "tests/test_phase7.py": "3f98fe2e998018a37a7395a1e0977dd6b46932bd424a02c897d97a1ea15c7380",
+    "scripts/food_execution_eval.py": "49cede18da741071e1ba31f7435571fc7636ad737f9001f7fefbfc362fbbdcc1",
+    "scripts/package_app.py": "a017583ad226f1abe635bfd636678f3939f61a68b47ed9ab2aa88bcef76fe14a",
+    "README.md": "c7f40dfe42119523a89f0aa84a4496353bdbb6fe5f1d8cec7a5ed4b59a988c40",
+    "HANDOFF.md": "3b6deef8f0e3d6a89984730474923a192975eb7607cdcc70a4c7a63a713bb7bf",
+    "docs/STATUS.md": "08bb8a0ac03c9b83ffe60bda7039dc834e2e6cbcfb84c62afadf4ba759e04990",
+    "docs/FAILED_AND_DEFERRED_FEATURES.md": "7b36d023d2ca7c2133ffcc4c30d9cb3aa4badf9f58c561ecd7d7b21986faa5c5",
+    "docs/FOOD_EXECUTION_REPAIR.md": "803f25cf28dbc5e89f8201aca6236e54e77aecf8513f1d335623629248d304ce",
+    "docs/FOOD_EXECUTION_PROTOCOL.md": "91a384307c71a4089dbce3aad13aa652602a90fad9edde17c628e41c6ecc6104"
+  },
+  "passed": true
+}

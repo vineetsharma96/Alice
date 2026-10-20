@@ -1,0 +1,28 @@
+{
+  "native_build_id": "832c4a705a7ceecd85d8befb3d84f4dff0d4730f024c395eba12985f0d8bd896",
+  "source_files": 155,
+  "source_manifest_drift": [],
+  "phase9_hashes_match": {
+    "underworld\\learning.py": true,
+    "config\\phase9_study.json": true,
+    "docs\\PHASE9_PREREGISTRATION.md": true,
+    "docs\\PHASE9_REPORT.md": true,
+    "artifacts\\phase9_summary.json": true,
+    "data\\phase9-study-20261020\\file_hashes.json": true
+  },
+  "C_saved_native_head_unchanged": true,
+  "build_id_matches": {
+    "checks": true,
+    "evaluation": true,
+    "viewer": true
+  },
+  "all_regressions": true,
+  "continuity": true,
+  "evaluation": true,
+  "viewer": true,
+  "local_links": 90,
+  "missing_links": [],
+  "credential_pattern_findings": [],
+  "protocol_hash_matches": true,
+  "passed": true
+}

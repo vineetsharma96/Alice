@@ -1,0 +1,6316 @@
+{
+  "kind": "living-world-d-ecology-evaluation",
+  "native_build_id": "9902f8faef889f89701821144062c71b605a736c295cb9ce763d9a9d77c09721",
+  "protocol_sha256": "105a960ec2e700f5b05ee8f562bf0580ddd82ab47d5d615f6f472394348d3906",
+  "origin": "authored_native_behavior_and_operator_assigned_care",
+  "model_calls": 0,
+  "development_seeds": [
+    21
+  ],
+  "heldout_seeds": [
+    44,
+    73
+  ],
+  "runs": [
+    {
+      "seed": 21,
+      "treatment": "deprived",
+      "simulated_s": 300.0,
+      "wall_s": 0.07387089999974705,
+      "resume_wall_s": 0.02518370000325376,
+      "resume_exact": true,
+      "stages": [
+        {
+          "simulated_s": 30.0,
+          "tick": "150",
+          "native_head": "7114da4e0091f909671b7c38dab1199566e814ee0bad67fd68b57c5e277c176e",
+          "balances": {
+            "food_error_ug": 0,
+            "water_error_ug": 0,
+            "body_error_ug": 0
+          },
+          "animals": {
+            "animal-1": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                6.8155257599954515,
+                7.985278560155524
+              ]
+            },
+            "animal-2": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                7.175223846207844,
+                7.72449941750452
+              ]
+            }
+          },
+          "ecology": {
+            "enabled": true,
+            "controller_origin": "authored_native_ecology_v1",
+            "animals": {
+              "animal-1": {
+                "species": "mossgrazer",
+                "mode": "wander",
+                "age_s": 149.99999999999886,
+                "life_stage": "adult",
+                "laying_s": 0.0,
+                "food_reserve_ug": "220000000",
+                "water_reserve_ug": "155000000",
+                "food_metabolized_ug": "30000000",
+                "water_metabolized_ug": "45000000",
+                "eggs_laid_ug": "0",
+                "familiarity": {},
+                "last_feed": {},
+                "handler": "",
+                "guide_until": "0"
+              },
+              "animal-2": {
+                "species": "reedhen",
+                "mode": "wander",
+                "age_s": 149.99999999999886,
+                "life_stage": "adult",
+                "laying_s": 0.0,
+                "food_reserve_ug": "140000000",
+                "water_reserve_ug": "155000000",
+                "food_metabolized_ug": "30000000",
+                "water_metabolized_ug": "45000000",
+                "eggs_laid_ug": "60000000",
+                "familiarity": {},
+                "last_feed": {},
+                "handler": "",
+                "guide_until": "0"
+              }
+            },
+            "freshness_s": {
+              "animal-2:eggs": 179.8
+            },
+            "structural_body_initial_ug": "2800000000",
+            "food_residue_ug": "80000000",
+            "water_waste_ug": "90000000",
+            "egg_input_ug": "80000000",
+            "eggs_produced_ug": "60000000",
+            "forage_regeneration_kg_s": 0.0
+          },
+          "boundary_sources_ug": {
+            "food": 0,
+            "fuel_X": 0,
+            "inert_material": 0,
+            "oxygen": 0,
+            "product_P": 0,
+            "stone": 0,
+            "tree": 0,
+            "water": 0
+          },
+          "event_counts": {
+            "ecology_initialized": 1,
+            "egg_laid": 1,
+            "tick": 150
+          }
+        },
+        {
+          "simulated_s": 120.0,
+          "tick": "600",
+          "native_head": "7b1d3655f84b669a27ef2e902d0b88088caab2d9815b5bcbccaedbfe4d5e1fbb",
+          "balances": {
+            "food_error_ug": 0,
+            "water_error_ug": 0,
+            "body_error_ug": 0
+          },
+          "animals": {
+            "animal-1": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                6.568380123556058,
+                7.991351203408813
+              ]
+            },
+            "animal-2": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                7.003269523976234,
+                7.905917795557963
+              ]
+            }
+          },
+          "ecology": {
+            "enabled": true,
+            "controller_origin": "authored_native_ecology_v1",
+            "animals": {
+              "animal-1": {
+                "species": "mossgrazer",
+                "mode": "avoid_unfamiliar",
+                "age_s": 239.99999999999375,
+                "life_stage": "adult",
+                "laying_s": 0.0,
+                "food_reserve_ug": "130000000",
+                "water_reserve_ug": "20000000",
+                "food_metabolized_ug": "120000000",
+                "water_metabolized_ug": "180000000",
+                "eggs_laid_ug": "0",
+                "familiarity": {},
+                "last_feed": {},
+                "handler": "",
+                "guide_until": "0"
+              },
+              "animal-2": {
+                "species": "reedhen",
+                "mode": "wander",
+                "age_s": 239.99999999999375,
+                "life_stage": "adult",
+                "laying_s": 30.0,
+                "food_reserve_ug": "50000000",
+                "water_reserve_ug": "20000000",
+                "food_metabolized_ug": "120000000",
+                "water_metabolized_ug": "180000000",
+                "eggs_laid_ug": "60000000",
+                "familiarity": {},
+                "last_feed": {},
+                "handler": "",
+                "guide_until": "0"
+              }
+            },
+            "freshness_s": {
+              "animal-2:eggs": 89.80000000000241
+            },
+            "structural_body_initial_ug": "2800000000",
+            "food_residue_ug": "260000000",
+            "water_waste_ug": "360000000",
+            "egg_input_ug": "80000000",
+            "eggs_produced_ug": "60000000",
+            "forage_regeneration_kg_s": 0.0
+          },
+          "boundary_sources_ug": {
+            "food": 0,
+            "fuel_X": 0,
+            "inert_material": 0,
+            "oxygen": 0,
+            "product_P": 0,
+            "stone": 0,
+            "tree": 0,
+            "water": 0
+          },
+          "event_counts": {
+            "ecology_initialized": 1,
+            "egg_laid": 1,
+            "tick": 600
+          }
+        },
+        {
+          "simulated_s": 300.0,
+          "tick": "1500",
+          "native_head": "ae36edd5049612ef13aec50f676df65414a653cb5b43358f1d1ee185ba855502",
+          "balances": {
+            "food_error_ug": 0,
+            "water_error_ug": 0,
+            "body_error_ug": 0
+          },
+          "animals": {
+            "animal-1": {
+              "alive": false,
+              "condition": "poor",
+              "position_m": [
+                6.700787473514739,
+                7.938971069902475
+              ]
+            },
+            "animal-2": {
+              "alive": false,
+              "condition": "poor",
+              "position_m": [
+                7.0712174385312245,
+                7.783257861278336
+              ]
+            }
+          },
+          "ecology": {
+            "enabled": true,
+            "controller_origin": "authored_native_ecology_v1",
+            "animals": {
+              "animal-1": {
+                "species": "mossgrazer",
+                "mode": "dead",
+                "age_s": 419.9999999999835,
+                "life_stage": "adult",
+                "laying_s": 0.0,
+                "food_reserve_ug": "26800000",
+                "water_reserve_ug": "0",
+                "food_metabolized_ug": "223200000",
+                "water_metabolized_ug": "200000000",
+                "eggs_laid_ug": "0",
+                "familiarity": {},
+                "last_feed": {},
+                "handler": "",
+                "guide_until": "0"
+              },
+              "animal-2": {
+                "species": "reedhen",
+                "mode": "dead",
+                "age_s": 419.9999999999835,
+                "life_stage": "adult",
+                "laying_s": 30.0,
+                "food_reserve_ug": "0",
+                "water_reserve_ug": "0",
+                "food_metabolized_ug": "170000000",
+                "water_metabolized_ug": "200000000",
+                "eggs_laid_ug": "60000000",
+                "familiarity": {},
+                "last_feed": {},
+                "handler": "",
+                "guide_until": "0"
+              }
+            },
+            "freshness_s": {},
+            "structural_body_initial_ug": "2800000000",
+            "food_residue_ug": "473200000",
+            "water_waste_ug": "400000000",
+            "egg_input_ug": "80000000",
+            "eggs_produced_ug": "60000000",
+            "forage_regeneration_kg_s": 0.0
+          },
+          "boundary_sources_ug": {
+            "food": 0,
+            "fuel_X": 0,
+            "inert_material": 0,
+            "oxygen": 0,
+            "product_P": 0,
+            "stone": 0,
+            "tree": 0,
+            "water": 0
+          },
+          "event_counts": {
+            "animal_death": 2,
+            "ecology_initialized": 1,
+            "egg_laid": 1,
+            "food_spoiled": 1,
+            "tick": 1500
+          }
+        }
+      ],
+      "requests": [],
+      "authored_route_failures": [],
+      "accepted": 0,
+      "completed": 0
+    },
+    {
+      "seed": 21,
+      "treatment": "caretaking",
+      "simulated_s": 300.0,
+      "wall_s": 0.1101498000061838,
+      "resume_wall_s": 0.03737580000597518,
+      "resume_exact": true,
+      "stages": [
+        {
+          "simulated_s": 30.0,
+          "tick": "150",
+          "native_head": "d250b866c131c7c55732279546967efd76c8afded7e770099c54550e0e7cbb09",
+          "balances": {
+            "food_error_ug": 0,
+            "water_error_ug": 0,
+            "body_error_ug": 0
+          },
+          "animals": {
+            "animal-1": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                5.613835678693525,
+                6.585135830602576
+              ]
+            },
+            "animal-2": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                8.023680333192832,
+                7.810711683477199
+              ]
+            }
+          },
+          "ecology": {
+            "enabled": true,
+            "controller_origin": "authored_native_ecology_v1",
+            "animals": {
+              "animal-1": {
+                "species": "mossgrazer",
+                "mode": "wander",
+                "age_s": 149.99999999999886,
+                "life_stage": "adult",
+                "laying_s": 0.0,
+                "food_reserve_ug": "320000000",
+                "water_reserve_ug": "155000000",
+                "food_metabolized_ug": "30000000",
+                "water_metabolized_ug": "45000000",
+                "eggs_laid_ug": "0",
+                "familiarity": {
+                  "agent-1": 1
+                },
+                "last_feed": {
+                  "agent-1": 11
+                },
+                "handler": "",
+                "guide_until": "0"
+              },
+              "animal-2": {
+                "species": "reedhen",
+                "mode": "avoid_unfamiliar",
+                "age_s": 149.99999999999886,
+                "life_stage": "adult",
+                "laying_s": 0.0,
+                "food_reserve_ug": "240000000",
+                "water_reserve_ug": "155000000",
+                "food_metabolized_ug": "30000000",
+                "water_metabolized_ug": "45000000",
+                "eggs_laid_ug": "60000000",
+                "familiarity": {
+                  "agent-1": 1
+                },
+                "last_feed": {
+                  "agent-1": 31
+                },
+                "handler": "",
+                "guide_until": "0"
+              }
+            },
+            "freshness_s": {
+              "animal-2:eggs": 179.8
+            },
+            "structural_body_initial_ug": "2800000000",
+            "food_residue_ug": "80000000",
+            "water_waste_ug": "90000000",
+            "egg_input_ug": "80000000",
+            "eggs_produced_ug": "60000000",
+            "forage_regeneration_kg_s": 0.0
+          },
+          "boundary_sources_ug": {
+            "food": 0,
+            "fuel_X": 0,
+            "inert_material": 0,
+            "oxygen": 0,
+            "product_P": 0,
+            "stone": 0,
+            "tree": 0,
+            "water": 0
+          },
+          "event_counts": {
+            "action_accepted": 6,
+            "action_completed": 6,
+            "animal_care": 4,
+            "crafting_effect": 1,
+            "ecology_initialized": 1,
+            "egg_laid": 1,
+            "tick": 150
+          }
+        },
+        {
+          "simulated_s": 120.0,
+          "tick": "600",
+          "native_head": "d01b0a839cf12f809ff94fc43e44eb1a978111b22986f308d25a467400b616c0",
+          "balances": {
+            "food_error_ug": 0,
+            "water_error_ug": 0,
+            "body_error_ug": 0
+          },
+          "animals": {
+            "animal-1": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                5.581657000962265,
+                6.602427790354911
+              ]
+            },
+            "animal-2": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                6.725825090903862,
+                6.708862151600881
+              ]
+            }
+          },
+          "ecology": {
+            "enabled": true,
+            "controller_origin": "authored_native_ecology_v1",
+            "animals": {
+              "animal-1": {
+                "species": "mossgrazer",
+                "mode": "wander",
+                "age_s": 239.99999999999375,
+                "life_stage": "adult",
+                "laying_s": 0.0,
+                "food_reserve_ug": "330000000",
+                "water_reserve_ug": "152000000",
+                "food_metabolized_ug": "120000000",
+                "water_metabolized_ug": "180000000",
+                "eggs_laid_ug": "0",
+                "familiarity": {
+                  "agent-1": 2
+                },
+                "last_feed": {
+                  "agent-1": 421
+                },
+                "handler": "",
+                "guide_until": "0"
+              },
+              "animal-2": {
+                "species": "reedhen",
+                "mode": "wander",
+                "age_s": 239.99999999999375,
+                "life_stage": "adult",
+                "laying_s": 29.999999999999925,
+                "food_reserve_ug": "90000000",
+                "water_reserve_ug": "152000000",
+                "food_metabolized_ug": "120000000",
+                "water_metabolized_ug": "180000000",
+                "eggs_laid_ug": "180000000",
+                "familiarity": {
+                  "agent-1": 2
+                },
+                "last_feed": {
+                  "agent-1": 428
+                },
+                "handler": "",
+                "guide_until": "0"
+              }
+            },
+            "freshness_s": {
+              "animal-2:eggs": 89.80000000000241
+            },
+            "structural_body_initial_ug": "2800000000",
+            "food_residue_ug": "300000000",
+            "water_waste_ug": "360000000",
+            "egg_input_ug": "240000000",
+            "eggs_produced_ug": "180000000",
+            "forage_regeneration_kg_s": 0.0
+          },
+          "boundary_sources_ug": {
+            "food": 0,
+            "fuel_X": 0,
+            "inert_material": 0,
+            "oxygen": 0,
+            "product_P": 0,
+            "stone": 0,
+            "tree": 0,
+            "water": 0
+          },
+          "event_counts": {
+            "action_accepted": 15,
+            "action_completed": 15,
+            "animal_care": 11,
+            "animal_drank": 66,
+            "consumption": 1,
+            "crafting_effect": 1,
+            "ecology_initialized": 1,
+            "egg_laid": 3,
+            "tick": 600
+          }
+        },
+        {
+          "simulated_s": 300.0,
+          "tick": "1500",
+          "native_head": "de4e745bb8c6f5c2e851642b84189beccaf53c063acd58540d96ced72fb91093",
+          "balances": {
+            "food_error_ug": 0,
+            "water_error_ug": 0,
+            "body_error_ug": 0
+          },
+          "animals": {
+            "animal-1": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                6.700139106355407,
+                7.341707425019434
+              ]
+            },
+            "animal-2": {
+              "alive": true,
+              "condition": "poor",
+              "position_m": [
+                7.172711957942559,
+                7.423973929001101
+              ]
+            }
+          },
+          "ecology": {
+            "enabled": true,
+            "controller_origin": "authored_native_ecology_v1",
+            "animals": {
+              "animal-1": {
+                "species": "mossgrazer",
+                "mode": "seek_water",
+                "age_s": 419.9999999999835,
+                "life_stage": "adult",
+                "laying_s": 0.0,
+                "food_reserve_ug": "250000000",
+                "water_reserve_ug": "125300000",
+                "food_metabolized_ug": "300000000",
+                "water_metabolized_ug": "442700000",
+                "eggs_laid_ug": "0",
+                "familiarity": {
+                  "agent-1": 3
+                },
+                "last_feed": {
+                  "agent-1": 811
+                },
+                "handler": "",
+                "guide_until": "0"
+              },
+              "animal-2": {
+                "species": "reedhen",
+                "mode": "wander",
+                "age_s": 419.9999999999835,
+                "life_stage": "adult",
+                "laying_s": 30.0,
+                "food_reserve_ug": "0",
+                "water_reserve_ug": "150000000",
+                "food_metabolized_ug": "230000000",
+                "water_metabolized_ug": "450000000",
+                "eggs_laid_ug": "240000000",
+                "familiarity": {
+                  "agent-1": 3
+                },
+                "last_feed": {
+                  "agent-1": 818
+                },
+                "handler": "",
+                "guide_until": "0"
+              }
+            },
+            "freshness_s": {},
+            "structural_body_initial_ug": "2800000000",
+            "food_residue_ug": "730000000",
+            "water_waste_ug": "892700000",
+            "egg_input_ug": "320000000",
+            "eggs_produced_ug": "240000000",
+            "forage_regeneration_kg_s": 0.0
+          },
+          "boundary_sources_ug": {
+            "food": 0,
+            "fuel_X": 0,
+            "inert_material": 0,
+            "oxygen": 0,
+            "product_P": 0,
+            "stone": 0,
+            "tree": 0,
+            "water": 0
+          },
+          "event_counts": {
+            "action_accepted": 27,
+            "action_completed": 26,
+            "action_failed": 1,
+            "action_rejected": 1,
+            "animal_care": 20,
+            "animal_drank": 192,
+            "consumption": 2,
+            "crafting_effect": 2,
+            "ecology_initialized": 1,
+            "egg_laid": 4,
+            "food_spoiled": 1,
+            "tick": 1500
+          }
+        }
+      ],
+      "requests": [
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-fill_trough-0-0",
+            "observation_version": "0",
+            "action_type": "fill_trough",
+            "target_ids": [
+              "care-trough"
+            ],
+            "parameters": {
+              "material": "water",
+              "mass_kg": 0.5
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-fill_trough-0-0",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "0",
+            "completed_tick": "0",
+            "observation_version": "0",
+            "event_refs": [
+              "2"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-fill_trough-0-0",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "0",
+            "completed_tick": "5",
+            "observation_version": "5",
+            "event_refs": [
+              "2",
+              "7",
+              "8"
+            ],
+            "observable_effects": {
+              "description": "water:500000000ug:fill_trough"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-5-1",
+            "observation_version": "5",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-5-1",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "5",
+            "completed_tick": "0",
+            "observation_version": "5",
+            "event_refs": [
+              "10"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-5-1",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "5",
+            "completed_tick": "6",
+            "observation_version": "6",
+            "event_refs": [
+              "10",
+              "11",
+              "12"
+            ],
+            "observable_effects": {
+              "description": "mossgrazer:condition=good:hunger=low:thirst=low:own_familiarity=0:eggs_ug=0"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-offer_feed-6-2",
+            "observation_version": "6",
+            "action_type": "offer_feed",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {
+              "material": "food",
+              "mass_kg": 0.1
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-6-2",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "6",
+            "completed_tick": "0",
+            "observation_version": "6",
+            "event_refs": [
+              "14"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-6-2",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "6",
+            "completed_tick": "11",
+            "observation_version": "11",
+            "event_refs": [
+              "14",
+              "19",
+              "20"
+            ],
+            "observable_effects": {
+              "description": "fed_ug=100000000:authored_familiarity=1"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-move-11-3",
+            "observation_version": "11",
+            "action_type": "move",
+            "target_ids": [],
+            "parameters": {
+              "x_m": 7.153683342429957,
+              "y_m": 7.511163129538978
+            },
+            "requested_duration": 2.77224156276562
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-move-11-3",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "11",
+            "completed_tick": "0",
+            "observation_version": "11",
+            "event_refs": [
+              "22"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-move-11-3",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "11",
+            "completed_tick": "15",
+            "observation_version": "15",
+            "event_refs": [
+              "22",
+              "26"
+            ],
+            "observable_effects": {
+              "description": ""
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-25-4",
+            "observation_version": "25",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-25-4",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "25",
+            "completed_tick": "0",
+            "observation_version": "25",
+            "event_refs": [
+              "38"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-25-4",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "25",
+            "completed_tick": "26",
+            "observation_version": "26",
+            "event_refs": [
+              "38",
+              "39",
+              "40"
+            ],
+            "observable_effects": {
+              "description": "reedhen:condition=good:hunger=low:thirst=low:own_familiarity=0:eggs_ug=0"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-offer_feed-26-5",
+            "observation_version": "26",
+            "action_type": "offer_feed",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {
+              "material": "food",
+              "mass_kg": 0.1
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-26-5",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "26",
+            "completed_tick": "0",
+            "observation_version": "26",
+            "event_refs": [
+              "42"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-26-5",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "26",
+            "completed_tick": "31",
+            "observation_version": "31",
+            "event_refs": [
+              "42",
+              "47",
+              "48"
+            ],
+            "observable_effects": {
+              "description": "fed_ug=100000000:authored_familiarity=1"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-move-400-6",
+            "observation_version": "400",
+            "action_type": "move",
+            "target_ids": [],
+            "parameters": {
+              "x_m": 6.454944148132068,
+              "y_m": 7.087216247720174
+            },
+            "requested_duration": 2.8172927384064725
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-move-400-6",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "400",
+            "completed_tick": "0",
+            "observation_version": "400",
+            "event_refs": [
+              "439"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-move-400-6",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "400",
+            "completed_tick": "405",
+            "observation_version": "405",
+            "event_refs": [
+              "439",
+              "444"
+            ],
+            "observable_effects": {
+              "description": ""
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-415-7",
+            "observation_version": "415",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-415-7",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "415",
+            "completed_tick": "0",
+            "observation_version": "415",
+            "event_refs": [
+              "457"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-415-7",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "415",
+            "completed_tick": "416",
+            "observation_version": "416",
+            "event_refs": [
+              "457",
+              "458",
+              "459"
+            ],
+            "observable_effects": {
+              "description": "mossgrazer:condition=good:hunger=low:thirst=low:own_familiarity=1:eggs_ug=0"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-offer_feed-416-8",
+            "observation_version": "416",
+            "action_type": "offer_feed",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {
+              "material": "food",
+              "mass_kg": 0.1
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-416-8",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "416",
+            "completed_tick": "0",
+            "observation_version": "416",
+            "event_refs": [
+              "461"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-416-8",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "416",
+            "completed_tick": "421",
+            "observation_version": "421",
+            "event_refs": [
+              "461",
+              "466",
+              "467"
+            ],
+            "observable_effects": {
+              "description": "fed_ug=100000000:authored_familiarity=2"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-421-9",
+            "observation_version": "421",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-421-9",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "421",
+            "completed_tick": "0",
+            "observation_version": "421",
+            "event_refs": [
+              "470"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-421-9",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "421",
+            "completed_tick": "422",
+            "observation_version": "422",
+            "event_refs": [
+              "470",
+              "471",
+              "472"
+            ],
+            "observable_effects": {
+              "description": "mossgrazer:condition=good:hunger=low:thirst=low:own_familiarity=2:eggs_ug=0"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-422-10",
+            "observation_version": "422",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-422-10",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "422",
+            "completed_tick": "0",
+            "observation_version": "422",
+            "event_refs": [
+              "474"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-422-10",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "422",
+            "completed_tick": "423",
+            "observation_version": "423",
+            "event_refs": [
+              "474",
+              "475",
+              "476"
+            ],
+            "observable_effects": {
+              "description": "reedhen:condition=good:hunger=high:thirst=high:own_familiarity=1:eggs_ug=120000000"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-offer_feed-423-11",
+            "observation_version": "423",
+            "action_type": "offer_feed",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {
+              "material": "food",
+              "mass_kg": 0.1
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-423-11",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "423",
+            "completed_tick": "0",
+            "observation_version": "423",
+            "event_refs": [
+              "478"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-423-11",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "423",
+            "completed_tick": "428",
+            "observation_version": "428",
+            "event_refs": [
+              "478",
+              "483",
+              "484"
+            ],
+            "observable_effects": {
+              "description": "fed_ug=100000000:authored_familiarity=2"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-428-12",
+            "observation_version": "428",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-428-12",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "428",
+            "completed_tick": "0",
+            "observation_version": "428",
+            "event_refs": [
+              "486"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-428-12",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "428",
+            "completed_tick": "429",
+            "observation_version": "429",
+            "event_refs": [
+              "486",
+              "487",
+              "488"
+            ],
+            "observable_effects": {
+              "description": "reedhen:condition=good:hunger=low:thirst=high:own_familiarity=2:eggs_ug=120000000"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-collect_eggs-429-13",
+            "observation_version": "429",
+            "action_type": "collect_eggs",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {
+              "material": "eggs",
+              "mass_kg": 0.06
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-collect_eggs-429-13",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "429",
+            "completed_tick": "0",
+            "observation_version": "429",
+            "event_refs": [
+              "490"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-collect_eggs-429-13",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "429",
+            "completed_tick": "434",
+            "observation_version": "434",
+            "event_refs": [
+              "490",
+              "497",
+              "498"
+            ],
+            "observable_effects": {
+              "description": "collected_eggs_ug=60000000"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-eat-434-14",
+            "observation_version": "434",
+            "action_type": "eat",
+            "target_ids": [],
+            "parameters": {
+              "material": "eggs",
+              "mass_kg": 0.06
+            },
+            "requested_duration": 2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-eat-434-14",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "434",
+            "completed_tick": "0",
+            "observation_version": "434",
+            "event_refs": [
+              "502"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-eat-434-14",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "434",
+            "completed_tick": "444",
+            "observation_version": "444",
+            "event_refs": [
+              "502",
+              "521",
+              "522"
+            ],
+            "observable_effects": {
+              "description": "ingested_ug=60000000"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-fill_trough-800-15",
+            "observation_version": "800",
+            "action_type": "fill_trough",
+            "target_ids": [
+              "care-trough"
+            ],
+            "parameters": {
+              "material": "water",
+              "mass_kg": 0.5
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-fill_trough-800-15",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "800",
+            "completed_tick": "0",
+            "observation_version": "800",
+            "event_refs": [
+              "935"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-fill_trough-800-15",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "800",
+            "completed_tick": "805",
+            "observation_version": "805",
+            "event_refs": [
+              "935",
+              "940",
+              "941"
+            ],
+            "observable_effects": {
+              "description": "water:500000000ug:fill_trough"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-805-16",
+            "observation_version": "805",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-805-16",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "805",
+            "completed_tick": "0",
+            "observation_version": "805",
+            "event_refs": [
+              "943"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-805-16",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "805",
+            "completed_tick": "806",
+            "observation_version": "806",
+            "event_refs": [
+              "943",
+              "944",
+              "945"
+            ],
+            "observable_effects": {
+              "description": "mossgrazer:condition=good:hunger=low:thirst=low:own_familiarity=2:eggs_ug=0"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-offer_feed-806-17",
+            "observation_version": "806",
+            "action_type": "offer_feed",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {
+              "material": "food",
+              "mass_kg": 0.1
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-806-17",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "806",
+            "completed_tick": "0",
+            "observation_version": "806",
+            "event_refs": [
+              "947"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-806-17",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "806",
+            "completed_tick": "811",
+            "observation_version": "811",
+            "event_refs": [
+              "947",
+              "953",
+              "954"
+            ],
+            "observable_effects": {
+              "description": "fed_ug=100000000:authored_familiarity=3"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-811-18",
+            "observation_version": "811",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-811-18",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "811",
+            "completed_tick": "0",
+            "observation_version": "811",
+            "event_refs": [
+              "956"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-811-18",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "811",
+            "completed_tick": "812",
+            "observation_version": "812",
+            "event_refs": [
+              "956",
+              "957",
+              "958"
+            ],
+            "observable_effects": {
+              "description": "mossgrazer:condition=good:hunger=low:thirst=low:own_familiarity=3:eggs_ug=0"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-812-19",
+            "observation_version": "812",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-812-19",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "812",
+            "completed_tick": "0",
+            "observation_version": "812",
+            "event_refs": [
+              "960"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-812-19",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "812",
+            "completed_tick": "813",
+            "observation_version": "813",
+            "event_refs": [
+              "960",
+              "961",
+              "962"
+            ],
+            "observable_effects": {
+              "description": "reedhen:condition=good:hunger=high:thirst=low:own_familiarity=2:eggs_ug=120000000"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-offer_feed-813-20",
+            "observation_version": "813",
+            "action_type": "offer_feed",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {
+              "material": "food",
+              "mass_kg": 0.1
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-813-20",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "813",
+            "completed_tick": "0",
+            "observation_version": "813",
+            "event_refs": [
+              "964"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-813-20",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "813",
+            "completed_tick": "818",
+            "observation_version": "818",
+            "event_refs": [
+              "964",
+              "969",
+              "970"
+            ],
+            "observable_effects": {
+              "description": "fed_ug=100000000:authored_familiarity=3"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-818-21",
+            "observation_version": "818",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-818-21",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "818",
+            "completed_tick": "0",
+            "observation_version": "818",
+            "event_refs": [
+              "973"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-818-21",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "818",
+            "completed_tick": "819",
+            "observation_version": "819",
+            "event_refs": [
+              "973",
+              "974",
+              "975"
+            ],
+            "observable_effects": {
+              "description": "reedhen:condition=good:hunger=low:thirst=low:own_familiarity=3:eggs_ug=180000000"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-collect_eggs-819-22",
+            "observation_version": "819",
+            "action_type": "collect_eggs",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {
+              "material": "eggs",
+              "mass_kg": 0.06
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-collect_eggs-819-22",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "819",
+            "completed_tick": "0",
+            "observation_version": "819",
+            "event_refs": [
+              "977"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-collect_eggs-819-22",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "819",
+            "completed_tick": "824",
+            "observation_version": "824",
+            "event_refs": [
+              "977",
+              "983",
+              "984"
+            ],
+            "observable_effects": {
+              "description": "collected_eggs_ug=60000000"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-eat-824-23",
+            "observation_version": "824",
+            "action_type": "eat",
+            "target_ids": [],
+            "parameters": {
+              "material": "eggs",
+              "mass_kg": 0.06
+            },
+            "requested_duration": 2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-eat-824-23",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "824",
+            "completed_tick": "0",
+            "observation_version": "824",
+            "event_refs": [
+              "986"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-eat-824-23",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "824",
+            "completed_tick": "834",
+            "observation_version": "834",
+            "event_refs": [
+              "986",
+              "996",
+              "997"
+            ],
+            "observable_effects": {
+              "description": "ingested_ug=60000000"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-1200-24",
+            "observation_version": "1200",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-1200-24",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "1200",
+            "completed_tick": "0",
+            "observation_version": "1200",
+            "event_refs": [
+              "1394"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-1200-24",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "1200",
+            "completed_tick": "1201",
+            "observation_version": "1201",
+            "event_refs": [
+              "1394",
+              "1395",
+              "1396"
+            ],
+            "observable_effects": {
+              "description": "mossgrazer:condition=good:hunger=low:thirst=high:own_familiarity=3:eggs_ug=0"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-offer_feed-1201-25",
+            "observation_version": "1201",
+            "action_type": "offer_feed",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {
+              "material": "food",
+              "mass_kg": 0.1
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-1201-25",
+            "agent_id": "agent-1",
+            "status": "rejected",
+            "error_code": "CAPACITY_EXCEEDED",
+            "reason": "CAPACITY_EXCEEDED",
+            "started_tick": "1201",
+            "completed_tick": "1201",
+            "observation_version": "1201",
+            "event_refs": [
+              "1398"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-1201-26",
+            "observation_version": "1201",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-1201-26",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "1201",
+            "completed_tick": "0",
+            "observation_version": "1201",
+            "event_refs": [
+              "1399"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-1201-26",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "1201",
+            "completed_tick": "1202",
+            "observation_version": "1202",
+            "event_refs": [
+              "1399",
+              "1400",
+              "1401"
+            ],
+            "observable_effects": {
+              "description": "mossgrazer:condition=good:hunger=low:thirst=high:own_familiarity=3:eggs_ug=0"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-move-1202-27",
+            "observation_version": "1202",
+            "action_type": "move",
+            "target_ids": [],
+            "parameters": {
+              "x_m": 6.610907829162758,
+              "y_m": 6.821810433910947
+            },
+            "requested_duration": 2.3078391070094586
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-move-1202-27",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "1202",
+            "completed_tick": "0",
+            "observation_version": "1202",
+            "event_refs": [
+              "1403"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-move-1202-27",
+            "agent_id": "agent-1",
+            "status": "failed",
+            "error_code": "COLLISION",
+            "reason": "COLLISION",
+            "started_tick": "1202",
+            "completed_tick": "1204",
+            "observation_version": "1204",
+            "event_refs": [
+              "1403",
+              "1405"
+            ],
+            "observable_effects": {
+              "description": ""
+            }
+          }
+        }
+      ],
+      "authored_route_failures": [
+        {
+          "at_s": 240,
+          "action": "offer_feed",
+          "receipt": "{'schema_version': 1, 'request_id': 'c-offer_feed-1201-25', 'agent_id': 'agent-1', 'status': 'rejected', 'error_code': 'CAPACITY_EXCEEDED', 'reason': 'CAPACITY_EXCEEDED', 'started_tick': '1201', 'completed_tick': '1201', 'observation_version': '1201', 'event_refs': ['1398'], 'observable_effects': {'description': ''}, 'run_id': 'test'}"
+        },
+        {
+          "at_s": 240,
+          "action": "move",
+          "receipt": "{'schema_version': 1, 'request_id': 'c-move-1202-27', 'agent_id': 'agent-1', 'status': 'failed', 'error_code': 'COLLISION', 'reason': 'COLLISION', 'started_tick': '1202', 'completed_tick': '1204', 'observation_version': '1204', 'event_refs': ['1403', '1405'], 'observable_effects': {'description': ''}}"
+        }
+      ],
+      "accepted": 27,
+      "completed": 26
+    },
+    {
+      "seed": 44,
+      "treatment": "deprived",
+      "simulated_s": 300.0,
+      "wall_s": 0.07658970000193221,
+      "resume_wall_s": 0.025320900000224356,
+      "resume_exact": true,
+      "stages": [
+        {
+          "simulated_s": 30.0,
+          "tick": "150",
+          "native_head": "fc205f1cb7a41ce959d09d87575cdd4050bd9c1547470c139167bae2a0e6ac50",
+          "balances": {
+            "food_error_ug": 0,
+            "water_error_ug": 0,
+            "body_error_ug": 0
+          },
+          "animals": {
+            "animal-1": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                7.915525759996426,
+                8.585278560155276
+              ]
+            },
+            "animal-2": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                8.275223846207956,
+                8.324499417504432
+              ]
+            }
+          },
+          "ecology": {
+            "enabled": true,
+            "controller_origin": "authored_native_ecology_v1",
+            "animals": {
+              "animal-1": {
+                "species": "mossgrazer",
+                "mode": "wander",
+                "age_s": 149.99999999999886,
+                "life_stage": "adult",
+                "laying_s": 0.0,
+                "food_reserve_ug": "220000000",
+                "water_reserve_ug": "155000000",
+                "food_metabolized_ug": "30000000",
+                "water_metabolized_ug": "45000000",
+                "eggs_laid_ug": "0",
+                "familiarity": {},
+                "last_feed": {},
+                "handler": "",
+                "guide_until": "0"
+              },
+              "animal-2": {
+                "species": "reedhen",
+                "mode": "wander",
+                "age_s": 149.99999999999886,
+                "life_stage": "adult",
+                "laying_s": 0.0,
+                "food_reserve_ug": "140000000",
+                "water_reserve_ug": "155000000",
+                "food_metabolized_ug": "30000000",
+                "water_metabolized_ug": "45000000",
+                "eggs_laid_ug": "60000000",
+                "familiarity": {},
+                "last_feed": {},
+                "handler": "",
+                "guide_until": "0"
+              }
+            },
+            "freshness_s": {
+              "animal-2:eggs": 179.8
+            },
+            "structural_body_initial_ug": "2800000000",
+            "food_residue_ug": "80000000",
+            "water_waste_ug": "90000000",
+            "egg_input_ug": "80000000",
+            "eggs_produced_ug": "60000000",
+            "forage_regeneration_kg_s": 0.0
+          },
+          "boundary_sources_ug": {
+            "food": 0,
+            "fuel_X": 0,
+            "inert_material": 0,
+            "oxygen": 0,
+            "product_P": 0,
+            "stone": 0,
+            "tree": 0,
+            "water": 0
+          },
+          "event_counts": {
+            "ecology_initialized": 1,
+            "egg_laid": 1,
+            "tick": 150
+          }
+        },
+        {
+          "simulated_s": 120.0,
+          "tick": "600",
+          "native_head": "e4077a3a1ae0345b07b975f093d7603034096920907e6a73f1328b6f30558e30",
+          "balances": {
+            "food_error_ug": 0,
+            "water_error_ug": 0,
+            "body_error_ug": 0
+          },
+          "animals": {
+            "animal-1": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                7.668380123566943,
+                8.591351203400713
+              ]
+            },
+            "animal-2": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                8.103269523976847,
+                8.50591779555691
+              ]
+            }
+          },
+          "ecology": {
+            "enabled": true,
+            "controller_origin": "authored_native_ecology_v1",
+            "animals": {
+              "animal-1": {
+                "species": "mossgrazer",
+                "mode": "avoid_unfamiliar",
+                "age_s": 239.99999999999375,
+                "life_stage": "adult",
+                "laying_s": 0.0,
+                "food_reserve_ug": "130000000",
+                "water_reserve_ug": "20000000",
+                "food_metabolized_ug": "120000000",
+                "water_metabolized_ug": "180000000",
+                "eggs_laid_ug": "0",
+                "familiarity": {},
+                "last_feed": {},
+                "handler": "",
+                "guide_until": "0"
+              },
+              "animal-2": {
+                "species": "reedhen",
+                "mode": "wander",
+                "age_s": 239.99999999999375,
+                "life_stage": "adult",
+                "laying_s": 30.0,
+                "food_reserve_ug": "50000000",
+                "water_reserve_ug": "20000000",
+                "food_metabolized_ug": "120000000",
+                "water_metabolized_ug": "180000000",
+                "eggs_laid_ug": "60000000",
+                "familiarity": {},
+                "last_feed": {},
+                "handler": "",
+                "guide_until": "0"
+              }
+            },
+            "freshness_s": {
+              "animal-2:eggs": 89.80000000000241
+            },
+            "structural_body_initial_ug": "2800000000",
+            "food_residue_ug": "260000000",
+            "water_waste_ug": "360000000",
+            "egg_input_ug": "80000000",
+            "eggs_produced_ug": "60000000",
+            "forage_regeneration_kg_s": 0.0
+          },
+          "boundary_sources_ug": {
+            "food": 0,
+            "fuel_X": 0,
+            "inert_material": 0,
+            "oxygen": 0,
+            "product_P": 0,
+            "stone": 0,
+            "tree": 0,
+            "water": 0
+          },
+          "event_counts": {
+            "ecology_initialized": 1,
+            "egg_laid": 1,
+            "tick": 600
+          }
+        },
+        {
+          "simulated_s": 300.0,
+          "tick": "1500",
+          "native_head": "241f1437a81029d97684f3f3a864953b716e1f3512961a1901bce39eb156f3eb",
+          "balances": {
+            "food_error_ug": 0,
+            "water_error_ug": 0,
+            "body_error_ug": 0
+          },
+          "animals": {
+            "animal-1": {
+              "alive": false,
+              "condition": "poor",
+              "position_m": [
+                7.800787475516437,
+                8.538971069146552
+              ]
+            },
+            "animal-2": {
+              "alive": false,
+              "condition": "poor",
+              "position_m": [
+                8.171217439294214,
+                8.383257860764141
+              ]
+            }
+          },
+          "ecology": {
+            "enabled": true,
+            "controller_origin": "authored_native_ecology_v1",
+            "animals": {
+              "animal-1": {
+                "species": "mossgrazer",
+                "mode": "dead",
+                "age_s": 419.9999999999835,
+                "life_stage": "adult",
+                "laying_s": 0.0,
+                "food_reserve_ug": "26800000",
+                "water_reserve_ug": "0",
+                "food_metabolized_ug": "223200000",
+                "water_metabolized_ug": "200000000",
+                "eggs_laid_ug": "0",
+                "familiarity": {},
+                "last_feed": {},
+                "handler": "",
+                "guide_until": "0"
+              },
+              "animal-2": {
+                "species": "reedhen",
+                "mode": "dead",
+                "age_s": 419.9999999999835,
+                "life_stage": "adult",
+                "laying_s": 30.0,
+                "food_reserve_ug": "0",
+                "water_reserve_ug": "0",
+                "food_metabolized_ug": "170000000",
+                "water_metabolized_ug": "200000000",
+                "eggs_laid_ug": "60000000",
+                "familiarity": {},
+                "last_feed": {},
+                "handler": "",
+                "guide_until": "0"
+              }
+            },
+            "freshness_s": {},
+            "structural_body_initial_ug": "2800000000",
+            "food_residue_ug": "473200000",
+            "water_waste_ug": "400000000",
+            "egg_input_ug": "80000000",
+            "eggs_produced_ug": "60000000",
+            "forage_regeneration_kg_s": 0.0
+          },
+          "boundary_sources_ug": {
+            "food": 0,
+            "fuel_X": 0,
+            "inert_material": 0,
+            "oxygen": 0,
+            "product_P": 0,
+            "stone": 0,
+            "tree": 0,
+            "water": 0
+          },
+          "event_counts": {
+            "animal_death": 2,
+            "ecology_initialized": 1,
+            "egg_laid": 1,
+            "food_spoiled": 1,
+            "tick": 1500
+          }
+        }
+      ],
+      "requests": [],
+      "authored_route_failures": [],
+      "accepted": 0,
+      "completed": 0
+    },
+    {
+      "seed": 44,
+      "treatment": "caretaking",
+      "simulated_s": 300.0,
+      "wall_s": 0.11323730000003707,
+      "resume_wall_s": 0.033213700000487734,
+      "resume_exact": true,
+      "stages": [
+        {
+          "simulated_s": 30.0,
+          "tick": "150",
+          "native_head": "96b7c3941a187b4225817222cb9b24af0c1c6680dad6d15eb1bda3cc8ec388bc",
+          "balances": {
+            "food_error_ug": 0,
+            "water_error_ug": 0,
+            "body_error_ug": 0
+          },
+          "animals": {
+            "animal-1": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                6.713835678693554,
+                7.185135830602579
+              ]
+            },
+            "animal-2": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                9.123680333192944,
+                8.41071168347706
+              ]
+            }
+          },
+          "ecology": {
+            "enabled": true,
+            "controller_origin": "authored_native_ecology_v1",
+            "animals": {
+              "animal-1": {
+                "species": "mossgrazer",
+                "mode": "wander",
+                "age_s": 149.99999999999886,
+                "life_stage": "adult",
+                "laying_s": 0.0,
+                "food_reserve_ug": "320000000",
+                "water_reserve_ug": "155000000",
+                "food_metabolized_ug": "30000000",
+                "water_metabolized_ug": "45000000",
+                "eggs_laid_ug": "0",
+                "familiarity": {
+                  "agent-1": 1
+                },
+                "last_feed": {
+                  "agent-1": 11
+                },
+                "handler": "",
+                "guide_until": "0"
+              },
+              "animal-2": {
+                "species": "reedhen",
+                "mode": "avoid_unfamiliar",
+                "age_s": 149.99999999999886,
+                "life_stage": "adult",
+                "laying_s": 0.0,
+                "food_reserve_ug": "240000000",
+                "water_reserve_ug": "155000000",
+                "food_metabolized_ug": "30000000",
+                "water_metabolized_ug": "45000000",
+                "eggs_laid_ug": "60000000",
+                "familiarity": {
+                  "agent-1": 1
+                },
+                "last_feed": {
+                  "agent-1": 31
+                },
+                "handler": "",
+                "guide_until": "0"
+              }
+            },
+            "freshness_s": {
+              "animal-2:eggs": 179.8
+            },
+            "structural_body_initial_ug": "2800000000",
+            "food_residue_ug": "80000000",
+            "water_waste_ug": "90000000",
+            "egg_input_ug": "80000000",
+            "eggs_produced_ug": "60000000",
+            "forage_regeneration_kg_s": 0.0
+          },
+          "boundary_sources_ug": {
+            "food": 0,
+            "fuel_X": 0,
+            "inert_material": 0,
+            "oxygen": 0,
+            "product_P": 0,
+            "stone": 0,
+            "tree": 0,
+            "water": 0
+          },
+          "event_counts": {
+            "action_accepted": 6,
+            "action_completed": 6,
+            "animal_care": 4,
+            "crafting_effect": 1,
+            "ecology_initialized": 1,
+            "egg_laid": 1,
+            "tick": 150
+          }
+        },
+        {
+          "simulated_s": 120.0,
+          "tick": "600",
+          "native_head": "4195a5c2a0a9a832a01ada6ef6aa5640dd3816d6e8e9c4dc09ad7dee8ba675c1",
+          "balances": {
+            "food_error_ug": 0,
+            "water_error_ug": 0,
+            "body_error_ug": 0
+          },
+          "animals": {
+            "animal-1": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                6.681657000962282,
+                7.202427790354877
+              ]
+            },
+            "animal-2": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                7.8258250909044484,
+                7.3088621515986505
+              ]
+            }
+          },
+          "ecology": {
+            "enabled": true,
+            "controller_origin": "authored_native_ecology_v1",
+            "animals": {
+              "animal-1": {
+                "species": "mossgrazer",
+                "mode": "wander",
+                "age_s": 239.99999999999375,
+                "life_stage": "adult",
+                "laying_s": 0.0,
+                "food_reserve_ug": "330000000",
+                "water_reserve_ug": "152000000",
+                "food_metabolized_ug": "120000000",
+                "water_metabolized_ug": "180000000",
+                "eggs_laid_ug": "0",
+                "familiarity": {
+                  "agent-1": 2
+                },
+                "last_feed": {
+                  "agent-1": 421
+                },
+                "handler": "",
+                "guide_until": "0"
+              },
+              "animal-2": {
+                "species": "reedhen",
+                "mode": "wander",
+                "age_s": 239.99999999999375,
+                "life_stage": "adult",
+                "laying_s": 29.999999999999925,
+                "food_reserve_ug": "90000000",
+                "water_reserve_ug": "152000000",
+                "food_metabolized_ug": "120000000",
+                "water_metabolized_ug": "180000000",
+                "eggs_laid_ug": "180000000",
+                "familiarity": {
+                  "agent-1": 2
+                },
+                "last_feed": {
+                  "agent-1": 428
+                },
+                "handler": "",
+                "guide_until": "0"
+              }
+            },
+            "freshness_s": {
+              "animal-2:eggs": 89.80000000000241
+            },
+            "structural_body_initial_ug": "2800000000",
+            "food_residue_ug": "300000000",
+            "water_waste_ug": "360000000",
+            "egg_input_ug": "240000000",
+            "eggs_produced_ug": "180000000",
+            "forage_regeneration_kg_s": 0.0
+          },
+          "boundary_sources_ug": {
+            "food": 0,
+            "fuel_X": 0,
+            "inert_material": 0,
+            "oxygen": 0,
+            "product_P": 0,
+            "stone": 0,
+            "tree": 0,
+            "water": 0
+          },
+          "event_counts": {
+            "action_accepted": 15,
+            "action_completed": 15,
+            "animal_care": 11,
+            "animal_drank": 66,
+            "consumption": 1,
+            "crafting_effect": 1,
+            "ecology_initialized": 1,
+            "egg_laid": 3,
+            "tick": 600
+          }
+        },
+        {
+          "simulated_s": 300.0,
+          "tick": "1500",
+          "native_head": "e962a7cf269f6d50e9deca8112a6aa3bd87e6ce5efe8c448ab78697d09f27a7a",
+          "balances": {
+            "food_error_ug": 0,
+            "water_error_ug": 0,
+            "body_error_ug": 0
+          },
+          "animals": {
+            "animal-1": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                7.8001391063554175,
+                7.9417074250194055
+              ]
+            },
+            "animal-2": {
+              "alive": true,
+              "condition": "poor",
+              "position_m": [
+                8.272711957942555,
+                8.023973929001103
+              ]
+            }
+          },
+          "ecology": {
+            "enabled": true,
+            "controller_origin": "authored_native_ecology_v1",
+            "animals": {
+              "animal-1": {
+                "species": "mossgrazer",
+                "mode": "seek_water",
+                "age_s": 419.9999999999835,
+                "life_stage": "adult",
+                "laying_s": 0.0,
+                "food_reserve_ug": "250000000",
+                "water_reserve_ug": "125300000",
+                "food_metabolized_ug": "300000000",
+                "water_metabolized_ug": "442700000",
+                "eggs_laid_ug": "0",
+                "familiarity": {
+                  "agent-1": 3
+                },
+                "last_feed": {
+                  "agent-1": 811
+                },
+                "handler": "",
+                "guide_until": "0"
+              },
+              "animal-2": {
+                "species": "reedhen",
+                "mode": "wander",
+                "age_s": 419.9999999999835,
+                "life_stage": "adult",
+                "laying_s": 30.0,
+                "food_reserve_ug": "0",
+                "water_reserve_ug": "150000000",
+                "food_metabolized_ug": "230000000",
+                "water_metabolized_ug": "450000000",
+                "eggs_laid_ug": "240000000",
+                "familiarity": {
+                  "agent-1": 3
+                },
+                "last_feed": {
+                  "agent-1": 818
+                },
+                "handler": "",
+                "guide_until": "0"
+              }
+            },
+            "freshness_s": {},
+            "structural_body_initial_ug": "2800000000",
+            "food_residue_ug": "730000000",
+            "water_waste_ug": "892700000",
+            "egg_input_ug": "320000000",
+            "eggs_produced_ug": "240000000",
+            "forage_regeneration_kg_s": 0.0
+          },
+          "boundary_sources_ug": {
+            "food": 0,
+            "fuel_X": 0,
+            "inert_material": 0,
+            "oxygen": 0,
+            "product_P": 0,
+            "stone": 0,
+            "tree": 0,
+            "water": 0
+          },
+          "event_counts": {
+            "action_accepted": 27,
+            "action_completed": 26,
+            "action_failed": 1,
+            "action_rejected": 1,
+            "animal_care": 20,
+            "animal_drank": 192,
+            "consumption": 2,
+            "crafting_effect": 2,
+            "ecology_initialized": 1,
+            "egg_laid": 4,
+            "food_spoiled": 1,
+            "tick": 1500
+          }
+        }
+      ],
+      "requests": [
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-fill_trough-0-0",
+            "observation_version": "0",
+            "action_type": "fill_trough",
+            "target_ids": [
+              "care-trough"
+            ],
+            "parameters": {
+              "material": "water",
+              "mass_kg": 0.5
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-fill_trough-0-0",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "0",
+            "completed_tick": "0",
+            "observation_version": "0",
+            "event_refs": [
+              "2"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-fill_trough-0-0",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "0",
+            "completed_tick": "5",
+            "observation_version": "5",
+            "event_refs": [
+              "2",
+              "7",
+              "8"
+            ],
+            "observable_effects": {
+              "description": "water:500000000ug:fill_trough"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-5-1",
+            "observation_version": "5",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-5-1",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "5",
+            "completed_tick": "0",
+            "observation_version": "5",
+            "event_refs": [
+              "10"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-5-1",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "5",
+            "completed_tick": "6",
+            "observation_version": "6",
+            "event_refs": [
+              "10",
+              "11",
+              "12"
+            ],
+            "observable_effects": {
+              "description": "mossgrazer:condition=good:hunger=low:thirst=low:own_familiarity=0:eggs_ug=0"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-offer_feed-6-2",
+            "observation_version": "6",
+            "action_type": "offer_feed",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {
+              "material": "food",
+              "mass_kg": 0.1
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-6-2",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "6",
+            "completed_tick": "0",
+            "observation_version": "6",
+            "event_refs": [
+              "14"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-6-2",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "6",
+            "completed_tick": "11",
+            "observation_version": "11",
+            "event_refs": [
+              "14",
+              "19",
+              "20"
+            ],
+            "observable_effects": {
+              "description": "fed_ug=100000000:authored_familiarity=1"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-move-11-3",
+            "observation_version": "11",
+            "action_type": "move",
+            "target_ids": [],
+            "parameters": {
+              "x_m": 8.253683342429962,
+              "y_m": 8.111163129538975
+            },
+            "requested_duration": 2.7722415627656227
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-move-11-3",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "11",
+            "completed_tick": "0",
+            "observation_version": "11",
+            "event_refs": [
+              "22"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-move-11-3",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "11",
+            "completed_tick": "15",
+            "observation_version": "15",
+            "event_refs": [
+              "22",
+              "26"
+            ],
+            "observable_effects": {
+              "description": ""
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-25-4",
+            "observation_version": "25",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-25-4",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "25",
+            "completed_tick": "0",
+            "observation_version": "25",
+            "event_refs": [
+              "38"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-25-4",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "25",
+            "completed_tick": "26",
+            "observation_version": "26",
+            "event_refs": [
+              "38",
+              "39",
+              "40"
+            ],
+            "observable_effects": {
+              "description": "reedhen:condition=good:hunger=low:thirst=low:own_familiarity=0:eggs_ug=0"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-offer_feed-26-5",
+            "observation_version": "26",
+            "action_type": "offer_feed",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {
+              "material": "food",
+              "mass_kg": 0.1
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-26-5",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "26",
+            "completed_tick": "0",
+            "observation_version": "26",
+            "event_refs": [
+              "42"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-26-5",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "26",
+            "completed_tick": "31",
+            "observation_version": "31",
+            "event_refs": [
+              "42",
+              "47",
+              "48"
+            ],
+            "observable_effects": {
+              "description": "fed_ug=100000000:authored_familiarity=1"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-move-400-6",
+            "observation_version": "400",
+            "action_type": "move",
+            "target_ids": [],
+            "parameters": {
+              "x_m": 7.554944148132082,
+              "y_m": 7.687216247720158
+            },
+            "requested_duration": 2.817292738406471
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-move-400-6",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "400",
+            "completed_tick": "0",
+            "observation_version": "400",
+            "event_refs": [
+              "439"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-move-400-6",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "400",
+            "completed_tick": "405",
+            "observation_version": "405",
+            "event_refs": [
+              "439",
+              "444"
+            ],
+            "observable_effects": {
+              "description": ""
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-415-7",
+            "observation_version": "415",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-415-7",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "415",
+            "completed_tick": "0",
+            "observation_version": "415",
+            "event_refs": [
+              "457"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-415-7",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "415",
+            "completed_tick": "416",
+            "observation_version": "416",
+            "event_refs": [
+              "457",
+              "458",
+              "459"
+            ],
+            "observable_effects": {
+              "description": "mossgrazer:condition=good:hunger=low:thirst=low:own_familiarity=1:eggs_ug=0"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-offer_feed-416-8",
+            "observation_version": "416",
+            "action_type": "offer_feed",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {
+              "material": "food",
+              "mass_kg": 0.1
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-416-8",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "416",
+            "completed_tick": "0",
+            "observation_version": "416",
+            "event_refs": [
+              "461"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-416-8",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "416",
+            "completed_tick": "421",
+            "observation_version": "421",
+            "event_refs": [
+              "461",
+              "466",
+              "467"
+            ],
+            "observable_effects": {
+              "description": "fed_ug=100000000:authored_familiarity=2"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-421-9",
+            "observation_version": "421",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-421-9",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "421",
+            "completed_tick": "0",
+            "observation_version": "421",
+            "event_refs": [
+              "470"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-421-9",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "421",
+            "completed_tick": "422",
+            "observation_version": "422",
+            "event_refs": [
+              "470",
+              "471",
+              "472"
+            ],
+            "observable_effects": {
+              "description": "mossgrazer:condition=good:hunger=low:thirst=low:own_familiarity=2:eggs_ug=0"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-422-10",
+            "observation_version": "422",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-422-10",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "422",
+            "completed_tick": "0",
+            "observation_version": "422",
+            "event_refs": [
+              "474"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-422-10",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "422",
+            "completed_tick": "423",
+            "observation_version": "423",
+            "event_refs": [
+              "474",
+              "475",
+              "476"
+            ],
+            "observable_effects": {
+              "description": "reedhen:condition=good:hunger=high:thirst=high:own_familiarity=1:eggs_ug=120000000"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-offer_feed-423-11",
+            "observation_version": "423",
+            "action_type": "offer_feed",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {
+              "material": "food",
+              "mass_kg": 0.1
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-423-11",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "423",
+            "completed_tick": "0",
+            "observation_version": "423",
+            "event_refs": [
+              "478"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-423-11",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "423",
+            "completed_tick": "428",
+            "observation_version": "428",
+            "event_refs": [
+              "478",
+              "483",
+              "484"
+            ],
+            "observable_effects": {
+              "description": "fed_ug=100000000:authored_familiarity=2"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-428-12",
+            "observation_version": "428",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-428-12",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "428",
+            "completed_tick": "0",
+            "observation_version": "428",
+            "event_refs": [
+              "486"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-428-12",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "428",
+            "completed_tick": "429",
+            "observation_version": "429",
+            "event_refs": [
+              "486",
+              "487",
+              "488"
+            ],
+            "observable_effects": {
+              "description": "reedhen:condition=good:hunger=low:thirst=high:own_familiarity=2:eggs_ug=120000000"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-collect_eggs-429-13",
+            "observation_version": "429",
+            "action_type": "collect_eggs",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {
+              "material": "eggs",
+              "mass_kg": 0.06
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-collect_eggs-429-13",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "429",
+            "completed_tick": "0",
+            "observation_version": "429",
+            "event_refs": [
+              "490"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-collect_eggs-429-13",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "429",
+            "completed_tick": "434",
+            "observation_version": "434",
+            "event_refs": [
+              "490",
+              "497",
+              "498"
+            ],
+            "observable_effects": {
+              "description": "collected_eggs_ug=60000000"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-eat-434-14",
+            "observation_version": "434",
+            "action_type": "eat",
+            "target_ids": [],
+            "parameters": {
+              "material": "eggs",
+              "mass_kg": 0.06
+            },
+            "requested_duration": 2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-eat-434-14",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "434",
+            "completed_tick": "0",
+            "observation_version": "434",
+            "event_refs": [
+              "502"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-eat-434-14",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "434",
+            "completed_tick": "444",
+            "observation_version": "444",
+            "event_refs": [
+              "502",
+              "521",
+              "522"
+            ],
+            "observable_effects": {
+              "description": "ingested_ug=60000000"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-fill_trough-800-15",
+            "observation_version": "800",
+            "action_type": "fill_trough",
+            "target_ids": [
+              "care-trough"
+            ],
+            "parameters": {
+              "material": "water",
+              "mass_kg": 0.5
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-fill_trough-800-15",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "800",
+            "completed_tick": "0",
+            "observation_version": "800",
+            "event_refs": [
+              "935"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-fill_trough-800-15",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "800",
+            "completed_tick": "805",
+            "observation_version": "805",
+            "event_refs": [
+              "935",
+              "940",
+              "941"
+            ],
+            "observable_effects": {
+              "description": "water:500000000ug:fill_trough"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-805-16",
+            "observation_version": "805",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-805-16",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "805",
+            "completed_tick": "0",
+            "observation_version": "805",
+            "event_refs": [
+              "943"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-805-16",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "805",
+            "completed_tick": "806",
+            "observation_version": "806",
+            "event_refs": [
+              "943",
+              "944",
+              "945"
+            ],
+            "observable_effects": {
+              "description": "mossgrazer:condition=good:hunger=low:thirst=low:own_familiarity=2:eggs_ug=0"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-offer_feed-806-17",
+            "observation_version": "806",
+            "action_type": "offer_feed",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {
+              "material": "food",
+              "mass_kg": 0.1
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-806-17",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "806",
+            "completed_tick": "0",
+            "observation_version": "806",
+            "event_refs": [
+              "947"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-806-17",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "806",
+            "completed_tick": "811",
+            "observation_version": "811",
+            "event_refs": [
+              "947",
+              "953",
+              "954"
+            ],
+            "observable_effects": {
+              "description": "fed_ug=100000000:authored_familiarity=3"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-811-18",
+            "observation_version": "811",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-811-18",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "811",
+            "completed_tick": "0",
+            "observation_version": "811",
+            "event_refs": [
+              "956"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-811-18",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "811",
+            "completed_tick": "812",
+            "observation_version": "812",
+            "event_refs": [
+              "956",
+              "957",
+              "958"
+            ],
+            "observable_effects": {
+              "description": "mossgrazer:condition=good:hunger=low:thirst=low:own_familiarity=3:eggs_ug=0"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-812-19",
+            "observation_version": "812",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-812-19",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "812",
+            "completed_tick": "0",
+            "observation_version": "812",
+            "event_refs": [
+              "960"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-812-19",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "812",
+            "completed_tick": "813",
+            "observation_version": "813",
+            "event_refs": [
+              "960",
+              "961",
+              "962"
+            ],
+            "observable_effects": {
+              "description": "reedhen:condition=good:hunger=high:thirst=low:own_familiarity=2:eggs_ug=120000000"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-offer_feed-813-20",
+            "observation_version": "813",
+            "action_type": "offer_feed",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {
+              "material": "food",
+              "mass_kg": 0.1
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-813-20",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "813",
+            "completed_tick": "0",
+            "observation_version": "813",
+            "event_refs": [
+              "964"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-813-20",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "813",
+            "completed_tick": "818",
+            "observation_version": "818",
+            "event_refs": [
+              "964",
+              "969",
+              "970"
+            ],
+            "observable_effects": {
+              "description": "fed_ug=100000000:authored_familiarity=3"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-818-21",
+            "observation_version": "818",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-818-21",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "818",
+            "completed_tick": "0",
+            "observation_version": "818",
+            "event_refs": [
+              "973"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-818-21",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "818",
+            "completed_tick": "819",
+            "observation_version": "819",
+            "event_refs": [
+              "973",
+              "974",
+              "975"
+            ],
+            "observable_effects": {
+              "description": "reedhen:condition=good:hunger=low:thirst=low:own_familiarity=3:eggs_ug=180000000"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-collect_eggs-819-22",
+            "observation_version": "819",
+            "action_type": "collect_eggs",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {
+              "material": "eggs",
+              "mass_kg": 0.06
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-collect_eggs-819-22",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "819",
+            "completed_tick": "0",
+            "observation_version": "819",
+            "event_refs": [
+              "977"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-collect_eggs-819-22",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "819",
+            "completed_tick": "824",
+            "observation_version": "824",
+            "event_refs": [
+              "977",
+              "983",
+              "984"
+            ],
+            "observable_effects": {
+              "description": "collected_eggs_ug=60000000"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-eat-824-23",
+            "observation_version": "824",
+            "action_type": "eat",
+            "target_ids": [],
+            "parameters": {
+              "material": "eggs",
+              "mass_kg": 0.06
+            },
+            "requested_duration": 2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-eat-824-23",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "824",
+            "completed_tick": "0",
+            "observation_version": "824",
+            "event_refs": [
+              "986"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-eat-824-23",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "824",
+            "completed_tick": "834",
+            "observation_version": "834",
+            "event_refs": [
+              "986",
+              "996",
+              "997"
+            ],
+            "observable_effects": {
+              "description": "ingested_ug=60000000"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-1200-24",
+            "observation_version": "1200",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-1200-24",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "1200",
+            "completed_tick": "0",
+            "observation_version": "1200",
+            "event_refs": [
+              "1394"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-1200-24",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "1200",
+            "completed_tick": "1201",
+            "observation_version": "1201",
+            "event_refs": [
+              "1394",
+              "1395",
+              "1396"
+            ],
+            "observable_effects": {
+              "description": "mossgrazer:condition=good:hunger=low:thirst=high:own_familiarity=3:eggs_ug=0"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-offer_feed-1201-25",
+            "observation_version": "1201",
+            "action_type": "offer_feed",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {
+              "material": "food",
+              "mass_kg": 0.1
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-1201-25",
+            "agent_id": "agent-1",
+            "status": "rejected",
+            "error_code": "CAPACITY_EXCEEDED",
+            "reason": "CAPACITY_EXCEEDED",
+            "started_tick": "1201",
+            "completed_tick": "1201",
+            "observation_version": "1201",
+            "event_refs": [
+              "1398"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-1201-26",
+            "observation_version": "1201",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-1201-26",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "1201",
+            "completed_tick": "0",
+            "observation_version": "1201",
+            "event_refs": [
+              "1399"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-1201-26",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "1201",
+            "completed_tick": "1202",
+            "observation_version": "1202",
+            "event_refs": [
+              "1399",
+              "1400",
+              "1401"
+            ],
+            "observable_effects": {
+              "description": "mossgrazer:condition=good:hunger=low:thirst=high:own_familiarity=3:eggs_ug=0"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-move-1202-27",
+            "observation_version": "1202",
+            "action_type": "move",
+            "target_ids": [],
+            "parameters": {
+              "x_m": 7.71090782916277,
+              "y_m": 7.4218104339109505
+            },
+            "requested_duration": 2.3078391070094417
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-move-1202-27",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "1202",
+            "completed_tick": "0",
+            "observation_version": "1202",
+            "event_refs": [
+              "1403"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-move-1202-27",
+            "agent_id": "agent-1",
+            "status": "failed",
+            "error_code": "COLLISION",
+            "reason": "COLLISION",
+            "started_tick": "1202",
+            "completed_tick": "1204",
+            "observation_version": "1204",
+            "event_refs": [
+              "1403",
+              "1405"
+            ],
+            "observable_effects": {
+              "description": ""
+            }
+          }
+        }
+      ],
+      "authored_route_failures": [
+        {
+          "at_s": 240,
+          "action": "offer_feed",
+          "receipt": "{'schema_version': 1, 'request_id': 'c-offer_feed-1201-25', 'agent_id': 'agent-1', 'status': 'rejected', 'error_code': 'CAPACITY_EXCEEDED', 'reason': 'CAPACITY_EXCEEDED', 'started_tick': '1201', 'completed_tick': '1201', 'observation_version': '1201', 'event_refs': ['1398'], 'observable_effects': {'description': ''}, 'run_id': 'test'}"
+        },
+        {
+          "at_s": 240,
+          "action": "move",
+          "receipt": "{'schema_version': 1, 'request_id': 'c-move-1202-27', 'agent_id': 'agent-1', 'status': 'failed', 'error_code': 'COLLISION', 'reason': 'COLLISION', 'started_tick': '1202', 'completed_tick': '1204', 'observation_version': '1204', 'event_refs': ['1403', '1405'], 'observable_effects': {'description': ''}}"
+        }
+      ],
+      "accepted": 27,
+      "completed": 26
+    },
+    {
+      "seed": 73,
+      "treatment": "deprived",
+      "simulated_s": 300.0,
+      "wall_s": 0.07478209999680985,
+      "resume_wall_s": 0.02386069999920437,
+      "resume_exact": true,
+      "stages": [
+        {
+          "simulated_s": 30.0,
+          "tick": "150",
+          "native_head": "f57e3d299a04b5c6694ae12c7fc0514f88c6b129c79ff723311faf637b81adfa",
+          "balances": {
+            "food_error_ug": 0,
+            "water_error_ug": 0,
+            "body_error_ug": 0
+          },
+          "animals": {
+            "animal-1": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                6.0155257599954775,
+                9.185278560155522
+              ]
+            },
+            "animal-2": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                6.3752238462078585,
+                8.924499417504501
+              ]
+            }
+          },
+          "ecology": {
+            "enabled": true,
+            "controller_origin": "authored_native_ecology_v1",
+            "animals": {
+              "animal-1": {
+                "species": "mossgrazer",
+                "mode": "wander",
+                "age_s": 149.99999999999886,
+                "life_stage": "adult",
+                "laying_s": 0.0,
+                "food_reserve_ug": "220000000",
+                "water_reserve_ug": "155000000",
+                "food_metabolized_ug": "30000000",
+                "water_metabolized_ug": "45000000",
+                "eggs_laid_ug": "0",
+                "familiarity": {},
+                "last_feed": {},
+                "handler": "",
+                "guide_until": "0"
+              },
+              "animal-2": {
+                "species": "reedhen",
+                "mode": "wander",
+                "age_s": 149.99999999999886,
+                "life_stage": "adult",
+                "laying_s": 0.0,
+                "food_reserve_ug": "140000000",
+                "water_reserve_ug": "155000000",
+                "food_metabolized_ug": "30000000",
+                "water_metabolized_ug": "45000000",
+                "eggs_laid_ug": "60000000",
+                "familiarity": {},
+                "last_feed": {},
+                "handler": "",
+                "guide_until": "0"
+              }
+            },
+            "freshness_s": {
+              "animal-2:eggs": 179.8
+            },
+            "structural_body_initial_ug": "2800000000",
+            "food_residue_ug": "80000000",
+            "water_waste_ug": "90000000",
+            "egg_input_ug": "80000000",
+            "eggs_produced_ug": "60000000",
+            "forage_regeneration_kg_s": 0.0
+          },
+          "boundary_sources_ug": {
+            "food": 0,
+            "fuel_X": 0,
+            "inert_material": 0,
+            "oxygen": 0,
+            "product_P": 0,
+            "stone": 0,
+            "tree": 0,
+            "water": 0
+          },
+          "event_counts": {
+            "ecology_initialized": 1,
+            "egg_laid": 1,
+            "tick": 150
+          }
+        },
+        {
+          "simulated_s": 120.0,
+          "tick": "600",
+          "native_head": "d40015fb48aa24c82589bc571a87d8b714257336f57ca70a3b5329fb67e15302",
+          "balances": {
+            "food_error_ug": 0,
+            "water_error_ug": 0,
+            "body_error_ug": 0
+          },
+          "animals": {
+            "animal-1": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                5.768380123556387,
+                9.191351203408537
+              ]
+            },
+            "animal-2": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                6.203269523976361,
+                9.105917795557692
+              ]
+            }
+          },
+          "ecology": {
+            "enabled": true,
+            "controller_origin": "authored_native_ecology_v1",
+            "animals": {
+              "animal-1": {
+                "species": "mossgrazer",
+                "mode": "avoid_unfamiliar",
+                "age_s": 239.99999999999375,
+                "life_stage": "adult",
+                "laying_s": 0.0,
+                "food_reserve_ug": "130000000",
+                "water_reserve_ug": "20000000",
+                "food_metabolized_ug": "120000000",
+                "water_metabolized_ug": "180000000",
+                "eggs_laid_ug": "0",
+                "familiarity": {},
+                "last_feed": {},
+                "handler": "",
+                "guide_until": "0"
+              },
+              "animal-2": {
+                "species": "reedhen",
+                "mode": "wander",
+                "age_s": 239.99999999999375,
+                "life_stage": "adult",
+                "laying_s": 30.0,
+                "food_reserve_ug": "50000000",
+                "water_reserve_ug": "20000000",
+                "food_metabolized_ug": "120000000",
+                "water_metabolized_ug": "180000000",
+                "eggs_laid_ug": "60000000",
+                "familiarity": {},
+                "last_feed": {},
+                "handler": "",
+                "guide_until": "0"
+              }
+            },
+            "freshness_s": {
+              "animal-2:eggs": 89.80000000000241
+            },
+            "structural_body_initial_ug": "2800000000",
+            "food_residue_ug": "260000000",
+            "water_waste_ug": "360000000",
+            "egg_input_ug": "80000000",
+            "eggs_produced_ug": "60000000",
+            "forage_regeneration_kg_s": 0.0
+          },
+          "boundary_sources_ug": {
+            "food": 0,
+            "fuel_X": 0,
+            "inert_material": 0,
+            "oxygen": 0,
+            "product_P": 0,
+            "stone": 0,
+            "tree": 0,
+            "water": 0
+          },
+          "event_counts": {
+            "ecology_initialized": 1,
+            "egg_laid": 1,
+            "tick": 600
+          }
+        },
+        {
+          "simulated_s": 300.0,
+          "tick": "1500",
+          "native_head": "de660f8c7f5ade3e08c0a5e3a1df3af54c846828c1be9c8d80319cff5097a41b",
+          "balances": {
+            "food_error_ug": 0,
+            "water_error_ug": 0,
+            "body_error_ug": 0
+          },
+          "animals": {
+            "animal-1": {
+              "alive": false,
+              "condition": "poor",
+              "position_m": [
+                5.900787473577369,
+                9.138971069878782
+              ]
+            },
+            "animal-2": {
+              "alive": false,
+              "condition": "poor",
+              "position_m": [
+                6.271217438707554,
+                8.983257861159474
+              ]
+            }
+          },
+          "ecology": {
+            "enabled": true,
+            "controller_origin": "authored_native_ecology_v1",
+            "animals": {
+              "animal-1": {
+                "species": "mossgrazer",
+                "mode": "dead",
+                "age_s": 419.9999999999835,
+                "life_stage": "adult",
+                "laying_s": 0.0,
+                "food_reserve_ug": "26800000",
+                "water_reserve_ug": "0",
+                "food_metabolized_ug": "223200000",
+                "water_metabolized_ug": "200000000",
+                "eggs_laid_ug": "0",
+                "familiarity": {},
+                "last_feed": {},
+                "handler": "",
+                "guide_until": "0"
+              },
+              "animal-2": {
+                "species": "reedhen",
+                "mode": "dead",
+                "age_s": 419.9999999999835,
+                "life_stage": "adult",
+                "laying_s": 30.0,
+                "food_reserve_ug": "0",
+                "water_reserve_ug": "0",
+                "food_metabolized_ug": "170000000",
+                "water_metabolized_ug": "200000000",
+                "eggs_laid_ug": "60000000",
+                "familiarity": {},
+                "last_feed": {},
+                "handler": "",
+                "guide_until": "0"
+              }
+            },
+            "freshness_s": {},
+            "structural_body_initial_ug": "2800000000",
+            "food_residue_ug": "473200000",
+            "water_waste_ug": "400000000",
+            "egg_input_ug": "80000000",
+            "eggs_produced_ug": "60000000",
+            "forage_regeneration_kg_s": 0.0
+          },
+          "boundary_sources_ug": {
+            "food": 0,
+            "fuel_X": 0,
+            "inert_material": 0,
+            "oxygen": 0,
+            "product_P": 0,
+            "stone": 0,
+            "tree": 0,
+            "water": 0
+          },
+          "event_counts": {
+            "animal_death": 2,
+            "ecology_initialized": 1,
+            "egg_laid": 1,
+            "food_spoiled": 1,
+            "tick": 1500
+          }
+        }
+      ],
+      "requests": [],
+      "authored_route_failures": [],
+      "accepted": 0,
+      "completed": 0
+    },
+    {
+      "seed": 73,
+      "treatment": "caretaking",
+      "simulated_s": 300.0,
+      "wall_s": 0.1042100999984541,
+      "resume_wall_s": 0.03273040000203764,
+      "resume_exact": true,
+      "stages": [
+        {
+          "simulated_s": 30.0,
+          "tick": "150",
+          "native_head": "ec1edcafbbc14b3e4e461db0e3ff943ab64c86e08fe9544afbf91d3bbcef1a3d",
+          "balances": {
+            "food_error_ug": 0,
+            "water_error_ug": 0,
+            "body_error_ug": 0
+          },
+          "animals": {
+            "animal-1": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                4.813835678693535,
+                7.785135830602574
+              ]
+            },
+            "animal-2": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                7.223680333192876,
+                9.010711683477133
+              ]
+            }
+          },
+          "ecology": {
+            "enabled": true,
+            "controller_origin": "authored_native_ecology_v1",
+            "animals": {
+              "animal-1": {
+                "species": "mossgrazer",
+                "mode": "wander",
+                "age_s": 149.99999999999886,
+                "life_stage": "adult",
+                "laying_s": 0.0,
+                "food_reserve_ug": "320000000",
+                "water_reserve_ug": "155000000",
+                "food_metabolized_ug": "30000000",
+                "water_metabolized_ug": "45000000",
+                "eggs_laid_ug": "0",
+                "familiarity": {
+                  "agent-1": 1
+                },
+                "last_feed": {
+                  "agent-1": 11
+                },
+                "handler": "",
+                "guide_until": "0"
+              },
+              "animal-2": {
+                "species": "reedhen",
+                "mode": "avoid_unfamiliar",
+                "age_s": 149.99999999999886,
+                "life_stage": "adult",
+                "laying_s": 0.0,
+                "food_reserve_ug": "240000000",
+                "water_reserve_ug": "155000000",
+                "food_metabolized_ug": "30000000",
+                "water_metabolized_ug": "45000000",
+                "eggs_laid_ug": "60000000",
+                "familiarity": {
+                  "agent-1": 1
+                },
+                "last_feed": {
+                  "agent-1": 31
+                },
+                "handler": "",
+                "guide_until": "0"
+              }
+            },
+            "freshness_s": {
+              "animal-2:eggs": 179.8
+            },
+            "structural_body_initial_ug": "2800000000",
+            "food_residue_ug": "80000000",
+            "water_waste_ug": "90000000",
+            "egg_input_ug": "80000000",
+            "eggs_produced_ug": "60000000",
+            "forage_regeneration_kg_s": 0.0
+          },
+          "boundary_sources_ug": {
+            "food": 0,
+            "fuel_X": 0,
+            "inert_material": 0,
+            "oxygen": 0,
+            "product_P": 0,
+            "stone": 0,
+            "tree": 0,
+            "water": 0
+          },
+          "event_counts": {
+            "action_accepted": 6,
+            "action_completed": 6,
+            "animal_care": 4,
+            "crafting_effect": 1,
+            "ecology_initialized": 1,
+            "egg_laid": 1,
+            "tick": 150
+          }
+        },
+        {
+          "simulated_s": 120.0,
+          "tick": "600",
+          "native_head": "fd417bcecfb19e70284f17bea4a96f00fccc16eaf4a56a36bf82e314809dbfa2",
+          "balances": {
+            "food_error_ug": 0,
+            "water_error_ug": 0,
+            "body_error_ug": 0
+          },
+          "animals": {
+            "animal-1": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                4.781657000962271,
+                7.802427790354896
+              ]
+            },
+            "animal-2": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                5.925825090904096,
+                7.908862151599956
+              ]
+            }
+          },
+          "ecology": {
+            "enabled": true,
+            "controller_origin": "authored_native_ecology_v1",
+            "animals": {
+              "animal-1": {
+                "species": "mossgrazer",
+                "mode": "wander",
+                "age_s": 239.99999999999375,
+                "life_stage": "adult",
+                "laying_s": 0.0,
+                "food_reserve_ug": "330000000",
+                "water_reserve_ug": "152000000",
+                "food_metabolized_ug": "120000000",
+                "water_metabolized_ug": "180000000",
+                "eggs_laid_ug": "0",
+                "familiarity": {
+                  "agent-1": 2
+                },
+                "last_feed": {
+                  "agent-1": 421
+                },
+                "handler": "",
+                "guide_until": "0"
+              },
+              "animal-2": {
+                "species": "reedhen",
+                "mode": "wander",
+                "age_s": 239.99999999999375,
+                "life_stage": "adult",
+                "laying_s": 29.999999999999925,
+                "food_reserve_ug": "90000000",
+                "water_reserve_ug": "152000000",
+                "food_metabolized_ug": "120000000",
+                "water_metabolized_ug": "180000000",
+                "eggs_laid_ug": "180000000",
+                "familiarity": {
+                  "agent-1": 2
+                },
+                "last_feed": {
+                  "agent-1": 428
+                },
+                "handler": "",
+                "guide_until": "0"
+              }
+            },
+            "freshness_s": {
+              "animal-2:eggs": 89.80000000000241
+            },
+            "structural_body_initial_ug": "2800000000",
+            "food_residue_ug": "300000000",
+            "water_waste_ug": "360000000",
+            "egg_input_ug": "240000000",
+            "eggs_produced_ug": "180000000",
+            "forage_regeneration_kg_s": 0.0
+          },
+          "boundary_sources_ug": {
+            "food": 0,
+            "fuel_X": 0,
+            "inert_material": 0,
+            "oxygen": 0,
+            "product_P": 0,
+            "stone": 0,
+            "tree": 0,
+            "water": 0
+          },
+          "event_counts": {
+            "action_accepted": 15,
+            "action_completed": 15,
+            "animal_care": 11,
+            "animal_drank": 66,
+            "consumption": 1,
+            "crafting_effect": 1,
+            "ecology_initialized": 1,
+            "egg_laid": 3,
+            "tick": 600
+          }
+        },
+        {
+          "simulated_s": 300.0,
+          "tick": "1500",
+          "native_head": "e22454044536205b5c712ac904d856ba216713a0a49bc3cc0ebd22efa3c9b419",
+          "balances": {
+            "food_error_ug": 0,
+            "water_error_ug": 0,
+            "body_error_ug": 0
+          },
+          "animals": {
+            "animal-1": {
+              "alive": true,
+              "condition": "good",
+              "position_m": [
+                5.90013910635541,
+                8.541707425019414
+              ]
+            },
+            "animal-2": {
+              "alive": true,
+              "condition": "poor",
+              "position_m": [
+                6.3727119579425615,
+                8.623973929001103
+              ]
+            }
+          },
+          "ecology": {
+            "enabled": true,
+            "controller_origin": "authored_native_ecology_v1",
+            "animals": {
+              "animal-1": {
+                "species": "mossgrazer",
+                "mode": "seek_water",
+                "age_s": 419.9999999999835,
+                "life_stage": "adult",
+                "laying_s": 0.0,
+                "food_reserve_ug": "250000000",
+                "water_reserve_ug": "125300000",
+                "food_metabolized_ug": "300000000",
+                "water_metabolized_ug": "442700000",
+                "eggs_laid_ug": "0",
+                "familiarity": {
+                  "agent-1": 3
+                },
+                "last_feed": {
+                  "agent-1": 811
+                },
+                "handler": "",
+                "guide_until": "0"
+              },
+              "animal-2": {
+                "species": "reedhen",
+                "mode": "wander",
+                "age_s": 419.9999999999835,
+                "life_stage": "adult",
+                "laying_s": 30.0,
+                "food_reserve_ug": "0",
+                "water_reserve_ug": "150000000",
+                "food_metabolized_ug": "230000000",
+                "water_metabolized_ug": "450000000",
+                "eggs_laid_ug": "240000000",
+                "familiarity": {
+                  "agent-1": 3
+                },
+                "last_feed": {
+                  "agent-1": 818
+                },
+                "handler": "",
+                "guide_until": "0"
+              }
+            },
+            "freshness_s": {},
+            "structural_body_initial_ug": "2800000000",
+            "food_residue_ug": "730000000",
+            "water_waste_ug": "892700000",
+            "egg_input_ug": "320000000",
+            "eggs_produced_ug": "240000000",
+            "forage_regeneration_kg_s": 0.0
+          },
+          "boundary_sources_ug": {
+            "food": 0,
+            "fuel_X": 0,
+            "inert_material": 0,
+            "oxygen": 0,
+            "product_P": 0,
+            "stone": 0,
+            "tree": 0,
+            "water": 0
+          },
+          "event_counts": {
+            "action_accepted": 27,
+            "action_completed": 26,
+            "action_failed": 1,
+            "action_rejected": 1,
+            "animal_care": 20,
+            "animal_drank": 192,
+            "consumption": 2,
+            "crafting_effect": 2,
+            "ecology_initialized": 1,
+            "egg_laid": 4,
+            "food_spoiled": 1,
+            "tick": 1500
+          }
+        }
+      ],
+      "requests": [
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-fill_trough-0-0",
+            "observation_version": "0",
+            "action_type": "fill_trough",
+            "target_ids": [
+              "care-trough"
+            ],
+            "parameters": {
+              "material": "water",
+              "mass_kg": 0.5
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-fill_trough-0-0",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "0",
+            "completed_tick": "0",
+            "observation_version": "0",
+            "event_refs": [
+              "2"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-fill_trough-0-0",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "0",
+            "completed_tick": "5",
+            "observation_version": "5",
+            "event_refs": [
+              "2",
+              "7",
+              "8"
+            ],
+            "observable_effects": {
+              "description": "water:500000000ug:fill_trough"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-5-1",
+            "observation_version": "5",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-5-1",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "5",
+            "completed_tick": "0",
+            "observation_version": "5",
+            "event_refs": [
+              "10"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-5-1",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "5",
+            "completed_tick": "6",
+            "observation_version": "6",
+            "event_refs": [
+              "10",
+              "11",
+              "12"
+            ],
+            "observable_effects": {
+              "description": "mossgrazer:condition=good:hunger=low:thirst=low:own_familiarity=0:eggs_ug=0"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-offer_feed-6-2",
+            "observation_version": "6",
+            "action_type": "offer_feed",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {
+              "material": "food",
+              "mass_kg": 0.1
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-6-2",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "6",
+            "completed_tick": "0",
+            "observation_version": "6",
+            "event_refs": [
+              "14"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-6-2",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "6",
+            "completed_tick": "11",
+            "observation_version": "11",
+            "event_refs": [
+              "14",
+              "19",
+              "20"
+            ],
+            "observable_effects": {
+              "description": "fed_ug=100000000:authored_familiarity=1"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-move-11-3",
+            "observation_version": "11",
+            "action_type": "move",
+            "target_ids": [],
+            "parameters": {
+              "x_m": 6.353683342429954,
+              "y_m": 8.71116312953897
+            },
+            "requested_duration": 2.7722415627656143
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-move-11-3",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "11",
+            "completed_tick": "0",
+            "observation_version": "11",
+            "event_refs": [
+              "22"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-move-11-3",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "11",
+            "completed_tick": "15",
+            "observation_version": "15",
+            "event_refs": [
+              "22",
+              "26"
+            ],
+            "observable_effects": {
+              "description": ""
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-25-4",
+            "observation_version": "25",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-25-4",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "25",
+            "completed_tick": "0",
+            "observation_version": "25",
+            "event_refs": [
+              "38"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-25-4",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "25",
+            "completed_tick": "26",
+            "observation_version": "26",
+            "event_refs": [
+              "38",
+              "39",
+              "40"
+            ],
+            "observable_effects": {
+              "description": "reedhen:condition=good:hunger=low:thirst=low:own_familiarity=0:eggs_ug=0"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-offer_feed-26-5",
+            "observation_version": "26",
+            "action_type": "offer_feed",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {
+              "material": "food",
+              "mass_kg": 0.1
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-26-5",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "26",
+            "completed_tick": "0",
+            "observation_version": "26",
+            "event_refs": [
+              "42"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-26-5",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "26",
+            "completed_tick": "31",
+            "observation_version": "31",
+            "event_refs": [
+              "42",
+              "47",
+              "48"
+            ],
+            "observable_effects": {
+              "description": "fed_ug=100000000:authored_familiarity=1"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-move-400-6",
+            "observation_version": "400",
+            "action_type": "move",
+            "target_ids": [],
+            "parameters": {
+              "x_m": 5.654944148132071,
+              "y_m": 8.28721624772018
+            },
+            "requested_duration": 2.8172927384064606
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-move-400-6",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "400",
+            "completed_tick": "0",
+            "observation_version": "400",
+            "event_refs": [
+              "439"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-move-400-6",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "400",
+            "completed_tick": "405",
+            "observation_version": "405",
+            "event_refs": [
+              "439",
+              "444"
+            ],
+            "observable_effects": {
+              "description": ""
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-415-7",
+            "observation_version": "415",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-415-7",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "415",
+            "completed_tick": "0",
+            "observation_version": "415",
+            "event_refs": [
+              "457"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-415-7",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "415",
+            "completed_tick": "416",
+            "observation_version": "416",
+            "event_refs": [
+              "457",
+              "458",
+              "459"
+            ],
+            "observable_effects": {
+              "description": "mossgrazer:condition=good:hunger=low:thirst=low:own_familiarity=1:eggs_ug=0"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-offer_feed-416-8",
+            "observation_version": "416",
+            "action_type": "offer_feed",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {
+              "material": "food",
+              "mass_kg": 0.1
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-416-8",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "416",
+            "completed_tick": "0",
+            "observation_version": "416",
+            "event_refs": [
+              "461"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-416-8",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "416",
+            "completed_tick": "421",
+            "observation_version": "421",
+            "event_refs": [
+              "461",
+              "466",
+              "467"
+            ],
+            "observable_effects": {
+              "description": "fed_ug=100000000:authored_familiarity=2"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-421-9",
+            "observation_version": "421",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-421-9",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "421",
+            "completed_tick": "0",
+            "observation_version": "421",
+            "event_refs": [
+              "470"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-421-9",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "421",
+            "completed_tick": "422",
+            "observation_version": "422",
+            "event_refs": [
+              "470",
+              "471",
+              "472"
+            ],
+            "observable_effects": {
+              "description": "mossgrazer:condition=good:hunger=low:thirst=low:own_familiarity=2:eggs_ug=0"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-422-10",
+            "observation_version": "422",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-422-10",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "422",
+            "completed_tick": "0",
+            "observation_version": "422",
+            "event_refs": [
+              "474"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-422-10",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "422",
+            "completed_tick": "423",
+            "observation_version": "423",
+            "event_refs": [
+              "474",
+              "475",
+              "476"
+            ],
+            "observable_effects": {
+              "description": "reedhen:condition=good:hunger=high:thirst=high:own_familiarity=1:eggs_ug=120000000"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-offer_feed-423-11",
+            "observation_version": "423",
+            "action_type": "offer_feed",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {
+              "material": "food",
+              "mass_kg": 0.1
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-423-11",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "423",
+            "completed_tick": "0",
+            "observation_version": "423",
+            "event_refs": [
+              "478"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-423-11",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "423",
+            "completed_tick": "428",
+            "observation_version": "428",
+            "event_refs": [
+              "478",
+              "483",
+              "484"
+            ],
+            "observable_effects": {
+              "description": "fed_ug=100000000:authored_familiarity=2"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-428-12",
+            "observation_version": "428",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-428-12",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "428",
+            "completed_tick": "0",
+            "observation_version": "428",
+            "event_refs": [
+              "486"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-428-12",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "428",
+            "completed_tick": "429",
+            "observation_version": "429",
+            "event_refs": [
+              "486",
+              "487",
+              "488"
+            ],
+            "observable_effects": {
+              "description": "reedhen:condition=good:hunger=low:thirst=high:own_familiarity=2:eggs_ug=120000000"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-collect_eggs-429-13",
+            "observation_version": "429",
+            "action_type": "collect_eggs",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {
+              "material": "eggs",
+              "mass_kg": 0.06
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-collect_eggs-429-13",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "429",
+            "completed_tick": "0",
+            "observation_version": "429",
+            "event_refs": [
+              "490"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-collect_eggs-429-13",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "429",
+            "completed_tick": "434",
+            "observation_version": "434",
+            "event_refs": [
+              "490",
+              "497",
+              "498"
+            ],
+            "observable_effects": {
+              "description": "collected_eggs_ug=60000000"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-eat-434-14",
+            "observation_version": "434",
+            "action_type": "eat",
+            "target_ids": [],
+            "parameters": {
+              "material": "eggs",
+              "mass_kg": 0.06
+            },
+            "requested_duration": 2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-eat-434-14",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "434",
+            "completed_tick": "0",
+            "observation_version": "434",
+            "event_refs": [
+              "502"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-eat-434-14",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "434",
+            "completed_tick": "444",
+            "observation_version": "444",
+            "event_refs": [
+              "502",
+              "521",
+              "522"
+            ],
+            "observable_effects": {
+              "description": "ingested_ug=60000000"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-fill_trough-800-15",
+            "observation_version": "800",
+            "action_type": "fill_trough",
+            "target_ids": [
+              "care-trough"
+            ],
+            "parameters": {
+              "material": "water",
+              "mass_kg": 0.5
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-fill_trough-800-15",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "800",
+            "completed_tick": "0",
+            "observation_version": "800",
+            "event_refs": [
+              "935"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-fill_trough-800-15",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "800",
+            "completed_tick": "805",
+            "observation_version": "805",
+            "event_refs": [
+              "935",
+              "940",
+              "941"
+            ],
+            "observable_effects": {
+              "description": "water:500000000ug:fill_trough"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-805-16",
+            "observation_version": "805",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-805-16",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "805",
+            "completed_tick": "0",
+            "observation_version": "805",
+            "event_refs": [
+              "943"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-805-16",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "805",
+            "completed_tick": "806",
+            "observation_version": "806",
+            "event_refs": [
+              "943",
+              "944",
+              "945"
+            ],
+            "observable_effects": {
+              "description": "mossgrazer:condition=good:hunger=low:thirst=low:own_familiarity=2:eggs_ug=0"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-offer_feed-806-17",
+            "observation_version": "806",
+            "action_type": "offer_feed",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {
+              "material": "food",
+              "mass_kg": 0.1
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-806-17",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "806",
+            "completed_tick": "0",
+            "observation_version": "806",
+            "event_refs": [
+              "947"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-806-17",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "806",
+            "completed_tick": "811",
+            "observation_version": "811",
+            "event_refs": [
+              "947",
+              "953",
+              "954"
+            ],
+            "observable_effects": {
+              "description": "fed_ug=100000000:authored_familiarity=3"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-811-18",
+            "observation_version": "811",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-811-18",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "811",
+            "completed_tick": "0",
+            "observation_version": "811",
+            "event_refs": [
+              "956"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-811-18",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "811",
+            "completed_tick": "812",
+            "observation_version": "812",
+            "event_refs": [
+              "956",
+              "957",
+              "958"
+            ],
+            "observable_effects": {
+              "description": "mossgrazer:condition=good:hunger=low:thirst=low:own_familiarity=3:eggs_ug=0"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-812-19",
+            "observation_version": "812",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-812-19",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "812",
+            "completed_tick": "0",
+            "observation_version": "812",
+            "event_refs": [
+              "960"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-812-19",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "812",
+            "completed_tick": "813",
+            "observation_version": "813",
+            "event_refs": [
+              "960",
+              "961",
+              "962"
+            ],
+            "observable_effects": {
+              "description": "reedhen:condition=good:hunger=high:thirst=low:own_familiarity=2:eggs_ug=120000000"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-offer_feed-813-20",
+            "observation_version": "813",
+            "action_type": "offer_feed",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {
+              "material": "food",
+              "mass_kg": 0.1
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-813-20",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "813",
+            "completed_tick": "0",
+            "observation_version": "813",
+            "event_refs": [
+              "964"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-813-20",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "813",
+            "completed_tick": "818",
+            "observation_version": "818",
+            "event_refs": [
+              "964",
+              "969",
+              "970"
+            ],
+            "observable_effects": {
+              "description": "fed_ug=100000000:authored_familiarity=3"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-818-21",
+            "observation_version": "818",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-818-21",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "818",
+            "completed_tick": "0",
+            "observation_version": "818",
+            "event_refs": [
+              "973"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-818-21",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "818",
+            "completed_tick": "819",
+            "observation_version": "819",
+            "event_refs": [
+              "973",
+              "974",
+              "975"
+            ],
+            "observable_effects": {
+              "description": "reedhen:condition=good:hunger=low:thirst=low:own_familiarity=3:eggs_ug=180000000"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-collect_eggs-819-22",
+            "observation_version": "819",
+            "action_type": "collect_eggs",
+            "target_ids": [
+              "animal-2"
+            ],
+            "parameters": {
+              "material": "eggs",
+              "mass_kg": 0.06
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-collect_eggs-819-22",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "819",
+            "completed_tick": "0",
+            "observation_version": "819",
+            "event_refs": [
+              "977"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-collect_eggs-819-22",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "819",
+            "completed_tick": "824",
+            "observation_version": "824",
+            "event_refs": [
+              "977",
+              "983",
+              "984"
+            ],
+            "observable_effects": {
+              "description": "collected_eggs_ug=60000000"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-eat-824-23",
+            "observation_version": "824",
+            "action_type": "eat",
+            "target_ids": [],
+            "parameters": {
+              "material": "eggs",
+              "mass_kg": 0.06
+            },
+            "requested_duration": 2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-eat-824-23",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "824",
+            "completed_tick": "0",
+            "observation_version": "824",
+            "event_refs": [
+              "986"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-eat-824-23",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "824",
+            "completed_tick": "834",
+            "observation_version": "834",
+            "event_refs": [
+              "986",
+              "996",
+              "997"
+            ],
+            "observable_effects": {
+              "description": "ingested_ug=60000000"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-1200-24",
+            "observation_version": "1200",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-1200-24",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "1200",
+            "completed_tick": "0",
+            "observation_version": "1200",
+            "event_refs": [
+              "1394"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-1200-24",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "1200",
+            "completed_tick": "1201",
+            "observation_version": "1201",
+            "event_refs": [
+              "1394",
+              "1395",
+              "1396"
+            ],
+            "observable_effects": {
+              "description": "mossgrazer:condition=good:hunger=low:thirst=high:own_familiarity=3:eggs_ug=0"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-offer_feed-1201-25",
+            "observation_version": "1201",
+            "action_type": "offer_feed",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {
+              "material": "food",
+              "mass_kg": 0.1
+            },
+            "requested_duration": 1
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-offer_feed-1201-25",
+            "agent_id": "agent-1",
+            "status": "rejected",
+            "error_code": "CAPACITY_EXCEEDED",
+            "reason": "CAPACITY_EXCEEDED",
+            "started_tick": "1201",
+            "completed_tick": "1201",
+            "observation_version": "1201",
+            "event_refs": [
+              "1398"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-observe_animal-1201-26",
+            "observation_version": "1201",
+            "action_type": "observe_animal",
+            "target_ids": [
+              "animal-1"
+            ],
+            "parameters": {},
+            "requested_duration": 0.2
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-1201-26",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "1201",
+            "completed_tick": "0",
+            "observation_version": "1201",
+            "event_refs": [
+              "1399"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-observe_animal-1201-26",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "1201",
+            "completed_tick": "1202",
+            "observation_version": "1202",
+            "event_refs": [
+              "1399",
+              "1400",
+              "1401"
+            ],
+            "observable_effects": {
+              "description": "mossgrazer:condition=good:hunger=low:thirst=high:own_familiarity=3:eggs_ug=0"
+            }
+          }
+        },
+        {
+          "request": {
+            "schema_version": 1,
+            "run_id": "test",
+            "agent_id": "agent-1",
+            "request_id": "c-move-1202-27",
+            "observation_version": "1202",
+            "action_type": "move",
+            "target_ids": [],
+            "parameters": {
+              "x_m": 5.8109078291627645,
+              "y_m": 8.021810433910952
+            },
+            "requested_duration": 2.3078391070094604
+          },
+          "submitted": {
+            "schema_version": 1,
+            "request_id": "c-move-1202-27",
+            "agent_id": "agent-1",
+            "status": "accepted",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "1202",
+            "completed_tick": "0",
+            "observation_version": "1202",
+            "event_refs": [
+              "1403"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "run_id": "test"
+          },
+          "terminal": {
+            "schema_version": 1,
+            "request_id": "c-move-1202-27",
+            "agent_id": "agent-1",
+            "status": "failed",
+            "error_code": "COLLISION",
+            "reason": "COLLISION",
+            "started_tick": "1202",
+            "completed_tick": "1204",
+            "observation_version": "1204",
+            "event_refs": [
+              "1403",
+              "1405"
+            ],
+            "observable_effects": {
+              "description": ""
+            }
+          }
+        }
+      ],
+      "authored_route_failures": [
+        {
+          "at_s": 240,
+          "action": "offer_feed",
+          "receipt": "{'schema_version': 1, 'request_id': 'c-offer_feed-1201-25', 'agent_id': 'agent-1', 'status': 'rejected', 'error_code': 'CAPACITY_EXCEEDED', 'reason': 'CAPACITY_EXCEEDED', 'started_tick': '1201', 'completed_tick': '1201', 'observation_version': '1201', 'event_refs': ['1398'], 'observable_effects': {'description': ''}, 'run_id': 'test'}"
+        },
+        {
+          "at_s": 240,
+          "action": "move",
+          "receipt": "{'schema_version': 1, 'request_id': 'c-move-1202-27', 'agent_id': 'agent-1', 'status': 'failed', 'error_code': 'COLLISION', 'reason': 'COLLISION', 'started_tick': '1202', 'completed_tick': '1204', 'observation_version': '1204', 'event_refs': ['1403', '1405'], 'observable_effects': {'description': ''}}"
+        }
+      ],
+      "accepted": 27,
+      "completed": 26
+    }
+  ],
+  "gates": {
+    "21": {
+      "care_improves_condition": true,
+      "reserve_funded_eggs": true,
+      "exact_resume": true,
+      "zero_balance_error": true
+    },
+    "44": {
+      "care_improves_condition": true,
+      "reserve_funded_eggs": true,
+      "exact_resume": true,
+      "zero_balance_error": true
+    },
+    "73": {
+      "care_improves_condition": true,
+      "reserve_funded_eggs": true,
+      "exact_resume": true,
+      "zero_balance_error": true
+    }
+  },
+  "passed": true
+}

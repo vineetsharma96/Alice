@@ -9,7 +9,7 @@ import tempfile
 import unittest
 
 from underworld import storage
-from underworld.learning import PolicyStore, features, request, execute, label_receipt, control, sha, update, world_head, registration
+from underworld.learning import PolicyStore, features, execute, control, sha, world_head, registration
 from scripts.phase9_experiment import prepare, clone, summarize, bootstrap
 
 

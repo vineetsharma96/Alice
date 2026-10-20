@@ -12,7 +12,6 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from underworld import storage
 from underworld.config import load
-from underworld.lab_policy import Driver
 
 
 @contextmanager

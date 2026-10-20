@@ -1,0 +1,29 @@
+underworld\observer.py:14:1: '.culture' imported but unused
+underworld\runtime.py:10:1: 'signal' imported but unused
+underworld\stabilization.py:13:1: 'sqlite3' imported but unused
+underworld\storage.py:413:31: undefined name 'state_hash'
+scripts\phase7_evidence.py:3:1: 'contextlib.closing' imported but unused
+scripts\phase7_evidence.py:8:1: 'os' imported but unused
+scripts\phase7_final_validation.py:3:1: 'json' imported but unused
+scripts\phase7_final_validation.py:4:1: 'os' imported but unused
+scripts\phase_d_eval.py:16:1: 'ecology_fixtures.pen' imported but unused
+scripts\stabilization_common.py:15:1: 'underworld.lab_policy.Driver' imported but unused
+scripts\stabilization_continuity.py:3:1: 'contextlib.closing' imported but unused
+scripts\stabilization_continuity.py:4:1: 'hashlib' imported but unused
+scripts\stabilization_report.py:12:1: 'stabilization_common.read' imported but unused
+scripts\stabilization_report.py:18:52: local variable 'baseline' is assigned to but never used
+tests\test_phase1.py:1:1: 'copy' imported but unused
+tests\test_phase1.py:5:1: 'os' imported but unused
+tests\test_phase1.py:16:1: 'underworld.wire.dumps' imported but unused
+tests\test_phase3.py:13:1: 'underworld.config.validate' imported but unused
+tests\test_phase4.py:14:1: 'underworld.cognition' imported but unused
+tests\test_phase7.py:3:1: 'json' imported but unused
+tests\test_phase7.py:11:1: 'time' imported but unused
+tests\test_phase7.py:16:1: 'underworld.lease.Lease' imported but unused
+tests\test_phase8.py:1:1: 'copy' imported but unused
+tests\test_phase8.py:8:1: 'time' imported but unused
+tests\test_phase9.py:12:1: 'underworld.learning.request' imported but unused
+tests\test_phase9.py:12:1: 'underworld.learning.label_receipt' imported but unused
+tests\test_phase9.py:12:1: 'underworld.learning.update' imported but unused
+tests\test_phase_d_ecology.py:10:1: 'underworld.config.validate' imported but unused
+tests\test_stabilization.py:11:1: 'scripts.stabilization_common.clone' imported but unused

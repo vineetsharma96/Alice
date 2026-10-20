@@ -97,10 +97,8 @@ int main() {
         uw::World fell(10,1,8,8,1,50,false,false,16,64,0,0,0);
         move_to(fell,"agent-1",{5,1},"fell-approach");
         uw::Action fell_action{"fell","agent-1","fell_tree","tree-2",fell.tick(),{},0,5};
-        require(fell.submit(fell_action).status=="accepted","felling rejected");fell.step(5);
-        require(entity(fell,"tree-2").stage=="stump"&&entity(fell,"tree-2").biomass_ug==800000000,"stump/depletion rule incorrect");
-        uw::Action stump_action{"stump","agent-1","harvest_branch","tree-2",fell.tick(),{},1,1};
-        require(fell.submit(stump_action).status=="rejected"&&fell.submit(stump_action).error=="TREE_DEPLETED","stump was harvestable");
+        require(fell.submit(fell_action).error=="MISSING_TOOL","felling without axe accepted");
+        require(entity(fell,"tree-2").biomass_ug==8000000000LL,"rejected felling removed biomass");
         fell.check_invariants();
 
         uw::World growth(11,1,8,8,1,50,false,false,16,64,0,0,.01);
@@ -125,10 +123,10 @@ int main() {
         require(std::count_if(race.entities().begin(),race.entities().end(),[](const auto& e){return e.kind=="wood"||e.kind=="fiber";})==2,"competing harvest duplicated products");
         race.check_invariants();
 
-        auto checkpoint=trees.serialize();require(checkpoint.rfind("UW7 ",0)==0,"new checkpoint version missing");
-        auto old_checkpoint=checkpoint;old_checkpoint.replace(0,3,"UW6");
+        auto checkpoint=trees.serialize();require(checkpoint.rfind("UW9 ",0)==0,"new checkpoint version missing");
+        auto old_checkpoint=checkpoint;old_checkpoint.replace(0,3,"UW7");
         bool rejected_old=false;try {static_cast<void>(uw::World::restore(old_checkpoint));}catch(const std::invalid_argument&){rejected_old=true;}
-        require(rejected_old,"old UW6 checkpoint migrated silently");
+        require(rejected_old,"old UW7 checkpoint migrated silently");
         std::cout<<"native deterministic/restart/transfer invariants passed\n";
     }catch(const std::exception&e){std::cerr<<e.what()<<'\n';return 1;}
 }

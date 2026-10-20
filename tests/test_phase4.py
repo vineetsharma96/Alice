@@ -11,7 +11,7 @@ import unittest
 from urllib.error import HTTPError
 from urllib.request import Request,urlopen
 
-from underworld import storage,memory,cognition,teaching
+from underworld import storage, memory, teaching
 from underworld.config import load,validate
 from underworld.native import load_native
 from underworld.observer import make_server

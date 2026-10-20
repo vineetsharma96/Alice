@@ -1,11 +1,9 @@
-import copy
 from contextlib import closing
 import hashlib
 import json
 from pathlib import Path
 import tempfile
 import threading
-import time
 import unittest
 from urllib.request import Request,urlopen
 from urllib.error import HTTPError

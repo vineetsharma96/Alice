@@ -8,7 +8,7 @@ from unittest.mock import patch
 
 from underworld import storage,stabilization as stable
 from underworld.lab_policy import Driver
-from scripts.stabilization_common import create,clone
+from scripts.stabilization_common import create
 
 
 class StabilizationTests(unittest.TestCase):

@@ -1,7 +1,5 @@
 """Progressive finite-resource worlds; fresh-process resume and recorded-command parity."""
 import argparse
-from contextlib import closing
-import hashlib
 import json
 from pathlib import Path
 import subprocess

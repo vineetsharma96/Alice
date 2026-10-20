@@ -1,11 +1,9 @@
 """Short, bounded Phase 7 evidence. Long horizons and 3D are deliberately deferred."""
 import argparse
-from contextlib import closing
 import copy
 import csv
 import hashlib
 import json
-import os
 from pathlib import Path
 import subprocess
 import sys

@@ -1,0 +1,27 @@
+{
+  "simulated_s": 120.0,
+  "wall_s": 169.58159290000185,
+  "native_state_hash": "da68713042375015e7fc88ba50f863072b4da1416620232215b3ada187837c90",
+  "matches_original_D_native_state": true,
+  "replay_matches": true,
+  "alive": {
+    "agent-1": true,
+    "agent-2": true,
+    "agent-3": true,
+    "agent-4": true,
+    "animal-1": true,
+    "animal-2": true
+  },
+  "native_events": {
+    "action_accepted": 15,
+    "action_completed": 15,
+    "animal_drank": 67,
+    "animal_foraged": 40,
+    "consumption": 4,
+    "ecology_initialized": 1,
+    "egg_laid": 1,
+    "mass_transfer": 4,
+    "tick": 600
+  },
+  "exe_sha256": "29abd8e1553571f07116c0e9cdf8ba69b06db3f4cbfc9a50524cd809c183a0e2"
+}

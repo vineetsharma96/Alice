@@ -1,0 +1,47 @@
+[
+  {
+    "width": 8,
+    "population": 4,
+    "seeds": 100,
+    "failures": [
+      {
+        "seed": 15,
+        "error": "overlapping solids"
+      },
+      {
+        "seed": 33,
+        "error": "overlapping solids"
+      },
+      {
+        "seed": 44,
+        "error": "overlapping solids"
+      },
+      {
+        "seed": 99,
+        "error": "overlapping solids"
+      }
+    ]
+  },
+  {
+    "width": 16,
+    "population": 4,
+    "seeds": 100,
+    "failures": [
+      {
+        "seed": 44,
+        "error": "overlapping solids"
+      }
+    ]
+  },
+  {
+    "width": 16,
+    "population": 8,
+    "seeds": 100,
+    "failures": [
+      {
+        "seed": 44,
+        "error": "overlapping solids"
+      }
+    ]
+  }
+]

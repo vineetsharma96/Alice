@@ -1,0 +1,19 @@
+[
+  {
+    "executable": "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\.venv\\Scripts\\python.exe",
+    "launcher_pid": 8268,
+    "actual_owner_pid": 7944,
+    "different_processes": true,
+    "released_immediately": true,
+    "owner_termination_error": "[WinError 5] Access is denied",
+    "released_after_owner_exit": true
+  },
+  {
+    "executable": "C:\\Users\\abc\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\python.exe",
+    "launcher_pid": 6056,
+    "actual_owner_pid": 6056,
+    "different_processes": false,
+    "released_immediately": true,
+    "released_after_owner_exit": true
+  }
+]

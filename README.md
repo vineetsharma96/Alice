@@ -1,225 +1,394 @@
-# Underworld Lab
+# Underworld Lab (Alice)
 
-A persistent-world research project with an authoritative C++ simulation and Python orchestration. **The stabilization milestone adds an opt-in prerequisite-aware everyday-action executor.** Phase 9's failed learning study remains unchanged and its learner stays outside autonomous policies. The Phase 8 Three.js viewer presents the existing two-dimensional mechanics. Phase 7 unattended operation remains a separate runner; true 3D mechanics remain deferred.
+**21 October update:** the persistent executor now eats carried plant food/eggs,
+uses smaller portions, and gathers visible forage before eating. See the
+[repair evidence and remaining limits](docs/FOOD_EXECUTION_REPAIR.md).
+The rebuilt executable uses new controller source pins. For pre-repair saves,
+use the preserved `build/runtime-before-food-fix-20261021/UnderworldLab.exe`;
+use a new `--db PATH` with the current executable. Saves are never silently reset.
+Current package evidence is `artifacts/food_repair_package.json`; the earlier
+`code_audit_*` evidence describes the previous executable.
 
-The provided brief is preserved in [docs/PROJECT_SPEC.md](docs/PROJECT_SPEC.md). Read [docs/STATUS.md](docs/STATUS.md) before continuing. Only advance one requested phase at a time.
+A persistent simulation laboratory with C++ authority, Python orchestration, SQLite saves, and a local browser viewer. The current model-off living world has four inhabitants, two fictional animal species, finite resources, trees, crafting, construction, food production and private memories.
 
-## Stabilized everyday actions
+**Current application: 0.11.1 · native format UW9 · SQLite DB10 · checkpoint schema 9.** The code audit adds a single-file launcher and Windows executable, fixes integration defects and consolidates repeated code. Native simulation laws/build remain unchanged from final Milestone D. [Current status](docs/STATUS.md), [audit and fixes](docs/CODE_AUDIT_REPORT.md), [D report](docs/LIVING_WORLD_D_REPORT.md), [handoff](HANDOFF.md).
 
-The new controller persists explicit goals, expands eat/drink into locate → approach → gather → consume, reobserves prerequisites, and records native completion separately from generated plans. Navigation and survival execution are authored logic, including when a model selects the goal. Inference fallback and deterministic need selection are labeled.
+## Start here
+
+### Windows: executable or double-click launcher
+
+The locally built executable is `dist/UnderworldLab.exe`. It includes Python, the native extension, its MinGW runtime DLLs, default configurations and local viewer assets. The model-off desktop path needs no Python installation, compiler, Node server, API key, downloaded model or runtime internet connection.
 
 ```powershell
-.venv/Scripts/python.exe -m underworld.stabilization init --db data/stabilized/run.sqlite --calls 0
-.venv/Scripts/python.exe -m underworld.stabilization run --db data/stabilized/run.sqlite --seconds 120
-.venv/Scripts/python.exe -m underworld.stabilization status --db data/stabilized/run.sqlite
+
+# From this repository:
+
+.\run.cmd
+
+# Or run the executable directly (it can be copied outside the repository):
+
+.\dist\UnderworldLab.exe
+
 ```
 
-The living-world development entry point uses the same explicit controller without changing legacy runs:
+The launcher opens `http://127.0.0.1:8768/viewer`, creates a world on first launch, and advances a bounded **30 simulated seconds**, subject to a **240-second wall limit**. The console prints the actual duration/outcome; simulated time is not real time. The viewer remains available for inspection after that run finishes. Close the console with **Ctrl+C** to stop the server; an active writer stops between committed ticks.
 
-```powershell
-.venv/Scripts/python.exe -m underworld living-world init --db data/living-world/run.sqlite
-.venv/Scripts/python.exe -m underworld living-world run --db data/living-world/run.sqlite --seconds 30
-.venv/Scripts/python.exe -m underworld living-world status --db data/living-world/run.sqlite
+Default save: `%LOCALAPPDATA%\UnderworldLab\world.sqlite` on Windows, or `~/.local/share/UnderworldLab/world.sqlite` elsewhere. Each launch resumes the same compatible save. Bodies, needs, memories, stock, animal state and scheduler are preserved. Nothing is replenished or reinitialized when a file already exists.
+
+The executable is an **unsigned local Windows x64 build**, tested on this host, not a signed installer or an independently certified release. The `dist/` directory is intentionally ignored by Git. Current packaging size/hash and smoke-test evidence are recorded under `artifacts/food_repair_package*.json`. A normal rebuild writes `artifacts/package_app.json`, preserving earlier audit reports.
+
+### One Bash file
+
+From Git Bash on Windows, or Bash with a source toolchain elsewhere:
+
+```bash
+
+bash run.sh
+
+# Explicit save and a different bounded duration:
+
+bash run.sh --db data/my-world.sqlite --seconds 60 --wall-seconds 240
+
+# Inspection only; logical time does not advance:
+
+bash run.sh --db data/my-world.sqlite --seconds 0
+
 ```
 
-It starts with four inhabitants and finite resources; trees, animals and crafting are later milestones. The observer reports whether the legacy or stabilization controller is active.
+On Windows, `run.sh` prefers the packaged executable. Without it, the script uses `.venv`, building the native extension through `scripts/bootstrap.ps1` if needed. Linux/macOS use a Python virtual environment and CMake. First-time source setup can download the pinned build dependency; it does not install a compiler or download a model. **Linux/macOS execution is not verified in this audit.**
 
-See [operations and existing-world handoff](docs/STABILIZATION_OPERATIONS.md), [registered protocol](docs/STABILIZATION_PROTOCOL.md) and [results](docs/STABILIZATION_REPORT.md). Reuse `run` to continue the same world; initializing again would create a different experiment. The legacy utility/model policies remain unchanged for comparison.
+To force source execution while developing:
 
-## Phase 9 research experiment
+```bash
 
-Read the [preregistration](docs/PHASE9_PREREGISTRATION.md) and [experiment report](docs/PHASE9_REPORT.md). One non-neural linear policy learns consumption feasibility from verified terminal eat/drink receipts. Five seeds compare it against frozen weights, nearest episodic memory and a stronger domain-informed memory control. Evaluation includes unseen quantities, exact equality, and retention after a second training block. This is a small authored task, not general intelligence, neural training or evolution. The learner is separate from live agents; its deployment gate must pass before integration.
+UNDERWORLD_SOURCE=1 bash run.sh --db data/my-source-world.sqlite --seconds 5
 
-```powershell
-# Inspect retained parameters without advancing a world.
-.venv/Scripts/python.exe -m underworld.learning status --db data/phase9-study-20261020/seed-11/policy.sqlite
-# Explicit replication: choose a NEW directory; existing evidence is never overwritten.
-.venv/Scripts/python.exe scripts/phase9_experiment.py --output data/phase9-replication
 ```
 
-`config/phase9_study.json` and `docs/PHASE9_PREREGISTRATION.md` are SHA-sealed before the first study trial. Altering either makes the runner refuse execution. Each run retains source hashes, native databases, prediction-before-label files, raw training/evaluation traces, checksummed parameters, paired bootstrap intervals and failure cases. A run can take several minutes on this machine and stops at its 900-second or 512-MiB evidence budget. An interrupted reservation never automatically replays an action.
+In PowerShell, set `$env:UNDERWORLD_SOURCE='1'` and run `.\run.cmd`.
 
-## Explorable 3D viewer
+### Launcher options
 
-Open the local viewer at `/viewer`; the existing 2D observer remains at `/`. On a fresh checkout, create the explicitly authored lab fixture once:
+| Option | Behavior |
+
+|---|---|
+
+| `--db PATH` | Create a new named world if absent, otherwise validate/resume that exact save |
+
+| `--config PATH` | Initialization profile for a new save; does not change an existing world |
+
+| `--seconds N` | Simulated duration, 0–3600; zero is inspection only |
+
+| `--wall-seconds N` | Wall-clock budget, greater than zero and at most 3600 |
+
+| `--port N` | Loopback HTTP port, default 8768; zero selects a free port |
+
+| `--no-browser` | Print the URL without opening a browser tab |
+
+| `--exit-after-run` | Close the HTTP server when the bounded run finishes |
+
+| `--version` | Show application version |
+
+| `--cli ...` | Use the lower-level command interface described below |
+
+Example for automation or a quick local check:
 
 ```powershell
-.venv/Scripts/python.exe scripts/phase8_demo.py
-.venv/Scripts/python.exe -m underworld observe --db data/phase8-demo/run.sqlite --port 8765
-# Open http://127.0.0.1:8765/viewer (starts paused).
+
+.\dist\UnderworldLab.exe --db data\headless.sqlite --seconds 2 --port 0 --no-browser --exit-after-run
+
 ```
 
-Existing fixture files are never overwritten. If a preview is already running, use its URL or another port. For an isolated unattended run, attach with `observe --db <run.sqlite> --port 8766 --read-only`; this starts no competing writer and disables mutations. Drag/scroll to navigate, use WASD with viewport focus, select entities to inspect, and use the guided/paused operator form for recorded interventions. The avatar is positioned through the existing message channel. Speech and true 3D mechanics are not implemented.
+A port conflict is an error; the app does not connect to an unrelated existing viewer. Use another port or `--port 0`. The desktop writer is an ordinary bounded host process, **not the Phase 7 AppContainer supervisor**. Packaged `--cli run` is disabled because that isolation workflow requires the source Python runtime.
 
-Three.js 0.180.0 is vendored locally with its MIT license; no Node server or runtime CDN is needed. Low/Standard rendering caps at 30/60 fps. See [viewer protocol and limits](docs/PHASE8_VIEWER_PROTOCOL.md), [design audit](docs/PHASE8_DESIGN.md) and [measured results](docs/STATUS.md).
+## What runs in the world
 
-## Unattended experiments
+| Capability | Current behavior and limit |
 
-See [Phase 7 operations](docs/PHASE7_OPERATIONS.md) for run/stop/resume commands, the explicit local-model pipe, disk and retention limits, commit boundaries and measurements. Use a dedicated case folder with `config/unattended.toml`; `run` requires finite simulated and wall-clock durations. [Current status](docs/STATUS.md) records the short horizons actually tested.
+|---|---|
 
-## Native Windows bootstrap
+| Everyday agency | Authored prerequisite sequences locate, approach, gather and consume; native validators decide effects |
 
-Requires Python 3.11+ with development headers/libraries, CMake 3.20+, and a C++20 compiler. This host uses Python 3.12.10 and MinGW GCC 15.2.0 / CMake 4.1.2 / GNU Make 4.4.1 in `C:\mingw64\bin`. The bootstrap installs pinned pybind11 3.0.4 in `.venv`, builds the native module and runs checks. No model download or global package installation is involved.
+| Bodies | Persistent hunger, thirst, fatigue, health, ingestion and death; quantities/rates are explicit abstractions |
 
-From the repository root in PowerShell:
+| Senses and memory | Local range/occlusion-filtered observations and private, source-linked memory |
+
+| Trees/materials | Finite harvests, explicit boundary biomass growth, wood/fiber/stone stock and waste |
+
+| Crafting | Native recipes, axes, durability, scrap and carrying limits |
+
+| Construction | Reserved sites with saved work, boxes, troughs, circular fence/gate solids |
+
+| Animals | Authored bounded sensing/movement, food/water reserves, forage/trough use, rest and threat avoidance |
+
+| Care | Observe, feed, fill trough, bounded familiarity, lure/guide and egg collection; real inventory transfers |
+
+| Food | Reserve-funded eggs, gathered plant food, conservative spoilage/storage, retained residue/waste |
+
+| Viewer | 3D presentation of **2D authoritative mechanics**, plus a 2D observer |
+
+| Research | Retained teaching, culture, supervision and failed learning experiments with separate evidence |
+
+Human care and woodcraft evaluation routes are explicitly operator assigned. The current survival controller does not automatically plan husbandry or construction. Care remains imperfect: D's final bounded cases had 5/6 animals survive with assigned care versus 0/6 untreated, with recorded rejections/collisions and low health. This is not general intelligence, consciousness, learned husbandry or civilization emergence.
+
+**Deferred:** breeding/reproduction, validated heat/fuel-coupled cooking, speech, true 3D mechanics, sustainable ecology, full-day operation and reliable general care planning. A's recurring/fair/global model-budget gate remains incomplete; the desktop app keeps models disabled. The failed Phase 9 learner is excluded from live policies.
+
+## Source installation
+
+### Windows (verified toolchain)
+
+Prerequisites: Python 3.11+ with development libraries, CMake 3.20+, and a C++20 compiler. This host uses Python 3.12.10, MinGW GCC 15.2 and CMake 4.1.2, with tools in `C:\mingw64\bin`. MSVC source builds are not verified here.
 
 ```powershell
-# Execute the script in your normal permitted PowerShell environment.
+
 .\scripts\bootstrap.ps1
-# For a different existing MinGW toolchain:
+
+# Custom existing MinGW location:
+
 .\scripts\bootstrap.ps1 -ToolchainBin 'D:\tools\mingw64\bin'
+
+# Skip the full regression run during bootstrap:
+
+.\scripts\bootstrap.ps1 -SkipTests
+
 ```
 
-If local script policy prevents execution, use these commands directly; no policy change is required:
+Bootstrap creates `.venv` only if absent, installs `requirements.txt`, builds into **`build/living-d`**, selects the correct native build and writes verification to a new timestamped evidence file. It does not overwrite the historical root build or `phase9_checks.json`.
+
+If PowerShell execution policy prevents launching a script, use these commands directly in your permitted shell; no policy change is necessary:
 
 ```powershell
+
 $env:PATH = "C:\mingw64\bin;$env:PATH"
-python -m venv .venv
+
+python -m venv .venv # only when .venv does not exist
+
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
-$pythonExe = (Resolve-Path '.venv\Scripts\python.exe').Path
-cmake -S . -B build -G 'MinGW Makefiles' -DCMAKE_BUILD_TYPE=Release "-DPython_EXECUTABLE=$pythonExe"
-cmake --build build --parallel 2
-.\.venv\Scripts\python.exe scripts\verify.py --core build\underworld_core.exe
-.\.venv\Scripts\python.exe -m underworld inspect --core build\underworld_core.exe
+
+cmake -S . -B build/living-d -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release "-DPython_EXECUTABLE=$((Resolve-Path .venv/Scripts/python.exe).Path)"
+
+cmake --build build/living-d --parallel 2
+
+$env:UNDERWORLD_BUILD = (Resolve-Path build/living-d).Path
+
+.\.venv\Scripts\python.exe -m underworld.app
+
 ```
 
-The pybind11 extension was built and imported successfully on this MinGW/CPython host. MSVC: use a Developer PowerShell and CMake's default Visual Studio generator; build with `--config Release`, then pass `build\Release\underworld_core.exe` to the verification script. MSVC is **untested**. Keep MinGW's bin directory on PATH for native executables. The Python loader adds the toolchain DLL directory for the extension. For custom paths set `UNDERWORLD_TOOLCHAIN` and `UNDERWORLD_BUILD`. No binaries are bundled for redistribution.
+`UNDERWORLD_TOOLCHAIN` overrides the native DLL lookup directory; `UNDERWORLD_BUILD` selects a different compatible compiled extension. These variables do not migrate a world. Do not rebuild a loaded `.pyd` while a source process is using it.
 
-## Linux bootstrap (untested)
+### Linux/macOS source path (not verified here)
 
-With an existing GCC/Clang C++20 compiler, CMake, make and Python 3.11+:
+Install Python development headers, CMake, make/Ninja and a GCC/Clang C++20 toolchain through your normal system setup, then run `bash run.sh`. Alternatively:
 
-```sh
+```bash
+
 python3 -m venv .venv
+
 .venv/bin/python -m pip install -r requirements.txt
-cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DPython_EXECUTABLE="$PWD/.venv/bin/python"
-cmake --build build --parallel 2
-.venv/bin/python scripts/verify.py --core build/underworld_core
-.venv/bin/python -m underworld inspect --core build/underworld_core
+
+cmake -S . -B build/living-d -DCMAKE_BUILD_TYPE=Release -DPython_EXECUTABLE="$PWD/.venv/bin/python"
+
+cmake --build build/living-d --parallel 2
+
+UNDERWORLD_BUILD="$PWD/build/living-d" .venv/bin/python -m underworld.app
+
 ```
 
-The model-off baseline requires no WSL, network access, paid service, API key, GPU or downloaded model. The optional model adapter contacts a literal loopback origin only. OS-enforced egress isolation of the whole application is a later acceptance test.
+The Windows executable and Windows AppContainer/PSAPI integrations do not run natively on these platforms.
 
-## Run a persistent world
+## Build the executable
 
-From the repository root in PowerShell:
+On the verified Windows source environment:
 
 ```powershell
-# New runs default to config/survival.toml: eight bodies in a 16 x 16 m region.
-.\.venv\Scripts\python.exe -m underworld new --db data\experiment.sqlite
-.\.venv\Scripts\python.exe -m underworld observe --db data\experiment.sqlite --port 8765
+
+.\.venv\Scripts\python.exe -m pip install -r requirements-build.txt
+
+$env:PATH = "C:\mingw64\bin;$env:PATH"
+
+$env:UNDERWORLD_BUILD = (Resolve-Path build/living-d).Path
+
+.\.venv\Scripts\python.exe scripts/package_app.py
+
 ```
 
-Open [the local observer](http://127.0.0.1:8765). It starts paused. Use **Resume**, **Pause**, **Step one tick**, and the target-speed selector; select an inhabitant for its needs, position, inventory and actual action history. GET polling is read-only. Stop the observer writer with Ctrl+C before advancing the same database from another terminal or rebuilding the native module.
+Output: `dist/UnderworldLab.exe`. PyInstaller is a packaging dependency, not a simulation dependency. The recipe explicitly includes source files used by runtime checksums, the compiled extension/DLLs, configs and locally vendored Three.js assets/license. It excludes saved worlds, downloaded models and environment files. Source and packaged launches can resume each other's saves when their pinned source/native identities match. Rebuild the executable after source changes; `run.sh` otherwise launches the previously packaged snapshot.
 
-Headless commands remain available:
+## Save, inspect, continue and replay
+
+For source commands, first select `UNDERWORLD_BUILD=build/living-d` in the shell. The packaged equivalent is `UnderworldLab.exe --cli ...`.
 
 ```powershell
-.\.venv\Scripts\python.exe -m underworld advance --db data\experiment.sqlite --ticks 100
-.\.venv\Scripts\python.exe -m underworld inspect --db data\experiment.sqlite
-.\.venv\Scripts\python.exe -m underworld inspect --db data\experiment.sqlite --agent agent-1
-.\.venv\Scripts\python.exe -m underworld save --db data\experiment.sqlite --name tick100 --output data\saved.sqlite
-.\.venv\Scripts\python.exe -m underworld resume --db data\saved.sqlite --ticks 100
-.\.venv\Scripts\python.exe -m underworld replay --db data\saved.sqlite
+
+# Explicit new experiment: refuses an existing output file.
+
+.venv/Scripts/python.exe -m underworld living-world init --config config/living-world-d.toml --db data/experiment/run.sqlite --calls 0
+
+.venv/Scripts/python.exe -m underworld living-world run --db data/experiment/run.sqlite --seconds 30 --wall-seconds 180
+
+.venv/Scripts/python.exe -m underworld living-world status --db data/experiment/run.sqlite
+
+.venv/Scripts/python.exe -m underworld inspect --db data/experiment/run.sqlite
+
+.venv/Scripts/python.exe -m underworld mind --db data/experiment/run.sqlite --agent agent-1
+
+.venv/Scripts/python.exe -m underworld save --db data/experiment/run.sqlite --name checkpoint30 --output data/experiment/backup.sqlite
+
+.venv/Scripts/python.exe -m underworld replay --db data/experiment/run.sqlite
+
+.venv/Scripts/python.exe -m underworld observe --db data/experiment/run.sqlite --read-only --port 8766
+
 ```
 
-`new`/backup refuse to overwrite files. `resume` without `--ticks` recovers/verifies the committed head without advancing time. `inspect` is query-only. `save` creates a named checkpoint and optionally an atomic SQLite backup; resume the backup at its head. It does not rewrite an existing run's history to an old tick.
+Use `living-world run` to continue a stabilization-controlled world. Plain `resume` without ticks validates a saved head; plain `advance` is a lower-level native/external-action path and does not select stabilization goals. `save` adds a named checkpoint and optionally publishes a standalone SQLite backup without overwriting an existing file. Named checkpoints are not automatic rewinds. Replay verifies recorded native effects; it does not ask a model to make the same choices again.
 
-Use `new --manual` to disable autonomous policy decisions, then `advance --decisions path\actions.jsonl`. Each line contains `at_tick` and a complete ActionRequest; use the run ID/version from inspection. [Phase 2 agency](docs/PHASE2_AGENCY.md) specifies body rates, units, fields, senses, recovery sources, errors and persistence. `new --config config/baseline.toml` retains the body-disabled Phase 1 scripted mechanics scene. The CLI is a trusted local operator interface, not an authenticated multiuser server.
+The model-off desktop and CLI both use the same stabilization controller and OS writer lease. One process owns simulation writing; viewers are read-only on stabilized worlds. Do not run a second writer on the same save. Closing or restarting the app does not reset bodies, resources or memories. Finite resource stock and audit/decision quotas can eventually stop long experiments; this is not an unlimited unattended server.
 
-Current new-world checkpoints/database use **UW7 / user_version=8** with checkpoint schema 7, native build, Python runtime and separate mental-store checksums. Earlier UW6/DB7 saved files/reports remain preserved but are incompatible with this runtime; no automatic migration is claimed. Create a new compatible living-world run or use the original pinned runtime.
+### Compatibility and retained experiments
 
-## Practical skills and cultural transfer
+Saves pin the native build, Python orchestration source, controller source, configuration and checksums. Even a source refactor can deliberately cause an old save to reject with `run build/runtime code mismatch` or `stabilization source/version mismatch`. **There is no automatic migration.** Do not delete a save, change checksums or refill resources to bypass this protection.
+
+This audit preserves the complete previous D runtime and native extension locally in `build/runtime-before-code-audit-20261020`. To inspect/continue its original saved experiment with those exact sources:
 
 ```powershell
-# Five seeded teaching / no-teaching / persistent-memory-disabled comparisons:
-.\.venv\Scripts\python.exe scripts\phase6_evidence.py --directory data\fresh-culture-evidence
-.\.venv\Scripts\python.exe -m underworld procedure --db data\fresh-culture-evidence\seed-33\teaching-restarted.sqlite --agent agent-2
-.\.venv\Scripts\python.exe -m underworld observe --db data\fresh-culture-evidence\seed-33\teaching-restarted.sqlite --port 8765
-# Or create a new manual cultural lab:
-.\.venv\Scripts\python.exe -m underworld new --manual --db data\my-culture.sqlite --config config\culture.toml
-# Explicitly fork a memory-ablation branch; parent stays unchanged:
-.\.venv\Scripts\python.exe -m underworld fork --db data\my-culture.sqlite --output data\memory-control.sqlite --episodic-memory disabled
+
+$repo = (Get-Location).Path
+
+$env:UNDERWORLD_BUILD = "$repo/build/runtime-before-code-audit-20261020/build/living-d"
+
+Push-Location "$repo/build/runtime-before-code-audit-20261020"
+
+& "$repo/.venv/Scripts/python.exe" -m underworld living-world status --db "$repo/data/living-world-d-four-hysteresis-20261020/run.sqlite"
+
+Pop-Location
+
+# Restore the current source build selection afterward:
+
+$env:UNDERWORLD_BUILD = "$repo/build/living-d"
+
 ```
 
-Practice increases only after physically validated work; reading transfers an unverified recipe, without granting execution skill. An inhabitant can spend carried material and time to write a physical book, which remains usable after its author departs. Gifts conserve carried mass; agreements can be accepted, declined or expire. The observer shows skills, agreement outcomes and event-backed social/procedure provenance. [Phase 6 contracts, authored assumptions and controls](docs/PHASE6_CULTURE.md) document the task, tool schemas and experimental limits. Neither the finite search nor the two-inhabitant transfer experiment demonstrates open-ended intelligence.
+C uses UW8/DB9 and requires its original complete runtime. The failed Phase 9 study uses UW6/DB7 and its original sources; neither is silently upgraded by this application. Native binaries/evidence from earlier milestones remain separate. The original [project brief](docs/PROJECT_SPEC.md), [Phase 9 preregistration](docs/PHASE9_PREREGISTRATION.md), [failed report](docs/PHASE9_REPORT.md) and study corpus are preserved.
 
-## Coupled heat and materials
+## Viewer controls
+
+The desktop viewer is a read-only attachment while the bounded writer runs. Time buttons and interventions are disabled there. The console reports progress/outcome; restart with another `--seconds` value to continue or zero to inspect. The 2D `/` and 3D `/viewer` projections read one transaction-consistent snapshot, including the selected inhabitant's perception, memories, receipts and operator history.
+
+- Drag to orbit, scroll to zoom, right-drag to pan; focus the viewport for WASD.
+
+- Select a person, animal, tree, resource or construction to inspect it.
+
+- Native receipts distinguish rejected, accepted, completed and failed actions. An accepted request or model plan is not proof of a physical effect.
+
+- Visual height is illustrative. Physical position, reach and collision remain 2D.
+
+- Assets are served locally; Three.js 0.180.0 and its MIT license are vendored in `underworld/web/vendor`.
+
+Legacy non-stabilized manual worlds have separate observer time controls and guided-mode interventions. Do not substitute that writer for the stabilization scheduler. The server binds literal loopback and validates host/origin/tokens; it is a trusted local operator tool, not an authenticated multiuser deployment.
+
+## Configuration profiles and file connections
+
+| Path | Role |
+
+|---|---|
+
+| `config/living-world-d.toml` | Four humans/two animals, finite food/water/forage, model-off D profile |
+
+| `config/living-world.toml` | Four-human profile without opt-in ecology |
+
+| `config/survival.toml` | Legacy utility survival comparison |
+
+| `config/culture.toml` | Authored thermal/cultural laboratory |
+
+| `underworld/app.py` | Desktop lifecycle, bounded runner and read-only server |
+
+| `underworld/__main__.py` | Lower-level CLI dispatch |
+
+| `underworld/stabilization.py` | Prerequisite goals, attribution, recovery and controller journal |
+
+| `underworld/storage.py` | Native head validation, transactions, checkpoints and replay |
+
+| `underworld/lease.py` | Process-safe single-writer lease |
+
+| `core/world.cpp` / `world.hpp` | Fixed-step authority, requests, geometry, checkpoint invariants |
+
+| `core/bodies.cpp` / `crafting.cpp` / `ecology.cpp` | Needs, transformations, construction and animal/food effects |
+
+| `underworld/memory.py` | Private memories and provenance; no automatic access to hidden world state |
+
+| `underworld/observer.py` / `viewer.py` | Shared transaction-consistent operator projections and HTTP serving |
+
+| `underworld/web` | Browser presentation; never physical success authority |
+
+| `scripts` | Builds, packaging, bounded experiments and verification |
+
+| `tests` | Physical, persistence, privacy, controller, HTTP and launcher regressions |
+
+| `artifacts` / `data` | Retained reports versus local native databases/study evidence |
+
+C++ validates and executes actual effects. Python selects goals, records provenance and commits each physical tick. The browser renders authoritative state. Food, water, material, residue and declared boundary sources are reconciled by native invariants. Private observations are distinct from privileged operator snapshots. Authored behavior, model suggestions, deterministic fallback, external teaching and experimental learning remain separately labeled.
+
+## Verification and reproducible experiments
 
 ```powershell
-# Four authored native traces plus a durable heating/inspection/transfer demonstration:
-.\.venv\Scripts\python.exe scripts\phase5_evidence.py --directory data\fresh-thermal-evidence
-.\.venv\Scripts\python.exe -m underworld observe --db data\fresh-thermal-evidence\lab.sqlite --port 8765
-# Or start a fresh manual lab with open thermal boundaries:
-.\.venv\Scripts\python.exe -m underworld new --manual --db data\my-lab.sqlite --config config\thermal-open.toml
+
+# Full native/Python suite, unique output path of your choice:
+
+.venv/Scripts/python.exe scripts/verify_living_world.py --build build/living-d --output artifacts/my-verification.json
+
+# Static import/header/asset inventory and whole-function duplicate scan:
+
+.venv/Scripts/python.exe scripts/audit_connections.py --output artifacts/my-connections.json
+
+# Optional Python static checker:
+
+.venv/Scripts/python.exe -m pip install -r requirements-dev.txt
+
+.venv/Scripts/python.exe -m pyflakes underworld scripts tests
+
+# Separate NEW bounded physical care fixtures and continuous persistence runs:
+
+.venv/Scripts/python.exe scripts/phase_d_eval.py --output data/my-new-care-study --evidence artifacts/my-care-study.json
+
+.venv/Scripts/python.exe scripts/phase_d_continuity.py --output data/my-new-continuity --evidence artifacts/my-continuity.json
+
+# Audit existing Phase 9 files/metrics without advancing its worlds:
+
+.venv/Scripts/python.exe scripts/phase9_audit.py --study data/phase9-study-20261020
+
 ```
 
-The observer labels exact operator instruments separately from inhabitant measurements. Inhabitants can inspect approximate temperatures/phases, switch a reachable heater and transfer material between reachable vessels through validated timed actions. The evidence runner records mass/energy residuals, oxygen limits, vapor production, cold-water heating, save/resume and replay. It refuses an existing output directory. [Phase 5 equations, actions and validity limits](docs/PHASE5_THERMAL.md) explain the explicitly artificial reaction and fixed-pressure approximation. Closed/guided operator mode is independent of insulated/open thermal boundaries. Existing survival configurations keep the lab disabled.
+Milestone D's original 176-test/120-second evidence remains historical. The code-audit regression, packaged smoke, source/save interoperability and browser results are recorded separately in [the audit report](docs/CODE_AUDIT_REPORT.md). A static scan is not proof that every branch/platform is correct. Linux/macOS, MSVC, Windows machines other than this host, full-day operation and model-enabled fairness/isolation are not certified by these checks.
 
-## Operator teaching and branches
+## Troubleshooting
 
-```powershell
-# Closed remains the default. Fork into a new guided experiment without changing the parent:
-.\.venv\Scripts\python.exe -m underworld fork --db data\experiment.sqlite --output data\guided.sqlite --mode guided
-# Or start a fresh guided region:
-.\.venv\Scripts\python.exe -m underworld new --db data\teaching.sqlite --config config\guided.toml
-.\.venv\Scripts\python.exe -m underworld observe --db data\teaching.sqlite --port 8765
-```
+| Symptom | What to check |
 
-The paused observer has explicit **Place a book**, **Speak through avatar**, **Introduce material or object**, and **Broadcast** controls in guided mode. Read-only observation never delivers knowledge. Book text becomes available to an inhabitant only after a valid completed read; normal speech remains local and broadcasts are explicitly global. Source event, parent event, observer, time and unverified confidence remain attached to acquired reports. Each resource addition has an operator material/energy source.
+|---|---|
 
-```powershell
-# Trusted operator JSON file; exact schema is in docs/PHASE4_TEACHING.md:
-.\.venv\Scripts\python.exe -m underworld intervene --db data\teaching.sqlite --request lesson.json
-.\.venv\Scripts\python.exe -m underworld interventions --db data\teaching.sqlite
-.\.venv\Scripts\python.exe -m underworld recall --db data\teaching.sqlite --agent agent-3 --symbol sig_example
-# Law changes create a new versioned branch; the parent is read-only:
-.\.venv\Scripts\python.exe -m underworld fork --db data\teaching.sqlite --output data\short-hearing.sqlite --hearing-range-m 1
-# Three fresh random mappings with paired controls, restart, replay and hostile-book probes:
-.\.venv\Scripts\python.exe scripts\phase4_evidence.py --directory data\fresh-teaching-evidence
-```
+| Port already in use | Choose `--port 0` or another explicit port; leave unrelated viewers alone |
 
-`recall` is bounded lexical lookup of authored `FACT symbol -> location` lines in an inhabitant's own original reports. It reports unverified claims, conflicting reports or unknown, never an engine fact. The successful teaching experiment uses an explicitly authored read/share baseline; it does not prove spontaneous LLM teaching or semantic understanding. [Phase 4 contracts and limits](docs/PHASE4_TEACHING.md) document channels, provenance, ledgers and branching.
+| Native module unavailable/wrong format | Build `build/living-d`, set `UNDERWORLD_BUILD`; do not load the historical root build |
 
-## Cognition and memory
+| Missing native DLL | Source users: check `UNDERWORLD_TOOLCHAIN`; executable users: retain/rebuild the complete packaged executable |
 
-```powershell
-# Authored deterministic cognition; no model server needed:
-.\.venv\Scripts\python.exe -m underworld new --db data\minds.sqlite --config config\cognition.toml
-.\.venv\Scripts\python.exe -m underworld advance --db data\minds.sqlite --ticks 100
-.\.venv\Scripts\python.exe -m underworld mind --db data\minds.sqlite --agent agent-1 --query ingested
-.\.venv\Scripts\python.exe -m underworld observe --db data\minds.sqlite --port 8765
+| Saved runtime/source mismatch | Use the exact archived runtime or choose an explicitly NEW world; no automatic migration |
 
-# Optional pinned local CPU model: download once, verify SHA-256 and start a hidden server.
-.\scripts\local-model.ps1 -Start
-# Wait until http://127.0.0.1:8081/health reports ok.
-.\.venv\Scripts\python.exe -m underworld new --db data\model.sqlite --config config\local-model.toml
-.\.venv\Scripts\python.exe -m underworld advance --db data\model.sqlite --ticks 100
-# Stop the specific server PID printed by local-model.ps1 when finished.
-```
+| Another writer owns the lease | Stop the writer that owns this save, then retry; read-only viewers can remain open |
 
-`think --db ... --agent agent-1` requests one budgeted thought without advancing physical time. `mind` is read-only privileged operator inspection, not a new capability granted to inhabitants. The observer shows selected identity, plan status and recent private episodes. `--manual` disables both automatic utility and cognition scheduling; explicit `think` remains available when the configured provider is enabled. A shared logical pause, killable timeout and deterministic fallback prevent slower inference from adding survival ticks to one inhabitant. See [Phase 3 contracts and limits](docs/PHASE3_COGNITION.md).
+| App appears paused after its run | The bounded duration finished; it remains an inspector until closed/restarted |
 
-The optional downloads total about 406 MB before archive extraction; weights and binaries remain ignored. Downloading needs network access; inference uses loopback only. This host's measured Q8 360M model fits, but its reasoning and conversation are weak. Prompts/configuration live privately in the ignored SQLite run, with no secrets. Run the real measurement explicitly against a running server: `python scripts/phase3_evidence.py --server-pid <PID> --db data\fresh-evidence.sqlite`. Paths must be new; nothing is overwritten.
+| Wall limit before target time | Actual committed progress is retained; resume it, or choose a larger bounded wall budget |
 
-```powershell
-.\.venv\Scripts\python.exe scripts\verify.py --core build\underworld_core.exe --ctest C:\mingw64\bin\ctest.exe
-# Constrained 900 s durable survival run plus a resource-free native control:
-.\.venv\Scripts\python.exe scripts\survival_run.py --ticks 4500
-# Optional mechanics benchmark (not required again for Phase 2):
-.\.venv\Scripts\python.exe scripts\benchmark.py --ticks 10000
-```
+| Care fails, food unavailable or animal health falls | Inspect actual needs, accessible stock, native reasons and care provenance; the app does not mint resources |
 
-The durable benchmark includes full-state serialization, invariant checks and one FULL-synchronous SQLite commit per tick. It can take several minutes on this machine. Native and durable throughput, peak process working set, simulated duration and wall time are reported separately; neither measures inference. Benchmark databases are temporary; JSON evidence remains in `artifacts/`.
+| Source changes are not visible through `run.sh` | Rebuild the executable or set `UNDERWORLD_SOURCE=1` |
 
-## Layout
+| Browser blocks WebGL | Use the 2D `/` observer; software-rendered verification is not a hardware performance guarantee |
 
-- `core/`: authoritative kernel, pybind11 binding, native tests and legacy Phase 0 probe.
-- `underworld/`: strict config/JSON, native loader, utility policy, private memory/cognition, operator teaching/branches, SQLite coordinator, CLI and observer.
-- `config/`: seed, bounds, population, cognition declarations and event retention.
-- `tests/`, `scripts/`: smoke validation and repeatable bootstrap.
-- `docs/`: architecture, proposed contracts, limits, licenses, milestones, status.
-- `opencode.json`, `.opencode/agents/`: project-local Codex-oriented agents plus TinyFish and Playwright MCP setup; see [OpenCode setup](docs/OPENCODE.md).
-- `artifacts/`: archived Phase 0/1 evidence, Phase 2 tests/body/replay/survival evidence and actual observer screenshots.
+## Research boundaries
 
-Run commands from the repository root. There is no editable-install or binary packaging step yet. Runs pin config and code/build identities; change conditions through a new run or explicit fork. Linux/MSVC, long-horizon unattended operation, full-day model throughput and power-failure durability remain untested. See [status](docs/STATUS.md) for evidence and limits. Phase 9 adds a separately gated learning experiment; longer horizons, generations and true 3D mechanics remain deferred.
+The Phase 9 learner failed its advancement gate; its report, preregistered thresholds and retained evidence remain unchanged. It is not wired into live agents. Do not interpret private lexical recall, authored care familiarity, recipe counters, generated JSON or a plausible narrative as demonstrated general learning.
+
+Read [the failed/deferred feature inventory](docs/FAILED_AND_DEFERRED_FEATURES.md), [model limits](docs/MODEL_LIMITS.md), [native/action contracts](docs/CONTRACTS.md), [architecture](docs/ARCHITECTURE.md), and [milestone plan](docs/LIVING_WORLD_PLAN.md) before extending the system. Historical experiment scripts may require their pinned source runtime; executing them under new laws is not replication of an old score.
