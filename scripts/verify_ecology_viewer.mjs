@@ -5,11 +5,13 @@ import assert from 'node:assert/strict';
 
 const url=process.argv[2]||'http://127.0.0.1:8767/viewer';
 const output=process.argv[3]||'artifacts/living_world_d_viewer';
+const expectedTask=process.argv[4];
 const browser=await chromium.launch({channel:'msedge',headless:true,args:['--use-angle=swiftshader','--enable-unsafe-swiftshader']});
 const page=await browser.newPage({viewport:{width:1440,height:900}}),errors=[];
 page.on('pageerror',e=>errors.push(e.message));
 try{
  await page.goto(url);await page.waitForFunction(()=>document.getElementById('clock').textContent.includes('simulated s'));
+ if(expectedTask)assert.ok((await page.locator('#controller-status').innerText()).includes(expectedTask));
  const evidence=await page.evaluate(async()=>{
   const packet=await(await fetch('/api/viewer')).json();const {WorldView}=await import('/scene.js');
   const host=document.createElement('div');host.style.cssText='position:absolute;width:400px;height:300px;left:0;top:0';document.body.append(host);
@@ -30,7 +32,8 @@ try{
  await page.goto(new URL('/',url).href);await page.waitForFunction(()=>document.getElementById('time').textContent.includes('Tick'));
  const observer=await page.evaluate(()=>({read_only:document.getElementById('status').textContent,pause_disabled:document.getElementById('pause').disabled,step_disabled:document.getElementById('step').disabled,speed_disabled:document.getElementById('speed').disabled}));
  assert.equal(observer.pause_disabled,true);assert.equal(observer.step_disabled,true);assert.equal(observer.speed_disabled,true);assert.equal(errors.length,0);
+ if(expectedTask)assert.ok((await page.locator('#plan').innerText()).includes(expectedTask));
  await page.screenshot({path:`${output}-2d.png`,fullPage:true});
- await fs.writeFile(`${output}.json`,JSON.stringify({passed:true,url,mode:'headless Edge/software rendering; no hardware performance claim',...evidence,observer,page_errors:errors},null,2)+'\n');
+ await fs.writeFile(`${output}.json`,JSON.stringify({passed:true,url,expected_task:expectedTask||null,mode:'headless Edge/software rendering; no hardware performance claim',...evidence,observer,page_errors:errors},null,2)+'\n');
  console.log(JSON.stringify({passed:true,animals:evidence.animals,private_animal_fields_leaked:false,page_errors:errors}));
 }finally{await browser.close();}

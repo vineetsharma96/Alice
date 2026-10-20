@@ -1,46 +1,71 @@
-# Food execution repair handoff - 21 October 2026
+# Underworld Lab - Milestone E handoff (21 October 2026)
 
-Current controller source now supports carried plant food/eggs, partial meals,
-and visible-forage gather/eat sequences. Read docs/FOOD_EXECUTION_REPAIR.md and
-docs/FOOD_EXECUTION_PROTOCOL.md for measured results and remaining gaps.
-The current executable is dist/UnderworldLab.exe; packaging evidence is now
-artifacts/food_repair_package.json, not the historical code_audit package report.
-For pre-repair saves use build/runtime-before-food-fix-20261021/UnderworldLab.exe.
-That archived executable was verified against the prior 120-second audit world.
-Do not silently migrate/reset controller-pinned saves. Phase 9 remains sealed.
-The previous audit handoff below describes its archived runtime and evidence.
+Application 0.12.0 / stabilization/4; native UW9 / DB10 / checkpoint 9 remains
+build 832c4a705a7ceecd85d8befb3d84f4dff0d4730f024c395eba12985f0d8bd896.
+Read [E report](docs/LIVING_WORLD_E_REPORT.md), [operations](docs/PLANNING_OPERATIONS.md),
+[protocol](docs/PHASE_E_PLANNING.md) and [fixture amendment](docs/PHASE_E_EVALUATION_AMENDMENT_1.md).
+Prior handoff: [archive](HANDOFF_PRE_E_ARCHIVE.md).
 
----
+## Current behavior
 
-# Underworld Lab — code audit and desktop launcher handoff
+Explicit per-agent authored hierarchical tasks run inside the existing single
+writer: food/wood, axe/planks/trough, actual water delivery, animal care,
+inspection and rest. Native requests remain authoritative. Urgent needs preempt
+between primitives; deadlines, retries, cancellation and model attempts persist.
+Private native receipt evidence can bias source choice and reference a reusable
+authored procedure. Native workmanship is separate. Pen topology and teaching
+remain unsupported, with explicit failure. No Phase 9 learner is active.
 
-Current application **0.11.1**, native **UW9 / DB10 / checkpoint 9**, native build unchanged at `832c4a705a7ceecd85d8befb3d84f4dff0d4730f024c395eba12985f0d8bd896`. Read [README](README.md) for detailed launch/build/save instructions and [audit report](docs/CODE_AUDIT_REPORT.md) for fixes and verification. D's original handoff is [archived](HANDOFF_D_ARCHIVE.md).
+## Launch and resume
 
-## Launch
+Use run.cmd, bash run.sh or dist/UnderworldLab.exe for the model-off desktop.
+Choose a NEW --db path for E; never migrate/reset a previous controller save.
+Source commands require UNDERWORLD_BUILD=build/living-d and the MinGW DLL path.
 
-- Double-click run.cmd, execute `bash run.sh` in Git Bash, or run dist/UnderworldLab.exe.
-- Default: model-off D profile, persistent user-local UnderworldLab/world.sqlite, 30 simulated seconds bounded by 240 wall seconds, read-only viewer on 127.0.0.1:8768. It stays available after the run; Ctrl+C closes it.
-- `--db PATH --seconds N --port 0 --no-browser --exit-after-run` provides a bounded headless invocation.
-- `UNDERWORLD_SOURCE=1` forces the source launcher. Direct source commands need UNDERWORLD_BUILD=build/living-d.
+```powershell
+$env:PATH='C:\mingw64\bin;'+$env:PATH
+$env:UNDERWORLD_BUILD=(Resolve-Path build/living-d).Path
+.venv/Scripts/python.exe -m underworld living-world init --db data/e-user/run.sqlite --config config/living-world-e.toml --calls 0
+.venv/Scripts/python.exe -m underworld living-world task --db data/e-user/run.sqlite --agent agent-1 --goal craft_tool
+.venv/Scripts/python.exe -m underworld living-world run --db data/e-user/run.sqlite --seconds 60 --wall-seconds 240
+```
 
-## Important compatibility
+The E profile has four humans/two animals in 16 m; confirmation uses smaller
+one-human cases. Arbitrary population/layout success is not established.
+The normal desktop rejects active model-assisted tasks; use the explicit CLI
+model workflow described in operations. Models default off; E caps do not clear
+A's recurring fair/global inference-budget gate or add AppContainer guarantees.
 
-This audit changes Python orchestration/controller source pins. Do not run new code against old D evidence expecting migration. The previous exact project runtime is preserved in build/runtime-before-code-audit-20261020 (SHA manifest included), and its CLI was verified against the original D database. README has commands to use it. Current executable/source saves interoperate when source/native identities match. No resets or resource refill occur on resume.
+## Compatibility and evidence
 
-## Maintenance scope
+Controller source pins cover stabilization.py, planning.py and planning_model.py.
+The exact pre-E source/config/executable is preserved locally at
+build/runtime-before-milestone-e-20261021. Its executable is for food-repair v3
+saves; still earlier worlds require their respective archived full runtimes.
+Do not mix source versions. Original C/D/food/Phase 9 artifacts remain historical.
+The first E utility comparison was invalid; it and its registration are retained.
+The corrected cohort uses seeds 1329/1449 with matched native starts and active
+utility; E controller digest stayed frozen. See the report for exact results.
 
-Fixed generator action loss, multi-transaction observer state, read-only 2D controls, partial invalid initialization, working-directory config defaults, historical-build/evidence bootstrap hazards and frozen source checksums. Consolidated viewer/state projection, culture recall, stabilization initialization, journal checking, checkpoint/package constants and C/D continuity drivers. Native physics/action validation was not weakened. Models stay off; failed Phase 9 learner remains excluded.
+Verification: 209 Python tests (315.240 s), four native checks, lint/static/syntax,
+real model comparison, broken-tool supplement, packaged source/save interchange,
+E task CLI/model-off guard and both read-only viewers pass. The 120-continuous-
+second production world uses 32.879 primary wall seconds; a fresh-process backup
+resumes 90 seconds in 24.925 wall seconds to exact native state and eight tables.
+Primary save: data/living-world-e-continuity-20261021/run.sqlite; counterpart:
+data/living-world-e-continuity-20261021/resumed.sqlite. No refill/reset/growth.
 
-Executable: dist/UnderworldLab.exe (unsigned Windows x64; not committed). Build recipe: requirements-build.txt + scripts/package_app.py. It bundles runtime DLLs and local assets, not saved worlds/models/environment files. Packaged AppContainer --cli run is explicitly unsupported; use original source isolation workflow.
+Model assistance adds cost without a completion advantage. Source preference
+changes later behavior but is slower when a temporary blocker has cleared.
+Do not relabel this as general learning, new recipes, mastery or model training.
+Evidence is under artifacts/living_world_e_*; raw new worlds under data/living-world-e-*.
+The independent Phase 9 audit retains its failed gate and original sources.
 
-Audit evidence is under artifacts/code_audit_*. Prior C/D/Phase 9 evidence is retained. Keep the existing unrelated OpenCode/npm work. No push is authorized by this audit request.
+## Next work
 
-## Verification
-
-Final verification: **183 Python tests** (229.709 s inside unittest) and **four native checks** pass. Static checks are clean. The standalone executable reaches **120 continuous simulated seconds / 169.582 wall seconds**, completes four human drink goals through 15 native actions, retains all six bodies alive at health 1.0, and passes replay. Its complete native head equals the original final D 120-second head (`da68713042375015e7fc88ba50f863072b4da1416620232215b3ada187837c90`), demonstrating unchanged native behavior for this case. Separate reduced-PATH smoke checks prove executable/source/executable save continuation and packaged backup/replay. Both packaged UI pages pass read-only/asset/privacy checks with no JavaScript errors.
-
-The verifier-owned port 8769 viewer has been stopped; no model server was started. Existing user viewers were not controlled. The source bootstrap and source/packaged Bash/CMD launch paths were exercised.
-
-## Remaining milestones
-
-E general prerequisite planning/recovery and measured adaptation remains next only when requested. F knowledge/teaching and G integration remain later. Breeding/cooking, true 3D, speech and new neural training are not implemented here. A's recurring/fair/global model-budget gate remains incomplete, along with extended supervisor/isolation/archival and long-horizon claims. Care still has recorded failures; do not reinterpret bounded survival as reliable husbandry.
+F: explicit initial knowledge and source-preserving embodied teaching/injection.
+G: integrated four-person demonstration and E-aware bounded archival. A global
+model budgets, general goal formation, arbitrary cargo/route/pen planning and
+long-term husbandry remain incomplete. Breeding/cooking, speech and true 3D are
+still deferred. No owned model/viewer process is intentionally left running.
+Unrelated OpenCode/npm edits remain local and were not included in the E push.

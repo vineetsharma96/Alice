@@ -1,0 +1,126 @@
+{
+  "wall_s": 5.008700100006536,
+  "state": {
+    "agent": "agent-1",
+    "authored_steps": 10,
+    "call_limit": 0,
+    "calls": 0,
+    "fallback_goals": 0,
+    "goal": null,
+    "goals_blocked": 0,
+    "goals_completed": 0,
+    "last_tick": 35,
+    "model": false,
+    "model_goals": 0,
+    "model_latency_s": 0.0,
+    "navigation": {},
+    "next_call_tick": 0,
+    "next_goal_tick": 0,
+    "pending": null,
+    "pending_owner": "task",
+    "sequence": 11,
+    "submitted": 10,
+    "tasks": {
+      "active": null,
+      "beliefs": {},
+      "calls": 0,
+      "history": [
+        {
+          "completed_tick": 35,
+          "created_tick": 0,
+          "delivered_ug": 0,
+          "evidence": [
+            "stable-agent-1-2",
+            "stable-agent-1-3",
+            "stable-agent-1-4",
+            "stable-agent-1-5",
+            "stable-agent-1-6",
+            "stable-agent-1-7",
+            "stable-agent-1-8",
+            "stable-agent-1-9",
+            "stable-agent-1-10",
+            "stable-agent-1-11"
+          ],
+          "failures": 0,
+          "goal": "craft_tool",
+          "id": 1,
+          "mode": "adaptive",
+          "origin": "operator_assigned_authored_procedure",
+          "outcome": "completed",
+          "procedure_episode_id": 11,
+          "procedure_source": null,
+          "reason": "native_observable_goal_predicate",
+          "steps": 10
+        }
+      ],
+      "model_latency_s": 0.0,
+      "next_call_tick": 0,
+      "procedures": {
+        "craft_tool": {
+          "confidence": "verified_in_recorded_context_only",
+          "episode_id": 11,
+          "successes": 1
+        }
+      }
+    }
+  },
+  "own": {
+    "entity_id": "agent-1",
+    "kind": "actor",
+    "position_m": [
+      3.9028745887764886,
+      2.0794722092787303
+    ],
+    "radius_m": 0.25,
+    "mass_kg": 0.0,
+    "mass_ug": "0",
+    "workmanship": 1,
+    "inventory_ug": {
+      "fiber": "0",
+      "stone": "0",
+      "wood": "0"
+    },
+    "alive": true,
+    "body": {
+      "hunger": 0.368,
+      "thirst": 0.42699999999999905,
+      "fatigue": 0.21780000000000005,
+      "health": 1.0,
+      "alive": true,
+      "food_ingested_ug": "0",
+      "water_ingested_ug": "0"
+    },
+    "freshness_s": {},
+    "tools": [
+      {
+        "entity_id": "crafted-14",
+        "kind": "tool",
+        "position_m": [
+          3.9028745887764886,
+          2.0794722092787303
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 0.7,
+        "mass_ug": "700000000",
+        "recipe_id": "crude_axe",
+        "owner_id": "agent-1",
+        "work_s": 0.0,
+        "durability": 8,
+        "composition_ug": {
+          "fiber": "50000000",
+          "stone": "200000000",
+          "wood": "450000000"
+        },
+        "inventory_ug": {}
+      }
+    ],
+    "carried_mass_ug": "700000000",
+    "busy": false,
+    "shared_event_refs": []
+  },
+  "replay": {
+    "replay_matches": true,
+    "tick": "36",
+    "state_hash": "eefd79376431dd291eac1cb61eb5f08afec91c3f08ce374a27be00c87c589525"
+  }
+}

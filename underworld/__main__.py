@@ -65,7 +65,7 @@ def main():
     runner.add_argument("--model-endpoint",default="http://127.0.0.1:8081")
     living=commands.add_parser("living-world",help="opt-in stabilized living-world controller")
     living_commands=living.add_subparsers(dest="living_command",required=True)
-    for name in ("init","attach","run","status"):
+    for name in ("init","attach","run","status","task","cancel-task"):
         sub=living_commands.add_parser(name)
         sub.add_argument("--db",type=Path,required=True)
         if name=="init":sub.add_argument("--config",type=Path,default=Path(__file__).resolve().parents[1]/"config/living-world.toml")
@@ -75,6 +75,13 @@ def main():
             sub.add_argument("--wall-seconds",type=float,default=240)
             sub.add_argument("--model",action="store_true")
             sub.add_argument("--endpoint",default="http://127.0.0.1:8081")
+            sub.add_argument('--task-model',action='store_true',help='bounded E operator selection; legacy model scheduler must remain disabled')
+        if name in ('task','cancel-task'):sub.add_argument('--agent',required=True)
+        if name=='task':
+            from .planning import GOALS
+            sub.add_argument('--goal',choices=GOALS,required=True)
+            sub.add_argument('--params',default='{}',help='JSON task parameters, no physical effects')
+            sub.add_argument('--task-mode',choices=['authored','episodic_only','adaptive','model_assisted'],default='adaptive')
     for name in ("run-status","stop"):
         sub=commands.add_parser(name);sub.add_argument("--db",type=Path,required=True)
     args = parser.parse_args()
@@ -93,10 +100,21 @@ def main():
                 value=stabilization.attach(args.db,model=args.model,call_limit=args.calls)
             elif args.living_command=="run":
                 provider=None
+                if args.model and args.task_model:raise ValueError('choose one model adapter')
                 if args.model:
                     from . import cognition
                     provider=cognition.LlamaCpp(args.endpoint)
+                if args.task_model:
+                    from .planning_model import PlanningModel
+                    provider=PlanningModel(args.endpoint)
                 value=stabilization.run(args.db,args.seconds,args.wall_seconds,provider=provider)
+            elif args.living_command=='task':
+                from .planning import assign
+                from .wire import loads
+                value=assign(args.db,args.agent,args.goal,loads(args.params,4096),args.task_mode)
+            elif args.living_command=='cancel-task':
+                from .planning import cancel
+                value=cancel(args.db,args.agent)
             else:value=stabilization.status(args.db)
             print(json.dumps(value,indent=2,allow_nan=False));return
         if args.command == "new":

@@ -1,3 +1,38 @@
+# Milestone E — 2026-10-21
+
+Application **0.12.0 / stabilization/4** adds explicitly assigned hierarchical
+production/care tasks, bounded recovery, survival preemption and own native
+receipt-linked source preference/procedures. Native UW9/DB10/checkpoint 9 laws
+are unchanged. Read [E report](LIVING_WORLD_E_REPORT.md),
+[operations](PLANNING_OPERATIONS.md) and [evaluation correction](PHASE_E_EVALUATION_AMENDMENT_1.md).
+
+Corrected confirmation seeds 1329/1449 start each arm from matching native
+checkpoints and verify actual utility activity. Every hierarchical mode completes
+6/6 feasible task goals. Native terminal failures across all cases are 8 authored,
+8 episodic-only, 2 adaptive and 5 model-assisted; unavailable/blocked tasks stay
+unmet. Four real model calls add 21.686 wall seconds without a completion benefit.
+Receipt-derived source preference changes later choices but can be stale/slower.
+The original invalid inactive-utility comparison remains retained and disclosed.
+The separate broken-tool supplement succeeds in 8/8 task cases across two new
+confirmation seeds, with real native scrap/replacement and exact replay.
+
+Final software verification: **209 Python tests (315.240 s)**, **four native
+checks**, static/syntax checks, packaged task/desktop guard, save interchange and
+both read-only UIs pass. One finite one-human production world runs 120 continuous
+simulated seconds / 32.879 primary wall seconds. Fresh-process continuation from
+30 seconds matches native state and eight memory/controller tables exactly.
+The independent sealed Phase 9 audit still returns advance=false.
+
+Source/controller pins change; old worlds require their preserved full runtime
+at build/runtime-before-milestone-e-20261021 or their earlier exact archive.
+There is no automatic migration/reset. The new profile retains four humans/two
+animals, but confirmations are smaller controlled cases. F knowledge workflows
+and G integrated demonstration remain next; global model budgets, general goal
+formation, pen planning/teaching, long-term archival/husbandry and prior deferred
+features remain incomplete. Older sections below are historical evidence.
+
+---
+
 # Edible-food execution repair — 2026-10-21
 
 The persistent authored executor now consumes carried plant food/eggs, accepts

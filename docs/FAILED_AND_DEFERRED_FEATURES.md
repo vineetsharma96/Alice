@@ -1,3 +1,16 @@
+# Milestone E update — 21 October 2026
+
+Bounded explicitly assigned hierarchy/recovery now covers food/wood, tools,
+planks/troughs, real water delivery and local animal-care tasks. It uses native
+receipts and own observations; general autonomous task formation, pen topology
+and teaching remain incomplete. [E report](LIVING_WORLD_E_REPORT.md) records
+209 passing Python tests/four native checks and the corrected confirmation.
+Four real model calls show no completion benefit and add cost. Authored source
+preference changes behavior but can become stale and slower. Placement can waste
+preparatory work before the final site is rejected. Do not call these general
+learning or husbandry success. A's global inference budgets and Phase 9's failed
+gate remain unchanged; F/G and long-term archival remain later work.
+
 # Food execution repair — 21 October 2026
 
 **Fixed:** the persistent executor overlooked carried plant food/eggs and visible

@@ -1,0 +1,22 @@
+{
+  "registered_before_confirmation": true,
+  "source_id": "2ba240466a8bb0850837af0fc7d3d842df305f99b61be4eaf9122c088a9ccb1c",
+  "controller_version": "stabilization/4",
+  "development_seeds": [
+    21,
+    31
+  ],
+  "confirmation_seeds": [
+    929,
+    1049
+  ],
+  "sha256": {
+    "underworld/stabilization.py": "1220c2d220287759c298111301a347f74e953619b002731189c6bbfbf14de2e1",
+    "underworld/planning.py": "74c75f3a0c4c3a99425c651e5a3b39b6f03b883583ad66b1c532fb5f270c9bdb",
+    "underworld/planning_model.py": "ec2b3060201cbbe4270dbee32c0e142c0d8e966eaa694b406f6708566217b257",
+    "docs/PHASE_E_PLANNING.md": "9e3e4a6ebcba457f468b7cf16c443c81ec839a375a3d87883a86f60922c31aab",
+    "scripts/phase_e_eval.py": "91528e13c341e37b03494d73db8c4ff2d6f612fa4a58fa332e28dd21cd80441d",
+    "tests/planning_fixtures.py": "8963e41d454b0b7e3e8d3fb79349ff2bda6d8d0f425286106e2fe791b96bcc32",
+    "tests/test_phase_e_planning.py": "1334c3c4de53570a21ef5cc77ed9a01a70d925640b47d7d4732662ed1ccb8c19"
+  }
+}

@@ -52,3 +52,15 @@ Recipes are not automatically cognition input. Agent own state includes owned to
 All use the existing strict schema-1 action envelope. One target and empty parameters: observe_animal (>=0.2 s), guide_or_lure (>=1 s). One target and {mass_kg}: gather_plant (>=1 s). One target and {material,mass_kg}: offer_feed and collect_eggs (>=1 s); collection requires material eggs. Existing fill_trough retains its real water-only transfer. Care reach is 1.5 m; observation is bounded to 4 m and line of sight. Prerequisites are checked again on terminal completion. New reasons include DEAD_TARGET and UNFAMILIAR; native validation order is preserved.
 
 Eating retains the historical {mass_kg} food default and adds optional material plant_food or eggs. Those two materials can be stored/taken through boxes. Their remaining lifetimes mix by minimum, halve aging rate in boxes, and transfer to non-edible retained residue on expiry. Historical abstract food remains nonperishable. Source forage is gathered by gather_plant, not the generic gather contract. All animal reserve, egg, waste, life/familiarity/guide state and food freshness persist. No breeding or cook_food contract is exposed.
+# Milestone E controller contract — 21 October 2026
+
+Native UW9/DB10/checkpoint 9 actions and validation remain unchanged. Optional
+hierarchical tasks use stabilization/4 with source pins spanning stabilization,
+planning and planning_model. A pending request has one owner (survival or task),
+is reconciled against the native decision journal and receives native completion
+before procedure credit or cancellation. Whole-goal satisfaction and completed
+primitive actions are distinct. Externally/already satisfied goals get no new
+executor procedure credit. Only own source-backed episodes can be reused.
+Old controller worlds require the prior full runtime, not implicit migration.
+Full contracts and outcome gates: [PHASE_E_PLANNING](PHASE_E_PLANNING.md),
+[evaluation amendment](PHASE_E_EVALUATION_AMENDMENT_1.md).

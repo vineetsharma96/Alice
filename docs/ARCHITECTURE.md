@@ -90,3 +90,12 @@ These changes intentionally create native checkpoint format UW7 and durable SQLi
 `core/ecology.cpp` owns two stable native animals, bounded local sensing/handling, shared swept-circle movement, forage, production clocks, integer reserve transfers and aggregate retained waste. SQLite still advances one authoritative world tick under its existing lease; animals add no Python scheduler or inference calls. The ecology profile is new-world-only and opt-in through config/living-world-d.toml. Native/source/config pins fail closed on older formats; original files remain intact.
 
 The privileged snapshot contains full animal reserves/history and waste/freshness ledgers. Agent observations expose local appearance and condition only; observe_animal returns its own sourced report, not other caretakers' private history. Food lifetime travels conservatively through storage and collection. The Phase 9 learner is never imported by this execution path. The evaluation care route is explicitly operator assigned, and diagnostic fixture editing never runs inside live policies. See PHASE_D_ECOLOGY.md for units, inputs, timing, mass equations and omissions.
+# Milestone E extension — 21 October 2026
+
+Python planning.py supplies explicit authored hierarchical tasks inside the
+existing stabilization writer, with private receipt-derived hypotheses and
+procedure references. planning_model.py can select a bounded next operator;
+it never supplies physical effects. Controller v4 hashes all three control
+modules and keeps task pending ownership, cancellation and source evidence in
+the checksummed coordinator state. No additional writer or native-law change.
+Read [E report](LIVING_WORLD_E_REPORT.md) and [operations](PLANNING_OPERATIONS.md).

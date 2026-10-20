@@ -1,0 +1,20 @@
+{
+  "agent": "agent-1",
+  "authored_steps": 4,
+  "call_limit": 2,
+  "calls": 0,
+  "fallback_goals": 0,
+  "goal": null,
+  "goals_blocked": 0,
+  "goals_completed": 2,
+  "last_tick": 282,
+  "model": false,
+  "model_goals": 0,
+  "model_latency_s": 0.0,
+  "navigation": {},
+  "next_call_tick": 163,
+  "next_goal_tick": 169,
+  "pending": null,
+  "sequence": 6,
+  "submitted": 4
+}

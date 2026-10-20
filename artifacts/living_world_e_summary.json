@@ -1,0 +1,217 @@
+{
+  "summary": {
+    "utility": {
+      "feasible_completed": 0,
+      "feasible_cases": 6,
+      "submission_rejections": 0,
+      "terminal_failures": 0,
+      "completed_actions": 34,
+      "case_wall_s_sum": 15.233039700004156,
+      "feasible_wall_s_sum": 9.394237500033341,
+      "calls": 0,
+      "inference_wall_s": 0,
+      "alive_at_own_cutoff": 12
+    },
+    "authored": {
+      "feasible_completed": 6,
+      "feasible_cases": 6,
+      "submission_rejections": 0,
+      "terminal_failures": 8,
+      "completed_actions": 118,
+      "case_wall_s_sum": 53.116975099997944,
+      "feasible_wall_s_sum": 37.40161960000114,
+      "calls": 0,
+      "inference_wall_s": 0.0,
+      "alive_at_own_cutoff": 12
+    },
+    "episodic_only": {
+      "feasible_completed": 6,
+      "feasible_cases": 6,
+      "submission_rejections": 0,
+      "terminal_failures": 8,
+      "completed_actions": 118,
+      "case_wall_s_sum": 51.938979599959566,
+      "feasible_wall_s_sum": 36.42601299997477,
+      "calls": 0,
+      "inference_wall_s": 0.0,
+      "alive_at_own_cutoff": 12
+    },
+    "adaptive": {
+      "feasible_completed": 6,
+      "feasible_cases": 6,
+      "submission_rejections": 0,
+      "terminal_failures": 2,
+      "completed_actions": 142,
+      "case_wall_s_sum": 59.198222999984864,
+      "feasible_wall_s_sum": 35.21040779999748,
+      "calls": 0,
+      "inference_wall_s": 0.0,
+      "alive_at_own_cutoff": 12
+    },
+    "model_assisted": {
+      "feasible_completed": 6,
+      "feasible_cases": 6,
+      "submission_rejections": 0,
+      "terminal_failures": 5,
+      "completed_actions": 150,
+      "case_wall_s_sum": 80.45828330003133,
+      "feasible_wall_s_sum": 47.89836910001759,
+      "calls": 4,
+      "inference_wall_s": 21.686325399990892,
+      "alive_at_own_cutoff": 12
+    }
+  },
+  "model_operator_outcomes": [
+    {
+      "seed": 1329,
+      "case": "harvest_craft",
+      "request_id": "stable-agent-1-2",
+      "submission": "accepted",
+      "terminal": "completed",
+      "full_goal_completed": true
+    },
+    {
+      "seed": 1329,
+      "case": "blocked_site",
+      "request_id": "stable-agent-1-2",
+      "submission": "accepted",
+      "terminal": "completed",
+      "full_goal_completed": false
+    },
+    {
+      "seed": 1449,
+      "case": "harvest_craft",
+      "request_id": "stable-agent-1-2",
+      "submission": "accepted",
+      "terminal": "completed",
+      "full_goal_completed": true
+    },
+    {
+      "seed": 1449,
+      "case": "blocked_site",
+      "request_id": "stable-agent-1-2",
+      "submission": "accepted",
+      "terminal": "completed",
+      "full_goal_completed": false
+    }
+  ],
+  "model_inference_results": [
+    {
+      "details": {
+        "input_tokens": 206,
+        "model": "smollm2-360m-instruct-q8_0",
+        "output_tokens": 21,
+        "timings": {
+          "cache_n": 0,
+          "predicted_ms": 812.222,
+          "predicted_n": 21,
+          "predicted_per_second": 24.623809746596375,
+          "predicted_per_token_ms": 40.6111,
+          "prompt_ms": 4661.169,
+          "prompt_n": 206,
+          "prompt_per_second": 44.19492191765628,
+          "prompt_per_token_ms": 22.627033980582524
+        },
+        "worker_memory": {
+          "peak_working_set_bytes": 26423296,
+          "private_commit_bytes": 16461824,
+          "working_set_bytes": 26419200
+        }
+      },
+      "error": null,
+      "latency_s": 6.0405465999938315,
+      "origin": "model_operator_selection",
+      "raw": "{\"choice\": 1, \"reason\": \"You are not allowed to craft a tool.\"}",
+      "selected": 1
+    },
+    {
+      "details": {
+        "input_tokens": 207,
+        "model": "smollm2-360m-instruct-q8_0",
+        "output_tokens": 26,
+        "timings": {
+          "cache_n": 0,
+          "predicted_ms": 1176.304,
+          "predicted_n": 26,
+          "predicted_per_second": 21.25300942613474,
+          "predicted_per_token_ms": 47.05216,
+          "prompt_ms": 4308.444,
+          "prompt_n": 207,
+          "prompt_per_second": 48.04518754334511,
+          "prompt_per_token_ms": 20.813739130434783
+        },
+        "worker_memory": {
+          "peak_working_set_bytes": 26267648,
+          "private_commit_bytes": 16330752,
+          "working_set_bytes": 26263552
+        }
+      },
+      "error": null,
+      "latency_s": 5.938159500001348,
+      "origin": "model_operator_selection",
+      "raw": "{\"choice\": 1, \"reason\": \"Choose one next operator for this simulated inhabitant from its permitted data.\"}",
+      "selected": 1
+    },
+    {
+      "details": {
+        "input_tokens": 206,
+        "model": "smollm2-360m-instruct-q8_0",
+        "output_tokens": 21,
+        "timings": {
+          "cache_n": 0,
+          "predicted_ms": 749.582,
+          "predicted_n": 21,
+          "predicted_per_second": 26.681537176719825,
+          "predicted_per_token_ms": 37.4791,
+          "prompt_ms": 3562.78,
+          "prompt_n": 206,
+          "prompt_per_second": 57.82001695305351,
+          "prompt_per_token_ms": 17.295048543689322
+        },
+        "worker_memory": {
+          "peak_working_set_bytes": 26447872,
+          "private_commit_bytes": 16502784,
+          "working_set_bytes": 26443776
+        }
+      },
+      "error": null,
+      "latency_s": 4.818134600005578,
+      "origin": "model_operator_selection",
+      "raw": "{\"choice\": 1, \"reason\": \"You are not allowed to craft a tool.\"}",
+      "selected": 1
+    },
+    {
+      "details": {
+        "input_tokens": 207,
+        "model": "smollm2-360m-instruct-q8_0",
+        "output_tokens": 22,
+        "timings": {
+          "cache_n": 0,
+          "predicted_ms": 791.923,
+          "predicted_n": 22,
+          "predicted_per_second": 26.51772962775421,
+          "predicted_per_token_ms": 37.71061904761905,
+          "prompt_ms": 3540.819,
+          "prompt_n": 207,
+          "prompt_per_second": 58.461050960243945,
+          "prompt_per_token_ms": 17.10540579710145
+        },
+        "worker_memory": {
+          "peak_working_set_bytes": 26406912,
+          "private_commit_bytes": 16449536,
+          "working_set_bytes": 26402816
+        }
+      },
+      "error": null,
+      "latency_s": 4.889484699990135,
+      "origin": "model_operator_selection",
+      "raw": "{\"choice\": 1, \"reason\": \"You are not allowed to move the inhabitant.\"}",
+      "selected": 1
+    }
+  ],
+  "model_operator_origin_counts": {
+    "model_operator_selection": 4,
+    "deterministic_fallback": 40,
+    "authored_execution": 109
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "exe_sha256": "a4060affb114b35bea4ff7214c8f0b3e6176b577054ccd18db33ae4d581f93ca",
+  "checks": [
+    {
+      "command": [
+        "--db",
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\data\\living-world-e-package-tasks-20261021\\E world.sqlite",
+        "--seconds",
+        ".4",
+        "--port",
+        "0",
+        "--no-browser",
+        "--exit-after-run"
+      ],
+      "returncode": 0,
+      "stdout": "{\"ready\": true, \"version\": \"0.12.0\", \"db\": \"C:\\\\Users\\\\abc\\\\Documents\\\\ChatGPT\\\\UnderWorld\\\\data\\\\living-world-e-package-tasks-20261021\\\\E world.sqlite\", \"url\": \"http://127.0.0.1:55117/viewer\", \"native_build_id\": \"832c4a705a7ceecd85d8befb3d84f4dff0d4730f024c395eba12985f0d8bd896\", \"simulated_seconds_requested\": 0.4, \"viewer_read_only\": true, \"model_calls_enabled\": false}\n{\"run\": {\"status\": \"target_reached\", \"initial_tick\": \"0\", \"tick\": \"2\", \"simulated_s\": 0.4, \"wall_s\": 0.6454842999955872, \"state_hash\": \"2e66ce2cf80416a5fe5628a3d80cc8d482c72c21e3074cedf3e40956a3970b39\", \"replay\": {\"replay_matches\": true, \"tick\": \"2\", \"state_hash\": \"2e66ce2cf80416a5fe5628a3d80cc8d482c72c21e3074cedf3e40956a3970b39\"}}}\n",
+      "stderr": "",
+      "wall_s": 4.2240240999963135
+    },
+    {
+      "command": [
+        "--cli",
+        "living-world",
+        "task",
+        "--db",
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\data\\living-world-e-package-tasks-20261021\\E world.sqlite",
+        "--agent",
+        "agent-1",
+        "--goal",
+        "inspect_problem",
+        "--params",
+        "{\"target\":\"resource-1\"}"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"active\": {\n    \"care_effects\": 0,\n    \"created_tick\": 2,\n    \"delivered_ug\": 0,\n    \"failures\": 0,\n    \"goal\": \"inspect_problem\",\n    \"id\": 1,\n    \"initial_ingested_ug\": 0,\n    \"mode\": \"adaptive\",\n    \"model_attempts\": 0,\n    \"origin\": \"operator_assigned_authored_procedure\",\n    \"params\": {\n      \"target\": \"resource-1\"\n    },\n    \"pending_choice\": null,\n    \"procedure_source\": null,\n    \"receipts\": [],\n    \"report\": null,\n    \"report_tick\": null,\n    \"search\": 0,\n    \"stage\": \"decompose\",\n    \"steps\": 0\n  },\n  \"beliefs\": {},\n  \"calls\": 0,\n  \"history\": [],\n  \"model_latency_s\": 0.0,\n  \"next_call_tick\": 0,\n  \"procedures\": {}\n}\n",
+      "stderr": "",
+      "wall_s": 2.275396600001841
+    },
+    {
+      "command": [
+        "--db",
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\data\\living-world-e-package-tasks-20261021\\E world.sqlite",
+        "--seconds",
+        "3",
+        "--port",
+        "0",
+        "--no-browser",
+        "--exit-after-run"
+      ],
+      "returncode": 0,
+      "stdout": "{\"ready\": true, \"version\": \"0.12.0\", \"db\": \"C:\\\\Users\\\\abc\\\\Documents\\\\ChatGPT\\\\UnderWorld\\\\data\\\\living-world-e-package-tasks-20261021\\\\E world.sqlite\", \"url\": \"http://127.0.0.1:55122/viewer\", \"native_build_id\": \"832c4a705a7ceecd85d8befb3d84f4dff0d4730f024c395eba12985f0d8bd896\", \"simulated_seconds_requested\": 3.0, \"viewer_read_only\": true, \"model_calls_enabled\": false}\n{\"run\": {\"status\": \"target_reached\", \"initial_tick\": \"2\", \"tick\": \"17\", \"simulated_s\": 3.0, \"wall_s\": 4.666230299990275, \"state_hash\": \"006ec709a554ca6ed0dcd4dd96c360592a62dd25cf215d59f81b4be62c49afe8\", \"replay\": {\"replay_matches\": true, \"tick\": \"17\", \"state_hash\": \"006ec709a554ca6ed0dcd4dd96c360592a62dd25cf215d59f81b4be62c49afe8\"}}}\n",
+      "stderr": "",
+      "wall_s": 7.071262500001467
+    },
+    {
+      "command": [
+        "--cli",
+        "living-world",
+        "status",
+        "--db",
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\data\\living-world-e-package-tasks-20261021\\E world.sqlite"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"agent\": \"agent-1\",\n  \"authored_steps\": 1,\n  \"call_limit\": 0,\n  \"calls\": 0,\n  \"fallback_goals\": 0,\n  \"goal\": null,\n  \"goals_blocked\": 0,\n  \"goals_completed\": 0,\n  \"last_tick\": 16,\n  \"model\": false,\n  \"model_goals\": 0,\n  \"model_latency_s\": 0.0,\n  \"navigation\": {},\n  \"next_call_tick\": 0,\n  \"next_goal_tick\": 0,\n  \"pending\": null,\n  \"pending_owner\": \"task\",\n  \"sequence\": 2,\n  \"submitted\": 1,\n  \"tasks\": {\n    \"active\": null,\n    \"beliefs\": {},\n    \"calls\": 0,\n    \"history\": [\n      {\n        \"completed_tick\": 12,\n        \"created_tick\": 2,\n        \"delivered_ug\": 0,\n        \"evidence\": [\n          \"stable-agent-1-2\"\n        ],\n        \"executor_goal_credit\": true,\n        \"failures\": 0,\n        \"goal\": \"inspect_problem\",\n        \"id\": 1,\n        \"mode\": \"adaptive\",\n        \"origin\": \"operator_assigned_authored_procedure\",\n        \"outcome\": \"completed\",\n        \"procedure_episode_id\": 2,\n        \"procedure_source\": null,\n        \"reason\": \"native_observable_goal_predicate\",\n        \"steps\": 1\n      }\n    ],\n    \"model_latency_s\": 0.0,\n    \"next_call_tick\": 0,\n    \"procedures\": {\n      \"inspect_problem\": {\n        \"confidence\": \"verified_in_recorded_context_only\",\n        \"episode_id\": 2,\n        \"successes\": 1\n      }\n    }\n  }\n}\n",
+      "stderr": "",
+      "wall_s": 1.620861599993077
+    },
+    {
+      "command": [
+        "--cli",
+        "living-world",
+        "task",
+        "--db",
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\data\\living-world-e-package-tasks-20261021\\E world.sqlite",
+        "--agent",
+        "agent-1",
+        "--goal",
+        "craft_tool",
+        "--task-mode",
+        "model_assisted"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"active\": {\n    \"care_effects\": 0,\n    \"created_tick\": 17,\n    \"delivered_ug\": 0,\n    \"failures\": 0,\n    \"goal\": \"craft_tool\",\n    \"id\": 3,\n    \"initial_ingested_ug\": 0,\n    \"mode\": \"model_assisted\",\n    \"model_attempts\": 0,\n    \"origin\": \"operator_assigned_authored_procedure\",\n    \"params\": {},\n    \"pending_choice\": null,\n    \"procedure_source\": null,\n    \"receipts\": [],\n    \"report\": null,\n    \"report_tick\": null,\n    \"search\": 0,\n    \"stage\": \"decompose\",\n    \"steps\": 0\n  },\n  \"beliefs\": {},\n  \"calls\": 0,\n  \"history\": [\n    {\n      \"completed_tick\": 12,\n      \"created_tick\": 2,\n      \"delivered_ug\": 0,\n      \"evidence\": [\n        \"stable-agent-1-2\"\n      ],\n      \"executor_goal_credit\": true,\n      \"failures\": 0,\n      \"goal\": \"inspect_problem\",\n      \"id\": 1,\n      \"mode\": \"adaptive\",\n      \"origin\": \"operator_assigned_authored_procedure\",\n      \"outcome\": \"completed\",\n      \"procedure_episode_id\": 2,\n      \"procedure_source\": null,\n      \"reason\": \"native_observable_goal_predicate\",\n      \"steps\": 1\n    }\n  ],\n  \"model_latency_s\": 0.0,\n  \"next_call_tick\": 0,\n  \"procedures\": {\n    \"inspect_problem\": {\n      \"confidence\": \"verified_in_recorded_context_only\",\n      \"episode_id\": 2,\n      \"successes\": 1\n    }\n  }\n}\n",
+      "stderr": "",
+      "wall_s": 1.8084909000026528
+    },
+    {
+      "command": [
+        "--cli",
+        "inspect",
+        "--db",
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\data\\living-world-e-package-tasks-20261021\\E world.sqlite"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"schema_version\": 1,\n  \"kind\": \"world_snapshot\",\n  \"run_id\": \"2056f04f-4356-419c-8a89-a0931be264c7\",\n  \"culture\": {\n    \"enabled\": false,\n    \"skills\": {},\n    \"agreements\": [],\n    \"validated_batches\": [],\n    \"departed\": []\n  },\n  \"ecology\": {\n    \"enabled\": true,\n    \"controller_origin\": \"authored_native_ecology_v1\",\n    \"animals\": {\n      \"animal-1\": {\n        \"species\": \"mossgrazer\",\n        \"mode\": \"wander\",\n        \"age_s\": 123.40000000000005,\n        \"life_stage\": \"adult\",\n        \"laying_s\": 0.0,\n        \"food_reserve_ug\": \"246600000\",\n        \"water_reserve_ug\": \"194900000\",\n        \"food_metabolized_ug\": \"3400000\",\n        \"water_metabolized_ug\": \"5100000\",\n        \"eggs_laid_ug\": \"0\",\n        \"familiarity\": {},\n        \"last_feed\": {},\n        \"handler\": \"\",\n        \"guide_until\": \"0\"\n      },\n      \"animal-2\": {\n        \"species\": \"reedhen\",\n        \"mode\": \"avoid_unfamiliar\",\n        \"age_s\": 123.40000000000005,\n        \"life_stage\": \"adult\",\n        \"laying_s\": 3.400000000000001,\n        \"food_reserve_ug\": \"246600000\",\n        \"water_reserve_ug\": \"194900000\",\n        \"food_metabolized_ug\": \"3400000\",\n        \"water_metabolized_ug\": \"5100000\",\n        \"eggs_laid_ug\": \"0\",\n        \"familiarity\": {},\n        \"last_feed\": {},\n        \"handler\": \"\",\n        \"guide_until\": \"0\"\n      }\n    },\n    \"freshness_s\": {},\n    \"structural_body_initial_ug\": \"2800000000\",\n    \"food_residue_ug\": \"6800000\",\n    \"water_waste_ug\": \"10200000\",\n    \"egg_input_ug\": \"0\",\n    \"eggs_produced_ug\": \"0\",\n    \"forage_regeneration_kg_s\": 0.0\n  },\n  \"branch_id\": \"2056f04f-4356-419c-8a89-a0931be264c7\",\n  \"tick\": \"17\",\n  \"observation_version\": \"17\",\n  \"last_event_seq\": \"21\",\n  \"seed\": \"20261020\",\n  \"dt_s\": 0.2,\n  \"simulated_time_s\": 3.4000000000000004,\n  \"laws_version\": \"culture-6/32b9f13b5fe9\",\n  \"thermal\": {\n    \"enabled\": false,\n    \"open_boundaries\": false,\n    \"cells\": [],\n    \"ambient_temperature_k\": 0.0,\n    \"stored_energy_j\": 0.0,\n    \"initial_energy_j\": 0.0,\n    \"heater_input_j\": 0.0,\n    \"radiation_in_j\": 0.0,\n    \"radiation_out_j\": 0.0,\n    \"outflow_energy_j\": 0.0,\n    \"solar_transferred_j\": 0.0,\n    \"burned_fuel_ug\": \"0\",\n    \"outflow_water_ug\": \"0\",\n    \"balance_error_j\": 0.0,\n    \"global_balance_error_j\": 0.0,\n    \"energy_tolerance_j\": 1e-05\n  },\n  \"build_id\": \"832c4a705a7ceecd85d8befb3d84f4dff0d4730f024c395eba12985f0d8bd896\",\n  \"world_bounds_m\": {\n    \"width\": 16.0,\n    \"height\": 16.0\n  },\n  \"entities\": [\n    {\n      \"entity_id\": \"terrain-1\",\n      \"kind\": \"rock\",\n      \"position_m\": [\n        8.0,\n        8.0\n      ],\n      \"radius_m\": 1.0,\n      \"mass_kg\": 0.0,\n      \"mass_ug\": \"0\",\n      \"inventory_ug\": {}\n    },\n    {\n      \"entity_id\": \"tree-1\",\n      \"kind\": \"tree\",\n      \"position_m\": [\n        2.0,\n        14.0\n      ],\n      \"radius_m\": 0.6,\n      \"mass_kg\": 2.017,\n      \"mass_ug\": \"2017000000\",\n      \"stage\": \"young\",\n      \"health\": 1.0,\n      \"biomass_ug\": \"2017000000\",\n      \"inventory_ug\": {}\n    },\n    {\n      \"entity_id\": \"tree-2\",\n      \"kind\": \"tree\",\n      \"position_m\": [\n        14.0,\n        2.0\n      ],\n      \"radius_m\": 0.6,\n      \"mass_kg\": 8.0,\n      \"mass_ug\": \"8000000000\",\n      \"stage\": \"mature\",\n      \"health\": 1.0,\n      \"biomass_ug\": \"8000000000\",\n      \"inventory_ug\": {}\n    },\n    {\n      \"entity_id\": \"tree-3\",\n      \"kind\": \"tree\",\n      \"position_m\": [\n        14.0,\n        14.0\n      ],\n      \"radius_m\": 0.6,\n      \"mass_kg\": 8.0,\n      \"mass_ug\": \"8000000000\",\n      \"stage\": \"mature\",\n      \"health\": 1.0,\n      \"biomass_ug\": \"8000000000\",\n      \"inventory_ug\": {}\n    },\n    {\n      \"entity_id\": \"agent-1\",\n      \"kind\": \"actor\",\n      \"position_m\": [\n        2.0,\n        3.0\n      ],\n      \"radius_m\": 0.25,\n      \"mass_kg\": 0.0,\n      \"mass_ug\": \"0\",\n      \"workmanship\": 0,\n      \"inventory_ug\": {},\n      \"alive\": true,\n      \"body\": {\n        \"hunger\": 0.3533999999999996,\n        \"thirst\": 0.4051000000000004,\n        \"fatigue\": 0.2027199999999999,\n        \"health\": 1.0,\n        \"alive\": true,\n        \"food_ingested_ug\": \"0\",\n        \"water_ingested_ug\": \"0\"\n      },\n      \"present\": true\n    },\n    {\n      \"entity_id\": \"agent-2\",\n      \"kind\": \"actor\",\n      \"position_m\": [\n        4.204972057643818,\n        5.361642973561538\n      ],\n      \"radius_m\": 0.25,\n      \"mass_kg\": 0.0,\n      \"mass_ug\": \"0\",\n      \"workmanship\": 0,\n      \"inventory_ug\": {},\n      \"alive\": true,\n      \"body\": {\n        \"hunger\": 0.3533999999999996,\n        \"thirst\": 0.4051000000000004,\n        \"fatigue\": 0.2027199999999999,\n        \"health\": 1.0,\n        \"alive\": true,\n        \"food_ingested_ug\": \"0\",\n        \"water_ingested_ug\": \"0\"\n      },\n      \"present\": true\n    },\n    {\n      \"entity_id\": \"agent-3\",\n      \"kind\": \"actor\",\n      \"position_m\": [\n        11.873758355500392,\n        1.873546906129069\n      ],\n      \"radius_m\": 0.25,\n      \"mass_kg\": 0.0,\n      \"mass_ug\": \"0\",\n      \"workmanship\": 0,\n      \"inventory_ug\": {},\n      \"alive\": true,\n      \"body\": {\n        \"hunger\": 0.3533999999999996,\n        \"thirst\": 0.4051000000000004,\n        \"fatigue\": 0.2027199999999999,\n        \"health\": 1.0,\n        \"alive\": true,\n        \"food_ingested_ug\": \"0\",\n        \"water_ingested_ug\": \"0\"\n      },\n      \"present\": true\n    },\n    {\n      \"entity_id\": \"agent-4\",\n      \"kind\": \"actor\",\n      \"position_m\": [\n        7.444944490471588,\n        5.721289539110467\n      ],\n      \"radius_m\": 0.25,\n      \"mass_kg\": 0.0,\n      \"mass_ug\": \"0\",\n      \"workmanship\": 0,\n      \"inventory_ug\": {},\n      \"alive\": true,\n      \"body\": {\n        \"hunger\": 0.3533999999999996,\n        \"thirst\": 0.4051000000000004,\n        \"fatigue\": 0.2027199999999999,\n        \"health\": 1.0,\n        \"alive\": true,\n        \"food_ingested_ug\": \"0\",\n        \"water_ingested_ug\": \"0\"\n      },\n      \"present\": true\n    },\n    {\n      \"entity_id\": \"resource-1\",\n      \"kind\": \"food\",\n      \"position_m\": [\n        2.0,\n        2.0\n      ],\n      \"radius_m\": 0.0,\n      \"mass_kg\": 8.0,\n      \"mass_ug\": \"8000000000\",\n      \"inventory_ug\": {}\n    },\n    {\n      \"entity_id\": \"resource-2\",\n      \"kind\": \"water\",\n      \"position_m\": [\n        3.0,\n        2.0\n      ],\n      \"radius_m\": 0.0,\n      \"mass_kg\": 16.0,\n      \"mass_ug\": \"16000000000\",\n      \"inventory_ug\": {}\n    },\n    {\n      \"entity_id\": \"resource-3\",\n      \"kind\": \"inert_material\",\n      \"position_m\": [\n        4.0,\n        2.0\n      ],\n      \"radius_m\": 0.0,\n      \"mass_kg\": 32.0,\n      \"mass_ug\": \"32000000000\",\n      \"inventory_ug\": {}\n    },\n    {\n      \"entity_id\": \"resource-4\",\n      \"kind\": \"stone\",\n      \"position_m\": [\n        5.0,\n        2.0\n      ],\n      \"radius_m\": 0.15,\n      \"mass_kg\": 4.0,\n      \"mass_ug\": \"4000000000\",\n      \"inventory_ug\": {}\n    },\n    {\n      \"entity_id\": \"animal-1\",\n      \"kind\": \"animal\",\n      \"position_m\": [\n        3.121482242121864,\n        4.626127131606911\n      ],\n      \"radius_m\": 0.2,\n      \"mass_kg\": 2.0,\n      \"mass_ug\": \"2000000000\",\n      \"stage\": \"wild\",\n      \"alive\": true,\n      \"condition\": \"good\",\n      \"inventory_ug\": {},\n      \"body\": {\n        \"hunger\": 0.38349999999999995,\n        \"thirst\": 0.3503333333333334,\n        \"fatigue\": 0.21359999999999993,\n        \"health\": 1.0,\n        \"alive\": true,\n        \"food_ingested_ug\": \"0\",\n        \"water_ingested_ug\": \"0\"\n      }\n    },\n    {\n      \"entity_id\": \"animal-2\",\n      \"kind\": \"animal\",\n      \"position_m\": [\n        3.3856224991133335,\n        4.944123609165342\n      ],\n      \"radius_m\": 0.2,\n      \"mass_kg\": 0.8,\n      \"mass_ug\": \"800000000\",\n      \"stage\": \"wild\",\n      \"alive\": true,\n      \"condition\": \"good\",\n      \"inventory_ug\": {},\n      \"body\": {\n        \"hunger\": 0.38349999999999995,\n        \"thirst\": 0.3503333333333334,\n        \"fatigue\": 0.21359999999999993,\n        \"health\": 1.0,\n        \"alive\": true,\n        \"food_ingested_ug\": \"0\",\n        \"water_ingested_ug\": \"0\"\n      }\n    },\n    {\n      \"entity_id\": \"forage-1\",\n      \"kind\": \"forage\",\n      \"position_m\": [\n        4.0,\n        4.5\n      ],\n      \"radius_m\": 0.0,\n      \"mass_kg\": 2.0,\n      \"mass_ug\": \"2000000000\",\n      \"inventory_ug\": {}\n    }\n  ],\n  \"outstanding_actions\": [],\n  \"material_totals_ug\": {\n    \"animal\": \"2800000000\",\n    \"food\": \"8000000000\",\n    \"forage\": \"2000000000\",\n    \"fuel_X\": \"0\",\n    \"inert_material\": \"32000000000\",\n    \"oxygen\": \"0\",\n    \"product_P\": \"0\",\n    \"stone\": \"4000000000\",\n    \"tree\": \"18017000000\",\n    \"water\": \"16000000000\"\n  },\n  \"event_counts\": {\n    \"action_accepted\": 1,\n    \"action_completed\": 1,\n    \"ecology_initialized\": 1,\n    \"inspection\": 1,\n    \"tick\": 17\n  },\n  \"solar_input_j\": 10.127563824345067,\n  \"environment_energy_j\": 10.127563824345067,\n  \"operator_energy_input_j\": 0.0,\n  \"operator_sources_ug\": {\n    \"food\": 0,\n    \"fuel_X\": 0,\n    \"inert_material\": 0,\n    \"oxygen\": 0,\n    \"product_P\": 0,\n    \"stone\": 0,\n    \"water\": 0\n  },\n  \"mode\": \"closed\",\n  \"hearing_range_m\": 6.0,\n  \"sunlight_w_m2\": 0.024725497484654028,\n  \"scripted\": false,\n  \"next_script_tick\": \"0\",\n  \"bodies_enabled\": true,\n  \"initial_mass_ug\": {\n    \"food\": 10500000000,\n    \"fuel_X\": 0,\n    \"inert_material\": 32000000000,\n    \"oxygen\": 0,\n    \"product_P\": 0,\n    \"stone\": 4000000000,\n    \"tree\": 18000000000,\n    \"water\": 16400000000\n  },\n  \"boundary_sources_ug\": {\n    \"food\": 0,\n    \"fuel_X\": 0,\n    \"inert_material\": 0,\n    \"oxygen\": 0,\n    \"product_P\": 0,\n    \"stone\": 0,\n    \"tree\": 17000000,\n    \"water\": 0\n  },\n  \"config_hash\": \"467caaa3a462fec0d59faa7b24224e2012ca6f300f585b52ba85fcb9297e7cf6\",\n  \"state_hash\": \"006ec709a554ca6ed0dcd4dd96c360592a62dd25cf215d59f81b4be62c49afe8\",\n  \"parent_branch_id\": null,\n  \"interventions\": 0,\n  \"retained_events\": 21,\n  \"recorded_decisions\": 1,\n  \"cognitive_hash\": \"c5058780279078d01b898ef4d2d5db7ca6c5c20f2105de5adefc3c87314c1b78\",\n  \"cognition_calls\": 0,\n  \"episodes\": 2\n}\n",
+      "stderr": "",
+      "wall_s": 2.5851912000071025
+    },
+    {
+      "command": [
+        "--db",
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\data\\living-world-e-package-tasks-20261021\\E world.sqlite",
+        "--seconds",
+        "1",
+        "--port",
+        "0",
+        "--no-browser",
+        "--exit-after-run"
+      ],
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "Underworld Lab: desktop runner requires model-off survival and tasks; use the explicit source/CLI model workflow\n",
+      "wall_s": 1.52477099999669
+    },
+    {
+      "command": [
+        "--cli",
+        "inspect",
+        "--db",
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\data\\living-world-e-package-tasks-20261021\\E world.sqlite"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"schema_version\": 1,\n  \"kind\": \"world_snapshot\",\n  \"run_id\": \"2056f04f-4356-419c-8a89-a0931be264c7\",\n  \"culture\": {\n    \"enabled\": false,\n    \"skills\": {},\n    \"agreements\": [],\n    \"validated_batches\": [],\n    \"departed\": []\n  },\n  \"ecology\": {\n    \"enabled\": true,\n    \"controller_origin\": \"authored_native_ecology_v1\",\n    \"animals\": {\n      \"animal-1\": {\n        \"species\": \"mossgrazer\",\n        \"mode\": \"wander\",\n        \"age_s\": 123.40000000000005,\n        \"life_stage\": \"adult\",\n        \"laying_s\": 0.0,\n        \"food_reserve_ug\": \"246600000\",\n        \"water_reserve_ug\": \"194900000\",\n        \"food_metabolized_ug\": \"3400000\",\n        \"water_metabolized_ug\": \"5100000\",\n        \"eggs_laid_ug\": \"0\",\n        \"familiarity\": {},\n        \"last_feed\": {},\n        \"handler\": \"\",\n        \"guide_until\": \"0\"\n      },\n      \"animal-2\": {\n        \"species\": \"reedhen\",\n        \"mode\": \"avoid_unfamiliar\",\n        \"age_s\": 123.40000000000005,\n        \"life_stage\": \"adult\",\n        \"laying_s\": 3.400000000000001,\n        \"food_reserve_ug\": \"246600000\",\n        \"water_reserve_ug\": \"194900000\",\n        \"food_metabolized_ug\": \"3400000\",\n        \"water_metabolized_ug\": \"5100000\",\n        \"eggs_laid_ug\": \"0\",\n        \"familiarity\": {},\n        \"last_feed\": {},\n        \"handler\": \"\",\n        \"guide_until\": \"0\"\n      }\n    },\n    \"freshness_s\": {},\n    \"structural_body_initial_ug\": \"2800000000\",\n    \"food_residue_ug\": \"6800000\",\n    \"water_waste_ug\": \"10200000\",\n    \"egg_input_ug\": \"0\",\n    \"eggs_produced_ug\": \"0\",\n    \"forage_regeneration_kg_s\": 0.0\n  },\n  \"branch_id\": \"2056f04f-4356-419c-8a89-a0931be264c7\",\n  \"tick\": \"17\",\n  \"observation_version\": \"17\",\n  \"last_event_seq\": \"21\",\n  \"seed\": \"20261020\",\n  \"dt_s\": 0.2,\n  \"simulated_time_s\": 3.4000000000000004,\n  \"laws_version\": \"culture-6/32b9f13b5fe9\",\n  \"thermal\": {\n    \"enabled\": false,\n    \"open_boundaries\": false,\n    \"cells\": [],\n    \"ambient_temperature_k\": 0.0,\n    \"stored_energy_j\": 0.0,\n    \"initial_energy_j\": 0.0,\n    \"heater_input_j\": 0.0,\n    \"radiation_in_j\": 0.0,\n    \"radiation_out_j\": 0.0,\n    \"outflow_energy_j\": 0.0,\n    \"solar_transferred_j\": 0.0,\n    \"burned_fuel_ug\": \"0\",\n    \"outflow_water_ug\": \"0\",\n    \"balance_error_j\": 0.0,\n    \"global_balance_error_j\": 0.0,\n    \"energy_tolerance_j\": 1e-05\n  },\n  \"build_id\": \"832c4a705a7ceecd85d8befb3d84f4dff0d4730f024c395eba12985f0d8bd896\",\n  \"world_bounds_m\": {\n    \"width\": 16.0,\n    \"height\": 16.0\n  },\n  \"entities\": [\n    {\n      \"entity_id\": \"terrain-1\",\n      \"kind\": \"rock\",\n      \"position_m\": [\n        8.0,\n        8.0\n      ],\n      \"radius_m\": 1.0,\n      \"mass_kg\": 0.0,\n      \"mass_ug\": \"0\",\n      \"inventory_ug\": {}\n    },\n    {\n      \"entity_id\": \"tree-1\",\n      \"kind\": \"tree\",\n      \"position_m\": [\n        2.0,\n        14.0\n      ],\n      \"radius_m\": 0.6,\n      \"mass_kg\": 2.017,\n      \"mass_ug\": \"2017000000\",\n      \"stage\": \"young\",\n      \"health\": 1.0,\n      \"biomass_ug\": \"2017000000\",\n      \"inventory_ug\": {}\n    },\n    {\n      \"entity_id\": \"tree-2\",\n      \"kind\": \"tree\",\n      \"position_m\": [\n        14.0,\n        2.0\n      ],\n      \"radius_m\": 0.6,\n      \"mass_kg\": 8.0,\n      \"mass_ug\": \"8000000000\",\n      \"stage\": \"mature\",\n      \"health\": 1.0,\n      \"biomass_ug\": \"8000000000\",\n      \"inventory_ug\": {}\n    },\n    {\n      \"entity_id\": \"tree-3\",\n      \"kind\": \"tree\",\n      \"position_m\": [\n        14.0,\n        14.0\n      ],\n      \"radius_m\": 0.6,\n      \"mass_kg\": 8.0,\n      \"mass_ug\": \"8000000000\",\n      \"stage\": \"mature\",\n      \"health\": 1.0,\n      \"biomass_ug\": \"8000000000\",\n      \"inventory_ug\": {}\n    },\n    {\n      \"entity_id\": \"agent-1\",\n      \"kind\": \"actor\",\n      \"position_m\": [\n        2.0,\n        3.0\n      ],\n      \"radius_m\": 0.25,\n      \"mass_kg\": 0.0,\n      \"mass_ug\": \"0\",\n      \"workmanship\": 0,\n      \"inventory_ug\": {},\n      \"alive\": true,\n      \"body\": {\n        \"hunger\": 0.3533999999999996,\n        \"thirst\": 0.4051000000000004,\n        \"fatigue\": 0.2027199999999999,\n        \"health\": 1.0,\n        \"alive\": true,\n        \"food_ingested_ug\": \"0\",\n        \"water_ingested_ug\": \"0\"\n      },\n      \"present\": true\n    },\n    {\n      \"entity_id\": \"agent-2\",\n      \"kind\": \"actor\",\n      \"position_m\": [\n        4.204972057643818,\n        5.361642973561538\n      ],\n      \"radius_m\": 0.25,\n      \"mass_kg\": 0.0,\n      \"mass_ug\": \"0\",\n      \"workmanship\": 0,\n      \"inventory_ug\": {},\n      \"alive\": true,\n      \"body\": {\n        \"hunger\": 0.3533999999999996,\n        \"thirst\": 0.4051000000000004,\n        \"fatigue\": 0.2027199999999999,\n        \"health\": 1.0,\n        \"alive\": true,\n        \"food_ingested_ug\": \"0\",\n        \"water_ingested_ug\": \"0\"\n      },\n      \"present\": true\n    },\n    {\n      \"entity_id\": \"agent-3\",\n      \"kind\": \"actor\",\n      \"position_m\": [\n        11.873758355500392,\n        1.873546906129069\n      ],\n      \"radius_m\": 0.25,\n      \"mass_kg\": 0.0,\n      \"mass_ug\": \"0\",\n      \"workmanship\": 0,\n      \"inventory_ug\": {},\n      \"alive\": true,\n      \"body\": {\n        \"hunger\": 0.3533999999999996,\n        \"thirst\": 0.4051000000000004,\n        \"fatigue\": 0.2027199999999999,\n        \"health\": 1.0,\n        \"alive\": true,\n        \"food_ingested_ug\": \"0\",\n        \"water_ingested_ug\": \"0\"\n      },\n      \"present\": true\n    },\n    {\n      \"entity_id\": \"agent-4\",\n      \"kind\": \"actor\",\n      \"position_m\": [\n        7.444944490471588,\n        5.721289539110467\n      ],\n      \"radius_m\": 0.25,\n      \"mass_kg\": 0.0,\n      \"mass_ug\": \"0\",\n      \"workmanship\": 0,\n      \"inventory_ug\": {},\n      \"alive\": true,\n      \"body\": {\n        \"hunger\": 0.3533999999999996,\n        \"thirst\": 0.4051000000000004,\n        \"fatigue\": 0.2027199999999999,\n        \"health\": 1.0,\n        \"alive\": true,\n        \"food_ingested_ug\": \"0\",\n        \"water_ingested_ug\": \"0\"\n      },\n      \"present\": true\n    },\n    {\n      \"entity_id\": \"resource-1\",\n      \"kind\": \"food\",\n      \"position_m\": [\n        2.0,\n        2.0\n      ],\n      \"radius_m\": 0.0,\n      \"mass_kg\": 8.0,\n      \"mass_ug\": \"8000000000\",\n      \"inventory_ug\": {}\n    },\n    {\n      \"entity_id\": \"resource-2\",\n      \"kind\": \"water\",\n      \"position_m\": [\n        3.0,\n        2.0\n      ],\n      \"radius_m\": 0.0,\n      \"mass_kg\": 16.0,\n      \"mass_ug\": \"16000000000\",\n      \"inventory_ug\": {}\n    },\n    {\n      \"entity_id\": \"resource-3\",\n      \"kind\": \"inert_material\",\n      \"position_m\": [\n        4.0,\n        2.0\n      ],\n      \"radius_m\": 0.0,\n      \"mass_kg\": 32.0,\n      \"mass_ug\": \"32000000000\",\n      \"inventory_ug\": {}\n    },\n    {\n      \"entity_id\": \"resource-4\",\n      \"kind\": \"stone\",\n      \"position_m\": [\n        5.0,\n        2.0\n      ],\n      \"radius_m\": 0.15,\n      \"mass_kg\": 4.0,\n      \"mass_ug\": \"4000000000\",\n      \"inventory_ug\": {}\n    },\n    {\n      \"entity_id\": \"animal-1\",\n      \"kind\": \"animal\",\n      \"position_m\": [\n        3.121482242121864,\n        4.626127131606911\n      ],\n      \"radius_m\": 0.2,\n      \"mass_kg\": 2.0,\n      \"mass_ug\": \"2000000000\",\n      \"stage\": \"wild\",\n      \"alive\": true,\n      \"condition\": \"good\",\n      \"inventory_ug\": {},\n      \"body\": {\n        \"hunger\": 0.38349999999999995,\n        \"thirst\": 0.3503333333333334,\n        \"fatigue\": 0.21359999999999993,\n        \"health\": 1.0,\n        \"alive\": true,\n        \"food_ingested_ug\": \"0\",\n        \"water_ingested_ug\": \"0\"\n      }\n    },\n    {\n      \"entity_id\": \"animal-2\",\n      \"kind\": \"animal\",\n      \"position_m\": [\n        3.3856224991133335,\n        4.944123609165342\n      ],\n      \"radius_m\": 0.2,\n      \"mass_kg\": 0.8,\n      \"mass_ug\": \"800000000\",\n      \"stage\": \"wild\",\n      \"alive\": true,\n      \"condition\": \"good\",\n      \"inventory_ug\": {},\n      \"body\": {\n        \"hunger\": 0.38349999999999995,\n        \"thirst\": 0.3503333333333334,\n        \"fatigue\": 0.21359999999999993,\n        \"health\": 1.0,\n        \"alive\": true,\n        \"food_ingested_ug\": \"0\",\n        \"water_ingested_ug\": \"0\"\n      }\n    },\n    {\n      \"entity_id\": \"forage-1\",\n      \"kind\": \"forage\",\n      \"position_m\": [\n        4.0,\n        4.5\n      ],\n      \"radius_m\": 0.0,\n      \"mass_kg\": 2.0,\n      \"mass_ug\": \"2000000000\",\n      \"inventory_ug\": {}\n    }\n  ],\n  \"outstanding_actions\": [],\n  \"material_totals_ug\": {\n    \"animal\": \"2800000000\",\n    \"food\": \"8000000000\",\n    \"forage\": \"2000000000\",\n    \"fuel_X\": \"0\",\n    \"inert_material\": \"32000000000\",\n    \"oxygen\": \"0\",\n    \"product_P\": \"0\",\n    \"stone\": \"4000000000\",\n    \"tree\": \"18017000000\",\n    \"water\": \"16000000000\"\n  },\n  \"event_counts\": {\n    \"action_accepted\": 1,\n    \"action_completed\": 1,\n    \"ecology_initialized\": 1,\n    \"inspection\": 1,\n    \"tick\": 17\n  },\n  \"solar_input_j\": 10.127563824345067,\n  \"environment_energy_j\": 10.127563824345067,\n  \"operator_energy_input_j\": 0.0,\n  \"operator_sources_ug\": {\n    \"food\": 0,\n    \"fuel_X\": 0,\n    \"inert_material\": 0,\n    \"oxygen\": 0,\n    \"product_P\": 0,\n    \"stone\": 0,\n    \"water\": 0\n  },\n  \"mode\": \"closed\",\n  \"hearing_range_m\": 6.0,\n  \"sunlight_w_m2\": 0.024725497484654028,\n  \"scripted\": false,\n  \"next_script_tick\": \"0\",\n  \"bodies_enabled\": true,\n  \"initial_mass_ug\": {\n    \"food\": 10500000000,\n    \"fuel_X\": 0,\n    \"inert_material\": 32000000000,\n    \"oxygen\": 0,\n    \"product_P\": 0,\n    \"stone\": 4000000000,\n    \"tree\": 18000000000,\n    \"water\": 16400000000\n  },\n  \"boundary_sources_ug\": {\n    \"food\": 0,\n    \"fuel_X\": 0,\n    \"inert_material\": 0,\n    \"oxygen\": 0,\n    \"product_P\": 0,\n    \"stone\": 0,\n    \"tree\": 17000000,\n    \"water\": 0\n  },\n  \"config_hash\": \"467caaa3a462fec0d59faa7b24224e2012ca6f300f585b52ba85fcb9297e7cf6\",\n  \"state_hash\": \"006ec709a554ca6ed0dcd4dd96c360592a62dd25cf215d59f81b4be62c49afe8\",\n  \"parent_branch_id\": null,\n  \"interventions\": 0,\n  \"retained_events\": 21,\n  \"recorded_decisions\": 1,\n  \"cognitive_hash\": \"c5058780279078d01b898ef4d2d5db7ca6c5c20f2105de5adefc3c87314c1b78\",\n  \"cognition_calls\": 0,\n  \"episodes\": 2\n}\n",
+      "stderr": "",
+      "wall_s": 3.3601791999972193
+    },
+    {
+      "command": [
+        "--cli",
+        "living-world",
+        "cancel-task",
+        "--db",
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\data\\living-world-e-package-tasks-20261021\\E world.sqlite",
+        "--agent",
+        "agent-1"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"active\": null,\n  \"beliefs\": {},\n  \"calls\": 0,\n  \"history\": [\n    {\n      \"completed_tick\": 12,\n      \"created_tick\": 2,\n      \"delivered_ug\": 0,\n      \"evidence\": [\n        \"stable-agent-1-2\"\n      ],\n      \"executor_goal_credit\": true,\n      \"failures\": 0,\n      \"goal\": \"inspect_problem\",\n      \"id\": 1,\n      \"mode\": \"adaptive\",\n      \"origin\": \"operator_assigned_authored_procedure\",\n      \"outcome\": \"completed\",\n      \"procedure_episode_id\": 2,\n      \"procedure_source\": null,\n      \"reason\": \"native_observable_goal_predicate\",\n      \"steps\": 1\n    },\n    {\n      \"completed_tick\": 17,\n      \"created_tick\": 17,\n      \"delivered_ug\": 0,\n      \"evidence\": [],\n      \"executor_goal_credit\": false,\n      \"failures\": 0,\n      \"goal\": \"craft_tool\",\n      \"id\": 3,\n      \"mode\": \"model_assisted\",\n      \"origin\": \"operator_assigned_authored_procedure\",\n      \"outcome\": \"blocked\",\n      \"procedure_source\": null,\n      \"reason\": \"explicit_operator_cancellation\",\n      \"steps\": 0\n    }\n  ],\n  \"model_latency_s\": 0.0,\n  \"next_call_tick\": 0,\n  \"procedures\": {\n    \"inspect_problem\": {\n      \"confidence\": \"verified_in_recorded_context_only\",\n      \"episode_id\": 2,\n      \"successes\": 1\n    }\n  }\n}\n",
+      "stderr": "",
+      "wall_s": 1.7601362999994308
+    },
+    {
+      "command": [
+        "--cli",
+        "replay",
+        "--db",
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\data\\living-world-e-package-tasks-20261021\\E world.sqlite"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"replay_matches\": true,\n  \"tick\": \"17\",\n  \"state_hash\": \"006ec709a554ca6ed0dcd4dd96c360592a62dd25cf215d59f81b4be62c49afe8\"\n}\n",
+      "stderr": "",
+      "wall_s": 4.119619699995383
+    }
+  ],
+  "viewer_url": "http://127.0.0.1:55125/viewer",
+  "browser": {
+    "returncode": 0,
+    "stdout": "{\"passed\":true,\"animals\":[{\"id\":\"animal-1\",\"children\":6,\"position\":[3.121482242121864,0,-4.626127131606911]},{\"id\":\"animal-2\",\"children\":5,\"position\":[3.3856224991133335,0,-4.944123609165342]}],\"private_animal_fields_leaked\":false,\"page_errors\":[]}\n",
+    "stderr": ""
+  },
+  "passed": true,
+  "external_runtime_on_path": false,
+  "completed_task": {
+    "completed_tick": 12,
+    "created_tick": 2,
+    "delivered_ug": 0,
+    "evidence": [
+      "stable-agent-1-2"
+    ],
+    "executor_goal_credit": true,
+    "failures": 0,
+    "goal": "inspect_problem",
+    "id": 1,
+    "mode": "adaptive",
+    "origin": "operator_assigned_authored_procedure",
+    "outcome": "completed",
+    "procedure_episode_id": 2,
+    "procedure_source": null,
+    "reason": "native_observable_goal_predicate",
+    "steps": 1
+  },
+  "desktop_model_guard": true
+}

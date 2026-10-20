@@ -16,11 +16,14 @@ from . import storage, memory, cognition
 from .lease import Lease
 from .policy import _waypoint, _segment_clear
 from .wire import dumps
+from . import planning
 
-VERSION='stabilization/3'
+VERSION='stabilization/4'
 
 
-def source_id(): return hashlib.sha256(Path(__file__).with_suffix(".py").read_bytes()).hexdigest()
+def source_id():
+    root=Path(__file__).parent
+    return hashlib.sha256(b''.join((root/name).read_bytes() for name in ('stabilization.py','planning.py','planning_model.py'))).hexdigest()
 
 
 def _save(db,agent,state):
@@ -168,8 +171,8 @@ def _action(s,o,kind,params=None,target=None,duration=1):
         parameters=params or {},requested_duration=duration)
 
 
-def _next(s,o,own_memory_ids=()):
-    g=s['goal'];kind=g['kind'];own=o['own_state'];pos=own['position_m'];dt=o['dt_s']
+def _next(s,o,own_memory_ids=(),goal=None):
+    g=goal if goal is not None else s['goal'];kind=g['kind'];own=o['own_state'];pos=own['position_m'];dt=o['dt_s']
     if kind in ('eat','drink'):
         material='food' if kind=='eat' else 'water'
         ingested=int(own['body'][material+'_ingested_ug'])-g['initial_ingested_ug']
@@ -235,6 +238,46 @@ def _next(s,o,own_memory_ids=()):
     return req,None
 
 
+def _task_request(db,s,o,config,provider):
+    e=s['tasks'];t=e['active'];options,done,blocked=planning.choices(e,o)
+    if done or blocked:
+        planning.finish(db,s,o,'completed' if done else 'blocked',blocked or 'native_observable_goal_predicate')
+        return None
+    if options[0].get('delegate')=='eat':
+        food=t.setdefault('food_goal',dict(kind='eat',target_mass_ug=round(t['params'].get('mass_kg',.2)*1e9),
+                     initial_ingested_ug=t['initial_ingested_ug'],phase='locate',steps=0,target=None))
+        req,reason=_next(s,o,goal=food)
+        if reason:planning.finish(db,s,o,'blocked',reason);return None
+        choice=dict(source='food_prerequisite',choice_origin='authored_execution')
+    else:
+        options=options[:3];selected=0;origin='authored_execution';error=None
+        if t['mode']=='model_assisted' and len(options)>1:
+            if e['calls']<4 and t['model_attempts']<1 and int(o['tick'])>=e['next_call_tick']:
+                from .planning_model import PlanningModel
+                context=dict(goal=t['goal'],inventory=o['own_state']['inventory_ug'],position=o['own_state']['position_m'],
+                             operators=options,own_failures={c['source']:e['beliefs'][c['source']] for c in options if c['source'] in e['beliefs']})
+                e['calls']+=1;t['model_attempts']+=1;e['next_call_tick']=int(o['tick'])+math.ceil(60/o['dt_s'])
+                _event(db,s['agent'],int(o['tick']),'task_inference_reserved',context)
+                _save(db,s['agent'],s);db.commit();started=time.perf_counter();raw=None;details={}
+                try:
+                    raw,details,_=cognition.bounded_call(provider or PlanningModel(),context,config['cognition'])
+                    value=json.loads(raw)
+                    if type(value) is not dict or set(value)!={'choice','reason'} or type(value['choice']) is not int or not 0<=value['choice']<len(options) or type(value['reason']) is not str or len(value['reason'])>120:
+                        raise ValueError('task choice outside permitted operators')
+                    selected=value['choice'];origin='model_operator_selection'
+                except (ValueError,OSError,TimeoutError,EOFError,RuntimeError) as failure:
+                    error=type(failure).__name__+': '+str(failure)[:200];origin='deterministic_fallback'
+                elapsed=time.perf_counter()-started;e['model_latency_s']+=elapsed
+                db.execute('BEGIN IMMEDIATE')
+                _event(db,s['agent'],int(o['tick']),'task_inference_result',dict(raw=raw,selected=selected,origin=origin,error=error,latency_s=elapsed,details={k:v for k,v in details.items() if k!='prompt'}))
+            else:origin='deterministic_fallback';error='task_inference_budget_or_interval'
+        choice=options[selected]|dict(choice_origin=origin,fallback_reason=error)
+        req=_action(s,o,choice['action'],choice['params'],choice['target'],choice['duration'])
+    t['steps']+=1;t['pending_choice']=choice
+    _event(db,s['agent'],int(o['tick']),'task_operator_selected',dict(task_id=t['id'],goal=t['goal'],choice=choice,request=req))
+    return req
+
+
 def step(path,agents=None,provider=None,fault=None,external=()):
     """One continuous native tick. Optional fault hooks test the cross-commit boundary."""
     with Lease(path):
@@ -260,10 +303,14 @@ def step(path,agents=None,provider=None,fault=None,external=()):
                     elif receipt['status'] in ('completed','failed','rejected'):
                         _event(db,agent,tick,'terminal_receipt',dict(request=pending,receipt=receipt))
                         s['pending']=None
-                        if s['goal']:
+                        if s.get('pending_owner')=='task':planning.record(s,pending,receipt,o)
+                        elif s['goal']:
                             if receipt['status']!='completed':s['goal']['failures']+=1
                             elif s['goal']['kind'] not in ('eat','drink'):_finish(db,s,o,'completed','native_terminal_completion')
                 own=o['own_state'];g=s['goal']
+                task=s.get('tasks',{}).get('active')
+                if task and not (s['pending'] and s.get('pending_owner')=='task') and tick-task['created_tick']>=math.ceil(360/o['dt_s']):
+                    planning.finish(db,s,o,'blocked','task_deadline_including_survival_preemption')
                 if g and g['kind'] in ('eat','drink'):
                     material='food' if g['kind']=='eat' else 'water'
                     if int(own['body'][material+'_ingested_ug'])-g['initial_ingested_ug']>=g['target_mass_ug']:
@@ -273,8 +320,16 @@ def step(path,agents=None,provider=None,fault=None,external=()):
                     _finish(db,s,o,'blocked','deadline_or_retry_limit');g=None
                 if not own['alive'] or not own.get('present',True):
                     if s['goal']:_finish(db,s,o,'blocked','dead_or_absent')
+                    if s.get('tasks',{}).get('active'):planning.finish(db,s,o,'blocked','dead_or_absent')
                     _save(db,agent,s);db.commit();continue
                 if own['busy'] or s['pending']:
+                    _save(db,agent,s);db.commit();continue
+                if s.get('tasks',{}).get('active') and not s['goal'] and not _need(o):
+                    req=_task_request(db,s,o,config,provider)
+                    if req:
+                        s['pending']=req;s['pending_owner']='task';s['submitted']+=1;s['authored_steps']+=1
+                        _event(db,agent,tick,'request_reserved',dict(request=req,task_id=s['tasks']['active']['id'],executor='authored_hierarchical_executor',own_observation=o))
+                        requests.append((tick,req))
                     _save(db,agent,s);db.commit();continue
                 if not s['goal'] and tick>=s['next_goal_tick']:
                     need=_need(o);selected=None;raw=None;origin='authored_need_selection'
@@ -311,7 +366,7 @@ def step(path,agents=None,provider=None,fault=None,external=()):
                     if blocked:_finish(db,s,o,'blocked',blocked)
                     elif req:
                         if req['action_type'] in ('eat','drink'):s['goal']['consumption_request_id']=req['request_id']
-                        s['pending']=req;s['submitted']+=1;s['authored_steps']+=1
+                        s['pending']=req;s['pending_owner']='survival';s['submitted']+=1;s['authored_steps']+=1
                         _event(db,agent,tick,'request_reserved',dict(request=req,goal_id=s['goal']['id'],
                             goal_origin=s['goal']['origin'],executor='authored_prerequisite_executor',own_observation=o))
                         requests.append((tick,req))

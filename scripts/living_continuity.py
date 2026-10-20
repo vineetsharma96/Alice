@@ -13,14 +13,18 @@ from underworld import storage,stabilization
 from underworld.config import load
 
 
-def main(config_name="living-world-d.toml",note="One continuous four-inhabitant/two-animal world. Finite food/water; no resets. Tree growth has an explicit biomass boundary source."):
+def main(config_name="living-world-d.toml",note="One continuous four-inhabitant/two-animal world. Finite food/water; no resets. Tree growth has an explicit biomass boundary source.",task=None,config_overrides=None):
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--evidence',type=Path,required=True)
     args=parser.parse_args();args.output.mkdir(parents=True,exist_ok=False)
     path=args.output/'run.sqlite';backup=args.output/'resumed.sqlite'
     cfg=load(ROOT/'config'/config_name)
+    for section,values in (config_overrides or {}).items():cfg[section].update(values)
     storage.create(path,cfg,scripted=False);stabilization.attach(path,call_limit=0)
+    if task:
+        from underworld.planning import assign
+        assign(path,task['agent'],task['goal'],task.get('params',{}))
     report=dict(config=cfg,stages=[],model_calls=0,db=str(path.resolve()),backup=str(backup.resolve()),
                 note=note)
     def retain():
@@ -50,6 +54,10 @@ def main(config_name="living-world-d.toml",note="One continuous four-inhabitant/
         report['outcomes']=[json.loads(p) for p, in db.execute('SELECT payload FROM stabilization_events ORDER BY id')]
         report['decisions']=[dict(request=json.loads(q),result=json.loads(r)) for q,r in db.execute('SELECT request,result FROM decisions ORDER BY id')]
     report['passed']=report['native_resume_matches'] and all(tables.values())
+    if task:
+        report['assigned_task']=task
+        report['task_completed']=any(h['goal']==task['goal'] and h['outcome']=='completed' and h['executor_goal_credit'] for s in report['agents'] for h in s.get('tasks',{}).get('history',[]))
+        report['passed'] &= report['task_completed']
     retain();print(json.dumps({k:report[k] for k in ('primary_wall_s','native_resume_matches','memory_and_scheduler_tables_match','passed')}),flush=True)
     return 0 if report['passed'] else 1
 

@@ -47,7 +47,8 @@ def main(argv=None):
         if path.exists():
             # Validate before starting any thread. Never attach/reset a saved controller.
             state=stabilization.status(path)
-            if state['model']:raise ValueError('desktop runner requires a model-off world; existing model configuration was not changed')
+            task=(state.get('tasks',{}).get('active') or {})
+            if state['model'] or task.get('mode')=='model_assisted':raise ValueError('desktop runner requires model-off survival and tasks; use the explicit source/CLI model workflow')
         else:
             stabilization.initialize(path,load(args.config),model=False,call_limit=0)
         server,controller=make_server(path,args.port,readonly=True)

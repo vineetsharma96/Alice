@@ -1,0 +1,484 @@
+[
+  {
+    "goal": "craft_tool",
+    "wall_s": 4.340156500009471,
+    "state": {
+      "agent": "agent-1",
+      "authored_steps": 10,
+      "call_limit": 0,
+      "calls": 0,
+      "fallback_goals": 0,
+      "goal": null,
+      "goals_blocked": 0,
+      "goals_completed": 0,
+      "last_tick": 35,
+      "model": false,
+      "model_goals": 0,
+      "model_latency_s": 0.0,
+      "navigation": {},
+      "next_call_tick": 0,
+      "next_goal_tick": 0,
+      "pending": null,
+      "pending_owner": "task",
+      "sequence": 11,
+      "submitted": 10,
+      "tasks": {
+        "active": null,
+        "beliefs": {},
+        "calls": 0,
+        "history": [
+          {
+            "completed_tick": 35,
+            "created_tick": 0,
+            "delivered_ug": 0,
+            "evidence": [
+              "stable-agent-1-2",
+              "stable-agent-1-3",
+              "stable-agent-1-4",
+              "stable-agent-1-5",
+              "stable-agent-1-6",
+              "stable-agent-1-7",
+              "stable-agent-1-8",
+              "stable-agent-1-9",
+              "stable-agent-1-10",
+              "stable-agent-1-11"
+            ],
+            "failures": 0,
+            "goal": "craft_tool",
+            "id": 1,
+            "mode": "adaptive",
+            "origin": "operator_assigned_authored_procedure",
+            "outcome": "completed",
+            "procedure_episode_id": 11,
+            "procedure_source": null,
+            "reason": "native_observable_goal_predicate",
+            "steps": 10
+          }
+        ],
+        "model_latency_s": 0.0,
+        "next_call_tick": 0,
+        "procedures": {
+          "craft_tool": {
+            "confidence": "verified_in_recorded_context_only",
+            "episode_id": 11,
+            "successes": 1
+          }
+        }
+      }
+    }
+  },
+  {
+    "goal": "make_planks",
+    "wall_s": 6.704154199993354,
+    "state": {
+      "agent": "agent-1",
+      "authored_steps": 28,
+      "call_limit": 0,
+      "calls": 0,
+      "fallback_goals": 0,
+      "goal": null,
+      "goals_blocked": 0,
+      "goals_completed": 0,
+      "last_tick": 87,
+      "model": false,
+      "model_goals": 0,
+      "model_latency_s": 0.0,
+      "navigation": {},
+      "next_call_tick": 0,
+      "next_goal_tick": 0,
+      "pending": null,
+      "pending_owner": "task",
+      "sequence": 30,
+      "submitted": 28,
+      "tasks": {
+        "active": null,
+        "beliefs": {
+          "harvest:tree-2": {
+            "evidence": [
+              "stable-agent-1-19"
+            ],
+            "failures": 1,
+            "last_error": "NO_PLACEMENT",
+            "last_tick": 50,
+            "successes": 0
+          }
+        },
+        "calls": 0,
+        "history": [
+          {
+            "completed_tick": 35,
+            "created_tick": 0,
+            "delivered_ug": 0,
+            "evidence": [
+              "stable-agent-1-2",
+              "stable-agent-1-3",
+              "stable-agent-1-4",
+              "stable-agent-1-5",
+              "stable-agent-1-6",
+              "stable-agent-1-7",
+              "stable-agent-1-8",
+              "stable-agent-1-9",
+              "stable-agent-1-10",
+              "stable-agent-1-11"
+            ],
+            "failures": 0,
+            "goal": "craft_tool",
+            "id": 1,
+            "mode": "adaptive",
+            "origin": "operator_assigned_authored_procedure",
+            "outcome": "completed",
+            "procedure_episode_id": 11,
+            "procedure_source": null,
+            "reason": "native_observable_goal_predicate",
+            "steps": 10
+          },
+          {
+            "completed_tick": 87,
+            "created_tick": 36,
+            "delivered_ug": 0,
+            "evidence": [
+              "stable-agent-1-13",
+              "stable-agent-1-14",
+              "stable-agent-1-15",
+              "stable-agent-1-16",
+              "stable-agent-1-17",
+              "stable-agent-1-18",
+              "stable-agent-1-20",
+              "stable-agent-1-21",
+              "stable-agent-1-22",
+              "stable-agent-1-23",
+              "stable-agent-1-24",
+              "stable-agent-1-25",
+              "stable-agent-1-26",
+              "stable-agent-1-27",
+              "stable-agent-1-28",
+              "stable-agent-1-29",
+              "stable-agent-1-30"
+            ],
+            "failures": 1,
+            "goal": "make_planks",
+            "id": 12,
+            "mode": "adaptive",
+            "origin": "operator_assigned_authored_procedure",
+            "outcome": "completed",
+            "procedure_episode_id": 30,
+            "procedure_source": null,
+            "reason": "native_observable_goal_predicate",
+            "steps": 18
+          }
+        ],
+        "model_latency_s": 0.0,
+        "next_call_tick": 0,
+        "procedures": {
+          "craft_tool": {
+            "confidence": "verified_in_recorded_context_only",
+            "episode_id": 11,
+            "successes": 1
+          },
+          "make_planks": {
+            "confidence": "verified_in_recorded_context_only",
+            "episode_id": 30,
+            "successes": 1
+          }
+        }
+      }
+    }
+  },
+  {
+    "goal": "build_trough",
+    "wall_s": 2.4414919999981066,
+    "state": {
+      "agent": "agent-1",
+      "authored_steps": 30,
+      "call_limit": 0,
+      "calls": 0,
+      "fallback_goals": 0,
+      "goal": null,
+      "goals_blocked": 0,
+      "goals_completed": 0,
+      "last_tick": 106,
+      "model": false,
+      "model_goals": 0,
+      "model_latency_s": 0.0,
+      "navigation": {},
+      "next_call_tick": 0,
+      "next_goal_tick": 0,
+      "pending": null,
+      "pending_owner": "task",
+      "sequence": 33,
+      "submitted": 30,
+      "tasks": {
+        "active": null,
+        "beliefs": {
+          "harvest:tree-2": {
+            "evidence": [
+              "stable-agent-1-19"
+            ],
+            "failures": 1,
+            "last_error": "NO_PLACEMENT",
+            "last_tick": 50,
+            "successes": 0
+          }
+        },
+        "calls": 0,
+        "history": [
+          {
+            "completed_tick": 35,
+            "created_tick": 0,
+            "delivered_ug": 0,
+            "evidence": [
+              "stable-agent-1-2",
+              "stable-agent-1-3",
+              "stable-agent-1-4",
+              "stable-agent-1-5",
+              "stable-agent-1-6",
+              "stable-agent-1-7",
+              "stable-agent-1-8",
+              "stable-agent-1-9",
+              "stable-agent-1-10",
+              "stable-agent-1-11"
+            ],
+            "failures": 0,
+            "goal": "craft_tool",
+            "id": 1,
+            "mode": "adaptive",
+            "origin": "operator_assigned_authored_procedure",
+            "outcome": "completed",
+            "procedure_episode_id": 11,
+            "procedure_source": null,
+            "reason": "native_observable_goal_predicate",
+            "steps": 10
+          },
+          {
+            "completed_tick": 87,
+            "created_tick": 36,
+            "delivered_ug": 0,
+            "evidence": [
+              "stable-agent-1-13",
+              "stable-agent-1-14",
+              "stable-agent-1-15",
+              "stable-agent-1-16",
+              "stable-agent-1-17",
+              "stable-agent-1-18",
+              "stable-agent-1-20",
+              "stable-agent-1-21",
+              "stable-agent-1-22",
+              "stable-agent-1-23",
+              "stable-agent-1-24",
+              "stable-agent-1-25",
+              "stable-agent-1-26",
+              "stable-agent-1-27",
+              "stable-agent-1-28",
+              "stable-agent-1-29",
+              "stable-agent-1-30"
+            ],
+            "failures": 1,
+            "goal": "make_planks",
+            "id": 12,
+            "mode": "adaptive",
+            "origin": "operator_assigned_authored_procedure",
+            "outcome": "completed",
+            "procedure_episode_id": 30,
+            "procedure_source": null,
+            "reason": "native_observable_goal_predicate",
+            "steps": 18
+          },
+          {
+            "completed_tick": 106,
+            "created_tick": 88,
+            "delivered_ug": 0,
+            "evidence": [
+              "stable-agent-1-32",
+              "stable-agent-1-33"
+            ],
+            "failures": 0,
+            "goal": "build_trough",
+            "id": 31,
+            "mode": "adaptive",
+            "origin": "operator_assigned_authored_procedure",
+            "outcome": "completed",
+            "procedure_episode_id": 33,
+            "procedure_source": null,
+            "reason": "native_observable_goal_predicate",
+            "steps": 2
+          }
+        ],
+        "model_latency_s": 0.0,
+        "next_call_tick": 0,
+        "procedures": {
+          "build_trough": {
+            "confidence": "verified_in_recorded_context_only",
+            "episode_id": 33,
+            "successes": 1
+          },
+          "craft_tool": {
+            "confidence": "verified_in_recorded_context_only",
+            "episode_id": 11,
+            "successes": 1
+          },
+          "make_planks": {
+            "confidence": "verified_in_recorded_context_only",
+            "episode_id": 30,
+            "successes": 1
+          }
+        }
+      }
+    }
+  },
+  {
+    "goal": "provide_water",
+    "wall_s": 0.524488700000802,
+    "state": {
+      "agent": "agent-1",
+      "authored_steps": 30,
+      "call_limit": 0,
+      "calls": 0,
+      "fallback_goals": 0,
+      "goal": null,
+      "goals_blocked": 0,
+      "goals_completed": 0,
+      "last_tick": 107,
+      "model": false,
+      "model_goals": 0,
+      "model_latency_s": 0.0,
+      "navigation": {},
+      "next_call_tick": 0,
+      "next_goal_tick": 0,
+      "pending": null,
+      "pending_owner": "task",
+      "sequence": 34,
+      "submitted": 30,
+      "tasks": {
+        "active": null,
+        "beliefs": {
+          "harvest:tree-2": {
+            "evidence": [
+              "stable-agent-1-19"
+            ],
+            "failures": 1,
+            "last_error": "NO_PLACEMENT",
+            "last_tick": 50,
+            "successes": 0
+          }
+        },
+        "calls": 0,
+        "history": [
+          {
+            "completed_tick": 35,
+            "created_tick": 0,
+            "delivered_ug": 0,
+            "evidence": [
+              "stable-agent-1-2",
+              "stable-agent-1-3",
+              "stable-agent-1-4",
+              "stable-agent-1-5",
+              "stable-agent-1-6",
+              "stable-agent-1-7",
+              "stable-agent-1-8",
+              "stable-agent-1-9",
+              "stable-agent-1-10",
+              "stable-agent-1-11"
+            ],
+            "failures": 0,
+            "goal": "craft_tool",
+            "id": 1,
+            "mode": "adaptive",
+            "origin": "operator_assigned_authored_procedure",
+            "outcome": "completed",
+            "procedure_episode_id": 11,
+            "procedure_source": null,
+            "reason": "native_observable_goal_predicate",
+            "steps": 10
+          },
+          {
+            "completed_tick": 87,
+            "created_tick": 36,
+            "delivered_ug": 0,
+            "evidence": [
+              "stable-agent-1-13",
+              "stable-agent-1-14",
+              "stable-agent-1-15",
+              "stable-agent-1-16",
+              "stable-agent-1-17",
+              "stable-agent-1-18",
+              "stable-agent-1-20",
+              "stable-agent-1-21",
+              "stable-agent-1-22",
+              "stable-agent-1-23",
+              "stable-agent-1-24",
+              "stable-agent-1-25",
+              "stable-agent-1-26",
+              "stable-agent-1-27",
+              "stable-agent-1-28",
+              "stable-agent-1-29",
+              "stable-agent-1-30"
+            ],
+            "failures": 1,
+            "goal": "make_planks",
+            "id": 12,
+            "mode": "adaptive",
+            "origin": "operator_assigned_authored_procedure",
+            "outcome": "completed",
+            "procedure_episode_id": 30,
+            "procedure_source": null,
+            "reason": "native_observable_goal_predicate",
+            "steps": 18
+          },
+          {
+            "completed_tick": 106,
+            "created_tick": 88,
+            "delivered_ug": 0,
+            "evidence": [
+              "stable-agent-1-32",
+              "stable-agent-1-33"
+            ],
+            "failures": 0,
+            "goal": "build_trough",
+            "id": 31,
+            "mode": "adaptive",
+            "origin": "operator_assigned_authored_procedure",
+            "outcome": "completed",
+            "procedure_episode_id": 33,
+            "procedure_source": null,
+            "reason": "native_observable_goal_predicate",
+            "steps": 2
+          },
+          {
+            "completed_tick": 107,
+            "created_tick": 107,
+            "delivered_ug": 0,
+            "evidence": [],
+            "failures": 0,
+            "goal": "provide_water",
+            "id": 34,
+            "mode": "adaptive",
+            "origin": "operator_assigned_authored_procedure",
+            "outcome": "blocked",
+            "procedure_source": null,
+            "reason": "no_observed_accessible_water",
+            "steps": 0
+          }
+        ],
+        "model_latency_s": 0.0,
+        "next_call_tick": 0,
+        "procedures": {
+          "build_trough": {
+            "confidence": "verified_in_recorded_context_only",
+            "episode_id": 33,
+            "successes": 1
+          },
+          "craft_tool": {
+            "confidence": "verified_in_recorded_context_only",
+            "episode_id": 11,
+            "successes": 1
+          },
+          "make_planks": {
+            "confidence": "verified_in_recorded_context_only",
+            "episode_id": 30,
+            "successes": 1
+          }
+        }
+      }
+    }
+  }
+]

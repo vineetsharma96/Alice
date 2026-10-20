@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "url": "http://127.0.0.1:55125/viewer",
+  "expected_task": "craft_tool",
+  "mode": "headless Edge/software rendering; no hardware performance claim",
+  "native_build_id": "832c4a705a7ceecd85d8befb3d84f4dff0d4730f024c395eba12985f0d8bd896",
+  "controller": "stabilization",
+  "read_only": true,
+  "animals": [
+    {
+      "id": "animal-1",
+      "children": 6,
+      "position": [
+        3.121482242121864,
+        0,
+        -4.626127131606911
+      ]
+    },
+    {
+      "id": "animal-2",
+      "children": 5,
+      "position": [
+        3.3856224991133335,
+        0,
+        -4.944123609165342
+      ]
+    }
+  ],
+  "dead_rotation": 1.5707963267948966,
+  "moved": [
+    5,
+    0,
+    -7
+  ],
+  "depleted_scale": 0.05,
+  "private_animal_fields_leaked": false,
+  "render": {
+    "fps": 13.12680493564442,
+    "frame_ms_p50": 33.40000000000009,
+    "frame_ms_p95": 400,
+    "draw_calls": 42,
+    "triangles": 1660,
+    "geometries": 6,
+    "textures": 0,
+    "quality": "low",
+    "pixel_ratio": 0.8,
+    "context_lost": false,
+    "context_losses": 0,
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "canvas": [
+      756,
+      486
+    ],
+    "physics_dimensions": 2,
+    "objects": 15
+  },
+  "tick": "17",
+  "hash": "006ec709a554ca6ed0dcd4dd96c360592a62dd25cf215d59f81b4be62c49afe8",
+  "observer": {
+    "read_only": "Read-only attachment",
+    "pause_disabled": true,
+    "step_disabled": true,
+    "speed_disabled": true
+  },
+  "page_errors": []
+}

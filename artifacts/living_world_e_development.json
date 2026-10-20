@@ -1,0 +1,1024 @@
+{
+  "protocol_sha256": "525ad0eb87a39340a019ad013eb55ada8f07d917a61fdf6438f5e75cca5966bf",
+  "controller_source_id": "1240d37a4bcfe8cb6dfbc424543061a3b60dc6d5c2e7a58137587ac73c934954",
+  "split": "development",
+  "seeds": [
+    21,
+    31
+  ],
+  "runs": [
+    {
+      "seed": 21,
+      "case": "harvest_craft",
+      "arm": "authored",
+      "goal": "craft_tool",
+      "history": {
+        "completed_tick": 35,
+        "created_tick": 0,
+        "delivered_ug": 0,
+        "evidence": [
+          "stable-agent-1-2",
+          "stable-agent-1-3",
+          "stable-agent-1-4",
+          "stable-agent-1-5",
+          "stable-agent-1-6",
+          "stable-agent-1-7",
+          "stable-agent-1-8",
+          "stable-agent-1-9",
+          "stable-agent-1-10",
+          "stable-agent-1-11"
+        ],
+        "failures": 0,
+        "goal": "craft_tool",
+        "id": 1,
+        "mode": "authored",
+        "origin": "operator_assigned_authored_procedure",
+        "outcome": "completed",
+        "procedure_source": null,
+        "reason": "native_observable_goal_predicate",
+        "steps": 10
+      },
+      "baseline_assignment_interface": true,
+      "goal_completed": true,
+      "setup_wall_s": 0.161489399994025,
+      "wall_s": 5.115088200007449,
+      "simulated_s": 18.0,
+      "initial_tick": "0",
+      "final_tick": "36",
+      "submitted": 10,
+      "accepted": 10,
+      "completed": 10,
+      "errors": [],
+      "alive": true,
+      "actual_transfer_requests_ug": 1700000000,
+      "initial_material_totals_ug": {
+        "food": "8000000000",
+        "fuel_X": "0",
+        "inert_material": "32000000000",
+        "oxygen": "0",
+        "product_P": "0",
+        "stone": "4000000000",
+        "tree": "18000000000",
+        "water": "16000000000"
+      },
+      "final_material_totals_ug": {
+        "fiber": "100000000",
+        "food": "8000000000",
+        "fuel_X": "0",
+        "inert_material": "32000000000",
+        "oxygen": "0",
+        "product_P": "0",
+        "stone": "4000000000",
+        "tree": "17000000000",
+        "water": "16000000000",
+        "wood": "900000000"
+      },
+      "boundary_sources_ug": {
+        "food": 0,
+        "fuel_X": 0,
+        "inert_material": 0,
+        "oxygen": 0,
+        "product_P": 0,
+        "stone": 0,
+        "tree": 0,
+        "water": 0
+      },
+      "balances": {
+        "food_error_ug": 0,
+        "water_error_ug": 0,
+        "body_error_ug": 0
+      },
+      "model_calls": 0,
+      "model_latency_s": 0.0,
+      "operator_selections": [
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution"
+      ],
+      "inference": [],
+      "replay": {
+        "replay_matches": true,
+        "tick": "36",
+        "state_hash": "805ee7d1a340b6e605db40412ae0d46690527afc58cf1861aa382172fa5112b1"
+      },
+      "state_hash": "805ee7d1a340b6e605db40412ae0d46690527afc58cf1861aa382172fa5112b1"
+    },
+    {
+      "seed": 21,
+      "case": "harvest_craft",
+      "arm": "adaptive",
+      "goal": "craft_tool",
+      "history": {
+        "completed_tick": 35,
+        "created_tick": 0,
+        "delivered_ug": 0,
+        "evidence": [
+          "stable-agent-1-2",
+          "stable-agent-1-3",
+          "stable-agent-1-4",
+          "stable-agent-1-5",
+          "stable-agent-1-6",
+          "stable-agent-1-7",
+          "stable-agent-1-8",
+          "stable-agent-1-9",
+          "stable-agent-1-10",
+          "stable-agent-1-11"
+        ],
+        "failures": 0,
+        "goal": "craft_tool",
+        "id": 1,
+        "mode": "adaptive",
+        "origin": "operator_assigned_authored_procedure",
+        "outcome": "completed",
+        "procedure_episode_id": 11,
+        "procedure_source": null,
+        "reason": "native_observable_goal_predicate",
+        "steps": 10
+      },
+      "baseline_assignment_interface": true,
+      "goal_completed": true,
+      "setup_wall_s": 0.12278279999736696,
+      "wall_s": 5.134001200000057,
+      "simulated_s": 18.0,
+      "initial_tick": "0",
+      "final_tick": "36",
+      "submitted": 10,
+      "accepted": 10,
+      "completed": 10,
+      "errors": [],
+      "alive": true,
+      "actual_transfer_requests_ug": 1700000000,
+      "initial_material_totals_ug": {
+        "food": "8000000000",
+        "fuel_X": "0",
+        "inert_material": "32000000000",
+        "oxygen": "0",
+        "product_P": "0",
+        "stone": "4000000000",
+        "tree": "18000000000",
+        "water": "16000000000"
+      },
+      "final_material_totals_ug": {
+        "fiber": "100000000",
+        "food": "8000000000",
+        "fuel_X": "0",
+        "inert_material": "32000000000",
+        "oxygen": "0",
+        "product_P": "0",
+        "stone": "4000000000",
+        "tree": "17000000000",
+        "water": "16000000000",
+        "wood": "900000000"
+      },
+      "boundary_sources_ug": {
+        "food": 0,
+        "fuel_X": 0,
+        "inert_material": 0,
+        "oxygen": 0,
+        "product_P": 0,
+        "stone": 0,
+        "tree": 0,
+        "water": 0
+      },
+      "balances": {
+        "food_error_ug": 0,
+        "water_error_ug": 0,
+        "body_error_ug": 0
+      },
+      "model_calls": 0,
+      "model_latency_s": 0.0,
+      "operator_selections": [
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution"
+      ],
+      "inference": [],
+      "replay": {
+        "replay_matches": true,
+        "tick": "36",
+        "state_hash": "805ee7d1a340b6e605db40412ae0d46690527afc58cf1861aa382172fa5112b1"
+      },
+      "state_hash": "805ee7d1a340b6e605db40412ae0d46690527afc58cf1861aa382172fa5112b1"
+    },
+    {
+      "seed": 21,
+      "case": "water_delivery",
+      "arm": "authored",
+      "goal": "provide_water",
+      "history": {
+        "completed_tick": 7,
+        "created_tick": 0,
+        "delivered_ug": 300000000,
+        "evidence": [
+          "stable-agent-1-2",
+          "stable-agent-1-3",
+          "stable-agent-1-4",
+          "stable-agent-1-5"
+        ],
+        "failures": 0,
+        "goal": "provide_water",
+        "id": 1,
+        "mode": "authored",
+        "origin": "operator_assigned_authored_procedure",
+        "outcome": "completed",
+        "procedure_source": null,
+        "reason": "native_observable_goal_predicate",
+        "steps": 4
+      },
+      "baseline_assignment_interface": true,
+      "goal_completed": true,
+      "setup_wall_s": 0.1748033000039868,
+      "wall_s": 0.8483831000048667,
+      "simulated_s": 4.0,
+      "initial_tick": "0",
+      "final_tick": "8",
+      "submitted": 4,
+      "accepted": 4,
+      "completed": 4,
+      "errors": [],
+      "alive": true,
+      "actual_transfer_requests_ug": 600000000,
+      "initial_material_totals_ug": {
+        "food": "8000000000",
+        "fuel_X": "0",
+        "inert_material": "32000000000",
+        "oxygen": "0",
+        "plank": "800000000",
+        "product_P": "0",
+        "stone": "4000000000",
+        "tree": "17200000000",
+        "water": "16000000000"
+      },
+      "final_material_totals_ug": {
+        "food": "8000000000",
+        "fuel_X": "0",
+        "inert_material": "32000000000",
+        "oxygen": "0",
+        "plank": "800000000",
+        "product_P": "0",
+        "stone": "4000000000",
+        "tree": "17200000000",
+        "water": "16000000000"
+      },
+      "boundary_sources_ug": {
+        "food": 0,
+        "fuel_X": 0,
+        "inert_material": 0,
+        "oxygen": 0,
+        "product_P": 0,
+        "stone": 0,
+        "tree": 0,
+        "water": 0
+      },
+      "balances": {
+        "food_error_ug": 0,
+        "water_error_ug": 0,
+        "body_error_ug": 0
+      },
+      "model_calls": 0,
+      "model_latency_s": 0.0,
+      "operator_selections": [
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution"
+      ],
+      "inference": [],
+      "replay": {
+        "replay_matches": true,
+        "tick": "8",
+        "state_hash": "7c9c46b8b110fb120eaa4115d958c306a924dad281069fca111af38c0f6bfad8"
+      },
+      "state_hash": "7c9c46b8b110fb120eaa4115d958c306a924dad281069fca111af38c0f6bfad8"
+    },
+    {
+      "seed": 21,
+      "case": "water_delivery",
+      "arm": "adaptive",
+      "goal": "provide_water",
+      "history": {
+        "completed_tick": 7,
+        "created_tick": 0,
+        "delivered_ug": 300000000,
+        "evidence": [
+          "stable-agent-1-2",
+          "stable-agent-1-3",
+          "stable-agent-1-4",
+          "stable-agent-1-5"
+        ],
+        "failures": 0,
+        "goal": "provide_water",
+        "id": 1,
+        "mode": "adaptive",
+        "origin": "operator_assigned_authored_procedure",
+        "outcome": "completed",
+        "procedure_episode_id": 5,
+        "procedure_source": null,
+        "reason": "native_observable_goal_predicate",
+        "steps": 4
+      },
+      "baseline_assignment_interface": true,
+      "goal_completed": true,
+      "setup_wall_s": 0.18660739999904763,
+      "wall_s": 1.1501213000010466,
+      "simulated_s": 4.0,
+      "initial_tick": "0",
+      "final_tick": "8",
+      "submitted": 4,
+      "accepted": 4,
+      "completed": 4,
+      "errors": [],
+      "alive": true,
+      "actual_transfer_requests_ug": 600000000,
+      "initial_material_totals_ug": {
+        "food": "8000000000",
+        "fuel_X": "0",
+        "inert_material": "32000000000",
+        "oxygen": "0",
+        "plank": "800000000",
+        "product_P": "0",
+        "stone": "4000000000",
+        "tree": "17200000000",
+        "water": "16000000000"
+      },
+      "final_material_totals_ug": {
+        "food": "8000000000",
+        "fuel_X": "0",
+        "inert_material": "32000000000",
+        "oxygen": "0",
+        "plank": "800000000",
+        "product_P": "0",
+        "stone": "4000000000",
+        "tree": "17200000000",
+        "water": "16000000000"
+      },
+      "boundary_sources_ug": {
+        "food": 0,
+        "fuel_X": 0,
+        "inert_material": 0,
+        "oxygen": 0,
+        "product_P": 0,
+        "stone": 0,
+        "tree": 0,
+        "water": 0
+      },
+      "balances": {
+        "food_error_ug": 0,
+        "water_error_ug": 0,
+        "body_error_ug": 0
+      },
+      "model_calls": 0,
+      "model_latency_s": 0.0,
+      "operator_selections": [
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution"
+      ],
+      "inference": [],
+      "replay": {
+        "replay_matches": true,
+        "tick": "8",
+        "state_hash": "7c9c46b8b110fb120eaa4115d958c306a924dad281069fca111af38c0f6bfad8"
+      },
+      "state_hash": "7c9c46b8b110fb120eaa4115d958c306a924dad281069fca111af38c0f6bfad8"
+    },
+    {
+      "seed": 31,
+      "case": "harvest_craft",
+      "arm": "authored",
+      "goal": "craft_tool",
+      "history": {
+        "completed_tick": 35,
+        "created_tick": 0,
+        "delivered_ug": 0,
+        "evidence": [
+          "stable-agent-1-2",
+          "stable-agent-1-3",
+          "stable-agent-1-4",
+          "stable-agent-1-5",
+          "stable-agent-1-6",
+          "stable-agent-1-7",
+          "stable-agent-1-8",
+          "stable-agent-1-9",
+          "stable-agent-1-10",
+          "stable-agent-1-11"
+        ],
+        "failures": 0,
+        "goal": "craft_tool",
+        "id": 1,
+        "mode": "authored",
+        "origin": "operator_assigned_authored_procedure",
+        "outcome": "completed",
+        "procedure_source": null,
+        "reason": "native_observable_goal_predicate",
+        "steps": 10
+      },
+      "baseline_assignment_interface": true,
+      "goal_completed": true,
+      "setup_wall_s": 0.14058980000845622,
+      "wall_s": 4.499467200002982,
+      "simulated_s": 18.0,
+      "initial_tick": "0",
+      "final_tick": "36",
+      "submitted": 10,
+      "accepted": 10,
+      "completed": 10,
+      "errors": [],
+      "alive": true,
+      "actual_transfer_requests_ug": 1700000000,
+      "initial_material_totals_ug": {
+        "food": "8000000000",
+        "fuel_X": "0",
+        "inert_material": "32000000000",
+        "oxygen": "0",
+        "product_P": "0",
+        "stone": "4000000000",
+        "tree": "18000000000",
+        "water": "16000000000"
+      },
+      "final_material_totals_ug": {
+        "fiber": "100000000",
+        "food": "8000000000",
+        "fuel_X": "0",
+        "inert_material": "32000000000",
+        "oxygen": "0",
+        "product_P": "0",
+        "stone": "4000000000",
+        "tree": "17000000000",
+        "water": "16000000000",
+        "wood": "900000000"
+      },
+      "boundary_sources_ug": {
+        "food": 0,
+        "fuel_X": 0,
+        "inert_material": 0,
+        "oxygen": 0,
+        "product_P": 0,
+        "stone": 0,
+        "tree": 0,
+        "water": 0
+      },
+      "balances": {
+        "food_error_ug": 0,
+        "water_error_ug": 0,
+        "body_error_ug": 0
+      },
+      "model_calls": 0,
+      "model_latency_s": 0.0,
+      "operator_selections": [
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution"
+      ],
+      "inference": [],
+      "replay": {
+        "replay_matches": true,
+        "tick": "36",
+        "state_hash": "041e655cc6673e6174bbed22872519c14642281e5e44d6969d09057f30937645"
+      },
+      "state_hash": "041e655cc6673e6174bbed22872519c14642281e5e44d6969d09057f30937645"
+    },
+    {
+      "seed": 31,
+      "case": "harvest_craft",
+      "arm": "adaptive",
+      "goal": "craft_tool",
+      "history": {
+        "completed_tick": 35,
+        "created_tick": 0,
+        "delivered_ug": 0,
+        "evidence": [
+          "stable-agent-1-2",
+          "stable-agent-1-3",
+          "stable-agent-1-4",
+          "stable-agent-1-5",
+          "stable-agent-1-6",
+          "stable-agent-1-7",
+          "stable-agent-1-8",
+          "stable-agent-1-9",
+          "stable-agent-1-10",
+          "stable-agent-1-11"
+        ],
+        "failures": 0,
+        "goal": "craft_tool",
+        "id": 1,
+        "mode": "adaptive",
+        "origin": "operator_assigned_authored_procedure",
+        "outcome": "completed",
+        "procedure_episode_id": 11,
+        "procedure_source": null,
+        "reason": "native_observable_goal_predicate",
+        "steps": 10
+      },
+      "baseline_assignment_interface": true,
+      "goal_completed": true,
+      "setup_wall_s": 0.12020289999782108,
+      "wall_s": 4.1647807999979705,
+      "simulated_s": 18.0,
+      "initial_tick": "0",
+      "final_tick": "36",
+      "submitted": 10,
+      "accepted": 10,
+      "completed": 10,
+      "errors": [],
+      "alive": true,
+      "actual_transfer_requests_ug": 1700000000,
+      "initial_material_totals_ug": {
+        "food": "8000000000",
+        "fuel_X": "0",
+        "inert_material": "32000000000",
+        "oxygen": "0",
+        "product_P": "0",
+        "stone": "4000000000",
+        "tree": "18000000000",
+        "water": "16000000000"
+      },
+      "final_material_totals_ug": {
+        "fiber": "100000000",
+        "food": "8000000000",
+        "fuel_X": "0",
+        "inert_material": "32000000000",
+        "oxygen": "0",
+        "product_P": "0",
+        "stone": "4000000000",
+        "tree": "17000000000",
+        "water": "16000000000",
+        "wood": "900000000"
+      },
+      "boundary_sources_ug": {
+        "food": 0,
+        "fuel_X": 0,
+        "inert_material": 0,
+        "oxygen": 0,
+        "product_P": 0,
+        "stone": 0,
+        "tree": 0,
+        "water": 0
+      },
+      "balances": {
+        "food_error_ug": 0,
+        "water_error_ug": 0,
+        "body_error_ug": 0
+      },
+      "model_calls": 0,
+      "model_latency_s": 0.0,
+      "operator_selections": [
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution"
+      ],
+      "inference": [],
+      "replay": {
+        "replay_matches": true,
+        "tick": "36",
+        "state_hash": "041e655cc6673e6174bbed22872519c14642281e5e44d6969d09057f30937645"
+      },
+      "state_hash": "041e655cc6673e6174bbed22872519c14642281e5e44d6969d09057f30937645"
+    },
+    {
+      "seed": 31,
+      "case": "water_delivery",
+      "arm": "authored",
+      "goal": "provide_water",
+      "history": {
+        "completed_tick": 7,
+        "created_tick": 0,
+        "delivered_ug": 300000000,
+        "evidence": [
+          "stable-agent-1-2",
+          "stable-agent-1-3",
+          "stable-agent-1-4",
+          "stable-agent-1-5"
+        ],
+        "failures": 0,
+        "goal": "provide_water",
+        "id": 1,
+        "mode": "authored",
+        "origin": "operator_assigned_authored_procedure",
+        "outcome": "completed",
+        "procedure_source": null,
+        "reason": "native_observable_goal_predicate",
+        "steps": 4
+      },
+      "baseline_assignment_interface": true,
+      "goal_completed": true,
+      "setup_wall_s": 0.14152669999748468,
+      "wall_s": 0.9010994999989634,
+      "simulated_s": 4.0,
+      "initial_tick": "0",
+      "final_tick": "8",
+      "submitted": 4,
+      "accepted": 4,
+      "completed": 4,
+      "errors": [],
+      "alive": true,
+      "actual_transfer_requests_ug": 600000000,
+      "initial_material_totals_ug": {
+        "food": "8000000000",
+        "fuel_X": "0",
+        "inert_material": "32000000000",
+        "oxygen": "0",
+        "plank": "800000000",
+        "product_P": "0",
+        "stone": "4000000000",
+        "tree": "17200000000",
+        "water": "16000000000"
+      },
+      "final_material_totals_ug": {
+        "food": "8000000000",
+        "fuel_X": "0",
+        "inert_material": "32000000000",
+        "oxygen": "0",
+        "plank": "800000000",
+        "product_P": "0",
+        "stone": "4000000000",
+        "tree": "17200000000",
+        "water": "16000000000"
+      },
+      "boundary_sources_ug": {
+        "food": 0,
+        "fuel_X": 0,
+        "inert_material": 0,
+        "oxygen": 0,
+        "product_P": 0,
+        "stone": 0,
+        "tree": 0,
+        "water": 0
+      },
+      "balances": {
+        "food_error_ug": 0,
+        "water_error_ug": 0,
+        "body_error_ug": 0
+      },
+      "model_calls": 0,
+      "model_latency_s": 0.0,
+      "operator_selections": [
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution"
+      ],
+      "inference": [],
+      "replay": {
+        "replay_matches": true,
+        "tick": "8",
+        "state_hash": "ec380b442d225b9c3c2af92fa8c8615fdebd8064d45f3784142b4c71a45ada49"
+      },
+      "state_hash": "ec380b442d225b9c3c2af92fa8c8615fdebd8064d45f3784142b4c71a45ada49"
+    },
+    {
+      "seed": 31,
+      "case": "water_delivery",
+      "arm": "adaptive",
+      "goal": "provide_water",
+      "history": {
+        "completed_tick": 7,
+        "created_tick": 0,
+        "delivered_ug": 300000000,
+        "evidence": [
+          "stable-agent-1-2",
+          "stable-agent-1-3",
+          "stable-agent-1-4",
+          "stable-agent-1-5"
+        ],
+        "failures": 0,
+        "goal": "provide_water",
+        "id": 1,
+        "mode": "adaptive",
+        "origin": "operator_assigned_authored_procedure",
+        "outcome": "completed",
+        "procedure_episode_id": 5,
+        "procedure_source": null,
+        "reason": "native_observable_goal_predicate",
+        "steps": 4
+      },
+      "baseline_assignment_interface": true,
+      "goal_completed": true,
+      "setup_wall_s": 0.6892072999908123,
+      "wall_s": 0.9899705999996513,
+      "simulated_s": 4.0,
+      "initial_tick": "0",
+      "final_tick": "8",
+      "submitted": 4,
+      "accepted": 4,
+      "completed": 4,
+      "errors": [],
+      "alive": true,
+      "actual_transfer_requests_ug": 600000000,
+      "initial_material_totals_ug": {
+        "food": "8000000000",
+        "fuel_X": "0",
+        "inert_material": "32000000000",
+        "oxygen": "0",
+        "plank": "800000000",
+        "product_P": "0",
+        "stone": "4000000000",
+        "tree": "17200000000",
+        "water": "16000000000"
+      },
+      "final_material_totals_ug": {
+        "food": "8000000000",
+        "fuel_X": "0",
+        "inert_material": "32000000000",
+        "oxygen": "0",
+        "plank": "800000000",
+        "product_P": "0",
+        "stone": "4000000000",
+        "tree": "17200000000",
+        "water": "16000000000"
+      },
+      "boundary_sources_ug": {
+        "food": 0,
+        "fuel_X": 0,
+        "inert_material": 0,
+        "oxygen": 0,
+        "product_P": 0,
+        "stone": 0,
+        "tree": 0,
+        "water": 0
+      },
+      "balances": {
+        "food_error_ug": 0,
+        "water_error_ug": 0,
+        "body_error_ug": 0
+      },
+      "model_calls": 0,
+      "model_latency_s": 0.0,
+      "operator_selections": [
+        "authored_execution",
+        "authored_execution",
+        "authored_execution",
+        "authored_execution"
+      ],
+      "inference": [],
+      "replay": {
+        "replay_matches": true,
+        "tick": "8",
+        "state_hash": "ec380b442d225b9c3c2af92fa8c8615fdebd8064d45f3784142b4c71a45ada49"
+      },
+      "state_hash": "ec380b442d225b9c3c2af92fa8c8615fdebd8064d45f3784142b4c71a45ada49"
+    }
+  ],
+  "adaptation": [
+    {
+      "seed": 21,
+      "source_failure": {
+        "completed_tick": 7,
+        "created_tick": 0,
+        "delivered_ug": 0,
+        "evidence": [],
+        "failures": 1,
+        "goal": "obtain_wood",
+        "id": 1,
+        "mode": "adaptive",
+        "origin": "operator_assigned_authored_procedure",
+        "outcome": "blocked",
+        "procedure_source": null,
+        "reason": "explicit_operator_cancellation_after_native_receipt",
+        "steps": 1
+      },
+      "rows": [
+        {
+          "mode": "adaptive",
+          "choice": {
+            "action": "move",
+            "choice_origin": "authored_execution",
+            "duration": 2.2,
+            "fallback_reason": null,
+            "params": {
+              "x_m": 2.4085297439895146,
+              "y_m": 4.978675640026215
+            },
+            "source": "wood:wood-b",
+            "target": null
+          },
+          "result": {
+            "completed_tick": 30,
+            "created_tick": 14,
+            "delivered_ug": 0,
+            "evidence": [
+              "stable-agent-1-4",
+              "stable-agent-1-5"
+            ],
+            "failures": 0,
+            "goal": "obtain_wood",
+            "id": 3,
+            "mode": "adaptive",
+            "origin": "operator_assigned_authored_procedure",
+            "outcome": "completed",
+            "procedure_episode_id": 6,
+            "procedure_source": null,
+            "reason": "native_observable_goal_predicate",
+            "steps": 2
+          },
+          "wall_s": 2.214106899991748,
+          "simulated_s": 3.4000000000000004,
+          "replay": {
+            "replay_matches": true,
+            "tick": "31",
+            "state_hash": "3e090edf2180407fb4822b9f2795c81d088204be1353f1aeff3e99d179408be4"
+          },
+          "balances": {
+            "food_error_ug": 0,
+            "water_error_ug": 0,
+            "body_error_ug": 0
+          }
+        },
+        {
+          "mode": "episodic_only",
+          "choice": {
+            "action": "move",
+            "choice_origin": "authored_execution",
+            "duration": 0.8,
+            "fallback_reason": null,
+            "params": {
+              "x_m": 3.9,
+              "y_m": 3.0
+            },
+            "source": "wood:wood-a",
+            "target": null
+          },
+          "result": {
+            "completed_tick": 23,
+            "created_tick": 14,
+            "delivered_ug": 0,
+            "evidence": [
+              "stable-agent-1-4",
+              "stable-agent-1-5"
+            ],
+            "failures": 0,
+            "goal": "obtain_wood",
+            "id": 3,
+            "mode": "episodic_only",
+            "origin": "operator_assigned_authored_procedure",
+            "outcome": "completed",
+            "procedure_source": null,
+            "reason": "native_observable_goal_predicate",
+            "steps": 2
+          },
+          "wall_s": 1.4328627999930177,
+          "simulated_s": 2.0,
+          "replay": {
+            "replay_matches": true,
+            "tick": "24",
+            "state_hash": "10c18acfb4652d1b7f94af6615ccda7e6ad1545621927d822367082220a62fd9"
+          },
+          "balances": {
+            "food_error_ug": 0,
+            "water_error_ug": 0,
+            "body_error_ug": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "seed": 31,
+      "source_failure": {
+        "completed_tick": 7,
+        "created_tick": 0,
+        "delivered_ug": 0,
+        "evidence": [],
+        "failures": 1,
+        "goal": "obtain_wood",
+        "id": 1,
+        "mode": "adaptive",
+        "origin": "operator_assigned_authored_procedure",
+        "outcome": "blocked",
+        "procedure_source": null,
+        "reason": "explicit_operator_cancellation_after_native_receipt",
+        "steps": 1
+      },
+      "rows": [
+        {
+          "mode": "adaptive",
+          "choice": {
+            "action": "move",
+            "choice_origin": "authored_execution",
+            "duration": 2.2,
+            "fallback_reason": null,
+            "params": {
+              "x_m": 2.4085297439895146,
+              "y_m": 4.978675640026215
+            },
+            "source": "wood:wood-b",
+            "target": null
+          },
+          "result": {
+            "completed_tick": 30,
+            "created_tick": 14,
+            "delivered_ug": 0,
+            "evidence": [
+              "stable-agent-1-4",
+              "stable-agent-1-5"
+            ],
+            "failures": 0,
+            "goal": "obtain_wood",
+            "id": 3,
+            "mode": "adaptive",
+            "origin": "operator_assigned_authored_procedure",
+            "outcome": "completed",
+            "procedure_episode_id": 6,
+            "procedure_source": null,
+            "reason": "native_observable_goal_predicate",
+            "steps": 2
+          },
+          "wall_s": 2.5881057000078727,
+          "simulated_s": 3.4000000000000004,
+          "replay": {
+            "replay_matches": true,
+            "tick": "31",
+            "state_hash": "20819bcbfaeedb487101f12a9343bf80dee344cf4f7bf4d2fd0d2657029cb7a2"
+          },
+          "balances": {
+            "food_error_ug": 0,
+            "water_error_ug": 0,
+            "body_error_ug": 0
+          }
+        },
+        {
+          "mode": "episodic_only",
+          "choice": {
+            "action": "move",
+            "choice_origin": "authored_execution",
+            "duration": 0.8,
+            "fallback_reason": null,
+            "params": {
+              "x_m": 3.9,
+              "y_m": 3.0
+            },
+            "source": "wood:wood-a",
+            "target": null
+          },
+          "result": {
+            "completed_tick": 23,
+            "created_tick": 14,
+            "delivered_ug": 0,
+            "evidence": [
+              "stable-agent-1-4",
+              "stable-agent-1-5"
+            ],
+            "failures": 0,
+            "goal": "obtain_wood",
+            "id": 3,
+            "mode": "episodic_only",
+            "origin": "operator_assigned_authored_procedure",
+            "outcome": "completed",
+            "procedure_source": null,
+            "reason": "native_observable_goal_predicate",
+            "steps": 2
+          },
+          "wall_s": 1.9953191999957198,
+          "simulated_s": 2.0,
+          "replay": {
+            "replay_matches": true,
+            "tick": "24",
+            "state_hash": "af4462c45bbc05f3757e376c948820c3382b63386a37f04ee8dca8048b00c6d9"
+          },
+          "balances": {
+            "food_error_ug": 0,
+            "water_error_ug": 0,
+            "body_error_ug": 0
+          }
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "gates": {
+    "native_integrity": true,
+    "feasible_production": true,
+    "scarcity_not_claimed": true,
+    "experience_changes_choice": true
+  },
+  "passed": true
+}

@@ -1,0 +1,107 @@
+[
+  {
+    "case": "21-adaptive",
+    "submitted": 1,
+    "accepted": 1,
+    "completed": 1,
+    "failures": []
+  },
+  {
+    "case": "21-authored",
+    "submitted": 1,
+    "accepted": 1,
+    "completed": 1,
+    "failures": []
+  },
+  {
+    "case": "21-episodic_only",
+    "submitted": 1,
+    "accepted": 1,
+    "completed": 1,
+    "failures": []
+  },
+  {
+    "case": "21-model_assisted",
+    "submitted": 1,
+    "accepted": 1,
+    "completed": 1,
+    "failures": []
+  },
+  {
+    "case": "21-utility",
+    "submitted": 1,
+    "accepted": 1,
+    "completed": 1,
+    "failures": []
+  },
+  {
+    "case": "2129-adaptive",
+    "submitted": 1,
+    "accepted": 1,
+    "completed": 1,
+    "failures": []
+  },
+  {
+    "case": "2129-authored",
+    "submitted": 1,
+    "accepted": 1,
+    "completed": 1,
+    "failures": []
+  },
+  {
+    "case": "2129-episodic_only",
+    "submitted": 1,
+    "accepted": 1,
+    "completed": 1,
+    "failures": []
+  },
+  {
+    "case": "2129-model_assisted",
+    "submitted": 1,
+    "accepted": 1,
+    "completed": 1,
+    "failures": []
+  },
+  {
+    "case": "2129-utility",
+    "submitted": 1,
+    "accepted": 1,
+    "completed": 1,
+    "failures": []
+  },
+  {
+    "case": "2149-adaptive",
+    "submitted": 1,
+    "accepted": 1,
+    "completed": 1,
+    "failures": []
+  },
+  {
+    "case": "2149-authored",
+    "submitted": 1,
+    "accepted": 1,
+    "completed": 1,
+    "failures": []
+  },
+  {
+    "case": "2149-episodic_only",
+    "submitted": 1,
+    "accepted": 1,
+    "completed": 1,
+    "failures": []
+  },
+  {
+    "case": "2149-model_assisted",
+    "submitted": 1,
+    "accepted": 1,
+    "completed": 1,
+    "failures": []
+  },
+  {
+    "case": "2149-utility",
+    "submitted": 1,
+    "accepted": 1,
+    "completed": 1,
+    "failures": []
+  }
+]

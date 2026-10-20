@@ -67,3 +67,14 @@ Trees and crafting are native authored laws. Axe durability is a finite counter,
 ## Current D scope
 
 The C animal omission above is superseded by the opt-in native D profile. Animals use cheap authored sensing/needs/handling, not cognition or a learned policy. Fictional accelerated species have fixed structural body mass, abstract food/water reserves and retained waste. Forage growth is a named biomass boundary input, default zero. There is no coupled nutrient cycle, biochemical energy estimate, disease, predation, breeding, carcass processing or validated cooking/heat coupling. Familiarity is a bounded receipt-backed counter with a ten-second credit interval. Eggs and plant food have conservative holder/material age, not detailed food microbiology or lot tracking. See LIVING_WORLD_D_REPORT.md for bounded care and continuity evidence, including recorded route failures. Models stay off pending the unfinished A budget gate.
+# Milestone E scope — 21 October 2026
+
+The new hierarchy is authored and explicitly assigned. Private receipt-derived
+source preference changes later behavior but can be stale and slower after an
+obstruction clears. Reusable procedure references do not discover new recipes or
+grant native workmanship. Optional pinned model assistance selects an authored
+operator index; its reason text can be wrong and grants no permission. The
+confirmation shows no completion advantage and added inference cost. The normal
+desktop remains model-off; recurring/fair/global budgets and E AppContainer
+integration remain incomplete. No Phase 9 learner is activated. See
+[E evidence and remaining limits](LIVING_WORLD_E_REPORT.md).

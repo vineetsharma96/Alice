@@ -1,0 +1,43 @@
+{
+  "baseline_push": "661bd0f9bcc4bcee5552d2ac90766699a9072a61",
+  "registered_files_unchanged": {
+    "underworld/stabilization.py": true,
+    "underworld/planning.py": true,
+    "underworld/planning_model.py": true,
+    "underworld/app.py": true,
+    "docs/PHASE_E_PLANNING.md": true,
+    "docs/PHASE_E_EVALUATION_AMENDMENT_1.md": true,
+    "scripts/phase_e_eval.py": true,
+    "tests/planning_fixtures.py": true,
+    "tests/test_phase_e_planning.py": true
+  },
+  "controller_matches_registration": true,
+  "full_regressions": true,
+  "confirmation": true,
+  "tool_recovery": true,
+  "continuity": true,
+  "package_basic": true,
+  "package_tasks": true,
+  "viewer": true,
+  "exe_hash_matches": true,
+  "phase9_hashes": {
+    "underworld\\learning.py": true,
+    "config\\phase9_study.json": true,
+    "docs\\PHASE9_PREREGISTRATION.md": true,
+    "docs\\PHASE9_REPORT.md": true,
+    "artifacts\\phase9_summary.json": true,
+    "data\\phase9-study-20261020\\file_hashes.json": true
+  },
+  "phase9_recomputed": true,
+  "phase9_advance": false,
+  "phase9_verified_files": 3439,
+  "archive_drift": [],
+  "owned_ports_closed": {
+    "8082": true,
+    "55125": true
+  },
+  "missing_doc_links": [],
+  "source_files": 185,
+  "static_connection_errors": [],
+  "passed": true
+}
