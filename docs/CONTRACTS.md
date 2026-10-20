@@ -25,3 +25,16 @@ Limit serialized request to 16 KiB, text to 4096 UTF-8 bytes, targets to 8, para
 Validate schema, run/agent authorization, exact current observation version, action allowlist and numeric limits before querying targets. Then validate visibility, reach, ownership, available quantities and target state at execution and again when delayed effects occur. No narrative changes truth. Do not expose whether a hidden or nonexistent target exists: return `TARGET_UNAVAILABLE` for either.
 
 Error codes: `UNSUPPORTED_SCHEMA`, `INVALID_ARGUMENT`, `PAYLOAD_TOO_LARGE`, `UNAUTHORIZED`, `STALE_OBSERVATION`, `UNKNOWN_ACTION`, `TARGET_UNAVAILABLE`, `OUT_OF_REACH`, `OWNERSHIP_DENIED`, `INSUFFICIENT_RESOURCE`, `BUSY`, `MODE_FORBIDS_INTERVENTION`, `INTERNAL_ERROR`. Reasons are bounded observable text, not stack traces. Retry stale requests only after receiving a new observation; provider timeout is recorded scheduler fallback, not a successful action. Repeating a request ID with identical payload returns its existing result; conflicting payload is invalid. Deduplication is scoped to run/agent and must persist across restart. None of these runtime guarantees are tested in Phase 0.
+
+## Milestone B tree/material actions
+
+The UW7 native contract adds these validated action types; all use the existing `schema_version`, run/agent identity, observation version, target list and requested duration envelope:
+
+| Action | Targets | Parameters | Authored effect |
+| --- | --- | --- | --- |
+| `inspect_tree` | one visible tree | `{}` | reports stage, health, radius and tracked biomass; no material change |
+| `harvest_branch` | one visible non-stump tree | `{mass_kg}` with optional explicit `{x_m,y_m}` pile anchor | removes finite biomass and creates 90% wood / 10% fiber after terminal validation |
+| `fell_tree` | one visible non-stump tree | `{}` with optional explicit `{x_m,y_m}` pile anchor | five-second no-tool bootstrap; removes 90% biomass as 80% wood / 10% fiber and leaves a 10% stump |
+| `collect_wood` | one visible wood/fiber/wood-offcut/stone pile | `{material,mass_kg}` | transfers an existing pile quantity into carried inventory under capacity/reach checks |
+
+Tree-derived material placement is checked against occupied geometry. A failed or interrupted action does not create products; competing terminal completions revalidate remaining biomass. The native checkpoint is `UW7`; the durable coordinator is SQLite user_version 8 with checkpoint schema 7. See [PHASE_B_TREES.md](PHASE_B_TREES.md) for limits and exact ledgers.

@@ -2,7 +2,7 @@
 
 ## Active work
 
-Milestone A from `Prompt/Alice_Living_World_New_Agent_Prompt.md`: consolidate the stabilized runtime without changing legacy experiments.
+Milestone B from `Prompt/Alice_Living_World_New_Agent_Prompt.md`: add authoritative trees and finite reusable materials without changing legacy experiments.
 
 ## Completed in this continuation
 
@@ -11,10 +11,12 @@ Milestone A from `Prompt/Alice_Living_World_New_Agent_Prompt.md`: consolidate th
 - Added `docs/LIVING_WORLD_PLAN.md` with module mapping, contracts, dependency order and acceptance checks.
 - Added an opt-in four-inhabitant configuration and a single `living-world` CLI entry point.
 - Added observer reporting for the active controller and stabilization goal/budget attribution.
+- Added native UW7 tree entities, growth accounting, harvest/felling/collection actions, material piles and occupied-placement validation.
+- Added Python bindings/configuration/storage integration, DB8/checkpoint-schema-7 compatibility, focused tree tests and viewer colors/inspection fields.
 
 ## Compatibility and commands
 
-Legacy configs and UW6/DB7 worlds remain unchanged. New development run:
+Legacy configs and UW6/DB7 worlds remain historical and fail closed under the current UW7/DB8 runtime. New development run:
 
 ```powershell
 .venv/Scripts/python.exe -m underworld living-world init --db data/living-world/run.sqlite
@@ -35,4 +37,4 @@ No long-horizon or model-enabled run is claimed here. No owned process is runnin
 
 ## Next acceptance check
 
-Run the model-off living-world command sequence, save/resume its database, then proceed to Milestone B only after the native and stabilization regression checks pass.
+Run the focused tree/native/Python regression checks and a model-off living-world smoke run. If they pass, proceed to Milestone C (data-driven crafting and construction).

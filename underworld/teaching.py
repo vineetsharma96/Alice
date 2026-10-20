@@ -125,7 +125,7 @@ def fork(path, output, mode=None, hearing_range_m=None, episodic_memory=None):
                        (dumps(config),dumps(metadata),state,hashed))
         tick=int(world.snapshot()["tick"])
         target.execute("DELETE FROM checkpoints")
-        target.execute("INSERT INTO checkpoints VALUES('initial',?,?,?,?,?)",(tick,state,hashed,6,dumps(policy)))
+        target.execute("INSERT INTO checkpoints VALUES('initial',?,?,?,?,?)",(tick,state,hashed,7,dumps(policy)))
         target.execute("DELETE FROM policy_frames")
         target.commit()
     except BaseException:

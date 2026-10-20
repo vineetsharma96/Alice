@@ -35,12 +35,19 @@ export class WorldView {
    g.userData.busy=this.mesh(g,'head','#f0bf78',[.29,1.12,0],[.05,.05,.05]);
   }else if(e.kind==='book'){
    this.mesh(g,'box','#d3c5a3',[0,.16,0],[.65,.12,.46]);this.mesh(g,'box','#718b81',[-.3,.17,0],[.06,.15,.48]);
-  }else if(e.kind==='thermal_cell'){
-   this.mesh(g,'body','#9eaeb3',[0,.35,0],[.35,.7,.35]);this.mesh(g,'body','#435c64',[0,.71,0],[.29,.025,.29]);this.mesh(g,'box','#a37853',[.37,.27,0],[.1,.08,.25]);
-  }else if(e.kind==='food'||e.kind==='water'){
-   const color=e.kind==='food'?'#b99c6b':'#688d9b';this.mesh(g,'body',color,[0,.13,0],[.5,.26,.5]);
-   this.mesh(g,'box',e.kind==='food'?'#dcc391':'#9db9bd',[0,.28,0],[.23,.04,.23]);
-  }else{
+   }else if(e.kind==='thermal_cell'){
+    this.mesh(g,'body','#9eaeb3',[0,.35,0],[.35,.7,.35]);this.mesh(g,'body','#435c64',[0,.71,0],[.29,.025,.29]);this.mesh(g,'box','#a37853',[.37,.27,0],[.1,.08,.25]);
+   }else if(e.kind==='tree'){
+    const stump=e.stage==='stump',mature=e.stage==='mature';
+    this.mesh(g,'body',stump?'#72513b':'#79523a',[0,radius*.8,0],[radius*.42,radius*1.8,radius*.42]);
+    if(!stump)this.mesh(g,'head',mature?'#5f8c5b':'#789c63',[0,radius*2.1,0],[radius*(mature?1.55:1.05),radius*(mature?1.35:1.0),radius*(mature?1.55:1.05)]);
+   }else if(e.kind==='food'||e.kind==='water'){
+    const color=e.kind==='food'?'#b99c6b':'#688d9b';this.mesh(g,'body',color,[0,.13,0],[.5,.26,.5]);
+    this.mesh(g,'box',e.kind==='food'?'#dcc391':'#9db9bd',[0,.28,0],[.23,.04,.23]);
+   }else if(['wood','fiber','wood_offcut','stone'].includes(e.kind)){
+    const colors={wood:'#a87545',fiber:'#d0b27a',wood_offcut:'#bd8a55',stone:'#8c9698'};
+    this.mesh(g,'box',colors[e.kind],[0,radius*.55,0],[radius*1.8,radius*.9,radius*1.2]);
+   }else{
    this.mesh(g,e.kind==='rock'?'rock':'box',e.kind==='inert_material'?'#b3b5a4':'#748787',[0,radius*.55,0],[radius*1.5,radius*1.1,radius*1.5]);
   }
   this.scene.add(g);return g;

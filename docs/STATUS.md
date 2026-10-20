@@ -1,6 +1,6 @@
-# Living-world Milestone A — runtime consolidation in progress — 2026-10-20
+# Living-world Milestone B — trees and materials in progress — 2026-10-20
 
-Milestone A now has an opt-in `config/living-world.toml` development profile (4 inhabitants, finite food/water, model-off by default), a single `python -m underworld living-world ...` entry point over the existing stabilization controller, and observer metadata exposing the active controller plus selected goal/budget attribution. Legacy survival, unattended and Phase 9 paths remain unchanged. Trees, animals, crafting and general planning are not implemented yet.
+Milestone A is complete within its measured scope. Milestone B now adds an opt-in `config/living-world.toml` development profile with four inhabitants, native UW7 trees/materials, finite harvesting and explicit growth accounting. Legacy survival, unattended and Phase 9 paths remain unchanged. Animals, crafting and general planning are not implemented yet.
 
 The opt-in persistent prerequisite executor is implemented and evaluated. The failed Phase 9 study remains unchanged and its learner stays outside live autonomous policies. Its previous status is preserved in [PHASE9_STATUS.md](PHASE9_STATUS.md).
 
@@ -32,7 +32,7 @@ Full verification passed: **True**. Ran 139 tests in 160.319s. Native checks and
 
 ## Handoff and remaining limits
 
-Use `python -m underworld.stabilization init/attach/run/status` as documented. This is an explicit opt-in scheduler handoff; no existing Phase 8/9 world was silently switched or reset. The viewer can attach read-only. The legacy viewer time controller and Phase 7 supervisor do not automatically drive the new executor; its model calls use separate audited counters.
+Use `python -m underworld.stabilization init/attach/run/status` or the living-world wrapper as documented. This is an explicit opt-in scheduler handoff; no existing Phase 8/9 world was silently switched or reset. The viewer can attach read-only. The legacy viewer time controller and Phase 7 supervisor do not automatically drive the new executor; its model calls use separate audited counters.
 
 Crowd layouts, arbitrary cargo rearrangement/complex tasks, unavailable-water combinations, long-term supply and full-day operation remain outside this evidence. The host-side controller is not a newly verified AppContainer service. Native hashes and controller-journal checks are separate; journals and requests have finite quotas. No neural training, reproduction, speech, true 3D, consciousness, general intelligence or civilization-emergence claim was added. Phase 9's failed advancement gate was not changed.
 
@@ -46,3 +46,20 @@ Crowd layouts, arbitrary cargo rearrangement/complex tasks, unavailable-water co
 - `.venv/Scripts/python.exe -m unittest tests.test_scaffold tests.test_stabilization`: blocked by missing `UNDERWORLD_CORE` in `tests.test_scaffold.CoreTests`; stabilization tests still passed independently. No scaffold-suite pass is claimed until the native core path is supplied.
 
 See [LIVING_WORLD_PLAN.md](LIVING_WORLD_PLAN.md) and [HANDOFF.md](../HANDOFF.md) for the dependency order and next acceptance check.
+
+## Milestone B checks
+
+- `"/c/mingw64/bin/mingw32-make.exe" -C build -j2`: passed.
+- `./build/underworld_native_tests.exe`: passed, including tree lifecycle, competing harvesters, placement, growth and UW6 rejection.
+- `./build/underworld_thermal_tests.exe`: passed.
+- `.venv/Scripts/python.exe -m unittest tests.test_phase_b_trees`: passed, 3 tests.
+- `.venv/Scripts/python.exe -m unittest tests.test_phase1.MechanicsTests`: passed, 8 tests.
+- `.venv/Scripts/python.exe -m unittest tests.test_phase2.BodySenseTests`: passed, 8 tests.
+- `.venv/Scripts/python.exe -m unittest tests.test_phase5 tests.test_phase6`: passed, 26 tests.
+- `.venv/Scripts/python.exe -m unittest tests.test_phase7 tests.test_phase8 tests.test_phase9`: passed, 36 tests.
+- `.venv/Scripts/python.exe -m unittest tests.test_stabilization`: passed, 17 tests.
+- `UNDERWORLD_CORE="build/underworld_core.exe" .venv/Scripts/python.exe -m unittest discover -s tests -p "test_*.py"`: passed, 142 tests in 173.584s.
+- `node --check underworld/web/scene.js && node --check underworld/web/viewer.js && node --check underworld/web/observer.js`: passed.
+- Living-world CLI smoke initialized `data/living-world-b-smoke/run.sqlite` from the new config, ran 2 simulated seconds with replay parity, saved `checkpoint.sqlite`, resumed another 2 simulated seconds, and reported trees/stone through the observer state.
+
+No full-day ecosystem run or model-enabled tree planner is claimed. The native tree actions are available to validated callers; autonomous tree/crafting planning is deferred to later milestones.

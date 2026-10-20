@@ -31,6 +31,7 @@ food_kg = 16.0
 water_kg = 64.0
 food_regen_kg_s = 0.01
 water_regen_kg_s = 0.01
+tree_growth_kg_s = 0.0
 
 [execution]
 batch_ticks = 50

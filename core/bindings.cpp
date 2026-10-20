@@ -13,8 +13,8 @@ struct BoundWorld {
     uw::World core;
     std::string run_id;
     BoundWorld(uw::U64 seed,unsigned population,double width,double height,double dt,
-               uw::U64 interval,bool scripted,std::string run,bool bodies,double food,double water,double food_regen,double water_regen,bool guided,double hearing)
-        :core(seed,population,width,height,dt,interval,scripted,bodies,food,water,food_regen,water_regen),run_id(std::move(run)){core.configure_branch(guided,hearing);}
+               uw::U64 interval,bool scripted,std::string run,bool bodies,double food,double water,double food_regen,double water_regen,bool guided,double hearing,double tree_growth)
+        :core(seed,population,width,height,dt,interval,scripted,bodies,food,water,food_regen,water_regen,tree_growth),run_id(std::move(run)){core.configure_branch(guided,hearing);}
 };
 void keys(py::dict d,std::set<std::string> expected) {
     std::set<std::string> actual;
@@ -48,6 +48,7 @@ py::dict entity(const uw::Entity& e,bool inventory=true,bool bodies=false) {
     py::dict d("entity_id"_a=e.id,"kind"_a=e.kind,"position_m"_a=py::make_tuple(e.position.x,e.position.y),
                "radius_m"_a=e.radius,"mass_kg"_a=static_cast<double>(e.mass_ug)/1e9,
                "mass_ug"_a=std::to_string(e.mass_ug));
+    if(e.kind=="tree")d["stage"]=e.stage,d["health"]=e.health,d["biomass_ug"]=std::to_string(e.biomass_ug);
     if(inventory) {py::dict inv;for(auto&[kind,mass]:e.inventory)inv[py::str(kind)]=std::to_string(mass);d["inventory_ug"]=inv;}
     if(bodies&&e.kind=="actor") {
         d["alive"]=e.body.alive;
@@ -69,13 +70,13 @@ py::dict result(const uw::Result& r) {
 PYBIND11_MODULE(_underworld,m) {
     m.attr("build_id")=UW_BUILD_ID;
     py::class_<BoundWorld>(m,"World")
-        .def(py::init<uw::U64,unsigned,double,double,double,uw::U64,bool,std::string,bool,double,double,double,double,bool,double>(),
+        .def(py::init<uw::U64,unsigned,double,double,double,uw::U64,bool,std::string,bool,double,double,double,double,bool,double,double>(),
              "seed"_a=20261019,"population"_a=8,"width"_a=64,"height"_a=64,"dt"_a=.1,
              "interval"_a=50,"scripted"_a=true,"run_id"_a="test","bodies"_a=false,
-             "food_kg"_a=16,"water_kg"_a=64,"food_regen_kg_s"_a=0,"water_regen_kg_s"_a=0,"guided"_a=false,"hearing_range_m"_a=6)
+             "food_kg"_a=16,"water_kg"_a=64,"food_regen_kg_s"_a=0,"water_regen_kg_s"_a=0,"guided"_a=false,"hearing_range_m"_a=6,"tree_growth_kg_s"_a=0)
         .def("checkpoint",[](const BoundWorld&w){return w.core.serialize();})
         .def_static("restore",[](const std::string&state,const std::string&run_id){
-            BoundWorld w(1,1,64,64,.1,50,false,run_id,false,16,64,0,0,false,6);w.core=uw::World::restore(state);return w;
+             BoundWorld w(1,1,64,64,.1,50,false,run_id,false,16,64,0,0,false,6,0);w.core=uw::World::restore(state);return w;
         },"state"_a,"run_id"_a="test")
         .def("_configure_branch",[](BoundWorld&w,bool guided,double hearing){w.core.configure_branch(guided,hearing);})
         .def("configure_thermal",[](BoundWorld&w,bool open,double water,double fuel,double oxygen,double temperature){w.core.configure_thermal(open,water,fuel,oxygen,temperature);},
@@ -226,6 +227,29 @@ PYBIND11_MODULE(_underworld,m) {
                 const bool consumption=a.type=="eat"||a.type=="drink";
                 if(targets.size()!=(consumption?0:1))throw py::value_error("INVALID_ARGUMENT");
                 if(!consumption)a.target_id=str(targets[0]);keys(params,{"mass_kg"});double mass=number(params["mass_kg"]);
+                if(mass<=0||mass>10||std::abs(mass*1e9-std::round(mass*1e9))>1e-5)throw py::value_error("INVALID_ARGUMENT: mass resolution is 1 microgram");
+                a.mass_ug=static_cast<std::int64_t>(std::llround(mass*1e9));
+            } else if(a.type=="inspect_tree") {
+                if(targets.size()!=1)throw py::value_error("INVALID_ARGUMENT");
+                a.target_id=str(targets[0]);keys(params,{});
+            } else if(a.type=="harvest_branch") {
+                if(targets.size()!=1)throw py::value_error("INVALID_ARGUMENT");
+                a.target_id=str(targets[0]);
+                if(params.contains("x_m")||params.contains("y_m")) {
+                    keys(params,{"mass_kg","x_m","y_m"});a.destination={number(params["x_m"]),number(params["y_m"])};
+                } else keys(params,{"mass_kg"});
+                const double mass=number(params["mass_kg"]);
+                if(mass<=0||mass>10||std::abs(mass*1e9-std::round(mass*1e9))>1e-5)throw py::value_error("INVALID_ARGUMENT: mass resolution is 1 microgram");
+                a.mass_ug=static_cast<std::int64_t>(std::llround(mass*1e9));
+            } else if(a.type=="fell_tree") {
+                if(targets.size()!=1)throw py::value_error("INVALID_ARGUMENT");
+                a.target_id=str(targets[0]);
+                if(params.contains("x_m")||params.contains("y_m")) {keys(params,{"x_m","y_m"});a.destination={number(params["x_m"]),number(params["y_m"])};}
+                else keys(params,{});
+            } else if(a.type=="collect_wood") {
+                if(targets.size()!=1)throw py::value_error("INVALID_ARGUMENT");
+                a.target_id=str(targets[0]);keys(params,{"material","mass_kg"});a.material=str(params["material"]);
+                const double mass=number(params["mass_kg"]);
                 if(mass<=0||mass>10||std::abs(mass*1e9-std::round(mass*1e9))>1e-5)throw py::value_error("INVALID_ARGUMENT: mass resolution is 1 microgram");
                 a.mass_ug=static_cast<std::int64_t>(std::llround(mass*1e9));
             } else if(a.type=="give") {

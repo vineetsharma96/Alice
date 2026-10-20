@@ -11,7 +11,8 @@ function inspect(){
  if(!state)return;const s=state.snapshot,e=s.entities.find(e=>e.entity_id===selected);if(!e)return;
  $('entities').value=selected;$('entity-title').textContent=e.entity_id;$('entity-kind').textContent=e.kind.replaceAll('_',' ');
  const cell=s.thermal?.cells.find(c=>c.entity_id===selected);const fields=[['Position',`${e.position_m[0].toFixed(2)}, ${e.position_m[1].toFixed(2)} m`],['Mass',`${(e.mass_kg??0).toFixed(3)} kg`],['Physical radius',`${e.radius_m?.toFixed(2)??'0'} m`]];
- if(cell)fields.push(['Temperature',`${cell.temperature_k.toFixed(2)} K`],['Heater',cell.heater],['Water',`${(Number(cell.water_ug)/1e6).toFixed(2)} g`]);
+  if(cell)fields.push(['Temperature',`${cell.temperature_k.toFixed(2)} K`],['Heater',cell.heater],['Water',`${(Number(cell.water_ug)/1e6).toFixed(2)} g`]);
+  if(e.kind==='tree')fields.push(['Stage',e.stage||'unknown'],['Health',`${Math.round((e.health??0)*100)}%`],['Tracked biomass',`${(Number(e.biomass_ug||0)/1e9).toFixed(3)} kg`]);
  if(e.kind==='actor')fields.push(['State',e.present===false?'Departed':e.alive===false?'Dead':'Alive']);
  $('entity-facts').replaceChildren(...fields.flatMap(([key,value])=>{const a=document.createElement('dt'),b=document.createElement('dd');a.textContent=key;b.textContent=value;return[a,b];}));
  $('entity-record').textContent=json(cell?{entity:e,thermal:cell}:e);

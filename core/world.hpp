@@ -23,6 +23,11 @@ struct Entity {
     std::int64_t mass_ug{};
     std::map<std::string, std::int64_t> inventory;
     Body body{};
+    // Tree-only state is kept on the authoritative entity so checkpoints and
+    // native observers cannot reconstruct biomass from free products.
+    std::string stage{"none"};
+    double health{1};
+    std::int64_t biomass_ug{};
 };
 struct Action {
     std::string request_id, agent_id, type, target_id;
@@ -50,8 +55,9 @@ struct Pending { Action action; U64 remaining{}, started{}; double exposure_s{};
 class World {
 public:
     World(U64 seed=20261019, unsigned population=8, double width=64, double height=64,
-          double dt=.1, U64 interval=50, bool scripted=true, bool bodies=false,
-          double food_kg=16, double water_kg=64, double food_regen_kg_s=0, double water_regen_kg_s=0);
+           double dt=.1, U64 interval=50, bool scripted=true, bool bodies=false,
+           double food_kg=16, double water_kg=64, double food_regen_kg_s=0, double water_regen_kg_s=0,
+           double tree_growth_kg_s=0);
     Result submit(const Action& action);
     std::vector<Event> step(unsigned ticks);
     std::vector<Entity> nearby(const std::string& agent_id, double range=8) const;
@@ -68,6 +74,7 @@ public:
     double dt() const { return dt_; }
     double width() const { return width_; }
     double height() const { return height_; }
+    double tree_growth_rate_kg_s() const { return tree_growth_kg_s_; }
     double energy() const { return energy_j_; }
     double solar_input() const { return solar_input_j_; }
     const ThermalModel& thermal() const { return thermal_; }
@@ -102,12 +109,13 @@ private:
     bool scripted_{true};
     bool bodies_{};
     double food_regen_{}, water_regen_{}, food_remainder_{}, water_remainder_{};
+    double tree_growth_kg_s_{}, tree_growth_remainder_ug_{};
     std::map<std::string,std::int64_t> initial_mass_, source_mass_;
     std::map<std::string,std::vector<Message>> messages_;
     std::map<std::string,std::vector<Message>> readings_;
     std::map<std::string,Book> books_;
     std::map<std::string,std::pair<std::string,U64>> interventions_;
-    std::map<std::string,std::int64_t> operator_mass_{{"food",0},{"water",0},{"inert_material",0},{"fuel_X",0},{"oxygen",0},{"product_P",0}};
+    std::map<std::string,std::int64_t> operator_mass_{{"food",0},{"water",0},{"inert_material",0},{"fuel_X",0},{"oxygen",0},{"product_P",0},{"stone",0}};
     bool guided_{};
     double hearing_range_{6}, operator_energy_j_{};
     std::mt19937_64 rng_;
@@ -127,8 +135,11 @@ private:
     bool unobstructed(Point a, Point b, const std::string& target="") const;
     void update_bodies();
     void replenish();
+    void grow_trees();
     std::string validate_body_action(const Entity& actor,const Action& action) const;
     void complete_body_action(Entity& actor,const Action& action);
+    std::string validate_tree_action(const Entity& actor,const Action& action) const;
+    void complete_tree_action(Entity& actor,const Action& action);
     const Message* known_report(const std::string& agent, U64 seq) const;
     std::string validate_culture_action(const Entity& actor,const Action& action) const;
     void complete_culture_action(Entity& actor,const Action& action);

@@ -1,16 +1,22 @@
 #include "world.hpp"
 #include <algorithm>
 #include <cmath>
+#include <limits>
 #include <sstream>
 
 namespace uw {
 namespace {
 constexpr std::int64_t kg=1000000000;
+constexpr double pile_radius=.15;
+constexpr std::int64_t inventory_capacity=2*kg;
 double separation(Point a,Point b){return std::hypot(a.x-b.x,a.y-b.y);}
+bool pile_kind(const std::string& kind) {
+    return kind=="wood"||kind=="fiber"||kind=="wood_offcut"||kind=="stone";
+}
 }
 bool World::unobstructed(Point a,Point b,const std::string& target) const {
     const double dx=b.x-a.x,dy=b.y-a.y,len=dx*dx+dy*dy;
-    for(const auto&e:entities_) if((e.kind=="rock"||e.kind=="object")&&e.id!=target) {
+    for(const auto&e:entities_) if((e.kind=="rock"||e.kind=="object"||e.kind=="tree")&&e.id!=target) {
         const double t=len==0?0:std::clamp(((e.position.x-a.x)*dx+(e.position.y-a.y)*dy)/len,0.0,1.0);
         if(separation({a.x+t*dx,a.y+t*dy},e.position)<e.radius) return false;
     }
@@ -22,6 +28,8 @@ bool World::visible(const std::string& observer,const std::string& target,double
         separation(a->position,b->position)<=range&&(!bodies_||unobstructed(a->position,b->position,target));
 }
 std::string World::validate_body_action(const Entity& actor,const Action& a) const {
+    if(a.type=="inspect_tree"||a.type=="harvest_branch"||a.type=="fell_tree"||a.type=="collect_wood")
+        return validate_tree_action(actor,a);
     if(!bodies_)return "UNKNOWN_ACTION";
     if(a.type=="operate_heat"||a.type=="move_material")return validate_thermal_action(actor,a);
     if(a.type=="give"||a.type=="offer_task"||a.type=="respond_task"||a.type=="process_batch"||a.type=="write_book"||a.type=="depart")return validate_culture_action(actor,a);
@@ -52,7 +60,43 @@ std::string World::validate_body_action(const Entity& actor,const Action& a) con
     }
     return "UNKNOWN_ACTION";
 }
+std::string World::validate_tree_action(const Entity& actor,const Action& a) const {
+    auto target=find(a.target_id);
+    const bool inspect=a.type=="inspect_tree";
+    const bool harvest=a.type=="harvest_branch";
+    const bool fell=a.type=="fell_tree";
+    const bool collect=a.type=="collect_wood";
+    if(!inspect&&!harvest&&!fell&&!collect)return "UNKNOWN_ACTION";
+    if(!target||!visible(actor.id,a.target_id))return "TARGET_UNAVAILABLE";
+    if(inspect) {
+        if(target->kind!="tree")return "TARGET_UNAVAILABLE";
+        if(!a.text.empty()||a.mass_ug!=0||a.destination.x!=0||a.destination.y!=0||!a.destination_id.empty()||!a.material.empty()||a.duration_s<.2)
+            return "INVALID_ARGUMENT";
+        return "";
+    }
+    if(collect) {
+        if(!pile_kind(target->kind)||target->radius!=pile_radius||!a.text.empty()||a.mass_ug<=0||a.mass_ug>10*kg||
+           a.destination.x!=0||a.destination.y!=0||!a.destination_id.empty()||a.material!=target->kind||separation(actor.position,target->position)>1.5)
+            return "INVALID_ARGUMENT";
+        if(target->mass_ug<a.mass_ug)return "INSUFFICIENT_RESOURCE";
+        std::int64_t held=0;for(const auto& [kind,mass]:actor.inventory)held+=mass;
+        return held>inventory_capacity-a.mass_ug?"CAPACITY_EXCEEDED":"";
+    }
+    if(target->kind!="tree")return "TARGET_UNAVAILABLE";
+    if(!a.text.empty()||a.mass_ug<0||a.destination_id.size()!=0||!a.material.empty()||separation(actor.position,target->position)>1.5)
+        return "INVALID_ARGUMENT";
+    if(target->stage=="stump"||target->biomass_ug==0||target->mass_ug==0)return "TREE_DEPLETED";
+    if(harvest) {
+        if(a.mass_ug<=0||a.duration_s<1)return "INVALID_ARGUMENT";
+        return a.mass_ug>target->biomass_ug?"INSUFFICIENT_RESOURCE":"";
+    }
+    if(fell) return a.mass_ug==0&&a.duration_s>=5?"":"INVALID_ARGUMENT";
+    return "UNKNOWN_ACTION";
+}
 void World::complete_body_action(Entity& actor,const Action& a) {
+    if(a.type=="inspect_tree"||a.type=="harvest_branch"||a.type=="fell_tree"||a.type=="collect_wood") {
+        complete_tree_action(actor,a);return;
+    }
     auto& receipt=requests_.at(actor.id+":"+a.request_id).second;
     if(a.type=="operate_heat"||a.type=="move_material") {complete_thermal_action(actor,a);return;}
     if(a.type=="give"||a.type=="offer_task"||a.type=="respond_task"||a.type=="process_batch"||a.type=="write_book"||a.type=="depart") {complete_culture_action(actor,a);return;}
@@ -112,6 +156,90 @@ void World::complete_body_action(Entity& actor,const Action& a) {
     } else if(a.type=="rest")receipt.effect="rested";
     finish(actor.id,true,"");
 }
+void World::complete_tree_action(Entity& actor,const Action& a) {
+    const std::string actor_id=actor.id;
+    auto& receipt=requests_.at(actor_id+":"+a.request_id).second;
+    auto fail=[&](const std::string& error){finish(actor_id,false,error);};
+    if(bodies_&&!actor.body.alive){fail("DEAD");return;}
+    auto target=find(a.target_id);
+    auto error=validate_tree_action(actor,a);
+    if(!target||!error.empty()){fail(error.empty()?"TARGET_UNAVAILABLE":error);return;}
+    if(a.type=="inspect_tree") {
+        std::ostringstream description;description<<target->id<<":stage="<<target->stage<<":health="<<target->health
+            <<":biomass_ug="<<target->biomass_ug<<":radius_m="<<target->radius;
+        receipt.effect=description.str();event("inspection",actor_id,a.request_id,receipt.effect);receipt.event_refs.push_back(seq_);
+        finish(actor_id,true,"");return;
+    }
+    if(a.type=="collect_wood") {
+        const auto amount=a.mass_ug;
+        if(target->mass_ug<amount){fail("INSUFFICIENT_RESOURCE");return;}
+        std::int64_t held=0;for(const auto& [kind,mass]:actor.inventory)held+=mass;
+        if(held>inventory_capacity-amount){fail("CAPACITY_EXCEEDED");return;}
+        target->mass_ug-=amount;actor.inventory[target->kind]+=amount;
+        event("mass_transfer",actor_id,a.request_id,"collect_wood:"+target->kind+":"+std::to_string(amount)+"ug");
+        receipt.event_refs.push_back(seq_);receipt.effect="collected:"+target->kind+":"+std::to_string(amount)+"ug";
+        finish(actor_id,true,"");return;
+    }
+
+    target=find(a.target_id);
+    if(!target||target->kind!="tree"||target->stage=="stump"||target->biomass_ug==0||target->mass_ug==0) {
+        fail("TREE_DEPLETED");return;
+    }
+    const std::int64_t original=target->biomass_ug;
+    std::int64_t wood=0,fiber=0,removed=0,stump=0;
+    if(a.type=="harvest_branch") {
+        if(a.mass_ug<=0||a.mass_ug>target->biomass_ug){fail("INSUFFICIENT_RESOURCE");return;}
+        removed=a.mass_ug;wood=removed*9/10;fiber=removed-wood;stump=target->biomass_ug-removed;
+    } else {
+        // Authored bootstrap rule: felling is a slow no-tool action. Native
+        // validation remains authoritative, so bindings cannot bypass reach,
+        // stage, biomass, placement, or the five-second minimum.
+        if(a.duration_s<5){fail("INVALID_ARGUMENT");return;}
+        wood=target->biomass_ug*8/10;fiber=target->biomass_ug/10;removed=wood+fiber;stump=target->biomass_ug-removed;
+    }
+
+    const Point anchor=a.destination.x==0&&a.destination.y==0?Point{}:a.destination;
+    std::vector<std::pair<std::string,std::int64_t>> products;
+    if(wood>0)products.emplace_back("wood",wood);
+    if(fiber>0)products.emplace_back("fiber",fiber);
+    std::vector<Point> positions;
+    auto clear_for_pile=[&](Point p) {
+        if(!std::isfinite(p.x)||!std::isfinite(p.y)||p.x<pile_radius||p.y<pile_radius||p.x>width_-pile_radius||p.y>height_-pile_radius)return false;
+        for(const auto& e:entities_)if(!culture_.departed.contains(e.id)&&e.radius>0&&separation(p,e.position)<pile_radius+e.radius-1e-12)return false;
+        for(const auto& q:positions)if(separation(p,q)<2*pile_radius-1e-12)return false;
+        return true;
+    };
+    auto choose_position=[&](Point wanted,Point base,Point& result) {
+        std::vector<Point> candidates;
+        if(positions.empty()&&(wanted.x!=0||wanted.y!=0)) {
+            // A caller-supplied placement is an explicit occupied-geometry
+            // claim; reject it rather than silently relocating the pile.
+            if(!clear_for_pile(wanted))return false;
+            candidates.push_back(wanted);
+        }
+        const double offsets[][2]={{1.2,0},{-1.2,0},{0,1.2},{0,-1.2},{.9,.9},{-.9,.9},{.9,-.9},{-.9,-.9},{1.8,0},{0,1.8}};
+        for(const auto& offset:offsets)candidates.push_back({base.x+offset[0],base.y+offset[1]});
+        for(const auto& candidate:candidates)if(clear_for_pile(candidate)){result=candidate;return true;}
+        return false;
+    };
+    for(std::size_t i=0;i<products.size();++i) {
+        Point placement{};
+        if(!choose_position(anchor,target->position,placement)){fail("NO_PLACEMENT");return;}
+        positions.push_back(placement);
+    }
+    if(removed>target->biomass_ug){fail("INSUFFICIENT_RESOURCE");return;}
+    target->mass_ug-=removed;target->biomass_ug=target->mass_ug;
+    target->health=std::max(0.0,target->health-.1*static_cast<double>(removed)/std::max<std::int64_t>(original,1));
+    if(a.type=="fell_tree"||target->mass_ug==0||stump==0) {target->stage="stump";target->health=target->mass_ug==0?0:.1;}
+    for(std::size_t i=0;i<products.size();++i) {
+        const auto& [kind,mass]=products[i];
+        entities_.push_back({"pile-"+std::to_string(next_id_++),kind,positions[i],pile_radius,mass,{},{},"none",1,0});
+    }
+    rebuild_grid();
+    event("mass_transfer",actor_id,a.request_id,a.type+":wood="+std::to_string(wood)+":fiber="+std::to_string(fiber));
+    receipt.event_refs.push_back(seq_);receipt.effect="wood_ug="+std::to_string(wood)+":fiber_ug="+std::to_string(fiber);
+    finish(actor_id,true,"");
+}
 void World::update_bodies() {
     if(!bodies_)return;
     for(auto& e:entities_)if(e.kind=="actor"&&e.body.alive&&!culture_.departed.contains(e.id)) {
@@ -146,6 +274,19 @@ void World::replenish() {
             source_mass_[kind]+=mass;
             // The explicit boundary ledger reconciles the source; no magic crafting.
         }
+    }
+}
+void World::grow_trees() {
+    if(tree_growth_kg_s_==0)return;
+    for(auto& tree:entities_) {
+        if(tree.kind!="tree"||tree.stage!="young")continue;
+        tree_growth_remainder_ug_+=tree_growth_kg_s_*dt_*kg;
+        const auto amount=static_cast<std::int64_t>(std::floor(tree_growth_remainder_ug_));
+        tree_growth_remainder_ug_-=static_cast<double>(amount);
+        if(amount<=0)continue;
+        if(tree.mass_ug>std::numeric_limits<std::int64_t>::max()-amount)throw std::invalid_argument("tree biomass overflow");
+        tree.mass_ug+=amount;tree.biomass_ug=tree.mass_ug;source_mass_.at("tree")+=amount;
+        if(tree.mass_ug>=8*kg)tree.stage="mature";
     }
 }
 }

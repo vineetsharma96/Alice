@@ -14,6 +14,16 @@ The new controller persists explicit goals, expands eat/drink into locate → ap
 .venv/Scripts/python.exe -m underworld.stabilization status --db data/stabilized/run.sqlite
 ```
 
+The living-world development entry point uses the same explicit controller without changing legacy runs:
+
+```powershell
+.venv/Scripts/python.exe -m underworld living-world init --db data/living-world/run.sqlite
+.venv/Scripts/python.exe -m underworld living-world run --db data/living-world/run.sqlite --seconds 30
+.venv/Scripts/python.exe -m underworld living-world status --db data/living-world/run.sqlite
+```
+
+It starts with four inhabitants and finite resources; trees, animals and crafting are later milestones. The observer reports whether the legacy or stabilization controller is active.
+
 See [operations and existing-world handoff](docs/STABILIZATION_OPERATIONS.md), [registered protocol](docs/STABILIZATION_PROTOCOL.md) and [results](docs/STABILIZATION_REPORT.md). Reuse `run` to continue the same world; initializing again would create a different experiment. The legacy utility/model policies remain unchanged for comparison.
 
 ## Phase 9 research experiment
@@ -117,7 +127,7 @@ Headless commands remain available:
 
 Use `new --manual` to disable autonomous policy decisions, then `advance --decisions path\actions.jsonl`. Each line contains `at_tick` and a complete ActionRequest; use the run ID/version from inspection. [Phase 2 agency](docs/PHASE2_AGENCY.md) specifies body rates, units, fields, senses, recovery sources, errors and persistence. `new --config config/baseline.toml` retains the body-disabled Phase 1 scripted mechanics scene. The CLI is a trusted local operator interface, not an authenticated multiuser server.
 
-Current checkpoints/database use **UW6 / user_version=7** with native build, Python runtime and separate mental-store checksums. Earlier saved files/reports remain preserved but are incompatible with the current runtime; no automatic migration is claimed. Create a new Phase 7 run.
+Current new-world checkpoints/database use **UW7 / user_version=8** with checkpoint schema 7, native build, Python runtime and separate mental-store checksums. Earlier UW6/DB7 saved files/reports remain preserved but are incompatible with this runtime; no automatic migration is claimed. Create a new compatible living-world run or use the original pinned runtime.
 
 ## Practical skills and cultural transfer
 
@@ -209,6 +219,7 @@ The durable benchmark includes full-state serialization, invariant checks and on
 - `config/`: seed, bounds, population, cognition declarations and event retention.
 - `tests/`, `scripts/`: smoke validation and repeatable bootstrap.
 - `docs/`: architecture, proposed contracts, limits, licenses, milestones, status.
+- `opencode.json`, `.opencode/agents/`: project-local Codex-oriented agents plus TinyFish and Playwright MCP setup; see [OpenCode setup](docs/OPENCODE.md).
 - `artifacts/`: archived Phase 0/1 evidence, Phase 2 tests/body/replay/survival evidence and actual observer screenshots.
 
 Run commands from the repository root. There is no editable-install or binary packaging step yet. Runs pin config and code/build identities; change conditions through a new run or explicit fork. Linux/MSVC, long-horizon unattended operation, full-day model throughput and power-failure durability remain untested. See [status](docs/STATUS.md) for evidence and limits. Phase 9 adds a separately gated learning experiment; longer horizons, generations and true 3D mechanics remain deferred.

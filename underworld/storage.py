@@ -16,7 +16,7 @@ from .policy import choose
 from . import memory, cognition
 from .lease import Lease
 
-DB_VERSION = 7
+DB_VERSION = 8
 INFERENCE_LOCK = threading.Lock()
 MAX_DECISIONS = 10000
 MAX_CHECKPOINT_BYTES = 8*1024*1024  # Same bound as native restore; never commit an unreadable head.
@@ -45,6 +45,7 @@ def laws_version(config):
 
 def _connect(path, readonly=False):
     path = Path(path).resolve()
+    db = None
     if readonly:
         db = sqlite3.connect(path.as_uri() + "?mode=ro", uri=True, isolation_level=None, timeout=10)
         db.execute("PRAGMA query_only=ON")
@@ -60,7 +61,7 @@ def _connect(path, readonly=False):
         if not readonly:db.execute("PRAGMA synchronous=FULL")
         db.execute("PRAGMA foreign_keys=ON")
         if db.execute("PRAGMA user_version").fetchone()[0] != DB_VERSION:
-            db.close()
+            db.close();db = None
             raise ValueError("unsupported database version")
         if not readonly:
             row=db.execute("SELECT config FROM run WHERE singleton=1").fetchone()
@@ -69,9 +70,10 @@ def _connect(path, readonly=False):
                 if cap:
                     pages=cap//db.execute("PRAGMA page_size").fetchone()[0]
                     if db.execute(f"PRAGMA max_page_count={pages}").fetchone()[0]>pages:
-                        db.close();raise ValueError("database already exceeds configured disk quota")
+                        db.close();db = None;raise ValueError("database already exceeds configured disk quota")
     except BaseException:
-        db.close();raise
+        if db is not None:db.close()
+        raise
     return db
 
 
@@ -131,7 +133,8 @@ def create(path, config, scripted=True):
                          w["dt_s"], config["cognition"]["interval_ticks"], scripted and not bodies, run_id,
                          bodies,agency.get("food_kg",16),agency.get("water_kg",64),
                          agency.get("food_regen_kg_s",0),agency.get("water_regen_kg_s",0),
-                         config["mode"]=="guided",config.get("laws",{}).get("hearing_range_m",6))
+                         config["mode"]=="guided",config.get("laws",{}).get("hearing_range_m",6),
+                         agency.get("tree_growth_kg_s",0))
     thermal=config.get("thermal",{})
     if thermal.get("enabled"):
         world.configure_thermal(thermal["open_boundaries"],thermal["water_kg"],thermal["fuel_kg"],thermal["oxygen_kg"],thermal["temperature_k"])
@@ -141,7 +144,7 @@ def create(path, config, scripted=True):
     metadata = {"schema_version": 1, "created_at_utc": datetime.now(timezone.utc).isoformat(),
                 "build_id": native.build_id, "orchestration_id": orchestration_id(),
                 "config_hash": digest(dumps(config)), "scripted": scripted,
-                "laws_version": laws_version(config), "package_version": "0.8.0", "policy":policy,
+                "laws_version": laws_version(config), "package_version": "0.9.0", "policy":policy,
                 "commit_boundary": "one physical tick, cognition reservation/result, operator action or retention transaction", "parent_run_id": None,
                 "branch_id":run_id,"replay_after_id":0}
     db = sqlite3.connect(path, isolation_level=None)
@@ -163,13 +166,13 @@ def create(path, config, scripted=True):
             CREATE TABLE runtime_state(singleton INTEGER PRIMARY KEY CHECK(singleton=1),payload TEXT NOT NULL,checksum TEXT NOT NULL);
             CREATE TABLE runtime_epochs(epoch INTEGER PRIMARY KEY,payload TEXT NOT NULL);
             CREATE TABLE cognition_queue(agent TEXT PRIMARY KEY,due_tick INTEGER NOT NULL);
-            PRAGMA user_version=7;
+            PRAGMA user_version=8;
         """)
         # executescript commits the schema transaction; initialization is not published until a valid head exists.
         memory.initialize(db, config["seed"], w["population"])
         db.execute("BEGIN IMMEDIATE")
         db.execute("INSERT INTO run VALUES(1,?,?,?,?,?,?)", (run_id,dumps(config),dumps(metadata),state,digest(state),"{}"))
-        db.execute("INSERT INTO checkpoints VALUES('initial',0,?,?,6,'{}')", (state,digest(state)))
+        db.execute("INSERT INTO checkpoints VALUES('initial',0,?,?,7,'{}')", (state,digest(state)))
         runtime_payload=dumps({"epoch":0,"last_rotation_tick":0,"queue_dropped":0,"queue_served":0,"status":"ready"})
         db.execute("INSERT INTO runtime_state VALUES(1,?,?)",(runtime_payload,digest(runtime_payload+dumps([]))))
         db.commit()
@@ -479,7 +482,7 @@ def save(path, name, output=None, _automated=False):
         world, _, metadata, state_hash = _head(db)
         if db.execute("SELECT COUNT(*) FROM checkpoints").fetchone()[0] >= 16:
             raise ValueError("checkpoint limit reached (16 including initial)")
-        db.execute("INSERT INTO checkpoints VALUES(?,?,?,?,6,?)",
+        db.execute("INSERT INTO checkpoints VALUES(?,?,?,?,7,?)",
                    (name,int(world.snapshot()["tick"]),world.checkpoint(),state_hash,dumps(metadata["runtime_policy_state"])))
         db.commit()
         if output is not None:

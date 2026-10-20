@@ -31,4 +31,5 @@ food_kg = 16.0
 water_kg = 64.0
 food_regen_kg_s = 0.0
 water_regen_kg_s = 0.0
+tree_growth_kg_s = 0.0
 

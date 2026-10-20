@@ -52,7 +52,7 @@ def validate(config):
     _number(logging["max_payload_bytes"], 256, 65536, "max_payload_bytes", True)
     if "agency" in config:
         agency=config["agency"]
-        keys={"bodies_enabled","policy","interval_ticks","food_kg","water_kg","food_regen_kg_s","water_regen_kg_s"}
+        keys={"bodies_enabled","policy","interval_ticks","food_kg","water_kg","food_regen_kg_s","water_regen_kg_s","tree_growth_kg_s"}
         if type(agency) is not dict or set(agency)!=keys:raise ValueError("unknown or missing agency fields")
         if type(agency["bodies_enabled"]) is not bool or agency["policy"] not in ("none","utility"):
             raise ValueError("invalid body/policy configuration")
@@ -61,6 +61,7 @@ def validate(config):
         for kind in ("food","water"):
             _number(agency[kind+"_kg"],0,1000,kind+"_kg")
             _number(agency[kind+"_regen_kg_s"],0,.01,kind+"_regen_kg_s")
+        _number(agency["tree_growth_kg_s"],0,.01,"tree_growth_kg_s")
     if "thermal" in config:
         thermal=config["thermal"]
         if type(thermal) is not dict or set(thermal)!={"enabled","open_boundaries","water_kg","fuel_kg","oxygen_kg","temperature_k"}:
