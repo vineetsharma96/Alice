@@ -1,0 +1,999 @@
+{
+  "phase": 3,
+  "type": "real CPU local-model run",
+  "model": "HuggingFaceTB/SmolLM2-360M-Instruct-GGUF Q8_0",
+  "config": {
+    "schema_version": 1,
+    "seed": 20261019,
+    "mode": "closed",
+    "world": {
+      "width_m": 16.0,
+      "height_m": 16.0,
+      "dt_s": 0.2,
+      "population": 8,
+      "population_limit": 8
+    },
+    "cognition": {
+      "provider": "llama.cpp",
+      "interval_ticks": 250,
+      "max_concurrency": 1,
+      "max_input_tokens": 1024,
+      "max_output_tokens": 192,
+      "timeout_s": 30.0,
+      "calls_per_simulated_day": 3
+    },
+    "logging": {
+      "level": "INFO",
+      "event_retention_count": 10000,
+      "max_payload_bytes": 16384
+    },
+    "agency": {
+      "bodies_enabled": true,
+      "policy": "utility",
+      "interval_ticks": 25,
+      "food_kg": 16.0,
+      "water_kg": 64.0,
+      "food_regen_kg_s": 0.0,
+      "water_regen_kg_s": 0.0
+    }
+  },
+  "build_id": "6c6e214a1cc4318a378e9683a53f6e8906a6c6f0b8fc660d4ae4c439fe58e097",
+  "orchestration_id": "054e86a26c3e9a73656994178efc1e58078058f4756e22f5719b3cf50d3e660c",
+  "setup": "Authored .4 kg food gathering; all later cognition requests came from the real model or explicitly logged fallback.",
+  "initial_observation": {
+    "schema_version": 1,
+    "run_id": "c2807165-788e-4c1a-bb0f-835404f7d268",
+    "agent_id": "agent-1",
+    "tick": "0",
+    "observation_version": "0",
+    "own_state": {
+      "entity_id": "agent-1",
+      "kind": "actor",
+      "position_m": [
+        2.0,
+        3.0
+      ],
+      "radius_m": 0.25,
+      "mass_kg": 0.0,
+      "mass_ug": "0",
+      "inventory_ug": {},
+      "alive": true,
+      "body": {
+        "hunger": 0.35,
+        "thirst": 0.4,
+        "fatigue": 0.2,
+        "health": 1.0,
+        "alive": true,
+        "food_ingested_ug": "0",
+        "water_ingested_ug": "0"
+      },
+      "busy": false
+    },
+    "visible_entities": [
+      {
+        "entity_id": "agent-3",
+        "kind": "actor",
+        "position_m": [
+          3.8325197389021963,
+          4.929319820673983
+        ],
+        "radius_m": 0.25,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "alive": true
+      },
+      {
+        "entity_id": "agent-4",
+        "kind": "actor",
+        "position_m": [
+          4.09109635169763,
+          9.54824992837891
+        ],
+        "radius_m": 0.25,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "alive": true
+      },
+      {
+        "entity_id": "agent-7",
+        "kind": "actor",
+        "position_m": [
+          5.489052755291186,
+          7.020151733267763
+        ],
+        "radius_m": 0.25,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "alive": true
+      },
+      {
+        "entity_id": "resource-1",
+        "kind": "food",
+        "position_m": [
+          2.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 16.0,
+        "mass_ug": "16000000000"
+      },
+      {
+        "entity_id": "resource-2",
+        "kind": "water",
+        "position_m": [
+          3.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 64.0,
+        "mass_ug": "64000000000"
+      },
+      {
+        "entity_id": "resource-3",
+        "kind": "inert_material",
+        "position_m": [
+          4.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 32.0,
+        "mass_ug": "32000000000"
+      },
+      {
+        "entity_id": "terrain-1",
+        "kind": "rock",
+        "position_m": [
+          8.0,
+          8.0
+        ],
+        "radius_m": 1.0,
+        "mass_kg": 0.0,
+        "mass_ug": "0"
+      }
+    ],
+    "audible_reports": [],
+    "world_bounds_m": {
+      "width": 16.0,
+      "height": 16.0
+    },
+    "sight_range_m": 8,
+    "hearing_range_m": 6,
+    "dt_s": 0.2,
+    "recent_action_results": [],
+    "omissions": {
+      "older_results": 0
+    }
+  },
+  "final_observation": {
+    "schema_version": 1,
+    "run_id": "c2807165-788e-4c1a-bb0f-835404f7d268",
+    "agent_id": "agent-1",
+    "tick": "80",
+    "observation_version": "80",
+    "own_state": {
+      "entity_id": "agent-1",
+      "kind": "actor",
+      "position_m": [
+        2.0,
+        3.0
+      ],
+      "radius_m": 0.25,
+      "mass_kg": 0.0,
+      "mass_ug": "0",
+      "inventory_ug": {
+        "food": "0"
+      },
+      "alive": true,
+      "body": {
+        "hunger": 0.003200000000000001,
+        "thirst": 0.4240000000000018,
+        "fatigue": 0.2127999999999995,
+        "health": 1.0,
+        "alive": true,
+        "food_ingested_ug": "400000000",
+        "water_ingested_ug": "0"
+      },
+      "busy": false
+    },
+    "visible_entities": [
+      {
+        "entity_id": "agent-3",
+        "kind": "actor",
+        "position_m": [
+          3.8325197389021963,
+          4.929319820673983
+        ],
+        "radius_m": 0.25,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "alive": true
+      },
+      {
+        "entity_id": "agent-4",
+        "kind": "actor",
+        "position_m": [
+          4.09109635169763,
+          9.54824992837891
+        ],
+        "radius_m": 0.25,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "alive": true
+      },
+      {
+        "entity_id": "agent-7",
+        "kind": "actor",
+        "position_m": [
+          5.489052755291186,
+          7.020151733267763
+        ],
+        "radius_m": 0.25,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "alive": true
+      },
+      {
+        "entity_id": "resource-1",
+        "kind": "food",
+        "position_m": [
+          2.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 15.6,
+        "mass_ug": "15600000000"
+      },
+      {
+        "entity_id": "resource-2",
+        "kind": "water",
+        "position_m": [
+          3.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 64.0,
+        "mass_ug": "64000000000"
+      },
+      {
+        "entity_id": "resource-3",
+        "kind": "inert_material",
+        "position_m": [
+          4.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 32.0,
+        "mass_ug": "32000000000"
+      },
+      {
+        "entity_id": "terrain-1",
+        "kind": "rock",
+        "position_m": [
+          8.0,
+          8.0
+        ],
+        "radius_m": 1.0,
+        "mass_kg": 0.0,
+        "mass_ug": "0"
+      }
+    ],
+    "audible_reports": [],
+    "world_bounds_m": {
+      "width": 16.0,
+      "height": 16.0
+    },
+    "sight_range_m": 8,
+    "hearing_range_m": 6,
+    "dt_s": 0.2,
+    "recent_action_results": [
+      {
+        "schema_version": 1,
+        "request_id": "authored-food-setup",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "0",
+        "completed_tick": "5",
+        "observation_version": "5",
+        "event_refs": [
+          "1",
+          "6",
+          "7"
+        ],
+        "observable_effects": {
+          "description": "gather:400000000ug"
+        }
+      },
+      {
+        "schema_version": 1,
+        "request_id": "cognition-1",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "5",
+        "completed_tick": "15",
+        "observation_version": "15",
+        "event_refs": [
+          "9",
+          "19",
+          "20"
+        ],
+        "observable_effects": {
+          "description": "ingested_ug=200000000"
+        }
+      },
+      {
+        "schema_version": 1,
+        "request_id": "cognition-2",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "30",
+        "completed_tick": "35",
+        "observation_version": "35",
+        "event_refs": [
+          "37",
+          "42",
+          "43"
+        ],
+        "observable_effects": {
+          "description": "spoken_locally"
+        }
+      },
+      {
+        "schema_version": 1,
+        "request_id": "cognition-3",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "55",
+        "completed_tick": "65",
+        "observation_version": "65",
+        "event_refs": [
+          "65",
+          "75",
+          "76"
+        ],
+        "observable_effects": {
+          "description": "ingested_ug=200000000"
+        }
+      }
+    ],
+    "omissions": {
+      "older_results": 0
+    }
+  },
+  "thoughts": [
+    {
+      "call_id": 1,
+      "agent": "agent-1",
+      "tick": 5,
+      "status": "planned",
+      "plan": {
+        "evidence": [],
+        "intent": "eat",
+        "interpretation": "I will eat this food.",
+        "target": "",
+        "text": ""
+      },
+      "error": null,
+      "latency_s": 9.785402399999839
+    },
+    {
+      "call_id": 2,
+      "agent": "agent-1",
+      "tick": 30,
+      "status": "planned",
+      "plan": {
+        "evidence": [],
+        "intent": "speak",
+        "interpretation": "tentative short belief",
+        "target": "",
+        "text": "speech or empty"
+      },
+      "error": null,
+      "latency_s": 18.195428500000162
+    },
+    {
+      "call_id": 3,
+      "agent": "agent-1",
+      "tick": 55,
+      "status": "planned",
+      "plan": {
+        "evidence": [],
+        "intent": "eat",
+        "interpretation": "food",
+        "target": "",
+        "text": ""
+      },
+      "error": null,
+      "latency_s": 27.70282210000005
+    }
+  ],
+  "calls": [
+    {
+      "budget": {
+        "calls_per_simulated_day": 3,
+        "interval_ticks": 250,
+        "max_concurrency": 1,
+        "max_input_tokens": 1024,
+        "max_output_tokens": 192,
+        "provider": "llama.cpp",
+        "timeout_s": 30.0
+      },
+      "details": {
+        "context_size": 2048,
+        "endpoint": "http://127.0.0.1:8081",
+        "input_tokens": 505,
+        "llama_cpp": "b11721",
+        "model": "SmolLM2-360M-Instruct-Q8_0",
+        "output_tokens": 31,
+        "schema": "perception-bounded-oneOf-v1",
+        "seed": 20261019,
+        "server_build": "b11721-ff5a23376",
+        "temperature": 0,
+        "timings": {
+          "cache_n": 0,
+          "predicted_ms": 1793.457,
+          "predicted_n": 31,
+          "predicted_per_second": 16.72747102383832,
+          "predicted_per_token_ms": 59.7819,
+          "prompt_ms": 7359.515,
+          "prompt_n": 505,
+          "prompt_per_second": 68.61865218020482,
+          "prompt_per_token_ms": 14.573297029702971
+        },
+        "worker_memory": {
+          "peak_working_set_bytes": 25939968,
+          "private_commit_bytes": 16187392,
+          "working_set_bytes": 25935872
+        }
+      },
+      "error": null,
+      "latency_s": 9.785402399999839,
+      "plan": {
+        "evidence": [],
+        "intent": "eat",
+        "interpretation": "I will eat this food.",
+        "target": "",
+        "text": ""
+      },
+      "provider": "LlamaCpp",
+      "raw": "{\"evidence\":[],\"intent\": \"eat\",\"interpretation\": \"I will eat this food.\",\"target\": \"\",\"text\": \"\"}",
+      "status": "planned"
+    },
+    {
+      "budget": {
+        "calls_per_simulated_day": 3,
+        "interval_ticks": 250,
+        "max_concurrency": 1,
+        "max_input_tokens": 1024,
+        "max_output_tokens": 192,
+        "provider": "llama.cpp",
+        "timeout_s": 30.0
+      },
+      "details": {
+        "context_size": 2048,
+        "endpoint": "http://127.0.0.1:8081",
+        "input_tokens": 802,
+        "llama_cpp": "b11721",
+        "model": "SmolLM2-360M-Instruct-Q8_0",
+        "output_tokens": 46,
+        "schema": "perception-bounded-oneOf-v1",
+        "seed": 20261019,
+        "server_build": "b11721-ff5a23376",
+        "temperature": 0,
+        "timings": {
+          "cache_n": 0,
+          "predicted_ms": 5610.866,
+          "predicted_n": 46,
+          "predicted_per_second": 8.020152325861996,
+          "predicted_per_token_ms": 124.68591111111111,
+          "prompt_ms": 11697.976,
+          "prompt_n": 802,
+          "prompt_per_second": 68.55886864531094,
+          "prompt_per_token_ms": 14.586004987531172
+        },
+        "worker_memory": {
+          "peak_working_set_bytes": 25903104,
+          "private_commit_bytes": 16191488,
+          "working_set_bytes": 25899008
+        }
+      },
+      "error": null,
+      "latency_s": 18.195428500000162,
+      "plan": {
+        "evidence": [],
+        "intent": "speak",
+        "interpretation": "tentative short belief",
+        "target": "",
+        "text": "speech or empty"
+      },
+      "provider": "LlamaCpp",
+      "raw": "{\n  \"evidence\":[],\n  \"intent\": \"speak\",\n  \"interpretation\": \"tentative short belief\",\n  \"target\": \"\",\n  \"text\": \"speech or empty\"\n}",
+      "status": "planned"
+    },
+    {
+      "budget": {
+        "calls_per_simulated_day": 3,
+        "interval_ticks": 250,
+        "max_concurrency": 1,
+        "max_input_tokens": 1024,
+        "max_output_tokens": 192,
+        "provider": "llama.cpp",
+        "timeout_s": 30.0
+      },
+      "details": {
+        "context_size": 2048,
+        "endpoint": "http://127.0.0.1:8081",
+        "input_tokens": 872,
+        "llama_cpp": "b11721",
+        "model": "SmolLM2-360M-Instruct-Q8_0",
+        "output_tokens": 31,
+        "schema": "perception-bounded-oneOf-v1",
+        "seed": 20261019,
+        "server_build": "b11721-ff5a23376",
+        "temperature": 0,
+        "timings": {
+          "cache_n": 0,
+          "predicted_ms": 3539.068,
+          "predicted_n": 31,
+          "predicted_per_second": 8.476808018382242,
+          "predicted_per_token_ms": 117.96893333333334,
+          "prompt_ms": 22839.166,
+          "prompt_n": 872,
+          "prompt_per_second": 38.18002811486198,
+          "prompt_per_token_ms": 26.191704128440367
+        },
+        "worker_memory": {
+          "peak_working_set_bytes": 25927680,
+          "private_commit_bytes": 16318464,
+          "working_set_bytes": 7081984
+        }
+      },
+      "error": null,
+      "latency_s": 27.70282210000005,
+      "plan": {
+        "evidence": [],
+        "intent": "eat",
+        "interpretation": "food",
+        "target": "",
+        "text": ""
+      },
+      "provider": "LlamaCpp",
+      "raw": "{\"evidence\":[],\"intent\": \"eat\",\"interpretation\": \"food\",\"target\": \"\",\"text\": \"\"}",
+      "status": "planned"
+    }
+  ],
+  "decisions": [
+    {
+      "request": {
+        "action_type": "gather",
+        "agent_id": "agent-1",
+        "observation_version": "0",
+        "parameters": {
+          "mass_kg": 0.4
+        },
+        "request_id": "authored-food-setup",
+        "requested_duration": 1,
+        "run_id": "c2807165-788e-4c1a-bb0f-835404f7d268",
+        "schema_version": 1,
+        "target_ids": [
+          "resource-1"
+        ]
+      },
+      "result": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "1"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "0",
+        "reason": "",
+        "request_id": "authored-food-setup",
+        "run_id": "c2807165-788e-4c1a-bb0f-835404f7d268",
+        "schema_version": 1,
+        "started_tick": "0",
+        "status": "accepted"
+      },
+      "source": "external"
+    },
+    {
+      "request": {
+        "action_type": "eat",
+        "agent_id": "agent-1",
+        "observation_version": "5",
+        "parameters": {
+          "mass_kg": 0.2
+        },
+        "request_id": "cognition-1",
+        "requested_duration": 2,
+        "run_id": "c2807165-788e-4c1a-bb0f-835404f7d268",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "result": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "9"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "5",
+        "reason": "",
+        "request_id": "cognition-1",
+        "run_id": "c2807165-788e-4c1a-bb0f-835404f7d268",
+        "schema_version": 1,
+        "started_tick": "5",
+        "status": "accepted"
+      },
+      "source": "cognition"
+    },
+    {
+      "request": {
+        "action_type": "speak",
+        "agent_id": "agent-1",
+        "observation_version": "30",
+        "parameters": {
+          "text": "speech or empty"
+        },
+        "request_id": "cognition-2",
+        "requested_duration": 1,
+        "run_id": "c2807165-788e-4c1a-bb0f-835404f7d268",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "result": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "37"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "30",
+        "reason": "",
+        "request_id": "cognition-2",
+        "run_id": "c2807165-788e-4c1a-bb0f-835404f7d268",
+        "schema_version": 1,
+        "started_tick": "30",
+        "status": "accepted"
+      },
+      "source": "cognition"
+    },
+    {
+      "request": {
+        "action_type": "eat",
+        "agent_id": "agent-1",
+        "observation_version": "55",
+        "parameters": {
+          "mass_kg": 0.2
+        },
+        "request_id": "cognition-3",
+        "requested_duration": 2,
+        "run_id": "c2807165-788e-4c1a-bb0f-835404f7d268",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "result": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "65"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "55",
+        "reason": "",
+        "request_id": "cognition-3",
+        "run_id": "c2807165-788e-4c1a-bb0f-835404f7d268",
+        "schema_version": 1,
+        "started_tick": "55",
+        "status": "accepted"
+      },
+      "source": "cognition"
+    }
+  ],
+  "events": [
+    {
+      "agent_id": "agent-1",
+      "detail": "gather",
+      "request_id": "authored-food-setup",
+      "schema_version": 1,
+      "seq": "1",
+      "tick": "0",
+      "type": "action_accepted"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "gather:400000000ug",
+      "request_id": "authored-food-setup",
+      "schema_version": 1,
+      "seq": "6",
+      "tick": "5",
+      "type": "mass_transfer"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "",
+      "request_id": "authored-food-setup",
+      "schema_version": 1,
+      "seq": "7",
+      "tick": "5",
+      "type": "action_completed"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "eat",
+      "request_id": "cognition-1",
+      "schema_version": 1,
+      "seq": "9",
+      "tick": "5",
+      "type": "action_accepted"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "eat:200000000ug",
+      "request_id": "cognition-1",
+      "schema_version": 1,
+      "seq": "19",
+      "tick": "15",
+      "type": "consumption"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "",
+      "request_id": "cognition-1",
+      "schema_version": 1,
+      "seq": "20",
+      "tick": "15",
+      "type": "action_completed"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "speak",
+      "request_id": "cognition-2",
+      "schema_version": 1,
+      "seq": "37",
+      "tick": "30",
+      "type": "action_accepted"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "speech or empty",
+      "request_id": "cognition-2",
+      "schema_version": 1,
+      "seq": "42",
+      "tick": "35",
+      "type": "speech"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "",
+      "request_id": "cognition-2",
+      "schema_version": 1,
+      "seq": "43",
+      "tick": "35",
+      "type": "action_completed"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "eat",
+      "request_id": "cognition-3",
+      "schema_version": 1,
+      "seq": "65",
+      "tick": "55",
+      "type": "action_accepted"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "eat:200000000ug",
+      "request_id": "cognition-3",
+      "schema_version": 1,
+      "seq": "75",
+      "tick": "65",
+      "type": "consumption"
+    },
+    {
+      "agent_id": "agent-1",
+      "detail": "",
+      "request_id": "cognition-3",
+      "schema_version": 1,
+      "seq": "76",
+      "tick": "65",
+      "type": "action_completed"
+    }
+  ],
+  "later_lexical_retrieval": [
+    {
+      "id": 12,
+      "tick": 65,
+      "kind": "action_result",
+      "record": {
+        "agent_id": "agent-1",
+        "completed_tick": "65",
+        "error_code": "",
+        "event_refs": [
+          "65",
+          "75",
+          "76"
+        ],
+        "observable_effects": {
+          "description": "ingested_ug=200000000"
+        },
+        "observation_version": "65",
+        "reason": "",
+        "request_id": "cognition-3",
+        "schema_version": 1,
+        "started_tick": "55",
+        "status": "completed"
+      }
+    },
+    {
+      "id": 10,
+      "tick": 55,
+      "kind": "perception",
+      "record": {
+        "own": {
+          "body": {
+            "alive": true,
+            "fatigue": 0.20879999999999965,
+            "food_ingested_ug": "200000000",
+            "health": 1.0,
+            "hunger": 0.008199999999999995,
+            "thirst": 0.41650000000000126,
+            "water_ingested_ug": "0"
+          },
+          "inventory_ug": {
+            "food": "200000000"
+          }
+        },
+        "tick": "55",
+        "visible": [
+          {
+            "id": "agent-3",
+            "kind": "actor"
+          },
+          {
+            "id": "agent-4",
+            "kind": "actor"
+          },
+          {
+            "id": "agent-7",
+            "kind": "actor"
+          },
+          {
+            "id": "resource-1",
+            "kind": "food"
+          },
+          {
+            "id": "resource-2",
+            "kind": "water"
+          },
+          {
+            "id": "resource-3",
+            "kind": "inert_material"
+          },
+          {
+            "id": "terrain-1",
+            "kind": "rock"
+          }
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "tick": 30,
+      "kind": "perception",
+      "record": {
+        "own": {
+          "body": {
+            "alive": true,
+            "fatigue": 0.20479999999999982,
+            "food_ingested_ug": "200000000",
+            "health": 1.0,
+            "hunger": 0.003200000000000001,
+            "thirst": 0.4090000000000007,
+            "water_ingested_ug": "0"
+          },
+          "inventory_ug": {
+            "food": "200000000"
+          }
+        },
+        "tick": "30",
+        "visible": [
+          {
+            "id": "agent-3",
+            "kind": "actor"
+          },
+          {
+            "id": "agent-4",
+            "kind": "actor"
+          },
+          {
+            "id": "agent-7",
+            "kind": "actor"
+          },
+          {
+            "id": "resource-1",
+            "kind": "food"
+          },
+          {
+            "id": "resource-2",
+            "kind": "water"
+          },
+          {
+            "id": "resource-3",
+            "kind": "inert_material"
+          },
+          {
+            "id": "terrain-1",
+            "kind": "rock"
+          }
+        ]
+      }
+    }
+  ],
+  "server_memory": {
+    "working_set_bytes": 457621504,
+    "peak_working_set_bytes": 566956032,
+    "private_commit_bytes": 264601600
+  },
+  "parent_memory": {
+    "working_set_bytes": 11915264,
+    "peak_working_set_bytes": 33075200,
+    "private_commit_bytes": 17006592
+  },
+  "dedicated_vram_bytes": 0,
+  "gpu_layers": 0,
+  "context_size_tokens": 2048,
+  "wall_time_s": 56.65074619999996,
+  "simulated_time_s": 16.0,
+  "day_bucket_call_counts": [
+    [
+      0,
+      3
+    ]
+  ],
+  "daily_shared_quota": 3,
+  "next_call": {
+    "status": "quota",
+    "tick": 80
+  },
+  "daily_measurement_limit": "Partial simulated day, not a 24-hour throughput benchmark; no extrapolated daily rate.",
+  "restart_identity_memory_equal": true,
+  "replay": {
+    "replay_matches": true,
+    "tick": "80",
+    "state_hash": "16ce84f4e93b6dce7b379128f32059e3124e87261a74447969a6f23ada038b82"
+  },
+  "initial_material_totals_ug": {
+    "food": "16000000000",
+    "inert_material": "32000000000",
+    "water": "64000000000"
+  },
+  "final_material_totals_ug": {
+    "food": "16000000000",
+    "inert_material": "32000000000",
+    "water": "64000000000"
+  },
+  "database_bytes": 139264,
+  "prompts": "private cognition_calls rows in ignored data DB; excluded from this public artifact",
+  "separate_process_identity_memory_equal": true,
+  "load_note": "Model calls overlapped general regression verification on this small host; latencies are observed under host load, not isolated model throughput."
+}

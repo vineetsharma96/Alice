@@ -1,0 +1,1425 @@
+{
+  "phase": 5,
+  "build_id": "33d5cd62c82f0d52516c05f2604ebfe36f84efd43bcd71521e71b929c5ae426b",
+  "orchestration_id": "6a2acaa428b22cf6c48155072d6bb71984fbbcdb7c989f5199d5bba47be99c43",
+  "provider": "disabled; authored physical actions, no LLM discovery claim",
+  "cases": [
+    {
+      "name": "closed_burn",
+      "simulated_seconds": 201,
+      "dt_s": 0.2,
+      "trace": "artifacts\\phase5_closed_burn.csv",
+      "max_global_energy_error_j": 1.862645149230957e-08,
+      "max_thermal_energy_error_j": 1.862645149230957e-08,
+      "max_mass_error_ug": 0,
+      "peak_cell1_vapor_ug": 0,
+      "final": {
+        "schema_version": 1,
+        "kind": "world_snapshot",
+        "run_id": "test",
+        "branch_id": "test",
+        "tick": "1005",
+        "observation_version": "1005",
+        "last_event_seq": "1008",
+        "seed": "20261019",
+        "dt_s": 0.2,
+        "simulated_time_s": 201.0,
+        "laws_version": "heat-5",
+        "thermal": {
+          "enabled": true,
+          "open_boundaries": false,
+          "cells": [
+            {
+              "entity_id": "thermal-1",
+              "temperature_k": 294.6785498445269,
+              "enthalpy_j": 43474.32418054595,
+              "heater": "burn",
+              "water_ug": "20000000",
+              "ice_ug": "0",
+              "liquid_ug": "20000000",
+              "vapor_ug": "0",
+              "fuel_X_ug": "15000000",
+              "oxygen_ug": "0",
+              "product_P_ug": "15000000"
+            },
+            {
+              "entity_id": "thermal-2",
+              "temperature_k": 294.120161735018,
+              "enthalpy_j": 43382.90487925715,
+              "heater": "off",
+              "water_ug": "20000000",
+              "ice_ug": "0",
+              "liquid_ug": "20000000",
+              "vapor_ug": "0",
+              "fuel_X_ug": "20000000",
+              "oxygen_ug": "10000000",
+              "product_P_ug": "0"
+            },
+            {
+              "entity_id": "thermal-3",
+              "temperature_k": 294.120161735018,
+              "enthalpy_j": 43382.90487925715,
+              "heater": "off",
+              "water_ug": "20000000",
+              "ice_ug": "0",
+              "liquid_ug": "20000000",
+              "vapor_ug": "0",
+              "fuel_X_ug": "20000000",
+              "oxygen_ug": "10000000",
+              "product_P_ug": "0"
+            },
+            {
+              "entity_id": "thermal-4",
+              "temperature_k": 293.82199288494843,
+              "enthalpy_j": 43334.088675123756,
+              "heater": "off",
+              "water_ug": "20000000",
+              "ice_ug": "0",
+              "liquid_ug": "20000000",
+              "vapor_ug": "0",
+              "fuel_X_ug": "20000000",
+              "oxygen_ug": "10000000",
+              "product_P_ug": "0"
+            }
+          ],
+          "ambient_temperature_k": 293.58220573858233,
+          "stored_energy_j": 3184396.280000007,
+          "initial_energy_j": 3184396.2799999993,
+          "heater_input_j": 0.0,
+          "radiation_in_j": 0.0,
+          "radiation_out_j": 0.0,
+          "outflow_energy_j": 0.0,
+          "solar_transferred_j": 0.0,
+          "burned_fuel_ug": "5000000",
+          "outflow_water_ug": "0",
+          "balance_error_j": 7.450580596923828e-09,
+          "global_balance_error_j": 7.450580596923828e-09,
+          "energy_tolerance_j": 0.00031843962799999994
+        },
+        "build_id": "33d5cd62c82f0d52516c05f2604ebfe36f84efd43bcd71521e71b929c5ae426b",
+        "world_bounds_m": {
+          "width": 16.0,
+          "height": 16.0
+        },
+        "entities": [
+          {
+            "entity_id": "terrain-1",
+            "kind": "rock",
+            "position_m": [
+              8.0,
+              8.0
+            ],
+            "radius_m": 1.0,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "agent-1",
+            "kind": "actor",
+            "position_m": [
+              2.0,
+              3.0
+            ],
+            "radius_m": 0.25,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {},
+            "alive": true,
+            "body": {
+              "hunger": 0.5509999999999778,
+              "thirst": 0.7014999999999854,
+              "fatigue": 0.36079999999999346,
+              "health": 1.0,
+              "alive": true,
+              "food_ingested_ug": "0",
+              "water_ingested_ug": "0"
+            }
+          },
+          {
+            "entity_id": "resource-1",
+            "kind": "food",
+            "position_m": [
+              2.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 16.0,
+            "mass_ug": "16000000000",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "resource-2",
+            "kind": "water",
+            "position_m": [
+              3.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 63.92,
+            "mass_ug": "63920000000",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "resource-3",
+            "kind": "inert_material",
+            "position_m": [
+              4.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 11.6,
+            "mass_ug": "11600000000",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "thermal-1",
+            "kind": "thermal_cell",
+            "position_m": [
+              2.0,
+              4.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 0.1,
+            "mass_ug": "100000000",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "thermal-2",
+            "kind": "thermal_cell",
+            "position_m": [
+              4.0,
+              4.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 0.1,
+            "mass_ug": "100000000",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "thermal-3",
+            "kind": "thermal_cell",
+            "position_m": [
+              2.0,
+              6.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 0.1,
+            "mass_ug": "100000000",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "thermal-4",
+            "kind": "thermal_cell",
+            "position_m": [
+              4.0,
+              6.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 0.1,
+            "mass_ug": "100000000",
+            "inventory_ug": {}
+          }
+        ],
+        "outstanding_actions": [],
+        "material_totals_ug": {
+          "food": "16000000000",
+          "fuel_X": "75000000",
+          "inert_material": "32000000000",
+          "oxygen": "30000000",
+          "product_P": "15000000",
+          "water": "64000000000"
+        },
+        "solar_input_j": 0.0,
+        "environment_energy_j": 0.0,
+        "operator_energy_input_j": 0.0,
+        "operator_sources_ug": {
+          "food": 0,
+          "fuel_X": 0,
+          "inert_material": 0,
+          "oxygen": 0,
+          "product_P": 0,
+          "water": 0
+        },
+        "mode": "closed",
+        "hearing_range_m": 6.0,
+        "sunlight_w_m2": 1.4616611973556002,
+        "scripted": false,
+        "next_script_tick": "0",
+        "bodies_enabled": true,
+        "initial_mass_ug": {
+          "food": 16000000000,
+          "fuel_X": 80000000,
+          "inert_material": 32000000000,
+          "oxygen": 40000000,
+          "product_P": 0,
+          "water": 64000000000
+        },
+        "boundary_sources_ug": {
+          "food": 0,
+          "fuel_X": 0,
+          "inert_material": 0,
+          "oxygen": 0,
+          "product_P": 0,
+          "water": 0
+        }
+      }
+    },
+    {
+      "name": "open_heat",
+      "simulated_seconds": 201,
+      "dt_s": 0.2,
+      "trace": "artifacts\\phase5_open_heat.csv",
+      "max_global_energy_error_j": 1.257285475730896e-08,
+      "max_thermal_energy_error_j": 1.257285475730896e-08,
+      "max_mass_error_ug": 0,
+      "peak_cell1_vapor_ug": 14110000,
+      "final": {
+        "schema_version": 1,
+        "kind": "world_snapshot",
+        "run_id": "test",
+        "branch_id": "test",
+        "tick": "1005",
+        "observation_version": "1005",
+        "last_event_seq": "1008",
+        "seed": "20261019",
+        "dt_s": 0.2,
+        "simulated_time_s": 201.0,
+        "laws_version": "heat-5",
+        "thermal": {
+          "enabled": true,
+          "open_boundaries": true,
+          "cells": [
+            {
+              "entity_id": "thermal-1",
+              "temperature_k": 628.0568237586107,
+              "enthalpy_j": 76333.33026611371,
+              "heater": "electric",
+              "water_ug": "1770000",
+              "ice_ug": "0",
+              "liquid_ug": "0",
+              "vapor_ug": "1770000",
+              "fuel_X_ug": "20000000",
+              "oxygen_ug": "40000000",
+              "product_P_ug": "0"
+            },
+            {
+              "entity_id": "thermal-2",
+              "temperature_k": 339.513900787828,
+              "enthalpy_j": 61000.18486061804,
+              "heater": "off",
+              "water_ug": "20000000",
+              "ice_ug": "0",
+              "liquid_ug": "20000000",
+              "vapor_ug": "0",
+              "fuel_X_ug": "20000000",
+              "oxygen_ug": "40000000",
+              "product_P_ug": "0"
+            },
+            {
+              "entity_id": "thermal-3",
+              "temperature_k": 339.513900787828,
+              "enthalpy_j": 61000.18486061804,
+              "heater": "off",
+              "water_ug": "20000000",
+              "ice_ug": "0",
+              "liquid_ug": "20000000",
+              "vapor_ug": "0",
+              "fuel_X_ug": "20000000",
+              "oxygen_ug": "40000000",
+              "product_P_ug": "0"
+            },
+            {
+              "entity_id": "thermal-4",
+              "temperature_k": 305.7972978672054,
+              "enthalpy_j": 54468.604542835026,
+              "heater": "off",
+              "water_ug": "20000000",
+              "ice_ug": "0",
+              "liquid_ug": "20000000",
+              "vapor_ug": "0",
+              "fuel_X_ug": "20000000",
+              "oxygen_ug": "40000000",
+              "product_P_ug": "0"
+            }
+          ],
+          "ambient_temperature_k": 301.59812528972077,
+          "stored_energy_j": 3348783.5574273923,
+          "initial_energy_j": 3219574.2799999993,
+          "heater_input_j": 200000.0,
+          "radiation_in_j": 0.0,
+          "radiation_out_j": 1321.6638755919362,
+          "outflow_energy_j": 69615.81209677718,
+          "solar_transferred_j": 146.7533997748785,
+          "burned_fuel_ug": "0",
+          "outflow_water_ug": "18230000",
+          "balance_error_j": -1.257285475730896e-08,
+          "global_balance_error_j": -1.257285475730896e-08,
+          "energy_tolerance_j": 0.0003386205674369999
+        },
+        "build_id": "33d5cd62c82f0d52516c05f2604ebfe36f84efd43bcd71521e71b929c5ae426b",
+        "world_bounds_m": {
+          "width": 16.0,
+          "height": 16.0
+        },
+        "entities": [
+          {
+            "entity_id": "terrain-1",
+            "kind": "rock",
+            "position_m": [
+              8.0,
+              8.0
+            ],
+            "radius_m": 1.0,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "agent-1",
+            "kind": "actor",
+            "position_m": [
+              2.0,
+              3.0
+            ],
+            "radius_m": 0.25,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {},
+            "alive": true,
+            "body": {
+              "hunger": 0.5509999999999778,
+              "thirst": 0.7014999999999854,
+              "fatigue": 0.36079999999999346,
+              "health": 1.0,
+              "alive": true,
+              "food_ingested_ug": "0",
+              "water_ingested_ug": "0"
+            }
+          },
+          {
+            "entity_id": "resource-1",
+            "kind": "food",
+            "position_m": [
+              2.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 16.0,
+            "mass_ug": "16000000000",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "resource-2",
+            "kind": "water",
+            "position_m": [
+              3.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 63.92,
+            "mass_ug": "63920000000",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "resource-3",
+            "kind": "inert_material",
+            "position_m": [
+              4.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 11.6,
+            "mass_ug": "11600000000",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "thermal-1",
+            "kind": "thermal_cell",
+            "position_m": [
+              2.0,
+              4.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 0.1,
+            "mass_ug": "100000000",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "thermal-2",
+            "kind": "thermal_cell",
+            "position_m": [
+              4.0,
+              4.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 0.1,
+            "mass_ug": "100000000",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "thermal-3",
+            "kind": "thermal_cell",
+            "position_m": [
+              2.0,
+              6.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 0.1,
+            "mass_ug": "100000000",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "thermal-4",
+            "kind": "thermal_cell",
+            "position_m": [
+              4.0,
+              6.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 0.1,
+            "mass_ug": "100000000",
+            "inventory_ug": {}
+          }
+        ],
+        "outstanding_actions": [],
+        "material_totals_ug": {
+          "food": "16000000000",
+          "fuel_X": "80000000",
+          "inert_material": "32000000000",
+          "oxygen": "160000000",
+          "product_P": "0",
+          "water": "63981770000"
+        },
+        "solar_input_j": 37568.87034236891,
+        "environment_energy_j": 37422.11694259405,
+        "operator_energy_input_j": 0.0,
+        "operator_sources_ug": {
+          "food": 0,
+          "fuel_X": 0,
+          "inert_material": 0,
+          "oxygen": 0,
+          "product_P": 0,
+          "water": 0
+        },
+        "mode": "closed",
+        "hearing_range_m": 6.0,
+        "sunlight_w_m2": 1.4616611973556002,
+        "scripted": false,
+        "next_script_tick": "0",
+        "bodies_enabled": true,
+        "initial_mass_ug": {
+          "food": 16000000000,
+          "fuel_X": 80000000,
+          "inert_material": 32000000000,
+          "oxygen": 160000000,
+          "product_P": 0,
+          "water": 64000000000
+        },
+        "boundary_sources_ug": {
+          "food": 0,
+          "fuel_X": 0,
+          "inert_material": 0,
+          "oxygen": 0,
+          "product_P": 0,
+          "water": 0
+        }
+      }
+    },
+    {
+      "name": "oxygen_absent",
+      "simulated_seconds": 31,
+      "dt_s": 0.2,
+      "trace": "artifacts\\phase5_oxygen_absent.csv",
+      "max_global_energy_error_j": 0,
+      "max_thermal_energy_error_j": 0,
+      "max_mass_error_ug": 0,
+      "peak_cell1_vapor_ug": 0,
+      "final": {
+        "schema_version": 1,
+        "kind": "world_snapshot",
+        "run_id": "test",
+        "branch_id": "test",
+        "tick": "155",
+        "observation_version": "155",
+        "last_event_seq": "158",
+        "seed": "20261019",
+        "dt_s": 0.2,
+        "simulated_time_s": 31.0,
+        "laws_version": "heat-5",
+        "thermal": {
+          "enabled": true,
+          "open_boundaries": false,
+          "cells": [
+            {
+              "entity_id": "thermal-1",
+              "temperature_k": 293.15,
+              "enthalpy_j": 40292.57,
+              "heater": "burn",
+              "water_ug": "20000000",
+              "ice_ug": "0",
+              "liquid_ug": "20000000",
+              "vapor_ug": "0",
+              "fuel_X_ug": "20000000",
+              "oxygen_ug": "0",
+              "product_P_ug": "0"
+            },
+            {
+              "entity_id": "thermal-2",
+              "temperature_k": 293.15,
+              "enthalpy_j": 40292.57,
+              "heater": "off",
+              "water_ug": "20000000",
+              "ice_ug": "0",
+              "liquid_ug": "20000000",
+              "vapor_ug": "0",
+              "fuel_X_ug": "20000000",
+              "oxygen_ug": "0",
+              "product_P_ug": "0"
+            },
+            {
+              "entity_id": "thermal-3",
+              "temperature_k": 293.15,
+              "enthalpy_j": 40292.57,
+              "heater": "off",
+              "water_ug": "20000000",
+              "ice_ug": "0",
+              "liquid_ug": "20000000",
+              "vapor_ug": "0",
+              "fuel_X_ug": "20000000",
+              "oxygen_ug": "0",
+              "product_P_ug": "0"
+            },
+            {
+              "entity_id": "thermal-4",
+              "temperature_k": 293.15,
+              "enthalpy_j": 40292.57,
+              "heater": "off",
+              "water_ug": "20000000",
+              "ice_ug": "0",
+              "liquid_ug": "20000000",
+              "vapor_ug": "0",
+              "fuel_X_ug": "20000000",
+              "oxygen_ug": "0",
+              "product_P_ug": "0"
+            }
+          ],
+          "ambient_temperature_k": 293.15,
+          "stored_energy_j": 3172670.2799999993,
+          "initial_energy_j": 3172670.2799999993,
+          "heater_input_j": 0.0,
+          "radiation_in_j": 0.0,
+          "radiation_out_j": 0.0,
+          "outflow_energy_j": 0.0,
+          "solar_transferred_j": 0.0,
+          "burned_fuel_ug": "0",
+          "outflow_water_ug": "0",
+          "balance_error_j": 0.0,
+          "global_balance_error_j": 0.0,
+          "energy_tolerance_j": 0.0003172670279999999
+        },
+        "build_id": "33d5cd62c82f0d52516c05f2604ebfe36f84efd43bcd71521e71b929c5ae426b",
+        "world_bounds_m": {
+          "width": 16.0,
+          "height": 16.0
+        },
+        "entities": [
+          {
+            "entity_id": "terrain-1",
+            "kind": "rock",
+            "position_m": [
+              8.0,
+              8.0
+            ],
+            "radius_m": 1.0,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "agent-1",
+            "kind": "actor",
+            "position_m": [
+              2.0,
+              3.0
+            ],
+            "radius_m": 0.25,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {},
+            "alive": true,
+            "body": {
+              "hunger": 0.38099999999999656,
+              "thirst": 0.4465000000000035,
+              "fatigue": 0.224799999999999,
+              "health": 1.0,
+              "alive": true,
+              "food_ingested_ug": "0",
+              "water_ingested_ug": "0"
+            }
+          },
+          {
+            "entity_id": "resource-1",
+            "kind": "food",
+            "position_m": [
+              2.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 16.0,
+            "mass_ug": "16000000000",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "resource-2",
+            "kind": "water",
+            "position_m": [
+              3.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 63.92,
+            "mass_ug": "63920000000",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "resource-3",
+            "kind": "inert_material",
+            "position_m": [
+              4.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 11.6,
+            "mass_ug": "11600000000",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "thermal-1",
+            "kind": "thermal_cell",
+            "position_m": [
+              2.0,
+              4.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 0.1,
+            "mass_ug": "100000000",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "thermal-2",
+            "kind": "thermal_cell",
+            "position_m": [
+              4.0,
+              4.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 0.1,
+            "mass_ug": "100000000",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "thermal-3",
+            "kind": "thermal_cell",
+            "position_m": [
+              2.0,
+              6.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 0.1,
+            "mass_ug": "100000000",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "thermal-4",
+            "kind": "thermal_cell",
+            "position_m": [
+              4.0,
+              6.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 0.1,
+            "mass_ug": "100000000",
+            "inventory_ug": {}
+          }
+        ],
+        "outstanding_actions": [],
+        "material_totals_ug": {
+          "food": "16000000000",
+          "fuel_X": "80000000",
+          "inert_material": "32000000000",
+          "oxygen": "0",
+          "product_P": "0",
+          "water": "64000000000"
+        },
+        "solar_input_j": 0.0,
+        "environment_energy_j": 0.0,
+        "operator_energy_input_j": 0.0,
+        "operator_sources_ug": {
+          "food": 0,
+          "fuel_X": 0,
+          "inert_material": 0,
+          "oxygen": 0,
+          "product_P": 0,
+          "water": 0
+        },
+        "mode": "closed",
+        "hearing_range_m": 6.0,
+        "sunlight_w_m2": 0.22543817076046643,
+        "scripted": false,
+        "next_script_tick": "0",
+        "bodies_enabled": true,
+        "initial_mass_ug": {
+          "food": 16000000000,
+          "fuel_X": 80000000,
+          "inert_material": 32000000000,
+          "oxygen": 0,
+          "product_P": 0,
+          "water": 64000000000
+        },
+        "boundary_sources_ug": {
+          "food": 0,
+          "fuel_X": 0,
+          "inert_material": 0,
+          "oxygen": 0,
+          "product_P": 0,
+          "water": 0
+        }
+      }
+    },
+    {
+      "name": "ice_heat",
+      "simulated_seconds": 101,
+      "dt_s": 0.2,
+      "trace": "artifacts\\phase5_ice_heat.csv",
+      "max_global_energy_error_j": 2.7939677238464355e-09,
+      "max_thermal_energy_error_j": 2.7939677238464355e-09,
+      "max_mass_error_ug": 0,
+      "peak_cell1_vapor_ug": 19979153,
+      "final": {
+        "schema_version": 1,
+        "kind": "world_snapshot",
+        "run_id": "test",
+        "branch_id": "test",
+        "tick": "505",
+        "observation_version": "505",
+        "last_event_seq": "508",
+        "seed": "20261019",
+        "dt_s": 0.2,
+        "simulated_time_s": 101.0,
+        "laws_version": "heat-5",
+        "thermal": {
+          "enabled": true,
+          "open_boundaries": false,
+          "cells": [
+            {
+              "entity_id": "thermal-1",
+              "temperature_k": 373.15,
+              "enthalpy_j": 112589.13865634434,
+              "heater": "electric",
+              "water_ug": "20000000",
+              "ice_ug": "0",
+              "liquid_ug": "20847",
+              "vapor_ug": "19979153",
+              "fuel_X_ug": "20000000",
+              "oxygen_ug": "40000000",
+              "product_P_ug": "0"
+            },
+            {
+              "entity_id": "thermal-2",
+              "temperature_k": 273.15,
+              "enthalpy_j": 42021.58147853959,
+              "heater": "off",
+              "water_ug": "20000000",
+              "ice_ug": "18331103",
+              "liquid_ug": "1668897",
+              "vapor_ug": "0",
+              "fuel_X_ug": "20000000",
+              "oxygen_ug": "40000000",
+              "product_P_ug": "0"
+            },
+            {
+              "entity_id": "thermal-3",
+              "temperature_k": 273.15,
+              "enthalpy_j": 42021.58147853959,
+              "heater": "off",
+              "water_ug": "20000000",
+              "ice_ug": "18331103",
+              "liquid_ug": "1668897",
+              "vapor_ug": "0",
+              "fuel_X_ug": "20000000",
+              "oxygen_ug": "40000000",
+              "product_P_ug": "0"
+            },
+            {
+              "entity_id": "thermal-4",
+              "temperature_k": 263.6321355995884,
+              "enthalpy_j": 40019.358184017525,
+              "heater": "off",
+              "water_ug": "20000000",
+              "ice_ug": "20000000",
+              "liquid_ug": "0",
+              "vapor_ug": "0",
+              "fuel_X_ug": "20000000",
+              "oxygen_ug": "40000000",
+              "product_P_ug": "0"
+            }
+          ],
+          "ambient_temperature_k": 262.12203402025574,
+          "stored_energy_j": 2937871.999999998,
+          "initial_energy_j": 2837872.0,
+          "heater_input_j": 100000.0,
+          "radiation_in_j": 0.0,
+          "radiation_out_j": 0.0,
+          "outflow_energy_j": 0.0,
+          "solar_transferred_j": 0.0,
+          "burned_fuel_ug": "0",
+          "outflow_water_ug": "0",
+          "balance_error_j": -1.862645149230957e-09,
+          "global_balance_error_j": -1.862645149230957e-09,
+          "energy_tolerance_j": 0.0002937872
+        },
+        "build_id": "33d5cd62c82f0d52516c05f2604ebfe36f84efd43bcd71521e71b929c5ae426b",
+        "world_bounds_m": {
+          "width": 16.0,
+          "height": 16.0
+        },
+        "entities": [
+          {
+            "entity_id": "terrain-1",
+            "kind": "rock",
+            "position_m": [
+              8.0,
+              8.0
+            ],
+            "radius_m": 1.0,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "agent-1",
+            "kind": "actor",
+            "position_m": [
+              2.0,
+              3.0
+            ],
+            "radius_m": 0.25,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {},
+            "alive": true,
+            "body": {
+              "hunger": 0.45099999999998885,
+              "thirst": 0.5515000000000019,
+              "fatigue": 0.2807999999999967,
+              "health": 1.0,
+              "alive": true,
+              "food_ingested_ug": "0",
+              "water_ingested_ug": "0"
+            }
+          },
+          {
+            "entity_id": "resource-1",
+            "kind": "food",
+            "position_m": [
+              2.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 16.0,
+            "mass_ug": "16000000000",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "resource-2",
+            "kind": "water",
+            "position_m": [
+              3.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 63.92,
+            "mass_ug": "63920000000",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "resource-3",
+            "kind": "inert_material",
+            "position_m": [
+              4.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 11.6,
+            "mass_ug": "11600000000",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "thermal-1",
+            "kind": "thermal_cell",
+            "position_m": [
+              2.0,
+              4.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 0.1,
+            "mass_ug": "100000000",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "thermal-2",
+            "kind": "thermal_cell",
+            "position_m": [
+              4.0,
+              4.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 0.1,
+            "mass_ug": "100000000",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "thermal-3",
+            "kind": "thermal_cell",
+            "position_m": [
+              2.0,
+              6.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 0.1,
+            "mass_ug": "100000000",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "thermal-4",
+            "kind": "thermal_cell",
+            "position_m": [
+              4.0,
+              6.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 0.1,
+            "mass_ug": "100000000",
+            "inventory_ug": {}
+          }
+        ],
+        "outstanding_actions": [],
+        "material_totals_ug": {
+          "food": "16000000000",
+          "fuel_X": "80000000",
+          "inert_material": "32000000000",
+          "oxygen": "160000000",
+          "product_P": "0",
+          "water": "64000000000"
+        },
+        "solar_input_j": 0.0,
+        "environment_energy_j": 0.0,
+        "operator_energy_input_j": 0.0,
+        "operator_sources_ug": {
+          "food": 0,
+          "fuel_X": 0,
+          "inert_material": 0,
+          "oxygen": 0,
+          "product_P": 0,
+          "water": 0
+        },
+        "mode": "closed",
+        "hearing_range_m": 6.0,
+        "sunlight_w_m2": 0.7344861228351371,
+        "scripted": false,
+        "next_script_tick": "0",
+        "bodies_enabled": true,
+        "initial_mass_ug": {
+          "food": 16000000000,
+          "fuel_X": 80000000,
+          "inert_material": 32000000000,
+          "oxygen": 160000000,
+          "product_P": 0,
+          "water": 64000000000
+        },
+        "boundary_sources_ug": {
+          "food": 0,
+          "fuel_X": 0,
+          "inert_material": 0,
+          "oxygen": 0,
+          "product_P": 0,
+          "water": 0
+        }
+      }
+    }
+  ],
+  "durable": {
+    "database": "data\\phase5-lab\\lab.sqlite",
+    "backup_restart_equal": true,
+    "replay": {
+      "replay_matches": true,
+      "tick": "1035",
+      "state_hash": "e592f0e2751b8c5b978e031ea9f4eb0ff6050fd495a552c2b950ab460394cd41"
+    },
+    "receipts": [
+      {
+        "schema_version": 1,
+        "request_id": "demo-inspect-1005",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "1005",
+        "completed_tick": "1010",
+        "observation_version": "1010",
+        "event_refs": [
+          "1009",
+          "1014",
+          "1015"
+        ],
+        "observable_effects": {
+          "description": "thermal-1:thermal_cell:temperature~620K:ice~0g:liquid~0g:vapor~20g:heater=electric"
+        }
+      },
+      {
+        "schema_version": 1,
+        "request_id": "demo-operate_heat-1010",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "1010",
+        "completed_tick": "1015",
+        "observation_version": "1015",
+        "event_refs": [
+          "1017",
+          "1022",
+          "1023"
+        ],
+        "observable_effects": {
+          "description": "thermal-1:heater=off"
+        }
+      },
+      {
+        "schema_version": 1,
+        "request_id": "demo-move-1015",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "1015",
+        "completed_tick": "1023",
+        "observation_version": "1023",
+        "event_refs": [
+          "1025",
+          "1033"
+        ],
+        "observable_effects": {
+          "description": ""
+        }
+      },
+      {
+        "schema_version": 1,
+        "request_id": "demo-move_material-1025",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "1025",
+        "completed_tick": "1030",
+        "observation_version": "1030",
+        "event_refs": [
+          "1037",
+          "1042",
+          "1043"
+        ],
+        "observable_effects": {
+          "description": "thermal-1->thermal-2:water:5000000ug"
+        }
+      },
+      {
+        "schema_version": 1,
+        "request_id": "demo-inspect-1030",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "1030",
+        "completed_tick": "1035",
+        "observation_version": "1035",
+        "event_refs": [
+          "1045",
+          "1050",
+          "1051"
+        ],
+        "observable_effects": {
+          "description": "thermal-2:thermal_cell:temperature~375K:ice~0g:liquid~20g:vapor~5g:heater=off"
+        }
+      }
+    ],
+    "final": {
+      "schema_version": 1,
+      "kind": "world_snapshot",
+      "run_id": "589c1b61-daf9-4fc7-888b-f31f8ead81eb",
+      "branch_id": "589c1b61-daf9-4fc7-888b-f31f8ead81eb",
+      "tick": "1035",
+      "observation_version": "1035",
+      "last_event_seq": "1052",
+      "seed": "20261019",
+      "dt_s": 0.2,
+      "simulated_time_s": 207.0,
+      "laws_version": "heat-5/dcaee6ddd82c",
+      "thermal": {
+        "enabled": true,
+        "open_boundaries": false,
+        "cells": [
+          {
+            "entity_id": "thermal-1",
+            "temperature_k": 595.561622580409,
+            "enthalpy_j": 125943.1031480314,
+            "heater": "off",
+            "water_ug": "15000000",
+            "ice_ug": "0",
+            "liquid_ug": "0",
+            "vapor_ug": "15000000",
+            "fuel_X_ug": "20000000",
+            "oxygen_ug": "40000000",
+            "product_P_ug": "0"
+          },
+          {
+            "entity_id": "thermal-2",
+            "temperature_k": 373.15,
+            "enthalpy_j": 81065.71542219968,
+            "heater": "off",
+            "water_ug": "25000000",
+            "ice_ug": "0",
+            "liquid_ug": "21927248",
+            "vapor_ug": "3072752",
+            "fuel_X_ug": "20000000",
+            "oxygen_ug": "40000000",
+            "product_P_ug": "0"
+          },
+          {
+            "entity_id": "thermal-3",
+            "temperature_k": 339.3247012144293,
+            "enthalpy_j": 60963.53311925924,
+            "heater": "off",
+            "water_ug": "20000000",
+            "ice_ug": "0",
+            "liquid_ug": "20000000",
+            "vapor_ug": "0",
+            "fuel_X_ug": "20000000",
+            "oxygen_ug": "40000000",
+            "product_P_ug": "0"
+          },
+          {
+            "entity_id": "thermal-4",
+            "temperature_k": 306.26048550439697,
+            "enthalpy_j": 54558.33325191178,
+            "heater": "off",
+            "water_ug": "20000000",
+            "ice_ug": "0",
+            "liquid_ug": "20000000",
+            "vapor_ug": "0",
+            "fuel_X_ug": "20000000",
+            "oxygen_ug": "40000000",
+            "product_P_ug": "0"
+          }
+        ],
+        "ambient_temperature_k": 301.90435950585936,
+        "stored_energy_j": 3421574.2799999956,
+        "initial_energy_j": 3219574.2799999993,
+        "heater_input_j": 202000.0,
+        "radiation_in_j": 0.0,
+        "radiation_out_j": 0.0,
+        "outflow_energy_j": 0.0,
+        "solar_transferred_j": 0.0,
+        "burned_fuel_ug": "0",
+        "outflow_water_ug": "0",
+        "balance_error_j": -3.725290298461914e-09,
+        "global_balance_error_j": -3.725290298461914e-09,
+        "energy_tolerance_j": 0.00034215742799999997
+      },
+      "build_id": "33d5cd62c82f0d52516c05f2604ebfe36f84efd43bcd71521e71b929c5ae426b",
+      "world_bounds_m": {
+        "width": 16.0,
+        "height": 16.0
+      },
+      "entities": [
+        {
+          "entity_id": "terrain-1",
+          "kind": "rock",
+          "position_m": [
+            8.0,
+            8.0
+          ],
+          "radius_m": 1.0,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "agent-1",
+          "kind": "actor",
+          "position_m": [
+            3.0,
+            4.0
+          ],
+          "radius_m": 0.25,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "inventory_ug": {},
+          "alive": true,
+          "body": {
+            "hunger": 0.5569999999999772,
+            "thirst": 0.7104999999999844,
+            "fatigue": 0.36623999999999346,
+            "health": 1.0,
+            "alive": true,
+            "food_ingested_ug": "0",
+            "water_ingested_ug": "0"
+          }
+        },
+        {
+          "entity_id": "resource-1",
+          "kind": "food",
+          "position_m": [
+            2.0,
+            2.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 16.0,
+          "mass_ug": "16000000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "resource-2",
+          "kind": "water",
+          "position_m": [
+            3.0,
+            2.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 63.92,
+          "mass_ug": "63920000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "resource-3",
+          "kind": "inert_material",
+          "position_m": [
+            4.0,
+            2.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 11.6,
+          "mass_ug": "11600000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "thermal-1",
+          "kind": "thermal_cell",
+          "position_m": [
+            2.0,
+            4.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 0.1,
+          "mass_ug": "100000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "thermal-2",
+          "kind": "thermal_cell",
+          "position_m": [
+            4.0,
+            4.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 0.1,
+          "mass_ug": "100000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "thermal-3",
+          "kind": "thermal_cell",
+          "position_m": [
+            2.0,
+            6.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 0.1,
+          "mass_ug": "100000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "thermal-4",
+          "kind": "thermal_cell",
+          "position_m": [
+            4.0,
+            6.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 0.1,
+          "mass_ug": "100000000",
+          "inventory_ug": {}
+        }
+      ],
+      "outstanding_actions": [],
+      "material_totals_ug": {
+        "food": "16000000000",
+        "fuel_X": "80000000",
+        "inert_material": "32000000000",
+        "oxygen": "160000000",
+        "product_P": "0",
+        "water": "64000000000"
+      },
+      "solar_input_j": 0.0,
+      "environment_energy_j": 0.0,
+      "operator_energy_input_j": 0.0,
+      "operator_sources_ug": {
+        "food": 0,
+        "fuel_X": 0,
+        "inert_material": 0,
+        "oxygen": 0,
+        "product_P": 0,
+        "water": 0
+      },
+      "mode": "closed",
+      "hearing_range_m": 6.0,
+      "sunlight_w_m2": 1.5052896268638833,
+      "scripted": false,
+      "next_script_tick": "0",
+      "bodies_enabled": true,
+      "initial_mass_ug": {
+        "food": 16000000000,
+        "fuel_X": 80000000,
+        "inert_material": 32000000000,
+        "oxygen": 160000000,
+        "product_P": 0,
+        "water": 64000000000
+      },
+      "boundary_sources_ug": {
+        "food": 0,
+        "fuel_X": 0,
+        "inert_material": 0,
+        "oxygen": 0,
+        "product_P": 0,
+        "water": 0
+      },
+      "config_hash": "48d3774ed3157980231d0b7bc9842cb60e8c646ad6edf5976206fd23f2b0a49c",
+      "state_hash": "e592f0e2751b8c5b978e031ea9f4eb0ff6050fd495a552c2b950ab460394cd41",
+      "parent_branch_id": null,
+      "interventions": 0,
+      "retained_events": 1052,
+      "recorded_decisions": 6,
+      "cognitive_hash": "98acce3e03f4fe148b6199b1df71041d90ae81b0ebda4cadb9775ba4cb52b04c",
+      "cognition_calls": 0,
+      "episodes": 6
+    },
+    "database_bytes": 241664
+  },
+  "wall_time_s": 15.657016999997722,
+  "process_memory": {
+    "working_set_bytes": 31817728,
+    "peak_working_set_bytes": 32133120,
+    "private_commit_bytes": 16859136
+  },
+  "scope": "Four caloric/enthalpy vessels and one environmental substrate node; fixed 1-atm water thresholds; artificial chemistry; no pressure, flow, PV work or realistic combustion kinetics."
+}

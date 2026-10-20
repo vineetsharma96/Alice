@@ -1,0 +1,15 @@
+{
+  "sha256": {
+    "underworld/stabilization.py": "413ee91cead6a771b19962ac024fc7ec2fa5512d1e64bf24abd9ad4635bfb764",
+    "scripts/stabilization_common.py": "1a972229152fa7893623284b9b1248935f8c2f98dacfe4c97f9835afaa569d01",
+    "scripts/stabilization_baseline.py": "6b47b5d27d2b6d88369c55930b9b31c0131571d660f0a550eaa363e234ef06e2",
+    "scripts/stabilization_evaluate.py": "5fc9af78b20648b3e1f2f840855b0e266188703c0aff77ea7684afdf3bef1ad1",
+    "scripts/stabilization_continuity.py": "1e9a750000e7514456e734215fac37d627a77fbe92831259d62555f483a0b153",
+    "scripts/stabilization_report.py": "3af96891de76cad8a977d8f79dd813ecd5f4b60881de8e8087453273b2be2c13",
+    "scripts/verify_stabilization.py": "a1b48fda679f8181cff09615fcd16ddd85cf1001a76a364289c13fcc57e70de4",
+    "tests/test_stabilization.py": "d0fe4841eb5438fe256cdc97c709b38d8e8009e56454007c5840c1d0122bdd0b",
+    "docs/STABILIZATION_PROTOCOL.md": "a6fb5d3d2d44199609e0e9f326e728fa7066c622f0c3ea893625b7287ef652b0",
+    "docs/STABILIZATION_AMENDMENT_1.md": "e41147185e16d66b19e400e0d8cab0a8a3d4156ae0364746209694ebc16b650e",
+    "docs/STABILIZATION_AMENDMENT_2.md": "4e676a649ea2506a1b70e823aa638c812f0d152cc2a5bf9181e87fff19370160"
+  }
+}

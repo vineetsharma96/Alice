@@ -1,0 +1,16 @@
+seed,condition,teacher_willing,student_willing,success,choice_source,episode_sources,first_execution_heater_j,first_execution_simulated_s,work_durations_s,database_bytes
+11,teaching,True,False,False,authored blind one-of-16 fallback,0,5400.0,10.600000000000009,4.0,483328
+11,no_teaching,True,False,False,authored blind one-of-16 fallback,0,5400.0,10.600000000000009,4.0,475136
+11,memory_disabled,True,False,False,authored blind one-of-16 fallback,0,5400.0,10.600000000000009,4.0,454656
+22,teaching,False,False,True,authored blind one-of-16 fallback,0,2600.0,7.799999999999997,4.0;3.2;2.8000000000000003;2.4000000000000004,618496
+22,no_teaching,False,False,True,authored blind one-of-16 fallback,0,2600.0,7.799999999999997,4.0;3.2;2.8000000000000003;2.4000000000000004,618496
+22,memory_disabled,False,False,True,authored blind one-of-16 fallback,0,2600.0,7.799999999999997,4.0;3.2;2.8000000000000003;2.4000000000000004,598016
+33,teaching,True,True,True,own accessed original report,1,1200.0,6.399999999999999,4.0;3.2;2.8000000000000003;2.4000000000000004,348160
+33,no_teaching,True,True,False,authored blind one-of-16 fallback,0,1200.0,6.399999999999999,4.0,311296
+33,memory_disabled,True,True,False,authored blind one-of-16 fallback,0,1200.0,6.399999999999999,4.0,315392
+44,teaching,True,False,False,authored blind one-of-16 fallback,0,9400.0,14.600000000000001,4.0,376832
+44,no_teaching,True,False,False,authored blind one-of-16 fallback,0,9400.0,14.600000000000001,4.0,376832
+44,memory_disabled,True,False,False,authored blind one-of-16 fallback,0,9400.0,14.600000000000001,4.0,348160
+55,teaching,True,True,True,own accessed original report,1,1200.0,6.399999999999999,4.0;3.2;2.8000000000000003;2.4000000000000004,352256
+55,no_teaching,True,True,False,authored blind one-of-16 fallback,0,0.0,4.199999999999996,4.0,311296
+55,memory_disabled,True,True,False,authored blind one-of-16 fallback,0,0.0,4.199999999999996,4.0,307200

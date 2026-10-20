@@ -1,0 +1,31 @@
+{
+  "version": "0.180.0",
+  "tag": "r180",
+  "license": "MIT",
+  "files": {
+    "three.module.min.js": {
+      "source": "https://raw.githubusercontent.com/mrdoob/three.js/r180/build/three.module.min.js",
+      "source_sha256": "e2b5ee6bccd38fd6d8a2428546b83c5f2426d84b152ef82be8055556e3b40eb6",
+      "sha256": "e2b5ee6bccd38fd6d8a2428546b83c5f2426d84b152ef82be8055556e3b40eb6",
+      "bytes": 338908
+    },
+    "three.core.min.js": {
+      "source": "https://raw.githubusercontent.com/mrdoob/three.js/r180/build/three.core.min.js",
+      "source_sha256": "61ba0df005b05991361d040d8ff670e1aadfd0ce7aeebd1fdb0725957a8957de",
+      "sha256": "61ba0df005b05991361d040d8ff670e1aadfd0ce7aeebd1fdb0725957a8957de",
+      "bytes": 381124
+    },
+    "OrbitControls.js": {
+      "source": "https://raw.githubusercontent.com/mrdoob/three.js/r180/examples/jsm/controls/OrbitControls.js",
+      "source_sha256": "b97879c748170baadeb3fb84cea1ffdf4674e283dc06042f34e2acb95a76042c",
+      "sha256": "6c860c6b342200f8aef65493319c12bfb2d652107355b1d25eb2154371128391",
+      "bytes": 38719
+    },
+    "LICENSE.three": {
+      "source": "https://raw.githubusercontent.com/mrdoob/three.js/r180/LICENSE",
+      "source_sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+      "bytes": 1081
+    }
+  }
+}

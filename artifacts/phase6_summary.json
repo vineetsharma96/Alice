@@ -1,0 +1,297 @@
+{
+  "phase": 6,
+  "build_id": "e4d689e278e0b91d6be3b90c02f106a85992a86166d49058b02ea43f8da35f4e",
+  "orchestration_id": "f10504bfe389e2549f847594618117344b6abf3991aed476813cf373c45391db",
+  "evidence_script_sha256": "f76168fa5ee60145cd2d0716a51b027eae88955e638d7e574d84b2ca3137f5e0",
+  "seeds": [
+    11,
+    22,
+    33,
+    44,
+    55
+  ],
+  "conditions": {
+    "teaching": {
+      "completed": 3,
+      "trials": 5,
+      "source_backed_completed": 2,
+      "blind_completed": 1,
+      "first_execution_heater_j": [
+        5400.0,
+        2600.0,
+        1200.0,
+        9400.0,
+        1200.0
+      ],
+      "first_execution_simulated_s": [
+        10.600000000000009,
+        7.799999999999997,
+        6.399999999999999,
+        14.600000000000001,
+        6.399999999999999
+      ]
+    },
+    "no_teaching": {
+      "completed": 1,
+      "trials": 5,
+      "source_backed_completed": 0,
+      "blind_completed": 1,
+      "first_execution_heater_j": [
+        5400.0,
+        2600.0,
+        1200.0,
+        9400.0,
+        0.0
+      ],
+      "first_execution_simulated_s": [
+        10.600000000000009,
+        7.799999999999997,
+        6.399999999999999,
+        14.600000000000001,
+        4.199999999999996
+      ]
+    },
+    "memory_disabled": {
+      "completed": 1,
+      "trials": 5,
+      "source_backed_completed": 0,
+      "blind_completed": 1,
+      "first_execution_heater_j": [
+        5400.0,
+        2600.0,
+        1200.0,
+        9400.0,
+        0.0
+      ],
+      "first_execution_simulated_s": [
+        10.600000000000009,
+        7.799999999999997,
+        6.399999999999999,
+        14.600000000000001,
+        4.199999999999996
+      ]
+    }
+  },
+  "max_final_mass_error_ug": 0,
+  "max_final_energy_error_j": 1.862645149230957e-09,
+  "teacher_attempts": 35,
+  "trials": [
+    {
+      "seed": 11,
+      "teacher_search_attempts": 9,
+      "willingness": {
+        "agent-1": true,
+        "agent-2": false
+      },
+      "outcomes": {
+        "teaching": {
+          "success": false,
+          "choice_source": "authored blind one-of-16 fallback",
+          "work_durations_s": [
+            4.0
+          ],
+          "final_simulated_s": 87.80000000000001,
+          "validation_event": null,
+          "database": "data\\phase6-final\\seed-11\\teaching-restarted.sqlite"
+        },
+        "no_teaching": {
+          "success": false,
+          "choice_source": "authored blind one-of-16 fallback",
+          "work_durations_s": [
+            4.0
+          ],
+          "final_simulated_s": 87.80000000000001,
+          "validation_event": null,
+          "database": "data\\phase6-final\\seed-11\\no_teaching-restarted.sqlite"
+        },
+        "memory_disabled": {
+          "success": false,
+          "choice_source": "authored blind one-of-16 fallback",
+          "work_durations_s": [
+            4.0
+          ],
+          "final_simulated_s": 87.80000000000001,
+          "validation_event": null,
+          "database": "data\\phase6-final\\seed-11\\memory_disabled-restarted.sqlite"
+        }
+      }
+    },
+    {
+      "seed": 22,
+      "teacher_search_attempts": 14,
+      "willingness": {
+        "agent-1": false,
+        "agent-2": false
+      },
+      "outcomes": {
+        "teaching": {
+          "success": true,
+          "choice_source": "authored blind one-of-16 fallback",
+          "work_durations_s": [
+            4.0,
+            3.2,
+            2.8000000000000003,
+            2.4000000000000004
+          ],
+          "final_simulated_s": 136.0,
+          "validation_event": "948",
+          "database": "data\\phase6-final\\seed-22\\teaching-restarted.sqlite"
+        },
+        "no_teaching": {
+          "success": true,
+          "choice_source": "authored blind one-of-16 fallback",
+          "work_durations_s": [
+            4.0,
+            3.2,
+            2.8000000000000003,
+            2.4000000000000004
+          ],
+          "final_simulated_s": 136.0,
+          "validation_event": "948",
+          "database": "data\\phase6-final\\seed-22\\no_teaching-restarted.sqlite"
+        },
+        "memory_disabled": {
+          "success": true,
+          "choice_source": "authored blind one-of-16 fallback",
+          "work_durations_s": [
+            4.0,
+            3.2,
+            2.8000000000000003,
+            2.4000000000000004
+          ],
+          "final_simulated_s": 136.0,
+          "validation_event": "948",
+          "database": "data\\phase6-final\\seed-22\\memory_disabled-restarted.sqlite"
+        }
+      }
+    },
+    {
+      "seed": 33,
+      "teacher_search_attempts": 5,
+      "willingness": {
+        "agent-1": true,
+        "agent-2": true
+      },
+      "outcomes": {
+        "teaching": {
+          "success": true,
+          "choice_source": "own accessed original report",
+          "work_durations_s": [
+            4.0,
+            3.2,
+            2.8000000000000003,
+            2.4000000000000004
+          ],
+          "final_simulated_s": 63.800000000000004,
+          "validation_event": "411",
+          "database": "data\\phase6-final\\seed-33\\teaching-restarted.sqlite"
+        },
+        "no_teaching": {
+          "success": false,
+          "choice_source": "authored blind one-of-16 fallback",
+          "work_durations_s": [
+            4.0
+          ],
+          "final_simulated_s": 52.800000000000004,
+          "validation_event": null,
+          "database": "data\\phase6-final\\seed-33\\no_teaching-restarted.sqlite"
+        },
+        "memory_disabled": {
+          "success": false,
+          "choice_source": "authored blind one-of-16 fallback",
+          "work_durations_s": [
+            4.0
+          ],
+          "final_simulated_s": 52.800000000000004,
+          "validation_event": null,
+          "database": "data\\phase6-final\\seed-33\\memory_disabled-restarted.sqlite"
+        }
+      }
+    },
+    {
+      "seed": 44,
+      "teacher_search_attempts": 2,
+      "willingness": {
+        "agent-1": true,
+        "agent-2": false
+      },
+      "outcomes": {
+        "teaching": {
+          "success": false,
+          "choice_source": "authored blind one-of-16 fallback",
+          "work_durations_s": [
+            4.0
+          ],
+          "final_simulated_s": 50.0,
+          "validation_event": null,
+          "database": "data\\phase6-final\\seed-44\\teaching-restarted.sqlite"
+        },
+        "no_teaching": {
+          "success": false,
+          "choice_source": "authored blind one-of-16 fallback",
+          "work_durations_s": [
+            4.0
+          ],
+          "final_simulated_s": 50.0,
+          "validation_event": null,
+          "database": "data\\phase6-final\\seed-44\\no_teaching-restarted.sqlite"
+        },
+        "memory_disabled": {
+          "success": false,
+          "choice_source": "authored blind one-of-16 fallback",
+          "work_durations_s": [
+            4.0
+          ],
+          "final_simulated_s": 50.0,
+          "validation_event": null,
+          "database": "data\\phase6-final\\seed-44\\memory_disabled-restarted.sqlite"
+        }
+      }
+    },
+    {
+      "seed": 55,
+      "teacher_search_attempts": 5,
+      "willingness": {
+        "agent-1": true,
+        "agent-2": true
+      },
+      "outcomes": {
+        "teaching": {
+          "success": true,
+          "choice_source": "own accessed original report",
+          "work_durations_s": [
+            4.0,
+            3.2,
+            2.8000000000000003,
+            2.4000000000000004
+          ],
+          "final_simulated_s": 65.8,
+          "validation_event": "425",
+          "database": "data\\phase6-final\\seed-55\\teaching-restarted.sqlite"
+        },
+        "no_teaching": {
+          "success": false,
+          "choice_source": "authored blind one-of-16 fallback",
+          "work_durations_s": [
+            4.0
+          ],
+          "final_simulated_s": 52.6,
+          "validation_event": null,
+          "database": "data\\phase6-final\\seed-55\\no_teaching-restarted.sqlite"
+        },
+        "memory_disabled": {
+          "success": false,
+          "choice_source": "authored blind one-of-16 fallback",
+          "work_durations_s": [
+            4.0
+          ],
+          "final_simulated_s": 52.6,
+          "validation_event": null,
+          "database": "data\\phase6-final\\seed-55\\memory_disabled-restarted.sqlite"
+        }
+      }
+    }
+  ],
+  "wall_time_s": 120.61323020000418,
+  "peak_working_set_bytes": 72183808
+}

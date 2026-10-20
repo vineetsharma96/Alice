@@ -1,0 +1,42 @@
+{
+  "phase": 6,
+  "desktop": {
+    "time": "Tick 319 \u00c2\u00b7 1.06 simulated min",
+    "paused": "Paused",
+    "population": "1 / 2 present and alive",
+    "error": null,
+    "selected": "agent-2",
+    "cultureVisible": true,
+    "practice": "Water conditioning \u00c2\u00b7 level 3 / 3 \u00c2\u00b7 minimum work 2.29 s \u00c2\u00b7 last validated event #495",
+    "procedure": "Own procedure recall: reported \u00c2\u00b7 source artifact-348 \u00c2\u00b7 validation origin #296 \u00e2\u2020\u2019 artifact #348 \u00e2\u2020\u2019 read #364",
+    "relationships": [
+      "agent-1 \u00c2\u00b7 read_artifact: 1 \u00c2\u00b7 resource_given: 1 \u00c2\u00b7 task_accepted: 1 \u00c2\u00b7 task_completed: 1 \u00c2\u00b7 task_offered: 1 \u00c2\u00b7 evidence #304, #312, #320, #364, #412"
+    ],
+    "agreements": [
+      "agent-1 \u00e2\u2020\u2019 agent-2 \u00c2\u00b7 Condition water using the local apparatus \u00c2\u00b7 completed \u00c2\u00b7 offer #304"
+    ],
+    "batches": 5,
+    "scrollWidth": 1425,
+    "viewport": 1440
+  },
+  "mobile": {
+    "time": "Tick 319 \u00c2\u00b7 1.06 simulated min",
+    "paused": "Paused",
+    "error": null,
+    "selected": "agent-2",
+    "practice": "Water conditioning \u00c2\u00b7 level 3 / 3 \u00c2\u00b7 minimum work 2.29 s \u00c2\u00b7 last validated event #495",
+    "procedure": "Own procedure recall: reported \u00c2\u00b7 source artifact-348 \u00c2\u00b7 validation origin #296 \u00e2\u2020\u2019 artifact #348 \u00e2\u2020\u2019 read #364",
+    "cultureVisible": true,
+    "scrollWidth": 375,
+    "viewport": 390
+  },
+  "archived_teacher": {
+    "activity": "Departed \u00c2\u00b7 archival record \u00c2\u00b7 (3.00, 3.00) m",
+    "population": "1 / 2 present and alive",
+    "paused": "Paused"
+  },
+  "console_errors": 0,
+  "observer_head_unchanged": true,
+  "state_hash": "0cab866673d9820dddaf6c888e30e2a198572472f57dbf81999db17a6de03ca3",
+  "tick": "319"
+}

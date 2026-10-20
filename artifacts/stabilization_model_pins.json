@@ -1,0 +1,11 @@
+{
+  "model": "models\\smollm2-360m-instruct-q8_0.gguf",
+  "bytes": 386404992,
+  "sha256": "48ab3034d0dd401fbc721eb1df3217902fee7dab9078992d66431f09b7750201",
+  "expected_sha256": "48ab3034d0dd401fbc721eb1df3217902fee7dab9078992d66431f09b7750201",
+  "matches_existing_pin": true,
+  "server_build_checked_by_adapter": "b11721-ff5a23376",
+  "threads": 2,
+  "context": 2048,
+  "gpu_layers": 0
+}

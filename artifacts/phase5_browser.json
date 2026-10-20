@@ -1,0 +1,35 @@
+{
+  "phase": 5,
+  "desktop": {
+    "title": "Underworld Lab \u00e2\u20ac\u201d Observer",
+    "tick": "Tick 1035 \u00c2\u00b7 3.45 simulated min",
+    "status": "Paused",
+    "error": null,
+    "heatVisible": true,
+    "cells": [
+      "thermal-1 \u00c2\u00b7 595.56 K \u00c2\u00b7 off \u00c2\u00b7 ice / liquid / vapor 0.0 / 0.0 / 15.0 g \u00c2\u00b7 fuel / oxygen / product 20.0 / 40.0 / 0.0 g",
+      "thermal-2 \u00c2\u00b7 373.15 K \u00c2\u00b7 off \u00c2\u00b7 ice / liquid / vapor 0.0 / 21.9 / 3.1 g \u00c2\u00b7 fuel / oxygen / product 20.0 / 40.0 / 0.0 g",
+      "thermal-3 \u00c2\u00b7 339.32 K \u00c2\u00b7 off \u00c2\u00b7 ice / liquid / vapor 0.0 / 20.0 / 0.0 g \u00c2\u00b7 fuel / oxygen / product 20.0 / 40.0 / 0.0 g",
+      "thermal-4 \u00c2\u00b7 306.26 K \u00c2\u00b7 off \u00c2\u00b7 ice / liquid / vapor 0.0 / 20.0 / 0.0 g \u00c2\u00b7 fuel / oxygen / product 20.0 / 40.0 / 0.0 g"
+    ],
+    "boundary": "Insulated boundaries \u00c2\u00b7 environment 301.90 K \u00c2\u00b7 artificial fuel X + 2 oxygen \u00e2\u2020\u2019 3 product P",
+    "energy": "Global energy residual -3.73e-9 J \u00c2\u00b7 tolerance 3.42e-4 J",
+    "scrollWidth": 1425,
+    "viewport": 1440
+  },
+  "mobile": {
+    "tick": "Tick 1035 \u00c2\u00b7 3.45 simulated min",
+    "status": "Paused",
+    "error": null,
+    "heatVisible": true,
+    "cellCount": 4,
+    "scrollWidth": 375,
+    "viewport": 390
+  },
+  "console_errors": 0,
+  "observer_head_unchanged": true,
+  "tick": "1035",
+  "state_hash": "e592f0e2751b8c5b978e031ea9f4eb0ff6050fd495a552c2b950ab460394cd41",
+  "screenshot_desktop": "artifacts/phase5_observer_desktop.png",
+  "screenshot_mobile": "artifacts/phase5_observer_mobile.png"
+}

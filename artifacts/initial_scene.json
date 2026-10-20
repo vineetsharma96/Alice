@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "kind": "initial_scene",
+  "phase": 0,
+  "seed": "20261019",
+  "tick": 0,
+  "observation_version": 0,
+  "simulated_time_s": 0,
+  "dt_s": 0.1,
+  "world_bounds_m": {
+    "width": 64,
+    "height": 64
+  },
+  "entities": [
+    {
+      "entity_id": "agent-1",
+      "kind": "inhabitant_seed",
+      "position_m": [
+        26.63658859422635,
+        47.30951043972885
+      ]
+    },
+    {
+      "entity_id": "agent-2",
+      "kind": "inhabitant_seed",
+      "position_m": [
+        13.544015986566869,
+        18.40127349155621
+      ]
+    },
+    {
+      "entity_id": "agent-3",
+      "kind": "inhabitant_seed",
+      "position_m": [
+        14.689140986089505,
+        38.856535397106605
+      ]
+    },
+    {
+      "entity_id": "agent-4",
+      "kind": "inhabitant_seed",
+      "position_m": [
+        55.69000052324408,
+        17.664598793526817
+      ]
+    },
+    {
+      "entity_id": "agent-5",
+      "kind": "inhabitant_seed",
+      "position_m": [
+        56.34281519384331,
+        12.573836065176845
+      ]
+    },
+    {
+      "entity_id": "agent-6",
+      "kind": "inhabitant_seed",
+      "position_m": [
+        20.880090773432396,
+        27.66067196161438
+      ]
+    },
+    {
+      "entity_id": "agent-7",
+      "kind": "inhabitant_seed",
+      "position_m": [
+        25.064617815489743,
+        61.04732946437933
+      ]
+    },
+    {
+      "entity_id": "agent-8",
+      "kind": "inhabitant_seed",
+      "position_m": [
+        18.596948254605945,
+        40.03122411120113
+      ]
+    },
+    {
+      "entity_id": "resource-1",
+      "kind": "food",
+      "position_m": [
+        2,
+        2
+      ],
+      "mass_kg": 16
+    },
+    {
+      "entity_id": "resource-2",
+      "kind": "water",
+      "position_m": [
+        3,
+        2
+      ],
+      "mass_kg": 64
+    },
+    {
+      "entity_id": "resource-3",
+      "kind": "inert_material",
+      "position_m": [
+        4,
+        2
+      ],
+      "mass_kg": 32
+    }
+  ],
+  "capabilities": [
+    "scene_initialization"
+  ],
+  "cognition": "not_implemented"
+}

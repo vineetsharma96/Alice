@@ -1,0 +1,41 @@
+{
+  "phase": 4,
+  "db": "data/phase4-preview-v2.sqlite",
+  "tick": "10",
+  "paused": true,
+  "desktop_viewport": [
+    1440,
+    1000
+  ],
+  "mobile_viewport": [
+    390,
+    844
+  ],
+  "desktop_horizontal_overflow": false,
+  "mobile_horizontal_overflow": false,
+  "all_four_forms_applied": true,
+  "interventions_including_inherited": 5,
+  "unread_book_text_exposed": false,
+  "isolated_heard_avatar": false,
+  "isolated_heard_broadcast": true,
+  "operator_sources_ug": {
+    "food": 0,
+    "water": 0,
+    "inert_material": 400000000
+  },
+  "operator_energy_input_j": 8.5,
+  "empty_action_history_display": "block",
+  "current_load_browser_errors": [],
+  "prior_offline_polls": "The pre-reload tab logged failed polls while the observer was intentionally stopped for rebuild.",
+  "screenshots": [
+    "phase4_observer_desktop.png",
+    "phase4_observer_mobile.png"
+  ],
+  "preview_replay": {
+    "replay_matches": true,
+    "tick": "10",
+    "state_hash": "f730fc606eea98e19bc4b2f153949f8d9e8a54658257d576a28ef636660213ea"
+  },
+  "build_id": "983d6bad5e2122f13ca0314c41fb8f018ab8a300e40ed6e73b4750d6532f6244",
+  "orchestration_id": "11bcfa01d78ca4a545380f4ee03b99e716b8737c5b505afe6df1df624504fc19"
+}

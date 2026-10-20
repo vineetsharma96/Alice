@@ -1,0 +1,24 @@
+schema_version = 1
+seed = 20261019
+mode = "closed"
+
+[world]
+width_m = 64.0
+height_m = 64.0
+dt_s = 0.1
+population = 8
+population_limit = 8
+
+[cognition]
+provider = "disabled"
+interval_ticks = 50
+max_concurrency = 1
+max_input_tokens = 1024
+max_output_tokens = 128
+timeout_s = 10.0
+calls_per_simulated_day = 96
+
+[logging]
+level = "INFO"
+event_retention_count = 10000
+max_payload_bytes = 16384

@@ -1,0 +1,1802 @@
+{
+  "cases": [
+    {
+      "arm": "stable_authored",
+      "initial": {
+        "tick": "0",
+        "head": "7154adecdef94e1aa45e0d7ada06269a808283bbc9956b0efe4db131aea8f0d9",
+        "controller": {
+          "agent": "agent-1",
+          "authored_steps": 0,
+          "call_limit": 2,
+          "calls": 0,
+          "fallback_goals": 0,
+          "goal": null,
+          "goals_blocked": 0,
+          "goals_completed": 0,
+          "last_tick": 0,
+          "model": false,
+          "model_goals": 0,
+          "model_latency_s": 0.0,
+          "navigation": {},
+          "next_call_tick": 0,
+          "next_goal_tick": 0,
+          "pending": null,
+          "sequence": 0,
+          "submitted": 0
+        },
+        "mind": {
+          "agent": "agent-1",
+          "identity": {
+            "motivations": [
+              "stay alive",
+              "share useful observations"
+            ],
+            "name": "Ari-1",
+            "origin": "seeded authored identity",
+            "seed_trait": 68
+          },
+          "episodes": [],
+          "plan": null,
+          "relationships": []
+        },
+        "own": {
+          "entity_id": "agent-1",
+          "kind": "actor",
+          "position_m": [
+            2.0,
+            3.0
+          ],
+          "radius_m": 0.25,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "inventory_ug": {},
+          "alive": true,
+          "body": {
+            "hunger": 0.35,
+            "thirst": 0.4,
+            "fatigue": 0.2,
+            "health": 1.0,
+            "alive": true,
+            "food_ingested_ug": "0",
+            "water_ingested_ug": "0"
+          },
+          "busy": false,
+          "shared_event_refs": []
+        },
+        "material_totals": {
+          "food": "2000000000",
+          "fuel_X": "0",
+          "inert_material": "32000000000",
+          "oxygen": "0",
+          "product_P": "0",
+          "water": "4000000000"
+        },
+        "sources": {
+          "food": 0,
+          "fuel_X": 0,
+          "inert_material": 0,
+          "oxygen": 0,
+          "product_P": 0,
+          "water": 0
+        }
+      },
+      "stages": [
+        {
+          "target_simulated_s": 30,
+          "result": {
+            "status": "target_reached",
+            "initial_tick": "0",
+            "tick": "30",
+            "simulated_s": 30.0,
+            "wall_s": 4.657390700000178,
+            "state_hash": "b46a20c278d4044b77e1cc233820f7df99c5da557f9b1b441369854cd23077ff",
+            "replay": {
+              "replay_matches": true,
+              "tick": "30",
+              "state_hash": "b46a20c278d4044b77e1cc233820f7df99c5da557f9b1b441369854cd23077ff"
+            }
+          },
+          "fresh_process": null,
+          "after": {
+            "tick": "30",
+            "head": "b46a20c278d4044b77e1cc233820f7df99c5da557f9b1b441369854cd23077ff",
+            "controller": {
+              "agent": "agent-1",
+              "authored_steps": 0,
+              "call_limit": 2,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 0,
+              "last_tick": 29,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {},
+              "next_call_tick": 0,
+              "next_goal_tick": 0,
+              "pending": null,
+              "sequence": 0,
+              "submitted": 0
+            },
+            "mind": {
+              "agent": "agent-1",
+              "identity": {
+                "motivations": [
+                  "stay alive",
+                  "share useful observations"
+                ],
+                "name": "Ari-1",
+                "origin": "seeded authored identity",
+                "seed_trait": 68
+              },
+              "episodes": [],
+              "plan": null,
+              "relationships": []
+            },
+            "own": {
+              "entity_id": "agent-1",
+              "kind": "actor",
+              "position_m": [
+                2.0,
+                3.0
+              ],
+              "radius_m": 0.25,
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "inventory_ug": {},
+              "alive": true,
+              "body": {
+                "hunger": 0.38,
+                "thirst": 0.44500000000000006,
+                "fatigue": 0.22399999999999987,
+                "health": 1.0,
+                "alive": true,
+                "food_ingested_ug": "0",
+                "water_ingested_ug": "0"
+              },
+              "busy": false,
+              "shared_event_refs": []
+            },
+            "material_totals": {
+              "food": "2000000000",
+              "fuel_X": "0",
+              "inert_material": "32000000000",
+              "oxygen": "0",
+              "product_P": "0",
+              "water": "4000000000"
+            },
+            "sources": {
+              "food": 0,
+              "fuel_X": 0,
+              "inert_material": 0,
+              "oxygen": 0,
+              "product_P": 0,
+              "water": 0
+            }
+          },
+          "conserved": true,
+          "no_regeneration": true
+        },
+        {
+          "target_simulated_s": 120,
+          "result": {
+            "status": "target_reached",
+            "initial_tick": "30",
+            "tick": "120",
+            "simulated_s": 90.0,
+            "wall_s": 9.169363300000441,
+            "state_hash": "64facbaae84e976bac6828cd02273d013e6b30cca1ebefd53bd7a8418ab552b9",
+            "replay": {
+              "replay_matches": true,
+              "tick": "120",
+              "state_hash": "64facbaae84e976bac6828cd02273d013e6b30cca1ebefd53bd7a8418ab552b9"
+            }
+          },
+          "fresh_process": null,
+          "after": {
+            "tick": "120",
+            "head": "64facbaae84e976bac6828cd02273d013e6b30cca1ebefd53bd7a8418ab552b9",
+            "controller": {
+              "agent": "agent-1",
+              "authored_steps": 2,
+              "call_limit": 2,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 1,
+              "last_tick": 119,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {},
+              "next_call_tick": 0,
+              "next_goal_tick": 69,
+              "pending": null,
+              "sequence": 3,
+              "submitted": 2
+            },
+            "mind": {
+              "agent": "agent-1",
+              "identity": {
+                "motivations": [
+                  "stay alive",
+                  "share useful observations"
+                ],
+                "name": "Ari-1",
+                "origin": "seeded authored identity",
+                "seed_trait": 68
+              },
+              "episodes": [
+                {
+                  "id": 2,
+                  "tick": 69,
+                  "kind": "action_result",
+                  "record": {
+                    "agent_id": "agent-1",
+                    "completed_tick": "69",
+                    "error_code": "",
+                    "event_refs": [
+                      "72",
+                      "73",
+                      "74"
+                    ],
+                    "observable_effects": {
+                      "description": "ingested_ug=300000000"
+                    },
+                    "observation_version": "69",
+                    "reason": "",
+                    "request_id": "stable-agent-1-3",
+                    "schema_version": 1,
+                    "started_tick": "68",
+                    "status": "completed"
+                  }
+                },
+                {
+                  "id": 1,
+                  "tick": 68,
+                  "kind": "action_result",
+                  "record": {
+                    "agent_id": "agent-1",
+                    "completed_tick": "68",
+                    "error_code": "",
+                    "event_refs": [
+                      "68",
+                      "69",
+                      "70"
+                    ],
+                    "observable_effects": {
+                      "description": "gather:300000000ug"
+                    },
+                    "observation_version": "68",
+                    "reason": "",
+                    "request_id": "stable-agent-1-2",
+                    "schema_version": 1,
+                    "started_tick": "67",
+                    "status": "completed"
+                  }
+                }
+              ],
+              "plan": null,
+              "relationships": []
+            },
+            "own": {
+              "entity_id": "agent-1",
+              "kind": "actor",
+              "position_m": [
+                2.0,
+                3.0
+              ],
+              "radius_m": 0.25,
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "inventory_ug": {
+                "water": "0"
+              },
+              "alive": true,
+              "body": {
+                "hunger": 0.4700000000000001,
+                "thirst": 0.07800000000000004,
+                "fatigue": 0.29600000000000104,
+                "health": 1.0,
+                "alive": true,
+                "food_ingested_ug": "0",
+                "water_ingested_ug": "300000000"
+              },
+              "busy": false,
+              "shared_event_refs": []
+            },
+            "material_totals": {
+              "food": "2000000000",
+              "fuel_X": "0",
+              "inert_material": "32000000000",
+              "oxygen": "0",
+              "product_P": "0",
+              "water": "4000000000"
+            },
+            "sources": {
+              "food": 0,
+              "fuel_X": 0,
+              "inert_material": 0,
+              "oxygen": 0,
+              "product_P": 0,
+              "water": 0
+            }
+          },
+          "conserved": true,
+          "no_regeneration": true
+        },
+        {
+          "target_simulated_s": 600,
+          "result": {
+            "status": "target_reached",
+            "initial_tick": "120",
+            "tick": "600",
+            "simulated_s": 480.0,
+            "wall_s": 48.220349299999725,
+            "state_hash": "3101ef2d82b6ccdeb8539eaeb4b00b99917672e2b432d02a5b2de384bcea6b6c",
+            "replay": {
+              "replay_matches": true,
+              "tick": "600",
+              "state_hash": "3101ef2d82b6ccdeb8539eaeb4b00b99917672e2b432d02a5b2de384bcea6b6c"
+            }
+          },
+          "fresh_process": {
+            "returncode": 0,
+            "before_matches": true
+          },
+          "after": {
+            "tick": "600",
+            "head": "3101ef2d82b6ccdeb8539eaeb4b00b99917672e2b432d02a5b2de384bcea6b6c",
+            "controller": {
+              "agent": "agent-1",
+              "authored_steps": 9,
+              "call_limit": 2,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 5,
+              "last_tick": 599,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {},
+              "next_call_tick": 0,
+              "next_goal_tick": 553,
+              "pending": null,
+              "sequence": 14,
+              "submitted": 9
+            },
+            "mind": {
+              "agent": "agent-1",
+              "identity": {
+                "motivations": [
+                  "stay alive",
+                  "share useful observations"
+                ],
+                "name": "Ari-1",
+                "origin": "seeded authored identity",
+                "seed_trait": 68
+              },
+              "episodes": [
+                {
+                  "id": 9,
+                  "tick": 553,
+                  "kind": "action_result",
+                  "record": {
+                    "agent_id": "agent-1",
+                    "completed_tick": "553",
+                    "error_code": "",
+                    "event_refs": [
+                      "575",
+                      "577",
+                      "578"
+                    ],
+                    "observable_effects": {
+                      "description": "ingested_ug=200000000"
+                    },
+                    "observation_version": "553",
+                    "reason": "",
+                    "request_id": "stable-agent-1-14",
+                    "schema_version": 1,
+                    "started_tick": "551",
+                    "status": "completed"
+                  }
+                },
+                {
+                  "id": 8,
+                  "tick": 551,
+                  "kind": "action_result",
+                  "record": {
+                    "agent_id": "agent-1",
+                    "completed_tick": "551",
+                    "error_code": "",
+                    "event_refs": [
+                      "571",
+                      "572",
+                      "573"
+                    ],
+                    "observable_effects": {
+                      "description": "gather:200000000ug"
+                    },
+                    "observation_version": "551",
+                    "reason": "",
+                    "request_id": "stable-agent-1-13",
+                    "schema_version": 1,
+                    "started_tick": "550",
+                    "status": "completed"
+                  }
+                },
+                {
+                  "id": 7,
+                  "tick": 448,
+                  "kind": "action_result",
+                  "record": {
+                    "agent_id": "agent-1",
+                    "completed_tick": "448",
+                    "error_code": "",
+                    "event_refs": [
+                      "457",
+                      "467"
+                    ],
+                    "observable_effects": {
+                      "description": "rested"
+                    },
+                    "observation_version": "448",
+                    "reason": "",
+                    "request_id": "stable-agent-1-11",
+                    "schema_version": 1,
+                    "started_tick": "438",
+                    "status": "completed"
+                  }
+                }
+              ],
+              "plan": null,
+              "relationships": []
+            },
+            "own": {
+              "entity_id": "agent-1",
+              "kind": "actor",
+              "position_m": [
+                2.0,
+                3.0
+              ],
+              "radius_m": 0.25,
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "inventory_ug": {
+                "food": "0",
+                "water": "0"
+              },
+              "alive": true,
+              "body": {
+                "hunger": 0.15000000000000047,
+                "thirst": 0.2955000000000002,
+                "fatigue": 0.5220000000000117,
+                "health": 1.0,
+                "alive": true,
+                "food_ingested_ug": "400000000",
+                "water_ingested_ug": "600000000"
+              },
+              "busy": false,
+              "shared_event_refs": []
+            },
+            "material_totals": {
+              "food": "2000000000",
+              "fuel_X": "0",
+              "inert_material": "32000000000",
+              "oxygen": "0",
+              "product_P": "0",
+              "water": "4000000000"
+            },
+            "sources": {
+              "food": 0,
+              "fuel_X": 0,
+              "inert_material": 0,
+              "oxygen": 0,
+              "product_P": 0,
+              "water": 0
+            }
+          },
+          "conserved": true,
+          "no_regeneration": true
+        },
+        {
+          "target_simulated_s": 1200,
+          "result": {
+            "status": "target_reached",
+            "initial_tick": "600",
+            "tick": "1200",
+            "simulated_s": 600.0,
+            "wall_s": 62.849824900000385,
+            "state_hash": "2cef31fe7581a5126a84967402fe74df51c732b52aadd5ee98e7cd2d843aee88",
+            "replay": {
+              "replay_matches": true,
+              "tick": "1200",
+              "state_hash": "2cef31fe7581a5126a84967402fe74df51c732b52aadd5ee98e7cd2d843aee88"
+            }
+          },
+          "fresh_process": {
+            "returncode": 0,
+            "before_matches": true
+          },
+          "after": {
+            "tick": "1200",
+            "head": "2cef31fe7581a5126a84967402fe74df51c732b52aadd5ee98e7cd2d843aee88",
+            "controller": {
+              "agent": "agent-1",
+              "authored_steps": 18,
+              "call_limit": 2,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 11,
+              "last_tick": 1199,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {},
+              "next_call_tick": 0,
+              "next_goal_tick": 1074,
+              "pending": null,
+              "sequence": 29,
+              "submitted": 18
+            },
+            "mind": {
+              "agent": "agent-1",
+              "identity": {
+                "motivations": [
+                  "stay alive",
+                  "share useful observations"
+                ],
+                "name": "Ari-1",
+                "origin": "seeded authored identity",
+                "seed_trait": 68
+              },
+              "episodes": [
+                {
+                  "id": 18,
+                  "tick": 1074,
+                  "kind": "action_result",
+                  "record": {
+                    "agent_id": "agent-1",
+                    "completed_tick": "1074",
+                    "error_code": "",
+                    "event_refs": [
+                      "1121",
+                      "1122",
+                      "1123"
+                    ],
+                    "observable_effects": {
+                      "description": "ingested_ug=300000000"
+                    },
+                    "observation_version": "1074",
+                    "reason": "",
+                    "request_id": "stable-agent-1-29",
+                    "schema_version": 1,
+                    "started_tick": "1073",
+                    "status": "completed"
+                  }
+                },
+                {
+                  "id": 17,
+                  "tick": 1073,
+                  "kind": "action_result",
+                  "record": {
+                    "agent_id": "agent-1",
+                    "completed_tick": "1073",
+                    "error_code": "",
+                    "event_refs": [
+                      "1117",
+                      "1118",
+                      "1119"
+                    ],
+                    "observable_effects": {
+                      "description": "gather:300000000ug"
+                    },
+                    "observation_version": "1073",
+                    "reason": "",
+                    "request_id": "stable-agent-1-28",
+                    "schema_version": 1,
+                    "started_tick": "1072",
+                    "status": "completed"
+                  }
+                },
+                {
+                  "id": 16,
+                  "tick": 1040,
+                  "kind": "action_result",
+                  "record": {
+                    "agent_id": "agent-1",
+                    "completed_tick": "1040",
+                    "error_code": "",
+                    "event_refs": [
+                      "1073",
+                      "1083"
+                    ],
+                    "observable_effects": {
+                      "description": "rested"
+                    },
+                    "observation_version": "1040",
+                    "reason": "",
+                    "request_id": "stable-agent-1-26",
+                    "schema_version": 1,
+                    "started_tick": "1030",
+                    "status": "completed"
+                  }
+                }
+              ],
+              "plan": null,
+              "relationships": []
+            },
+            "own": {
+              "entity_id": "agent-1",
+              "kind": "actor",
+              "position_m": [
+                2.0,
+                3.0
+              ],
+              "radius_m": 0.25,
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "inventory_ug": {
+                "food": "0",
+                "water": "0"
+              },
+              "alive": true,
+              "body": {
+                "hunger": 0.350000000000001,
+                "thirst": 0.19050000000000014,
+                "fatigue": 0.5280000000000243,
+                "health": 1.0,
+                "alive": true,
+                "food_ingested_ug": "600000000",
+                "water_ingested_ug": "1200000000"
+              },
+              "busy": false,
+              "shared_event_refs": []
+            },
+            "material_totals": {
+              "food": "2000000000",
+              "fuel_X": "0",
+              "inert_material": "32000000000",
+              "oxygen": "0",
+              "product_P": "0",
+              "water": "4000000000"
+            },
+            "sources": {
+              "food": 0,
+              "fuel_X": 0,
+              "inert_material": 0,
+              "oxygen": 0,
+              "product_P": 0,
+              "water": 0
+            }
+          },
+          "conserved": true,
+          "no_regeneration": true
+        }
+      ],
+      "final": {
+        "tick": "1200",
+        "head": "2cef31fe7581a5126a84967402fe74df51c732b52aadd5ee98e7cd2d843aee88",
+        "controller": {
+          "agent": "agent-1",
+          "authored_steps": 18,
+          "call_limit": 2,
+          "calls": 0,
+          "fallback_goals": 0,
+          "goal": null,
+          "goals_blocked": 0,
+          "goals_completed": 11,
+          "last_tick": 1199,
+          "model": false,
+          "model_goals": 0,
+          "model_latency_s": 0.0,
+          "navigation": {},
+          "next_call_tick": 0,
+          "next_goal_tick": 1074,
+          "pending": null,
+          "sequence": 29,
+          "submitted": 18
+        },
+        "mind": {
+          "agent": "agent-1",
+          "identity": {
+            "motivations": [
+              "stay alive",
+              "share useful observations"
+            ],
+            "name": "Ari-1",
+            "origin": "seeded authored identity",
+            "seed_trait": 68
+          },
+          "episodes": [
+            {
+              "id": 18,
+              "tick": 1074,
+              "kind": "action_result",
+              "record": {
+                "agent_id": "agent-1",
+                "completed_tick": "1074",
+                "error_code": "",
+                "event_refs": [
+                  "1121",
+                  "1122",
+                  "1123"
+                ],
+                "observable_effects": {
+                  "description": "ingested_ug=300000000"
+                },
+                "observation_version": "1074",
+                "reason": "",
+                "request_id": "stable-agent-1-29",
+                "schema_version": 1,
+                "started_tick": "1073",
+                "status": "completed"
+              }
+            },
+            {
+              "id": 17,
+              "tick": 1073,
+              "kind": "action_result",
+              "record": {
+                "agent_id": "agent-1",
+                "completed_tick": "1073",
+                "error_code": "",
+                "event_refs": [
+                  "1117",
+                  "1118",
+                  "1119"
+                ],
+                "observable_effects": {
+                  "description": "gather:300000000ug"
+                },
+                "observation_version": "1073",
+                "reason": "",
+                "request_id": "stable-agent-1-28",
+                "schema_version": 1,
+                "started_tick": "1072",
+                "status": "completed"
+              }
+            },
+            {
+              "id": 16,
+              "tick": 1040,
+              "kind": "action_result",
+              "record": {
+                "agent_id": "agent-1",
+                "completed_tick": "1040",
+                "error_code": "",
+                "event_refs": [
+                  "1073",
+                  "1083"
+                ],
+                "observable_effects": {
+                  "description": "rested"
+                },
+                "observation_version": "1040",
+                "reason": "",
+                "request_id": "stable-agent-1-26",
+                "schema_version": 1,
+                "started_tick": "1030",
+                "status": "completed"
+              }
+            }
+          ],
+          "plan": null,
+          "relationships": []
+        },
+        "own": {
+          "entity_id": "agent-1",
+          "kind": "actor",
+          "position_m": [
+            2.0,
+            3.0
+          ],
+          "radius_m": 0.25,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "inventory_ug": {
+            "food": "0",
+            "water": "0"
+          },
+          "alive": true,
+          "body": {
+            "hunger": 0.350000000000001,
+            "thirst": 0.19050000000000014,
+            "fatigue": 0.5280000000000243,
+            "health": 1.0,
+            "alive": true,
+            "food_ingested_ug": "600000000",
+            "water_ingested_ug": "1200000000"
+          },
+          "busy": false,
+          "shared_event_refs": []
+        },
+        "material_totals": {
+          "food": "2000000000",
+          "fuel_X": "0",
+          "inert_material": "32000000000",
+          "oxygen": "0",
+          "product_P": "0",
+          "water": "4000000000"
+        },
+        "sources": {
+          "food": 0,
+          "fuel_X": 0,
+          "inert_material": 0,
+          "oxygen": 0,
+          "product_P": 0,
+          "water": 0
+        }
+      },
+      "primary_wall_s": 127.70679970000037,
+      "cutoff": null,
+      "recorded_command_parity": {
+        "native_hash_matches": true,
+        "own_memory_matches": true,
+        "wall_s": 8.618957200000295,
+        "method": "uninterrupted native continuation with recorded requests; no inference rerun",
+        "replay": {
+          "replay_matches": true,
+          "tick": "1200",
+          "state_hash": "2cef31fe7581a5126a84967402fe74df51c732b52aadd5ee98e7cd2d843aee88"
+        }
+      },
+      "controller_source_id": "413ee91cead6a771b19962ac024fc7ec2fa5512d1e64bf24abd9ad4635bfb764",
+      "final_replay": {
+        "replay_matches": true,
+        "tick": "1200",
+        "state_hash": "2cef31fe7581a5126a84967402fe74df51c732b52aadd5ee98e7cd2d843aee88"
+      },
+      "path": "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\data\\stabilization-continuity\\stable_authored-resumed.sqlite"
+    },
+    {
+      "arm": "stable_model",
+      "initial": {
+        "tick": "0",
+        "head": "7154adecdef94e1aa45e0d7ada06269a808283bbc9956b0efe4db131aea8f0d9",
+        "controller": {
+          "agent": "agent-1",
+          "authored_steps": 0,
+          "call_limit": 2,
+          "calls": 0,
+          "fallback_goals": 0,
+          "goal": null,
+          "goals_blocked": 0,
+          "goals_completed": 0,
+          "last_tick": 0,
+          "model": true,
+          "model_goals": 0,
+          "model_latency_s": 0.0,
+          "navigation": {},
+          "next_call_tick": 0,
+          "next_goal_tick": 0,
+          "pending": null,
+          "sequence": 0,
+          "submitted": 0
+        },
+        "mind": {
+          "agent": "agent-1",
+          "identity": {
+            "motivations": [
+              "stay alive",
+              "share useful observations"
+            ],
+            "name": "Ari-1",
+            "origin": "seeded authored identity",
+            "seed_trait": 68
+          },
+          "episodes": [],
+          "plan": null,
+          "relationships": []
+        },
+        "own": {
+          "entity_id": "agent-1",
+          "kind": "actor",
+          "position_m": [
+            2.0,
+            3.0
+          ],
+          "radius_m": 0.25,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "inventory_ug": {},
+          "alive": true,
+          "body": {
+            "hunger": 0.35,
+            "thirst": 0.4,
+            "fatigue": 0.2,
+            "health": 1.0,
+            "alive": true,
+            "food_ingested_ug": "0",
+            "water_ingested_ug": "0"
+          },
+          "busy": false,
+          "shared_event_refs": []
+        },
+        "material_totals": {
+          "food": "2000000000",
+          "fuel_X": "0",
+          "inert_material": "32000000000",
+          "oxygen": "0",
+          "product_P": "0",
+          "water": "4000000000"
+        },
+        "sources": {
+          "food": 0,
+          "fuel_X": 0,
+          "inert_material": 0,
+          "oxygen": 0,
+          "product_P": 0,
+          "water": 0
+        }
+      },
+      "stages": [
+        {
+          "target_simulated_s": 30,
+          "result": {
+            "status": "target_reached",
+            "initial_tick": "0",
+            "tick": "30",
+            "simulated_s": 30.0,
+            "wall_s": 16.747597599999608,
+            "state_hash": "2db3d47a7e5d80ae9f3dd52f97e8c26ac4ab7d64cc7ac5a10437f4ba615a772b",
+            "replay": {
+              "replay_matches": true,
+              "tick": "30",
+              "state_hash": "2db3d47a7e5d80ae9f3dd52f97e8c26ac4ab7d64cc7ac5a10437f4ba615a772b"
+            }
+          },
+          "fresh_process": null,
+          "after": {
+            "tick": "30",
+            "head": "2db3d47a7e5d80ae9f3dd52f97e8c26ac4ab7d64cc7ac5a10437f4ba615a772b",
+            "controller": {
+              "agent": "agent-1",
+              "authored_steps": 2,
+              "call_limit": 2,
+              "calls": 1,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 1,
+              "last_tick": 29,
+              "model": true,
+              "model_goals": 1,
+              "model_latency_s": 14.159580200000164,
+              "navigation": {},
+              "next_call_tick": 60,
+              "next_goal_tick": 3,
+              "pending": null,
+              "sequence": 3,
+              "submitted": 2
+            },
+            "mind": {
+              "agent": "agent-1",
+              "identity": {
+                "motivations": [
+                  "stay alive",
+                  "share useful observations"
+                ],
+                "name": "Ari-1",
+                "origin": "seeded authored identity",
+                "seed_trait": 68
+              },
+              "episodes": [
+                {
+                  "id": 2,
+                  "tick": 3,
+                  "kind": "action_result",
+                  "record": {
+                    "agent_id": "agent-1",
+                    "completed_tick": "3",
+                    "error_code": "",
+                    "event_refs": [
+                      "5",
+                      "7",
+                      "8"
+                    ],
+                    "observable_effects": {
+                      "description": "ingested_ug=200000000"
+                    },
+                    "observation_version": "3",
+                    "reason": "",
+                    "request_id": "stable-agent-1-3",
+                    "schema_version": 1,
+                    "started_tick": "1",
+                    "status": "completed"
+                  }
+                },
+                {
+                  "id": 1,
+                  "tick": 1,
+                  "kind": "action_result",
+                  "record": {
+                    "agent_id": "agent-1",
+                    "completed_tick": "1",
+                    "error_code": "",
+                    "event_refs": [
+                      "1",
+                      "2",
+                      "3"
+                    ],
+                    "observable_effects": {
+                      "description": "gather:200000000ug"
+                    },
+                    "observation_version": "1",
+                    "reason": "",
+                    "request_id": "stable-agent-1-2",
+                    "schema_version": 1,
+                    "started_tick": "0",
+                    "status": "completed"
+                  }
+                }
+              ],
+              "plan": null,
+              "relationships": []
+            },
+            "own": {
+              "entity_id": "agent-1",
+              "kind": "actor",
+              "position_m": [
+                2.0,
+                3.0
+              ],
+              "radius_m": 0.25,
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "inventory_ug": {
+                "food": "0"
+              },
+              "alive": true,
+              "body": {
+                "hunger": 0.028000000000000018,
+                "thirst": 0.44500000000000006,
+                "fatigue": 0.22399999999999987,
+                "health": 1.0,
+                "alive": true,
+                "food_ingested_ug": "200000000",
+                "water_ingested_ug": "0"
+              },
+              "busy": false,
+              "shared_event_refs": []
+            },
+            "material_totals": {
+              "food": "2000000000",
+              "fuel_X": "0",
+              "inert_material": "32000000000",
+              "oxygen": "0",
+              "product_P": "0",
+              "water": "4000000000"
+            },
+            "sources": {
+              "food": 0,
+              "fuel_X": 0,
+              "inert_material": 0,
+              "oxygen": 0,
+              "product_P": 0,
+              "water": 0
+            }
+          },
+          "conserved": true,
+          "no_regeneration": true
+        },
+        {
+          "target_simulated_s": 120,
+          "result": {
+            "status": "target_reached",
+            "initial_tick": "30",
+            "tick": "120",
+            "simulated_s": 90.0,
+            "wall_s": 27.10135100000025,
+            "state_hash": "e13c75bffbf560cf31a4a46eaa0253b02c60fa984d7e6acc88a60a6f0f3e2b50",
+            "replay": {
+              "replay_matches": true,
+              "tick": "120",
+              "state_hash": "e13c75bffbf560cf31a4a46eaa0253b02c60fa984d7e6acc88a60a6f0f3e2b50"
+            }
+          },
+          "fresh_process": null,
+          "after": {
+            "tick": "120",
+            "head": "e13c75bffbf560cf31a4a46eaa0253b02c60fa984d7e6acc88a60a6f0f3e2b50",
+            "controller": {
+              "agent": "agent-1",
+              "authored_steps": 6,
+              "call_limit": 2,
+              "calls": 2,
+              "fallback_goals": 1,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 3,
+              "last_tick": 119,
+              "model": true,
+              "model_goals": 2,
+              "model_latency_s": 33.09937699999955,
+              "navigation": {},
+              "next_call_tick": 120,
+              "next_goal_tick": 69,
+              "pending": null,
+              "sequence": 9,
+              "submitted": 6
+            },
+            "mind": {
+              "agent": "agent-1",
+              "identity": {
+                "motivations": [
+                  "stay alive",
+                  "share useful observations"
+                ],
+                "name": "Ari-1",
+                "origin": "seeded authored identity",
+                "seed_trait": 68
+              },
+              "episodes": [
+                {
+                  "id": 6,
+                  "tick": 69,
+                  "kind": "action_result",
+                  "record": {
+                    "agent_id": "agent-1",
+                    "completed_tick": "69",
+                    "error_code": "",
+                    "event_refs": [
+                      "84",
+                      "85",
+                      "86"
+                    ],
+                    "observable_effects": {
+                      "description": "ingested_ug=300000000"
+                    },
+                    "observation_version": "69",
+                    "reason": "",
+                    "request_id": "stable-agent-1-9",
+                    "schema_version": 1,
+                    "started_tick": "68",
+                    "status": "completed"
+                  }
+                },
+                {
+                  "id": 5,
+                  "tick": 68,
+                  "kind": "action_result",
+                  "record": {
+                    "agent_id": "agent-1",
+                    "completed_tick": "68",
+                    "error_code": "",
+                    "event_refs": [
+                      "80",
+                      "81",
+                      "82"
+                    ],
+                    "observable_effects": {
+                      "description": "gather:300000000ug"
+                    },
+                    "observation_version": "68",
+                    "reason": "",
+                    "request_id": "stable-agent-1-8",
+                    "schema_version": 1,
+                    "started_tick": "67",
+                    "status": "completed"
+                  }
+                },
+                {
+                  "id": 4,
+                  "tick": 63,
+                  "kind": "action_result",
+                  "record": {
+                    "agent_id": "agent-1",
+                    "completed_tick": "63",
+                    "error_code": "",
+                    "event_refs": [
+                      "71",
+                      "73",
+                      "74"
+                    ],
+                    "observable_effects": {
+                      "description": "ingested_ug=200000000"
+                    },
+                    "observation_version": "63",
+                    "reason": "",
+                    "request_id": "stable-agent-1-6",
+                    "schema_version": 1,
+                    "started_tick": "61",
+                    "status": "completed"
+                  }
+                }
+              ],
+              "plan": null,
+              "relationships": []
+            },
+            "own": {
+              "entity_id": "agent-1",
+              "kind": "actor",
+              "position_m": [
+                2.0,
+                3.0
+              ],
+              "radius_m": 0.25,
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "inventory_ug": {
+                "food": "0",
+                "water": "0"
+              },
+              "alive": true,
+              "body": {
+                "hunger": 0.058000000000000045,
+                "thirst": 0.07800000000000004,
+                "fatigue": 0.29600000000000104,
+                "health": 1.0,
+                "alive": true,
+                "food_ingested_ug": "400000000",
+                "water_ingested_ug": "300000000"
+              },
+              "busy": false,
+              "shared_event_refs": []
+            },
+            "material_totals": {
+              "food": "2000000000",
+              "fuel_X": "0",
+              "inert_material": "32000000000",
+              "oxygen": "0",
+              "product_P": "0",
+              "water": "4000000000"
+            },
+            "sources": {
+              "food": 0,
+              "fuel_X": 0,
+              "inert_material": 0,
+              "oxygen": 0,
+              "product_P": 0,
+              "water": 0
+            }
+          },
+          "conserved": true,
+          "no_regeneration": true
+        },
+        {
+          "target_simulated_s": 600,
+          "result": {
+            "status": "target_reached",
+            "initial_tick": "120",
+            "tick": "600",
+            "simulated_s": 480.0,
+            "wall_s": 53.74806680000074,
+            "state_hash": "49765aa8f63da3d44258a0ad21aee9da2132bb7354b9bab828ba17f05212e893",
+            "replay": {
+              "replay_matches": true,
+              "tick": "600",
+              "state_hash": "49765aa8f63da3d44258a0ad21aee9da2132bb7354b9bab828ba17f05212e893"
+            }
+          },
+          "fresh_process": {
+            "returncode": 0,
+            "before_matches": true
+          },
+          "after": {
+            "tick": "600",
+            "head": "49765aa8f63da3d44258a0ad21aee9da2132bb7354b9bab828ba17f05212e893",
+            "controller": {
+              "agent": "agent-1",
+              "authored_steps": 11,
+              "call_limit": 2,
+              "calls": 2,
+              "fallback_goals": 4,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 6,
+              "last_tick": 599,
+              "model": true,
+              "model_goals": 2,
+              "model_latency_s": 33.09937699999955,
+              "navigation": {},
+              "next_call_tick": 120,
+              "next_goal_tick": 565,
+              "pending": null,
+              "sequence": 17,
+              "submitted": 11
+            },
+            "mind": {
+              "agent": "agent-1",
+              "identity": {
+                "motivations": [
+                  "stay alive",
+                  "share useful observations"
+                ],
+                "name": "Ari-1",
+                "origin": "seeded authored identity",
+                "seed_trait": 68
+              },
+              "episodes": [
+                {
+                  "id": 11,
+                  "tick": 565,
+                  "kind": "action_result",
+                  "record": {
+                    "agent_id": "agent-1",
+                    "completed_tick": "565",
+                    "error_code": "",
+                    "event_refs": [
+                      "593",
+                      "595",
+                      "596"
+                    ],
+                    "observable_effects": {
+                      "description": "ingested_ug=200000000"
+                    },
+                    "observation_version": "565",
+                    "reason": "",
+                    "request_id": "stable-agent-1-17",
+                    "schema_version": 1,
+                    "started_tick": "563",
+                    "status": "completed"
+                  }
+                },
+                {
+                  "id": 10,
+                  "tick": 563,
+                  "kind": "action_result",
+                  "record": {
+                    "agent_id": "agent-1",
+                    "completed_tick": "563",
+                    "error_code": "",
+                    "event_refs": [
+                      "589",
+                      "590",
+                      "591"
+                    ],
+                    "observable_effects": {
+                      "description": "gather:200000000ug"
+                    },
+                    "observation_version": "563",
+                    "reason": "",
+                    "request_id": "stable-agent-1-16",
+                    "schema_version": 1,
+                    "started_tick": "562",
+                    "status": "completed"
+                  }
+                },
+                {
+                  "id": 9,
+                  "tick": 448,
+                  "kind": "action_result",
+                  "record": {
+                    "agent_id": "agent-1",
+                    "completed_tick": "448",
+                    "error_code": "",
+                    "event_refs": [
+                      "463",
+                      "473"
+                    ],
+                    "observable_effects": {
+                      "description": "rested"
+                    },
+                    "observation_version": "448",
+                    "reason": "",
+                    "request_id": "stable-agent-1-14",
+                    "schema_version": 1,
+                    "started_tick": "438",
+                    "status": "completed"
+                  }
+                }
+              ],
+              "plan": null,
+              "relationships": []
+            },
+            "own": {
+              "entity_id": "agent-1",
+              "kind": "actor",
+              "position_m": [
+                2.0,
+                3.0
+              ],
+              "radius_m": 0.25,
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "inventory_ug": {
+                "food": "0",
+                "water": "0"
+              },
+              "alive": true,
+              "body": {
+                "hunger": 0.13800000000000034,
+                "thirst": 0.2955000000000002,
+                "fatigue": 0.5220000000000117,
+                "health": 1.0,
+                "alive": true,
+                "food_ingested_ug": "600000000",
+                "water_ingested_ug": "600000000"
+              },
+              "busy": false,
+              "shared_event_refs": []
+            },
+            "material_totals": {
+              "food": "2000000000",
+              "fuel_X": "0",
+              "inert_material": "32000000000",
+              "oxygen": "0",
+              "product_P": "0",
+              "water": "4000000000"
+            },
+            "sources": {
+              "food": 0,
+              "fuel_X": 0,
+              "inert_material": 0,
+              "oxygen": 0,
+              "product_P": 0,
+              "water": 0
+            }
+          },
+          "conserved": true,
+          "no_regeneration": true
+        },
+        {
+          "target_simulated_s": 1200,
+          "result": {
+            "status": "target_reached",
+            "initial_tick": "600",
+            "tick": "1200",
+            "simulated_s": 600.0,
+            "wall_s": 63.890826099999686,
+            "state_hash": "01a77c4a75e93ef4738c710031dad0e8eeb6ff3d6e681e1b7ec77454173ac5ce",
+            "replay": {
+              "replay_matches": true,
+              "tick": "1200",
+              "state_hash": "01a77c4a75e93ef4738c710031dad0e8eeb6ff3d6e681e1b7ec77454173ac5ce"
+            }
+          },
+          "fresh_process": {
+            "returncode": 0,
+            "before_matches": true
+          },
+          "after": {
+            "tick": "1200",
+            "head": "01a77c4a75e93ef4738c710031dad0e8eeb6ff3d6e681e1b7ec77454173ac5ce",
+            "controller": {
+              "agent": "agent-1",
+              "authored_steps": 20,
+              "call_limit": 2,
+              "calls": 2,
+              "fallback_goals": 10,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 12,
+              "last_tick": 1199,
+              "model": true,
+              "model_goals": 2,
+              "model_latency_s": 33.09937699999955,
+              "navigation": {},
+              "next_call_tick": 120,
+              "next_goal_tick": 1074,
+              "pending": null,
+              "sequence": 32,
+              "submitted": 20
+            },
+            "mind": {
+              "agent": "agent-1",
+              "identity": {
+                "motivations": [
+                  "stay alive",
+                  "share useful observations"
+                ],
+                "name": "Ari-1",
+                "origin": "seeded authored identity",
+                "seed_trait": 68
+              },
+              "episodes": [
+                {
+                  "id": 20,
+                  "tick": 1074,
+                  "kind": "action_result",
+                  "record": {
+                    "agent_id": "agent-1",
+                    "completed_tick": "1074",
+                    "error_code": "",
+                    "event_refs": [
+                      "1127",
+                      "1128",
+                      "1129"
+                    ],
+                    "observable_effects": {
+                      "description": "ingested_ug=300000000"
+                    },
+                    "observation_version": "1074",
+                    "reason": "",
+                    "request_id": "stable-agent-1-32",
+                    "schema_version": 1,
+                    "started_tick": "1073",
+                    "status": "completed"
+                  }
+                },
+                {
+                  "id": 19,
+                  "tick": 1073,
+                  "kind": "action_result",
+                  "record": {
+                    "agent_id": "agent-1",
+                    "completed_tick": "1073",
+                    "error_code": "",
+                    "event_refs": [
+                      "1123",
+                      "1124",
+                      "1125"
+                    ],
+                    "observable_effects": {
+                      "description": "gather:300000000ug"
+                    },
+                    "observation_version": "1073",
+                    "reason": "",
+                    "request_id": "stable-agent-1-31",
+                    "schema_version": 1,
+                    "started_tick": "1072",
+                    "status": "completed"
+                  }
+                },
+                {
+                  "id": 18,
+                  "tick": 1040,
+                  "kind": "action_result",
+                  "record": {
+                    "agent_id": "agent-1",
+                    "completed_tick": "1040",
+                    "error_code": "",
+                    "event_refs": [
+                      "1079",
+                      "1089"
+                    ],
+                    "observable_effects": {
+                      "description": "rested"
+                    },
+                    "observation_version": "1040",
+                    "reason": "",
+                    "request_id": "stable-agent-1-29",
+                    "schema_version": 1,
+                    "started_tick": "1030",
+                    "status": "completed"
+                  }
+                }
+              ],
+              "plan": null,
+              "relationships": []
+            },
+            "own": {
+              "entity_id": "agent-1",
+              "kind": "actor",
+              "position_m": [
+                2.0,
+                3.0
+              ],
+              "radius_m": 0.25,
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "inventory_ug": {
+                "food": "0",
+                "water": "0"
+              },
+              "alive": true,
+              "body": {
+                "hunger": 0.33800000000000086,
+                "thirst": 0.19050000000000014,
+                "fatigue": 0.5280000000000243,
+                "health": 1.0,
+                "alive": true,
+                "food_ingested_ug": "800000000",
+                "water_ingested_ug": "1200000000"
+              },
+              "busy": false,
+              "shared_event_refs": []
+            },
+            "material_totals": {
+              "food": "2000000000",
+              "fuel_X": "0",
+              "inert_material": "32000000000",
+              "oxygen": "0",
+              "product_P": "0",
+              "water": "4000000000"
+            },
+            "sources": {
+              "food": 0,
+              "fuel_X": 0,
+              "inert_material": 0,
+              "oxygen": 0,
+              "product_P": 0,
+              "water": 0
+            }
+          },
+          "conserved": true,
+          "no_regeneration": true
+        }
+      ],
+      "final": {
+        "tick": "1200",
+        "head": "01a77c4a75e93ef4738c710031dad0e8eeb6ff3d6e681e1b7ec77454173ac5ce",
+        "controller": {
+          "agent": "agent-1",
+          "authored_steps": 20,
+          "call_limit": 2,
+          "calls": 2,
+          "fallback_goals": 10,
+          "goal": null,
+          "goals_blocked": 0,
+          "goals_completed": 12,
+          "last_tick": 1199,
+          "model": true,
+          "model_goals": 2,
+          "model_latency_s": 33.09937699999955,
+          "navigation": {},
+          "next_call_tick": 120,
+          "next_goal_tick": 1074,
+          "pending": null,
+          "sequence": 32,
+          "submitted": 20
+        },
+        "mind": {
+          "agent": "agent-1",
+          "identity": {
+            "motivations": [
+              "stay alive",
+              "share useful observations"
+            ],
+            "name": "Ari-1",
+            "origin": "seeded authored identity",
+            "seed_trait": 68
+          },
+          "episodes": [
+            {
+              "id": 20,
+              "tick": 1074,
+              "kind": "action_result",
+              "record": {
+                "agent_id": "agent-1",
+                "completed_tick": "1074",
+                "error_code": "",
+                "event_refs": [
+                  "1127",
+                  "1128",
+                  "1129"
+                ],
+                "observable_effects": {
+                  "description": "ingested_ug=300000000"
+                },
+                "observation_version": "1074",
+                "reason": "",
+                "request_id": "stable-agent-1-32",
+                "schema_version": 1,
+                "started_tick": "1073",
+                "status": "completed"
+              }
+            },
+            {
+              "id": 19,
+              "tick": 1073,
+              "kind": "action_result",
+              "record": {
+                "agent_id": "agent-1",
+                "completed_tick": "1073",
+                "error_code": "",
+                "event_refs": [
+                  "1123",
+                  "1124",
+                  "1125"
+                ],
+                "observable_effects": {
+                  "description": "gather:300000000ug"
+                },
+                "observation_version": "1073",
+                "reason": "",
+                "request_id": "stable-agent-1-31",
+                "schema_version": 1,
+                "started_tick": "1072",
+                "status": "completed"
+              }
+            },
+            {
+              "id": 18,
+              "tick": 1040,
+              "kind": "action_result",
+              "record": {
+                "agent_id": "agent-1",
+                "completed_tick": "1040",
+                "error_code": "",
+                "event_refs": [
+                  "1079",
+                  "1089"
+                ],
+                "observable_effects": {
+                  "description": "rested"
+                },
+                "observation_version": "1040",
+                "reason": "",
+                "request_id": "stable-agent-1-29",
+                "schema_version": 1,
+                "started_tick": "1030",
+                "status": "completed"
+              }
+            }
+          ],
+          "plan": null,
+          "relationships": []
+        },
+        "own": {
+          "entity_id": "agent-1",
+          "kind": "actor",
+          "position_m": [
+            2.0,
+            3.0
+          ],
+          "radius_m": 0.25,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "inventory_ug": {
+            "food": "0",
+            "water": "0"
+          },
+          "alive": true,
+          "body": {
+            "hunger": 0.33800000000000086,
+            "thirst": 0.19050000000000014,
+            "fatigue": 0.5280000000000243,
+            "health": 1.0,
+            "alive": true,
+            "food_ingested_ug": "800000000",
+            "water_ingested_ug": "1200000000"
+          },
+          "busy": false,
+          "shared_event_refs": []
+        },
+        "material_totals": {
+          "food": "2000000000",
+          "fuel_X": "0",
+          "inert_material": "32000000000",
+          "oxygen": "0",
+          "product_P": "0",
+          "water": "4000000000"
+        },
+        "sources": {
+          "food": 0,
+          "fuel_X": 0,
+          "inert_material": 0,
+          "oxygen": 0,
+          "product_P": 0,
+          "water": 0
+        }
+      },
+      "primary_wall_s": 166.80822739999985,
+      "cutoff": null,
+      "recorded_command_parity": {
+        "native_hash_matches": true,
+        "own_memory_matches": true,
+        "wall_s": 11.406313899999986,
+        "method": "uninterrupted native continuation with recorded requests; no inference rerun",
+        "replay": {
+          "replay_matches": true,
+          "tick": "1200",
+          "state_hash": "01a77c4a75e93ef4738c710031dad0e8eeb6ff3d6e681e1b7ec77454173ac5ce"
+        }
+      },
+      "controller_source_id": "413ee91cead6a771b19962ac024fc7ec2fa5512d1e64bf24abd9ad4635bfb764",
+      "final_replay": {
+        "replay_matches": true,
+        "tick": "1200",
+        "state_hash": "01a77c4a75e93ef4738c710031dad0e8eeb6ff3d6e681e1b7ec77454173ac5ce"
+      },
+      "path": "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\data\\stabilization-continuity\\stable_model-resumed.sqlite"
+    }
+  ],
+  "checks": {
+    "survival": true,
+    "conservation": true,
+    "fresh_process_continuity": true,
+    "replay": true,
+    "maximum_horizon_completed": true
+  },
+  "scope": "finite continuous worlds; 240 primary wall seconds per arm; separate recorded-command parity cost"
+}

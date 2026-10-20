@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "viewer_protocol": "underworld.viewer/1",
+  "three_version": "0.180.0",
+  "files": {
+    "underworld/observer.py": "f54e03666cef2b092dbb55f00eed8608ddc751608fb7da94b95da3f51bd88efa",
+    "underworld/viewer.py": "961c9e5bf02635fa709636b0c274507b460012146554f2841e57c8baa337a3d1",
+    "underworld/__main__.py": "3e487f18e25fde4dc8f43f00529e8e4681300488a6f7798f8d6ab161add7a41f",
+    "underworld/web/viewer.html": "a50c1504f641aa05c819986142951044796ac9e9df55db3c1346a1ef86821ef6",
+    "underworld/web/viewer.css": "e4f57bdc995db011acfcb39854afa31b0d2b1e33fe9b928ddf4bcd522befce92",
+    "underworld/web/viewer.js": "d93ec05eb5f69f9912b5819816a2a2e09ae5ed0e428bfefe8ae7ba81c55180f6",
+    "underworld/web/scene.js": "f97a20fa3e38fd08733d01c8660fa53c44efaa4ed47e4439cfe7b2e19706deb7",
+    "underworld/web/vendor/LICENSE.three": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+    "underworld/web/vendor/manifest.json": "e2758ee480ec48abec5fb52ee4ad127d2b61f706cfad4ab2abdcebcac8cccbef",
+    "underworld/web/vendor/OrbitControls.js": "6c860c6b342200f8aef65493319c12bfb2d652107355b1d25eb2154371128391",
+    "underworld/web/vendor/three.core.min.js": "61ba0df005b05991361d040d8ff670e1aadfd0ce7aeebd1fdb0725957a8957de",
+    "underworld/web/vendor/three.module.min.js": "e2b5ee6bccd38fd6d8a2428546b83c5f2426d84b152ef82be8055556e3b40eb6"
+  },
+  "source_build_id": "2b9d949b2baa3ae1a7100e12979a0e3022eb2a710f955bfb68c7f7282678d93d"
+}

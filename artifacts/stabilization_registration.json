@@ -1,0 +1,11 @@
+{
+  "protocol_sha256": "a6fb5d3d2d44199609e0e9f326e728fa7066c622f0c3ea893625b7287ef652b0",
+  "phase9_files_sha256": {
+    "underworld\\learning.py": "e6882f118c57deefd8ce8eca3e869cce322c99277de8213f3e7100d4e17a27b6",
+    "config\\phase9_study.json": "9d26e1f9ae922c76b4f52efb6b590ca3f112030aecee0c4a86b094fe2b923c8a",
+    "docs\\PHASE9_PREREGISTRATION.md": "b3443983dd3dd8fb1a96fc8fdacdd3c188b921d802d64e2921d27f85daab6cde",
+    "docs\\PHASE9_REPORT.md": "5350f70d9143a161edd59152c1cd732275fbeb60624e78331c36d4c30b3f8e09",
+    "artifacts\\phase9_summary.json": "dc287d40b7b935c218312b8675dee42e777c5aea472d53967e4d82c5b204701d",
+    "data\\phase9-study-20261020\\file_hashes.json": "21f0fb5a580ca6fffbe7e494961a19cbf7c3bfe06f416ffb0adff367766cd5d5"
+  }
+}

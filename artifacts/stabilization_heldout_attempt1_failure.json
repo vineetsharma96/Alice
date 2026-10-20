@@ -1,0 +1,41 @@
+{
+  "status": "invalid_fixture_stopped",
+  "partial_completed_cases": 17,
+  "cause": "Seeded actor-2 position was not guaranteed to reach food; competitor submission rejected TARGET_UNAVAILABLE. Original depletion outcomes are not valid depletion evidence.",
+  "controller_source_id": "d7ffabd1c487e9b2c8b335cd15efb1230c3be18c139be055d74d60a13ab6a23f",
+  "controller_changed": false,
+  "competitor_request": {
+    "action_type": "gather",
+    "agent_id": "agent-2",
+    "observation_version": "167",
+    "parameters": {
+      "mass_kg": 0.4
+    },
+    "request_id": "evaluation-depletion",
+    "requested_duration": 1,
+    "run_id": "4eacd83e-e835-497c-986f-6224cf983c99",
+    "schema_version": 1,
+    "target_ids": [
+      "resource-1"
+    ]
+  },
+  "competitor_result": {
+    "agent_id": "agent-2",
+    "completed_tick": "167",
+    "error_code": "TARGET_UNAVAILABLE",
+    "event_refs": [
+      "174"
+    ],
+    "observable_effects": {
+      "description": ""
+    },
+    "observation_version": "167",
+    "reason": "TARGET_UNAVAILABLE",
+    "request_id": "evaluation-depletion",
+    "run_id": "4eacd83e-e835-497c-986f-6224cf983c99",
+    "schema_version": 1,
+    "started_tick": "167",
+    "status": "rejected"
+  },
+  "original_evaluator_sha256": "4fcb9cc74fd4e7e5ee11781a33334026a8d2649927001310a24ebb8091139d7f"
+}

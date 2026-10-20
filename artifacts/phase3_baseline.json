@@ -1,0 +1,35 @@
+{
+  "phase": 3,
+  "provider": "disabled",
+  "ticks": 1500,
+  "population": 8,
+  "alive": 8,
+  "simulated_time_s": 300.0,
+  "wall_time_s": 18.282686499999727,
+  "simulated_s_per_wall_s": 16.4089670300918,
+  "cognition_calls": 0,
+  "episodes": 185,
+  "recorded_decisions": 185,
+  "process_memory": {
+    "working_set_bytes": 31195136,
+    "peak_working_set_bytes": 31903744,
+    "private_commit_bytes": 16510976
+  },
+  "database_bytes": 602112,
+  "initial_material_totals_ug": {
+    "food": "16000000000",
+    "inert_material": "32000000000",
+    "water": "64000000000"
+  },
+  "final_material_totals_ug": {
+    "food": "16000000000",
+    "inert_material": "32000000000",
+    "water": "64000000000"
+  },
+  "replay": {
+    "replay_matches": true,
+    "tick": "1500",
+    "state_hash": "4b8c38b6a2ae253f03b347bbabf6eb5313c9499e26ad0bbf712ec271f293565e"
+  },
+  "orchestration_id": "054e86a26c3e9a73656994178efc1e58078058f4756e22f5719b3cf50d3e660c"
+}

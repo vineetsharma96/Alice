@@ -1,0 +1,97 @@
+{
+  "phase": 1,
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "build_id": "4328c51aaf1332d82529ae95b6e1c1206123dc736a2d31a28a16f575636c1eea",
+  "config": {
+    "schema_version": 1,
+    "seed": 20261019,
+    "mode": "closed",
+    "world": {
+      "width_m": 64.0,
+      "height_m": 64.0,
+      "dt_s": 0.1,
+      "population": 8,
+      "population_limit": 8
+    },
+    "cognition": {
+      "provider": "disabled",
+      "interval_ticks": 50,
+      "max_concurrency": 1,
+      "max_input_tokens": 1024,
+      "max_output_tokens": 128,
+      "timeout_s": 10.0,
+      "calls_per_simulated_day": 96
+    },
+    "logging": {
+      "level": "INFO",
+      "event_retention_count": 10000,
+      "max_payload_bytes": 16384
+    }
+  },
+  "measurements": [
+    {
+      "mode": "native",
+      "ticks": 10000,
+      "population": 8,
+      "wall_time_s": 0.35751810000010664,
+      "simulated_time_s": 1000.0,
+      "ticks_per_wall_s": 27970.611837546174,
+      "simulated_s_per_wall_s": 2797.0611837546176,
+      "peak_process_rss_bytes": 34926592,
+      "state_hash": "74a5ee5b594444a8cd7df75223ec7ad7ba671e7e400a2385902d8fdca9c2eb99",
+      "solar_input_j": 14885425.730108099,
+      "material_totals_ug": {
+        "food": "16000000000",
+        "inert_material": "32000000000",
+        "water": "64000000000"
+      },
+      "command": [
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\scripts\\benchmark.py",
+        "--ticks",
+        "10000",
+        "--config",
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\config\\baseline.toml",
+        "--worker",
+        "native"
+      ]
+    },
+    {
+      "mode": "durable",
+      "ticks": 10000,
+      "population": 8,
+      "wall_time_s": 274.6685755000001,
+      "simulated_time_s": 1000.0,
+      "ticks_per_wall_s": 36.40751397132431,
+      "simulated_s_per_wall_s": 3.6407513971324312,
+      "peak_process_rss_bytes": 26066944,
+      "state_hash": "74a5ee5b594444a8cd7df75223ec7ad7ba671e7e400a2385902d8fdca9c2eb99",
+      "solar_input_j": 14885425.730108099,
+      "material_totals_ug": {
+        "food": "16000000000",
+        "inert_material": "32000000000",
+        "water": "64000000000"
+      },
+      "database_bytes": 1851392,
+      "retained_events": 10000,
+      "external_decisions": 0,
+      "replay": {
+        "replay_matches": true,
+        "tick": "10000",
+        "state_hash": "74a5ee5b594444a8cd7df75223ec7ad7ba671e7e400a2385902d8fdca9c2eb99"
+      },
+      "command": [
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\scripts\\benchmark.py",
+        "--ticks",
+        "10000",
+        "--config",
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\config\\baseline.toml",
+        "--worker",
+        "durable"
+      ]
+    }
+  ],
+  "native_and_durable_hash_match": true
+}

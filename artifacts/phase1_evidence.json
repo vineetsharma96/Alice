@@ -1,0 +1,486 @@
+{
+  "schema_version": 1,
+  "phase": 1,
+  "build_id": "4328c51aaf1332d82529ae95b6e1c1206123dc736a2d31a28a16f575636c1eea",
+  "seed": "20261019",
+  "config": {
+    "schema_version": 1,
+    "seed": 20261019,
+    "mode": "closed",
+    "world": {
+      "width_m": 64.0,
+      "height_m": 64.0,
+      "dt_s": 0.1,
+      "population": 8,
+      "population_limit": 8
+    },
+    "cognition": {
+      "provider": "disabled",
+      "interval_ticks": 50,
+      "max_concurrency": 1,
+      "max_input_tokens": 1024,
+      "max_output_tokens": 128,
+      "timeout_s": 10.0,
+      "calls_per_simulated_day": 96
+    },
+    "logging": {
+      "level": "INFO",
+      "event_retention_count": 10000,
+      "max_payload_bytes": 16384
+    }
+  },
+  "inflight_checkpoint_tick": "37",
+  "outstanding_at_checkpoint": [
+    {
+      "agent_id": "agent-1",
+      "request_id": "script-0-agent-1",
+      "remaining_ticks": "13"
+    },
+    {
+      "agent_id": "agent-2",
+      "request_id": "script-0-agent-2",
+      "remaining_ticks": "13"
+    },
+    {
+      "agent_id": "agent-3",
+      "request_id": "script-0-agent-3",
+      "remaining_ticks": "13"
+    },
+    {
+      "agent_id": "agent-4",
+      "request_id": "script-0-agent-4",
+      "remaining_ticks": "13"
+    },
+    {
+      "agent_id": "agent-5",
+      "request_id": "script-0-agent-5",
+      "remaining_ticks": "13"
+    },
+    {
+      "agent_id": "agent-6",
+      "request_id": "script-0-agent-6",
+      "remaining_ticks": "13"
+    },
+    {
+      "agent_id": "agent-7",
+      "request_id": "script-0-agent-7",
+      "remaining_ticks": "13"
+    },
+    {
+      "agent_id": "agent-8",
+      "request_id": "script-0-agent-8",
+      "remaining_ticks": "13"
+    }
+  ],
+  "uninterrupted_hash": "a4116f5e673de53f9a68a30d5d4db846bc23a10a94f0e8296ad2fac47263dc7b",
+  "resumed_hash": "a4116f5e673de53f9a68a30d5d4db846bc23a10a94f0e8296ad2fac47263dc7b",
+  "independent_same_seed_hash": "a4116f5e673de53f9a68a30d5d4db846bc23a10a94f0e8296ad2fac47263dc7b",
+  "replay": {
+    "replay_matches": true,
+    "tick": "200",
+    "state_hash": "a4116f5e673de53f9a68a30d5d4db846bc23a10a94f0e8296ad2fac47263dc7b"
+  },
+  "final_scripted_snapshot": {
+    "schema_version": 1,
+    "kind": "world_snapshot",
+    "run_id": "a487519e-43c2-488a-807d-832823b5000e",
+    "branch_id": "a487519e-43c2-488a-807d-832823b5000e",
+    "tick": "200",
+    "observation_version": "200",
+    "last_event_seq": "264",
+    "seed": "20261019",
+    "dt_s": 0.1,
+    "simulated_time_s": 20.0,
+    "laws_version": "mechanics-1",
+    "build_id": "4328c51aaf1332d82529ae95b6e1c1206123dc736a2d31a28a16f575636c1eea",
+    "world_bounds_m": {
+      "width": 64.0,
+      "height": 64.0
+    },
+    "entities": [
+      {
+        "entity_id": "terrain-1",
+        "kind": "rock",
+        "position_m": [
+          32.0,
+          32.0
+        ],
+        "radius_m": 1.0,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "agent-1",
+        "kind": "actor",
+        "position_m": [
+          17.535769166258476,
+          11.171803063932355
+        ],
+        "radius_m": 0.25,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "agent-2",
+        "kind": "actor",
+        "position_m": [
+          34.321862477324444,
+          36.185993513582964
+        ],
+        "radius_m": 0.25,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "agent-3",
+        "kind": "actor",
+        "position_m": [
+          18.605639400509773,
+          29.671923279762055
+        ],
+        "radius_m": 0.25,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "agent-4",
+        "kind": "actor",
+        "position_m": [
+          33.10889622554601,
+          35.30250234352068
+        ],
+        "radius_m": 0.25,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "agent-5",
+        "kind": "actor",
+        "position_m": [
+          43.79535877094164,
+          18.01940058276106
+        ],
+        "radius_m": 0.25,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "agent-6",
+        "kind": "actor",
+        "position_m": [
+          44.71622395963678,
+          17.213726722475478
+        ],
+        "radius_m": 0.25,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "agent-7",
+        "kind": "actor",
+        "position_m": [
+          32.25063028936705,
+          17.784176795592348
+        ],
+        "radius_m": 0.25,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "agent-8",
+        "kind": "actor",
+        "position_m": [
+          23.18331710921961,
+          47.89178470098753
+        ],
+        "radius_m": 0.25,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "resource-1",
+        "kind": "food",
+        "position_m": [
+          2.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 16.0,
+        "mass_ug": "16000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "resource-2",
+        "kind": "water",
+        "position_m": [
+          3.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 64.0,
+        "mass_ug": "64000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "resource-3",
+        "kind": "inert_material",
+        "position_m": [
+          4.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 32.0,
+        "mass_ug": "32000000000",
+        "inventory_ug": {}
+      }
+    ],
+    "outstanding_actions": [],
+    "material_totals_ug": {
+      "food": "16000000000",
+      "inert_material": "32000000000",
+      "water": "64000000000"
+    },
+    "solar_input_j": 5927.602521194271,
+    "environment_energy_j": 5927.602521194271,
+    "sunlight_w_m2": 0.1454440530541535,
+    "scripted": true,
+    "next_script_tick": "200",
+    "config_hash": "42c6aaad706d682677b98c794b1242652b0df3405e1b588c0a632effe2ea87ce",
+    "state_hash": "a4116f5e673de53f9a68a30d5d4db846bc23a10a94f0e8296ad2fac47263dc7b",
+    "retained_events": 264,
+    "recorded_decisions": 0
+  },
+  "transfer": {
+    "request": {
+      "schema_version": 1,
+      "run_id": "4e52e48c-1e6a-41ab-8487-e9b9e5f60f5f",
+      "request_id": "food-transfer-1",
+      "agent_id": "agent-1",
+      "observation_version": "0",
+      "action_type": "gather",
+      "target_ids": [
+        "resource-1"
+      ],
+      "parameters": {
+        "mass_kg": 1
+      },
+      "requested_duration": 1.0
+    },
+    "initial_totals_ug": {
+      "food": "16000000000",
+      "inert_material": "32000000000",
+      "water": "64000000000"
+    },
+    "final_totals_ug": {
+      "food": "16000000000",
+      "inert_material": "32000000000",
+      "water": "64000000000"
+    },
+    "observation_after_restart": {
+      "schema_version": 1,
+      "run_id": "4e52e48c-1e6a-41ab-8487-e9b9e5f60f5f",
+      "agent_id": "agent-1",
+      "tick": "10",
+      "observation_version": "10",
+      "own_state": {
+        "entity_id": "agent-1",
+        "kind": "actor",
+        "position_m": [
+          2.0,
+          3.0
+        ],
+        "radius_m": 0.25,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "inventory_ug": {
+          "food": "1000000000"
+        }
+      },
+      "visible_entities": [
+        {
+          "entity_id": "resource-1",
+          "kind": "food",
+          "position_m": [
+            2.0,
+            2.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 15.0,
+          "mass_ug": "15000000000"
+        },
+        {
+          "entity_id": "resource-2",
+          "kind": "water",
+          "position_m": [
+            3.0,
+            2.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 64.0,
+          "mass_ug": "64000000000"
+        },
+        {
+          "entity_id": "resource-3",
+          "kind": "inert_material",
+          "position_m": [
+            4.0,
+            2.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 32.0,
+          "mass_ug": "32000000000"
+        }
+      ],
+      "audible_reports": [],
+      "recent_action_results": [
+        {
+          "schema_version": 1,
+          "request_id": "food-transfer-1",
+          "agent_id": "agent-1",
+          "status": "completed",
+          "error_code": "",
+          "reason": "",
+          "started_tick": "0",
+          "completed_tick": "10",
+          "observation_version": "10"
+        }
+      ],
+      "omissions": {
+        "older_results": 0
+      }
+    },
+    "replay": {
+      "replay_matches": true,
+      "tick": "10",
+      "state_hash": "5ac81f2007198453b02e4691cff54439e23af390296163f5734af26cb094afc1"
+    },
+    "event_trace": [
+      {
+        "agent_id": "agent-1",
+        "detail": "gather",
+        "request_id": "food-transfer-1",
+        "schema_version": 1,
+        "seq": "1",
+        "tick": "0",
+        "type": "action_accepted"
+      },
+      {
+        "agent_id": "",
+        "detail": "",
+        "request_id": "",
+        "schema_version": 1,
+        "seq": "2",
+        "tick": "1",
+        "type": "tick"
+      },
+      {
+        "agent_id": "",
+        "detail": "",
+        "request_id": "",
+        "schema_version": 1,
+        "seq": "3",
+        "tick": "2",
+        "type": "tick"
+      },
+      {
+        "agent_id": "",
+        "detail": "",
+        "request_id": "",
+        "schema_version": 1,
+        "seq": "4",
+        "tick": "3",
+        "type": "tick"
+      },
+      {
+        "agent_id": "",
+        "detail": "",
+        "request_id": "",
+        "schema_version": 1,
+        "seq": "5",
+        "tick": "4",
+        "type": "tick"
+      },
+      {
+        "agent_id": "",
+        "detail": "",
+        "request_id": "",
+        "schema_version": 1,
+        "seq": "6",
+        "tick": "5",
+        "type": "tick"
+      },
+      {
+        "agent_id": "",
+        "detail": "",
+        "request_id": "",
+        "schema_version": 1,
+        "seq": "7",
+        "tick": "6",
+        "type": "tick"
+      },
+      {
+        "agent_id": "",
+        "detail": "",
+        "request_id": "",
+        "schema_version": 1,
+        "seq": "8",
+        "tick": "7",
+        "type": "tick"
+      },
+      {
+        "agent_id": "",
+        "detail": "",
+        "request_id": "",
+        "schema_version": 1,
+        "seq": "9",
+        "tick": "8",
+        "type": "tick"
+      },
+      {
+        "agent_id": "",
+        "detail": "",
+        "request_id": "",
+        "schema_version": 1,
+        "seq": "10",
+        "tick": "9",
+        "type": "tick"
+      },
+      {
+        "agent_id": "agent-1",
+        "detail": "gather:1000000000ug",
+        "request_id": "food-transfer-1",
+        "schema_version": 1,
+        "seq": "11",
+        "tick": "10",
+        "type": "mass_transfer"
+      },
+      {
+        "agent_id": "agent-1",
+        "detail": "",
+        "request_id": "food-transfer-1",
+        "schema_version": 1,
+        "seq": "12",
+        "tick": "10",
+        "type": "action_completed"
+      },
+      {
+        "agent_id": "",
+        "detail": "",
+        "request_id": "",
+        "schema_version": 1,
+        "seq": "13",
+        "tick": "10",
+        "type": "tick"
+      }
+    ]
+  }
+}

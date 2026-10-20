@@ -1,0 +1,16 @@
+{
+  "url": "http://127.0.0.1:8765/viewer",
+  "db": "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\data\\phase8-handoff-20261020\\run.sqlite",
+  "launcher_pid": 2176,
+  "worker_pid": 4992,
+  "worker_memory": {
+    "working_set_bytes": 33595392,
+    "peak_working_set_bytes": 33951744,
+    "private_commit_bytes": 17469440
+  },
+  "viewer_source_build_id": "2b9d949b2baa3ae1a7100e12979a0e3022eb2a710f955bfb68c7f7282678d93d",
+  "mode": "guided",
+  "paused_at_handoff": true,
+  "tick": "15",
+  "note": "Earlier advanced preview is preserved; this is a fresh authored fixture."
+}

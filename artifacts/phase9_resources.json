@@ -1,0 +1,9 @@
+{
+  "current_working_set_bytes": 14925824,
+  "observed_at_utc": "2026-10-20T00:25:07.8704484Z",
+  "scope": "Actual study Python process only; excludes browser, GPU, other workers and total machine memory. Snapshot during study, not final lifetime measurement.",
+  "process_id": 4880,
+  "observed_peak_working_set_bytes": 38305792,
+  "method": "Get-Process PeakWorkingSet64",
+  "command_line": "\"C:\\Users\\abc\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\python.exe\" scripts/phase9_experiment.py --output data/phase9-study-20261020"
+}

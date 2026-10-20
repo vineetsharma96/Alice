@@ -1,0 +1,63 @@
+{
+  "phase": 1,
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "os": "Windows-10-10.0.19045-SP0",
+  "sqlite": "3.49.1",
+  "checks": [
+    {
+      "command": [
+        "C:\\mingw64\\bin\\ctest.exe",
+        "--test-dir",
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\build",
+        "-C",
+        "Release",
+        "--output-on-failure"
+      ],
+      "returncode": 0,
+      "wall_time_s": 0.20041129999981422,
+      "stdout": "Test project C:/Users/abc/Documents/ChatGPT/UnderWorld/build\n    Start 1: native_world\n1/3 Test #1: native_world .....................   Passed    0.07 sec\n    Start 2: core_scene\n2/3 Test #2: core_scene .......................   Passed    0.02 sec\n    Start 3: core_reject_population\n3/3 Test #3: core_reject_population ...........   Passed    0.02 sec\n\n100% tests passed, 0 tests failed out of 3\n\nTotal Test time (real) =   0.11 sec\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "wall_time_s": 6.717496099999607,
+      "stdout": "",
+      "stderr": "test_actor_collision (test_phase1.MechanicsTests.test_actor_collision) ... ok\ntest_checkpoint_corruption_rejected (test_phase1.MechanicsTests.test_checkpoint_corruption_rejected) ... ok\ntest_competing_transfers_cannot_overdraw_at_completion (test_phase1.MechanicsTests.test_competing_transfers_cannot_overdraw_at_completion) ... ok\ntest_day_night_boundary_energy (test_phase1.MechanicsTests.test_day_night_boundary_energy) ... ok\ntest_gather_deposit_exact_mass_dedup_and_execution_recheck (test_phase1.MechanicsTests.test_gather_deposit_exact_mass_dedup_and_execution_recheck) ... ok\ntest_replay_restart_rng_scheduler_and_inflight_actions (test_phase1.MechanicsTests.test_replay_restart_rng_scheduler_and_inflight_actions) ... ok\ntest_schema_stale_targets_authorization_and_observation_isolation (test_phase1.MechanicsTests.test_schema_stale_targets_authorization_and_observation_isolation) ... ok\ntest_swept_obstacle_collision_and_bounds (test_phase1.MechanicsTests.test_swept_obstacle_collision_and_bounds) ... ok\ntest_forced_process_exit_recovers_only_committed_ticks (test_phase1.PersistenceTests.test_forced_process_exit_recovers_only_committed_ticks) ... ok\ntest_metadata_and_state_corruption_fail_closed (test_phase1.PersistenceTests.test_metadata_and_state_corruption_fail_closed) ... ok\ntest_recorded_external_decisions_replay_without_policy (test_phase1.PersistenceTests.test_recorded_external_decisions_replay_without_policy) ... ok\ntest_rollback_discards_staged_tick_and_decision (test_phase1.PersistenceTests.test_rollback_discards_staged_tick_and_decision) ... ok\ntest_save_resume_replay_and_read_only_observer (test_phase1.PersistenceTests.test_save_resume_replay_and_read_only_observer) ... ok\ntest_strict_json_and_cli_roundtrip (test_phase1.PersistenceTests.test_strict_json_and_cli_roundtrip) ... ok\ntest_reject_invalid_and_unimplemented_configuration (test_scaffold.ConfigTests.test_reject_invalid_and_unimplemented_configuration) ... ok\ntest_unknown_schema_and_keys_rejected (test_scaffold.ConfigTests.test_unknown_schema_and_keys_rejected) ... ok\ntest_core_rejects_invalid_arguments (test_scaffold.CoreTests.test_core_rejects_invalid_arguments) ... ok\ntest_scene_is_seeded_bounded_and_has_stable_unique_ids (test_scaffold.CoreTests.test_scene_is_seeded_bounded_and_has_stable_unique_ids) ... ok\n\n----------------------------------------------------------------------\nRan 18 tests in 6.264s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\.venv\\Scripts\\python.exe",
+        "-m",
+        "underworld",
+        "inspect",
+        "--core",
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\build\\underworld_core.exe"
+      ],
+      "returncode": 0,
+      "wall_time_s": 0.27962280000019746,
+      "stdout": "{\n  \"schema_version\": 1,\n  \"kind\": \"initial_scene\",\n  \"phase\": 0,\n  \"seed\": \"20261019\",\n  \"tick\": 0,\n  \"observation_version\": 0,\n  \"simulated_time_s\": 0,\n  \"dt_s\": 0.1,\n  \"world_bounds_m\": {\n    \"width\": 64,\n    \"height\": 64\n  },\n  \"entities\": [\n    {\n      \"entity_id\": \"agent-1\",\n      \"kind\": \"inhabitant_seed\",\n      \"position_m\": [\n        26.63658859422635,\n        47.30951043972885\n      ]\n    },\n    {\n      \"entity_id\": \"agent-2\",\n      \"kind\": \"inhabitant_seed\",\n      \"position_m\": [\n        13.544015986566869,\n        18.40127349155621\n      ]\n    },\n    {\n      \"entity_id\": \"agent-3\",\n      \"kind\": \"inhabitant_seed\",\n      \"position_m\": [\n        14.689140986089505,\n        38.856535397106605\n      ]\n    },\n    {\n      \"entity_id\": \"agent-4\",\n      \"kind\": \"inhabitant_seed\",\n      \"position_m\": [\n        55.69000052324408,\n        17.664598793526817\n      ]\n    },\n    {\n      \"entity_id\": \"agent-5\",\n      \"kind\": \"inhabitant_seed\",\n      \"position_m\": [\n        56.34281519384331,\n        12.573836065176845\n      ]\n    },\n    {\n      \"entity_id\": \"agent-6\",\n      \"kind\": \"inhabitant_seed\",\n      \"position_m\": [\n        20.880090773432396,\n        27.66067196161438\n      ]\n    },\n    {\n      \"entity_id\": \"agent-7\",\n      \"kind\": \"inhabitant_seed\",\n      \"position_m\": [\n        25.064617815489743,\n        61.04732946437933\n      ]\n    },\n    {\n      \"entity_id\": \"agent-8\",\n      \"kind\": \"inhabitant_seed\",\n      \"position_m\": [\n        18.596948254605945,\n        40.03122411120113\n      ]\n    },\n    {\n      \"entity_id\": \"resource-1\",\n      \"kind\": \"food\",\n      \"position_m\": [\n        2,\n        2\n      ],\n      \"mass_kg\": 16\n    },\n    {\n      \"entity_id\": \"resource-2\",\n      \"kind\": \"water\",\n      \"position_m\": [\n        3,\n        2\n      ],\n      \"mass_kg\": 64\n    },\n    {\n      \"entity_id\": \"resource-3\",\n      \"kind\": \"inert_material\",\n      \"position_m\": [\n        4,\n        2\n      ],\n      \"mass_kg\": 32\n    }\n  ],\n  \"capabilities\": [\n    \"scene_initialization\"\n  ],\n  \"cognition\": \"not_implemented\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\.venv\\Scripts\\python.exe",
+        "scripts/evidence.py"
+      ],
+      "returncode": 0,
+      "wall_time_s": 7.755721800000174,
+      "stdout": "{\n  \"same_seed_matches\": true,\n  \"resume_matches\": true,\n  \"recorded_replay_matches\": true,\n  \"mass_totals_match\": true,\n  \"artifact\": \"artifacts/phase1_evidence.json\",\n  \"state_hash\": \"a4116f5e673de53f9a68a30d5d4db846bc23a10a94f0e8296ad2fac47263dc7b\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "initial_scene_sha256": "9e2c08a72fc7af8f99c9ba09ecf0f7a52181d7514c1759307d98274760332868",
+  "config_sha256": "1e0d005e27a03d6707a1bafe0cfe00012c5c2e3dcce57bac4516e199a91a0255"
+}

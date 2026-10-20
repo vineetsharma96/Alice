@@ -1,0 +1,2 @@
+# Build-time dependency. Runtime simulation requires the compiled extension.
+pybind11==3.0.4

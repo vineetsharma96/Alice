@@ -1,0 +1,21 @@
+{
+  "checked": "2026-10-19",
+  "llama_cpp": {
+    "tag": "b11721",
+    "commit": "ff5a23376725e5a889fa0bfb987b7541dc304da0",
+    "license": "MIT",
+    "asset": "llama-b11721-bin-win-cpu-x64.zip",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11721/llama-b11721-bin-win-cpu-x64.zip",
+    "sha256": "19f5a91cfbd906fadfb36975a65a0c165c7db1a533d5db129dfa0a533dfdeaa1"
+  },
+  "model": {
+    "repository": "HuggingFaceTB/SmolLM2-360M-Instruct-GGUF",
+    "revision": "593b5a2e04c8f3e4ee880263f93e0bd2901ad47f",
+    "file": "smollm2-360m-instruct-q8_0.gguf",
+    "license": "Apache-2.0",
+    "size_bytes": 386404992,
+    "sha256": "48ab3034d0dd401fbc721eb1df3217902fee7dab9078992d66431f09b7750201"
+  },
+  "runtime": "CPU only; 2 threads; 1 parallel slot; 2048 context; loopback port 8081; no GPU layers",
+  "distribution": "Local downloaded files ignored by Git; no redistribution package created"
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "study": "native-consumption-feasibility-v1",
+  "seeds": [11, 22, 33, 44, 55],
+  "training_requests_kg": [0.1, 0.3, 0.6],
+  "training_available_fractions": [0, 0.35, 0.7, 1.15, 1.55, 2],
+  "passes_per_block": 2,
+  "evaluation_requests_kg": {"eat": [0.17, 0.47], "drink": [0.13, 0.53]},
+  "evaluation_available_fractions": [0, 0.9, 0.99, 1, 1.01, 1.1, 2],
+  "learning_rate": 0.25,
+  "weight_bound": 8,
+  "arms": ["frozen", "nearest_memory", "bracket_memory", "online"],
+  "gate": {"over_frozen": 0.1, "over_each_memory": 0.05, "bootstrap_lower_above": 0, "maximum_mean_retention_loss": 0.05, "maximum_seed_retention_loss": 0.05},
+  "limits": {"wall_seconds": 900, "disk_bytes": 536870912, "training_records_per_seed": 72, "population": 1, "food_kg": 16, "water_kg": 64}
+}

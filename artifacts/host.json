@@ -1,0 +1,28 @@
+{
+  "inspected_date": "2026-10-19",
+  "scope": "execution host only; deployment target unconfirmed",
+  "os": {
+    "Caption": "Microsoft Windows 10 Pro",
+    "Version": "10.0.19045",
+    "OSArchitecture": "64-bit",
+    "TotalVisibleMemorySize": 4082600,
+    "FreePhysicalMemory": 1219984
+  },
+  "cpu": {
+    "Name": "Intel(R) Core(TM) i3-6006U CPU @ 2.00GHz",
+    "NumberOfCores": 2,
+    "NumberOfLogicalProcessors": 4
+  },
+  "gpu": {
+    "Name": "Intel(R) HD Graphics 520",
+    "AdapterRAM": 1073741824,
+    "DriverVersion": "31.0.101.2111"
+  },
+  "disk": {
+    "Used": 116848267264,
+    "Free": 10346659840
+  },
+  "compiler": "g++.exe (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r3) 15.2.0",
+  "cmake": "cmake version 4.1.2",
+  "make": "GNU Make 4.4.1"
+}

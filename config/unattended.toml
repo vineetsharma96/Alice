@@ -1,0 +1,46 @@
+schema_version = 1
+seed = 20261019
+mode = "closed"
+
+[world]
+width_m = 16.0
+height_m = 16.0
+dt_s = 1.0
+population = 8
+population_limit = 8
+
+[cognition]
+provider = "disabled"
+interval_ticks = 50
+max_concurrency = 1
+max_input_tokens = 1024
+max_output_tokens = 128
+timeout_s = 10.0
+calls_per_simulated_day = 96
+
+[logging]
+level = "INFO"
+event_retention_count = 10000
+max_payload_bytes = 16384
+
+[agency]
+bodies_enabled = true
+policy = "utility"
+interval_ticks = 5
+food_kg = 16.0
+water_kg = 64.0
+food_regen_kg_s = 0.01
+water_regen_kg_s = 0.01
+
+[execution]
+batch_ticks = 50
+epoch_ticks = 500
+checkpoint_keep = 3
+max_db_bytes = 33554432
+max_archive_bytes = 134217728
+metrics_keep = 128
+memory_recent = 16
+queue_limit = 64
+calls_per_batch = 1
+cognition_call_limit = 128
+episodic_memory = true

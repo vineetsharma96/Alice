@@ -1,0 +1,83 @@
+{
+  "type": "failed evidence attempt before metadata fix",
+  "calls": [
+    {
+      "budget": {
+        "calls_per_simulated_day": 3,
+        "interval_ticks": 250,
+        "max_concurrency": 1,
+        "max_input_tokens": 1024,
+        "max_output_tokens": 192,
+        "provider": "llama.cpp",
+        "timeout_s": 30.0
+      },
+      "details": {},
+      "error": "ValueError: KeyError: 'build_info'",
+      "latency_s": 9.627419499999633,
+      "plan": {
+        "evidence": [
+          1
+        ],
+        "intent": "eat",
+        "interpretation": "A tentative next step from my own perception.",
+        "target": "",
+        "text": ""
+      },
+      "provider": "LlamaCpp",
+      "raw": "",
+      "status": "fallback"
+    },
+    {
+      "budget": {
+        "calls_per_simulated_day": 3,
+        "interval_ticks": 250,
+        "max_concurrency": 1,
+        "max_input_tokens": 1024,
+        "max_output_tokens": 192,
+        "provider": "llama.cpp",
+        "timeout_s": 30.0
+      },
+      "details": {},
+      "error": "ValueError: KeyError: 'build_info'",
+      "latency_s": 16.388607899999442,
+      "plan": {
+        "evidence": [
+          2
+        ],
+        "intent": "eat",
+        "interpretation": "A tentative next step from my own perception.",
+        "target": "",
+        "text": ""
+      },
+      "provider": "LlamaCpp",
+      "raw": "",
+      "status": "fallback"
+    },
+    {
+      "budget": {
+        "calls_per_simulated_day": 3,
+        "interval_ticks": 250,
+        "max_concurrency": 1,
+        "max_input_tokens": 1024,
+        "max_output_tokens": 192,
+        "provider": "llama.cpp",
+        "timeout_s": 30.0
+      },
+      "details": {},
+      "error": "ValueError: KeyError: 'build_info'",
+      "latency_s": 17.71847760000037,
+      "plan": {
+        "evidence": [
+          5
+        ],
+        "intent": "speak",
+        "interpretation": "A tentative next step from my own perception.",
+        "target": "",
+        "text": "I can see actor nearby."
+      },
+      "provider": "LlamaCpp",
+      "raw": "",
+      "status": "fallback"
+    }
+  ]
+}

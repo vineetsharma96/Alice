@@ -1,0 +1,32 @@
+{
+  "study": "native-consumption-feasibility-v1",
+  "started_at_utc": "2026-10-20T00:15:18.406182+00:00",
+  "registration": {
+    "preregistration_sha256": "b3443983dd3dd8fb1a96fc8fdacdd3c188b921d802d64e2921d27f85daab6cde",
+    "registered_at_utc": "2026-10-20T00:08:58Z",
+    "study_sha256": "9d26e1f9ae922c76b4f52efb6b590ca3f112030aecee0c4a86b094fe2b923c8a",
+    "trials_run": 0
+  },
+  "native_build_id": "1955dda0d7cd3350527e937dc626a1d3d5dcdb808b82a7207c1102db2957dfbd",
+  "orchestration_id": "995842ce19b4f6cbc5c2180dc41d78e661ec691e33405ec54bfb2778044e4e81",
+  "source_sha256": {
+    "underworld/learning.py": "e6882f118c57deefd8ce8eca3e869cce322c99277de8213f3e7100d4e17a27b6",
+    "scripts/phase9_experiment.py": "434d3c96caee8c4ae187646e2b681b33e17bafaa6a4f668299f8e97ebf05d70c",
+    "config/phase9_study.json": "9d26e1f9ae922c76b4f52efb6b590ca3f112030aecee0c4a86b094fe2b923c8a",
+    "docs/PHASE9_PREREGISTRATION.md": "b3443983dd3dd8fb1a96fc8fdacdd3c188b921d802d64e2921d27f85daab6cde"
+  },
+  "limits": {
+    "wall_seconds": 900,
+    "disk_bytes": 536870912,
+    "training_records_per_seed": 72,
+    "population": 1,
+    "food_kg": 16,
+    "water_kg": 64
+  },
+  "status": "completed",
+  "evidence_root": "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\data\\phase9-study-20261020",
+  "advance": false,
+  "wall_time_s": 781.469,
+  "finished_at_utc": "2026-10-20T00:28:19.789481+00:00",
+  "retained_bytes": 216560566
+}

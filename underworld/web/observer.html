@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Underworld Lab — Observer</title><link rel="stylesheet" href="/observer.css"><script src="/observer.js" defer></script></head>
+<body><header><div><span class="label">Underworld Lab</span><h1>World observer</h1></div><p id="time">Connecting…</p></header>
+<nav aria-label="Simulation controls"><button id="pause">Resume</button><button id="step">Step one tick</button>
+<label>Target speed <select id="speed"><option value="1">1×</option><option value="5">5×</option><option value="20">20×</option></select></label>
+<span id="status" role="status">Paused</span></nav><p id="condition" class="note"></p><p id="error" role="alert" hidden></p>
+<main><section class="world-panel" aria-labelledby="world-title"><div class="section-head"><h2 id="world-title">Region</h2><span id="population"></span></div>
+<svg id="world" role="img" aria-label="Live two-dimensional world. Select an inhabitant below to inspect." viewBox="0 0 640 640"></svg>
+<div class="legend"><span class="living">Inhabitant</span><span class="food">Food</span><span class="water">Water</span><span class="rock">Solid terrain / object</span><span class="book">Book</span><span class="avatar">Operator avatar</span><span class="thermal">Thermal vessel</span></div>
+<p class="note">Positions and outcomes come from the simulation. Refreshing this view does not advance time.</p></section>
+<aside><section aria-labelledby="agent-title"><div class="section-head"><h2 id="agent-title">Inhabitant</h2><select id="agent" aria-label="Selected inhabitant"></select></div>
+<p id="activity">Loading state…</p><div id="needs"></div><h3>Inventory</h3><p id="inventory"></p><h3>Recent actions</h3><ol id="actions"></ol></section>
+<section class="ledger"><h2>Identity and memory</h2><p id="identity" class="note"></p><p id="plan" class="note"></p><ol id="memories" class="note"></ol><p class="note">Private records shown to the operator. Beliefs and heard reports remain unverified.</p></section>
+<section class="ledger" id="culture-panel" hidden><h2>Practice and shared work</h2><p id="practice" class="note"></p><p id="procedure" class="note"></p><h3>Observed relationships</h3><ol id="relationships" class="note"></ol><h3>Agreements</h3><ol id="agreements" class="note"></ol><h3>Validated work</h3><ol id="batches" class="note"></ol><p class="note">Practice changes bounded task efficiency. Books carry unverified procedures; reading grants no execution skill. Cooperation is optional. These records do not train neural weights.</p></section>
+<section class="ledger"><h2>Resource ledger</h2><div id="resources"></div><p id="operator-sources" class="note"></p><p class="note">Consumed material remains accounted for in abstract ingested reservoirs. These bodies are engineered approximations.</p></section>
+<section class="ledger" id="thermal-panel" hidden><h2>Heat and materials</h2><p class="note">Exact operator instruments. Inhabitants receive approximate readings through completed inspections.</p><p id="thermal-boundary" class="note"></p><ol id="thermal-cells" class="note"></ol><p id="thermal-flux" class="note"></p><p id="thermal-error" class="note"></p></section>
+<section class="ledger"><h2>Operator teaching</h2><p id="teaching-mode" class="note"></p>
+<form id="teaching-form"><label>Intervention<select id="intervention-kind"><option value="place_book">Place a book</option><option value="avatar_message">Speak through avatar</option><option value="introduce_object">Introduce material or object</option><option value="broadcast">Broadcast to living inhabitants</option></select></label>
+<div class="operator-fields" id="position-fields"><label>X (m)<input id="operator-x" type="number" value="2" step="0.1" required></label><label>Y (m)<input id="operator-y" type="number" value="3" step="0.1" required></label></div>
+<div class="operator-fields" id="material-fields"><label>Mass (kg)<input id="operator-mass" type="number" value="0.1" min="0.000000001" max="1000" step="any"></label><label>Energy input (J)<input id="operator-energy" type="number" value="0" min="0" max="1000000000" step="any"></label></div>
+<label id="material-label">Material<select id="operator-material"><option value="inert_material">Inert solid object</option><option value="food">Food pile</option><option value="water">Water pile</option></select></label>
+<label id="text-label">Book or message text<textarea id="operator-text" rows="4" maxlength="1024" placeholder="Claims remain unverified. Books must be read before their text is available."></textarea></label>
+<button id="apply-intervention" type="submit">Apply intervention</button></form>
+<h3>Intervention history</h3><ol id="interventions" class="note"></ol></section></aside></main>
+<footer>Local research observer · Geometric senses · Bounded cognition · Memory accumulation does not train model weights</footer></body></html>

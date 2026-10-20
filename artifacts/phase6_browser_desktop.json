@@ -1,0 +1,19 @@
+{
+  "time": "Tick 319 · 1.06 simulated min",
+  "paused": "Paused",
+  "population": "1 / 2 present and alive",
+  "error": null,
+  "selected": "agent-2",
+  "cultureVisible": true,
+  "practice": "Water conditioning · level 3 / 3 · minimum work 2.29 s · last validated event #495",
+  "procedure": "Own procedure recall: reported · source artifact-348 · validation origin #296 → artifact #348 → read #364",
+  "relationships": [
+    "agent-1 · read_artifact: 1 · resource_given: 1 · task_accepted: 1 · task_completed: 1 · task_offered: 1 · evidence #304, #312, #320, #364, #412"
+  ],
+  "agreements": [
+    "agent-1 → agent-2 · Condition water using the local apparatus · completed · offer #304"
+  ],
+  "batches": 5,
+  "scrollWidth": 1425,
+  "viewport": 1440
+}

@@ -1,0 +1,35 @@
+schema_version = 1
+seed = 20261019
+mode = "closed"
+
+[world]
+width_m = 16.0
+height_m = 16.0
+dt_s = 0.2
+population = 8
+population_limit = 8
+
+[cognition]
+provider = "llama.cpp"
+interval_ticks = 250
+max_concurrency = 1
+max_input_tokens = 1024
+max_output_tokens = 192
+timeout_s = 30.0
+calls_per_simulated_day = 96
+
+[logging]
+level = "INFO"
+event_retention_count = 10000
+max_payload_bytes = 16384
+
+[agency]
+bodies_enabled = true
+policy = "utility"
+interval_ticks = 25
+food_kg = 16.0
+water_kg = 64.0
+food_regen_kg_s = 0.0
+water_regen_kg_s = 0.0
+
+

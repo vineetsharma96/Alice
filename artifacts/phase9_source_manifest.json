@@ -1,0 +1,13 @@
+{
+  "purpose": "Retained Phase 9 source snapshots; native/runtime identities remain separately pinned in study manifest",
+  "sha256": {
+    "underworld/learning.py": "e6882f118c57deefd8ce8eca3e869cce322c99277de8213f3e7100d4e17a27b6",
+    "scripts/phase9_experiment.py": "434d3c96caee8c4ae187646e2b681b33e17bafaa6a4f668299f8e97ebf05d70c",
+    "scripts/phase9_audit.py": "d85d068d1b92bd8a6b46a7ffe443b2c7e3e61be238d132a44ebf4321917379e8",
+    "scripts/phase9_report.py": "b548d53114d143503b024cf1de7839cca83bca049a42e7be1d1e0df14153b4d8",
+    "scripts/verify.py": "b3e75804daf279bbc51a1c6a665a53e7f17880af410d172c3b57b20613314533",
+    "tests/test_phase9.py": "d1c647ebc21c9c6ced6cd6520d56e6cd629aec0891ed27abb20cc9f8726dc181",
+    "config/phase9_study.json": "9d26e1f9ae922c76b4f52efb6b590ca3f112030aecee0c4a86b094fe2b923c8a",
+    "docs/PHASE9_PREREGISTRATION.md": "b3443983dd3dd8fb1a96fc8fdacdd3c188b921d802d64e2921d27f85daab6cde"
+  }
+}

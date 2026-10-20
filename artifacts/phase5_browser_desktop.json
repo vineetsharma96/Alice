@@ -1,0 +1,17 @@
+{
+  "title": "Underworld Lab — Observer",
+  "tick": "Tick 1035 · 3.45 simulated min",
+  "status": "Paused",
+  "error": null,
+  "heatVisible": true,
+  "cells": [
+    "thermal-1 · 595.56 K · off · ice / liquid / vapor 0.0 / 0.0 / 15.0 g · fuel / oxygen / product 20.0 / 40.0 / 0.0 g",
+    "thermal-2 · 373.15 K · off · ice / liquid / vapor 0.0 / 21.9 / 3.1 g · fuel / oxygen / product 20.0 / 40.0 / 0.0 g",
+    "thermal-3 · 339.32 K · off · ice / liquid / vapor 0.0 / 20.0 / 0.0 g · fuel / oxygen / product 20.0 / 40.0 / 0.0 g",
+    "thermal-4 · 306.26 K · off · ice / liquid / vapor 0.0 / 20.0 / 0.0 g · fuel / oxygen / product 20.0 / 40.0 / 0.0 g"
+  ],
+  "boundary": "Insulated boundaries · environment 301.90 K · artificial fuel X + 2 oxygen → 3 product P",
+  "energy": "Global energy residual -3.73e-9 J · tolerance 3.42e-4 J",
+  "scrollWidth": 1425,
+  "viewport": 1440
+}

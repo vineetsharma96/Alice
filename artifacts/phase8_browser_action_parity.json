@@ -1,0 +1,51 @@
+{
+  "requests": [
+    {
+      "branch_id": "ac179238-c101-4bce-bcfb-7789dcd382d3",
+      "intervention_id": "af37ded71bab4b0f8a7733ee3ecb9346",
+      "kind": "place_book",
+      "observation_version": "5",
+      "parameters": {
+        "energy_j": 0,
+        "entity_id": "book-af37ded71bab",
+        "mass_kg": 0.01,
+        "text": "<script>window.viewerInjected = true</script> Browser-recorded book, unverified.",
+        "x_m": 4,
+        "y_m": 4
+      },
+      "run_id": "ac179238-c101-4bce-bcfb-7789dcd382d3",
+      "schema_version": 1
+    }
+  ],
+  "results": [
+    {
+      "schema_version": 1,
+      "intervention_id": "af37ded71bab4b0f8a7733ee3ecb9346",
+      "status": "applied",
+      "event_refs": [
+        "19"
+      ]
+    }
+  ],
+  "viewer_hash": "747a36cd0a311fd35eec753e7ead83c5b3edc93f43b65b3f99ab443f0e1a41e8",
+  "headless_hash": "747a36cd0a311fd35eec753e7ead83c5b3edc93f43b65b3f99ab443f0e1a41e8",
+  "tick": "5",
+  "match": true,
+  "camera_did_not_change_before_hash": true,
+  "viewer_after_time_controls_hash": "75bfbaa5b8426d1db8706a8275082dfa0bc8f0b3d9d7ca3a92b65406d1308c91",
+  "headless_after_time_controls_hash": "75bfbaa5b8426d1db8706a8275082dfa0bc8f0b3d9d7ca3a92b65406d1308c91",
+  "final_tick": "85",
+  "headless_advance_wall_s": 0.21886500000255182,
+  "replays": [
+    {
+      "replay_matches": true,
+      "tick": "85",
+      "state_hash": "75bfbaa5b8426d1db8706a8275082dfa0bc8f0b3d9d7ca3a92b65406d1308c91"
+    },
+    {
+      "replay_matches": true,
+      "tick": "85",
+      "state_hash": "75bfbaa5b8426d1db8706a8275082dfa0bc8f0b3d9d7ca3a92b65406d1308c91"
+    }
+  ]
+}

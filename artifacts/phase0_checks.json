@@ -1,0 +1,51 @@
+{
+  "phase": 0,
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "os": "Windows-10-10.0.19045-SP0",
+  "sqlite": "3.49.1",
+  "checks": [
+    {
+      "command": [
+        "ctest",
+        "--test-dir",
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\build",
+        "--output-on-failure"
+      ],
+      "returncode": 0,
+      "wall_time_s": 0.12280710000004547,
+      "stdout": "Test project C:/Users/abc/Documents/ChatGPT/UnderWorld/build\n    Start 1: core_scene\n1/2 Test #1: core_scene .......................   Passed    0.02 sec\n    Start 2: core_reject_population\n2/2 Test #2: core_reject_population ...........   Passed    0.02 sec\n\n100% tests passed, 0 tests failed out of 2\n\nTotal Test time (real) =   0.05 sec\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "wall_time_s": 0.5244327999998859,
+      "stdout": "",
+      "stderr": "test_reject_invalid_and_unimplemented_configuration (test_scaffold.ConfigTests.test_reject_invalid_and_unimplemented_configuration) ... ok\ntest_unknown_schema_and_keys_rejected (test_scaffold.ConfigTests.test_unknown_schema_and_keys_rejected) ... ok\ntest_core_rejects_invalid_arguments (test_scaffold.CoreTests.test_core_rejects_invalid_arguments) ... ok\ntest_scene_is_seeded_bounded_and_has_stable_unique_ids (test_scaffold.CoreTests.test_scene_is_seeded_bounded_and_has_stable_unique_ids) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.212s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\.venv\\Scripts\\python.exe",
+        "-m",
+        "underworld",
+        "inspect",
+        "--core",
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\build\\underworld_core.exe"
+      ],
+      "returncode": 0,
+      "wall_time_s": 0.2843778999999813,
+      "stdout": "{\n  \"schema_version\": 1,\n  \"kind\": \"initial_scene\",\n  \"phase\": 0,\n  \"seed\": \"20261019\",\n  \"tick\": 0,\n  \"observation_version\": 0,\n  \"simulated_time_s\": 0,\n  \"dt_s\": 0.1,\n  \"world_bounds_m\": {\n    \"width\": 64,\n    \"height\": 64\n  },\n  \"entities\": [\n    {\n      \"entity_id\": \"agent-1\",\n      \"kind\": \"inhabitant_seed\",\n      \"position_m\": [\n        26.63658859422635,\n        47.30951043972885\n      ]\n    },\n    {\n      \"entity_id\": \"agent-2\",\n      \"kind\": \"inhabitant_seed\",\n      \"position_m\": [\n        13.544015986566869,\n        18.40127349155621\n      ]\n    },\n    {\n      \"entity_id\": \"agent-3\",\n      \"kind\": \"inhabitant_seed\",\n      \"position_m\": [\n        14.689140986089505,\n        38.856535397106605\n      ]\n    },\n    {\n      \"entity_id\": \"agent-4\",\n      \"kind\": \"inhabitant_seed\",\n      \"position_m\": [\n        55.69000052324408,\n        17.664598793526817\n      ]\n    },\n    {\n      \"entity_id\": \"agent-5\",\n      \"kind\": \"inhabitant_seed\",\n      \"position_m\": [\n        56.34281519384331,\n        12.573836065176845\n      ]\n    },\n    {\n      \"entity_id\": \"agent-6\",\n      \"kind\": \"inhabitant_seed\",\n      \"position_m\": [\n        20.880090773432396,\n        27.66067196161438\n      ]\n    },\n    {\n      \"entity_id\": \"agent-7\",\n      \"kind\": \"inhabitant_seed\",\n      \"position_m\": [\n        25.064617815489743,\n        61.04732946437933\n      ]\n    },\n    {\n      \"entity_id\": \"agent-8\",\n      \"kind\": \"inhabitant_seed\",\n      \"position_m\": [\n        18.596948254605945,\n        40.03122411120113\n      ]\n    },\n    {\n      \"entity_id\": \"resource-1\",\n      \"kind\": \"food\",\n      \"position_m\": [\n        2,\n        2\n      ],\n      \"mass_kg\": 16\n    },\n    {\n      \"entity_id\": \"resource-2\",\n      \"kind\": \"water\",\n      \"position_m\": [\n        3,\n        2\n      ],\n      \"mass_kg\": 64\n    },\n    {\n      \"entity_id\": \"resource-3\",\n      \"kind\": \"inert_material\",\n      \"position_m\": [\n        4,\n        2\n      ],\n      \"mass_kg\": 32\n    }\n  ],\n  \"capabilities\": [\n    \"scene_initialization\"\n  ],\n  \"cognition\": \"not_implemented\"\n}\n",
+      "stderr": "INFO:root:Initialized scene: seed=20261019 population=8 tick=0; cognition disabled\n"
+    }
+  ],
+  "initial_scene_sha256": "9e2c08a72fc7af8f99c9ba09ecf0f7a52181d7514c1759307d98274760332868",
+  "config_sha256": "1e0d005e27a03d6707a1bafe0cfe00012c5c2e3dcce57bac4516e199a91a0255"
+}

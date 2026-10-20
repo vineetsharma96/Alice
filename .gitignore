@@ -1,0 +1,10 @@
+.venv/
+build/
+__pycache__/
+*.pyc
+data/
+models/
+.env
+.playwright-mcp/
+.tools/
+node_modules/

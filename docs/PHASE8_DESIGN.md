@@ -1,0 +1,11 @@
+# Viewer design read and audit
+
+This is an additive research workbench, not a landing-page redesign. The existing observer's contracts, source-bound memory, thermal instruments and operator channel remain available. The prior 2D page mixed the map and long forms in one scrolling document; the new route gives the world a stable central viewport and an independently scrolling inspection rail. No previous phase's visual history is presented as live evidence.
+
+Design read: a restrained field-lab workbench with readable controls, a modest geometric world and explicit provenance. `DESIGN_VARIANCE=3`, `MOTION_INTENSITY=2`, `VISUAL_DENSITY=6`: task-focused layout, only user-directed camera motion, and compact inspection data. Native CSS and the existing Python server are retained; no enterprise design-system branding or new application framework is implied.
+
+The palette uses charcoal/slate surfaces, one sage interactive accent and semantic world-material colors. All controls use a 3px radius. Typography uses installed Segoe UI/system sans, with monospace only for IDs/records. No decorative image, photo, generated visual, external font, icon family, hero, logo wall, marquee or automatic cinematic sequence is needed for this product. The 3D demonstration is the actual renderer.
+
+Pre-flight checks applied: real snapshot-driven geometry; coherent dark theme; native labeled controls with visible keyboard focus; high-contrast buttons and input text; no wrapped desktop button labels; 1440px and 390px layouts without horizontal overflow; mobile entity selector and stacked inspection; keyboard camera/select controls; reduced-motion support; loading/disconnection, rejected-command and WebGL-failure states; explicit 2D-mechanics label; no invented outcomes, source claims or decorative metrics. Actual glyphs/shapes are geometric symbols, not realistic human anatomy.
+
+Desktop and mobile screenshots were inspected. Browser checks covered ray selection, WASD, fit/focus, native read-gated book text, literal hostile source text, operator placement, collisions, time controls, reconnection, disabled read-only controls and graphics-context recovery. The scene uses no visual simulation extrapolation. Existing mechanical laws and policy/orchestration identities remain unchanged.

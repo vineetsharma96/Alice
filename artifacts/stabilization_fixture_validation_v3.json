@@ -1,0 +1,88 @@
+{
+  "cases": [
+    {
+      "seed": 808,
+      "receipt": {
+        "schema_version": 1,
+        "request_id": "lab-agent-2-gather-179",
+        "agent_id": "agent-2",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "179",
+        "completed_tick": "180",
+        "observation_version": "180",
+        "event_refs": [
+          "196",
+          "197",
+          "198"
+        ],
+        "observable_effects": {
+          "description": "gather:400000000ug"
+        }
+      },
+      "empty": true,
+      "replay": {
+        "replay_matches": true,
+        "tick": "180",
+        "state_hash": "bc97127af46e9287f9c31f3fc125d0f7a910c380f9049615834ac8a6ee33a8f6"
+      }
+    },
+    {
+      "seed": 909,
+      "receipt": {
+        "schema_version": 1,
+        "request_id": "lab-agent-2-gather-182",
+        "agent_id": "agent-2",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "182",
+        "completed_tick": "183",
+        "observation_version": "183",
+        "event_refs": [
+          "203",
+          "204",
+          "205"
+        ],
+        "observable_effects": {
+          "description": "gather:400000000ug"
+        }
+      },
+      "empty": true,
+      "replay": {
+        "replay_matches": true,
+        "tick": "183",
+        "state_hash": "d133cc62fb4e8a874a9e3aab2cf16180ef9ce68a611c25debdcdc5ab46960124"
+      }
+    },
+    {
+      "seed": 1001,
+      "receipt": {
+        "schema_version": 1,
+        "request_id": "lab-agent-2-gather-181",
+        "agent_id": "agent-2",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "181",
+        "completed_tick": "182",
+        "observation_version": "182",
+        "event_refs": [
+          "198",
+          "199",
+          "200"
+        ],
+        "observable_effects": {
+          "description": "gather:400000000ug"
+        }
+      },
+      "empty": true,
+      "replay": {
+        "replay_matches": true,
+        "tick": "182",
+        "state_hash": "d285be1395315de7baf79f7ab94c87b117234e5e178b2e2c14f1c52ba143a0d7"
+      }
+    }
+  ]
+}

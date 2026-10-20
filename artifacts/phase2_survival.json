@@ -1,0 +1,700 @@
+{
+  "phase": 2,
+  "seed": 20261019,
+  "build_id": "6c6e214a1cc4318a378e9683a53f6e8906a6c6f0b8fc660d4ae4c439fe58e097",
+  "config": {
+    "schema_version": 1,
+    "seed": 20261019,
+    "mode": "closed",
+    "world": {
+      "width_m": 16.0,
+      "height_m": 16.0,
+      "dt_s": 0.2,
+      "population": 8,
+      "population_limit": 8
+    },
+    "cognition": {
+      "provider": "disabled",
+      "interval_ticks": 50,
+      "max_concurrency": 1,
+      "max_input_tokens": 1024,
+      "max_output_tokens": 128,
+      "timeout_s": 10.0,
+      "calls_per_simulated_day": 96
+    },
+    "logging": {
+      "level": "INFO",
+      "event_retention_count": 10000,
+      "max_payload_bytes": 16384
+    },
+    "agency": {
+      "bodies_enabled": true,
+      "policy": "utility",
+      "interval_ticks": 25,
+      "food_kg": 16.0,
+      "water_kg": 64.0,
+      "food_regen_kg_s": 0.0,
+      "water_regen_kg_s": 0.0
+    }
+  },
+  "runs": [
+    {
+      "condition": "resources_available",
+      "execution": "durable_one_tick_transactions",
+      "ticks": 4500,
+      "simulated_time_s": 900.0,
+      "wall_time_s": 54.542121199999656,
+      "ticks_per_wall_s": 82.50504199312344,
+      "population": 8,
+      "alive": 8,
+      "action_requests": {
+        "gather": 40,
+        "move": 128,
+        "rest": 40,
+        "drink": 24,
+        "eat": 16
+      },
+      "retained_event_counts": {
+        "action_accepted": 248,
+        "tick": 4500,
+        "action_completed": 247,
+        "mass_transfer": 40,
+        "action_failed": 1,
+        "consumption": 40
+      },
+      "observed_failures": {
+        "COLLISION": 1
+      },
+      "initial_material_totals_ug": {
+        "food": "16000000000",
+        "inert_material": "32000000000",
+        "water": "64000000000"
+      },
+      "final_snapshot": {
+        "schema_version": 1,
+        "kind": "world_snapshot",
+        "run_id": "9929bfd5-ac1e-41a0-9a72-775ee2ebe9c9",
+        "branch_id": "9929bfd5-ac1e-41a0-9a72-775ee2ebe9c9",
+        "tick": "4500",
+        "observation_version": "4500",
+        "last_event_seq": "5076",
+        "seed": "20261019",
+        "dt_s": 0.2,
+        "simulated_time_s": 900.0,
+        "laws_version": "bodies-2",
+        "build_id": "6c6e214a1cc4318a378e9683a53f6e8906a6c6f0b8fc660d4ae4c439fe58e097",
+        "world_bounds_m": {
+          "width": 16.0,
+          "height": 16.0
+        },
+        "entities": [
+          {
+            "entity_id": "terrain-1",
+            "kind": "rock",
+            "position_m": [
+              8.0,
+              8.0
+            ],
+            "radius_m": 1.0,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "agent-1",
+            "kind": "actor",
+            "position_m": [
+              2.0,
+              3.0
+            ],
+            "radius_m": 0.25,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {
+              "food": "400000000",
+              "water": "900000000"
+            },
+            "alive": true,
+            "body": {
+              "hunger": 0.44999999999994056,
+              "thirst": 0.23129999999999729,
+              "fatigue": 0.12999999999997164,
+              "health": 1.0,
+              "alive": true,
+              "food_ingested_ug": "400000000",
+              "water_ingested_ug": "900000000"
+            }
+          },
+          {
+            "entity_id": "agent-2",
+            "kind": "actor",
+            "position_m": [
+              4.016267485762415,
+              2.4209517756015986
+            ],
+            "radius_m": 0.25,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {
+              "food": "400000000",
+              "water": "900000000"
+            },
+            "alive": true,
+            "body": {
+              "hunger": 0.4499999999999281,
+              "thirst": 0.23879999999999715,
+              "fatigue": 0.17415999999998172,
+              "health": 1.0,
+              "alive": true,
+              "food_ingested_ug": "400000000",
+              "water_ingested_ug": "900000000"
+            }
+          },
+          {
+            "entity_id": "agent-3",
+            "kind": "actor",
+            "position_m": [
+              2.7778174593052025,
+              2.7778174593052025
+            ],
+            "radius_m": 0.25,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {
+              "food": "400000000",
+              "water": "900000000"
+            },
+            "alive": true,
+            "body": {
+              "hunger": 0.44999999999994056,
+              "thirst": 0.23129999999999729,
+              "fatigue": 0.1311199999999716,
+              "health": 1.0,
+              "alive": true,
+              "food_ingested_ug": "400000000",
+              "water_ingested_ug": "900000000"
+            }
+          },
+          {
+            "entity_id": "agent-4",
+            "kind": "actor",
+            "position_m": [
+              2.0,
+              2.0
+            ],
+            "radius_m": 0.25,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {
+              "food": "400000000",
+              "water": "900000000"
+            },
+            "alive": true,
+            "body": {
+              "hunger": 0.44999999999994056,
+              "thirst": 0.23879999999999715,
+              "fatigue": 0.13431999999997157,
+              "health": 1.0,
+              "alive": true,
+              "food_ingested_ug": "400000000",
+              "water_ingested_ug": "900000000"
+            }
+          },
+          {
+            "entity_id": "agent-5",
+            "kind": "actor",
+            "position_m": [
+              2.777817459305202,
+              1.2221825406947975
+            ],
+            "radius_m": 0.25,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {
+              "food": "400000000",
+              "water": "900000000"
+            },
+            "alive": true,
+            "body": {
+              "hunger": 0.44999999999994056,
+              "thirst": 0.23879999999999715,
+              "fatigue": 0.13495999999997144,
+              "health": 1.0,
+              "alive": true,
+              "food_ingested_ug": "400000000",
+              "water_ingested_ug": "900000000"
+            }
+          },
+          {
+            "entity_id": "agent-6",
+            "kind": "actor",
+            "position_m": [
+              3.4209517756015995,
+              3.016267485762415
+            ],
+            "radius_m": 0.25,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {
+              "food": "400000000",
+              "water": "900000000"
+            },
+            "alive": true,
+            "body": {
+              "hunger": 0.44999999999993856,
+              "thirst": 0.14129999999999887,
+              "fatigue": 0.15983999999997778,
+              "health": 1.0,
+              "alive": true,
+              "food_ingested_ug": "400000000",
+              "water_ingested_ug": "900000000"
+            }
+          },
+          {
+            "entity_id": "agent-7",
+            "kind": "actor",
+            "position_m": [
+              3.1,
+              1.9999999999999998
+            ],
+            "radius_m": 0.25,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {
+              "food": "400000000",
+              "water": "900000000"
+            },
+            "alive": true,
+            "body": {
+              "hunger": 0.44999999999994056,
+              "thirst": 0.23879999999999715,
+              "fatigue": 0.13247999999997156,
+              "health": 1.0,
+              "alive": true,
+              "food_ingested_ug": "400000000",
+              "water_ingested_ug": "900000000"
+            }
+          },
+          {
+            "entity_id": "agent-8",
+            "kind": "actor",
+            "position_m": [
+              2.0,
+              1.0
+            ],
+            "radius_m": 0.25,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {
+              "food": "400000000",
+              "water": "900000000"
+            },
+            "alive": true,
+            "body": {
+              "hunger": 0.44999999999994056,
+              "thirst": 0.23879999999999715,
+              "fatigue": 0.14655999999997288,
+              "health": 1.0,
+              "alive": true,
+              "food_ingested_ug": "400000000",
+              "water_ingested_ug": "900000000"
+            }
+          },
+          {
+            "entity_id": "resource-1",
+            "kind": "food",
+            "position_m": [
+              2.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 9.6,
+            "mass_ug": "9600000000",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "resource-2",
+            "kind": "water",
+            "position_m": [
+              3.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 49.6,
+            "mass_ug": "49600000000",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "resource-3",
+            "kind": "inert_material",
+            "position_m": [
+              4.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 32.0,
+            "mass_ug": "32000000000",
+            "inventory_ug": {}
+          }
+        ],
+        "outstanding_actions": [],
+        "material_totals_ug": {
+          "food": "16000000000",
+          "inert_material": "32000000000",
+          "water": "64000000000"
+        },
+        "solar_input_j": 753545.6915592147,
+        "environment_energy_j": 753545.6915592147,
+        "sunlight_w_m2": 6.540312923014306,
+        "scripted": false,
+        "next_script_tick": "0",
+        "bodies_enabled": true,
+        "initial_mass_ug": {
+          "food": 16000000000,
+          "inert_material": 32000000000,
+          "water": 64000000000
+        },
+        "boundary_sources_ug": {
+          "food": 0,
+          "inert_material": 0,
+          "water": 0
+        },
+        "config_hash": "1e3c13fd045a7d43be96b3ac15ac2678b72a4aeae751ac583c8649e7e9b6dc08",
+        "state_hash": "7e77e0e6dc73ff2a9a8ce495090057794c21914b6f35de3f82bf700f315de915",
+        "retained_events": 5076,
+        "recorded_decisions": 248
+      },
+      "database_bytes": 929792,
+      "replay": {
+        "replay_matches": true,
+        "tick": "4500",
+        "state_hash": "7e77e0e6dc73ff2a9a8ce495090057794c21914b6f35de3f82bf700f315de915"
+      }
+    },
+    {
+      "condition": "no_food_or_water",
+      "execution": "native_with_same_observation_only_policy",
+      "config": {
+        "schema_version": 1,
+        "seed": 20261019,
+        "mode": "closed",
+        "world": {
+          "width_m": 16.0,
+          "height_m": 16.0,
+          "dt_s": 0.2,
+          "population": 8,
+          "population_limit": 8
+        },
+        "cognition": {
+          "provider": "disabled",
+          "interval_ticks": 50,
+          "max_concurrency": 1,
+          "max_input_tokens": 1024,
+          "max_output_tokens": 128,
+          "timeout_s": 10.0,
+          "calls_per_simulated_day": 96
+        },
+        "logging": {
+          "level": "INFO",
+          "event_retention_count": 10000,
+          "max_payload_bytes": 16384
+        },
+        "agency": {
+          "bodies_enabled": true,
+          "policy": "utility",
+          "interval_ticks": 25,
+          "food_kg": 0,
+          "water_kg": 0,
+          "food_regen_kg_s": 0,
+          "water_regen_kg_s": 0
+        }
+      },
+      "ticks": 4500,
+      "simulated_time_s": 900.0,
+      "wall_time_s": 2.3809055000001536,
+      "population": 8,
+      "alive": 0,
+      "action_requests": {
+        "move": 436,
+        "rest": 18
+      },
+      "event_counts": {
+        "action_accepted": 454,
+        "tick": 4500,
+        "action_completed": 444,
+        "action_failed": 10,
+        "death": 8
+      },
+      "observed_failures": {
+        "COLLISION": 10
+      },
+      "final_snapshot": {
+        "schema_version": 1,
+        "kind": "world_snapshot",
+        "run_id": "test",
+        "branch_id": "test",
+        "tick": "4500",
+        "observation_version": "4500",
+        "last_event_seq": "5416",
+        "seed": "20261019",
+        "dt_s": 0.2,
+        "simulated_time_s": 900.0,
+        "laws_version": "bodies-2",
+        "build_id": "6c6e214a1cc4318a378e9683a53f6e8906a6c6f0b8fc660d4ae4c439fe58e097",
+        "world_bounds_m": {
+          "width": 16.0,
+          "height": 16.0
+        },
+        "entities": [
+          {
+            "entity_id": "terrain-1",
+            "kind": "rock",
+            "position_m": [
+              8.0,
+              8.0
+            ],
+            "radius_m": 1.0,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "agent-1",
+            "kind": "actor",
+            "position_m": [
+              10.014758392690776,
+              10.330764475101939
+            ],
+            "radius_m": 0.25,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {},
+            "alive": false,
+            "body": {
+              "hunger": 0.8833999999999412,
+              "thirst": 1.0,
+              "fatigue": 0.2120000000000017,
+              "health": 0.0,
+              "alive": false,
+              "food_ingested_ug": "0",
+              "water_ingested_ug": "0"
+            }
+          },
+          {
+            "entity_id": "agent-2",
+            "kind": "actor",
+            "position_m": [
+              4.0,
+              15.0
+            ],
+            "radius_m": 0.25,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {},
+            "alive": false,
+            "body": {
+              "hunger": 0.8833999999999412,
+              "thirst": 1.0,
+              "fatigue": 0.7228800000000428,
+              "health": 0.0,
+              "alive": false,
+              "food_ingested_ug": "0",
+              "water_ingested_ug": "0"
+            }
+          },
+          {
+            "entity_id": "agent-3",
+            "kind": "actor",
+            "position_m": [
+              7.7427813527082066,
+              9.297112541083282
+            ],
+            "radius_m": 0.25,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {},
+            "alive": false,
+            "body": {
+              "hunger": 0.8833999999999412,
+              "thirst": 1.0,
+              "fatigue": 0.1556799999999831,
+              "health": 0.0,
+              "alive": false,
+              "food_ingested_ug": "0",
+              "water_ingested_ug": "0"
+            }
+          },
+          {
+            "entity_id": "agent-4",
+            "kind": "actor",
+            "position_m": [
+              10.501219809782302,
+              10.123475237772123
+            ],
+            "radius_m": 0.25,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {},
+            "alive": false,
+            "body": {
+              "hunger": 0.8833999999999412,
+              "thirst": 1.0,
+              "fatigue": 0.21272000000000285,
+              "health": 0.0,
+              "alive": false,
+              "food_ingested_ug": "0",
+              "water_ingested_ug": "0"
+            }
+          },
+          {
+            "entity_id": "agent-5",
+            "kind": "actor",
+            "position_m": [
+              10.26239416802114,
+              3.1963848893924776
+            ],
+            "radius_m": 0.25,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {},
+            "alive": false,
+            "body": {
+              "hunger": 0.8833999999999412,
+              "thirst": 1.0,
+              "fatigue": 0.18615999999999017,
+              "health": 0.0,
+              "alive": false,
+              "food_ingested_ug": "0",
+              "water_ingested_ug": "0"
+            }
+          },
+          {
+            "entity_id": "agent-6",
+            "kind": "actor",
+            "position_m": [
+              8.257218647291793,
+              9.297112541083282
+            ],
+            "radius_m": 0.25,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {},
+            "alive": false,
+            "body": {
+              "hunger": 0.8833999999999412,
+              "thirst": 1.0,
+              "fatigue": 0.15631999999998308,
+              "health": 0.0,
+              "alive": false,
+              "food_ingested_ug": "0",
+              "water_ingested_ug": "0"
+            }
+          },
+          {
+            "entity_id": "agent-7",
+            "kind": "actor",
+            "position_m": [
+              15.0,
+              5.666666666666667
+            ],
+            "radius_m": 0.25,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {},
+            "alive": false,
+            "body": {
+              "hunger": 0.8833999999999412,
+              "thirst": 1.0,
+              "fatigue": 0.7253600000000441,
+              "health": 0.0,
+              "alive": false,
+              "food_ingested_ug": "0",
+              "water_ingested_ug": "0"
+            }
+          },
+          {
+            "entity_id": "agent-8",
+            "kind": "actor",
+            "position_m": [
+              10.274303060561028,
+              2.694655704576548
+            ],
+            "radius_m": 0.25,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {},
+            "alive": false,
+            "body": {
+              "hunger": 0.8833999999999412,
+              "thirst": 1.0,
+              "fatigue": 0.18919999999999082,
+              "health": 0.0,
+              "alive": false,
+              "food_ingested_ug": "0",
+              "water_ingested_ug": "0"
+            }
+          },
+          {
+            "entity_id": "resource-1",
+            "kind": "food",
+            "position_m": [
+              2.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "resource-2",
+            "kind": "water",
+            "position_m": [
+              3.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "inventory_ug": {}
+          },
+          {
+            "entity_id": "resource-3",
+            "kind": "inert_material",
+            "position_m": [
+              4.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 32.0,
+            "mass_ug": "32000000000",
+            "inventory_ug": {}
+          }
+        ],
+        "outstanding_actions": [],
+        "material_totals_ug": {
+          "food": "0",
+          "inert_material": "32000000000",
+          "water": "0"
+        },
+        "solar_input_j": 753545.6915592147,
+        "environment_energy_j": 753545.6915592147,
+        "sunlight_w_m2": 6.540312923014306,
+        "scripted": false,
+        "next_script_tick": "0",
+        "bodies_enabled": true,
+        "initial_mass_ug": {
+          "food": 0,
+          "inert_material": 32000000000,
+          "water": 0
+        },
+        "boundary_sources_ug": {
+          "food": 0,
+          "inert_material": 0,
+          "water": 0
+        }
+      },
+      "state_hash": "8eb9243da88d590a7f8bc78b16a29462efbb48c3791c69145635b08cb6ee18b3"
+    }
+  ]
+}

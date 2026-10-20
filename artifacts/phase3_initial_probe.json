@@ -1,0 +1,44 @@
+{
+  "budget": {
+    "calls_per_simulated_day": 96,
+    "interval_ticks": 250,
+    "max_concurrency": 1,
+    "max_input_tokens": 1024,
+    "max_output_tokens": 192,
+    "provider": "llama.cpp",
+    "timeout_s": 30.0
+  },
+  "details": {
+    "context_size": 2048,
+    "endpoint": "http://127.0.0.1:8081",
+    "input_tokens": 294,
+    "llama_cpp": "b11721",
+    "model": "SmolLM2-360M-Instruct-Q8_0",
+    "output_tokens": 49,
+    "seed": 20261019,
+    "temperature": 0,
+    "timings": {
+      "cache_n": 0,
+      "predicted_ms": 2264.365,
+      "predicted_n": 49,
+      "predicted_per_second": 21.19799590613704,
+      "predicted_per_token_ms": 47.17427083333333,
+      "prompt_ms": 4229.69,
+      "prompt_n": 294,
+      "prompt_per_second": 69.50864011310523,
+      "prompt_per_token_ms": 14.386700680272108
+    }
+  },
+  "error": "ValueError: fabricated/unavailable target",
+  "latency_s": 6.988870500000303,
+  "plan": {
+    "evidence": [],
+    "intent": "speak",
+    "interpretation": "A tentative next step from my own perception.",
+    "target": "",
+    "text": "I can see actor nearby."
+  },
+  "provider": "LlamaCpp",
+  "raw": "{\"evidence\":[],\"intent\": \"eat\",\"interpretation\": \"tentative short belief\",\"target\": \"agent-7\",\"text\": \"agent-7 is a food-saturated agent.\"}",
+  "status": "fallback"
+}

@@ -1,0 +1,10 @@
+{
+  "status": "failed_acceptance_stopped",
+  "partial_completed_cases": 17,
+  "missed_feasible_goals": [
+    "water"
+  ],
+  "cause": "Single radial approach point was occupied by perceived peer; alternate feasible gathering approaches were not considered.",
+  "native_error_reasons": {},
+  "controller_source_id": "d7ffabd1c487e9b2c8b335cd15efb1230c3be18c139be055d74d60a13ab6a23f"
+}

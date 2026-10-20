@@ -1,0 +1,30 @@
+{
+  "phase": 3,
+  "db": "data/phase3-final.sqlite",
+  "tick": "80",
+  "desktop": {
+    "viewport": [
+      1440,
+      1000
+    ],
+    "horizontal_overflow": false,
+    "identity": "Sol-1",
+    "memory_contains": "ingested_ug=200000000",
+    "paused": true
+  },
+  "mobile": {
+    "viewport": [
+      390,
+      844
+    ],
+    "horizontal_overflow": false,
+    "identity": "Sol-1"
+  },
+  "selected_agent3_report": "speech or empty",
+  "browser_errors": [],
+  "screenshots": [
+    "phase3_observer_desktop.png",
+    "phase3_observer_mobile.png"
+  ],
+  "scope": "real Playwright rendering of paused model-evidence run"
+}

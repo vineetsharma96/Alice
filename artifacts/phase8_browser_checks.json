@@ -1,0 +1,400 @@
+{
+  "phase8controls": {
+    "escaped": {
+      "injected": false,
+      "literal": true
+    },
+    "after": {
+      "source": {
+        "stream": "ac179238-c101-4bce-bcfb-7789dcd382d3:ac179238-c101-4bce-bcfb-7789dcd382d3",
+        "hash": "e5f14b9760e3cbe8fb35b767da1d28a28dcc0f50cf701e57b01fc49456a803e7",
+        "tick": "16",
+        "selected": "agent-1",
+        "agent": "agent-1",
+        "online": true,
+        "cursor": "54",
+        "protocol": "underworld.viewer/1"
+      },
+      "metrics": {
+        "fps": 30.003871467286093,
+        "frame_ms_p50": 33.30000000000018,
+        "frame_ms_p95": 33.5,
+        "draw_calls": 59,
+        "triangles": 2224,
+        "geometries": 6,
+        "textures": 0,
+        "quality": "low",
+        "pixel_ratio": 0.8,
+        "context_lost": false,
+        "context_losses": 0,
+        "renderer": "ANGLE (Intel, Intel(R) HD Graphics 520 (0x00001916) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "canvas": [
+          756,
+          486
+        ],
+        "physics_dimensions": 2,
+        "objects": 19
+      },
+      "error": ""
+    },
+    "paused": 1
+  },
+  "phase8offline": {
+    "source": {
+      "stream": "ac179238-c101-4bce-bcfb-7789dcd382d3:ac179238-c101-4bce-bcfb-7789dcd382d3",
+      "hash": "e5f14b9760e3cbe8fb35b767da1d28a28dcc0f50cf701e57b01fc49456a803e7",
+      "tick": "16",
+      "selected": "agent-1",
+      "agent": "agent-1",
+      "online": false,
+      "cursor": "54",
+      "protocol": "underworld.viewer/1"
+    },
+    "connection": "Disconnected / retrying",
+    "error": "Connection unavailable: Failed to fetch. The last snapshot is frozen; no world changes are queued."
+  },
+  "phase8reconnected": {
+    "reconnected": {
+      "stream": "ac179238-c101-4bce-bcfb-7789dcd382d3:ac179238-c101-4bce-bcfb-7789dcd382d3",
+      "hash": "e5f14b9760e3cbe8fb35b767da1d28a28dcc0f50cf701e57b01fc49456a803e7",
+      "tick": "16",
+      "selected": "agent-1",
+      "agent": "agent-1",
+      "online": true,
+      "cursor": "54",
+      "protocol": "underworld.viewer/1"
+    },
+    "newSessionControlsWork": true,
+    "after": {
+      "stream": "ac179238-c101-4bce-bcfb-7789dcd382d3:ac179238-c101-4bce-bcfb-7789dcd382d3",
+      "hash": "ac91b4b6c2b77e627f335dfe43ec75cf87295b6d5439131ae88a7fe8aac69d60",
+      "tick": "17",
+      "selected": "agent-1",
+      "agent": "agent-1",
+      "online": true,
+      "cursor": "55",
+      "protocol": "underworld.viewer/1"
+    }
+  },
+  "phase8performance8": {
+    "before": {
+      "tick": "17",
+      "sim": 3.4000000000000004,
+      "hash": "ac91b4b6c2b77e627f335dfe43ec75cf87295b6d5439131ae88a7fe8aac69d60",
+      "now": 873.2999999970198
+    },
+    "active": {
+      "tick": "85",
+      "sim": 17,
+      "hash": "75bfbaa5b8426d1db8706a8275082dfa0bc8f0b3d9d7ca3a92b65406d1308c91",
+      "now": 5058.29999999702,
+      "controls": {
+        "paused": true,
+        "speed": 5,
+        "error": null,
+        "read_only": false
+      },
+      "work": {
+        "advance_wall_s": 2.9045147000142606,
+        "advanced_simulated_s": 13.800000000000008,
+        "simulation_work_s_per_wall_s": 4.751224016849442
+      },
+      "graphics": {
+        "fps": 29.999999999999986,
+        "frame_ms_p50": 33.30000000000018,
+        "frame_ms_p95": 33.400000000000546,
+        "draw_calls": 55,
+        "triangles": 1904,
+        "geometries": 6,
+        "textures": 0,
+        "quality": "low",
+        "pixel_ratio": 0.8,
+        "context_lost": false,
+        "context_losses": 0,
+        "renderer": "ANGLE (Intel, Intel(R) HD Graphics 520 (0x00001916) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "canvas": [
+          756,
+          486
+        ],
+        "physics_dimensions": 2,
+        "objects": 19
+      }
+    },
+    "observed_sim_s_per_wall_s": 3.2497013142174436,
+    "standard": {
+      "fps": 60,
+      "frame_ms_p50": 16.699999999999818,
+      "frame_ms_p95": 16.800000000000182,
+      "draw_calls": 53,
+      "triangles": 1744,
+      "geometries": 6,
+      "textures": 0,
+      "quality": "standard",
+      "pixel_ratio": 1,
+      "context_lost": false,
+      "context_losses": 0,
+      "renderer": "ANGLE (Intel, Intel(R) HD Graphics 520 (0x00001916) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "canvas": [
+        946,
+        608
+      ],
+      "physics_dimensions": 2,
+      "objects": 19
+    },
+    "visibility": "visible"
+  },
+  "phase8performance32": {
+    "population": 32,
+    "low": {
+      "fps": 30,
+      "frame_ms_p50": 33.30000000000018,
+      "frame_ms_p95": 33.5,
+      "draw_calls": 117,
+      "triangles": 4468,
+      "geometries": 6,
+      "textures": 0,
+      "quality": "low",
+      "pixel_ratio": 0.8,
+      "context_lost": false,
+      "context_losses": 0,
+      "renderer": "ANGLE (Intel, Intel(R) HD Graphics 520 (0x00001916) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "canvas": [
+        756,
+        486
+      ],
+      "physics_dimensions": 2,
+      "objects": 40
+    },
+    "standard": {
+      "fps": 59.99400059993999,
+      "frame_ms_p50": 16.699999999999818,
+      "frame_ms_p95": 16.800000000000182,
+      "draw_calls": 117,
+      "triangles": 4468,
+      "geometries": 6,
+      "textures": 0,
+      "quality": "standard",
+      "pixel_ratio": 1,
+      "context_lost": false,
+      "context_losses": 0,
+      "renderer": "ANGLE (Intel, Intel(R) HD Graphics 520 (0x00001916) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "canvas": [
+        946,
+        608
+      ],
+      "physics_dimensions": 2,
+      "objects": 40
+    },
+    "controls": {
+      "resumeDisabled": true,
+      "stepDisabled": true,
+      "applyDisabled": true
+    },
+    "source": {
+      "stream": "14464980-5b21-4acb-b888-697d44ddcce9:14464980-5b21-4acb-b888-697d44ddcce9",
+      "hash": "e8d4d1c09457fe5c4f49b759e58cca38eed894a769b587af00226ff16fc2aa22",
+      "tick": "0",
+      "selected": "agent-1",
+      "agent": "agent-1",
+      "online": true,
+      "cursor": "0",
+      "protocol": "underworld.viewer/1"
+    }
+  },
+  "phase8readonly": {
+    "readOnlyExternalWriterObserved": true,
+    "source": {
+      "stream": "14464980-5b21-4acb-b888-697d44ddcce9:14464980-5b21-4acb-b888-697d44ddcce9",
+      "hash": "726db63aed1cba8d01f348b3be3ffb57add9e1e87ba3b274abab1baa9bd9d863",
+      "tick": "2",
+      "selected": "agent-1",
+      "agent": "agent-1",
+      "online": true,
+      "cursor": "2",
+      "protocol": "underworld.viewer/1"
+    },
+    "controlsDisabled": true
+  },
+  "phase8context": {
+    "before": {
+      "stream": "ac179238-c101-4bce-bcfb-7789dcd382d3:ac179238-c101-4bce-bcfb-7789dcd382d3",
+      "hash": "75bfbaa5b8426d1db8706a8275082dfa0bc8f0b3d9d7ca3a92b65406d1308c91",
+      "tick": "85",
+      "selected": "agent-1",
+      "agent": "agent-1",
+      "online": true,
+      "cursor": "96",
+      "protocol": "underworld.viewer/1"
+    },
+    "lost": {
+      "source": {
+        "stream": "ac179238-c101-4bce-bcfb-7789dcd382d3:ac179238-c101-4bce-bcfb-7789dcd382d3",
+        "hash": "75bfbaa5b8426d1db8706a8275082dfa0bc8f0b3d9d7ca3a92b65406d1308c91",
+        "tick": "85",
+        "selected": "agent-1",
+        "agent": "agent-1",
+        "online": true,
+        "cursor": "190",
+        "protocol": "underworld.viewer/1"
+      },
+      "metrics": {
+        "fps": 0,
+        "frame_ms_p50": 33.39999999999998,
+        "frame_ms_p95": 66.60000000000002,
+        "draw_calls": 53,
+        "triangles": 1744,
+        "geometries": 6,
+        "textures": 0,
+        "quality": "low",
+        "pixel_ratio": 0.8,
+        "context_lost": true,
+        "context_losses": 1,
+        "renderer": null,
+        "canvas": [
+          756,
+          486
+        ],
+        "physics_dimensions": 2,
+        "objects": 19
+      },
+      "fallback": true
+    },
+    "restored": {
+      "source": {
+        "stream": "ac179238-c101-4bce-bcfb-7789dcd382d3:ac179238-c101-4bce-bcfb-7789dcd382d3",
+        "hash": "75bfbaa5b8426d1db8706a8275082dfa0bc8f0b3d9d7ca3a92b65406d1308c91",
+        "tick": "85",
+        "selected": "agent-1",
+        "agent": "agent-1",
+        "online": true,
+        "cursor": "190",
+        "protocol": "underworld.viewer/1"
+      },
+      "metrics": {
+        "fps": 29.997000299969997,
+        "frame_ms_p50": 33.30000000000018,
+        "frame_ms_p95": 33.50599999999997,
+        "draw_calls": 53,
+        "triangles": 1744,
+        "geometries": 6,
+        "textures": 0,
+        "quality": "low",
+        "pixel_ratio": 0.8,
+        "context_lost": false,
+        "context_losses": 1,
+        "renderer": "ANGLE (Intel, Intel(R) HD Graphics 520 (0x00001916) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "canvas": [
+          756,
+          486
+        ],
+        "physics_dimensions": 2,
+        "objects": 19
+      },
+      "fallback": false
+    }
+  },
+  "phase8accessibility": {
+    "forcedWebGLFailure": {
+      "fallbackVisible": true,
+      "reason": "WebGL2 could not start: Error creating WebGL context.. Inspection and validated controls remain available below.",
+      "source": {
+        "stream": "ac179238-c101-4bce-bcfb-7789dcd382d3:ac179238-c101-4bce-bcfb-7789dcd382d3",
+        "hash": "75bfbaa5b8426d1db8706a8275082dfa0bc8f0b3d9d7ca3a92b65406d1308c91",
+        "tick": "85",
+        "selected": "agent-1",
+        "agent": "agent-1",
+        "online": true,
+        "cursor": "96",
+        "protocol": "underworld.viewer/1"
+      },
+      "fallbackLink": "/"
+    },
+    "mobile": {
+      "viewport": [
+        390,
+        844
+      ],
+      "overflow": false,
+      "canvas": {
+        "x": 0,
+        "y": 261,
+        "width": 390,
+        "height": 440,
+        "top": 261,
+        "right": 390,
+        "bottom": 701,
+        "left": 0
+      },
+      "source": {
+        "stream": "ac179238-c101-4bce-bcfb-7789dcd382d3:ac179238-c101-4bce-bcfb-7789dcd382d3",
+        "hash": "75bfbaa5b8426d1db8706a8275082dfa0bc8f0b3d9d7ca3a92b65406d1308c91",
+        "tick": "85",
+        "selected": "agent-1",
+        "agent": "agent-1",
+        "online": true,
+        "cursor": "190",
+        "protocol": "underworld.viewer/1"
+      }
+    },
+    "reduced": {
+      "reducedMotion": true,
+      "source": {
+        "stream": "ac179238-c101-4bce-bcfb-7789dcd382d3:ac179238-c101-4bce-bcfb-7789dcd382d3",
+        "hash": "75bfbaa5b8426d1db8706a8275082dfa0bc8f0b3d9d7ca3a92b65406d1308c91",
+        "tick": "85",
+        "selected": "agent-1",
+        "agent": "agent-1",
+        "online": true,
+        "cursor": "96",
+        "protocol": "underworld.viewer/1"
+      }
+    }
+  },
+  "phase8ground": {
+    "before": {
+      "stream": "ac179238-c101-4bce-bcfb-7789dcd382d3:ac179238-c101-4bce-bcfb-7789dcd382d3",
+      "hash": "75bfbaa5b8426d1db8706a8275082dfa0bc8f0b3d9d7ca3a92b65406d1308c91",
+      "tick": "85",
+      "selected": "agent-1",
+      "agent": "agent-1",
+      "online": true,
+      "cursor": "190",
+      "protocol": "underworld.viewer/1"
+    },
+    "point": {
+      "x": "8.00",
+      "y": "8.00"
+    },
+    "rejected": {
+      "error": "intervention collision",
+      "visible": true,
+      "source": {
+        "stream": "ac179238-c101-4bce-bcfb-7789dcd382d3:ac179238-c101-4bce-bcfb-7789dcd382d3",
+        "hash": "75bfbaa5b8426d1db8706a8275082dfa0bc8f0b3d9d7ca3a92b65406d1308c91",
+        "tick": "85",
+        "selected": "agent-1",
+        "agent": "agent-1",
+        "online": true,
+        "cursor": "190",
+        "protocol": "underworld.viewer/1"
+      }
+    }
+  },
+  "native_build": "1955dda0d7cd3350527e937dc626a1d3d5dcdb808b82a7207c1102db2957dfbd",
+  "orchestration_id": "995842ce19b4f6cbc5c2180dc41d78e661ec691e33405ec54bfb2778044e4e81",
+  "viewer_protocol": "underworld.viewer/1",
+  "venv_launcher_memory": {
+    "phase8-demo": {
+      "working_set_bytes": 1404928,
+      "peak_working_set_bytes": 7315456,
+      "private_commit_bytes": 1581056
+    },
+    "phase8-32": {
+      "working_set_bytes": 7184384,
+      "peak_working_set_bytes": 7290880,
+      "private_commit_bytes": 1527808
+    }
+  },
+  "memory_note": "Earlier PID samples identify venv launcher processes; they are not server worker totals. The actual current Python worker is measured separately.",
+  "viewer_source_build_id": "2b9d949b2baa3ae1a7100e12979a0e3022eb2a710f955bfb68c7f7282678d93d"
+}

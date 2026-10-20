@@ -1,0 +1,11 @@
+{
+  "phase": 5,
+  "reason": "Observer response disconnect handling after browser navigation",
+  "tests": [
+    "test_phase2.AgencyPersistenceTests.test_observer_http_reads_controls_and_pause",
+    "test_phase4.TeachingTests.test_http_read_channel_no_mutation_and_distinct_operator_token"
+  ],
+  "returncode": 0,
+  "test_runner_seconds": 2.096,
+  "source": "unittest output captured in task tool result"
+}

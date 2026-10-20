@@ -1,0 +1,359 @@
+{
+  "arms": {
+    "utility": {
+      "feasible_goals": 24,
+      "completed_feasible_goals": 24,
+      "missed": 0,
+      "native_submission_rejections": 0,
+      "preventable_rejections": 0,
+      "completion_time_failures": 0,
+      "accepted_requests": {
+        "eat": 9,
+        "gather": 45,
+        "drink": 15,
+        "rest": 18,
+        "move": 222
+      },
+      "completed_actions": {
+        "eat": 9,
+        "gather": 45,
+        "drink": 15,
+        "rest": 12,
+        "move": 219
+      },
+      "native_error_reasons": {},
+      "inference_calls": 0,
+      "provider_failures": 0,
+      "valid_json": 0,
+      "compiled_original_model_outputs": 0,
+      "model_latencies_s": [],
+      "model_latency_median_s": null,
+      "goal_origins": {},
+      "model_selected_consumption_completions": 0,
+      "fallback_selected_consumption_completions": 0,
+      "authored_execution_steps": 0,
+      "median_case_wall_s": 8.866763699999865,
+      "consumption_completion_simulated_s": {
+        "food": [
+          2,
+          8,
+          5,
+          2,
+          8,
+          5,
+          2,
+          8,
+          5
+        ],
+        "water": [
+          4,
+          4,
+          2,
+          4,
+          2,
+          4,
+          4,
+          2,
+          4,
+          2,
+          4,
+          4,
+          2,
+          4,
+          2
+        ]
+      },
+      "median_consumption_completion_simulated_s": {
+        "food": 5,
+        "water": 4
+      },
+      "alive": 15,
+      "needs": {
+        "hunger": {
+          "maximum": 0.6220000000000002,
+          "seconds_above_085": 0
+        },
+        "thirst": {
+          "maximum": 0.6774999999999937,
+          "seconds_above_085": 0
+        },
+        "fatigue": {
+          "maximum": 0.45440000000000047,
+          "seconds_above_085": 0
+        }
+      }
+    },
+    "legacy_model": {
+      "feasible_goals": 24,
+      "completed_feasible_goals": 0,
+      "missed": 24,
+      "native_submission_rejections": 0,
+      "preventable_rejections": 0,
+      "completion_time_failures": 0,
+      "accepted_requests": {},
+      "completed_actions": {},
+      "native_error_reasons": {},
+      "inference_calls": 15,
+      "provider_failures": 3,
+      "valid_json": 12,
+      "compiled_original_model_outputs": 12,
+      "model_latencies_s": [
+        15.375956299999416,
+        19.36151299999983,
+        14.227685199999542,
+        18.701667599999382,
+        11.128708800000823,
+        16.836182799999733,
+        18.368903100000352,
+        10.926277100000334,
+        20.0686553000005,
+        11.92231400000037,
+        15.444187099999908,
+        20.049054799999794,
+        12.609607300000789,
+        20.056654800000615,
+        11.581183600000259
+      ],
+      "model_latency_median_s": 15.444187099999908,
+      "goal_origins": {},
+      "model_selected_consumption_completions": 0,
+      "fallback_selected_consumption_completions": 0,
+      "authored_execution_steps": 0,
+      "median_case_wall_s": 26.22805089999929,
+      "consumption_completion_simulated_s": {
+        "food": [],
+        "water": []
+      },
+      "median_consumption_completion_simulated_s": {
+        "food": null,
+        "water": null
+      },
+      "alive": 15,
+      "needs": {
+        "hunger": {
+          "maximum": 0.6220000000000002,
+          "seconds_above_085": 0
+        },
+        "thirst": {
+          "maximum": 0.807999999999989,
+          "seconds_above_085": 0
+        },
+        "fatigue": {
+          "maximum": 0.4196000000000043,
+          "seconds_above_085": 0
+        }
+      }
+    },
+    "stable_authored": {
+      "feasible_goals": 24,
+      "completed_feasible_goals": 24,
+      "missed": 0,
+      "native_submission_rejections": 0,
+      "preventable_rejections": 0,
+      "completion_time_failures": 0,
+      "accepted_requests": {
+        "gather": 21,
+        "drink": 15,
+        "eat": 9,
+        "move": 93
+      },
+      "completed_actions": {
+        "gather": 21,
+        "drink": 15,
+        "eat": 9,
+        "move": 93
+      },
+      "native_error_reasons": {},
+      "inference_calls": 0,
+      "provider_failures": 0,
+      "valid_json": 0,
+      "compiled_original_model_outputs": 0,
+      "model_latencies_s": [],
+      "model_latency_median_s": null,
+      "goal_origins": {
+        "authored_need_selection": 57
+      },
+      "model_selected_consumption_completions": 0,
+      "fallback_selected_consumption_completions": 0,
+      "authored_execution_steps": 138,
+      "median_case_wall_s": 12.2797343000002,
+      "consumption_completion_simulated_s": {
+        "food": [
+          4,
+          8,
+          5,
+          4,
+          8,
+          5,
+          4,
+          8,
+          5
+        ],
+        "water": [
+          2,
+          4,
+          2,
+          4,
+          2,
+          2,
+          4,
+          2,
+          4,
+          2,
+          2,
+          4,
+          2,
+          4,
+          2
+        ]
+      },
+      "median_consumption_completion_simulated_s": {
+        "food": 5,
+        "water": 2
+      },
+      "alive": 15,
+      "needs": {
+        "hunger": {
+          "maximum": 0.6220000000000002,
+          "seconds_above_085": 0
+        },
+        "thirst": {
+          "maximum": 0.6774999999999937,
+          "seconds_above_085": 0
+        },
+        "fatigue": {
+          "maximum": 0.4380000000000023,
+          "seconds_above_085": 0
+        }
+      }
+    },
+    "stable_model": {
+      "feasible_goals": 24,
+      "completed_feasible_goals": 24,
+      "missed": 0,
+      "native_submission_rejections": 0,
+      "preventable_rejections": 0,
+      "completion_time_failures": 0,
+      "accepted_requests": {
+        "gather": 21,
+        "drink": 15,
+        "eat": 9,
+        "move": 85
+      },
+      "completed_actions": {
+        "gather": 21,
+        "drink": 15,
+        "eat": 9,
+        "move": 82
+      },
+      "native_error_reasons": {},
+      "inference_calls": 15,
+      "provider_failures": 4,
+      "valid_json": 11,
+      "compiled_original_model_outputs": 11,
+      "model_latencies_s": [
+        20.04388089999975,
+        17.387429300000804,
+        14.418850699999894,
+        18.103017500000533,
+        14.291020299999218,
+        17.946984600000178,
+        18.805298300000686,
+        15.279091600000356,
+        17.981609200000094,
+        14.317412299999887,
+        20.042125600000873,
+        17.37288030000036,
+        14.750020400000722,
+        20.045568900000035,
+        20.293450899999698
+      ],
+      "model_latency_median_s": 17.946984600000178,
+      "goal_origins": {
+        "deterministic_fallback": 48,
+        "model_selection": 11
+      },
+      "model_selected_consumption_completions": 6,
+      "fallback_selected_consumption_completions": 18,
+      "authored_execution_steps": 130,
+      "median_case_wall_s": 29.945834999999533,
+      "consumption_completion_simulated_s": {
+        "food": [
+          4,
+          6,
+          3,
+          2,
+          6,
+          3,
+          4,
+          6,
+          5
+        ],
+        "water": [
+          2,
+          8,
+          17,
+          25,
+          5,
+          4,
+          8,
+          17,
+          25,
+          5,
+          2,
+          8,
+          17,
+          4,
+          2
+        ]
+      },
+      "median_consumption_completion_simulated_s": {
+        "food": 4,
+        "water": 8
+      },
+      "alive": 15,
+      "needs": {
+        "hunger": {
+          "maximum": 0.6220000000000002,
+          "seconds_above_085": 0
+        },
+        "thirst": {
+          "maximum": 0.7089999999999925,
+          "seconds_above_085": 0
+        },
+        "fatigue": {
+          "maximum": 0.43720000000000225,
+          "seconds_above_085": 0
+        }
+      }
+    }
+  },
+  "heldout_checks": {
+    "stable_feasible_goals": true,
+    "stable_no_preventable_rejections": true,
+    "stable_no_empty_eat": true,
+    "survival": true,
+    "replay_conservation": true,
+    "stable_no_worse_than_utility": true,
+    "stable_model_improves_missing_legacy_goals": true,
+    "attributed_execution": true,
+    "complete_durations": true,
+    "resume_parity": true,
+    "depleted_fixture_valid": true
+  },
+  "continuity_checks": {
+    "survival": true,
+    "conservation": true,
+    "fresh_process_continuity": true,
+    "replay": true,
+    "maximum_horizon_completed": true
+  },
+  "phase9_preserved": {
+    "underworld\\learning.py": true,
+    "config\\phase9_study.json": true,
+    "docs\\PHASE9_PREREGISTRATION.md": true,
+    "docs\\PHASE9_REPORT.md": true,
+    "artifacts\\phase9_summary.json": true,
+    "data\\phase9-study-20261020\\file_hashes.json": true
+  }
+}

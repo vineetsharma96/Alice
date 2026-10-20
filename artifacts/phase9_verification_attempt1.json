@@ -1,0 +1,10 @@
+{
+  "outcome": "timeout",
+  "context": "Full verification ran concurrently with the native Phase 9 study on the two-core host.",
+  "native_ctest": {"passed": 4, "failed": 0, "reported_internal_wall_s": 0.25},
+  "python_command": ".venv/Scripts/python.exe -m unittest discover -s tests -v",
+  "python_subprocess_timeout_s": 120,
+  "python_result": "TimeoutExpired; no complete suite result or partial test count was captured by the old verifier",
+  "separate_phase9_unit_tests": {"passed": 12, "internal_wall_s": 7.751},
+  "follow_up": "Rerun complete verification after the study with 240 seconds per subprocess; preserve this failed attempt."
+}
