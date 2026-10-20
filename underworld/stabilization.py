@@ -302,11 +302,12 @@ def run(path,seconds,wall_seconds=240,provider=None,agents=None):
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('command',choices=['init','attach','run','status'])
     p.add_argument('--db',type=Path,required=True);p.add_argument('--model',action='store_true');p.add_argument('--calls',type=int,default=2)
+    p.add_argument('--config',type=Path,default=Path('config/survival.toml'))
     p.add_argument('--seconds',type=float,default=120);p.add_argument('--wall-seconds',type=float,default=240)
     p.add_argument('--endpoint',default='http://127.0.0.1:8081');args=p.parse_args()
     if args.command=='init':
         from .config import load
-        cfg=load(Path(__file__).resolve().parents[1]/'config/survival.toml');cfg['agency']['policy']='none'
+        cfg=load(args.config);cfg['agency']['policy']='none'
         storage.create(args.db,cfg,scripted=False)
     if args.command in ('init','attach'):result=attach(args.db,model=args.model,call_limit=args.calls)
     elif args.command=='status':result=status(args.db)

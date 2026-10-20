@@ -63,6 +63,18 @@ def main():
     runner.add_argument("--wall-seconds",type=float,required=True)
     runner.add_argument("--local-model",action="store_true",help="explicit inherited-IPC access to the local model adapter")
     runner.add_argument("--model-endpoint",default="http://127.0.0.1:8081")
+    living=commands.add_parser("living-world",help="opt-in stabilized living-world controller")
+    living_commands=living.add_subparsers(dest="living_command",required=True)
+    for name in ("init","attach","run","status"):
+        sub=living_commands.add_parser(name)
+        sub.add_argument("--db",type=Path,required=True)
+        if name=="init":sub.add_argument("--config",type=Path,default=Path("config/living-world.toml"))
+        if name in ("init","attach"):sub.add_argument("--model",action="store_true");sub.add_argument("--calls",type=int,default=2)
+        if name=="run":
+            sub.add_argument("--seconds",type=float,required=True)
+            sub.add_argument("--wall-seconds",type=float,default=240)
+            sub.add_argument("--model",action="store_true")
+            sub.add_argument("--endpoint",default="http://127.0.0.1:8081")
     for name in ("run-status","stop"):
         sub=commands.add_parser(name);sub.add_argument("--db",type=Path,required=True)
     args = parser.parse_args()
@@ -73,6 +85,21 @@ def main():
             if not 0<=args.port<=65535:raise ValueError("invalid port")
             serve(args.db,args.port,args.read_only)
             return
+        if args.command=="living-world":
+            from . import stabilization
+            if args.living_command=="init":
+                cfg=load(args.config);cfg["agency"]["policy"]="none";storage.create(args.db,cfg,scripted=False)
+                value=stabilization.attach(args.db,model=args.model,call_limit=args.calls)
+            elif args.living_command=="attach":
+                value=stabilization.attach(args.db,model=args.model,call_limit=args.calls)
+            elif args.living_command=="run":
+                provider=None
+                if args.model:
+                    from . import cognition
+                    provider=cognition.LlamaCpp(args.endpoint)
+                value=stabilization.run(args.db,args.seconds,args.wall_seconds,provider=provider)
+            else:value=stabilization.status(args.db)
+            print(json.dumps(value,indent=2,allow_nan=False));return
         if args.command == "new":
             value = storage.create(args.db, load(args.config), scripted=not args.manual)
         elif args.command=="run":

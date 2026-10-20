@@ -7,7 +7,8 @@ async function request(url,options){const response=await fetch(url,options);cons
 async function control(command,value){if(busy)return;busy=true;try{await request("/api/control",{method:"POST",headers:{"Content-Type":"application/json","X-Observer-Token":token},body:JSON.stringify(value===undefined?{command}:{command,value})});await refresh();}catch(e){error(e.message);}finally{busy=false;}}
 function draw(state){data=state;const s=state.snapshot,o=state.selected,controls=state.controls;const t=s.simulated_time_s;
  $("time").textContent=`Tick ${s.tick} · ${(t/60).toFixed(2)} simulated min`;
- $("condition").textContent=`${s.mode} mode · branch ${s.branch_id.slice(0,12)} · laws ${s.laws_version} · hearing ${s.hearing_range_m} m`;
+  const controller=state.controller||{active:"legacy"};const goal=controller.stabilization?.goal;
+  $("condition").textContent=`${s.mode} mode · controller ${controller.active}${goal?` · goal ${goal.kind} / ${goal.phase}`:""} · branch ${s.branch_id.slice(0,12)} · laws ${s.laws_version} · hearing ${s.hearing_range_m} m`;
  $("pause").textContent=controls.paused?"Resume":"Pause";$("step").disabled=!controls.paused;
  $("status").textContent=controls.error?"Writer stopped":controls.paused?"Paused":"Running";$("speed").value=String(controls.speed);error(controls.error||"");
  const actors=s.entities.filter(e=>e.kind==="actor");const alive=actors.filter(e=>e.alive!==false&&e.present!==false).length;
@@ -27,7 +28,7 @@ function draw(state){data=state;const s=state.snapshot,o=state.selected,controls
   $("agreements").replaceChildren(...cultural.agreements.slice(-6).map(g=>{const li=document.createElement("li");li.textContent=`${g.proposer} → ${g.partner} · ${g.text} · ${g.status} · offer #${g.offered_event}`;return li;}));
   $("batches").replaceChildren(...cultural.validated_batches.slice(-6).reverse().map(b=>{const li=document.createElement("li");li.textContent=`${b.agent} · event #${b.event_seq} · ${b.measured_k.toFixed(0)} K instrument · ${b.work_s.toFixed(2)} s validated work`;return li;}));
  }
- $("plan").textContent=mind.plan?`Plan submission ${mind.plan.status} · ${s.cognition_calls} shared cognition calls recorded`:"No cognitive plan recorded.";
+  $("plan").textContent=controller.active==="stabilization"?`Stabilization ${goal?`${goal.origin} · ${goal.phase}`:"idle"} · calls ${controller.stabilization.calls}/${controller.stabilization.call_limit} · authored steps ${controller.stabilization.authored_steps}`:mind.plan?`Plan submission ${mind.plan.status} · ${s.cognition_calls} shared cognition calls recorded`:"No cognitive plan recorded.";
  $("memories").replaceChildren(...mind.episodes.map(e=>{const li=document.createElement("li"),r=e.record;li.textContent=`Tick ${e.tick} · ${e.kind} · ${r.text||r.observable_effects?.description||r.kind||"Own perception"}`;if(r.origin_event_seq){const provenance=document.createElement("small");provenance.textContent=` Source ${r.source_id} · origin #${r.origin_event_seq} → parent #${r.parent_event_seq} → event #${r.source_event_seq} · ${r.confidence}`;li.append(provenance);}return li;}));
  $("operator-sources").textContent="Operator material sources: "+Object.entries(s.operator_sources_ug).map(([k,v])=>`${k} ${(Number(v)/1e9).toFixed(2)} kg`).join(" · ")+` · energy ${s.operator_energy_input_j} J`;
  $("teaching-mode").textContent=s.mode==="guided"?"Pause, then apply an explicit intervention. Avatar speech is local; broadcasts reach all living inhabitants.":"Closed mode: teaching mutations are disabled. Create a guided branch with the fork command.";

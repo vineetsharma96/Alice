@@ -1,4 +1,6 @@
-# Stabilization milestone — complete within measured scope — 2026-10-20
+# Living-world Milestone A — runtime consolidation in progress — 2026-10-20
+
+Milestone A now has an opt-in `config/living-world.toml` development profile (4 inhabitants, finite food/water, model-off by default), a single `python -m underworld living-world ...` entry point over the existing stabilization controller, and observer metadata exposing the active controller plus selected goal/budget attribution. Legacy survival, unattended and Phase 9 paths remain unchanged. Trees, animals, crafting and general planning are not implemented yet.
 
 The opt-in persistent prerequisite executor is implemented and evaluated. The failed Phase 9 study remains unchanged and its learner stays outside live autonomous policies. Its previous status is preserved in [PHASE9_STATUS.md](PHASE9_STATUS.md).
 
@@ -33,3 +35,14 @@ Full verification passed: **True**. Ran 139 tests in 160.319s. Native checks and
 Use `python -m underworld.stabilization init/attach/run/status` as documented. This is an explicit opt-in scheduler handoff; no existing Phase 8/9 world was silently switched or reset. The viewer can attach read-only. The legacy viewer time controller and Phase 7 supervisor do not automatically drive the new executor; its model calls use separate audited counters.
 
 Crowd layouts, arbitrary cargo rearrangement/complex tasks, unavailable-water combinations, long-term supply and full-day operation remain outside this evidence. The host-side controller is not a newly verified AppContainer service. Native hashes and controller-journal checks are separate; journals and requests have finite quotas. No neural training, reproduction, speech, true 3D, consciousness, general intelligence or civilization-emergence claim was added. Phase 9's failed advancement gate was not changed.
+
+## Milestone A checks
+
+- `.venv/Scripts/python.exe -m py_compile underworld/__main__.py underworld/stabilization.py underworld/observer.py`: passed.
+- `.venv/Scripts/python.exe -m unittest tests.test_stabilization`: passed, 17 tests.
+- `.venv/Scripts/python.exe -m underworld living-world --help`: passed.
+- Model-off smoke initialized `data/living-world-smoke/run.sqlite`, ran 2 simulated seconds, matched replay, saved `checkpoint.sqlite`, and resumed another 2 simulated seconds; both runs reached their targets.
+- Observer state smoke reported `controller.active=stabilization` and the selected controller budget.
+- `.venv/Scripts/python.exe -m unittest tests.test_scaffold tests.test_stabilization`: blocked by missing `UNDERWORLD_CORE` in `tests.test_scaffold.CoreTests`; stabilization tests still passed independently. No scaffold-suite pass is claimed until the native core path is supplied.
+
+See [LIVING_WORLD_PLAN.md](LIVING_WORLD_PLAN.md) and [HANDOFF.md](../HANDOFF.md) for the dependency order and next acceptance check.

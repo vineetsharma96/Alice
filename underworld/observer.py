@@ -48,13 +48,20 @@ class Controller:
             # Annotate operator history from the actual journal, not from guessed request names.
             db=storage._connect(self.path,readonly=True)
             try:
+                is_stabilized=db.execute("SELECT 1 FROM sqlite_master WHERE name='stabilization_meta'").fetchone() is not None
                 for receipt in observation["recent_action_results"]:
                     row=db.execute("SELECT request FROM decisions WHERE json_extract(request,'$.agent_id')=? "
                                    "AND json_extract(request,'$.request_id')=? ORDER BY id LIMIT 1",
                                    (selected,receipt["request_id"])).fetchone()
                     if row:receipt["action_type"]=json.loads(row[0])["action_type"]
             finally:db.close()
-            return {"snapshot":snapshot,"selected":observation,"mind":storage.mind(self.path,selected),
+            stabilization_state=None
+            if is_stabilized:
+                from . import stabilization
+                stabilization_state=stabilization.status(self.path,selected)
+            controller={"active":"stabilization" if stabilization_state is not None else "legacy",
+                        "stabilization":stabilization_state}
+            return {"snapshot":snapshot,"selected":observation,"mind":storage.mind(self.path,selected),"controller":controller,
                     "procedure":culture.recall(self.path,selected) if snapshot["culture"]["enabled"] else None,
                     "operator_history":teaching.history(self.path),"controls":{"paused":self.paused,
                     "speed":self.speed,"error":self.error,"speed_semantics":"target simulated seconds per wall second"}}
