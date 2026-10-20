@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "command": [
+        "living-world",
+        "init",
+        "--db",
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\data\\living-world-f-package-knowledge-final2-20261021\\profile.sqlite",
+        "--calls",
+        "0",
+        "--knowledge-profile",
+        "woodcraft",
+        "--knowledge-recipient",
+        "agent-1"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"agent\": \"agent-1\",\n  \"authored_steps\": 0,\n  \"call_limit\": 0,\n  \"calls\": 0,\n  \"fallback_goals\": 0,\n  \"goal\": null,\n  \"goals_blocked\": 0,\n  \"goals_completed\": 0,\n  \"last_tick\": 0,\n  \"model\": false,\n  \"model_goals\": 0,\n  \"model_latency_s\": 0.0,\n  \"navigation\": {},\n  \"next_call_tick\": 0,\n  \"next_goal_tick\": 0,\n  \"pending\": null,\n  \"sequence\": 0,\n  \"submitted\": 0\n}\n",
+      "stderr": "",
+      "wall_s": 1.6596985000069253
+    },
+    {
+      "command": [
+        "knowledge",
+        "--db",
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\data\\living-world-f-package-knowledge-final2-20261021\\profile.sqlite",
+        "--agent",
+        "agent-1"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"agent\": \"agent-1\",\n  \"records\": [\n    {\n      \"episode_id\": 1,\n      \"tick\": 0,\n      \"kind\": \"external_initialization\",\n      \"branch_id\": \"2b566f9e-d7e2-43a8-b27e-b34473d32aaa\",\n      \"confidence\": \"unverified\",\n      \"delivery_tick\": \"0\",\n      \"profile\": \"woodcraft\",\n      \"profile_version\": \"knowledge/1\",\n      \"recipient\": \"agent-1\",\n      \"skill_granted\": false,\n      \"source_id\": \"initial-knowledge\",\n      \"source_type\": \"external_initialization\",\n      \"text\": \"Gather finite wood, fiber and stone before crafting an axe. Planks require wood and a usable axe. Native laws decide outcomes.\"\n    }\n  ],\n  \"counts\": {\n    \"external_initialization\": 1,\n    \"operator_injection\": 0,\n    \"book_read\": 0,\n    \"unverified_report\": 0,\n    \"knowledge_test\": 0\n  },\n  \"meaning\": \"External claims are unverified; native practice alone grants skill.\"\n}\n",
+      "stderr": "",
+      "wall_s": 1.5202191999997012
+    },
+    {
+      "command": [
+        "knowledge",
+        "--db",
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\data\\living-world-f-package-knowledge-final2-20261021\\profile.sqlite",
+        "--agent",
+        "agent-2"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"agent\": \"agent-2\",\n  \"records\": [],\n  \"counts\": {\n    \"external_initialization\": 0,\n    \"operator_injection\": 0,\n    \"book_read\": 0,\n    \"unverified_report\": 0,\n    \"knowledge_test\": 0\n  },\n  \"meaning\": \"External claims are unverified; native practice alone grants skill.\"\n}\n",
+      "stderr": "",
+      "wall_s": 1.3788617999962298
+    },
+    {
+      "command": [
+        "replay",
+        "--db",
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\data\\living-world-f-package-knowledge-final2-20261021\\UI copied world.sqlite"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"replay_matches\": true,\n  \"tick\": \"249\",\n  \"state_hash\": \"41d52d4265ac677766e3f4eac4f251cfa8fd39dfff092ac133a0591995c7c93f\"\n}\n",
+      "stderr": "",
+      "wall_s": 1.4398881000088295
+    },
+    {
+      "command": [
+        "replay",
+        "--db",
+        "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\data\\living-world-f-package-knowledge-final2-20261021\\UI copied world.sqlite"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"replay_matches\": true,\n  \"tick\": \"249\",\n  \"state_hash\": \"41d52d4265ac677766e3f4eac4f251cfa8fd39dfff092ac133a0591995c7c93f\"\n}\n",
+      "stderr": "",
+      "wall_s": 1.6662673000100767
+    }
+  ],
+  "browser": {
+    "returncode": 0,
+    "stdout": "{\"passed\":true,\"page_errors\":[]}\n",
+    "stderr": ""
+  },
+  "passed": true,
+  "external_runtime_on_path": false
+}

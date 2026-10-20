@@ -19,14 +19,18 @@ def intervene(path, request, fault=None):
         if config["mode"]!="guided":raise ValueError("CLOSED_MODE: fork a guided branch for interventions")
         if type(request) is not dict or request.get("branch_id")!=metadata["branch_id"]:
             raise ValueError("UNAUTHORIZED: wrong branch")
-        prior=db.execute("SELECT request,result FROM decisions WHERE source='operator' AND json_extract(request,'$.intervention_id')=?",
+        prior=db.execute("SELECT request,result FROM decisions WHERE source IN ('operator','operator_knowledge') AND json_extract(request,'$.intervention_id')=?",
                          (request.get("intervention_id"),)).fetchone()
         if prior:
             if prior[0]!=dumps(request):raise ValueError("conflicting intervention id")
             return loads(prior[1])
         if db.execute("SELECT COUNT(*) FROM decisions").fetchone()[0]>=storage.MAX_DECISIONS:
             raise ValueError("decision journal limit reached")
-        result=world.intervene(request,"operator")
+        source="operator"
+        if request.get("kind")=="inject_knowledge":
+            from .knowledge import inject
+            result=inject(db,world,config,metadata,request);source="operator_knowledge"
+        else:result=world.intervene(request,"operator")
         events=world.step(0)  # Drain this transaction's events without advancing physical time.
         world.check_invariants()
         ids=[f"agent-{i+1}" for i in range(config["world"]["population"])]
@@ -34,8 +38,8 @@ def intervene(path, request, fault=None):
         state=world.checkpoint()
         if len(state.encode())>storage.MAX_CHECKPOINT_BYTES:raise ValueError("checkpoint size limit reached")
         state_hash=storage.head_hash(state,metadata["runtime_policy_state"])
-        db.execute("INSERT INTO decisions(tick,request,result,source) VALUES(?,?,?,'operator')",
-                   (int(world.snapshot()["tick"]),dumps(request),dumps(result)))
+        db.execute("INSERT INTO decisions(tick,request,result,source) VALUES(?,?,?,?)",
+                   (int(world.snapshot()["tick"]),dumps(request),dumps(result),source))
         db.executemany("INSERT INTO events VALUES(?,?,?)",[(int(e["seq"]),int(e["tick"]),dumps(e)) for e in events])
         if events:db.execute("DELETE FROM events WHERE seq<=?",(int(events[-1]["seq"])-config["logging"]["event_retention_count"],))
         db.execute("UPDATE run SET state=?,state_hash=? WHERE singleton=1",(state,state_hash))
@@ -57,7 +61,7 @@ def history(path):
         return {"branch_id":metadata["branch_id"],"laws_version":metadata["laws_version"],
                 "parent_branch_id":metadata.get("parent_branch_id"),
                 "interventions":[{"tick":r[0],"request":loads(r[1]),"result":loads(r[2])} for r in db.execute(
-                    "SELECT tick,request,result FROM decisions WHERE source='operator' ORDER BY id LIMIT 256")]}
+                    "SELECT tick,request,result FROM decisions WHERE source IN ('operator','operator_knowledge') ORDER BY id LIMIT 256")]}
     finally:db.close()
 
 

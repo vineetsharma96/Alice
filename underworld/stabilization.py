@@ -69,7 +69,7 @@ def validate_options(model,call_limit):
     if type(call_limit) is not int or not 0<=call_limit<=16:raise ValueError('inference attempt bound')
 
 
-def initialize(path,config,model=False,call_limit=2):
+def initialize(path,config,model=False,call_limit=2,knowledge_profile=None):
     """Validate the entire handoff before creating a new physical world."""
     from .config import validate
     validate_options(model,call_limit)
@@ -78,7 +78,7 @@ def initialize(path,config,model=False,call_limit=2):
     if any(p.name.startswith('phase9-study') for p in (Path(path),*Path(path).parents)):
         raise ValueError('protected Phase 9 study; use a new stabilization world')
     config['agency']['policy']='none'
-    storage.create(path,config,scripted=False)
+    storage.create(path,config,scripted=False,knowledge_profile=knowledge_profile)
     return attach(path,model=model,call_limit=call_limit)
 
 

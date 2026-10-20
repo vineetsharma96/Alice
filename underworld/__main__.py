@@ -48,6 +48,10 @@ def main():
     procedure=commands.add_parser("procedure",help="read-only own-report procedure recall, never engine truth")
     procedure.add_argument("--db",type=Path,required=True)
     procedure.add_argument("--agent",required=True)
+    knowledge=commands.add_parser("knowledge",help="read own external records or explicitly test an accessed apparatus lesson")
+    knowledge.add_argument('--db',type=Path,required=True)
+    knowledge.add_argument('--agent',required=True)
+    knowledge.add_argument('--test-episode',type=int)
     for name in ("think", "mind"):
         sub = commands.add_parser(name, help="private operator cognition/memory access")
         sub.add_argument("--db", type=Path, required=True)
@@ -68,7 +72,12 @@ def main():
     for name in ("init","attach","run","status","task","cancel-task"):
         sub=living_commands.add_parser(name)
         sub.add_argument("--db",type=Path,required=True)
-        if name=="init":sub.add_argument("--config",type=Path,default=Path(__file__).resolve().parents[1]/"config/living-world.toml")
+        if name=="init":
+            sub.add_argument("--config",type=Path,default=Path(__file__).resolve().parents[1]/"config/living-world.toml")
+            from .knowledge import PROFILES
+            sub.add_argument('--knowledge-profile',choices=PROFILES,default='none')
+            sub.add_argument('--knowledge-recipient')
+            sub.add_argument('--knowledge-text',type=Path,help='specialist plain text file, never executable')
         if name in ("init","attach"):sub.add_argument("--model",action="store_true");sub.add_argument("--calls",type=int,default=2)
         if name=="run":
             sub.add_argument("--seconds",type=float,required=True)
@@ -95,7 +104,9 @@ def main():
         if args.command=="living-world":
             from . import stabilization
             if args.living_command=="init":
-                value=stabilization.initialize(args.db,load(args.config),model=args.model,call_limit=args.calls)
+                value=stabilization.initialize(args.db,load(args.config),model=args.model,call_limit=args.calls,
+                    knowledge_profile={'profile':args.knowledge_profile,'recipient':args.knowledge_recipient,
+                        'text':args.knowledge_text.read_text(encoding='utf-8') if args.knowledge_text else None})
             elif args.living_command=="attach":
                 value=stabilization.attach(args.db,model=args.model,call_limit=args.calls)
             elif args.living_command=="run":
@@ -138,6 +149,9 @@ def main():
         elif args.command=="recall":
             from .teaching import recall
             value=recall(args.db,args.agent,args.symbol)
+        elif args.command=="knowledge":
+            from . import knowledge
+            value=knowledge.test_procedure(args.db,args.agent,args.test_episode) if args.test_episode is not None else knowledge.view(args.db,args.agent)
         elif args.command=="procedure":
             from .culture import recall
             value=recall(args.db,args.agent)

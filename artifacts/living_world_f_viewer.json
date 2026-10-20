@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "native_hash_unchanged": true,
+  "packets": [
+    {
+      "agent": "agent-1",
+      "counts": {
+        "external_initialization": 0,
+        "operator_injection": 3,
+        "book_read": 0,
+        "unverified_report": 0,
+        "knowledge_test": 2
+      },
+      "hash": "41d52d4265ac677766e3f4eac4f251cfa8fd39dfff092ac133a0591995c7c93f",
+      "tick": "249"
+    },
+    {
+      "agent": "agent-2",
+      "counts": {
+        "external_initialization": 0,
+        "operator_injection": 1,
+        "book_read": 1,
+        "unverified_report": 0,
+        "knowledge_test": 1
+      },
+      "hash": "41d52d4265ac677766e3f4eac4f251cfa8fd39dfff092ac133a0591995c7c93f",
+      "tick": "249"
+    },
+    {
+      "agent": "agent-3",
+      "counts": {
+        "external_initialization": 0,
+        "operator_injection": 0,
+        "book_read": 0,
+        "unverified_report": 0,
+        "knowledge_test": 0
+      },
+      "hash": "41d52d4265ac677766e3f4eac4f251cfa8fd39dfff092ac133a0591995c7c93f",
+      "tick": "249"
+    }
+  ],
+  "page_errors": [],
+  "render": "headless Edge/software"
+}

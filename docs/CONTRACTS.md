@@ -64,3 +64,12 @@ executor procedure credit. Only own source-backed episodes can be reused.
 Old controller worlds require the prior full runtime, not implicit migration.
 Full contracts and outcome gates: [PHASE_E_PLANNING](PHASE_E_PLANNING.md),
 [evaluation amendment](PHASE_E_EVALUATION_AMENDMENT_1.md).
+
+## Milestone F external records
+
+External initialization and operator injection are private unverified episodes,
+separate from native read/hearing events and physical practice. One-step lesson
+tests reserve own provenance before submitting a native action; terminal memory
+and the test link commit together. Native laws/skill remain authoritative.
+See [F report](LIVING_WORLD_F_REPORT.md) and [operations](KNOWLEDGE_OPERATIONS.md).
+The bounded authored apparatus demo is not autonomous teaching or general learning.

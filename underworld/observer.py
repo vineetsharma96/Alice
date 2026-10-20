@@ -58,7 +58,7 @@ class Controller:
         # Both UIs read one SQLite snapshot, even while the CLI advances the world.
         from .viewer import packet
         result=packet(self,agent)
-        state={key:result[key] for key in ("snapshot","selected","mind","controller","procedure","controls")}
+        state={key:result[key] for key in ("snapshot","selected","mind","controller","procedure","knowledge","controls")}
         snapshot=result['snapshot']
         state['operator_history']={key:snapshot.get(key) for key in ('branch_id','laws_version','parent_branch_id')}
         state['operator_history']['interventions']=list(reversed(result['operator_history']))

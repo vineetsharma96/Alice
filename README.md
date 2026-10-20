@@ -1,21 +1,49 @@
 # Underworld Lab (Alice)
 
-**21 October: Milestone E** adds explicitly assigned hierarchical tasks, native
-prerequisite/recovery execution, urgent survival preemption, own receipt-linked
-experience and optional bounded model operator selection. Read
-[planning operations](docs/PLANNING_OPERATIONS.md) and
-[the evaluation contract](docs/PHASE_E_PLANNING.md).
-[Measured outcomes and limitations](docs/LIVING_WORLD_E_REPORT.md) include the
-corrected baseline comparison and **209 Python / four native passing checks**.
-Use a NEW save with the current controller. For the previous food-repair save,
-use `build/runtime-before-milestone-e-20261021/UnderworldLab.exe`; older pre-food
-saves use their own earlier archive. Saves are never silently migrated or reset.
-The earlier [food repair](docs/FOOD_EXECUTION_REPAIR.md) and code-audit evidence
-remain historical for their exact runtimes.
+**21 October: Milestone F** adds explicit per-person initial knowledge profiles,
+guided one-person injection, and source-linked physical lesson testing. Existing
+native books/hearing retain their access rules and costs. Read
+[knowledge workflows](docs/KNOWLEDGE_OPERATIONS.md),
+[the F report](docs/LIVING_WORLD_F_REPORT.md) and
+[prospective protocol](docs/PHASE_F_KNOWLEDGE.md). Verification passes **219 Python
+tests and four native checks**, with both randomized confirmation seeds successful.
+
+Use a NEW save with this runtime. Existing E worlds require the exact archived E
+runtime at `build/runtime-before-milestone-f-20261021/UnderworldLab.exe`.
+Earlier worlds require their respective older archives. No save is silently
+migrated, reset or replenished. The [E report](docs/LIVING_WORLD_E_REPORT.md) and
+all earlier experiment results remain historical for their exact source versions.
 
 A persistent simulation laboratory with C++ authority, Python orchestration, SQLite saves, and a local browser viewer. The current model-off living world has four inhabitants, two fictional animal species, finite resources, trees, crafting, construction, food production and private memories.
 
-**Current application: 0.12.0 · controller stabilization/4 · native UW9 · SQLite DB10 · checkpoint schema 9.** Native simulation laws/build remain unchanged from final Milestone D. [Current status](docs/STATUS.md), [audit and fixes](docs/CODE_AUDIT_REPORT.md), [D report](docs/LIVING_WORLD_D_REPORT.md), [handoff](HANDOFF.md).
+**Current application: 0.13.0 · controller stabilization/4 · native UW9 · SQLite DB10 · checkpoint schema 9.** Native simulation laws/build remain unchanged from final Milestone D. [Current status](docs/STATUS.md), [audit and fixes](docs/CODE_AUDIT_REPORT.md), [D report](docs/LIVING_WORLD_D_REPORT.md), [handoff](HANDOFF.md).
+
+## Knowledge and teaching
+
+Create a new explicit profile for one person; everyone else has an empty initial
+assignment. Default is `none`, so ordinary launches do not secretly teach anyone.
+
+```powershell
+.venv/Scripts/python.exe -m underworld living-world init --db data/f-new/world.sqlite --config config/living-world-e.toml --calls 0 --knowledge-profile woodcraft --knowledge-recipient agent-1
+.venv/Scripts/python.exe -m underworld knowledge --db data/f-new/world.sqlite --agent agent-1
+```
+
+Profiles: `basic_survival`, `woodcraft`, `livestock_care`, or `specialist` with a
+bounded plain-text `--knowledge-text` file. They are recorded external information,
+not native skills or restrictions on existing authored E recipes. Body/resource/
+identity/memory/controller state persists when that compatible save resumes.
+
+In a guided manual world, paused observer forms offer actual books/avatar speech
+or the separately labelled one-person injection. Stabilized desktop viewers remain
+read-only; use `intervene --request injection.json` between controller runs.
+[Complete examples and branch/access rules](docs/KNOWLEDGE_OPERATIONS.md) explain
+the distinction. Text cannot execute code, grant tools or increase skill.
+
+The registered randomized apparatus demonstration passes both held-out seeds:
+false lessons physically fail; the recipient tests, pays to write a book, and a
+second person learns only after actual reading. A third remains isolated. This is
+an explicit authored experiment with no model calls, not autonomous teaching or
+mastery. The next milestone is G's integrated demonstration and bounded archival.
 
 ## Start here
 
@@ -34,7 +62,7 @@ The launcher opens `http://127.0.0.1:8768/viewer`, creates a world on first laun
 
 Default save: `%LOCALAPPDATA%\UnderworldLab\world.sqlite` on Windows, or `~/.local/share/UnderworldLab/world.sqlite` elsewhere. Each launch resumes the same compatible save. Bodies, needs, memories, stock, animal state and scheduler are preserved. Nothing is replenished or reinitialized when a file already exists.
 
-The executable is an **unsigned local Windows x64 build**, tested on this host, not a signed installer or an independently certified release. The `dist/` directory is intentionally ignored by Git. Milestone E package evidence uses `artifacts/living_world_e_package*.json`; the earlier `food_repair_*` and `code_audit_*` results are historical. A normal rebuild writes `artifacts/package_app.json`, preserving earlier audit reports.
+The executable is an **unsigned local Windows x64 build**, tested on this host, not a signed installer or an independently certified release. The `dist/` directory is intentionally ignored by Git. Milestone F package evidence uses `artifacts/living_world_f_package*.json`; the earlier `food_repair_*` and `code_audit_*` results are historical. A normal rebuild writes `artifacts/package_app.json`, preserving earlier audit reports.
 
 ### One Bash file
 

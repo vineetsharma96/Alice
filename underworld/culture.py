@@ -37,12 +37,12 @@ def recall_projection(db,agent,config):
     enabled=episodic_enabled(config)
     claims=[]
     if enabled:
-        for row in db.execute("SELECT id,payload FROM episodes WHERE agent=? AND kind IN ('book_read','unverified_report') ORDER BY id DESC LIMIT 64",(agent,)):
+        for row in db.execute("SELECT id,payload FROM episodes WHERE agent=? AND kind IN ('book_read','unverified_report','external_initialization','operator_injection') ORDER BY id DESC LIMIT 64",(agent,)):
             report=loads(row[1]);value=parse_procedure(report.get("text",""))
             if value:
                 claims.append({"procedure":value,"episode_id":row[0],"observer_id":agent,
-                    **{key:report[key] for key in ("source_id","speaker_id","source_event_seq","origin_event_seq","parent_event_seq","delivery_tick")},
-                    "confidence":"unverified procedure report"})
+                    **{key:report[key] for key in ("source_id","speaker_id","source_event_seq","origin_event_seq","parent_event_seq","delivery_tick") if key in report},
+                    "source_type":report.get("source_type","embodied_access"), "confidence":"unverified procedure report"})
             if len(claims)==8:break
     unique={dumps(c["procedure"]) for c in claims}
     return {"agent":agent,"task":TASK,"status":"conflicting" if len(unique)>1 else "reported" if claims else "unknown",

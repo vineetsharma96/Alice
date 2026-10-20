@@ -1,0 +1,89 @@
+{
+  "passed": true,
+  "registered_files": {
+    "docs/PHASE_F_KNOWLEDGE.md": true,
+    "docs/PHASE_F_CONFIRMATION_NOTE.md": true,
+    "underworld/knowledge.py": true,
+    "underworld/memory.py": true,
+    "underworld/storage.py": true,
+    "underworld/teaching.py": true,
+    "underworld/culture.py": true,
+    "underworld/stabilization.py": true,
+    "scripts/phase_f_demo.py": true,
+    "tests/test_phase_f_knowledge.py": true
+  },
+  "phase9_hashes": {
+    "underworld\\learning.py": true,
+    "config\\phase9_study.json": true,
+    "docs\\PHASE9_PREREGISTRATION.md": true,
+    "docs\\PHASE9_REPORT.md": true,
+    "artifacts\\phase9_summary.json": true,
+    "data\\phase9-study-20261020\\file_hashes.json": true
+  },
+  "cases": [
+    {
+      "seed": 9187,
+      "counts": {
+        "action_accepted": 75,
+        "tick": 249,
+        "action_completed": 74,
+        "inspection": 54,
+        "heat_control": 6,
+        "action_failed": 1,
+        "batch_validated": 2,
+        "mass_transfer": 1,
+        "artifact_written": 1,
+        "book_read": 1
+      },
+      "failures": [
+        {
+          "agent_id": "agent-1",
+          "detail": "PROCESS_CONDITIONS",
+          "request_id": "lab-agent-1-process_batch-58",
+          "schema_version": 1,
+          "seq": "216",
+          "tick": "78",
+          "type": "action_failed"
+        }
+      ],
+      "source_chain_matches": true,
+      "simulated_s": 49.800000000000004,
+      "wall_s": 20.09915720000572,
+      "resume_equal": true,
+      "isolated_third": "unknown"
+    },
+    {
+      "seed": 11939,
+      "counts": {
+        "action_accepted": 75,
+        "tick": 249,
+        "action_completed": 74,
+        "inspection": 54,
+        "heat_control": 6,
+        "action_failed": 1,
+        "batch_validated": 2,
+        "mass_transfer": 1,
+        "artifact_written": 1,
+        "book_read": 1
+      },
+      "failures": [
+        {
+          "agent_id": "agent-1",
+          "detail": "PROCESS_CONDITIONS",
+          "request_id": "lab-agent-1-process_batch-58",
+          "schema_version": 1,
+          "seq": "216",
+          "tick": "78",
+          "type": "action_failed"
+        }
+      ],
+      "source_chain_matches": true,
+      "simulated_s": 49.800000000000004,
+      "wall_s": 16.804304400007823,
+      "resume_equal": true,
+      "isolated_third": "unknown"
+    }
+  ],
+  "attribution": "authored lab execution; no model calls or deterministic fallback",
+  "scope": "separate finite worlds, not one summed lifetime; no autonomous teaching claim"
+}

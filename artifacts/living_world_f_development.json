@@ -1,0 +1,3836 @@
+{
+  "split": "development",
+  "passed": true,
+  "wall_s": 15.526092800006154,
+  "cases": [
+    {
+      "seed": 7,
+      "passed": true,
+      "path": "data\\living-world-f-dev-20261021\\seed-7.sqlite",
+      "simulated_s": 54.400000000000006,
+      "wall_s": 15.48224760001176,
+      "execution": "authored bounded lab driver",
+      "model_calls": 0,
+      "deterministic_fallback_calls": 0,
+      "false_test": {
+        "branch_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+        "error_code": "PROCESS_CONDITIONS",
+        "event_refs": [
+          "264",
+          "284"
+        ],
+        "execution_origin": "authored_bounded_lab_driver",
+        "lesson_episode_id": 64,
+        "lesson_source_id": "operator:false-lesson",
+        "request_id": "lab-agent-1-process_batch-75",
+        "skill_granted_by_text": false,
+        "source_type": "operator_injection",
+        "status": "failed"
+      },
+      "teacher_test": {
+        "branch_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+        "error_code": "",
+        "event_refs": [
+          "310",
+          "330",
+          "331"
+        ],
+        "execution_origin": "authored_bounded_lab_driver",
+        "lesson_episode_id": 68,
+        "lesson_source_id": "operator:true-lesson",
+        "request_id": "lab-agent-1-process_batch-107",
+        "skill_granted_by_text": false,
+        "source_type": "operator_injection",
+        "status": "completed"
+      },
+      "writing": {
+        "schema_version": 1,
+        "request_id": "lab-agent-1-write_book-132",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "132",
+        "completed_tick": "157",
+        "observation_version": "157",
+        "event_refs": [
+          "341",
+          "366",
+          "367"
+        ],
+        "observable_effects": {
+          "description": "written:artifact-366"
+        }
+      },
+      "reading": {
+        "schema_version": 1,
+        "request_id": "lab-agent-2-read-212",
+        "agent_id": "agent-2",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "212",
+        "completed_tick": "217",
+        "observation_version": "217",
+        "event_refs": [
+          "440",
+          "445",
+          "446"
+        ],
+        "observable_effects": {
+          "description": "read:artifact-366"
+        }
+      },
+      "student_test": {
+        "branch_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+        "error_code": "",
+        "event_refs": [
+          "524",
+          "544",
+          "545"
+        ],
+        "execution_origin": "authored_bounded_lab_driver",
+        "lesson_episode_id": 88,
+        "lesson_source_id": "artifact-366",
+        "request_id": "lab-agent-2-process_batch-242",
+        "skill_granted_by_text": false,
+        "source_type": "book_read",
+        "status": "completed"
+      },
+      "book_claim": {
+        "procedure": {
+          "dial": "dial-2-d0a7dedd",
+          "station": "thermal-1",
+          "task": "condition-water-v1",
+          "temperature_k": 355.0
+        },
+        "episode_id": 88,
+        "observer_id": "agent-2",
+        "source_id": "artifact-366",
+        "speaker_id": "agent-1",
+        "source_event_seq": "445",
+        "origin_event_seq": "330",
+        "parent_event_seq": "366",
+        "delivery_tick": "217",
+        "source_type": "embodied_access",
+        "confidence": "unverified procedure report"
+      },
+      "initial_source": [
+        {
+          "episode_id": 75,
+          "tick": 127,
+          "kind": "knowledge_test",
+          "branch_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+          "error_code": "",
+          "event_refs": [
+            "310",
+            "330",
+            "331"
+          ],
+          "execution_origin": "authored_bounded_lab_driver",
+          "lesson_episode_id": 68,
+          "lesson_source_id": "operator:true-lesson",
+          "request_id": "lab-agent-1-process_batch-107",
+          "skill_granted_by_text": false,
+          "source_type": "operator_injection",
+          "status": "completed"
+        },
+        {
+          "episode_id": 68,
+          "tick": 95,
+          "kind": "operator_injection",
+          "branch_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+          "confidence": "unverified",
+          "delivery_tick": "95",
+          "recipient": "agent-1",
+          "skill_granted": false,
+          "source_id": "operator:true-lesson",
+          "source_type": "operator_injection",
+          "text": "PROCEDURE {\"dial\":\"dial-2-d0a7dedd\",\"station\":\"thermal-1\",\"task\":\"condition-water-v1\",\"temperature_k\":355.0}"
+        },
+        {
+          "episode_id": 67,
+          "tick": 95,
+          "kind": "knowledge_test",
+          "branch_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+          "error_code": "PROCESS_CONDITIONS",
+          "event_refs": [
+            "264",
+            "284"
+          ],
+          "execution_origin": "authored_bounded_lab_driver",
+          "lesson_episode_id": 64,
+          "lesson_source_id": "operator:false-lesson",
+          "request_id": "lab-agent-1-process_batch-75",
+          "skill_granted_by_text": false,
+          "source_type": "operator_injection",
+          "status": "failed"
+        },
+        {
+          "episode_id": 64,
+          "tick": 75,
+          "kind": "operator_injection",
+          "branch_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+          "confidence": "unverified",
+          "delivery_tick": "75",
+          "recipient": "agent-1",
+          "skill_granted": false,
+          "source_id": "operator:false-lesson",
+          "source_type": "operator_injection",
+          "text": "PROCEDURE {\"dial\":\"dial-0-206967ce\",\"station\":\"thermal-1\",\"task\":\"condition-water-v1\",\"temperature_k\":355.0}"
+        }
+      ],
+      "isolated_control": {
+        "agent": "agent-3",
+        "task": "condition-water-v1",
+        "status": "unknown",
+        "episodic_memory": true,
+        "claims": [],
+        "engine_fact": false,
+        "instrument": "authored-format own-report recall; no neural training"
+      },
+      "before_restart": {
+        "native": "868a909e965e2762c45934900a411aa161dd711da6c421eb6ba8178c652649a7",
+        "cognitive": "ed70c76b2cd218b4d5993bcb9f552a6448ededa67c5931438be3f81aad5cdd30",
+        "records": {
+          "agent-1": {
+            "agent": "agent-1",
+            "records": [
+              {
+                "episode_id": 75,
+                "tick": 127,
+                "kind": "knowledge_test",
+                "branch_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+                "error_code": "",
+                "event_refs": [
+                  "310",
+                  "330",
+                  "331"
+                ],
+                "execution_origin": "authored_bounded_lab_driver",
+                "lesson_episode_id": 68,
+                "lesson_source_id": "operator:true-lesson",
+                "request_id": "lab-agent-1-process_batch-107",
+                "skill_granted_by_text": false,
+                "source_type": "operator_injection",
+                "status": "completed"
+              },
+              {
+                "episode_id": 68,
+                "tick": 95,
+                "kind": "operator_injection",
+                "branch_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+                "confidence": "unverified",
+                "delivery_tick": "95",
+                "recipient": "agent-1",
+                "skill_granted": false,
+                "source_id": "operator:true-lesson",
+                "source_type": "operator_injection",
+                "text": "PROCEDURE {\"dial\":\"dial-2-d0a7dedd\",\"station\":\"thermal-1\",\"task\":\"condition-water-v1\",\"temperature_k\":355.0}"
+              },
+              {
+                "episode_id": 67,
+                "tick": 95,
+                "kind": "knowledge_test",
+                "branch_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+                "error_code": "PROCESS_CONDITIONS",
+                "event_refs": [
+                  "264",
+                  "284"
+                ],
+                "execution_origin": "authored_bounded_lab_driver",
+                "lesson_episode_id": 64,
+                "lesson_source_id": "operator:false-lesson",
+                "request_id": "lab-agent-1-process_batch-75",
+                "skill_granted_by_text": false,
+                "source_type": "operator_injection",
+                "status": "failed"
+              },
+              {
+                "episode_id": 64,
+                "tick": 75,
+                "kind": "operator_injection",
+                "branch_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+                "confidence": "unverified",
+                "delivery_tick": "75",
+                "recipient": "agent-1",
+                "skill_granted": false,
+                "source_id": "operator:false-lesson",
+                "source_type": "operator_injection",
+                "text": "PROCEDURE {\"dial\":\"dial-0-206967ce\",\"station\":\"thermal-1\",\"task\":\"condition-water-v1\",\"temperature_k\":355.0}"
+              }
+            ],
+            "counts": {
+              "external_initialization": 0,
+              "operator_injection": 2,
+              "book_read": 0,
+              "unverified_report": 0,
+              "knowledge_test": 2
+            },
+            "meaning": "External claims are unverified; native practice alone grants skill."
+          },
+          "agent-2": {
+            "agent": "agent-2",
+            "records": [
+              {
+                "episode_id": 109,
+                "tick": 262,
+                "kind": "knowledge_test",
+                "branch_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+                "error_code": "",
+                "event_refs": [
+                  "524",
+                  "544",
+                  "545"
+                ],
+                "execution_origin": "authored_bounded_lab_driver",
+                "lesson_episode_id": 88,
+                "lesson_source_id": "artifact-366",
+                "request_id": "lab-agent-2-process_batch-242",
+                "skill_granted_by_text": false,
+                "source_type": "book_read",
+                "status": "completed"
+              }
+            ],
+            "counts": {
+              "external_initialization": 0,
+              "operator_injection": 0,
+              "book_read": 1,
+              "unverified_report": 0,
+              "knowledge_test": 1
+            },
+            "meaning": "External claims are unverified; native practice alone grants skill."
+          },
+          "agent-3": {
+            "agent": "agent-3",
+            "records": [],
+            "counts": {
+              "external_initialization": 0,
+              "operator_injection": 0,
+              "book_read": 0,
+              "unverified_report": 0,
+              "knowledge_test": 0
+            },
+            "meaning": "External claims are unverified; native practice alone grants skill."
+          }
+        }
+      },
+      "resume_equal": true,
+      "native_replay": true,
+      "decisions": [
+        {
+          "tick": 0,
+          "request": {
+            "action_type": "move",
+            "agent_id": "agent-1",
+            "observation_version": "0",
+            "parameters": {
+              "x_m": 3.0,
+              "y_m": 3.0
+            },
+            "request_id": "lab-agent-1-move-0",
+            "requested_duration": 1.0,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": []
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "1"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "0",
+            "reason": "",
+            "request_id": "lab-agent-1-move-0",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "0",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 5,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "5",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-5",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "8"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "5",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-5",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "5",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 6,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "6",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-6",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "12"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "6",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-6",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "6",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 7,
+          "request": {
+            "action_type": "operate_heat",
+            "agent_id": "agent-1",
+            "observation_version": "7",
+            "parameters": {
+              "mode": "electric"
+            },
+            "request_id": "lab-agent-1-operate_heat-7",
+            "requested_duration": 1,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "16"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "7",
+            "reason": "",
+            "request_id": "lab-agent-1-operate_heat-7",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "7",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 12,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "12",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-12",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "24"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "12",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-12",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "12",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 13,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "13",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-13",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "28"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "13",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-13",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "13",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 14,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "14",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-14",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "32"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "14",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-14",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "14",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 15,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "15",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-15",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "36"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "15",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-15",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "15",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 16,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "16",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-16",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "40"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "16",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-16",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "16",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 17,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "17",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-17",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "44"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "17",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-17",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "17",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 18,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "18",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-18",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "48"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "18",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-18",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "18",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 19,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "19",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-19",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "52"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "19",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-19",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "19",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 20,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "20",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-20",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "56"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "20",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-20",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "20",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 21,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "21",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-21",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "60"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "21",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-21",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "21",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 22,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "22",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-22",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "64"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "22",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-22",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "22",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 23,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "23",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-23",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "68"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "23",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-23",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "23",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 24,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "24",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-24",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "72"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "24",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-24",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "24",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 25,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "25",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-25",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "76"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "25",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-25",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "25",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 26,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "26",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-26",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "80"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "26",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-26",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "26",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 27,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "27",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-27",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "84"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "27",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-27",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "27",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 28,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "28",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-28",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "88"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "28",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-28",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "28",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 29,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "29",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-29",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "92"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "29",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-29",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "29",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 30,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "30",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-30",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "96"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "30",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-30",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "30",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 31,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "31",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-31",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "100"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "31",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-31",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "31",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 32,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "32",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-32",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "104"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "32",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-32",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "32",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 33,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "33",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-33",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "108"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "33",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-33",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "33",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 34,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "34",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-34",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "112"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "34",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-34",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "34",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 35,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "35",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-35",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "116"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "35",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-35",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "35",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 36,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "36",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-36",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "120"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "36",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-36",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "36",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 37,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "37",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-37",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "124"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "37",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-37",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "37",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 38,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "38",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-38",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "128"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "38",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-38",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "38",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 39,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "39",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-39",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "132"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "39",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-39",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "39",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 40,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "40",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-40",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "136"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "40",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-40",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "40",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 41,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "41",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-41",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "140"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "41",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-41",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "41",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 42,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "42",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-42",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "144"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "42",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-42",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "42",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 43,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "43",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-43",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "148"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "43",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-43",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "43",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 44,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "44",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-44",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "152"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "44",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-44",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "44",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 45,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "45",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-45",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "156"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "45",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-45",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "45",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 46,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "46",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-46",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "160"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "46",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-46",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "46",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 47,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "47",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-47",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "164"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "47",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-47",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "47",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 48,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "48",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-48",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "168"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "48",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-48",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "48",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 49,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "49",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-49",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "172"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "49",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-49",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "49",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 50,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "50",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-50",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "176"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "50",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-50",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "50",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 51,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "51",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-51",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "180"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "51",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-51",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "51",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 52,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "52",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-52",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "184"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "52",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-52",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "52",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 53,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "53",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-53",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "188"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "53",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-53",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "53",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 54,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "54",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-54",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "192"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "54",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-54",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "54",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 55,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "55",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-55",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "196"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "55",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-55",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "55",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 56,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "56",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-56",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "200"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "56",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-56",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "56",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 57,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "57",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-57",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "204"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "57",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-57",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "57",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 58,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "58",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-58",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "208"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "58",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-58",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "58",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 59,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "59",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-59",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "212"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "59",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-59",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "59",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 60,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "60",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-60",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "216"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "60",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-60",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "60",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 61,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "61",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-61",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "220"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "61",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-61",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "61",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 62,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "62",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-62",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "224"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "62",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-62",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "62",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 63,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "63",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-63",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "228"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "63",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-63",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "63",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 64,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "64",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-64",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "232"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "64",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-64",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "64",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 65,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "65",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-65",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "236"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "65",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-65",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "65",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 66,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "66",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-66",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "240"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "66",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-66",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "66",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 67,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "67",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-67",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "244"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "67",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-67",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "67",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 68,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "68",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-68",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "248"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "68",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-68",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "68",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 69,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "69",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-69",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "252"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "69",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-69",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "69",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 70,
+          "request": {
+            "action_type": "operate_heat",
+            "agent_id": "agent-1",
+            "observation_version": "70",
+            "parameters": {
+              "mode": "off"
+            },
+            "request_id": "lab-agent-1-operate_heat-70",
+            "requested_duration": 1,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "256"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "70",
+            "reason": "",
+            "request_id": "lab-agent-1-operate_heat-70",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "70",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 75,
+          "request": {
+            "branch_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "intervention_id": "false-lesson",
+            "kind": "inject_knowledge",
+            "observation_version": "75",
+            "parameters": {
+              "recipient": "agent-1",
+              "text": "PROCEDURE {\"dial\":\"dial-0-206967ce\",\"station\":\"thermal-1\",\"task\":\"condition-water-v1\",\"temperature_k\":355.0}"
+            },
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1
+          },
+          "result": {
+            "branch_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "native_action": false,
+            "recipient": "agent-1",
+            "skill_granted": false,
+            "source_id": "operator:false-lesson",
+            "source_type": "operator_injection",
+            "status": "recorded",
+            "tick": "75"
+          },
+          "source": "operator_knowledge"
+        },
+        {
+          "tick": 75,
+          "request": {
+            "action_type": "process_batch",
+            "agent_id": "agent-1",
+            "observation_version": "75",
+            "parameters": {
+              "dial": "dial-0-206967ce"
+            },
+            "request_id": "lab-agent-1-process_batch-75",
+            "requested_duration": 4.0,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "264"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "75",
+            "reason": "",
+            "request_id": "lab-agent-1-process_batch-75",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "75",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 95,
+          "request": {
+            "branch_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "intervention_id": "true-lesson",
+            "kind": "inject_knowledge",
+            "observation_version": "95",
+            "parameters": {
+              "recipient": "agent-1",
+              "text": "PROCEDURE {\"dial\":\"dial-2-d0a7dedd\",\"station\":\"thermal-1\",\"task\":\"condition-water-v1\",\"temperature_k\":355.0}"
+            },
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1
+          },
+          "result": {
+            "branch_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "native_action": false,
+            "recipient": "agent-1",
+            "skill_granted": false,
+            "source_id": "operator:true-lesson",
+            "source_type": "operator_injection",
+            "status": "recorded",
+            "tick": "95"
+          },
+          "source": "operator_knowledge"
+        },
+        {
+          "tick": 95,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "95",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-95",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "286"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "95",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-95",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "95",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 96,
+          "request": {
+            "action_type": "operate_heat",
+            "agent_id": "agent-1",
+            "observation_version": "96",
+            "parameters": {
+              "mode": "electric"
+            },
+            "request_id": "lab-agent-1-operate_heat-96",
+            "requested_duration": 1,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "290"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "96",
+            "reason": "",
+            "request_id": "lab-agent-1-operate_heat-96",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "96",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 101,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-1",
+            "observation_version": "101",
+            "parameters": {},
+            "request_id": "lab-agent-1-inspect-101",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "298"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "101",
+            "reason": "",
+            "request_id": "lab-agent-1-inspect-101",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "101",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 102,
+          "request": {
+            "action_type": "operate_heat",
+            "agent_id": "agent-1",
+            "observation_version": "102",
+            "parameters": {
+              "mode": "off"
+            },
+            "request_id": "lab-agent-1-operate_heat-102",
+            "requested_duration": 1,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "302"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "102",
+            "reason": "",
+            "request_id": "lab-agent-1-operate_heat-102",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "102",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 107,
+          "request": {
+            "action_type": "process_batch",
+            "agent_id": "agent-1",
+            "observation_version": "107",
+            "parameters": {
+              "dial": "dial-2-d0a7dedd"
+            },
+            "request_id": "lab-agent-1-process_batch-107",
+            "requested_duration": 4.0,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "310"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "107",
+            "reason": "",
+            "request_id": "lab-agent-1-process_batch-107",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "107",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 127,
+          "request": {
+            "action_type": "gather",
+            "agent_id": "agent-1",
+            "observation_version": "127",
+            "parameters": {
+              "mass_kg": 0.02
+            },
+            "request_id": "lab-agent-1-gather-127",
+            "requested_duration": 1,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "resource-3"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "333"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "127",
+            "reason": "",
+            "request_id": "lab-agent-1-gather-127",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "127",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 132,
+          "request": {
+            "action_type": "write_book",
+            "agent_id": "agent-1",
+            "observation_version": "132",
+            "parameters": {
+              "evidence_ref": "330",
+              "text": "PROCEDURE {\"dial\":\"dial-2-d0a7dedd\",\"station\":\"thermal-1\",\"task\":\"condition-water-v1\",\"temperature_k\":355.0}"
+            },
+            "request_id": "lab-agent-1-write_book-132",
+            "requested_duration": 5,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": []
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "341"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "132",
+            "reason": "",
+            "request_id": "lab-agent-1-write_book-132",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "132",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 157,
+          "request": {
+            "action_type": "move",
+            "agent_id": "agent-1",
+            "observation_version": "157",
+            "parameters": {
+              "x_m": 2.0,
+              "y_m": 3.0
+            },
+            "request_id": "lab-agent-1-move-157",
+            "requested_duration": 1.0,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": []
+          },
+          "result": {
+            "agent_id": "agent-1",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "369"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "157",
+            "reason": "",
+            "request_id": "lab-agent-1-move-157",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "157",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 162,
+          "request": {
+            "action_type": "move",
+            "agent_id": "agent-2",
+            "observation_version": "162",
+            "parameters": {
+              "x_m": 6,
+              "y_m": 10
+            },
+            "request_id": "lab-agent-2-move-162",
+            "requested_duration": 1.8,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": []
+          },
+          "result": {
+            "agent_id": "agent-2",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "376"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "162",
+            "reason": "",
+            "request_id": "lab-agent-2-move-162",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "162",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 171,
+          "request": {
+            "action_type": "move",
+            "agent_id": "agent-2",
+            "observation_version": "171",
+            "parameters": {
+              "x_m": 5,
+              "y_m": 9
+            },
+            "request_id": "lab-agent-2-move-171",
+            "requested_duration": 1.6,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": []
+          },
+          "result": {
+            "agent_id": "agent-2",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "387"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "171",
+            "reason": "",
+            "request_id": "lab-agent-2-move-171",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "171",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 179,
+          "request": {
+            "action_type": "move",
+            "agent_id": "agent-2",
+            "observation_version": "179",
+            "parameters": {
+              "x_m": 5,
+              "y_m": 8
+            },
+            "request_id": "lab-agent-2-move-179",
+            "requested_duration": 1.0,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": []
+          },
+          "result": {
+            "agent_id": "agent-2",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "397"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "179",
+            "reason": "",
+            "request_id": "lab-agent-2-move-179",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "179",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 184,
+          "request": {
+            "action_type": "move",
+            "agent_id": "agent-2",
+            "observation_version": "184",
+            "parameters": {
+              "x_m": 4,
+              "y_m": 7
+            },
+            "request_id": "lab-agent-2-move-184",
+            "requested_duration": 1.6,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": []
+          },
+          "result": {
+            "agent_id": "agent-2",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "404"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "184",
+            "reason": "",
+            "request_id": "lab-agent-2-move-184",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "184",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 192,
+          "request": {
+            "action_type": "move",
+            "agent_id": "agent-2",
+            "observation_version": "192",
+            "parameters": {
+              "x_m": 4,
+              "y_m": 6
+            },
+            "request_id": "lab-agent-2-move-192",
+            "requested_duration": 1.0,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": []
+          },
+          "result": {
+            "agent_id": "agent-2",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "414"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "192",
+            "reason": "",
+            "request_id": "lab-agent-2-move-192",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "192",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 197,
+          "request": {
+            "action_type": "move",
+            "agent_id": "agent-2",
+            "observation_version": "197",
+            "parameters": {
+              "x_m": 3,
+              "y_m": 5
+            },
+            "request_id": "lab-agent-2-move-197",
+            "requested_duration": 1.6,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": []
+          },
+          "result": {
+            "agent_id": "agent-2",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "421"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "197",
+            "reason": "",
+            "request_id": "lab-agent-2-move-197",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "197",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 205,
+          "request": {
+            "action_type": "move",
+            "agent_id": "agent-2",
+            "observation_version": "205",
+            "parameters": {
+              "x_m": 3.0,
+              "y_m": 3.8
+            },
+            "request_id": "lab-agent-2-move-205",
+            "requested_duration": 1.4000000000000001,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": []
+          },
+          "result": {
+            "agent_id": "agent-2",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "431"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "205",
+            "reason": "",
+            "request_id": "lab-agent-2-move-205",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "205",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 212,
+          "request": {
+            "action_type": "read",
+            "agent_id": "agent-2",
+            "observation_version": "212",
+            "parameters": {},
+            "request_id": "lab-agent-2-read-212",
+            "requested_duration": 1,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "artifact-366"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-2",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "440"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "212",
+            "reason": "",
+            "request_id": "lab-agent-2-read-212",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "212",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 217,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-2",
+            "observation_version": "217",
+            "parameters": {},
+            "request_id": "lab-agent-2-inspect-217",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-2",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "448"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "217",
+            "reason": "",
+            "request_id": "lab-agent-2-inspect-217",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "217",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 218,
+          "request": {
+            "action_type": "operate_heat",
+            "agent_id": "agent-2",
+            "observation_version": "218",
+            "parameters": {
+              "mode": "electric"
+            },
+            "request_id": "lab-agent-2-operate_heat-218",
+            "requested_duration": 1,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-2",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "452"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "218",
+            "reason": "",
+            "request_id": "lab-agent-2-operate_heat-218",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "218",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 223,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-2",
+            "observation_version": "223",
+            "parameters": {},
+            "request_id": "lab-agent-2-inspect-223",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-2",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "460"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "223",
+            "reason": "",
+            "request_id": "lab-agent-2-inspect-223",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "223",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 224,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-2",
+            "observation_version": "224",
+            "parameters": {},
+            "request_id": "lab-agent-2-inspect-224",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-2",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "464"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "224",
+            "reason": "",
+            "request_id": "lab-agent-2-inspect-224",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "224",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 225,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-2",
+            "observation_version": "225",
+            "parameters": {},
+            "request_id": "lab-agent-2-inspect-225",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-2",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "468"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "225",
+            "reason": "",
+            "request_id": "lab-agent-2-inspect-225",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "225",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 226,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-2",
+            "observation_version": "226",
+            "parameters": {},
+            "request_id": "lab-agent-2-inspect-226",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-2",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "472"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "226",
+            "reason": "",
+            "request_id": "lab-agent-2-inspect-226",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "226",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 227,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-2",
+            "observation_version": "227",
+            "parameters": {},
+            "request_id": "lab-agent-2-inspect-227",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-2",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "476"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "227",
+            "reason": "",
+            "request_id": "lab-agent-2-inspect-227",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "227",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 228,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-2",
+            "observation_version": "228",
+            "parameters": {},
+            "request_id": "lab-agent-2-inspect-228",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-2",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "480"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "228",
+            "reason": "",
+            "request_id": "lab-agent-2-inspect-228",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "228",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 229,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-2",
+            "observation_version": "229",
+            "parameters": {},
+            "request_id": "lab-agent-2-inspect-229",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-2",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "484"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "229",
+            "reason": "",
+            "request_id": "lab-agent-2-inspect-229",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "229",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 230,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-2",
+            "observation_version": "230",
+            "parameters": {},
+            "request_id": "lab-agent-2-inspect-230",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-2",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "488"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "230",
+            "reason": "",
+            "request_id": "lab-agent-2-inspect-230",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "230",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 231,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-2",
+            "observation_version": "231",
+            "parameters": {},
+            "request_id": "lab-agent-2-inspect-231",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-2",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "492"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "231",
+            "reason": "",
+            "request_id": "lab-agent-2-inspect-231",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "231",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 232,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-2",
+            "observation_version": "232",
+            "parameters": {},
+            "request_id": "lab-agent-2-inspect-232",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-2",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "496"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "232",
+            "reason": "",
+            "request_id": "lab-agent-2-inspect-232",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "232",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 233,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-2",
+            "observation_version": "233",
+            "parameters": {},
+            "request_id": "lab-agent-2-inspect-233",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-2",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "500"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "233",
+            "reason": "",
+            "request_id": "lab-agent-2-inspect-233",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "233",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 234,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-2",
+            "observation_version": "234",
+            "parameters": {},
+            "request_id": "lab-agent-2-inspect-234",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-2",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "504"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "234",
+            "reason": "",
+            "request_id": "lab-agent-2-inspect-234",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "234",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 235,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-2",
+            "observation_version": "235",
+            "parameters": {},
+            "request_id": "lab-agent-2-inspect-235",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-2",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "508"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "235",
+            "reason": "",
+            "request_id": "lab-agent-2-inspect-235",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "235",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 236,
+          "request": {
+            "action_type": "inspect",
+            "agent_id": "agent-2",
+            "observation_version": "236",
+            "parameters": {},
+            "request_id": "lab-agent-2-inspect-236",
+            "requested_duration": 0.2,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-2",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "512"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "236",
+            "reason": "",
+            "request_id": "lab-agent-2-inspect-236",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "236",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 237,
+          "request": {
+            "action_type": "operate_heat",
+            "agent_id": "agent-2",
+            "observation_version": "237",
+            "parameters": {
+              "mode": "off"
+            },
+            "request_id": "lab-agent-2-operate_heat-237",
+            "requested_duration": 1,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-2",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "516"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "237",
+            "reason": "",
+            "request_id": "lab-agent-2-operate_heat-237",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "237",
+            "status": "accepted"
+          },
+          "source": "external"
+        },
+        {
+          "tick": 242,
+          "request": {
+            "action_type": "process_batch",
+            "agent_id": "agent-2",
+            "observation_version": "242",
+            "parameters": {
+              "dial": "dial-2-d0a7dedd"
+            },
+            "request_id": "lab-agent-2-process_batch-242",
+            "requested_duration": 4.0,
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "target_ids": [
+              "thermal-1"
+            ]
+          },
+          "result": {
+            "agent_id": "agent-2",
+            "completed_tick": "0",
+            "error_code": "",
+            "event_refs": [
+              "524"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "242",
+            "reason": "",
+            "request_id": "lab-agent-2-process_batch-242",
+            "run_id": "12e61c00-c8ed-42f9-8440-fdedf21bf9c1",
+            "schema_version": 1,
+            "started_tick": "242",
+            "status": "accepted"
+          },
+          "source": "external"
+        }
+      ]
+    }
+  ]
+}

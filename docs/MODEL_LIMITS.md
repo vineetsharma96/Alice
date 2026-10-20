@@ -78,3 +78,12 @@ confirmation shows no completion advantage and added inference cost. The normal
 desktop remains model-off; recurring/fair/global budgets and E AppContainer
 integration remain incomplete. No Phase 9 learner is activated. See
 [E evidence and remaining limits](LIVING_WORLD_E_REPORT.md).
+
+## Milestone F interpretation
+
+External initialization and operator injection are private unverified episodes,
+separate from native read/hearing events and physical practice. One-step lesson
+tests reserve own provenance before submitting a native action; terminal memory
+and the test link commit together. Native laws/skill remain authoritative.
+See [F report](LIVING_WORLD_F_REPORT.md) and [operations](KNOWLEDGE_OPERATIONS.md).
+The bounded authored apparatus demo is not autonomous teaching or general learning.

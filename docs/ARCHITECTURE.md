@@ -99,3 +99,12 @@ it never supplies physical effects. Controller v4 hashes all three control
 modules and keeps task pending ownership, cancellation and source evidence in
 the checksummed coordinator state. No additional writer or native-law change.
 Read [E report](LIVING_WORLD_E_REPORT.md) and [operations](PLANNING_OPERATIONS.md).
+
+## Milestone F knowledge boundary
+
+External initialization and operator injection are private unverified episodes,
+separate from native read/hearing events and physical practice. One-step lesson
+tests reserve own provenance before submitting a native action; terminal memory
+and the test link commit together. Native laws/skill remain authoritative.
+See [F report](LIVING_WORLD_F_REPORT.md) and [operations](KNOWLEDGE_OPERATIONS.md).
+The bounded authored apparatus demo is not autonomous teaching or general learning.

@@ -1,3 +1,30 @@
+# Milestone F — 21 October 2026
+
+Application **0.13.0**, native UW9/DB10/checkpoint 9 unchanged. Explicit new-world
+knowledge profiles, private guided operator injection, own-lesson native testing
+and separate source counts are implemented. Read [F report](LIVING_WORLD_F_REPORT.md),
+[operations](KNOWLEDGE_OPERATIONS.md) and [protocol](PHASE_F_KNOWLEDGE.md).
+
+Both held-out randomized apparatus cases pass: false lessons physically fail;
+the recipient tests, pays to write, and a second reproduces after actual reading.
+The isolated third stays unknown. Each world runs 49.8 continuous simulated seconds,
+in 20.099/16.804 wall seconds in the final source repeat, including fresh-process
+parity checks (shared-host timing; original 12.329/12.394 seconds). Execution is
+an authored laboratory driver with zero model/fallback calls, not autonomous teaching.
+
+Verification: 219 Python tests plus four native checks; the final F-specific
+checks and retained-lesson ablation guard also pass. Independent Phase 9 audit
+verifies 3439 files and keeps advance=false.
+
+Old E worlds require build/runtime-before-milestone-f-20261021; no migration/reset.
+Profiles do not erase authored E recipes or pretrained facts. E teach_procedure/pen
+planning remain unsupported. Desktop teaching remains read-only; explicit CLI
+intervention is available between controller runs. G integration, bounded archival,
+long-term husbandry and A global model budgets remain incomplete. Phase 9 remains
+failed, sealed and outside live policies. Older entries below are historical.
+
+---
+
 # Milestone E update â€” 21 October 2026
 
 Bounded explicitly assigned hierarchy/recovery now covers food/wood, tools,

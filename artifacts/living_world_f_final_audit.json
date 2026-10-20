@@ -1,0 +1,27 @@
+{
+  "registered_sources_match": {
+    "docs/PHASE_F_KNOWLEDGE.md": true,
+    "docs/PHASE_F_CONFIRMATION_NOTE.md": true,
+    "underworld/knowledge.py": true,
+    "underworld/memory.py": true,
+    "underworld/storage.py": true,
+    "underworld/teaching.py": true,
+    "underworld/culture.py": true,
+    "underworld/stabilization.py": true,
+    "scripts/phase_f_demo.py": true,
+    "tests/test_phase_f_knowledge.py": true
+  },
+  "checks": {
+    "living_world_f_checks": true,
+    "living_world_f_summary": true,
+    "living_world_f_ablation_guard": true,
+    "living_world_f_package_smoke_final": true,
+    "living_world_f_package_knowledge_final": true,
+    "living_world_f_viewer": true
+  },
+  "archive_drift": [],
+  "exe_sha256_matches": true,
+  "phase9_advance": false,
+  "legacy_E_tick": "240",
+  "passed": true
+}

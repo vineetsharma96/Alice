@@ -1,71 +1,49 @@
-# Underworld Lab - Milestone E handoff (21 October 2026)
+# Underworld Lab — Milestone F handoff (21 October 2026)
 
-Application 0.12.0 / stabilization/4; native UW9 / DB10 / checkpoint 9 remains
-build 832c4a705a7ceecd85d8befb3d84f4dff0d4730f024c395eba12985f0d8bd896.
-Read [E report](docs/LIVING_WORLD_E_REPORT.md), [operations](docs/PLANNING_OPERATIONS.md),
-[protocol](docs/PHASE_E_PLANNING.md) and [fixture amendment](docs/PHASE_E_EVALUATION_AMENDMENT_1.md).
-Prior handoff: [archive](HANDOFF_PRE_E_ARCHIVE.md).
+Application 0.13.0 / stabilization4 with new source identity. Native UW9 / DB10 /
+checkpoint9 remains build 832c4a705a7ceecd85d8befb3d84f4dff0d4730f024c395eba12985f0d8bd896.
+Read docs/LIVING_WORLD_F_REPORT.md, KNOWLEDGE_OPERATIONS.md and PHASE_F_KNOWLEDGE.md.
+Previous exact handoff is HANDOFF_PRE_F_ARCHIVE.md.
 
-## Current behavior
+Explicit new-world knowledge profiles default to none and choose one recipient.
+Versioned initial assignments (including empty assignments) persist in metadata;
+recipient claims use external_initialization episodes. Existing native embodied
+books/hearing are separate from guided inject_knowledge operator records. Text
+is inert/unverified and cannot grant native skill/materials/host privileges.
+knowledge --test-episode performs one authored own-record apparatus action;
+its durable intent and native terminal memory link preserve lesson provenance.
+No new native laws, model training, reproduction, speech or true 3D were added.
 
-Explicit per-agent authored hierarchical tasks run inside the existing single
-writer: food/wood, axe/planks/trough, actual water delivery, animal care,
-inspection and rest. Native requests remain authoritative. Urgent needs preempt
-between primitives; deadlines, retries, cancellation and model attempts persist.
-Private native receipt evidence can bias source choice and reference a reusable
-authored procedure. Native workmanship is separate. Pen topology and teaching
-remain unsupported, with explicit failure. No Phase 9 learner is active.
+Both held-out apparatus seeds pass: false lesson physically fails; true recipient
+then tests and pays to write; second learns only after paid reading and reproduces.
+The isolated third stays unknown. Each separate life is 49.8 simulated seconds,
+20.099/16.804 wall seconds in final repeat (shared-host timing), including checks/
+fresh-process continuation. Original confirmation 12.329/12.394 s retained. Per seed:
+75 native accepted, 74 completed, one deliberate PROCESS_CONDITIONS failure, zero rejections.
+Execution is authored lab logic, zero model/fallback calls. Source/event chain
+and fresh-process native/cognitive parity retained under artifacts/living_world_f_*.
 
-## Launch and resume
+Use a NEW save with F. Old E saves need exact pre-F source/config/executable in
+build/runtime-before-milestone-f-20261021. There is no automatic migration/reset.
+Earlier runtimes remain preserved in their previous archives. Normal desktop
+launchers stay model-off and resume compatible saves. Stabilized viewers remain
+read-only; use explicit CLI intervention between controller runs. Writable manual
+laboratory: config/knowledge-lab-f.toml, new --manual then observe.
 
-Use run.cmd, bash run.sh or dist/UnderworldLab.exe for the model-off desktop.
-Choose a NEW --db path for E; never migrate/reset a previous controller save.
-Source commands require UNDERWORLD_BUILD=build/living-d and the MinGW DLL path.
+E hierarchical tasks and native authority are unchanged. Profiles are recorded
+information, not new recipe permissions or pretrained knowledge erasure.
+Autonomous teach_procedure and pen planning remain unsupported. G integrated
+four-person demo and E/knowledge-aware bounded archival are next. Long-term
+husbandry, A fair global inference budgets and older research limits stay open.
+Phase9's failed study/learner stay sealed and outside live autonomous policies.
 
-```powershell
-$env:PATH='C:\mingw64\bin;'+$env:PATH
-$env:UNDERWORLD_BUILD=(Resolve-Path build/living-d).Path
-.venv/Scripts/python.exe -m underworld living-world init --db data/e-user/run.sqlite --config config/living-world-e.toml --calls 0
-.venv/Scripts/python.exe -m underworld living-world task --db data/e-user/run.sqlite --agent agent-1 --goal craft_tool
-.venv/Scripts/python.exe -m underworld living-world run --db data/e-user/run.sqlite --seconds 60 --wall-seconds 240
-```
+Unrelated OpenCode/npm edits remain local; do not stage/revert them. Existing
+user viewer8765 was not stopped. No owned test model/viewer should remain running.
 
-The E profile has four humans/two animals in 16 m; confirmation uses smaller
-one-human cases. Arbitrary population/layout success is not established.
-The normal desktop rejects active model-assisted tasks; use the explicit CLI
-model workflow described in operations. Models default off; E caps do not clear
-A's recurring fair/global inference-budget gate or add AppContainer guarantees.
+Full checks: 219 Python / 317.003 s + four native pass. Ten F cases rechecked after final
+ablation guard; guard refusal preserves bytes. Static 91 modules / lint / syntax pass.
+Independent Phase 9 audit: 3439 files / 360 trials / 840 rollouts, advance=false unchanged.
 
-## Compatibility and evidence
-
-Controller source pins cover stabilization.py, planning.py and planning_model.py.
-The exact pre-E source/config/executable is preserved locally at
-build/runtime-before-milestone-e-20261021. Its executable is for food-repair v3
-saves; still earlier worlds require their respective archived full runtimes.
-Do not mix source versions. Original C/D/food/Phase 9 artifacts remain historical.
-The first E utility comparison was invalid; it and its registration are retained.
-The corrected cohort uses seeds 1329/1449 with matched native starts and active
-utility; E controller digest stayed frozen. See the report for exact results.
-
-Verification: 209 Python tests (315.240 s), four native checks, lint/static/syntax,
-real model comparison, broken-tool supplement, packaged source/save interchange,
-E task CLI/model-off guard and both read-only viewers pass. The 120-continuous-
-second production world uses 32.879 primary wall seconds; a fresh-process backup
-resumes 90 seconds in 24.925 wall seconds to exact native state and eight tables.
-Primary save: data/living-world-e-continuity-20261021/run.sqlite; counterpart:
-data/living-world-e-continuity-20261021/resumed.sqlite. No refill/reset/growth.
-
-Model assistance adds cost without a completion advantage. Source preference
-changes later behavior but is slower when a temporary blocker has cleared.
-Do not relabel this as general learning, new recipes, mastery or model training.
-Evidence is under artifacts/living_world_e_*; raw new worlds under data/living-world-e-*.
-The independent Phase 9 audit retains its failed gate and original sources.
-
-## Next work
-
-F: explicit initial knowledge and source-preserving embodied teaching/injection.
-G: integrated four-person demonstration and E-aware bounded archival. A global
-model budgets, general goal formation, arbitrary cargo/route/pen planning and
-long-term husbandry remain incomplete. Breeding/cooking, speech and true 3D are
-still deferred. No owned model/viewer process is intentionally left running.
-Unrelated OpenCode/npm edits remain local and were not included in the E push.
+Executable rebuilt; packaged source/save interchange and both injection forms
+verified with no external Python/compiler on PATH. Local dist executable is
+unsigned and ignored by Git; package hash/evidence in artifacts/living_world_f_*.

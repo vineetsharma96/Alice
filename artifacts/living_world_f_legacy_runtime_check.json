@@ -1,0 +1,451 @@
+{
+  "schema_version": 1,
+  "kind": "world_snapshot",
+  "run_id": "adcb3f98-7faa-4c78-bc8d-97b92ec004dc",
+  "culture": {
+    "enabled": false,
+    "skills": {},
+    "agreements": [],
+    "validated_batches": [],
+    "departed": []
+  },
+  "ecology": {
+    "enabled": false,
+    "controller_origin": "authored_native_ecology_v1",
+    "animals": {},
+    "freshness_s": {},
+    "structural_body_initial_ug": "0",
+    "food_residue_ug": "0",
+    "water_waste_ug": "0",
+    "egg_input_ug": "0",
+    "eggs_produced_ug": "0",
+    "forage_regeneration_kg_s": 0.0
+  },
+  "branch_id": "adcb3f98-7faa-4c78-bc8d-97b92ec004dc",
+  "tick": "240",
+  "observation_version": "240",
+  "last_event_seq": "351",
+  "seed": "20261021",
+  "dt_s": 0.5,
+  "simulated_time_s": 120.0,
+  "laws_version": "culture-6/535498c2f97d",
+  "thermal": {
+    "enabled": false,
+    "open_boundaries": false,
+    "cells": [],
+    "ambient_temperature_k": 0.0,
+    "stored_energy_j": 0.0,
+    "initial_energy_j": 0.0,
+    "heater_input_j": 0.0,
+    "radiation_in_j": 0.0,
+    "radiation_out_j": 0.0,
+    "outflow_energy_j": 0.0,
+    "solar_transferred_j": 0.0,
+    "burned_fuel_ug": "0",
+    "outflow_water_ug": "0",
+    "balance_error_j": 0.0,
+    "global_balance_error_j": 0.0,
+    "energy_tolerance_j": 1e-05
+  },
+  "build_id": "832c4a705a7ceecd85d8befb3d84f4dff0d4730f024c395eba12985f0d8bd896",
+  "world_bounds_m": {
+    "width": 8.0,
+    "height": 8.0
+  },
+  "entities": [
+    {
+      "entity_id": "terrain-1",
+      "kind": "rock",
+      "position_m": [
+        4.0,
+        4.0
+      ],
+      "radius_m": 1.0,
+      "mass_kg": 0.0,
+      "mass_ug": "0",
+      "inventory_ug": {}
+    },
+    {
+      "entity_id": "tree-1",
+      "kind": "tree",
+      "position_m": [
+        2.0,
+        6.0
+      ],
+      "radius_m": 0.6,
+      "mass_kg": 1.0,
+      "mass_ug": "1000000000",
+      "stage": "young",
+      "health": 0.9416666666666667,
+      "biomass_ug": "1000000000",
+      "inventory_ug": {}
+    },
+    {
+      "entity_id": "tree-2",
+      "kind": "tree",
+      "position_m": [
+        6.0,
+        2.0
+      ],
+      "radius_m": 0.6,
+      "mass_kg": 6.0,
+      "mass_ug": "6000000000",
+      "stage": "mature",
+      "health": 0.9722481684981685,
+      "biomass_ug": "6000000000",
+      "inventory_ug": {}
+    },
+    {
+      "entity_id": "tree-3",
+      "kind": "tree",
+      "position_m": [
+        6.0,
+        6.0
+      ],
+      "radius_m": 0.6,
+      "mass_kg": 8.0,
+      "mass_ug": "8000000000",
+      "stage": "mature",
+      "health": 1.0,
+      "biomass_ug": "8000000000",
+      "inventory_ug": {}
+    },
+    {
+      "entity_id": "agent-1",
+      "kind": "actor",
+      "position_m": [
+        2.508065044950046,
+        2.9838699100999078
+      ],
+      "radius_m": 0.25,
+      "mass_kg": 0.0,
+      "mass_ug": "0",
+      "workmanship": 3,
+      "inventory_ug": {
+        "fiber": "0",
+        "plank": "0",
+        "stone": "0",
+        "water": "0",
+        "wood": "0",
+        "wood_offcut": "200000000"
+      },
+      "alive": true,
+      "body": {
+        "hunger": 0.4700000000000001,
+        "thirst": 0.07050000000000005,
+        "fatigue": 0.31160000000000104,
+        "health": 1.0,
+        "alive": true,
+        "food_ingested_ug": "0",
+        "water_ingested_ug": "300000000"
+      },
+      "present": true
+    },
+    {
+      "entity_id": "resource-1",
+      "kind": "food",
+      "position_m": [
+        2.0,
+        2.0
+      ],
+      "radius_m": 0.0,
+      "mass_kg": 8.0,
+      "mass_ug": "8000000000",
+      "inventory_ug": {}
+    },
+    {
+      "entity_id": "resource-2",
+      "kind": "water",
+      "position_m": [
+        3.0,
+        2.0
+      ],
+      "radius_m": 0.0,
+      "mass_kg": 15.4,
+      "mass_ug": "15400000000",
+      "inventory_ug": {}
+    },
+    {
+      "entity_id": "resource-3",
+      "kind": "inert_material",
+      "position_m": [
+        4.0,
+        2.0
+      ],
+      "radius_m": 0.0,
+      "mass_kg": 32.0,
+      "mass_ug": "32000000000",
+      "inventory_ug": {}
+    },
+    {
+      "entity_id": "resource-4",
+      "kind": "stone",
+      "position_m": [
+        5.0,
+        2.0
+      ],
+      "radius_m": 0.15,
+      "mass_kg": 3.8,
+      "mass_ug": "3800000000",
+      "inventory_ug": {}
+    },
+    {
+      "entity_id": "pile-10",
+      "kind": "wood",
+      "position_m": [
+        3.2,
+        6.0
+      ],
+      "radius_m": 0.15,
+      "mass_kg": 0.0,
+      "mass_ug": "0",
+      "inventory_ug": {}
+    },
+    {
+      "entity_id": "pile-11",
+      "kind": "fiber",
+      "position_m": [
+        0.8,
+        6.0
+      ],
+      "radius_m": 0.15,
+      "mass_kg": 0.05,
+      "mass_ug": "50000000",
+      "inventory_ug": {}
+    },
+    {
+      "entity_id": "pile-12",
+      "kind": "wood",
+      "position_m": [
+        2.0,
+        7.2
+      ],
+      "radius_m": 0.15,
+      "mass_kg": 0.35,
+      "mass_ug": "350000000",
+      "inventory_ug": {}
+    },
+    {
+      "entity_id": "pile-13",
+      "kind": "fiber",
+      "position_m": [
+        2.0,
+        4.8
+      ],
+      "radius_m": 0.15,
+      "mass_kg": 0.0,
+      "mass_ug": "0",
+      "inventory_ug": {}
+    },
+    {
+      "entity_id": "crafted-14",
+      "kind": "tool",
+      "position_m": [
+        2.508065044950046,
+        2.9838699100999078
+      ],
+      "radius_m": 0.0,
+      "mass_kg": 0.7,
+      "mass_ug": "700000000",
+      "recipe_id": "crude_axe",
+      "owner_id": "agent-1",
+      "work_s": 0.0,
+      "durability": 7,
+      "composition_ug": {
+        "fiber": "50000000",
+        "stone": "200000000",
+        "wood": "450000000"
+      },
+      "inventory_ug": {}
+    },
+    {
+      "entity_id": "pile-15",
+      "kind": "wood",
+      "position_m": [
+        7.2,
+        2.0
+      ],
+      "radius_m": 0.15,
+      "mass_kg": 0.0,
+      "mass_ug": "0",
+      "inventory_ug": {}
+    },
+    {
+      "entity_id": "pile-16",
+      "kind": "fiber",
+      "position_m": [
+        6.0,
+        3.2
+      ],
+      "radius_m": 0.15,
+      "mass_kg": 0.05,
+      "mass_ug": "50000000",
+      "inventory_ug": {}
+    },
+    {
+      "entity_id": "pile-17",
+      "kind": "wood",
+      "position_m": [
+        6.0,
+        0.8
+      ],
+      "radius_m": 0.15,
+      "mass_kg": 0.45,
+      "mass_ug": "450000000",
+      "inventory_ug": {}
+    },
+    {
+      "entity_id": "pile-18",
+      "kind": "fiber",
+      "position_m": [
+        6.9,
+        2.9
+      ],
+      "radius_m": 0.15,
+      "mass_kg": 0.05,
+      "mass_ug": "50000000",
+      "inventory_ug": {}
+    },
+    {
+      "entity_id": "pile-19",
+      "kind": "wood",
+      "position_m": [
+        6.9,
+        1.1
+      ],
+      "radius_m": 0.15,
+      "mass_kg": 0.45,
+      "mass_ug": "450000000",
+      "inventory_ug": {}
+    },
+    {
+      "entity_id": "pile-20",
+      "kind": "fiber",
+      "position_m": [
+        5.1,
+        1.1
+      ],
+      "radius_m": 0.15,
+      "mass_kg": 0.05,
+      "mass_ug": "50000000",
+      "inventory_ug": {}
+    },
+    {
+      "entity_id": "pile-21",
+      "kind": "wood",
+      "position_m": [
+        7.8,
+        2.0
+      ],
+      "radius_m": 0.15,
+      "mass_kg": 0.0,
+      "mass_ug": "0",
+      "inventory_ug": {}
+    },
+    {
+      "entity_id": "pile-22",
+      "kind": "fiber",
+      "position_m": [
+        6.0,
+        3.8
+      ],
+      "radius_m": 0.15,
+      "mass_kg": 0.05,
+      "mass_ug": "50000000",
+      "inventory_ug": {}
+    },
+    {
+      "entity_id": "crafted-24",
+      "kind": "trough",
+      "position_m": [
+        4.1,
+        7.0
+      ],
+      "radius_m": 0.5,
+      "mass_kg": 0.8,
+      "mass_ug": "800000000",
+      "recipe_id": "trough",
+      "owner_id": "agent-1",
+      "work_s": 8.0,
+      "durability": 0,
+      "composition_ug": {
+        "plank": "800000000"
+      },
+      "inventory_ug": {
+        "water": "300000000"
+      }
+    }
+  ],
+  "outstanding_actions": [],
+  "material_totals_ug": {
+    "fiber": "300000000",
+    "food": "8000000000",
+    "fuel_X": "0",
+    "inert_material": "32000000000",
+    "oxygen": "0",
+    "plank": "800000000",
+    "product_P": "0",
+    "stone": "4000000000",
+    "tree": "15000000000",
+    "water": "16000000000",
+    "wood": "1700000000",
+    "wood_offcut": "200000000"
+  },
+  "event_counts": {
+    "action_accepted": 45,
+    "action_completed": 44,
+    "action_failed": 1,
+    "consumption": 1,
+    "crafting_effect": 5,
+    "mass_transfer": 14,
+    "tick": 240,
+    "tool_wear": 1
+  },
+  "solar_input_j": 3337.048440408758,
+  "environment_energy_j": 3337.048440408758,
+  "operator_energy_input_j": 0.0,
+  "operator_sources_ug": {
+    "food": 0,
+    "fuel_X": 0,
+    "inert_material": 0,
+    "oxygen": 0,
+    "product_P": 0,
+    "stone": 0,
+    "water": 0
+  },
+  "mode": "closed",
+  "hearing_range_m": 6.0,
+  "sunlight_w_m2": 0.8726535498373935,
+  "scripted": false,
+  "next_script_tick": "0",
+  "bodies_enabled": true,
+  "initial_mass_ug": {
+    "food": 8000000000,
+    "fuel_X": 0,
+    "inert_material": 32000000000,
+    "oxygen": 0,
+    "product_P": 0,
+    "stone": 4000000000,
+    "tree": 18000000000,
+    "water": 16000000000
+  },
+  "boundary_sources_ug": {
+    "food": 0,
+    "fuel_X": 0,
+    "inert_material": 0,
+    "oxygen": 0,
+    "product_P": 0,
+    "stone": 0,
+    "tree": 0,
+    "water": 0
+  },
+  "config_hash": "d8c6f3b4f242d7336b1bd396e42909a9292aef74fa2411f338b59c37d125b959",
+  "state_hash": "4d422c1559abf1635f2d076efca18899ea88939e3ebbc181e0d29672bc94f2c5",
+  "parent_branch_id": null,
+  "interventions": 0,
+  "retained_events": 351,
+  "recorded_decisions": 45,
+  "cognitive_hash": "0567803e920278ad629b449db403bf5e6ea84651a9d4aa60ecd474a0b90b5c21",
+  "cognition_calls": 0,
+  "episodes": 46
+}

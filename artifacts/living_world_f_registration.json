@@ -1,0 +1,21 @@
+{
+  "protocol": "docs/PHASE_F_KNOWLEDGE.md",
+  "development": [
+    7
+  ],
+  "confirmation": [
+    9187,
+    11939
+  ],
+  "files": {
+    "docs/PHASE_F_KNOWLEDGE.md": "396d7f675fdee53e516fb258abe2f5bcaa0764582cd1617290aaf486c8731c03",
+    "underworld/knowledge.py": "b3df37dd55a06ffa9c5b67f00239d7fd4cd29bf5ee546ae44dab2fa923f9c247",
+    "underworld/memory.py": "496ea26d5e1c3fdfe2ca9f94ab9bbcde4d28a0c72adb67c0886eec122c513997",
+    "underworld/storage.py": "e6526bd3c61aa39737d357525095daa1acbbad34d8482dd9de9d1d41b84176b6",
+    "underworld/teaching.py": "b5a270d99466d7f1442fc86364a867a7cdb42077fad373c34d9faccbf84fb72b",
+    "underworld/culture.py": "8f10123a86f5626fcc479634adbe2beea37e0e9b4919c234d5da008d7e7e5d80",
+    "underworld/stabilization.py": "748c1a52314b9468a58733ef4f1fadd56536442bcb6c94cd14f0026ad225b36a",
+    "scripts/phase_f_demo.py": "a4dde98b6a70f934a63525e8dce3b5d212377559a84aa521b1760adace0f1b6e",
+    "tests/test_phase_f_knowledge.py": "9cf49b7e3c3ee6b1fe5a436b6e4d2fa86fed194d27694aa9d14bfdf2f85183f9"
+  }
+}

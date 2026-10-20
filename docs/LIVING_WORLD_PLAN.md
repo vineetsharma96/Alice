@@ -17,7 +17,7 @@ Prepared 20 October 2026 from `Prompt/Alice_Living_World_New_Agent_Prompt.md`.
 3. **C - Crafting/construction (implemented, bounded verification):** native recipes, tool wear, reserved sites, partial work, contents transfers and solid fence/gate geometry.
 4. **D — Animals/food ecology (implemented bounded care/production; breeding/cooking deferred):** native authored animals, finite forage, real transfers, physical pens, reserve-funded eggs, food freshness and restart. See PHASE_D_ECOLOGY.md and LIVING_WORLD_D_REPORT.md.
 5. **E — Planning/learning (bounded implementation):** explicitly assigned hierarchical tasks, fresh-observation recovery, survival preemption, own receipt-linked source preference and optional bounded model operator choice. Read PHASE_E_PLANNING.md and PLANNING_OPERATIONS.md. General autonomous task formation, pen topology planning and teaching remain unsupported; A's global model-budget gate remains open.
-6. **F — Knowledge initialization/teaching:** distinguish new-world profiles, embodied teaching and direct operator injection.
+6. **F — Knowledge initialization/teaching (bounded implementation):** explicit one-person profiles, guided injection, native embodied access and source-linked physical tests. Both held-out apparatus cases pass; autonomous teaching remains unsupported. See LIVING_WORLD_F_REPORT.md and KNOWLEDGE_OPERATIONS.md.
 7. **G — Integrated demonstration:** run a new four-inhabitant scenario with event-backed evidence and honest attribution.
 
 ## Milestone A contracts

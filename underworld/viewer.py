@@ -1,6 +1,6 @@
 """Read-only, transaction-consistent projection for the Phase 8 renderer."""
 from contextlib import closing
-from . import storage,memory,culture
+from . import storage,memory,culture,knowledge
 from .config import episodic_enabled
 from .wire import loads,counter
 from .observer import controller_projection
@@ -22,11 +22,12 @@ def packet(controller,agent=None,after='0'):
         first=db.execute('SELECT MIN(seq) FROM events').fetchone()[0];last=int(snapshot['last_event_seq'])
         gap=after>last or (first is not None and after<first-1)
         events=[loads(r[0]) for r in db.execute('SELECT payload FROM events WHERE seq>? ORDER BY seq LIMIT 96',(0 if after>last else after,))]
-        history=[{'tick':r[0],'request':loads(r[1]),'result':loads(r[2])} for r in db.execute("SELECT tick,request,result FROM decisions WHERE source='operator' ORDER BY id DESC LIMIT 64")]
+        history=[{'tick':r[0],'request':loads(r[1]),'result':loads(r[2])} for r in db.execute("SELECT tick,request,result FROM decisions WHERE source IN ('operator','operator_knowledge') ORDER BY id DESC LIMIT 64")]
         snapshot.update(state_hash=hashed,branch_id=metadata['branch_id'],laws_version=metadata['laws_version'],parent_branch_id=metadata.get('parent_branch_id'),retained_replay_start_tick=metadata.get('retained_replay_start_tick',0))
         return {'protocol':'underworld.viewer/1','stream_id':snapshot['run_id']+':'+metadata['branch_id'],
             'controller':controller_projection(db,selected),
             'snapshot':snapshot,'selected':observation,'mind':memory.private_view(db,selected,'book read report food water',episodic_enabled(config)),
+            'knowledge':knowledge.projection(db,selected),
             'procedure':culture.recall_projection(db,selected,config) if snapshot['culture']['enabled'] else None,
             'events':events,'event_window':{'first_available':str(first or 0),'latest':str(last),'cursor':events[-1]['seq'] if events else str(last),'gap':gap,'more':bool(events and int(events[-1]['seq'])<last)},
             'operator_history':history,'controls':{'paused':controller.paused,'speed':controller.speed,'error':controller.error,'read_only':controller.readonly,'speed_semantics':'target simulated seconds per wall second'},

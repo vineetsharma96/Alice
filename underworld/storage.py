@@ -35,7 +35,7 @@ def head_hash(state,policy_state):
 def orchestration_id():
     root = Path(__file__).parent
     return digest("".join((root / name).read_text(encoding="utf-8")
-                          for name in ("storage.py", "wire.py", "config.py", "policy.py", "memory.py", "cognition.py", "resources.py", "teaching.py", "culture.py", "lab_policy.py", "runtime.py", "lease.py", "isolation.py", "supervisor.py", "worker.py")))
+                          for name in ("storage.py", "wire.py", "config.py", "policy.py", "memory.py", "cognition.py", "resources.py", "teaching.py", "knowledge.py", "culture.py", "lab_policy.py", "runtime.py", "lease.py", "isolation.py", "supervisor.py", "worker.py")))
 
 
 def laws_version(config):
@@ -122,8 +122,11 @@ def _head(db):
     return world, config, metadata, state_hash
 
 
-def create(path, config, scripted=True):
+def create(path, config, scripted=True, knowledge_profile=None):
     validate(config)
+    from . import knowledge
+    initial_knowledge = knowledge.prepare(**(knowledge_profile or {"profile":"none"}), population=config["world"]["population"])
+    if initial_knowledge and not episodic_enabled(config):raise ValueError("initial knowledge requires episodic retention")
     path = Path(path).resolve()
     path.parent.mkdir(parents=True, exist_ok=True)
     if path.exists():raise FileExistsError(f"run already exists: {path}")
@@ -152,7 +155,10 @@ def create(path, config, scripted=True):
                 "config_hash": digest(dumps(config)), "scripted": scripted,
                 "laws_version": laws_version(config), "package_version": __version__, "policy":policy,
                 "commit_boundary": "one physical tick, cognition reservation/result, operator action or retention transaction", "parent_run_id": None,
-                "branch_id":run_id,"replay_after_id":0}
+                "branch_id":run_id,"replay_after_id":0,
+                "initial_knowledge":{"version":knowledge.VERSION,"agents":{
+                    f"agent-{i+1}":[{"profile":p,"text":t} for a,p,t in initial_knowledge if a==f"agent-{i+1}"]
+                    for i in range(w["population"])}}}
     # Publish only after native/config validation; exclusive creation still wins races.
     with path.open("xb"):pass
     db = sqlite3.connect(path, isolation_level=None)
@@ -180,6 +186,7 @@ def create(path, config, scripted=True):
         memory.initialize(db, config["seed"], w["population"])
         db.execute("BEGIN IMMEDIATE")
         db.execute("INSERT INTO run VALUES(1,?,?,?,?,?,?)", (run_id,dumps(config),dumps(metadata),state,digest(state),"{}"))
+        knowledge.initialize(db,initial_knowledge,run_id)
         db.execute("INSERT INTO checkpoints VALUES('initial',0,?,?,?,'{}')", (state,digest(state),CHECKPOINT_SCHEMA))
         runtime_payload=dumps({"epoch":0,"last_rotation_tick":0,"queue_dropped":0,"queue_served":0,"status":"ready"})
         db.execute("INSERT INTO runtime_state VALUES(1,?,?)",(runtime_payload,digest(runtime_payload+dumps([]))))
@@ -198,7 +205,7 @@ def snapshot_projection(db,world,metadata,state_hash):
     snapshot.update(config_hash=metadata["config_hash"], state_hash=state_hash,
                     branch_id=metadata["branch_id"],laws_version=metadata["laws_version"],
                     parent_branch_id=metadata.get("parent_branch_id"),
-                    interventions=db.execute("SELECT COUNT(*) FROM decisions WHERE source='operator'").fetchone()[0],
+                    interventions=db.execute("SELECT COUNT(*) FROM decisions WHERE source IN ('operator','operator_knowledge')").fetchone()[0],
                     retained_events=db.execute("SELECT COUNT(*) FROM events").fetchone()[0],
                     recorded_decisions=db.execute("SELECT COUNT(*) FROM decisions").fetchone()[0],
                     cognitive_hash=memory.checksum(db),
@@ -546,6 +553,9 @@ def replay(path):
                 if item[3]=="operator":
                     result=world.intervene(request,"operator")
                     world.step(0)
+                elif item[3]=="operator_knowledge":
+                    from .knowledge import replay_result
+                    result=replay_result(db,request,tick)
                 else:result = world.submit(request, request["agent_id"])
                 if dumps(result) != item[2]:
                     raise ValueError(f"decision result diverged at tick {tick}")

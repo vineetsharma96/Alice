@@ -86,6 +86,12 @@ def capture(db, observations, episodic_enabled=True):
             for result in o["recent_action_results"]:
                 if result["status"] not in ("completed", "failed", "rejected"):continue
                 changed |= episode(db, agent, "action:" + result["request_id"], tick, "action_result", result)
+                intent=db.execute("SELECT payload FROM episodes WHERE agent=? AND source=? AND kind='knowledge_test_intent'",
+                                  (agent,'knowledge-intent:'+result['request_id'])).fetchone()
+                if intent:
+                    changed |= episode(db,agent,'knowledge-test:'+result['request_id'],tick,'knowledge_test',{
+                        **loads(intent[0]), 'event_refs':result['event_refs'], 'status':result['status'],
+                        'error_code':result['error_code']})
                 effect=result["observable_effects"].get("description","")
                 if result["status"]=="completed" and effect.startswith("conditioned_water:"):
                     seq=result["event_refs"][1]
