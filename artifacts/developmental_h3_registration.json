@@ -1,0 +1,22 @@
+{
+  "confirmation_seeds": [
+    8101,
+    8111,
+    8123,
+    8147,
+    8161
+  ],
+  "files": {
+    "underworld/developmental.py": "9dcc073a7b4597ea20230a8d6b5768a451703c90386621210321934aa202b96c",
+    "underworld/symbols.py": "683b920f09731d3c0900a79b73298146a8567062cca34801805d393aa1b7036c",
+    "underworld/community.py": "3f51c5847439de33e19c08e222a88a7edef6f60eaa33a2f27b28ef82cf744dab",
+    "scripts/developmental_study.py": "1b7fc9520fc0a671547be2693a11bb7a06b6d2529a39c05b97c9014aa8cca7db",
+    "scripts/symbol_study.py": "66c1d2c40495139addb2a677bbca1c28f2549bd7fd69b91145d9ce5e7b25ebcf",
+    "scripts/community_study.py": "a1fa450399bf724dee080b2ab9bdeed43aa736b1ad59b59c1a964041b59c7557",
+    "tests/test_community.py": "9af9aec3407bf9eeae13ebc85efb367808e02b37486fd3916db3b4a9877e07d8",
+    "config/developmental.toml": "a1d7302a7251a7647fe1ab4ca82933b41451995574de7b054b61b745bb7328c4",
+    "docs/DEVELOPMENTAL_H3_PROTOCOL.md": "e977daae28b9c597c8e7a056593c492cff9a70a8ba85d9a4ffbf43f7a6ffb885",
+    "docs/DEVELOPMENTAL_H2_PROTOCOL.md": "fca01d0ee213d8f2ecf524d2adcf47bbb9a99caddeb0516d39cdf0ddf08927ad",
+    "docs/DEVELOPMENTAL_PROTOCOL.md": "eed0892fda729ed72c454dad86765854b45f9f1ba1b1456f7fe03b2bbca89893"
+  }
+}

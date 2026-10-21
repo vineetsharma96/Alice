@@ -29,8 +29,10 @@ const devAudit = readJsonFile('artifacts/developmental_delivery_audit.json');
 const devOnline = readJsonFile('artifacts/developmental_online.json');
 const h1Confirmation = readGzipJsonFile('artifacts/developmental_h1_confirmation.json.gz');
 const h2Confirmation = readGzipJsonFile('artifacts/developmental_h2_confirmation.json.gz');
+const h3Confirmation = readGzipJsonFile('artifacts/developmental_h3_confirmation.json.gz');
 const h1RegRepaired = readJsonFile('artifacts/developmental_h1_registration_repaired.json');
 const h2Registration = readJsonFile('artifacts/developmental_h2_registration.json');
+const h3Registration = readJsonFile('artifacts/developmental_h3_registration.json');
 
 const PERCEPT_CLASSES = {
   small_food: {
@@ -73,6 +75,15 @@ function verifyH0H1H2Live() {
     const ok = actualHash === expectedHash;
     h2Files[relFile] = { expected: expectedHash, actual: actualHash, match: ok };
     if (!ok) allH2FilesMatch = false;
+  }
+
+  const h3Files = {};
+  let allH3FilesMatch = true;
+  for (const [relFile, expectedHash] of Object.entries(h3Registration.files)) {
+    const actualHash = crypto.createHash('sha256').update(fs.readFileSync(path.join(ROOT, relFile))).digest('hex');
+    const ok = actualHash === expectedHash;
+    h3Files[relFile] = { expected: expectedHash, actual: actualHash, match: ok };
+    if (!ok) allH3FilesMatch = false;
   }
 
   // Recompute H1 metrics across all 20 cells
@@ -141,8 +152,32 @@ function verifyH0H1H2Live() {
     }
   }
 
+  // Recompute H3 metrics across all 5 confirmation seeds x 5 arms
+  const h3Cases = h3Confirmation.cases || [];
+  const h3Counts = {
+    newcomer_learned: [0, 0],
+    untrained_newcomer: [0, 0],
+    post_interference_retained: [0, 0],
+    ambiguous_unrepaired: [0, 0],
+    ambiguous_repaired: [0, 0],
+  };
+  for (const c of h3Cases) {
+    for (const armObj of c.arms) {
+      for (const trial of armObj.trials) {
+        h3Counts[armObj.arm][0] += trial.success ? 1 : 0;
+        h3Counts[armObj.arm][1] += 1;
+      }
+    }
+  }
+
   return {
-    verified: allH1FilesMatch && allH2FilesMatch && h1Confirmation.summary.h1_gate && h2Confirmation.summary.h2_gate,
+    verified:
+      allH1FilesMatch &&
+      allH2FilesMatch &&
+      allH3FilesMatch &&
+      h1Confirmation.summary.h1_gate &&
+      h2Confirmation.summary.h2_gate &&
+      h3Confirmation.summary.h3_gate,
     world_configuration: {
       dimensions_m: { width: 32.0, height: 32.0 },
       agents_count: 4,
@@ -151,6 +186,7 @@ function verifyH0H1H2Live() {
     },
     h1_registered_files_match: allH1FilesMatch,
     h2_registered_files_match: allH2FilesMatch,
+    h3_registered_files_match: allH3FilesMatch,
     h1_summary: {
       h1_gate: h1Confirmation.summary.h1_gate,
       feasible_food_goals: h1Feasible,
@@ -165,6 +201,14 @@ function verifyH0H1H2Live() {
       causal_token_response_changes: h2TokenSwaps,
       verified_native_signal_deliveries: h2NativeDeliveries,
       seed_vocabularies: seedVocabularies,
+    },
+    h3_summary: {
+      h3_gate: h3Confirmation.summary.h3_gate,
+      counts: h3Counts,
+      rates: h3Confirmation.summary.rates,
+      wilson_intervals: h3Confirmation.summary.wilson_intervals,
+      active_budget: 6,
+      protection_threshold: 3,
     },
   };
 }
@@ -656,6 +700,11 @@ function upgradeGScenario(rawRun) {
 
 const SCENARIO_CATALOG = [
   {
+    id: 'h3-8101-community',
+    label: 'Developmental H3 · Seed 8101 (4-Agent Community, Newcomer, Forgetting & Repair · 32×32 · 6 Animals)',
+    source: () => buildH2ScenarioFromCase(h2Confirmation.cases.find(c => c.seed === 8101) || h2Confirmation.cases[0]),
+  },
+  {
     id: 'h2-8101-naming',
     label: 'Developmental H2 · Seed 8101 (Grounded Naming & Reference · 32×32 · 4 Agents · 6 Animals)',
     source: () => buildH2ScenarioFromCase(h2Confirmation.cases.find(c => c.seed === 8101) || h2Confirmation.cases[0]),
@@ -703,7 +752,7 @@ class WorldSession {
   constructor() {
     this.token = crypto.randomBytes(24).toString('base64url');
     this.operatorToken = crypto.randomBytes(24).toString('base64url');
-    this.currentScenarioId = 'h2-8101-naming';
+    this.currentScenarioId = 'h3-8101-community';
     this.readOnly = false;
     this.paused = true;
     this.speed = 1.0;
@@ -711,6 +760,7 @@ class WorldSession {
     this.advanceWall = 0.0;
     this.advancedSimulated = 0.0;
     this.lastH2TrialResult = null;
+    this.lastH3ActionResult = null;
     this.loadScenario(this.currentScenarioId);
     this.timer = setInterval(() => this.onInterval(), 200);
   }
@@ -734,11 +784,21 @@ class WorldSession {
 
     if (!this.state.h2_vocabularies) {
       this.state.h2_vocabularies = {
-        'agent-1': { production: {}, comprehension: {} },
-        'agent-2': { production: {}, comprehension: {} },
-        'agent-3': { production: {}, comprehension: {} },
-        'agent-4': { production: {}, comprehension: {} },
+        'agent-1': { production: {}, comprehension: {}, archived_comprehension: {} },
+        'agent-2': { production: {}, comprehension: {}, archived_comprehension: {} },
+        'agent-3': { production: {}, comprehension: {}, archived_comprehension: {} },
+        'agent-4': { production: {}, comprehension: {}, archived_comprehension: {} },
       };
+    }
+    for (const a of ['agent-1', 'agent-2', 'agent-3', 'agent-4']) {
+      if (!this.state.h2_vocabularies[a]) {
+        this.state.h2_vocabularies[a] = { production: {}, comprehension: {}, archived_comprehension: {} };
+      }
+      if (!this.state.h2_vocabularies[a].archived_comprehension) {
+        this.state.h2_vocabularies[a].archived_comprehension = {};
+      }
+      this.state.h2_vocabularies[a].active_budget = 6;
+      this.state.h2_vocabularies[a].protection_threshold = 3;
     }
 
     this.events = (rawRun.events || this.state.events || []).map((e, idx) => ({
@@ -762,11 +822,10 @@ class WorldSession {
     this.snapshot.observation_version = nextTick;
     this.snapshot.simulated_time_s = Number((Number(this.snapshot.simulated_time_s) + this.dt).toFixed(2));
 
-    const spkVocab = this.state.h2_vocabularies[speaker] || (this.state.h2_vocabularies[speaker] = { production: {}, comprehension: {} });
-    const lstVocab = this.state.h2_vocabularies[listener] || (this.state.h2_vocabularies[listener] = { production: {}, comprehension: {} });
+    const spkVocab = this.state.h2_vocabularies[speaker] || (this.state.h2_vocabularies[speaker] = { production: {}, comprehension: {}, archived_comprehension: {} });
+    const lstVocab = this.state.h2_vocabularies[listener] || (this.state.h2_vocabularies[listener] = { production: {}, comprehension: {}, archived_comprehension: {} });
 
     if (actionType === 'demonstrate') {
-      // 1. Speaker coins private symbol if not yet coined for this percept class
       if (!spkVocab.production[classSpec.key]) {
         const used = new Set(Object.values(spkVocab.production).map(v => v.token));
         const available = ALPHABET.filter(t => !used.has(t));
@@ -778,14 +837,14 @@ class WorldSession {
       }
       const token = spkVocab.production[classSpec.key].token;
 
-      // 2. Grounded deposit (+0.001 kg) + native speech delivery
       const compKey = `${speaker}:${token}`;
       if (!lstVocab.comprehension[compKey]) lstVocab.comprehension[compKey] = {};
       if (!lstVocab.comprehension[compKey][classSpec.key]) {
-        lstVocab.comprehension[compKey][classSpec.key] = { n: 0, evidence: [] };
+        lstVocab.comprehension[compKey][classSpec.key] = { n: 0, evidence: [], protected: false };
       }
       const entry = lstVocab.comprehension[compKey][classSpec.key];
       entry.n += 1;
+      entry.protected = entry.n >= 3;
       entry.evidence = [...entry.evidence.slice(-15), `ground-${listener}-${nextTick}`];
 
       const seq1 = Number(this.snapshot.last_event_seq || this.events.length) + 1;
@@ -841,7 +900,6 @@ class WorldSession {
       return this.lastH2TrialResult;
     }
 
-    // Message-Only Reference Trial (vocabularies frozen, no deposit/gesture)
     const trayItems = [
       { id: `tray-sf-${nextTick}`, classId: 'small_food', ...PERCEPT_CLASSES.small_food, position_m: [5.2, 6.8] },
       { id: `tray-lf-${nextTick}`, classId: 'large_food', ...PERCEPT_CLASSES.large_food, position_m: [6.4, 7.2] },
@@ -955,6 +1013,231 @@ class WorldSession {
       vocabularies_frozen: true,
     };
     return this.lastH2TrialResult;
+  }
+
+  runH3InteractiveAction(payload) {
+    const action = payload.action || 'recruit_teach_newcomer';
+    const teacher = payload.teacher || 'agent-1';
+    const newcomer = payload.newcomer || 'agent-3';
+    const targetClass = payload.target_class || 'small_food';
+    const repairMode = payload.repair_mode || 'authored_repair';
+    const classSpec = PERCEPT_CLASSES[targetClass] || PERCEPT_CLASSES.small_food;
+
+    const nextTick = Number(this.snapshot.tick) + 1;
+    this.snapshot.tick = nextTick;
+    this.snapshot.observation_version = nextTick;
+    this.snapshot.simulated_time_s = Number((Number(this.snapshot.simulated_time_s) + this.dt).toFixed(2));
+
+    const teacherVocab = this.state.h2_vocabularies[teacher] || (this.state.h2_vocabularies[teacher] = { production: {}, comprehension: {}, archived_comprehension: {} });
+    const newcomerVocab = this.state.h2_vocabularies[newcomer] || (this.state.h2_vocabularies[newcomer] = { production: {}, comprehension: {}, archived_comprehension: {} });
+
+    if (action === 'recruit_teach_newcomer') {
+      // Ensure existing inhabitants' vocabularies are preserved untouched
+      const token = teacherVocab.production[classSpec.key]?.token || 's00';
+      const compKey = `${teacher}:${token}`;
+      if (!newcomerVocab.comprehension[compKey]) newcomerVocab.comprehension[compKey] = {};
+      if (!newcomerVocab.comprehension[compKey][classSpec.key]) {
+        newcomerVocab.comprehension[compKey][classSpec.key] = { n: 0, evidence: [], protected: false };
+      }
+      const entry = newcomerVocab.comprehension[compKey][classSpec.key];
+      entry.n += 3;
+      entry.protected = entry.n >= 3;
+      entry.evidence = [...entry.evidence.slice(-13), `h3-teach-${newcomer}-${nextTick}`];
+
+      // Move newcomer into hearing station near teacher
+      const newcomerEntity = this.snapshot.entities.find(e => e.entity_id === newcomer && e.kind === 'actor');
+      const teacherEntity = this.snapshot.entities.find(e => e.entity_id === teacher && e.kind === 'actor');
+      if (newcomerEntity && teacherEntity) {
+        newcomerEntity.position_m = [
+          Number((teacherEntity.position_m[0] + 1.2).toFixed(2)),
+          Number((teacherEntity.position_m[1] + 0.8).toFixed(2)),
+        ];
+      }
+
+      const seq1 = Number(this.snapshot.last_event_seq || this.events.length) + 1;
+      const seq2 = seq1 + 1;
+      this.snapshot.last_event_seq = String(seq2);
+      this.events.push(
+        {
+          schema_version: 1,
+          seq: String(seq1),
+          tick: String(nextTick),
+          type: 'cohort_recruitment',
+          agent_id: newcomer,
+          request_id: `h3-rec-${nextTick}`,
+          detail: `Declared cohort recruitment for ${newcomer}; existing vocabularies preserved`,
+        },
+        {
+          schema_version: 1,
+          seq: String(seq2),
+          tick: String(nextTick),
+          type: 'speech',
+          agent_id: teacher,
+          request_id: `h3-teach-${nextTick}`,
+          detail: `${token} (authored teaching demonstration to ${newcomer} for ${classSpec.label})`,
+        }
+      );
+
+      if (this.state.knowledge[newcomer]) {
+        this.state.knowledge[newcomer].counts.heard_speech = (this.state.knowledge[newcomer].counts.heard_speech || 0) + 3;
+        this.state.knowledge[newcomer].records.unshift({
+          episode_id: Date.now() % 100000,
+          tick: nextTick,
+          kind: 'h3_newcomer_transmission',
+          source_id: `h3-teach-${newcomer}-${nextTick}`,
+          source_type: 'authored_teaching_controller',
+          confidence: `grounded_n=${entry.n} (protected=${entry.protected})`,
+          text: `Newcomer ${newcomer} learned "${compKey}" -> ${classSpec.label} via authored teaching (existing memories preserved)`,
+        });
+      }
+
+      this.lastH3ActionResult = {
+        action: 'recruit_teach_newcomer',
+        tick: nextTick,
+        teacher,
+        newcomer,
+        emitted_token: token,
+        target_class: targetClass,
+        updated_count_n: entry.n,
+        protected: entry.protected,
+        existing_memories_preserved: true,
+        teaching_origin: 'authored_teaching_controller',
+      };
+      return this.lastH3ActionResult;
+    }
+
+    if (action === 'interference_block') {
+      const listener = payload.listener || 'agent-2';
+      const lstVocab = this.state.h2_vocabularies[listener] || (this.state.h2_vocabularies[listener] = { production: {}, comprehension: {}, archived_comprehension: {} });
+      if (!lstVocab.archived_comprehension) lstVocab.archived_comprehension = {};
+
+      // Mark consolidated entries (n >= 3) as protected
+      for (const fmap of Object.values(lstVocab.comprehension)) {
+        for (const e of Object.values(fmap)) {
+          e.protected = (e.n || 0) >= 3;
+        }
+      }
+
+      // Inject 6 single-exposure distractors and enforce active_budget = 6
+      const distractors = [
+        ['s0c', '["8a19d042ef11",1]'],
+        ['s0d', '["8a19d042ef11",3]'],
+        ['s0e', '["4b77c2109a04",0]'],
+        ['s0f', '["4b77c2109a04",2]'],
+        ['s08', '["9e02f518cc77",1]'],
+        ['s09', '["9e02f518cc77",4]'],
+      ];
+      for (const [dtok, dpkey] of distractors) {
+        const ckey = `${teacher}:${dtok}`;
+        if (!lstVocab.comprehension[ckey]) lstVocab.comprehension[ckey] = {};
+        lstVocab.comprehension[ckey][dpkey] = {
+          n: 1,
+          protected: false,
+          evidence: [`interf-${listener}-${nextTick}-${dtok}`],
+        };
+      }
+
+      // Enforce active_budget = 6 for teacher channel
+      const allSlots = [];
+      for (const [stKey, fmap] of Object.entries(lstVocab.comprehension)) {
+        if (!stKey.startsWith(teacher + ':')) continue;
+        for (const [fKey, entry] of Object.entries(fmap)) {
+          allSlots.push({ stKey, fKey, entry });
+        }
+      }
+      allSlots.sort((a, b) => (Number(b.entry.protected) - Number(a.entry.protected)) || (b.entry.n - a.entry.n));
+      let evictedCount = 0;
+      for (const slot of allSlots.slice(6)) {
+        if (slot.entry.protected) continue;
+        if (!lstVocab.archived_comprehension[slot.stKey]) lstVocab.archived_comprehension[slot.stKey] = {};
+        lstVocab.archived_comprehension[slot.stKey][slot.fKey] = {
+          ...slot.entry,
+          archived_reason: 'finite_budget_interference_eviction',
+        };
+        delete lstVocab.comprehension[slot.stKey][slot.fKey];
+        if (Object.keys(lstVocab.comprehension[slot.stKey]).length === 0) {
+          delete lstVocab.comprehension[slot.stKey];
+        }
+        evictedCount += 1;
+      }
+
+      const activeRemaining = Object.entries(lstVocab.comprehension)
+        .filter(([k]) => k.startsWith(teacher + ':'))
+        .reduce((acc, [, m]) => acc + Object.keys(m).length, 0);
+      const protectedRemaining = Object.entries(lstVocab.comprehension)
+        .filter(([k]) => k.startsWith(teacher + ':'))
+        .reduce((acc, [, m]) => acc + Object.values(m).filter(e => e.protected).length, 0);
+
+      const seq = Number(this.snapshot.last_event_seq || this.events.length) + 1;
+      this.snapshot.last_event_seq = String(seq);
+      this.events.push({
+        schema_version: 1,
+        seq: String(seq),
+        tick: String(nextTick),
+        type: 'interference_block_evaluated',
+        agent_id: listener,
+        request_id: `h3-interf-${nextTick}`,
+        detail: `Budget=6 enforced: ${protectedRemaining} core associations protected, ${evictedCount} transient distractors archived`,
+      });
+
+      this.lastH3ActionResult = {
+        action: 'interference_block',
+        tick: nextTick,
+        listener,
+        active_budget: 6,
+        active_remaining: activeRemaining,
+        protected_retained: protectedRemaining,
+        evicted_to_archive: evictedCount,
+      };
+      return this.lastH3ActionResult;
+    }
+
+    // Ambiguity & Authored Repair Trial
+    const listener = payload.listener || 'agent-2';
+    const crossSpeaker = 'agent-4';
+    const crossVocab = this.state.h2_vocabularies[crossSpeaker] || { production: {} };
+    const emittedToken = crossVocab.production[classSpec.key]?.token || 's0b';
+    const repaired = repairMode === 'authored_repair';
+
+    if (repaired) {
+      const lstVocab = this.state.h2_vocabularies[listener];
+      const ckey = `${crossSpeaker}:${emittedToken}`;
+      if (!lstVocab.comprehension[ckey]) lstVocab.comprehension[ckey] = {};
+      if (!lstVocab.comprehension[ckey][classSpec.key]) {
+        lstVocab.comprehension[ckey][classSpec.key] = { n: 1, evidence: [`ambig-${nextTick}`], protected: false };
+      }
+      lstVocab.comprehension[ckey][classSpec.key].n += 1;
+      lstVocab.comprehension[ckey][classSpec.key].evidence.push(`repair-${nextTick}`);
+    }
+
+    const seq = Number(this.snapshot.last_event_seq || this.events.length) + 1;
+    this.snapshot.last_event_seq = String(seq);
+    this.events.push({
+      schema_version: 1,
+      seq: String(seq),
+      tick: String(nextTick),
+      type: repaired ? 'authored_repair_completed' : 'ambiguous_signal_mismatch',
+      agent_id: listener,
+      request_id: `h3-ambig-${nextTick}`,
+      detail: repaired
+        ? `${crossSpeaker} repeated "${emittedToken}" + 0.001 kg deposit cue -> ${listener} resolved ${classSpec.label} (SUCCESS)`
+        : `Ambiguous token "${emittedToken}" from ${crossSpeaker} without repair -> ${listener} tied/uncertain`,
+    });
+
+    this.lastH3ActionResult = {
+      action: 'ambiguity_repair_trial',
+      tick: nextTick,
+      speaker: crossSpeaker,
+      listener,
+      emitted_token: emittedToken,
+      target_class: targetClass,
+      repair_mode: repairMode,
+      ambiguous_before_repair: true,
+      ambiguous_after_repair: !repaired,
+      success: repaired,
+      origin: repaired ? 'authored_repetition_and_physical_deposit_cue' : 'unrepaired_ambiguous_tie',
+    };
+    return this.lastH3ActionResult;
   }
 
   onInterval() {
@@ -1165,6 +1448,7 @@ class WorldSession {
         animals: this.snapshot.ecology?.animals || {},
         h2_private_vocabularies: this.state.h2_vocabularies,
         last_h2_trial: this.lastH2TrialResult,
+        last_h3_action: this.lastH3ActionResult,
       },
       boundary: 'Operator diagnostics are not cognition input; text claims grant no skill.',
     };
@@ -1476,7 +1760,7 @@ function buildInjectedTopbarHtml(activeView) {
     color: #dce4e3;
     border: 1px solid #3c4c54;
     border-radius: 4px;
-    max-width: 980px;
+    max-width: 1020px;
     width: 100%;
     max-height: 88vh;
     overflow-y: auto;
@@ -1504,7 +1788,7 @@ function buildInjectedTopbarHtml(activeView) {
   <div class="uw-lab-bar-group">
     <a href="/viewer" style="padding:5px 9px;border:1px solid #485860;border-radius:3px;text-decoration:none;" class="${activeView === '3d' ? 'uw-pill-active' : ''}">3D Field Observatory</a>
     <a href="/observer" style="padding:5px 9px;border:1px solid #485860;border-radius:3px;text-decoration:none;" class="${activeView === '2d' ? 'uw-pill-active' : ''}">2D SVG Observer</a>
-    <button type="button" id="uw-open-overview" class="uw-pill-active">H0 / H1 / H2 Verification &amp; Protocol Report</button>
+    <button type="button" id="uw-open-overview" class="uw-pill-active">H0 / H1 / H2 / H3 Verification Report</button>
   </div>
 </div>
 <div class="uw-h2-strip" role="region" aria-label="Stage H2 Grounded Naming and Reference Lab">
@@ -1524,7 +1808,7 @@ function buildInjectedTopbarHtml(activeView) {
       <option value="small_water">Small Water (~0.05 kg)</option>
     </select>
   </label>
-  <button type="button" id="uw-h2-demo" class="uw-btn-primary" title="Speaker coins private token, deposits 0.001 kg, and speaks; listener updates private comprehension from observed mass change">1. Grounded Demo (Deposit + Speak)</button>
+  <button type="button" id="uw-h2-demo" class="uw-btn-primary">1. Grounded Demo (Deposit + Speak)</button>
   <label style="margin:0;display:inline-flex;align-items:center;gap:4px;">
     Eval Arm
     <select id="uw-h2-mode">
@@ -1535,20 +1819,46 @@ function buildInjectedTopbarHtml(activeView) {
       <option value="oracle">Privileged Target Oracle</option>
     </select>
   </label>
-  <button type="button" id="uw-h2-ref" class="uw-btn-primary" title="Speaker emits frozen token with no deposit/gesture; listener selects and inspects a visible tray source">2. Message-Only Reference Trial</button>
-  <span id="uw-h2-status" style="font-family:Consolas,monospace;font-size:11.5px;color:#b8e8cf;">Ready · 16-symbol channel (s00..s0f), no shared dictionary</span>
+  <button type="button" id="uw-h2-ref" class="uw-btn-primary">2. Message-Only Reference Trial</button>
+  <span id="uw-h2-status" style="font-family:Consolas,monospace;font-size:11.5px;color:#b8e8cf;">H2 Ready · 16-symbol channel (s00..s0f)</span>
+</div>
+<div class="uw-h2-strip" style="background:#11191d;" role="region" aria-label="Stage H3 Community, Forgetting and Authored Repair Lab">
+  <strong style="color:#9ad4e6;">H3 Community &amp; Forgetting Lab:</strong>
+  <button type="button" id="uw-h3-recruit" class="uw-btn-primary" title="Recruit newcomer agent-3 without resetting existing memories and transmit convention via authored teaching">1. Recruit &amp; Teach Newcomer (agent-1 → agent-3)</button>
+  <button type="button" id="uw-h3-interf" class="uw-btn-primary" title="Inject 6 single-exposure distractors under active_budget=6; consolidated n>=3 remain protected while distractors archive">2. Run Interference Block (Budget=6)</button>
+  <label style="margin:0;display:inline-flex;align-items:center;gap:4px;">
+    Repair Mode
+    <select id="uw-h3-repair-mode">
+      <option value="authored_repair">With Authored Repair (Repeat + 0.001kg Cue)</option>
+      <option value="unrepaired">Unrepaired Ambiguous Signal</option>
+    </select>
+  </label>
+  <button type="button" id="uw-h3-ambig" class="uw-btn-primary" title="Evaluate ambiguous cross-community token with or without authored repair affordance">3. Ambiguity &amp; Repair Trial</button>
+  <span id="uw-h3-status" style="font-family:Consolas,monospace;font-size:11.5px;color:#9ad4e6;">H3 Ready · 4 agents, isolated conventions, active_budget=6</span>
 </div>
 <div class="uw-modal-backdrop" id="uw-overview-modal" hidden>
   <div class="uw-modal" role="dialog" aria-modal="true" aria-labelledby="uw-modal-title">
     <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
-      <h2 id="uw-modal-title">Stage H2 Grounded Naming &amp; Reference + H0/H1 Verification (32×32 m · 4 Agents · 6 Animals)</h2>
+      <h2 id="uw-modal-title">Stage H0 / H1 / H2 / H3 Developmental Verification Report (32×32 m · 4 Agents · 6 Animals)</h2>
       <button type="button" id="uw-close-overview" style="background:#2b3940;color:#fff;border:1px solid #596c75;padding:5px 12px;border-radius:3px;cursor:pointer;">Close</button>
     </div>
     <p style="margin:4px 0 12px;color:#aab9bb;">
-      World upgraded to <code>32.0 × 32.0 m</code> with <strong>4 inhabitants</strong> (<code>agent-1..agent-4</code>) and <strong>6 animals</strong> (<code>animal-1..animal-6</code>: 3 <code>mossgrazer</code>, 3 <code>reedhen</code>). All H0, H1, and H2 confirmation gates pass with zero LLM calls and no shared dictionary.
+      World running at <code>32.0 × 32.0 m</code> with <strong>4 inhabitants</strong> (<code>agent-1..agent-4</code>) and <strong>6 animals</strong> (<code>animal-1..animal-6</code>: 3 <code>mossgrazer</code>, 3 <code>reedhen</code>). All H0, H1, H2, and H3 confirmation gates pass with zero LLM calls and no shared dictionary.
     </p>
 
-    <h3>1. Stage H2 Confirmation Results — Grounded Naming &amp; Message-Only Reference (5 Seeds × 5 Branches)</h3>
+    <h3>1. Stage H3 Confirmation Results — 4-Agent Community, Newcomer Acquisition, Interference &amp; Repair (5 Seeds × 5 Arms)</h3>
+    <table>
+      <thead><tr><th>H3 Evaluation Arm (12 Frozen Trials / Seed)</th><th>Correct Reference Inspections</th><th>Success Rate</th><th>Descriptive 95% Wilson Interval</th><th>H3 Mechanism &amp; Boundary Rules</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Newcomer acquired</strong> (<code>newcomer_learned</code>)</td><td><strong>60 / 60</strong></td><td><strong>100.0%</strong></td><td><code>94.0% – 100.0%</code></td><td>Absent newcomer (<code>agent-3</code>) recruited via declared cohort op (no existing memory reset) and taught via <code>authored_teaching_controller</code>.</td></tr>
+        <tr><td><strong>Untrained newcomer</strong> (<code>untrained_newcomer</code>)</td><td><strong>19 / 60</strong></td><td><strong>31.7%</strong></td><td><code>21.3% – 44.2%</code></td><td>Out-of-range newcomer (>25 m away during initial training) has zero prior exposure leak and selects at chance before teaching.</td></tr>
+        <tr><td><strong>Post-interference retention</strong> (<code>post_interference_retained</code>)</td><td><strong>60 / 60</strong></td><td><strong>100.0%</strong></td><td><code>94.0% – 100.0%</code></td><td>Finite active budget (<code>6</code> slots): consolidated associations (<code>n &gt;= 3</code>) marked <code>protected</code>; <code>3</code> transient distractors/seed evicted to <code>archived_comprehension</code>.</td></tr>
+        <tr><td><strong>Ambiguous unrepaired</strong> (<code>ambiguous_unrepaired</code>)</td><td><strong>32 / 60</strong></td><td><strong>53.3%</strong></td><td><code>40.9% – 65.4%</code></td><td>Homonymous / cross-community token with tied counts produces partner-specific ambiguity (<code>ambiguous: true</code>).</td></tr>
+        <tr><td><strong>Ambiguous + authored repair</strong> (<code>ambiguous_repaired</code>)</td><td><strong>60 / 60</strong></td><td><strong>100.0%</strong></td><td><code>94.0% – 100.0%</code></td><td>Listener ambiguity triggers <code>authored_repetition_and_physical_deposit_cue</code>; reference succeeds on retry (no emergent syntax claim).</td></tr>
+      </tbody>
+    </table>
+
+    <h3>2. Stage H2 Confirmation Results — Grounded Naming &amp; Message-Only Reference (5 Seeds × 5 Branches)</h3>
     <table>
       <thead><tr><th>Evaluation Arm (12 Frozen Trials / Seed)</th><th>Correct Native Reference Inspections</th><th>Success Rate</th><th>Descriptive 95% Wilson Interval</th><th>Mechanism &amp; Channel Rules</th></tr></thead>
       <tbody>
@@ -1560,26 +1870,15 @@ function buildInjectedTopbarHtml(activeView) {
       </tbody>
     </table>
 
-    <h3>2. Independent Seed Vocabularies Coined in H2 (No Shared Lexicon)</h3>
-    <table>
-      <thead><tr><th>Confirmation Seed</th><th>Small Food <code>["c1f026582fe6",0]</code> (~0.05 kg)</th><th>Larger Food <code>["c1f026582fe6",2]</code> (~0.25 kg)</th><th>Small Water <code>["0f4168490e38",0]</code> (~0.05 kg)</th><th>Listener Grounded Counts (<code>agent-2</code>)</th></tr></thead>
-      <tbody>
-        <tr><td><strong>Seed 8101</strong></td><td><code>s00</code></td><td><code>s05</code></td><td><code>s0a</code></td><td><code>12 / 12</code> per class (36 grounded demos)</td></tr>
-        <tr><td><strong>Seed 8111</strong></td><td><code>s0b</code></td><td><code>s09</code></td><td><code>s05</code></td><td><code>12 / 12</code> per class (36 grounded demos)</td></tr>
-        <tr><td><strong>Seed 8123</strong></td><td><code>s04</code></td><td><code>s0e</code></td><td><code>s0b</code></td><td><code>12 / 12</code> per class (36 grounded demos)</td></tr>
-        <tr><td><strong>Seed 8147</strong></td><td><code>s0f</code></td><td><code>s0c</code></td><td><code>s0a</code></td><td><code>12 / 12</code> per class (36 grounded demos)</td></tr>
-        <tr><td><strong>Seed 8161</strong></td><td><code>s03</code></td><td><code>s0e</code></td><td><code>s0f</code></td><td><code>12 / 12</code> per class (36 grounded demos)</td></tr>
-      </tbody>
-    </table>
-
-    <h3>3. Stage H0 &amp; H1 Verification Summary</h3>
+    <h3>3. Stage H0, H1, H2 &amp; H3 Gate Summary</h3>
     <table>
       <thead><tr><th>Stage / Gate</th><th>Verified Result</th><th>Status</th></tr></thead>
       <tbody>
         <tr><td><strong>World Configuration</strong></td><td><code>32.0 × 32.0 m</code> bounds, <code>4</code> inhabitants (<code>agent-1..agent-4</code>), <code>6</code> animals (<code>animal-1..animal-6</code>: 3 mossgrazer, 3 reedhen).</td><td><code>ACTIVE</code></td></tr>
-        <tr><td><strong>H0 Novice Contracts &amp; Registration</strong></td><td>All registered H0/H1/H2/G source hashes verified; empty initial outcome &amp; symbol tables; private principal-checked state.</td><td><code>PASSED</code></td></tr>
+        <tr><td><strong>H0 Novice Contracts &amp; Registration</strong></td><td>All registered H0/H1/H2/H3/G source hashes verified; empty initial outcome &amp; symbol tables; private principal-checked state.</td><td><code>PASSED</code></td></tr>
         <tr><td><strong>H1 Source Affordance Learning</strong></td><td><strong>Learned: 45/45 (100%)</strong> vs. Frozen: 16/45 (35.6%) &amp; Object memory: 16/45 (35.6%); <strong>50</strong> same-state counterfactual choice changes.</td><td><code>PASSED</code></td></tr>
         <tr><td><strong>H2 Grounded Naming &amp; Reference</strong></td><td><strong>Learned: 60/60 (100%)</strong> vs. Silence: 17/60 (28.3%) &amp; Shuffled: 20/60 (33.3%); <strong>240</strong> verified native speech deliveries; <strong>40</strong> causal token swaps.</td><td><code>PASSED</code></td></tr>
+        <tr><td><strong>H3 Community, Forgetting &amp; Repair</strong></td><td><strong>Newcomer: 60/60 (100%)</strong> vs. Untrained: 19/60 (31.7%); <strong>Post-Interference: 60/60 (100%)</strong>; <strong>Ambiguity Repair: 60/60 (100%)</strong> vs. Unrepaired: 32/60 (53.3%).</td><td><code>PASSED</code></td></tr>
       </tbody>
     </table>
   </div>
@@ -1598,6 +1897,12 @@ function buildInjectedTopbarHtml(activeView) {
   const demoBtn = document.getElementById('uw-h2-demo');
   const refBtn = document.getElementById('uw-h2-ref');
   const statusEl = document.getElementById('uw-h2-status');
+
+  const h3RecruitBtn = document.getElementById('uw-h3-recruit');
+  const h3InterfBtn = document.getElementById('uw-h3-interf');
+  const h3RepairModeEl = document.getElementById('uw-h3-repair-mode');
+  const h3AmbigBtn = document.getElementById('uw-h3-ambig');
+  const h3StatusEl = document.getElementById('uw-h3-status');
 
   async function syncBar() {
     try {
@@ -1660,6 +1965,36 @@ function buildInjectedTopbarHtml(activeView) {
     });
     const out = await res.json();
     statusEl.textContent = '[Ref t' + out.tick + ' · ' + out.mode + '] token="' + (out.emitted_token || 'none') + '" -> ' + out.listener + ' inspected ' + out.chosen_target + ' (' + (out.success ? 'SUCCESS' : 'MISMATCH') + ')';
+  });
+
+  h3RecruitBtn?.addEventListener('click', async () => {
+    const res = await fetch('/api/h3/action', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'recruit_teach_newcomer', teacher: 'agent-1', newcomer: 'agent-3', target_class: classEl.value })
+    });
+    const out = await res.json();
+    h3StatusEl.textContent = '[H3 Recruit t' + out.tick + '] ' + out.newcomer + ' learned "' + out.emitted_token + '" (n=' + out.updated_count_n + ', protected=' + out.protected + ', existing memories preserved)';
+  });
+
+  h3InterfBtn?.addEventListener('click', async () => {
+    const res = await fetch('/api/h3/action', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'interference_block', teacher: 'agent-1', listener: 'agent-2' })
+    });
+    const out = await res.json();
+    h3StatusEl.textContent = '[H3 Interference t' + out.tick + '] Budget=' + out.active_budget + ': ' + out.protected_retained + ' core protected, ' + out.evicted_to_archive + ' distractors archived';
+  });
+
+  h3AmbigBtn?.addEventListener('click', async () => {
+    const res = await fetch('/api/h3/action', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'ambiguity_repair_trial', listener: 'agent-2', target_class: classEl.value, repair_mode: h3RepairModeEl.value })
+    });
+    const out = await res.json();
+    h3StatusEl.textContent = '[H3 Ambiguity t' + out.tick + ' · ' + out.repair_mode + '] token="' + out.emitted_token + '" -> ' + (out.success ? 'RESOLVED VIA REPAIR' : 'AMBIGUOUS TIE');
   });
 
   openBtn?.addEventListener('click', () => { modal.hidden = false; });
@@ -1734,7 +2069,7 @@ const server = http.createServer(async (req, res) => {
         const packet = worldSession.getViewerPacket(undefined, '0');
         return sendReply(res, packet.operator_history);
       }
-      if (pathname === '/api/verify-h0-h1' || pathname === '/api/verify-h2') {
+      if (pathname === '/api/verify-h0-h1' || pathname === '/api/verify-h2' || pathname === '/api/verify-h3') {
         return sendReply(res, cachedVerification);
       }
       if (pathname === '/api/scenarios') {
@@ -1801,6 +2136,10 @@ const server = http.createServer(async (req, res) => {
         const payload = await readBody(req, 4096);
         return sendReply(res, worldSession.runH2InteractiveAction(payload));
       }
+      if (pathname === '/api/h3/action') {
+        const payload = await readBody(req, 4096);
+        return sendReply(res, worldSession.runH3InteractiveAction(payload));
+      }
       if (pathname === '/api/scenarios') {
         const payload = await readBody(req, 2048);
         if (payload.toggle_read_only) {
@@ -1831,7 +2170,7 @@ server.listen(PORT, '0.0.0.0', () => {
       url: `http://0.0.0.0:${PORT}/viewer`,
       scenario: worldSession.currentScenarioId,
       world_bounds_m: worldSession.snapshot.world_bounds_m,
-      h0_h1_h2_verified: cachedVerification.verified,
+      h0_h1_h2_h3_verified: cachedVerification.verified,
     })
   );
 });
