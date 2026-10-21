@@ -34,7 +34,7 @@ export class WorldView {
    g.userData.health=this.mesh(g,'box','#b2d9bc',[0,1.4,0],[.5,.04,.07]);
    g.userData.busy=this.mesh(g,'head','#f0bf78',[.29,1.12,0],[.05,.05,.05]);
   }else if(e.kind==='animal'){
-   const hen=e.entity_id==='animal-2',color=e.alive===false?'#736b62':hen?'#c5a06f':'#b8c2ae';
+   const hen=['animal-2','animal-4','animal-6'].includes(e.entity_id)||e.species==='reedhen',color=e.alive===false?'#736b62':hen?'#c5a06f':'#b8c2ae';
    this.mesh(g,'head',color,[0,hen?.26:.38,0],hen?[.2,.23,.18]:[.2,.23,.32]);
    this.mesh(g,'head',color,[0,hen?.48:.53,-.19],hen?[.1,.12,.1]:[.12,.14,.16]);
    if(hen)this.mesh(g,'box','#c88748',[0,.47,-.31],[.06,.04,.1]);
@@ -76,7 +76,7 @@ export class WorldView {
   }
   const live=new Set();for(const e of snapshot.entities){
    live.add(e.entity_id);let g=this.objects.get(e.entity_id);if(g&&g.userData.appearance!==`${e.kind}/${e.stage??''}`){this.scene.remove(g);this.objects.delete(e.entity_id);g=null;}if(!g){g=this.create(e);this.objects.set(e.entity_id,g);}
-   g.position.set(e.position_m[0],0,-e.position_m[1]);g.visible=e.present!==false&&!['spent_tool','cancelled_site'].includes(e.kind);if(e.kind==='forage')g.scale.setScalar(Math.max(.05,Math.min(1,Number(e.mass_ug)/2e9)));if(e.kind==='animal'){g.rotation.z=e.alive===false?Math.PI/2:0;for(const child of g.children)if(child.geometry===this.geo.head)child.material=this.material(e.alive===false?'#736b62':e.entity_id==='animal-2'?'#c5a06f':'#b8c2ae');}if(e.kind==='gate')g.rotation.y=e.radius_m===0?Math.PI/2:0;
+   g.position.set(e.position_m[0],0,-e.position_m[1]);g.visible=e.present!==false&&!['spent_tool','cancelled_site'].includes(e.kind);if(e.kind==='forage')g.scale.setScalar(Math.max(.05,Math.min(1,Number(e.mass_ug)/2e9)));if(e.kind==='animal'){const isHen=['animal-2','animal-4','animal-6'].includes(e.entity_id)||e.species==='reedhen';g.rotation.z=e.alive===false?Math.PI/2:0;for(const child of g.children)if(child.geometry===this.geo.head)child.material=this.material(e.alive===false?'#736b62':isHen?'#c5a06f':'#b8c2ae');}if(e.kind==='gate')g.rotation.y=e.radius_m===0?Math.PI/2:0;
    if(g.userData.health){g.userData.health.scale.x=.5*(e.body?.health??1);g.userData.health.visible=e.alive!==false;g.userData.busy.visible=snapshot.outstanding_actions.some(a=>a.agent_id===e.entity_id);if(e.kind==='actor'){const m=this.material(e.alive===false?'#746e6d':'#90aea4');g.children[0].material=m;g.children[1].material=m;}}
   }
   for(const [id,g] of this.objects)if(!live.has(id)){this.scene.remove(g);this.objects.delete(id);}

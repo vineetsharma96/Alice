@@ -1,4 +1,0 @@
-{'ready': True, 'version': '0.11.1', 'db': 'C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\data\\food-repair-package-20261021\\world with spaces.sqlite', 'url': 'http://127.0.0.1:54247/viewer', 'native_build_id': '832c4a705a7ceecd85d8befb3d84f4dff0d4730f024c395eba12985f0d8bd896', 'simulated_seconds_requested': 0.0, 'viewer_read_only': True, 'model_calls_enabled': False}
-{"passed":true,"animals":[{"id":"animal-1","children":6,"position":[3.7908197807312822,0,-4.218885563395197]},{"id":"animal-2","children":5,"position":[3.699600399908236,0,-4.653043730953915]}],"private_animal_fields_leaked":false,"page_errors":[]}
-
-

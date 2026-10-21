@@ -1,9 +1,0 @@
-{"seed": 21, "case": "harvest_craft", "arm": "authored", "goal_completed": true, "simulated_s": 18.0, "wall_s": 5.115088200007449, "model_calls": 0, "errors": []}
-{"seed": 21, "case": "harvest_craft", "arm": "adaptive", "goal_completed": true, "simulated_s": 18.0, "wall_s": 5.134001200000057, "model_calls": 0, "errors": []}
-{"seed": 21, "case": "water_delivery", "arm": "authored", "goal_completed": true, "simulated_s": 4.0, "wall_s": 0.8483831000048667, "model_calls": 0, "errors": []}
-{"seed": 21, "case": "water_delivery", "arm": "adaptive", "goal_completed": true, "simulated_s": 4.0, "wall_s": 1.1501213000010466, "model_calls": 0, "errors": []}
-{"seed": 31, "case": "harvest_craft", "arm": "authored", "goal_completed": true, "simulated_s": 18.0, "wall_s": 4.499467200002982, "model_calls": 0, "errors": []}
-{"seed": 31, "case": "harvest_craft", "arm": "adaptive", "goal_completed": true, "simulated_s": 18.0, "wall_s": 4.1647807999979705, "model_calls": 0, "errors": []}
-{"seed": 31, "case": "water_delivery", "arm": "authored", "goal_completed": true, "simulated_s": 4.0, "wall_s": 0.9010994999989634, "model_calls": 0, "errors": []}
-{"seed": 31, "case": "water_delivery", "arm": "adaptive", "goal_completed": true, "simulated_s": 4.0, "wall_s": 0.9899705999996513, "model_calls": 0, "errors": []}
-{"passed": true, "gates": {"native_integrity": true, "feasible_production": true, "scarcity_not_claimed": true, "experience_changes_choice": true}}

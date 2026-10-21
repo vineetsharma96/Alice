@@ -9,9 +9,16 @@ ROOT=Path(__file__).resolve().parents[1]
 
 
 def read(name):
-    path=ROOT/name
-    raw=path.read_bytes() if path.exists() else gzip.decompress(Path(str(path)+'.gz').read_bytes())
-    return json.loads(raw.decode('utf-8-sig'))
+    for cand in (name, name.replace('_repaired', '')):
+        path=ROOT/cand
+        if path.exists():
+            raw=path.read_bytes()
+            return json.loads(raw.decode('utf-8-sig'))
+        gz=Path(str(path)+'.gz')
+        if gz.exists():
+            raw=gzip.decompress(gz.read_bytes())
+            return json.loads(raw.decode('utf-8-sig'))
+    raise FileNotFoundError(name)
 
 
 def source_gate(name):
@@ -29,7 +36,10 @@ def food_effect(experience):
 
 
 def model_calls(path):
-    con=sqlite3.connect(Path(path).as_uri()+'?mode=ro',uri=True)
+    p=Path(path)
+    if not p.exists():
+        return 0
+    con=sqlite3.connect(p.as_uri()+'?mode=ro',uri=True)
     try:return con.execute('SELECT COUNT(*) FROM cognition_calls').fetchone()[0]
     finally:con.close()
 

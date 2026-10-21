@@ -4,8 +4,8 @@ seed = 20261021
 mode = "guided"
 
 [world]
-width_m = 16.0
-height_m = 16.0
+width_m = 32.0
+height_m = 32.0
 dt_s = 0.5
 population = 4
 population_limit = 8
@@ -36,6 +36,7 @@ tree_growth_kg_s = 0.0
 
 [ecology]
 enabled = true
+animals = 6
 forage_kg = 2.0
 regeneration_kg_s = 0.0
 

@@ -37,7 +37,7 @@ Older entries below are historical.
 
 ---
 
-# Milestone F — 21 October 2026
+# Milestone F ï¿½ 21 October 2026
 
 Application **0.13.0**, native UW9/DB10/checkpoint 9 unchanged. Explicit new-world
 knowledge profiles, private guided operator injection, own-lesson native testing

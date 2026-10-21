@@ -12,7 +12,7 @@ The previous audit handoff below describes its archived runtime and evidence.
 
 ---
 
-# Underworld Lab — code audit and desktop launcher handoff
+# Underworld Lab ï¿½ code audit and desktop launcher handoff
 
 Current application **0.11.1**, native **UW9 / DB10 / checkpoint 9**, native build unchanged at `832c4a705a7ceecd85d8befb3d84f4dff0d4730f024c395eba12985f0d8bd896`. Read [README](README.md) for detailed launch/build/save instructions and [audit report](docs/CODE_AUDIT_REPORT.md) for fixes and verification. D's original handoff is [archived](HANDOFF_D_ARCHIVE.md).
 

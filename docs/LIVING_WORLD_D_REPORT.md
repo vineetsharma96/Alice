@@ -1,4 +1,4 @@
-# Living-world D report — 20 October 2026
+# Living-world D report ï¿½ 20 October 2026
 
 D implements bounded native animal care and food production. The physical acceptance checks pass within the scope below; **reliable autonomous husbandry, breeding and cooking are not completed**. The failed Phase 9 study remains unchanged and its learner is excluded from live policies. No neural training, speech or true 3D mechanics were added. All measured runs use zero model calls; A's recurring/fair/global model-budget gate remains incomplete.
 

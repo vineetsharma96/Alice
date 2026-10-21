@@ -3,11 +3,11 @@ seed = 41
 mode = "guided"
 
 [world]
-width_m = 16.0
-height_m = 16.0
+width_m = 32.0
+height_m = 32.0
 dt_s = 1.0
-population = 2
-population_limit = 2
+population = 4
+population_limit = 8
 
 [cognition]
 provider = "disabled"
@@ -32,3 +32,9 @@ water_kg = 16.0
 food_regen_kg_s = 0.0
 water_regen_kg_s = 0.0
 tree_growth_kg_s = 0.0
+
+[ecology]
+enabled = true
+animals = 6
+forage_kg = 2.0
+regeneration_kg_s = 0.0
