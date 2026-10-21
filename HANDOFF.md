@@ -1,62 +1,69 @@
-# Alice handoff - H4 bounded native integration verified
+# Alice handoff - H5 bounded sequence reuse verified
 
-Read docs/DEVELOPMENTAL_H4_REPORT.md, DEVELOPMENTAL_H4_PROTOCOL.md and
-DEVELOPMENTAL_H4_OPERATIONS.md. Prior exact handoff is HANDOFF_PRE_H4_ARCHIVE.md.
-No original G/H0-H3 registered source, native law/config, existing world or failed
-Phase9 evidence changed. No application/release label; existing executable is G.
+Read docs/DEVELOPMENTAL_H5_REPORT.md, DEVELOPMENTAL_H5_PROTOCOL.md and
+DEVELOPMENTAL_H5_OPERATIONS.md. Prior exact H4 handoff is
+HANDOFF_PRE_H5_ARCHIVE.md. All original G/H0-H4 source pins, native laws/config,
+existing worlds and Phase9 evidence remain unchanged. No new release label;
+the existing executable is G. Phase9 remains failed and outside live policies.
 
-New underworld/wayfinding.py implements opt-in private learned location tokens,
-actual co-visit grounding, own visited coordinates, unverified reports and separate
-native-acquisition confirmation, plus an engineered need scheduler using learned
-own relief. No shared dictionary, LLM, H5 sequences or new UI. Scripts:
-wayfinding_study.py and independent wayfinding_audit.py. Unified learner.py offers
-wayfinding-init/status/reconcile, need-step, location-remember/coin/learn/receive,
-scout-observe/send and follow-report. Init refuses existing saves. Use working
-backups to continue trained lives; do not mutate scored research databases.
+New underworld/composition.py adds an opt-in, source-contracted private H5
+profile to new four-person native research cohorts. Authored category/mass
+factor encoder, private random token coinage, random order, recipient-learned
+feature intersections and authored overlap scoring. No shared dictionary or
+LLM. At most two IDs and one native simulated second per token. Never call
+this discovered syntax or spontaneous language emergence. Production/learning
+quotas stop explicitly; missing native sources refuse interpretation.
 
-Prospective source registration artifacts/h4_registration.json remains frozen and
-matches. Development43; held-out9203/9227/9257/9277/9293. Ten feasible cases/arm:
-enabled10/10, muted5/10, scrambled0/10, identity5/10. Separate identity10/10,
-no identity token decodes a location. Five depletion cases stop before invalid
-gather. Native proof audit passes. Need windows complete nine self-selected drink
-goals vs zero frozen; five actual source revisits. Separate regression links an
-own-need goal to real received information and durable confirmation. All four
-people alive/health1 at measured endpoints; longest303sim seconds, not unattended
-survival. No animals. Study392.092wall seconds, overlapping the full suite.
+Frozen 13-file artifacts/h5_registration.json matches. Development seed 47;
+confirmation 10103/10111/10133/10141/10151. Native learned references 30/30;
+whole-message 6/30, muted 6/30, first-token 6/30, second-token 4/30. Every seed
+learned 6/6. Independent composition_audit.py validates actual native inspections,
+private sources, frozen vocabularies, matched initial heads, replay and invariants.
+Four negative checks reject fabricated goals, altered receipts, missing worlds
+and source repinning. No model calls/native rejections; 300 new completed native
+requests. All four bodies alive/health1 at 25 scored endpoints. Longest life
+93 simulated seconds; study 342.163507 wall seconds. These are short assigned
+reference branches of trained lives, never one pooled lifetime or survival proof.
 
-304 Python tests and four native checks pass; Python447.369s internal /
-448.597s subprocess. Sixteen H4 checks include interruption/idempotence,
-carried supplies, source/forged-input refusal and save/archive snapshots.
-Static121Python files, no broken connections/substantial duplicate functions,
-pyflakes clean. Phase9 independently verifies3439files and advance:false.
-Actual worlds data/h4-confirmation-20261021; exact compressed aggregate
-artifacts/h4_confirmation.json.gz; independent audit h4_audit.json; delivery
-h4_delivery_summary.json, full checks h4_checks.json. Audits require actual local
-DBs, never infer zero model use or replay success from missing worlds.
+Actual local worlds data/h5-confirmation-20261021; 30-world hash inventory
+artifacts/h5_native_worlds.json. Exact compressed aggregate
+artifacts/h5_confirmation.json.gz; independent h5_audit.json. Both development
+traces and exact matching source ZIPs retained; raw traces remain locally intact.
+Import, occupied-hub route and repeated-fixture-checkpoint failures are retained
+in initial unit logs. Temporary failed unit worlds were not retained.
 
-The initial H4 development fails because eat duration1s violates unchanged native
-minimum2s; failed receipt/log/source/world retained. Earlier repeated-update tests
-find tuple/list normalization differences, corrected at the JSON return boundary.
-Development2/3/4 and source ZIPs are separate preserved traces. Prior H1 online
-adaptation and G husbandry failures stay failed. Do not repin old studies.
+317 Python suite tests and four native checks pass: artifacts/h5_checks.json/.log.
+Python 892.652s internal / 894.080972s subprocess, with overlapping study compute;
+native .30s internal / .600558s subprocess. Two supplemental pending-update epoch
+checks pass in 15.930s. They were added after the source freeze without changing
+registered mechanism/scoring; separately source-hashed in h5_source_checks.json.
+No full-suite rerun/timeout. Final static inventory and pyflakes pass. Phase9
+independently verifies 3439 files, recomputed metrics match, advance:false.
 
-Scouting, remote-water assignment, two spatial cells, one-site attempt cap,
-navigation/prerequisites and protection budgets are authored. Nearby base water
-remains available, so the remote task is not survival necessity. The need policy
-has no assigned goal; it uses current need and previously learned native relief,
-but that rule is engineered and predictions are frozen during scoring. Inquiry
-flags/inspection/rest are not transmitted learned request symbols. Primary
-assigned goals are not credited as autonomous goal formation.
+Read-only operator module underworld.learning_panel exposes actual own behavior,
+source IDs, private associations and exposure counts, uncertain feature glosses,
+original signals/responses and separate teaching/learned/authored/random-tie/
+protective-fallback counters. No operator output enters policy inputs. Actual
+headless Edge desktop/mobile, selection/refresh, hostile-text and missing-evidence
+checks pass; artifacts/h5_browser_final*. Startup native environment:
+PATH=C:\mingw64\bin + existing PATH; UNDERWORLD_BUILD=build/living-d absolute.
+Run .venv/Scripts/python.exe -m underworld.learning_panel --db PATH --port 8775.
+The process started this turn on port8775 reads development2/47-learned.sqlite;
+verify process availability before claiming it is still live. Existing user's
+interactive world and viewer were not reset or replaced. No packaged H5 build.
 
-Native pending primitives reconcile exactly once; learning/report updates are
-atomic/idempotent by native source. Reconcile pending actor before another task.
-Do not replay an entire interrupted scout circuit blindly: there is no whole-
-circuit atomic recovery guarantee. Carry-aware need steps consume already-held
-supplies before gathering again. Source/evidence quotas stop explicitly; native
-and private archive protections remain mandatory. Do not reset bodies or replenish.
+scripts/learner.py adds sequence-init/status/encode/send/begin/learn/reference.
+Init refuses existing saves. Same message ID/text reconciles one native utterance;
+same attention ID reconciles one learned update. Different payloads/stale heads
+refuse. Native reservation/commit/private commit and fresh-process/epoch recovery
+are verified, including pending attention/message intent. The entire curriculum
+is not atomic: do not blindly replay a lesson circuit or change IDs after unknown
+outcomes. Save/checkpoint names must be unique; preserve all protected archives.
 
-Remaining: long stale-report/repeated depleted-source handling, general exploration,
-autonomous scout selection/requests/teaching, robust online adaptation, long
-unattended survival, H5 composition/UI. Neural training/reproduction/true3D outside
-scope. Wait for user direction before H5. Unrelated package/OpenCode/TinyFish/env
-changes and prior package stash remain preserved and unstaged; do not include them.
+Remaining: autonomous speaking/teaching/requests, location composition, arbitrary
+unseen features, calibrated semantics, grammar, conversation and long unattended
+survival. Prior H1 online/G husbandry failures and rejected incoming H3 stay
+failed. No neural training, reproduction, new speech engine or true3D.
+Unrelated package/OpenCode/TinyFish/env changes and prior stash remain preserved
+and unstaged. No remote push performed for this milestone. Await user direction
+before expanding the research scope.

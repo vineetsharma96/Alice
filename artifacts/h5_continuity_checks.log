@@ -1,0 +1,7 @@
+test_pending_attention_crosses_epoch_and_learns_once_in_new_process (tests.test_h5_continuity.H5ContinuityTests.test_pending_attention_crosses_epoch_and_learns_once_in_new_process) ... ok
+test_pending_message_snapshot_recovers_without_a_second_utterance (tests.test_h5_continuity.H5ContinuityTests.test_pending_message_snapshot_recovers_without_a_second_utterance) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 15.930s
+
+OK

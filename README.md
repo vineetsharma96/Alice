@@ -1,5 +1,47 @@
 # Underworld Lab (Alice)
 
+**H5 bounded symbol reuse is implemented and verified.** Private learned sequences
+complete **30/30 held-out native references**, versus 6/30 whole-message lookup,
+6/30 muted, and 6/30 or 4/30 single-symbol ablations. Authored category/mass
+factorization and physical teaching are explicit; this is a narrow combination
+reuse result, not discovered syntax or autonomous conversation.
+
+**317 Python tests and four native checks pass**, plus two supplementary epoch
+continuity checks. Message IDs and learning updates reconcile exactly once;
+pending teaching and messages survive checkpoint/archive and fresh processes.
+Models stay off. Existing worlds, G/H0-H4 source pins and failed Phase9 evidence
+remain unchanged. No new release label or executable rebuild.
+
+The new **read-only operator learning panel** shows actual observations, source-
+linked associations, original signals, recipient responses, uncertain glosses and
+separate teaching/authored/fallback counters. From the existing source setup:
+
+```powershell
+$env:PATH='C:\mingw64\bin;'+$env:PATH
+$env:UNDERWORLD_BUILD=(Resolve-Path build/living-d).Path
+.venv/Scripts/python.exe scripts/learner.py sequence-init --db data/my-h5.sqlite --seed 47
+.venv/Scripts/python.exe -m underworld.learning_panel --db data/my-h5.sqlite --port 8775
+```
+
+Open [the local learning panel](http://127.0.0.1:8775/). Fresh cohorts have no
+learned meanings; existing scored cohorts can be inspected read-only, using paths
+in the operations guide. Initialization refuses existing saves. Do not teach or
+run new trials on scored evidence databases. The original viewer/run commands
+continue to use their original worlds.
+
+Read [H5 results and limitations](docs/DEVELOPMENTAL_H5_REPORT.md),
+[CLI, panel and recovery instructions](docs/DEVELOPMENTAL_H5_OPERATIONS.md),
+[frozen evaluation protocol](docs/DEVELOPMENTAL_H5_PROTOCOL.md),
+[current status](docs/STATUS.md), and [handoff](HANDOFF.md).
+The 342.164-second study reaches at most 93 simulated seconds; long autonomous
+survival and open-ended language remain unestablished. Phase9's failed historical
+result stays failed and its learner stays outside live autonomous policies.
+
+## Prior milestone summaries (historical)
+
+The summaries below preserve earlier results. Their deferred H5 notes are
+superseded only by the scoped H5 evidence above.
+
 **H4 bounded native communication is now verified.** Learned location signals
 achieve 10/10 remote-water goals, versus 5/10 muted and 0/10 scrambled. Resource
 identity and location are tested separately. A separately evaluated engineered

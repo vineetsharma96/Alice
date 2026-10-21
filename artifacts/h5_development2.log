@@ -1,0 +1,6 @@
+{"wall_s": 9.51878889999989}
+{"wall_s": 5.88309289999961}
+{"wall_s": 3.972668400000657}
+{"wall_s": 4.7987895000005665}
+{"wall_s": 2.8805982000003496}
+{"source_files": {"underworld/composition.py": "086e28d068229fe63259049afa38a7275bea7d023e9a810d7e48a1be022d3681", "scripts/composition_study.py": "a90f00730099c5d438486add4c970ffdf23a9b678d4717eef239feaf036c5a2e", "tests/test_composition.py": "a6c7bcc563a596eaf393b9acd8f7bc03922ade5b5f4b39aaf02e8a7494dd94b4", "docs/DEVELOPMENTAL_H5_PROTOCOL.md": "3af4ec6aa506b43101741836fd6392d714af8e4e7d352f1a438ae3540e4191ba"}, "totals": {"learned": 6, "whole": 0, "muted": 0, "first": 0, "second": 0}, "h5_reuse_gate": true, "wall_s": 44.150499300000774}

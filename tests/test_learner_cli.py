@@ -9,6 +9,21 @@ ROOT=Path(__file__).resolve().parents[1]
 
 
 class LearnerCliTests(unittest.TestCase):
+    def test_h5_cli_send_retry_keeps_one_native_utterance(self):
+        with tempfile.TemporaryDirectory() as directory:
+            db=Path(directory)/'h5.sqlite'
+            def run(*args):
+                return subprocess.run([sys.executable,str(ROOT/'scripts/learner.py'),*args,'--db',str(db)],
+                                      cwd=ROOT,capture_output=True,text=True,timeout=30)
+            init=run('sequence-init');self.assertEqual(init.returncode,0,init.stderr)
+            args=('sequence-send','--message-id','operator-example','--text','s00 s01')
+            first=run(*args);self.assertEqual(first.returncode,0,first.stderr)
+            state=run('sequence-status');self.assertEqual(state.returncode,0,state.stderr)
+            second=run(*args);self.assertEqual(second.returncode,0,second.stderr)
+            self.assertEqual(json.loads(first.stdout),json.loads(second.stdout))
+            self.assertEqual(json.loads(run('sequence-status').stdout),json.loads(state.stdout))
+            self.assertNotEqual(run('sequence-init').returncode,0)
+
     def test_h4_cli_continues_native_experience_without_reset(self):
         with tempfile.TemporaryDirectory() as directory:
             db=Path(directory)/'h4.sqlite'

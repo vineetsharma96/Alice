@@ -1,3 +1,41 @@
+# 21 October 2026 - H5 bounded symbol sequences and operator evidence
+
+H5's prospective native reuse gate and independent audit pass: learned sequences
+complete 30/30 held-out references versus 6/30 whole-message lookup,6/30 muted,
+6/30 first-symbol and 4/30 second-symbol controls, across five confirmation seeds.
+The encoder's category/mass factorization, teaching scaffold and overlap rule
+are authored. Private symbol meanings come from native observation; this does
+not demonstrate discovered syntax, conversation or autonomous language emergence.
+
+The separate read-only operator panel displays actual signals, uncertain feature
+hypotheses/counts, source IDs, native responses and distinct teaching, learned,
+authored-decision, random-tie and protective-fallback counters. Real Edge desktop/
+mobile checks pass, including refresh, privacy boundaries, safe text display,
+missing-evidence handling and refusal of write requests.
+
+317 Python tests and four native checks pass; two additional epoch-continuity
+checks also pass. Pending messages/teaching survive archive and resume once in
+fresh processes. Study 342.164wall seconds; longest 93sim seconds, all four alive/
+health 1,300new completed native requests, zero rejections/models. These brief
+counterfactual reference branches are not unattended-survival evidence.
+
+Original G/H0-H4 registrations/worlds/reports and failed Phase9 evidence are
+preserved. Phase9 independently verifies 3439files and retains advance:false;
+its learner remains outside live policies. Earlier H1 online and G husbandry
+failures and the original rejected H3 gate remain failed. Long survival, location
+composition, autonomous requests/teaching, calibrated semantic confidence and
+unscaffolded grammar remain unestablished. No release/version/executable change,
+neural training, reproduction, new speech engine or true3D.
+
+Read [H5 results and limitations](DEVELOPMENTAL_H5_REPORT.md),
+[operations](DEVELOPMENTAL_H5_OPERATIONS.md),
+[prospective protocol](DEVELOPMENTAL_H5_PROTOCOL.md) and [handoff](../HANDOFF.md).
+Earlier records below are historical; their deferred H5 notes are superseded
+only by this narrowly measured implementation. Initial import/routing/fixture
+failures and development traces remain retained separately.
+
+---
+
 # 21 October 2026 - H4 bounded native integration
 
 H4 communication and engineered need-policy gates pass independently: 10/10

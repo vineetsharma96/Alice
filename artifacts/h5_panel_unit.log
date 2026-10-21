@@ -1,0 +1,6 @@
+test_projection_and_http_are_read_only_and_bounded (tests.test_learning_panel.LearningPanelTests.test_projection_and_http_are_read_only_and_bounded) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 1.383s
+
+OK

@@ -1,0 +1,29 @@
+{
+  "protocol": "H5 authored factorization; not invented syntax",
+  "seeds": [
+    10103,
+    10111,
+    10133,
+    10141,
+    10151
+  ],
+  "development": [
+    47
+  ],
+  "source_files": {
+    "underworld/composition.py": "086e28d068229fe63259049afa38a7275bea7d023e9a810d7e48a1be022d3681",
+    "scripts/composition_study.py": "af096227ba2147be4f4b750839506ce5c75b0f5dc98ed4f2945e01705d0fcce9",
+    "tests/test_composition.py": "a6c7bcc563a596eaf393b9acd8f7bc03922ade5b5f4b39aaf02e8a7494dd94b4",
+    "docs/DEVELOPMENTAL_H5_PROTOCOL.md": "3af4ec6aa506b43101741836fd6392d714af8e4e7d352f1a438ae3540e4191ba",
+    "underworld/learning_panel.py": "73f88e3e0178d0fdb8fcc0d64e46b8c45436dc88a53811946b9472a10b2b54a9",
+    "underworld/web/learning/index.html": "1171c8492e98088e3d1f285328f2836097734090f1b92fcc4bb4e6ddc0ae8beb",
+    "underworld/web/learning/panel.js": "9ab944782947f36d2e41102c909ea57deb2b7c33dda1eae7b4340290b851f209",
+    "underworld/web/learning/panel.css": "9f3bea763a9640782f0bee1276ff673239c87d7f111a05362bd0f3e6d6ef63bf",
+    "tests/test_learning_panel.py": "22938130f1ec56ba86e282c6bb42d27954b50f5ad9139e2fab39645d520833e1",
+    "scripts/verify_learning_panel.mjs": "e0423b8eb39dd0e7cf45a123946f6f37d1cef8830dc541144cac0331a2b7b1ba",
+    "scripts/composition_audit.py": "1eaf1456746608dd81a3eb3d9db5da565fa3698bce3fa699b9a500d270ad570d",
+    "scripts/learner.py": "77ec41756962e04b0fad0867580e16e2d93d5ad5aadbe00cadead3c77b32a52c",
+    "tests/test_learner_cli.py": "e54223c6df19319496f2e31a3d8fbfc506ca7aaf00c6eab4397775bcaa127243"
+  },
+  "written_utc": 1792586012.9831004
+}

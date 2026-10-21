@@ -7,12 +7,13 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
-from underworld import developmental as dev, symbols, community, wayfinding as wf  # noqa: E402
+from underworld import developmental as dev, symbols, community, wayfinding as wf, composition as comp  # noqa: E402
 
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('command',choices=('init','symbol-init','community-init','community-status','recruit',
+        'sequence-init','sequence-status','sequence-encode','sequence-send','sequence-begin','sequence-learn','sequence-reference',
         'wayfinding-init','wayfinding-status','need-step','wayfinding-reconcile',
         'location-remember','location-coin','location-learn','location-receive','scout-observe','scout-send','follow-report',
         'community-demonstrate','community-reference','community-reconcile',
@@ -23,9 +24,29 @@ def main():
     p.add_argument('--after-seq',type=int,default=0)
     p.add_argument('--communication',choices=('enabled','muted','scrambled','identity'),default='enabled')
     p.add_argument('--frozen',action='store_true')
+    p.add_argument('--message-id');p.add_argument('--attention-id');p.add_argument('--text')
+    p.add_argument('--sequence-mode',choices=('learned','whole','muted'),default='learned')
+    p.add_argument('--coin',action='store_true',help='allow private factor coinage for sequence-encode')
     args=p.parse_args()
     try:
         if args.command=='init':result=dev.initialize(args.db,seed=args.seed)
+        elif args.command=='sequence-init':result=comp.initialize(args.db,args.seed)
+        elif args.command=='sequence-status':result=comp.audit(args.db)
+        elif args.command=='sequence-encode':
+            if not args.target:p.error('sequence-encode requires --target')
+            result={'signal':comp.encode(args.db,args.agent,args.target,learn=args.coin),
+                    'origin':'authored factor encoder with private coined IDs'}
+        elif args.command=='sequence-send':
+            if not args.message_id or not args.text:p.error('sequence-send requires --message-id and --text')
+            result=comp.send(args.db,args.agent,args.message_id,args.text)
+        elif args.command=='sequence-begin':
+            if not args.attention_id:p.error('sequence-begin requires --attention-id')
+            result=comp.begin(args.db,args.listener,args.attention_id,args.alternatives)
+        elif args.command=='sequence-learn':
+            if not args.attention_id:p.error('sequence-learn requires --attention-id')
+            result=comp.learn(args.db,args.listener,args.agent,args.attention_id)
+        elif args.command=='sequence-reference':
+            result=comp.select(args.db,args.listener,args.agent,args.alternatives,args.after_seq,args.sequence_mode)
         elif args.command=='wayfinding-init':result=wf.initialize(args.db,args.seed)
         elif args.command=='wayfinding-status':result=wf.audit(args.db)
         elif args.command=='wayfinding-reconcile':

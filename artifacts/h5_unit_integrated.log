@@ -1,0 +1,17 @@
+test_decision_refuses_missing_native_learning_source (tests.test_composition.CompositionTests.test_decision_refuses_missing_native_learning_source) ... ok
+test_fresh_process_continues_pending_native_message_once (tests.test_composition.CompositionTests.test_fresh_process_continues_pending_native_message_once) ... ok
+test_heldout_combinations_reuse_learned_parts_without_updates (tests.test_composition.CompositionTests.test_heldout_combinations_reuse_learned_parts_without_updates) ... ok
+test_learning_before_and_after_commit_is_exactly_once (tests.test_composition.CompositionTests.test_learning_before_and_after_commit_is_exactly_once) ... ok
+test_logical_message_recovery_at_all_commit_boundaries (tests.test_composition.CompositionTests.test_logical_message_recovery_at_all_commit_boundaries) ... ok
+test_no_physical_demonstration_means_no_learning (tests.test_composition.CompositionTests.test_no_physical_demonstration_means_no_learning) ... ok
+test_parser_refuses_unbounded_duplicate_and_malformed_signals (tests.test_composition.CompositionTests.test_parser_refuses_unbounded_duplicate_and_malformed_signals) ... ok
+test_private_access_and_unseen_factor_refusal (tests.test_composition.CompositionTests.test_private_access_and_unseen_factor_refusal) ... ok
+test_proof_tampering_and_budget_overflow_fail_closed (tests.test_composition.CompositionTests.test_proof_tampering_and_budget_overflow_fail_closed) ... ok
+test_save_archive_and_missing_archive_protection (tests.test_composition.CompositionTests.test_save_archive_and_missing_archive_protection) ... ok
+test_unsubmitted_message_at_changed_head_refuses_reexecution (tests.test_composition.CompositionTests.test_unsubmitted_message_at_changed_head_refuses_reexecution) ... ok
+test_projection_and_http_are_read_only_and_bounded (tests.test_learning_panel.LearningPanelTests.test_projection_and_http_are_read_only_and_bounded) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 38.518s
+
+OK
