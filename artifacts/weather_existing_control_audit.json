@@ -1,0 +1,28 @@
+{
+  "verified": true,
+  "runs": [
+    {
+      "seed": 13001,
+      "verified": true,
+      "decisions": 6,
+      "environmental_health_lost": 0.060511026268089546,
+      "wall_s": 0.7366079000003083
+    },
+    {
+      "seed": 13007,
+      "verified": true,
+      "decisions": 6,
+      "environmental_health_lost": 0.07706250000000012,
+      "wall_s": 0.759370100000524
+    },
+    {
+      "seed": 13009,
+      "verified": true,
+      "decisions": 6,
+      "environmental_health_lost": 0.07706250000000012,
+      "wall_s": 0.7294212000006155
+    }
+  ],
+  "source_sha256": "24b3200144dfe23af9d41c1ae6c1f834368859d9927b00599fe03de60717a340",
+  "existing_policy_sha256": "1424f4a1a11a27b5083d4f53a50a895385167066e6b7fadcf25165ad14118f27"
+}

@@ -1,0 +1,133 @@
+{
+  "archives": [
+    {
+      "raw": "artifacts/weather_confirmation.json",
+      "archive": "artifacts/weather_confirmation.json.gz",
+      "raw_bytes": 553764,
+      "archive_bytes": 37074,
+      "raw_sha256": "e4c75e31208dea0aa336da6f7e59fd5b0c976df81cf4b24bcc17304d8d0091c8",
+      "archive_sha256": "a342bd7896025ce7f71ae8ce54f5a55aa8ec666c4712f52e24c2479e03b89ec8"
+    },
+    {
+      "raw": "artifacts/weather_development.json",
+      "archive": "artifacts/weather_development.json.gz",
+      "raw_bytes": 369949,
+      "archive_bytes": 25734,
+      "raw_sha256": "8b8365beb5b4ce5ae17b43a5b280526fcf11e2f0d9c7ee88b89efc675e02c582",
+      "archive_sha256": "c065ac2e7453ac37fe9dae00fd6f706cf2a766c507073f175e08fb5f21675c9a"
+    },
+    {
+      "raw": "artifacts/weather_development2.json",
+      "archive": "artifacts/weather_development2.json.gz",
+      "raw_bytes": 369201,
+      "archive_bytes": 25627,
+      "raw_sha256": "5e51c52ec4eba0e7a87a678cd413106f525386ea4d9b687b99aee876b69984ce",
+      "archive_sha256": "3a3cac590f92f4d504b06a0d31bd323521d45e4a6055b3f63b31d366c88ed8a1"
+    },
+    {
+      "raw": "artifacts/weather_development3.json",
+      "archive": "artifacts/weather_development3.json.gz",
+      "raw_bytes": 369596,
+      "archive_bytes": 25669,
+      "raw_sha256": "8108589e0edfad0c49c370afb00765cc0a949df4fe81c339edadfde798b2e22b",
+      "archive_sha256": "dac3e568fe92d4dda1cca882ac656f62e715d0779960ca1985d5c9f8405e97db"
+    },
+    {
+      "raw": "artifacts/weather_development4.json",
+      "archive": "artifacts/weather_development4.json.gz",
+      "raw_bytes": 369540,
+      "archive_bytes": 25545,
+      "raw_sha256": "f8024321970584c633639b91136262fa066899f6ddeeb26eeca1ce4f76f4e086",
+      "archive_sha256": "b32e9f303fbbb6b0ca84fdd7472be0911898d085d1d2dd6e2a53e4251d872084"
+    },
+    {
+      "raw": "artifacts/weather_development5.json",
+      "archive": "artifacts/weather_development5.json.gz",
+      "raw_bytes": 369705,
+      "archive_bytes": 25609,
+      "raw_sha256": "f9be93870007d2890c4bb67471b41a04b8d730197baa33ca2e1c3ca4d0dd5e1d",
+      "archive_sha256": "dd5a67e1c5318b8586e58a8948541043a304e68c8b7b8cdd70caad3163bd8125"
+    },
+    {
+      "raw": "artifacts/weather_continuity_300.json",
+      "archive": "artifacts/weather_continuity_300.json.gz",
+      "raw_bytes": 38936,
+      "archive_bytes": 4162,
+      "raw_sha256": "e0d5c790633a005d183e08462d7d294793da4ba13afb3c30442dd42af0daec4b",
+      "archive_sha256": "f790563515b63fdd31bd0927bbec089388ff40c0104c829f349811f632d24b41"
+    },
+    {
+      "raw": "artifacts/weather_continuity_600.json",
+      "archive": "artifacts/weather_continuity_600.json.gz",
+      "raw_bytes": 51888,
+      "archive_bytes": 4860,
+      "raw_sha256": "b65e1ce5041726e24e93c71def5548f62d8ab838183ae131fe5a95ccb2e5f6f4",
+      "archive_sha256": "81888afcef6fb31962b38f3edede29024e3ed38567d11603a3cd31de4052e52e"
+    },
+    {
+      "raw": "artifacts/weather_continuity_1200.json",
+      "archive": "artifacts/weather_continuity_1200.json.gz",
+      "raw_bytes": 52047,
+      "archive_bytes": 4873,
+      "raw_sha256": "2eb782e10ce619e04599acb8215b574d7959109fc386c0196084772f6b337a68",
+      "archive_sha256": "421d19a58a7318289d27a39a06fc1cd373736c5e0aa78aef6efd257740fa9d22"
+    },
+    {
+      "raw": "artifacts/weather_continuity_2400.json",
+      "archive": "artifacts/weather_continuity_2400.json.gz",
+      "raw_bytes": 52156,
+      "archive_bytes": 4964,
+      "raw_sha256": "f365db1ed6e57851539668dfdb64508176fe2723cbfa61caaf3ae3d4a7923373",
+      "archive_sha256": "d01123b1dc1149cd0c098df43551faebde263c1576bb8df6b6c44ea868c7031d"
+    },
+    {
+      "raw": "artifacts/weather_w5_demo.json",
+      "archive": "artifacts/weather_w5_demo.json.gz",
+      "raw_bytes": 16791,
+      "archive_bytes": 2883,
+      "raw_sha256": "ae4fa57de27e455dd9142fa59811ebb841e69624d970fdd553ee82cf676523a0",
+      "archive_sha256": "491e2953e4b927bc353088ba6cd3d204376dfc38bdd9b5ca51e25144d0a63ef3"
+    },
+    {
+      "raw": "artifacts/weather_final_demo.json",
+      "archive": "artifacts/weather_final_demo.json.gz",
+      "raw_bytes": 16791,
+      "archive_bytes": 2882,
+      "raw_sha256": "ed81d057e3631323a16a08a2ba87a2e9893c14c25d7be9fc2ca3d3ba040da489",
+      "archive_sha256": "0351b5c739da18e1979a181b8124b317aa9254db988ff4f19d7cb2a15a63bf07"
+    },
+    {
+      "raw": "artifacts/weather_existing_control.json",
+      "archive": "artifacts/weather_existing_control.json.gz",
+      "raw_bytes": 306642,
+      "archive_bytes": 15617,
+      "raw_sha256": "b2c0749d7341b6159d4395ee8c9a9023b338250b9a8da56ad349386c511cec93",
+      "archive_sha256": "6750e1983dd11034ac6239b3919d5993ec4a89ce60497f4d9d5b51c166530757"
+    }
+  ],
+  "negative_checks": {
+    "false_protection": {
+      "refused": true,
+      "reason": "Weather protection credit is not physical"
+    },
+    "false_health": {
+      "refused": true,
+      "reason": "Native weather final differs: climate"
+    },
+    "changed_registration": {
+      "refused": true,
+      "reason": "Weather source freeze differs"
+    },
+    "missing_world": {
+      "refused": true,
+      "reason": "unable to open database file"
+    }
+  },
+  "local_native_worlds": "weather_audit.json contains 21 actual held-out save hashes; continuity and demo are separate actual local saves",
+  "supplemental_sources": {
+    "scripts/weather_continuity_audit.py": "1f88c2e3c96643fcd5466be3312e82caf9dcc61c0e33b148980ed703463e3308",
+    "scripts/package_weather_evidence.py": "9fe1813896e6056caf72d66a72679998a2b6007bf07c430e18cce8adb949de27",
+    "scripts/weather_existing_control.py": "24b3200144dfe23af9d41c1ae6c1f834368859d9927b00599fe03de60717a340"
+  },
+  "native_saves_exported": false
+}

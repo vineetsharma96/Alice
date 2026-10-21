@@ -1,0 +1,909 @@
+{
+  "stage": "W3",
+  "checks": 18,
+  "build_id": "35330c700cf64c326c740df7c4aec507ec71963736f8636f18cdd853e4d93b9f",
+  "source_hashes": {
+    "weather_native/CMakeLists.txt": "9d64e1c58c1146c81422a9b1d8e55da7c80a2ebd9440d1e508900fdc5a45f940",
+    "weather_native/integrate.py": "b17f270634975ee64ac038725bda9306a561de3e11cc40413dfadb1e80a23f33",
+    "weather_native/weather.cpp": "46c33b9431e1f7d330d153bbe8127e1ee4d74afd424d98e6b7159fe646feb46b",
+    "weather_native/weather.hpp": "4a3892850a75b151b6abb45c34e51952496231d340120df11bfbeb86ea8d179f",
+    "weather_native/weather_bindings.inc": "2809ed4d49db5f07ee1a49d79ccc78a0c342087e21c0fb939e8ff0189a6f2909",
+    "weather_tests/helpers.py": "479574121220d212e373ecd91de2c6dd189a41511dc2a2179f593d32d8b832b6",
+    "weather_tests/test_weather_clock.py": "9a7d9510aef021117a4ffb61bcdaca60a5f44d544e0ba91e6d649f10e78e3a1a",
+    "weather_tests/test_weather_exposure.py": "97ba54c591df26eb1e87a7306877ff7e6627e1783a35d0148f587c84feaeb7ce",
+    "weather_tests/test_weather_shelter.py": "456945025532c44e9589df93c36e05090ef4de7b53ef1351bf44d8c28d12abd1",
+    "weather_tests/test_weather_store.py": "03c08f7b186cf5c8c195541a41d38194940b4a0a90a2686fcdfde3269c57399f"
+  },
+  "assigned_setup_receipts": [
+    {
+      "schema_version": 1,
+      "request_id": "w-agent-1-0-move",
+      "agent_id": "agent-1",
+      "status": "completed",
+      "error_code": "",
+      "reason": "",
+      "started_tick": "0",
+      "completed_tick": "104",
+      "observation_version": "104",
+      "event_refs": [
+        "1",
+        "105"
+      ],
+      "observable_effects": {
+        "description": ""
+      }
+    },
+    {
+      "schema_version": 1,
+      "request_id": "w-agent-1-106-harvest_branch",
+      "agent_id": "agent-1",
+      "status": "completed",
+      "error_code": "",
+      "reason": "",
+      "started_tick": "104",
+      "completed_tick": "108",
+      "observation_version": "108",
+      "event_refs": [
+        "107",
+        "111",
+        "112"
+      ],
+      "observable_effects": {
+        "description": "wood_ug=900000000:fiber_ug=100000000"
+      }
+    },
+    {
+      "schema_version": 1,
+      "request_id": "w-agent-1-113-move",
+      "agent_id": "agent-1",
+      "status": "completed",
+      "error_code": "",
+      "reason": "",
+      "started_tick": "108",
+      "completed_tick": "113",
+      "observation_version": "113",
+      "event_refs": [
+        "114",
+        "119"
+      ],
+      "observable_effects": {
+        "description": ""
+      }
+    },
+    {
+      "schema_version": 1,
+      "request_id": "w-agent-1-120-collect_wood",
+      "agent_id": "agent-1",
+      "status": "completed",
+      "error_code": "",
+      "reason": "",
+      "started_tick": "113",
+      "completed_tick": "117",
+      "observation_version": "117",
+      "event_refs": [
+        "121",
+        "125",
+        "126"
+      ],
+      "observable_effects": {
+        "description": "collected:wood:900000000ug"
+      }
+    },
+    {
+      "schema_version": 1,
+      "request_id": "w-agent-1-127-move",
+      "agent_id": "agent-1",
+      "status": "completed",
+      "error_code": "",
+      "reason": "",
+      "started_tick": "117",
+      "completed_tick": "127",
+      "observation_version": "127",
+      "event_refs": [
+        "128",
+        "138"
+      ],
+      "observable_effects": {
+        "description": ""
+      }
+    },
+    {
+      "schema_version": 1,
+      "request_id": "w-agent-1-139-collect_wood",
+      "agent_id": "agent-1",
+      "status": "completed",
+      "error_code": "",
+      "reason": "",
+      "started_tick": "127",
+      "completed_tick": "131",
+      "observation_version": "131",
+      "event_refs": [
+        "140",
+        "144",
+        "145"
+      ],
+      "observable_effects": {
+        "description": "collected:fiber:100000000ug"
+      }
+    },
+    {
+      "schema_version": 1,
+      "request_id": "w-agent-1-146-move",
+      "agent_id": "agent-1",
+      "status": "completed",
+      "error_code": "",
+      "reason": "",
+      "started_tick": "131",
+      "completed_tick": "231",
+      "observation_version": "231",
+      "event_refs": [
+        "147",
+        "261"
+      ],
+      "observable_effects": {
+        "description": ""
+      }
+    },
+    {
+      "schema_version": 1,
+      "request_id": "w-agent-1-274-work_construction",
+      "agent_id": "agent-1",
+      "status": "completed",
+      "error_code": "",
+      "reason": "",
+      "started_tick": "235",
+      "completed_tick": "283",
+      "observation_version": "283",
+      "event_refs": [
+        "275",
+        "370",
+        "371"
+      ],
+      "observable_effects": {
+        "description": "site=crafted-12:work_s=12.000000:built=lean_to"
+      }
+    }
+  ],
+  "sheltered": {
+    "snapshot": {
+      "schema_version": 1,
+      "kind": "world_snapshot",
+      "run_id": "test",
+      "culture": {
+        "enabled": false,
+        "skills": {},
+        "agreements": [],
+        "validated_batches": [],
+        "departed": []
+      },
+      "ecology": {
+        "enabled": false,
+        "controller_origin": "authored_native_ecology_v1",
+        "animals": {},
+        "freshness_s": {},
+        "structural_body_initial_ug": "0",
+        "food_residue_ug": "0",
+        "water_waste_ug": "0",
+        "egg_input_ug": "0",
+        "eggs_produced_ug": "0",
+        "forage_regeneration_kg_s": 0.0
+      },
+      "branch_id": "test",
+      "tick": "769",
+      "observation_version": "769",
+      "last_event_seq": "965",
+      "seed": "53",
+      "dt_s": 0.25,
+      "simulated_time_s": 192.25,
+      "laws_version": "culture-6",
+      "thermal": {
+        "enabled": false,
+        "open_boundaries": false,
+        "cells": [],
+        "ambient_temperature_k": 0.0,
+        "stored_energy_j": 0.0,
+        "initial_energy_j": 0.0,
+        "heater_input_j": 0.0,
+        "radiation_in_j": 0.0,
+        "radiation_out_j": 0.0,
+        "outflow_energy_j": 0.0,
+        "solar_transferred_j": 0.0,
+        "burned_fuel_ug": "0",
+        "outflow_water_ug": "0",
+        "balance_error_j": 0.0,
+        "global_balance_error_j": 0.0,
+        "energy_tolerance_j": 1e-05
+      },
+      "build_id": "35330c700cf64c326c740df7c4aec507ec71963736f8636f18cdd853e4d93b9f",
+      "world_bounds_m": {
+        "width": 32.0,
+        "height": 32.0
+      },
+      "entities": [
+        {
+          "entity_id": "terrain-1",
+          "kind": "rock",
+          "position_m": [
+            16.0,
+            16.0
+          ],
+          "radius_m": 1.0,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "tree-1",
+          "kind": "tree",
+          "position_m": [
+            2.0,
+            30.0
+          ],
+          "radius_m": 0.6,
+          "mass_kg": 1.0,
+          "mass_ug": "1000000000",
+          "stage": "young",
+          "health": 0.95,
+          "biomass_ug": "1000000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "tree-2",
+          "kind": "tree",
+          "position_m": [
+            30.0,
+            2.0
+          ],
+          "radius_m": 0.6,
+          "mass_kg": 8.0,
+          "mass_ug": "8000000000",
+          "stage": "mature",
+          "health": 1.0,
+          "biomass_ug": "8000000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "tree-3",
+          "kind": "tree",
+          "position_m": [
+            30.0,
+            30.0
+          ],
+          "radius_m": 0.6,
+          "mass_kg": 8.0,
+          "mass_ug": "8000000000",
+          "stage": "mature",
+          "health": 1.0,
+          "biomass_ug": "8000000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "agent-1",
+          "kind": "actor",
+          "position_m": [
+            4.0,
+            4.0
+          ],
+          "radius_m": 0.25,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "workmanship": 1,
+          "inventory_ug": {
+            "fiber": "0",
+            "wood": "100000000"
+          },
+          "alive": true,
+          "body": {
+            "hunger": 0.5422499999999788,
+            "thirst": 0.688375000000011,
+            "fatigue": 0.5349410440383627,
+            "health": 1.0,
+            "alive": true,
+            "food_ingested_ug": "0",
+            "water_ingested_ug": "0"
+          },
+          "present": true
+        },
+        {
+          "entity_id": "resource-1",
+          "kind": "food",
+          "position_m": [
+            2.0,
+            2.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 16.0,
+          "mass_ug": "16000000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "resource-2",
+          "kind": "water",
+          "position_m": [
+            3.0,
+            2.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 64.0,
+          "mass_ug": "64000000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "resource-3",
+          "kind": "inert_material",
+          "position_m": [
+            4.0,
+            2.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 32.0,
+          "mass_ug": "32000000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "resource-4",
+          "kind": "stone",
+          "position_m": [
+            5.0,
+            2.0
+          ],
+          "radius_m": 0.15,
+          "mass_kg": 4.0,
+          "mass_ug": "4000000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "pile-10",
+          "kind": "wood",
+          "position_m": [
+            3.2,
+            30.0
+          ],
+          "radius_m": 0.15,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "pile-11",
+          "kind": "fiber",
+          "position_m": [
+            0.8,
+            30.0
+          ],
+          "radius_m": 0.15,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "crafted-12",
+          "kind": "lean_to",
+          "position_m": [
+            4.0,
+            4.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 0.9,
+          "mass_ug": "900000000",
+          "recipe_id": "lean_to",
+          "owner_id": "agent-1",
+          "work_s": 12.0,
+          "durability": 0,
+          "composition_ug": {
+            "fiber": "100000000",
+            "wood": "800000000"
+          },
+          "inventory_ug": {}
+        }
+      ],
+      "outstanding_actions": [],
+      "material_totals_ug": {
+        "fiber": "100000000",
+        "food": "16000000000",
+        "fuel_X": "0",
+        "inert_material": "32000000000",
+        "oxygen": "0",
+        "product_P": "0",
+        "stone": "4000000000",
+        "tree": "17000000000",
+        "water": "64000000000",
+        "wood": "900000000"
+      },
+      "event_counts": {
+        "action_accepted": 10,
+        "action_completed": 10,
+        "crafting_effect": 2,
+        "environmental_health_loss": 169,
+        "mass_transfer": 3,
+        "tick": 769,
+        "weather_transition": 2
+      },
+      "solar_input_j": 89672.90506593717,
+      "environment_energy_j": 89672.90506593717,
+      "operator_energy_input_j": 0.0,
+      "operator_sources_ug": {
+        "food": 0,
+        "fuel_X": 0,
+        "inert_material": 0,
+        "oxygen": 0,
+        "product_P": 0,
+        "stone": 0,
+        "water": 0
+      },
+      "mode": "closed",
+      "hearing_range_m": 6.0,
+      "sunlight_w_m2": 0.7451470468194269,
+      "scripted": false,
+      "next_script_tick": "0",
+      "bodies_enabled": true,
+      "initial_mass_ug": {
+        "food": 16000000000,
+        "fuel_X": 0,
+        "inert_material": 32000000000,
+        "oxygen": 0,
+        "product_P": 0,
+        "stone": 4000000000,
+        "tree": 18000000000,
+        "water": 64000000000
+      },
+      "boundary_sources_ug": {
+        "food": 0,
+        "fuel_X": 0,
+        "inert_material": 0,
+        "oxygen": 0,
+        "product_P": 0,
+        "stone": 0,
+        "tree": 0,
+        "water": 0
+      }
+    },
+    "climate": {
+      "version": 1,
+      "enabled": true,
+      "tick": "769",
+      "source": "native_authored_climate_v1",
+      "exposure": {
+        "agent-1": {
+          "wetness": 0.0,
+          "cold_burden": 0.5796153392962485,
+          "environmental_fatigue_added": 0.1586410440383723,
+          "environmental_health_lost": 0.015000000000000324,
+          "shelter_id": "crafted-12"
+        }
+      },
+      "shelters": [
+        {
+          "entity_id": "crafted-12",
+          "position_m": [
+            4.0,
+            4.0
+          ],
+          "coverage_radius_m": 1.1,
+          "capacity": 4,
+          "condition": 0.997564999999984,
+          "work_s": 12.0,
+          "complete": true,
+          "composition_ug": {
+            "fiber": 100000000,
+            "wood": 800000000
+          },
+          "mass_ug": "900000000",
+          "entrance": "open perimeter; no solid walls",
+          "roof_height_m": 2.0
+        }
+      ],
+      "year_s": 2400.0,
+      "day_s": 86400,
+      "season": "spring",
+      "year_index": "0",
+      "phase_progress": 0.3204166666666667,
+      "weather": "rain",
+      "ambient_c": -11.602849814164887,
+      "daylight_factor": 0.8863312281032986,
+      "growth_factor": 0.9515583625289352,
+      "current": {
+        "offset_c": -1.509348062428776,
+        "cloud_fraction": 0.6133070701719437,
+        "rain_mm_h": 9.281510069209457,
+        "wind_m_s": [
+          -2.139540711326355,
+          0.34746523949461583
+        ]
+      },
+      "from": {
+        "offset_c": -2.4762414592462205,
+        "cloud_fraction": 0.5156295661404207,
+        "rain_mm_h": 11.903364300541273,
+        "wind_m_s": [
+          0.8692214748225284,
+          3.8355400357286724
+        ]
+      },
+      "target": {
+        "offset_c": -1.0242366632089723,
+        "cloud_fraction": 0.6623139935918341,
+        "rain_mm_h": 7.966068905893826,
+        "wind_m_s": [
+          -3.64910199165631,
+          -1.4025775786216768
+        ]
+      },
+      "transition_start_s": 180.0,
+      "transition_end_s": 200.0,
+      "next_change_s": 270.0,
+      "rng": "17897386137318460243"
+    }
+  },
+  "exposed": {
+    "snapshot": {
+      "schema_version": 1,
+      "kind": "world_snapshot",
+      "run_id": "test",
+      "culture": {
+        "enabled": false,
+        "skills": {},
+        "agreements": [],
+        "validated_batches": [],
+        "departed": []
+      },
+      "ecology": {
+        "enabled": false,
+        "controller_origin": "authored_native_ecology_v1",
+        "animals": {},
+        "freshness_s": {},
+        "structural_body_initial_ug": "0",
+        "food_residue_ug": "0",
+        "water_waste_ug": "0",
+        "egg_input_ug": "0",
+        "eggs_produced_ug": "0",
+        "forage_regeneration_kg_s": 0.0
+      },
+      "branch_id": "test",
+      "tick": "769",
+      "observation_version": "769",
+      "last_event_seq": "1349",
+      "seed": "53",
+      "dt_s": 0.25,
+      "simulated_time_s": 192.25,
+      "laws_version": "culture-6",
+      "thermal": {
+        "enabled": false,
+        "open_boundaries": false,
+        "cells": [],
+        "ambient_temperature_k": 0.0,
+        "stored_energy_j": 0.0,
+        "initial_energy_j": 0.0,
+        "heater_input_j": 0.0,
+        "radiation_in_j": 0.0,
+        "radiation_out_j": 0.0,
+        "outflow_energy_j": 0.0,
+        "solar_transferred_j": 0.0,
+        "burned_fuel_ug": "0",
+        "outflow_water_ug": "0",
+        "balance_error_j": 0.0,
+        "global_balance_error_j": 0.0,
+        "energy_tolerance_j": 1e-05
+      },
+      "build_id": "35330c700cf64c326c740df7c4aec507ec71963736f8636f18cdd853e4d93b9f",
+      "world_bounds_m": {
+        "width": 32.0,
+        "height": 32.0
+      },
+      "entities": [
+        {
+          "entity_id": "terrain-1",
+          "kind": "rock",
+          "position_m": [
+            16.0,
+            16.0
+          ],
+          "radius_m": 1.0,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "tree-1",
+          "kind": "tree",
+          "position_m": [
+            2.0,
+            30.0
+          ],
+          "radius_m": 0.6,
+          "mass_kg": 1.0,
+          "mass_ug": "1000000000",
+          "stage": "young",
+          "health": 0.95,
+          "biomass_ug": "1000000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "tree-2",
+          "kind": "tree",
+          "position_m": [
+            30.0,
+            2.0
+          ],
+          "radius_m": 0.6,
+          "mass_kg": 8.0,
+          "mass_ug": "8000000000",
+          "stage": "mature",
+          "health": 1.0,
+          "biomass_ug": "8000000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "tree-3",
+          "kind": "tree",
+          "position_m": [
+            30.0,
+            30.0
+          ],
+          "radius_m": 0.6,
+          "mass_kg": 8.0,
+          "mass_ug": "8000000000",
+          "stage": "mature",
+          "health": 1.0,
+          "biomass_ug": "8000000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "agent-1",
+          "kind": "actor",
+          "position_m": [
+            1.2,
+            4.0
+          ],
+          "radius_m": 0.25,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "workmanship": 1,
+          "inventory_ug": {
+            "fiber": "0",
+            "wood": "100000000"
+          },
+          "alive": true,
+          "body": {
+            "hunger": 0.5422499999999788,
+            "thirst": 0.688375000000011,
+            "fatigue": 0.5931697097356962,
+            "health": 0.9073758293265871,
+            "alive": true,
+            "food_ingested_ug": "0",
+            "water_ingested_ug": "0"
+          },
+          "present": true
+        },
+        {
+          "entity_id": "resource-1",
+          "kind": "food",
+          "position_m": [
+            2.0,
+            2.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 16.0,
+          "mass_ug": "16000000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "resource-2",
+          "kind": "water",
+          "position_m": [
+            3.0,
+            2.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 64.0,
+          "mass_ug": "64000000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "resource-3",
+          "kind": "inert_material",
+          "position_m": [
+            4.0,
+            2.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 32.0,
+          "mass_ug": "32000000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "resource-4",
+          "kind": "stone",
+          "position_m": [
+            5.0,
+            2.0
+          ],
+          "radius_m": 0.15,
+          "mass_kg": 4.0,
+          "mass_ug": "4000000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "pile-10",
+          "kind": "wood",
+          "position_m": [
+            3.2,
+            30.0
+          ],
+          "radius_m": 0.15,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "pile-11",
+          "kind": "fiber",
+          "position_m": [
+            0.8,
+            30.0
+          ],
+          "radius_m": 0.15,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "crafted-12",
+          "kind": "lean_to",
+          "position_m": [
+            4.0,
+            4.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 0.9,
+          "mass_ug": "900000000",
+          "recipe_id": "lean_to",
+          "owner_id": "agent-1",
+          "work_s": 12.0,
+          "durability": 0,
+          "composition_ug": {
+            "fiber": "100000000",
+            "wood": "800000000"
+          },
+          "inventory_ug": {}
+        }
+      ],
+      "outstanding_actions": [],
+      "material_totals_ug": {
+        "fiber": "100000000",
+        "food": "16000000000",
+        "fuel_X": "0",
+        "inert_material": "32000000000",
+        "oxygen": "0",
+        "product_P": "0",
+        "stone": "4000000000",
+        "tree": "17000000000",
+        "water": "64000000000",
+        "wood": "900000000"
+      },
+      "event_counts": {
+        "action_accepted": 10,
+        "action_completed": 10,
+        "crafting_effect": 2,
+        "environmental_health_loss": 553,
+        "mass_transfer": 3,
+        "tick": 769,
+        "weather_transition": 2
+      },
+      "solar_input_j": 89672.90506593717,
+      "environment_energy_j": 89672.90506593717,
+      "operator_energy_input_j": 0.0,
+      "operator_sources_ug": {
+        "food": 0,
+        "fuel_X": 0,
+        "inert_material": 0,
+        "oxygen": 0,
+        "product_P": 0,
+        "stone": 0,
+        "water": 0
+      },
+      "mode": "closed",
+      "hearing_range_m": 6.0,
+      "sunlight_w_m2": 0.7451470468194269,
+      "scripted": false,
+      "next_script_tick": "0",
+      "bodies_enabled": true,
+      "initial_mass_ug": {
+        "food": 16000000000,
+        "fuel_X": 0,
+        "inert_material": 32000000000,
+        "oxygen": 0,
+        "product_P": 0,
+        "stone": 4000000000,
+        "tree": 18000000000,
+        "water": 64000000000
+      },
+      "boundary_sources_ug": {
+        "food": 0,
+        "fuel_X": 0,
+        "inert_material": 0,
+        "oxygen": 0,
+        "product_P": 0,
+        "stone": 0,
+        "tree": 0,
+        "water": 0
+      }
+    },
+    "climate": {
+      "version": 1,
+      "enabled": true,
+      "tick": "769",
+      "source": "native_authored_climate_v1",
+      "exposure": {
+        "agent-1": {
+          "wetness": 1.0,
+          "cold_burden": 1.0,
+          "environmental_fatigue_added": 0.21686970973569702,
+          "environmental_health_lost": 0.15917274210199978,
+          "shelter_id": ""
+        }
+      },
+      "shelters": [
+        {
+          "entity_id": "crafted-12",
+          "position_m": [
+            4.0,
+            4.0
+          ],
+          "coverage_radius_m": 1.1,
+          "capacity": 4,
+          "condition": 0.997564999999984,
+          "work_s": 12.0,
+          "complete": true,
+          "composition_ug": {
+            "fiber": 100000000,
+            "wood": 800000000
+          },
+          "mass_ug": "900000000",
+          "entrance": "open perimeter; no solid walls",
+          "roof_height_m": 2.0
+        }
+      ],
+      "year_s": 2400.0,
+      "day_s": 86400,
+      "season": "spring",
+      "year_index": "0",
+      "phase_progress": 0.3204166666666667,
+      "weather": "rain",
+      "ambient_c": -11.602849814164887,
+      "daylight_factor": 0.8863312281032986,
+      "growth_factor": 0.9515583625289352,
+      "current": {
+        "offset_c": -1.509348062428776,
+        "cloud_fraction": 0.6133070701719437,
+        "rain_mm_h": 9.281510069209457,
+        "wind_m_s": [
+          -2.139540711326355,
+          0.34746523949461583
+        ]
+      },
+      "from": {
+        "offset_c": -2.4762414592462205,
+        "cloud_fraction": 0.5156295661404207,
+        "rain_mm_h": 11.903364300541273,
+        "wind_m_s": [
+          0.8692214748225284,
+          3.8355400357286724
+        ]
+      },
+      "target": {
+        "offset_c": -1.0242366632089723,
+        "cloud_fraction": 0.6623139935918341,
+        "rain_mm_h": 7.966068905893826,
+        "wind_m_s": [
+          -3.64910199165631,
+          -1.4025775786216768
+        ]
+      },
+      "transition_start_s": 180.0,
+      "transition_end_s": 200.0,
+      "next_change_s": 270.0,
+      "rng": "17897386137318460243"
+    }
+  }
+}

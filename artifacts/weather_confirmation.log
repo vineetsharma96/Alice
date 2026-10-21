@@ -1,0 +1,3 @@
+{"seed": 13001, "gates": {"mild": true, "reachable": true, "build": true, "scarcity": true, "sharing": true, "growth": true, "restart": true}, "wall_s": 46.177338399999826}
+{"seed": 13007, "gates": {"mild": true, "reachable": true, "build": true, "scarcity": true, "sharing": true, "growth": true, "restart": true}, "wall_s": 38.99097929999971}
+{"seed": 13009, "gates": {"mild": true, "reachable": true, "build": true, "scarcity": true, "sharing": true, "growth": true, "restart": true}, "wall_s": 42.42368700000043}

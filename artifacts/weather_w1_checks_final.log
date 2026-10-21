@@ -1,0 +1,14 @@
+test_declared_profiles_and_tampered_climate_refusal (test_weather_clock.WeatherClockTests.test_declared_profiles_and_tampered_climate_refusal) ... ok
+test_disabled_native_matches_old_runtime_bodies_and_resources (test_weather_clock.WeatherClockTests.test_disabled_native_matches_old_runtime_bodies_and_resources) ... ok
+test_fresh_process_resume (test_weather_clock.WeatherClockTests.test_fresh_process_resume) ... ok
+test_invalid_config_and_new_world_only (test_weather_clock.WeatherClockTests.test_invalid_config_and_new_world_only) ... ok
+test_repeatability_fractional_resume_and_inspection (test_weather_clock.WeatherClockTests.test_repeatability_fractional_resume_and_inspection) ... ok
+test_season_boundary_and_long_calendar (test_weather_clock.WeatherClockTests.test_season_boundary_and_long_calendar) ... ok
+test_weather_changes_actual_solar_ledger_and_batching_is_invariant (test_weather_clock.WeatherClockTests.test_weather_changes_actual_solar_ledger_and_batching_is_invariant) ... ok
+test_atomic_journal_inspection_backup_and_replay (test_weather_store.WeatherStoreTests.test_atomic_journal_inspection_backup_and_replay) ... ok
+test_invalid_operation_rolls_back_and_old_schema_refused (test_weather_store.WeatherStoreTests.test_invalid_operation_rolls_back_and_old_schema_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 5.305s
+
+OK

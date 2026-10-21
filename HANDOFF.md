@@ -1,83 +1,99 @@
-# Alice handoff - H0-H5 gap milestone completed
+# Alice handoff - weather milestone completed
 
-Completed 22 October 2026; native measurements 21 October. Read
-`docs/DEVELOPMENTAL_GAP_REPORT.md`, `docs/DEVELOPMENTAL_GAP_PROTOCOL.md` and
-`docs/DEVELOPMENTAL_GAP_OPERATIONS.md`. Exact prior handoff is archived in
-HANDOFF_PRE_GAP_ARCHIVE.md. All original G/H0-H5 source pins and failed Phase9
-sources/evidence remain unchanged. No executable rebuild or release label.
+22 October 2026. Branch: codex/weather-seasons. Read:
+- Prompt/Alice_Weather_Seasons_Shelter_Prompt.md
+- docs/WEATHER_SEASONS_REPORT.md and docs/WEATHER_OPERATIONS.md
+- docs/WEATHER_CONTRACT.md and docs/WEATHER_EVALUATION_PROTOCOL.md
 
-## Results
+The exact previous handoff is HANDOFF_PRE_WEATHER_ARCHIVE.md. Original G/H/gap
+sources, worlds, build/living-d and failed Phase9 evidence remain unchanged.
+There is no release label or original executable rebuild.
 
-Five frozen held-out seeds 11003/11027/11047/11057/11071: adaptive food
-acquisition30/30 vs old online0/30; far transfer attempts0/30 vs frozen30/30;
-Brier.139451 vs frozen.25 (narrow task, not semantic calibration). Authored
-control also30/30 with0far, so no general intelligence claim. Learned private
-category/location factors achieve actual remote water gathering+drinking5/5
-vs muted/scrambled/whole0/5. Context-triggered physical teaching gives10native
-receiver updates vs0muted and becomes quiet after2own disclosures. Teaching,
-factorization, movement, needs and sharing choices are authored. No shared
-lexicon, LLM fabricated language, learned grammar or conversation.
+## W0-W6 outcome
 
-Independent `gap_audit.json` verifies actual native saves, all gates, receipts,
-private sources, replay/invariants, zero model calls and six old registrations.
-Negative audit checks refuse fabricated goals/receipts, missing worlds and
-changed registration. `gap_checks.json`:335Python tests plus4nativechecks pass.
-`gap_browser*`:real Edge desktop/mobile read-only panel checks and screenshots.
-`gap_phase9_audit.json`:3439files/4sources,metricsmatch,advance:false.
+All bounded stage gates pass. W0: fresh original 335 Python tests and four native
+checks. W1: persistent seeded weather, smooth four-phase seasonal clock, actual
+solar ledger effects, exact pause/batching/fresh-process resume. W2: native
+wetness/cold proxies and distinct fatigue/direct-health ledgers; seasonal growth
+preserves native capacities, boundary sources and zero-rate conservation.
+W3: real 0.8kg wood + 0.1kg fiber, 1s transfer + 12s work; open 1.1m roof, capacity4.
+Partial work, competing builders, blocked placement, coverage edges, entry/exit,
+overflow and repair pass. Repair uses 0.1kg wood + 3s; wear is 0.00002 condition/s.
+W4: own senses and observed private coordinates, bounded authored needs/shelter/
+build/repair/supply goals. W5: existing read-only 3D observer, native sky/rain/
+seasonal appearance, source-separated diagnostics and recorded guided-only forcing.
+The final weather suite has 28 passing checks; real desktop/mobile Edge checks pass.
 
-## Continuing world
+W6: weather_registration.json freezes 30 files. Untouched seeds13001/13007/13009
+pass all seven gates; weather_audit.json independently verifies 21 native saves.
+Known shelter reached in1.25sim seconds. Reactive construction/protection took
+14.25s after separately recorded real ingredient setup. Exposure health loss:
+primary control .060511/.077063/.077063 versus weather 0/0/.000115; weather health1.
+All four people physically share one roof, latest protection20s. Mild clear,
+carried-batch scarcity, seasonal inputs and three fresh-process restart cases pass.
 
-Actual one-life data/gap-continuity-dev-20261021.sqlite: physical warm-up ends117s;
-same life fresh processes reach329/926/1806sim seconds. Continuation418.850wall
-seconds; all4alive/health1;42goals each; nativefood4.6kg/water10.6kg remain.
-No reset, replenishment or operator intervention. Root body/private snapshot
-matches final1806 trace. `gap_continuity_audit.json` checks actual final saves,
-contiguous windows and ingestion accounting.
-Supplemental matched continuation from1806 adds the same genuinely observed
-legacy memories to BOTH copies: adaptive2114sim/28newgoals/171.900wall,
-legacy2100sim/28newgoals/334.030wall. Both survive with equal remainingstock;
-NO survival superiority claim, not an exact-tick speed benchmark. Supplementary
-control/audit/packager are separately hashed, outside primary14-file freeze.
+Primary survival control belongs to the new driver. Supplementary exact unchanged
+underworld.policy.choose on matched common saves/120s gives the same outside
+exposure losses. weather_existing_control* retains requests, source hash and replay.
+This was added after primary registration; no primary gates changed. Old-controller
+resume is not claimed. Authored rules are not developmental intelligence.
 
-## Code and use
+## Continuing life and evidence
 
-New opt-in underworld/adaptive.py,context_teaching.py,adaptive_panel.py plus
-new webassets; scripts/adaptive_learner.py,adaptive_study.py,adaptive_audit.py,
-adaptive_continuity.py and supplementalcontrol/audit/packager. Old learner.py,
-old panel and native/world policies remain unchanged. Explicit attach only to
-compatible H5 WORKING backups and selected inhabitants, never scored saves.
-No implicit initialization/reset. The three new test modules cover 16tests,
-included in335. Native build build/living-d, UW9, buildID
-832c4a705a7ceecd85d8befb3d84f4dff0d4730f024c395eba12985f0d8bd896.
-PowerShell:prepend C:\mingw64\bin to PATH; set UNDERWORLD_BUILD to absolute
-build/living-d before Python invocations. See operations for exact commands.
+Actual save: data/weather-life-20261022.sqlite, seed53. Explicit physical assigned
+setup ends134sim seconds. Same saved life continues in fresh processes through
+300/600/1200/2400s. All four finish alive/health1, spring/year1. No reset, regeneration,
+material input or weather forcing. Food3.45kg + ingested4.55 =8kg; water9 + ingested7
+=16kg. Scheduler cursor1509, 91 eating/140 drinking actions, zero policy rejections.
+Continuation481.164wall seconds;486.075 including setup. weather_continuity_audit.json
+verifies the full native journal, private scheduler, contiguous windows and accounts.
+The natural year causes fatigue but zero direct exposure health loss; it does not
+prove roof necessity or superiority over an unmeasured matched full-year control.
+This is one finite scaffolded year, not indefinite or multi-seed survival.
 
-Read-only panel was started on8776 with gap-development2/53-learned.sqlite;
-verify availability before claiming it is still running. No viewer/runtime is
-promised active. New default driver does not automatically run contextteaching
-or acquire all communication meanings during the survival run; study circuits
-and teaching CLI are explicit. Existing old viewer/world are unchanged.
+Exact gzip traces (13) and SHA manifest: weather_evidence_archives.json. Raw JSON
+and native SQLite stay local ignored data, not exported saves. Historical weather
+stage ZIPs and build/weather-w1/-w2/-w3/-w4 are retained. Original UW9 saves need
+original sources + build/living-d. New weather uses UW10W/ALICE-WEATHER-2, matching
+native and policy/source contracts. No migration or source-check bypass.
+Native weather build:
+74e4c35419d9cc962673ce24b09d2ec7fa80e844a737c0e82862d1bb23feb71c.
+Do not edit/re-pin registered files against these results. New tuning needs new
+held-out conditions. Supplements have separate source hashes and do not change gates.
 
-## Evidence and boundaries
+Failures remain retained: W1 fixture representation/whitespace/connection errors;
+actual one-tick-early forcing expiry; missing renderer-core route; resize fixture.
+Development1 sharing reached only two people;2/3 reached four separately, never
+simultaneously. BEFORE confirmation, authored priorities/trip latch/30s settling
+and1s protected rest fixed this. Native body rates and registered gate thresholds stayed unchanged.
+Development4/5 and the four-person regression pass. A supplementary auditor's
+incorrect synthetic snapshot-field assumption was corrected without changing data.
+False protection/health/source/missing-save audits all refuse. Phase9 audit still
+verifies3439 files/four sources and advance:false; its learner stays excluded.
 
-artifacts/gap_registration.json freezes14files beforeconfirmation. Do not edit
-those sources and silently repin. Revisions require a fresh preregistered study.
-11rawdevelopment/confirmation/continuity traces remain local unchanged, with
-exact tracked gzip + raw/compressed hashes in gap_evidence_archives.json.
-Four development source ZIPs preserve intermediate versions. NativeSQLite
-worlds (74including70confirmation and4continuity/control) remain local ignored
-with SHA256 inventory; source checkout alone is not the actual save archive.
-Initial fixture failures retained in gap_unit_attempt1.log; corrected name/head
-fixtures passed. No native semantics changed. Source/static checks are separate
-from real browser/runtime evidence.
+## Run, inspect and remaining work
 
-Still unachieved: learned teaching/request/repair intentions, arbitrary unseen
-features, semantic calibration, discovered grammar/conversation, multi-seed
-long survival/animalcare and indefinite operation. Existing2048record/person
-quota and bounded site/source/evidence budgets stop explicitly. No neural
-training, reproduction, new speech engine, true3D or emergence claims.
+Build: scripts/build_weather.ps1. CLI: scripts/weather.py new/run/inspect/save/
+policy-step/replay/force. Four-person bounded continuation: weather_study.py continuity.
+An existing compatible database continues exactly; an absent one creates an explicit
+assigned-scaffold demonstration. Research year2400s does NOT rescale86400s solar day,
+bodies, tools or animals. Normal fictional year31557600s. Native source integration
+is build-generated under build/weather/generated; original core/CMake are untouched.
 
-Unrelated package.json,package-lock.json,.env.example,.nvmrc,.opencode/,
-opencode.json,docs/OPENCODE.md,scripts/start-tinyfish-mcp.ps1/.sh are user work;
-preserve and exclude from milestone commit. Prior pre-pull stash remains.
-No GitHub push requested/performed for this milestone.
+A read-only viewer was started at127.0.0.1:8777 on
+ data/weather-final-demo-20261022.sqlite (assigned setup/forced demo, not year life).
+weather_final_browser* records actual 1440x900/390x844 checks and screenshots.
+Verify availability before claiming it still runs. Old development-demo viewers
+were stopped after source changes correctly invalidated their policy contract.
+No unattended simulation process is promised active; original viewer/world untouched.
+
+Remaining: learned weather anticipation/integration, unknown-material autonomous
+bootstrap, global forest exhaustion/all blocked topologies, weather animal-care
+integration, multi-seed long survival and indefinite history. Rain collection,
+snow/floods/lightning/fire/storm collapse, enclosed-wall thermodynamics and realistic
+thermoregulation are deferred. Quotas refuse explicitly. No emotions, neural training,
+reproduction, new speech, true3D or consciousness/general-intelligence claims.
+
+Unrelated package.json/package-lock.json, .env.example/.nvmrc, .opencode/, opencode.json,
+docs/OPENCODE.md and start-tinyfish scripts are preserved and excluded from this
+milestone commit. No GitHub push requested or performed for this milestone.

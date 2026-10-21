@@ -1,0 +1,23 @@
+{
+  "stage": "W4",
+  "checks": 23,
+  "build_id": "45d19b6e351e33322f3ed47075bff17fcadec592aef1d05f5af6b87bb4626dc0",
+  "attribution": "authored baseline and separately operator-assigned execution; no developmental weather policy",
+  "source_hashes": {
+    "weather_native/CMakeLists.txt": "9d64e1c58c1146c81422a9b1d8e55da7c80a2ebd9440d1e508900fdc5a45f940",
+    "weather_native/integrate.py": "e1ec0c3a781c8bdb09bae4da8f529b97be247a8b157d7c33b29e6e4ba1a74cd9",
+    "weather_native/weather.cpp": "460f9fa256cc13b5a0fbb1c2b7bf6023411a043575479bca4ebb0f6903433524",
+    "weather_native/weather.hpp": "4a3892850a75b151b6abb45c34e51952496231d340120df11bfbeb86ea8d179f",
+    "weather_native/weather_bindings.inc": "39193b02c70b26158091337160da1e6e37fa87aff57cd75bb6e9f9510a7afdda",
+    "weather_tests/helpers.py": "479574121220d212e373ecd91de2c6dd189a41511dc2a2179f593d32d8b832b6",
+    "weather_tests/test_weather_clock.py": "9a7d9510aef021117a4ffb61bcdaca60a5f44d544e0ba91e6d649f10e78e3a1a",
+    "weather_tests/test_weather_exposure.py": "97ba54c591df26eb1e87a7306877ff7e6627e1783a35d0148f587c84feaeb7ce",
+    "weather_tests/test_weather_policy.py": "17108f9096fa6fc68537f98dd67380bd31ced2b2559c5f5847ef4a46ca322319",
+    "weather_tests/test_weather_shelter.py": "456945025532c44e9589df93c36e05090ef4de7b53ef1351bf44d8c28d12abd1",
+    "weather_tests/test_weather_store.py": "03c08f7b186cf5c8c195541a41d38194940b4a0a90a2686fcdfde3269c57399f",
+    "underworld/weather_policy.py": "b9f198c52bd001191c91614fd85c999877716ea0d2df538c014459a5d8bd9729",
+    "underworld/weather_store.py": "212d98c1965a0e64cdc6a9100b6b92eeb4bb8e7802eb93762c84c354fc531ab9",
+    "underworld/weather_runtime.py": "dc20ea5c463742bfad96feeae74c0ee22acfda36ea26d5603557edff982158b4",
+    "scripts/weather.py": "a28d6966245853f7bef8db3a6a753b459adf5190f3b8ed5f078eaa0f315686a4"
+  }
+}

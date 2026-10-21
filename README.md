@@ -1,3 +1,29 @@
+# Current milestone: weather, seasons and shelters
+
+**W0-W6 are implemented and validated for bounded scenarios.** The opt-in native
+system adds persistent weather, four seasons, exposure with body effects, real
+material-built roofs, authored shelter responses and a read-only 3D weather view.
+
+- **28 weather checks**, the original **335 Python tests and four native checks** pass.
+- Three held-out conditions pass independent native-save audits: known protection
+  reached in1.25sim seconds; reactive roof building/protection in14.25s after
+  separately recorded real ingredient collection.
+- One four-person life reaches **2400 simulated seconds / one accelerated year**,
+  all alive at health1, with no replenishment or body resets.
+
+[Weather results and limits](docs/WEATHER_SEASONS_REPORT.md) ·
+[Build / new / run / save / resume / observer](docs/WEATHER_OPERATIONS.md) ·
+[Prospective protocol](docs/WEATHER_EVALUATION_PROTOCOL.md)
+
+Weather uses a separate build and NEW worlds; existing worlds/default policies,
+historical studies and Phase9's failed result remain unchanged. Climate, exposure,
+blueprint and behavior rules are authored. This does not establish learned shelter
+discovery, realistic physiology or indefinite survival. No automatic release label.
+
+Earlier project guides below remain unchanged as historical documentation.
+
+---
+
 # Current milestone: H0-H5 adaptive gap closure
 
 The new opt-in profile is implemented and verified: learning separates food

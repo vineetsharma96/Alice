@@ -1,0 +1,181 @@
+{
+  "cases": {
+    "data/weather-confirmation-20261022/13001/blocked.sqlite": {
+      "completed_moves": 0,
+      "zero_progress_moves": 0,
+      "travel_m": 0.0,
+      "eat": 0,
+      "drink": 0,
+      "authored_recovery_markers": 0
+    },
+    "data/weather-confirmation-20261022/13001/build.sqlite": {
+      "completed_moves": 3,
+      "zero_progress_moves": 0,
+      "travel_m": 2.117130687269185,
+      "eat": 0,
+      "drink": 2,
+      "authored_recovery_markers": 0
+    },
+    "data/weather-confirmation-20261022/13001/mild.sqlite": {
+      "completed_moves": 0,
+      "zero_progress_moves": 0,
+      "travel_m": 0.0,
+      "eat": 0,
+      "drink": 0,
+      "authored_recovery_markers": 0
+    },
+    "data/weather-confirmation-20261022/13001/reachable-common.sqlite": {
+      "completed_moves": 0,
+      "zero_progress_moves": 0,
+      "travel_m": 0.0,
+      "eat": 0,
+      "drink": 0,
+      "authored_recovery_markers": 0
+    },
+    "data/weather-confirmation-20261022/13001/reachable-survival.sqlite": {
+      "completed_moves": 2,
+      "zero_progress_moves": 0,
+      "travel_m": 0.8538688249205129,
+      "eat": 1,
+      "drink": 2,
+      "authored_recovery_markers": 0
+    },
+    "data/weather-confirmation-20261022/13001/reachable-weather.sqlite": {
+      "completed_moves": 3,
+      "zero_progress_moves": 0,
+      "travel_m": 2.117130687269185,
+      "eat": 0,
+      "drink": 2,
+      "authored_recovery_markers": 0
+    },
+    "data/weather-confirmation-20261022/13001/sharing.sqlite": {
+      "completed_moves": 26,
+      "zero_progress_moves": 0,
+      "travel_m": 26.48534475423803,
+      "eat": 0,
+      "drink": 10,
+      "authored_recovery_markers": 0
+    },
+    "data/weather-confirmation-20261022/13007/blocked.sqlite": {
+      "completed_moves": 0,
+      "zero_progress_moves": 0,
+      "travel_m": 0.0,
+      "eat": 0,
+      "drink": 0,
+      "authored_recovery_markers": 0
+    },
+    "data/weather-confirmation-20261022/13007/build.sqlite": {
+      "completed_moves": 3,
+      "zero_progress_moves": 0,
+      "travel_m": 2.117130687269185,
+      "eat": 0,
+      "drink": 2,
+      "authored_recovery_markers": 0
+    },
+    "data/weather-confirmation-20261022/13007/mild.sqlite": {
+      "completed_moves": 0,
+      "zero_progress_moves": 0,
+      "travel_m": 0.0,
+      "eat": 0,
+      "drink": 0,
+      "authored_recovery_markers": 0
+    },
+    "data/weather-confirmation-20261022/13007/reachable-common.sqlite": {
+      "completed_moves": 0,
+      "zero_progress_moves": 0,
+      "travel_m": 0.0,
+      "eat": 0,
+      "drink": 0,
+      "authored_recovery_markers": 0
+    },
+    "data/weather-confirmation-20261022/13007/reachable-survival.sqlite": {
+      "completed_moves": 2,
+      "zero_progress_moves": 0,
+      "travel_m": 0.8538688249205129,
+      "eat": 1,
+      "drink": 2,
+      "authored_recovery_markers": 0
+    },
+    "data/weather-confirmation-20261022/13007/reachable-weather.sqlite": {
+      "completed_moves": 3,
+      "zero_progress_moves": 0,
+      "travel_m": 2.117130687269185,
+      "eat": 0,
+      "drink": 2,
+      "authored_recovery_markers": 0
+    },
+    "data/weather-confirmation-20261022/13007/sharing.sqlite": {
+      "completed_moves": 28,
+      "zero_progress_moves": 0,
+      "travel_m": 29.23306259630301,
+      "eat": 0,
+      "drink": 10,
+      "authored_recovery_markers": 0
+    },
+    "data/weather-confirmation-20261022/13009/blocked.sqlite": {
+      "completed_moves": 0,
+      "zero_progress_moves": 0,
+      "travel_m": 0.0,
+      "eat": 0,
+      "drink": 0,
+      "authored_recovery_markers": 0
+    },
+    "data/weather-confirmation-20261022/13009/build.sqlite": {
+      "completed_moves": 3,
+      "zero_progress_moves": 0,
+      "travel_m": 2.117130687269185,
+      "eat": 0,
+      "drink": 2,
+      "authored_recovery_markers": 0
+    },
+    "data/weather-confirmation-20261022/13009/mild.sqlite": {
+      "completed_moves": 0,
+      "zero_progress_moves": 0,
+      "travel_m": 0.0,
+      "eat": 0,
+      "drink": 0,
+      "authored_recovery_markers": 0
+    },
+    "data/weather-confirmation-20261022/13009/reachable-common.sqlite": {
+      "completed_moves": 0,
+      "zero_progress_moves": 0,
+      "travel_m": 0.0,
+      "eat": 0,
+      "drink": 0,
+      "authored_recovery_markers": 0
+    },
+    "data/weather-confirmation-20261022/13009/reachable-survival.sqlite": {
+      "completed_moves": 2,
+      "zero_progress_moves": 0,
+      "travel_m": 0.8538688249205129,
+      "eat": 1,
+      "drink": 2,
+      "authored_recovery_markers": 0
+    },
+    "data/weather-confirmation-20261022/13009/reachable-weather.sqlite": {
+      "completed_moves": 3,
+      "zero_progress_moves": 0,
+      "travel_m": 2.117130687269185,
+      "eat": 0,
+      "drink": 2,
+      "authored_recovery_markers": 0
+    },
+    "data/weather-confirmation-20261022/13009/sharing.sqlite": {
+      "completed_moves": 26,
+      "zero_progress_moves": 0,
+      "travel_m": 26.48534475423803,
+      "eat": 0,
+      "drink": 9,
+      "authored_recovery_markers": 0
+    },
+    "data/weather-life-20261022.sqlite": {
+      "completed_moves": 230,
+      "zero_progress_moves": 0,
+      "travel_m": 220.89714135308336,
+      "eat": 91,
+      "drink": 140,
+      "authored_recovery_markers": 0
+    }
+  },
+  "definition": "Zero-progress completed moves are a narrow wasted-movement proxy, not every avoidable trip; recovery markers are authored, not LLM fallback."
+}

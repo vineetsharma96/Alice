@@ -1,0 +1,1 @@
+{"archives": 12, "negative_checks": {"false_protection": {"refused": true, "reason": "Weather protection credit is not physical"}, "false_health": {"refused": true, "reason": "Native weather final differs: climate"}, "changed_registration": {"refused": true, "reason": "Weather source freeze differs"}, "missing_world": {"refused": true, "reason": "unable to open database file"}}}

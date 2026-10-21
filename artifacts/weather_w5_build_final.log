@@ -1,0 +1,143 @@
+-- pybind11::lto disabled (problems with undefined symbols for MinGW for now)
+-- pybind11::thin_lto disabled (problems with undefined symbols for MinGW for now)
+-- Found pybind11: C:/Users/abc/Documents/ChatGPT/UnderWorld/.venv/Lib/site-packages/pybind11/include (found version "3.0.4")
+-- Configuring done (1.5s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/abc/Documents/ChatGPT/UnderWorld/build/weather
+[  8%] Building CXX object CMakeFiles/_underworld_weather.dir/generated/bindings.cpp.obj
+[ 16%] Building CXX object CMakeFiles/_underworld_weather.dir/generated/world.cpp.obj
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\world.cpp: In constructor 'uw::World::World(uw::U64, unsigned int, double, double, double, uw::U64, bool, bool, double, double, double, double, double)':
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\world.cpp:51:24: warning: missing initializer for member 'uw::Entity::composition' [-Wmissing-field-initializers]
+   51 |     entities_.push_back({"terrain-1","rock",{width/2,height/2},1,0,{}});
+      |     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\world.cpp:55:24: warning: missing initializer for member 'uw::Entity::composition' [-Wmissing-field-initializers]
+   55 |     entities_.push_back({"tree-1","tree",{2,height-2},tree_radius,young_tree_biomass,{},{},"young",1,young_tree_biomass});
+      |     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\world.cpp:56:24: warning: missing initializer for member 'uw::Entity::composition' [-Wmissing-field-initializers]
+   56 |     entities_.push_back({"tree-2","tree",{width-2,2},tree_radius,mature_tree_biomass,{},{},"mature",1,mature_tree_biomass});
+      |     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\world.cpp:57:24: warning: missing initializer for member 'uw::Entity::composition' [-Wmissing-field-initializers]
+   57 |     entities_.push_back({"tree-3","tree",{width-2,height-2},tree_radius,mature_tree_biomass,{},{},"mature",1,mature_tree_biomass});
+      |     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\world.cpp:59:75: warning: missing initializer for member 'uw::Entity::composition' [-Wmissing-field-initializers]
+   59 |         Entity e{"agent-"+std::to_string(i+1),"actor",{},actor_radius,0,{}};
+      |                                                                           ^
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\world.cpp:72:24: warning: missing initializer for member 'uw::Entity::composition' [-Wmissing-field-initializers]
+   72 |     entities_.push_back({"resource-1","food",{2,2},0,static_cast<std::int64_t>(std::llround(food_kg*kg)),{}});
+      |     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\world.cpp:73:24: warning: missing initializer for member 'uw::Entity::composition' [-Wmissing-field-initializers]
+   73 |     entities_.push_back({"resource-2","water",{3,2},0,static_cast<std::int64_t>(std::llround(water_kg*kg)),{}});
+      |     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\world.cpp:74:24: warning: missing initializer for member 'uw::Entity::composition' [-Wmissing-field-initializers]
+   74 |     entities_.push_back({"resource-3","inert_material",{4,2},0,32*kg,{}});
+      |     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\world.cpp:75:24: warning: missing initializer for member 'uw::Entity::composition' [-Wmissing-field-initializers]
+   75 |     entities_.push_back({"resource-4","stone",{5,2},.15,4*kg,{}});
+      |     ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\bindings.cpp: In lambda function:
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\bindings.cpp:119:17: warning: this 'else' clause does not guard... [-Wmisleading-indentation]
+  119 |                 else keys(p,{"text"});content();
+      |                 ^~~~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\bindings.cpp:119:39: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'else'
+  119 |                 else keys(p,{"text"});content();
+      |                                       ^~~~~~~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\bindings.cpp: In lambda function:
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\bindings.cpp:252:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  252 |                 if(targets.size()!=1)throw py::value_error("INVALID_ARGUMENT");keys(params,{});a.target_id=str(targets[0]);
+      |                 ^~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\bindings.cpp:252:80: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  252 |                 if(targets.size()!=1)throw py::value_error("INVALID_ARGUMENT");keys(params,{});a.target_id=str(targets[0]);
+      |                                                                                ^~~~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\bindings.cpp:254:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  254 |                 if(!targets.empty())throw py::value_error("INVALID_ARGUMENT");keys(params,{});
+      |                 ^~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\bindings.cpp:254:79: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  254 |                 if(!targets.empty())throw py::value_error("INVALID_ARGUMENT");keys(params,{});
+      |                                                                               ^~~~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\bindings.cpp:256:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  256 |                 if(targets.size()!=1)throw py::value_error("INVALID_ARGUMENT");keys(params,{"material","mass_kg"});a.target_id=str(targets[0]);a.material=str(params["material"]);
+      |                 ^~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\bindings.cpp:256:80: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  256 |                 if(targets.size()!=1)throw py::value_error("INVALID_ARGUMENT");keys(params,{"material","mass_kg"});a.target_id=str(targets[0]);a.material=str(params["material"]);
+      |                                                                                ^~~~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\bindings.cpp:264:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  264 |                 if(!consumption)a.target_id=str(targets[0]);if(a.type=="eat"&&params.contains("material")){keys(params,{"mass_kg","material"});a.material=str(params["material"]);}else keys(params,{"mass_kg"});double mass=number(params["mass_kg"]);
+      |                 ^~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\bindings.cpp:264:61: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  264 |                 if(!consumption)a.target_id=str(targets[0]);if(a.type=="eat"&&params.contains("material")){keys(params,{"mass_kg","material"});a.material=str(params["material"]);}else keys(params,{"mass_kg"});double mass=number(params["mass_kg"]);
+      |                                                             ^~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\bindings.cpp:268:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  268 |                 if(targets.size()!=1)throw py::value_error("INVALID_ARGUMENT");a.target_id=str(targets[0]);
+      |                 ^~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\bindings.cpp:268:80: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  268 |                 if(targets.size()!=1)throw py::value_error("INVALID_ARGUMENT");a.target_id=str(targets[0]);
+      |                                                                                ^
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\bindings.cpp:309:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  309 |                 if(!py::isinstance<py::str>(params[field]))throw py::value_error("INVALID_ARGUMENT");a.text=py::cast<std::string>(params[field]);
+      |                 ^~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\bindings.cpp:309:102: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  309 |                 if(!py::isinstance<py::str>(params[field]))throw py::value_error("INVALID_ARGUMENT");a.text=py::cast<std::string>(params[field]);
+      |                                                                                                      ^
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\bindings.cpp:314:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  314 |                 if(!py::isinstance<py::bool_>(params["accept"]))throw py::value_error("INVALID_ARGUMENT");a.text=py::cast<bool>(params["accept"])?"accept":"decline";
+      |                 ^~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\bindings.cpp:314:107: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  314 |                 if(!py::isinstance<py::bool_>(params["accept"]))throw py::value_error("INVALID_ARGUMENT");a.text=py::cast<bool>(params["accept"])?"accept":"decline";
+      |                                                                                                           ^
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\bindings.cpp:318:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  318 |                 if(!py::isinstance<py::str>(params["text"]))throw py::value_error("INVALID_ARGUMENT");a.text=py::cast<std::string>(params["text"]);
+      |                 ^~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\bindings.cpp:318:103: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  318 |                 if(!py::isinstance<py::str>(params["text"]))throw py::value_error("INVALID_ARGUMENT");a.text=py::cast<std::string>(params["text"]);
+      |                                                                                                       ^
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\bindings.cpp:321:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  321 |                 if(!targets.empty())throw py::value_error("INVALID_ARGUMENT");keys(params,{});
+      |                 ^~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\bindings.cpp:321:79: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  321 |                 if(!targets.empty())throw py::value_error("INVALID_ARGUMENT");keys(params,{});
+      |                                                                               ^~~~
+[ 25%] Building CXX object CMakeFiles/_underworld_weather.dir/generated/bodies.cpp.obj
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\bodies.cpp: In member function 'void uw::World::complete_tree_action(uw::Entity&, const uw::Action&)':
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\bodies.cpp:249:28: warning: missing initializer for member 'uw::Entity::composition' [-Wmissing-field-initializers]
+  249 |         entities_.push_back({"pile-"+std::to_string(next_id_++),kind,positions[i],pile_radius,mass,{},{},"none",1,0});
+      |         ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 33%] Building CXX object CMakeFiles/_underworld_weather.dir/generated/crafting.cpp.obj
+[ 41%] Building CXX object CMakeFiles/_underworld_weather.dir/generated/teaching.cpp.obj
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\teaching.cpp: In member function 'uw::U64 uw::World::intervene(const std::string&, const std::string&, const std::string&, uw::Point, const std::string&, int64_t, double, const std::string&)':
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\teaching.cpp:66:28: warning: missing initializer for member 'uw::Entity::composition' [-Wmissing-field-initializers]
+   66 |         entities_.push_back({entity_id,kind,position,radius,mass,{}});
+      |         ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\teaching.cpp:74:37: warning: missing initializer for member 'uw::Entity::composition' [-Wmissing-field-initializers]
+   74 |             else entities_.push_back({"operator-avatar","operator_avatar",position,.25,0,{}});
+      |                  ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 50%] Building CXX object CMakeFiles/_underworld_weather.dir/generated/thermal.cpp.obj
+[ 58%] Building CXX object CMakeFiles/_underworld_weather.dir/generated/thermal_world.cpp.obj
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\thermal_world.cpp: In member function 'void uw::World::configure_thermal(bool, double, double, double, double)':
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\thermal_world.cpp:18:49: warning: missing initializer for member 'uw::Entity::composition' [-Wmissing-field-initializers]
+   18 |     for(unsigned i=0;i<4;++i)entities_.push_back({"thermal-"+std::to_string(i+1),"thermal_cell",{2.+2*(i%2),4.+2*(i/2)},0,100000000,{}});
+      |                              ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 66%] Building CXX object CMakeFiles/_underworld_weather.dir/generated/culture.cpp.obj
+[ 75%] Building CXX object CMakeFiles/_underworld_weather.dir/generated/supervision.cpp.obj
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\culture.cpp: In member function 'void uw::World::complete_culture_action(uw::Entity&, const uw::Action&)':
+C:\Users\abc\Documents\ChatGPT\UnderWorld\build\weather\generated\culture.cpp:104:28: warning: missing initializer for member 'uw::Entity::composition' [-Wmissing-field-initializers]
+  104 |         entities_.push_back({book_id,"book",position,0,10000000,{}});rebuild_grid();
+      |         ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 83%] Building CXX object CMakeFiles/_underworld_weather.dir/generated/ecology.cpp.obj
+[ 91%] Building CXX object CMakeFiles/_underworld_weather.dir/weather.cpp.obj
+C:\Users\abc\Documents\ChatGPT\UnderWorld\weather_native\weather.cpp: In member function 'void uw::World::read_weather(std::istream&)':
+C:\Users\abc\Documents\ChatGPT\UnderWorld\weather_native\weather.cpp:80:5: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+   80 |     if(count>128)throw std::invalid_argument("FORCING_BUDGET");weather_.forcing_requests.clear();
+      |     ^~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\weather_native\weather.cpp:80:64: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+   80 |     if(count>128)throw std::invalid_argument("FORCING_BUDGET");weather_.forcing_requests.clear();
+      |                                                                ^~~~~~~~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\weather_native\weather.cpp: In member function 'void uw::World::force_weather(const std::string&, uw::U64, const uw::Conditions&, double, double)':
+C:\Users\abc\Documents\ChatGPT\UnderWorld\weather_native\weather.cpp:163:9: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  163 |         if(prior->second!=signature.str())throw std::invalid_argument("REQUEST_ID_CONFLICT");return;
+      |         ^~
+C:\Users\abc\Documents\ChatGPT\UnderWorld\weather_native\weather.cpp:163:94: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  163 |         if(prior->second!=signature.str())throw std::invalid_argument("REQUEST_ID_CONFLICT");return;
+      |                                                                                              ^~~~~~
+[100%] Linking CXX shared module _underworld_weather.cp312-win_amd64.pyd
+[100%] Built target _underworld_weather
+Separate weather runtime ready; original living-d runtime preserved.

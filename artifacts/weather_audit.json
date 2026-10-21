@@ -1,0 +1,259 @@
+{
+  "verified": true,
+  "all_gates": true,
+  "runs": [
+    {
+      "seed": 13001,
+      "gates": {
+        "mild": true,
+        "reachable": true,
+        "build": true,
+        "scarcity": true,
+        "sharing": true,
+        "growth": true,
+        "restart": true
+      },
+      "environmental_health_loss": {
+        "survival": 0.060511026268089546,
+        "weather": 0.0
+      },
+      "health": {
+        "survival": 0.9699125451604913,
+        "weather": 1.0
+      },
+      "time_to_protection_s": {
+        "agent-1": 1.25
+      },
+      "sharing_first_s": {
+        "agent-1": 1.25,
+        "agent-2": 2.5,
+        "agent-4": 5.0,
+        "agent-3": 20.0
+      },
+      "native_counts": {
+        "survival": {
+          "accepted_submissions": 9,
+          "completed_policy_actions": 30,
+          "policy_rejections": 0
+        },
+        "weather": {
+          "accepted_submissions": 9,
+          "completed_policy_actions": 116,
+          "policy_rejections": 0
+        }
+      },
+      "simulated_end_s": {
+        "survival": 190.75,
+        "weather": 190.75
+      }
+    },
+    {
+      "seed": 13007,
+      "gates": {
+        "mild": true,
+        "reachable": true,
+        "build": true,
+        "scarcity": true,
+        "sharing": true,
+        "growth": true,
+        "restart": true
+      },
+      "environmental_health_loss": {
+        "survival": 0.07706250000000012,
+        "weather": 0.0
+      },
+      "health": {
+        "survival": 0.9533610714285786,
+        "weather": 1.0
+      },
+      "time_to_protection_s": {
+        "agent-1": 1.25
+      },
+      "sharing_first_s": {
+        "agent-1": 1.25,
+        "agent-2": 2.5,
+        "agent-4": 5.0,
+        "agent-3": 20.0
+      },
+      "native_counts": {
+        "survival": {
+          "accepted_submissions": 9,
+          "completed_policy_actions": 30,
+          "policy_rejections": 0
+        },
+        "weather": {
+          "accepted_submissions": 9,
+          "completed_policy_actions": 116,
+          "policy_rejections": 0
+        }
+      },
+      "simulated_end_s": {
+        "survival": 190.75,
+        "weather": 190.75
+      }
+    },
+    {
+      "seed": 13009,
+      "gates": {
+        "mild": true,
+        "reachable": true,
+        "build": true,
+        "scarcity": true,
+        "sharing": true,
+        "growth": true,
+        "restart": true
+      },
+      "environmental_health_loss": {
+        "survival": 0.07706250000000012,
+        "weather": 0.00011491930607735834
+      },
+      "health": {
+        "survival": 0.9533610714285786,
+        "weather": 1.0
+      },
+      "time_to_protection_s": {
+        "agent-1": 1.25
+      },
+      "sharing_first_s": {
+        "agent-1": 1.25,
+        "agent-2": 2.5,
+        "agent-4": 5.0,
+        "agent-3": 20.0
+      },
+      "native_counts": {
+        "survival": {
+          "accepted_submissions": 9,
+          "completed_policy_actions": 30,
+          "policy_rejections": 0
+        },
+        "weather": {
+          "accepted_submissions": 9,
+          "completed_policy_actions": 116,
+          "policy_rejections": 0
+        }
+      },
+      "simulated_end_s": {
+        "survival": 190.75,
+        "weather": 190.75
+      }
+    }
+  ],
+  "native_worlds": [
+    {
+      "path": "data\\weather-confirmation-20261022\\13001\\blocked.sqlite",
+      "bytes": 94208,
+      "sha256": "44d77dcfd19704db806cca2d41f1138c9fe91a27e78674b1ac32a40fb875bd37"
+    },
+    {
+      "path": "data\\weather-confirmation-20261022\\13001\\build.sqlite",
+      "bytes": 1589248,
+      "sha256": "8ab6ac028a49d173349a993d904acc8e0fa087aaf1636e788fe6da551e16551f"
+    },
+    {
+      "path": "data\\weather-confirmation-20261022\\13001\\mild.sqlite",
+      "bytes": 86016,
+      "sha256": "d583540cef810a68b4648d2ef78155a4ed63eb71503bc8e2c4b30d3cdb3468e0"
+    },
+    {
+      "path": "data\\weather-confirmation-20261022\\13001\\reachable-common.sqlite",
+      "bytes": 94208,
+      "sha256": "398cf9ea29862712b1b29ec7cfe92b68ea75af3c2b98cfa271926485905f9c42"
+    },
+    {
+      "path": "data\\weather-confirmation-20261022\\13001\\reachable-survival.sqlite",
+      "bytes": 532480,
+      "sha256": "d8681eacb0a46d3c64b40f598442998a4890a1802364dc8ce4177206aa79c130"
+    },
+    {
+      "path": "data\\weather-confirmation-20261022\\13001\\reachable-weather.sqlite",
+      "bytes": 1720320,
+      "sha256": "90a453ce9981ab6e3060433c0b2c6cb16537495b07ea13483fc1b13ff8424e8d"
+    },
+    {
+      "path": "data\\weather-confirmation-20261022\\13001\\sharing.sqlite",
+      "bytes": 1863680,
+      "sha256": "7b56ccf18eab398a665ffd2928daa43b7d74dbaf71acd23e6fcd0c20ba49eaef"
+    },
+    {
+      "path": "data\\weather-confirmation-20261022\\13007\\blocked.sqlite",
+      "bytes": 94208,
+      "sha256": "664832f4672983ad9f335ed454d2b3f1a51c73defd14910ddc08dd59126e5ce9"
+    },
+    {
+      "path": "data\\weather-confirmation-20261022\\13007\\build.sqlite",
+      "bytes": 1589248,
+      "sha256": "0b7b42679206b854e9befd8969cce8a19762328a7248f0a76e5c6542af77ca62"
+    },
+    {
+      "path": "data\\weather-confirmation-20261022\\13007\\mild.sqlite",
+      "bytes": 86016,
+      "sha256": "835498c6f8e8bb932f9058341fd22ab61fcc8e234e41c4ae544e45e4d2515ca2"
+    },
+    {
+      "path": "data\\weather-confirmation-20261022\\13007\\reachable-common.sqlite",
+      "bytes": 94208,
+      "sha256": "5ecfb1e888bc9196a067faba2957b0768581e15870b52b04c212118b7e6ebf94"
+    },
+    {
+      "path": "data\\weather-confirmation-20261022\\13007\\reachable-survival.sqlite",
+      "bytes": 532480,
+      "sha256": "b862a7baa230ebce6d761776433457c86622d16bc49cb98c3dfba43107bb4bcf"
+    },
+    {
+      "path": "data\\weather-confirmation-20261022\\13007\\reachable-weather.sqlite",
+      "bytes": 1720320,
+      "sha256": "5566852bdc50ef10554a4d746e5b296c1fab048caa4ab3e874b70abcefd442f3"
+    },
+    {
+      "path": "data\\weather-confirmation-20261022\\13007\\sharing.sqlite",
+      "bytes": 1888256,
+      "sha256": "aa146c40a7975558ef24355f00fddb2f9ff8e381d4a736c7bc0f9aa8e64ff532"
+    },
+    {
+      "path": "data\\weather-confirmation-20261022\\13009\\blocked.sqlite",
+      "bytes": 94208,
+      "sha256": "6e4679e3f90917638e5bbcaab5b22eff12ae75b83cf140cf4bb0f3e3c6d765c0"
+    },
+    {
+      "path": "data\\weather-confirmation-20261022\\13009\\build.sqlite",
+      "bytes": 1589248,
+      "sha256": "c03ba45384182690452eeb982251be7a3aa0022d9ba9744be85d2a0bbc9a3adb"
+    },
+    {
+      "path": "data\\weather-confirmation-20261022\\13009\\mild.sqlite",
+      "bytes": 86016,
+      "sha256": "c4d8a5fddd74844c4c32b7078088959300c43fc859643d4ffcc23be9170f372f"
+    },
+    {
+      "path": "data\\weather-confirmation-20261022\\13009\\reachable-common.sqlite",
+      "bytes": 94208,
+      "sha256": "aea54d12d5173a360d4355eb9c6df822e8ac5a4acce05a5caf0055ebef0e7cfb"
+    },
+    {
+      "path": "data\\weather-confirmation-20261022\\13009\\reachable-survival.sqlite",
+      "bytes": 532480,
+      "sha256": "85054cf6e6271dc3b73b526e42704b5d1099c9f524bd3c735865d21e4e9a0625"
+    },
+    {
+      "path": "data\\weather-confirmation-20261022\\13009\\reachable-weather.sqlite",
+      "bytes": 1720320,
+      "sha256": "d71ec04beb1a0829c81d522fe51e53e977ffbe1a65e1f9884a36559de0061473"
+    },
+    {
+      "path": "data\\weather-confirmation-20261022\\13009\\sharing.sqlite",
+      "bytes": 1830912,
+      "sha256": "8991cc983d090f5ebcdcded478cd6c500d80c558c1dcb94b3e1152a2200c2e77"
+    }
+  ],
+  "old_registrations": {
+    "living_world_g_registration": true,
+    "developmental_h1_registration_repaired": true,
+    "developmental_h2_registration": true,
+    "h3_native_registration": true,
+    "h4_registration": true,
+    "h5_registration": true,
+    "gap_registration": true
+  },
+  "model_calls": 0,
+  "limits": "authored policy; controlled forcing is an intervention; restart assertions also require retained software checks; SQLite saves remain local"
+}

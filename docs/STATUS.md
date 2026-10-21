@@ -1,3 +1,35 @@
+# 22 October 2026 - W0-W6 opt-in weather validated
+
+Persistent native weather, four fictional seasons, exposure proxies and real
+material-built shelters are implemented in a separate UW10W runtime. All seven
+registered bounded gates pass across three held-out conditions; native-save audit
+recomputes actual protection, health, work, resource accounting and replay.
+Known roofs reached in1.25sim seconds; after real assigned ingredient collection,
+authored reactive construction+protection took14.25s. Four people physically share
+one capacity4 roof; overflowing occupants receive no protection.
+
+28weather checks plus the original335Python and4native checks pass. Real Edge
+desktop/mobile read-only 3D observer checks pass. One continuously saved four-person
+life reached2400sim seconds (one accelerated year), all alive/health1, no resets,
+regeneration or weather forcing;481.164wall seconds after134sim seconds of explicit
+physical setup. Food3.45kg/water9kg remain, with exact ingestion/resource closure.
+
+Three failed sharing development candidates are retained; authored priorities and
+scheduler frame lengths were corrected BEFORE untouched confirmation. Weather
+forcing's one-tick expiry bug was fixed and its failure retained. An additional
+unchanged existing utility-policy control confirms outside exposure under matched
+conditions; it is labeled supplementary after primary registration.
+
+Original G/H/gap/Phase9 sources, old worlds and build/living-d are unchanged.
+Weather requires NEW worlds and matching native/source contracts; no migration.
+Weather decisions are authored, not learned intelligence. Rain collection, storms,
+real thermoregulation, developmental weather integration, unknown-material bootstrap,
+multi-seed year-long survival and indefinite operation remain unproven/deferred.
+Read [weather report](WEATHER_SEASONS_REPORT.md) and [operations](WEATHER_OPERATIONS.md).
+Earlier entries below retain their original study scope.
+
+---
+
 # 22 October 2026 - H0-H5 adaptive gap profile verified
 
 A separate opt-in profile repairs the measured H1 online reach/outcome failure,

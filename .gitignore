@@ -40,3 +40,18 @@ dist/
 /artifacts/gap_continuity_dev_900.json
 /artifacts/gap_continuity_dev_1800.json
 /artifacts/gap_continuity_control.json
+
+# Exact weather traces are tracked as gzip with raw/compressed SHA256 manifests.
+/artifacts/weather_confirmation.json
+/artifacts/weather_development.json
+/artifacts/weather_development2.json
+/artifacts/weather_development3.json
+/artifacts/weather_development4.json
+/artifacts/weather_development5.json
+/artifacts/weather_continuity_300.json
+/artifacts/weather_continuity_600.json
+/artifacts/weather_continuity_1200.json
+/artifacts/weather_continuity_2400.json
+/artifacts/weather_w5_demo.json
+/artifacts/weather_final_demo.json
+/artifacts/weather_existing_control.json

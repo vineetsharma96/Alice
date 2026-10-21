@@ -1,0 +1,41 @@
+{
+  "stage": "W1",
+  "clock_storage_checks": 9,
+  "checks_log": "artifacts/weather_w1_checks_final.log",
+  "initial_fixture_failures": "artifacts/weather_w1_checks_attempt1.log",
+  "build_id": "bab076e81a8fb2393d7cfe0e091b88dde9c0a37503b2480cb2df162d8e1e5e21",
+  "format": "UW10W",
+  "source_manifest": "artifacts/weather_w1_sources.json",
+  "source_archive": "artifacts/weather_w1_sources.zip",
+  "matching_local_runtime": "build/weather-w1",
+  "mid_transition_simulated_s": 98.75,
+  "persisted_resume_replay": {
+    "replay_matches": true,
+    "operations": 1,
+    "state_hash": "6c2a3d02751614396ca095c84725ba848c18558aab9965673a4aadfdb0f60a8a"
+  },
+  "old_full_regressions": "passed:335Python+4native; weather_w0_baseline.json",
+  "remaining": [
+    "W2",
+    "W3",
+    "W4",
+    "W5",
+    "W6"
+  ],
+  "final_source_hashes": {
+    "weather_native/CMakeLists.txt": "9d64e1c58c1146c81422a9b1d8e55da7c80a2ebd9440d1e508900fdc5a45f940",
+    "weather_native/integrate.py": "3fb6a92c4bbf5718cf2777b3f89c62d5945133d174d9c8559dae793469a212a1",
+    "weather_native/weather.cpp": "419fc09bfc2754e441c1419eaa448f9762b170a8b50e3e3a38b29d9ef138d8cc",
+    "weather_native/weather.hpp": "4a3892850a75b151b6abb45c34e51952496231d340120df11bfbeb86ea8d179f",
+    "weather_native/weather_bindings.inc": "6c129f4bdbaaa58ef9ef1008da56054a35aa95043d669e07382ba024d5c9fc58",
+    "weather_tests/test_weather_clock.py": "9a7d9510aef021117a4ffb61bcdaca60a5f44d544e0ba91e6d649f10e78e3a1a",
+    "weather_tests/test_weather_store.py": "03c08f7b186cf5c8c195541a41d38194940b4a0a90a2686fcdfde3269c57399f",
+    "underworld/weather_runtime.py": "dc20ea5c463742bfad96feeae74c0ee22acfda36ea26d5603557edff982158b4",
+    "underworld/weather_store.py": "97e69dc5490a54ce01b563f774a61afa90f44e94e8d1a7a61d6d5a591a9bd1b5",
+    "scripts/weather.py": "2f19241760404d3c50e27c87e64187f34513e0916d4bd4c9dc1cdcf648e85eb0",
+    "scripts/build_weather.ps1": "07bc65c1e6ce0f0d34648e7ba0f22c8a000ff923b3d019900aa8a77f514fde82",
+    "docs/WEATHER_CONTRACT.md": "6088953c8d1d4c8bca213468a1274211278c1bce6dc7aa4cd23663b0374c6be3",
+    "config/weather-research.toml": "a144f96c408c957e75558e65371f535c2bc4cbf34ec6031812e384af306b8147",
+    "config/weather-normal.toml": "a41020b4edc9e133cc9327b679cc62e3fe9c58dcb70e786805a201f297d5126f"
+  }
+}
