@@ -28,6 +28,7 @@ def main():
     save.add_argument("--db", type=Path, required=True)
     save.add_argument("--name", required=True)
     save.add_argument("--output", type=Path, help="atomic standalone SQLite backup, must not exist")
+    save.add_argument('--with-archives',action='store_true',help='also copy verified retained epoch files into OUTPUT.epochs')
     replay = commands.add_parser("replay")
     replay.add_argument("--db", type=Path, required=True)
     intervention=commands.add_parser("intervene",help="guided-mode operator mutation from a JSON file")
@@ -69,7 +70,7 @@ def main():
     runner.add_argument("--model-endpoint",default="http://127.0.0.1:8081")
     living=commands.add_parser("living-world",help="opt-in stabilized living-world controller")
     living_commands=living.add_subparsers(dest="living_command",required=True)
-    for name in ("init","attach","run","status","task","cancel-task"):
+    for name in ("init","attach","run","status","task","cancel-task","archive","archives"):
         sub=living_commands.add_parser(name)
         sub.add_argument("--db",type=Path,required=True)
         if name=="init":
@@ -126,6 +127,9 @@ def main():
             elif args.living_command=='cancel-task':
                 from .planning import cancel
                 value=cancel(args.db,args.agent)
+            elif args.living_command in ('archive','archives'):
+                from . import runtime
+                value=runtime.rotate(args.db) if args.living_command=='archive' else runtime.verify_archives(args.db)
             else:value=stabilization.status(args.db)
             print(json.dumps(value,indent=2,allow_nan=False));return
         if args.command == "new":
@@ -182,7 +186,10 @@ def main():
                 decisions = storage.read_decisions(args.decisions) if args.decisions else ()
                 value = storage.advance(args.db, args.ticks, decisions)
         elif args.command == "save":
-            value = storage.save(args.db, args.name, args.output)
+            if args.with_archives:
+                from .runtime import backup
+                value=backup(args.db,args.name,args.output)
+            else:value = storage.save(args.db, args.name, args.output)
         else:
             value = storage.replay(args.db)
         print(json.dumps(value, indent=2, allow_nan=False))

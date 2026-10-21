@@ -62,7 +62,7 @@ class PlanningTests(unittest.TestCase):
 
     def test_unsupported_absent_and_private_procedure_reuse(self):
         create(self.path)
-        for goal,params,reason in (('build_pen',{},'unsupported_task'),('inspect_problem',{'target':'foreign-hidden'},'not_observed')):
+        for goal,params,reason in (('teach_procedure',{},'unsupported_task'),('inspect_problem',{'target':'foreign-hidden'},'not_observed')):
             planning.assign(self.path,'agent-1',goal,params);r=until_done(self.path)
             self.assertEqual(r['outcome'],'blocked');self.assertIn(reason,r['reason'])
         self.assertFalse(stable.status(self.path)['tasks']['procedures'])

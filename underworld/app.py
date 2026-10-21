@@ -8,10 +8,22 @@ import sqlite3
 import sys
 import threading
 import webbrowser
+from contextlib import closing
 
 from . import __version__
 
 ROOT=Path(__file__).resolve().parents[1]
+
+
+def validate_model_off(path):
+    from . import storage,stabilization
+    with closing(storage._connect(path,readonly=True)) as db:
+        db.execute('BEGIN');storage._head(db);stabilization.verify_event_chain(db)
+        for agent, in db.execute('SELECT agent FROM stabilization_agents'):
+            state=stabilization._load(db,agent)
+            task=state.get('tasks',{}).get('active') or {}
+            if state['model'] or task.get('mode')=='model_assisted':
+                raise ValueError('desktop runner requires model-off survival and tasks for every inhabitant; use the explicit source/CLI model workflow')
 
 
 def main(argv=None):
@@ -46,9 +58,7 @@ def main(argv=None):
     try:
         if path.exists():
             # Validate before starting any thread. Never attach/reset a saved controller.
-            state=stabilization.status(path)
-            task=(state.get('tasks',{}).get('active') or {})
-            if state['model'] or task.get('mode')=='model_assisted':raise ValueError('desktop runner requires model-off survival and tasks; use the explicit source/CLI model workflow')
+            validate_model_off(path)
         else:
             stabilization.initialize(path,load(args.config),model=False,call_limit=0)
         server,controller=make_server(path,args.port,readonly=True)

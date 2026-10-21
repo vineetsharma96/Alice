@@ -1,3 +1,42 @@
+# Milestone G - 21 October 2026
+
+Application **0.14.0 / stabilization/5** adds bounded authored pen construction,
+private source-linked care tests, observed-source routing and verified history
+rotation/portable epoch backups. Native UW9/DB10/checkpoint9 laws are unchanged.
+Read [G report](LIVING_WORLD_G_REPORT.md), [operations](INTEGRATED_WORLD_OPERATIONS.md)
+and [prospective protocol](PHASE_G_INTEGRATION.md).
+
+Both held-out seeds and both arms reach 300 continuous simulated seconds, all
+four inhabitants alive, with zero material balance errors and matching replay.
+Assigned tool/feed/water/food/rest goals complete in both seeds. Pen completion
+remains partial: seed2521 stops at an observed occupied site; seed2549 is active
+at cutoff. Tending is blocked when its target is not observed in seed2521.
+Development's complete empty pen does not establish held-out reliability.
+
+Pure knowledge injection no longer drains ecology events; non-culture recipients
+work without a present flag. Every managed inhabitant now faces the model-off
+desktop task guard. Source links, pending requests and controller anchors survive
+bounded archival; missing/corrupt archives fail closed.
+
+Verification passes239 Python tests and four native checks, packaged save/archive
+interchange, both read-only viewers and the Bash launcher. All43 registered
+files remain unchanged. Independent Phase9 audit verifies3439 files and retains
+advance=false. See artifacts/living_world_g_delivery_audit.json.
+
+Remaining: reliable integrated pen completion, animal capture, arbitrary pen
+topology, autonomous teaching/goal formation, long-term husbandry, indefinite
+receipt/knowledge retention and A's global model budgets. CARE plant-food/egg
+claims lack general acquisition beyond carried stock. Models remain off; no
+neural training, reproduction, speech or true3D is added. Phase9 stays sealed,
+failed and outside live policies. Use a new G save; old F saves require
+build/runtime-before-milestone-g-20261021. Final checks, continuous extension and
+package evidence are detailed in the G report. The same seed2521 assigned life
+reaches537 simulated seconds within240.516 additional wall seconds; all four
+humans survive but both animals die. Sustained husbandry is not demonstrated.
+Older entries below are historical.
+
+---
+
 # Milestone F — 21 October 2026
 
 Application **0.13.0**, native UW9/DB10/checkpoint 9 unchanged. Explicit new-world

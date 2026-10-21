@@ -1,0 +1,53 @@
+# Milestone G: finite guided four-person integrated experiment, models off.
+schema_version = 1
+seed = 20261021
+mode = "guided"
+
+[world]
+width_m = 16.0
+height_m = 16.0
+dt_s = 0.5
+population = 4
+population_limit = 8
+
+[cognition]
+provider = "disabled"
+interval_ticks = 50
+max_concurrency = 1
+max_input_tokens = 1024
+max_output_tokens = 128
+timeout_s = 10.0
+calls_per_simulated_day = 24
+
+[logging]
+level = "INFO"
+event_retention_count = 10000
+max_payload_bytes = 16384
+
+[agency]
+bodies_enabled = true
+policy = "none"
+interval_ticks = 25
+food_kg = 8.0
+water_kg = 16.0
+food_regen_kg_s = 0.0
+water_regen_kg_s = 0.0
+tree_growth_kg_s = 0.0
+
+[ecology]
+enabled = true
+forage_kg = 2.0
+regeneration_kg_s = 0.0
+
+[execution]
+batch_ticks = 10
+epoch_ticks = 200
+checkpoint_keep = 3
+max_db_bytes = 67108864
+max_archive_bytes = 268435456
+metrics_keep = 128
+memory_recent = 16
+queue_limit = 64
+calls_per_batch = 0
+cognition_call_limit = 0
+episodic_memory = true

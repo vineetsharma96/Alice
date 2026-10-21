@@ -12,13 +12,16 @@ from .lease import Lease
 from .policy import _segment_clear, _waypoint
 
 GOALS=('obtain_food','obtain_wood','craft_tool','make_planks','build_trough',
-       'provide_water','tend_animal','inspect_problem','rest','build_pen','teach_procedure')
-SUPPORTED=set(GOALS)-{'build_pen','teach_procedure'}
+       'provide_water','tend_animal','inspect_problem','rest','build_pen','teach_procedure','feed_animal')
+SUPPORTED=set(GOALS)-{'teach_procedure'}
+
+
+def deadline(task):return 900 if task['goal']=='build_pen' else 360
 
 
 def assignment(goal,params):
     if goal not in GOALS:raise ValueError('unknown hierarchical goal')
-    if type(params) is not dict or set(params)-{'target','mass_kg','position_m'}:
+    if type(params) is not dict or set(params)-{'target','mass_kg','position_m','lesson_episode_id'}:
         raise ValueError('unknown task parameters')
     if 'target' in params and (type(params['target']) is not str or not 1<=len(params['target'])<=64):
         raise ValueError('task target must be a bounded ID')
@@ -30,7 +33,9 @@ def assignment(goal,params):
         p=params['position_m']
         if type(p) is not list or len(p)!=2 or any(type(v) not in (int,float) or not math.isfinite(v) for v in p):
             raise ValueError('construction position must be two finite numbers')
-    if goal in ('tend_animal','inspect_problem') and 'target' not in params:raise ValueError('target required')
+    if goal in ('tend_animal','inspect_problem','feed_animal') and 'target' not in params:raise ValueError('target required')
+    if 'lesson_episode_id' in params and (goal!='feed_animal' or type(params['lesson_episode_id']) is not int or params['lesson_episode_id']<1):
+        raise ValueError('own lesson id is supported only for assigned feeding')
 
 
 def assign(path,agent,goal,params=None,mode='adaptive'):
@@ -39,7 +44,7 @@ def assign(path,agent,goal,params=None,mode='adaptive'):
     params={} if params is None else params;assignment(goal,params)
     if mode not in ('authored','episodic_only','adaptive','model_assisted'):raise ValueError('unknown task mode')
     with Lease(path),closing(storage._connect(path)) as db:
-        db.execute('BEGIN IMMEDIATE');world,_,_,_=storage._head(db);s=stable._load(db,agent)
+        db.execute('BEGIN IMMEDIATE');world,config,_,_=storage._head(db);s=stable._load(db,agent)
         o=world.observe_batch([agent])[0]
         if s['model']:raise ValueError('E task controller requires legacy survival model calls disabled')
         if s.get('tasks',{}).get('active'):raise ValueError('task already active; finish or cancel explicitly')
@@ -56,6 +61,13 @@ def assign(path,agent,goal,params=None,mode='adaptive'):
                origin='own_verified_procedure_reuse' if prior else 'operator_assigned_authored_procedure',
                procedure_source=prior['episode_id'] if prior else None,
                initial_ingested_ug=int(o['own_state']['body']['food_ingested_ug']))
+        if params.get('lesson_episode_id'):
+            from . import care
+            from .config import episodic_enabled
+            if not episodic_enabled(config):raise ValueError('care lesson requires episodic retention')
+            claim,record=care.lesson(db,agent,params['lesson_episode_id'])
+            t.update(lesson_episode_id=params['lesson_episode_id'],lesson_source_id=record['source_id'],care_claim=claim,
+                     knowledge_origin='own_accessed_external_claim',execution_origin='authored_assigned_care_executor')
         e['active']=t
         stable._event(db,agent,tick,'task_assigned',t)
         stable._save(db,agent,s);db.commit()
@@ -84,10 +96,13 @@ def finish(db,s,o,outcome,reason):
     proof=[r['request_id'] for r in t['receipts'] if r['status']=='completed']
     terminal_kind={'obtain_food':'eat','obtain_wood':'collect_wood','craft_tool':'craft','make_planks':'craft',
                    'build_trough':'work_construction','provide_water':'fill_trough','tend_animal':'observe_animal',
-                   'inspect_problem':'inspect','rest':'rest'}.get(t['goal'])
+                   'inspect_problem':'inspect','rest':'rest','build_pen':'work_construction','feed_animal':'offer_feed'}.get(t['goal'])
     earned=any(r['status']=='completed' and r['action']==terminal_kind for r in t['receipts'])
     summary={k:t[k] for k in ('id','goal','mode','origin','procedure_source','created_tick','steps','failures','delivered_ug')}
     summary.update(outcome=outcome,reason=reason,completed_tick=tick,evidence=proof,executor_goal_credit=outcome=='completed' and earned)
+    summary['native_failures']=[r for r in t['receipts'] if r['status']!='completed']
+    for key in ('lesson_episode_id','lesson_source_id','knowledge_origin','execution_origin','enclosure_ids','enclosure_observations'):
+        if key in t:summary[key]=t[key]
     if outcome=='completed' and not earned:summary['reason']='already_satisfied_or_external_effect_no_procedure_credit'
     if outcome=='completed' and earned and t['mode'] in ('adaptive','model_assisted'):
         source=f'procedure:{t["id"]}'
@@ -123,7 +138,9 @@ def record(s,request,receipt,o):
         if key in e['beliefs']:e['beliefs'][key]['successes']+=1
         if request['action_type']=='fill_trough':t['delivered_ug']+=round(request['parameters']['mass_kg']*1e9);t['care_effects']+=1
         if request['action_type']=='offer_feed':t['care_effects']+=1
-        if request['action_type']=='begin_construction':t['construction_id']=row['description'].rsplit(':entity=',1)[-1]
+        if request['action_type']=='begin_construction':
+            t['construction_id']=row['description'].rsplit(':entity=',1)[-1]
+            if key.startswith('pen:'):t.setdefault('enclosure_ids',{})[key[4:]]=t['construction_id']
         if request['action_type']=='work_construction':t['construction_id']=request['target_ids'][0]
         if request['action_type']=='observe_animal':t['report']=row['description'];t['report_tick']=int(o['tick'])
         elif request['action_type'] in ('offer_feed','fill_trough'):t['report']=None
@@ -183,12 +200,29 @@ def _approach(o,target,operation):
     pos=o['own_state']['position_m'];q=target['position_m']
     if math.dist(pos,q)<=1.4:return operation
     solids=[e for e in o['visible_entities'] if e['radius_m']>0]
+    def visible_from(point):
+        dx,dy=q[0]-point[0],q[1]-point[1];length=dx*dx+dy*dy
+        for solid in solids:
+            if solid.get('entity_id')==target.get('entity_id'):continue
+            x,y=solid['position_m'];part=0 if not length else max(0,min(1,((x-point[0])*dx+(y-point[1])*dy)/length))
+            if math.hypot(point[0]+part*dx-x,point[1]+part*dy-y)<solid['radius_m']+.01:return False
+        return True
+    route_memory=o.get('_route_memory',{})
+    key=operation['source']+':'+str(tuple(q))
+    cached=route_memory.get(key)
+    if cached and _segment_clear(cached,cached,solids) and visible_from(cached):
+        point=_route(o,cached)
+        if point and math.dist(pos,point)>.05:
+            return _option('move',{'x_m':point[0],'y_m':point[1]},duration=max(o['dt_s'],math.ceil(math.dist(pos,point)/o['dt_s'])*o['dt_s']),source=operation['source'])
+    route_memory.pop(key,None)
     angle=math.atan2(pos[1]-q[1],pos[0]-q[0])
-    goals=[(q[0]+1.1*math.cos(angle+i*math.tau/16),q[1]+1.1*math.sin(angle+i*math.tau/16)) for i in range(16)]
+    goals=[(q[0]+radius*math.cos(angle+i*math.tau/16),q[1]+radius*math.sin(angle+i*math.tau/16)) for radius in (1.1,.8,1.35) for i in range(16)]
     for goal in sorted(goals,key=lambda p:math.dist(pos,p)):
-        if not _segment_clear(goal,goal,solids):continue
+        if not _segment_clear(goal,goal,solids) or not visible_from(goal):continue
         point=_route(o,goal)
         if point and math.dist(pos,point)>.05:
+            route_memory[key]=goal
+            while len(route_memory)>32:del route_memory[next(iter(route_memory))]
             return _option('move',{'x_m':point[0],'y_m':point[1]},duration=max(o['dt_s'],math.ceil(math.dist(pos,point)/o['dt_s'])*o['dt_s']),source=operation['source'])
     return None
 
@@ -205,6 +239,8 @@ def _rank(e,t,o,options):
 
 
 def _resources(e,t,o,material,amount):
+    if t.get('resource_search_for')!=material:
+        t.update(resource_search_for=material,search=0,search_steps=0)
     own=o['own_state'];capacity=2000000000-int(own['carried_mass_ug'])
     if capacity<=0:return [],'carrying_capacity_blocked'
     options=[]
@@ -221,13 +257,30 @@ def _resources(e,t,o,material,amount):
     if ready:return ready,None
     if material in ('wood','fiber'):
         trees=[x for x in o['visible_entities'] if x['kind']=='tree' and x.get('stage')!='stump' and int(x.get('mass_ug',0))>=500000000]
-        choices=[_option('harvest_branch',{'mass_kg':.5},x['entity_id'],source=f'harvest:{x["entity_id"]}') for x in trees]
+        axe=next((x for x in own.get('tools',[]) if x.get('recipe_id')=='crude_axe' and x.get('durability',0)>0),None)
+        choices=[_option('fell_tree',{'tool_id':axe['entity_id']},x['entity_id'],duration=5,source=f'fell:{x["entity_id"]}')
+                 if axe and material=='wood' else _option('harvest_branch',{'mass_kg':.5},x['entity_id'],source=f'harvest:{x["entity_id"]}') for x in trees]
         ready=[]
         for choice in _rank(e,t,o,choices):
             target=next(x for x in trees if x['entity_id']==choice['target']);c=_approach(o,target,choice)
             if c:ready.append(c)
         if ready:return ready,None
+    remembered=remembered_route(o,t.get('known_resource_sites',{}),(material,))
+    if remembered:return [remembered],None
     return [],'no_observed_accessible_'+material
+
+
+def remembered_route(o,sites,kinds,navigation=None):
+    """Approach a last observed location, then demand fresh visibility to gather."""
+    visible={x['entity_id'] for x in o['visible_entities']}
+    if navigation is not None:o=dict(o,_route_memory=navigation)
+    for ident,site in sorted(list(sites.items()),key=lambda row:math.dist(o['own_state']['position_m'],row[1]['position_m'])):
+        if site['kind'] not in kinds or ident in visible:continue
+        if math.dist(o['own_state']['position_m'],site['position_m'])<=1.4:
+            sites.pop(ident,None);continue
+        choice=_approach(o,site,_option('inspect',target=ident,source='own_remembered_source:'+ident))
+        if choice and choice['action']=='move':return choice
+    return None
 
 
 def _axe(e,t,o):
@@ -244,6 +297,10 @@ def _planks(e,t,o):
     tool,options,reason=_axe(e,t,o)
     if not tool:return options,reason
     missing=1000000000-int(o['own_state']['inventory_ug'].get('wood',0))
+    shortage=int(o['own_state']['carried_mass_ug'])+missing-2000000000
+    if missing>0 and shortage>0:
+        from .enclosure import store_offcuts
+        return store_offcuts(e,t,o,shortage)
     if missing>0:return _resources(e,t,o,'wood',missing)
     return [_option('craft',{'recipe_id':'planks','tool_id':tool},duration=3)],None
 
@@ -255,6 +312,9 @@ def _build(e,t,o):
         site=sites[0];c=_approach(o,site,_option('work_construction',target=site['entity_id'],duration=max(1,8-site['work_s'])))
         return ([c],None) if c else ([], 'construction_inaccessible')
     if int(o['own_state']['inventory_ug'].get('plank',0))<800000000:return _planks(e,t,o)
+    if position:
+        c,ready=placement_stance(o,position,'trough_site_approach')
+        if not ready:return ([c],None) if c else ([], 'assigned_construction_site_inaccessible')
     pos=o['own_state']['position_m'];bounds=o['world_bounds_m']
     points=[position] if position else [[pos[0]+1.1*math.cos(i*math.tau/16),pos[1]+1.1*math.sin(i*math.tau/16)] for i in range(16)]
     for point in points:
@@ -266,14 +326,50 @@ def _build(e,t,o):
     return [],'no_permitted_construction_site'
 
 
+def placement_stance(o,point,source):
+    """An unbuilt site is not yet a solid, but the builder must clear its footprint."""
+    pos=o['own_state']['position_m'];distance=math.dist(pos,point)
+    if .8<=distance<=1.4:return None,True
+    if distance>1.4:
+        c=_approach(o,{'position_m':point,'radius_m':0},_option('inspect',target='unbuilt-site',source=source))
+        return (c if c and c['action']=='move' else None),False
+    solids=[x for x in o['visible_entities'] if x['radius_m']>0];bounds=o['world_bounds_m']
+    angle=math.atan2(pos[1]-point[1],pos[0]-point[0])
+    for i in range(16):
+        goal=[point[0]+1.1*math.cos(angle+i*math.tau/16),point[1]+1.1*math.sin(angle+i*math.tau/16)]
+        if not .3<=goal[0]<=bounds['width']-.3 or not .3<=goal[1]<=bounds['height']-.3:continue
+        if not _segment_clear(pos,goal,solids):continue
+        return _option('move',{'x_m':goal[0],'y_m':goal[1]},duration=max(o['dt_s'],math.ceil(math.dist(pos,goal)/o['dt_s'])*o['dt_s']),source=source),False
+    return None,False
+
+
 def choices(e,o):
     """Return feasible candidate primitives, a success predicate, or a reason."""
     t=e['active'];goal=t['goal'];own=o['own_state'];visible=o['visible_entities']
+    o=dict(o,_route_memory=t.setdefault('approach_memory',{}))
     if t.get('cancel_requested'):return [],False,'explicit_operator_cancellation_after_native_receipt'
     if goal not in SUPPORTED:return [],False,'unsupported_task:'+goal
-    if t['steps']>=64 or t['failures']>=4 or int(o['tick'])-t['created_tick']>=math.ceil(360/o['dt_s']):
+    if t['steps']>=(192 if goal=='build_pen' else 64) or t['failures']>=4 or int(o['tick'])-t['created_tick']>=math.ceil(deadline(t)/o['dt_s']):
         return [],False,'task_deadline_or_retry_bound'
     t['stage']=goal
+    if goal=='build_pen':
+        from .enclosure import choices as pen_choices
+        return pen_choices(e,t,o)
+    if goal=='feed_animal':
+        if t['care_effects']>0:return [],True,None
+        if t['failures']>0:return [],False,'native_care_test_failed'
+        target=next((x for x in visible if x['entity_id']==t['params']['target'] and x['kind']=='animal'),None)
+        if not target:return _search(t,o,'assigned_animal_not_observed')
+        material=t.get('care_claim',{}).get('material','food')
+        amount=round(t['params'].get('mass_kg',.025)*1e9)
+        if amount>400000000:return [],False,'feeding_amount_out_of_bounds'
+        held=int(own['inventory_ug'].get(material,0))
+        if held<amount:
+            options,reason=_resources(e,t,o,material,amount-held)
+            if not options and reason and reason.startswith('no_observed_accessible_'):return _search(t,o,reason)
+            return options,False,reason
+        c=_approach(o,target,_option('offer_feed',{'material':material,'mass_kg':amount/1e9},target['entity_id']))
+        return ([c],False,None) if c else ([],False,'animal_inaccessible')
     if goal=='obtain_food':
         if int(own['body']['food_ingested_ug'])-t['initial_ingested_ug']>=round(t['params'].get('mass_kg',.2)*1e9):return [],True,None
         return [dict(delegate='eat')],False,None
@@ -334,13 +430,18 @@ def choices(e,o):
     else:raise ValueError('task dispatch incomplete')
     if options:return options,False,None
     # Only missing supplies trigger bounded perceived-space exploration.
-    if reason and reason.startswith('no_observed_accessible_') and t['search']<4 and t.get('search_steps',0)<12:
+    if reason and reason.startswith('no_observed_accessible_'):return _search(t,o,reason)
+    return [],False,reason or 'no_feasible_operator'
+
+
+def _search(t,o,reason):
+    if t['search']<4 and t.get('search_steps',0)<12:
         b=o['world_bounds_m'];goals=[(1,1),(b['width']-1,1),(1,b['height']-1),(b['width']-1,b['height']-1)]
         while t['search']<4:
-            if math.dist(own['position_m'],goals[t['search']])<.5:t['search']+=1;continue
+            if math.dist(o['own_state']['position_m'],goals[t['search']])<.5:t['search']+=1;continue
             point=_route(o,goals[t['search']])
-            if point and math.dist(point,own['position_m'])>.05:
+            if point and math.dist(point,o['own_state']['position_m'])>.05:
                 t['search_steps']=t.get('search_steps',0)+1
-                d=math.dist(point,own['position_m']);return [_option('move',{'x_m':point[0],'y_m':point[1]},duration=max(o['dt_s'],math.ceil(d/o['dt_s'])*o['dt_s']),source='bounded_local_search')],False,None
+                d=math.dist(point,o['own_state']['position_m']);return [_option('move',{'x_m':point[0],'y_m':point[1]},duration=max(o['dt_s'],math.ceil(d/o['dt_s'])*o['dt_s']),source='bounded_local_search')],False,None
             t['search']+=1
     return [],False,reason or 'no_feasible_operator'

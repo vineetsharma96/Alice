@@ -87,3 +87,13 @@ tests reserve own provenance before submitting a native action; terminal memory
 and the test link commit together. Native laws/skill remain authoritative.
 See [F report](LIVING_WORLD_F_REPORT.md) and [operations](KNOWLEDGE_OPERATIONS.md).
 The bounded authored apparatus demo is not autonomous teaching or general learning.
+# Milestone G attribution (21 October 2026)
+
+The integrated confirmation uses zero model calls. Task decomposition, survival,
+navigation, finite source memory, pen geometry and care execution are authored.
+An external CARE claim selects a testable material; native receipts establish
+effect, not received text. No weight update or general skill acquisition occurs.
+The Phase 9 learner stays sealed, failed and outside live autonomous policies.
+A's global model wall/token-budget and recurring fairness gate remains open.
+Four-person bounded horizons do not establish long-term autonomous husbandry or
+indefinite operation. See [G report](LIVING_WORLD_G_REPORT.md).

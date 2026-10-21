@@ -1,0 +1,63 @@
+{
+  "protocol": "docs/PHASE_G_INTEGRATION.md",
+  "allocation": "docs/PHASE_G_COMPUTE_ALLOCATION.md",
+  "development_seeds": [
+    21
+  ],
+  "confirmation_seeds": [
+    2521,
+    2549
+  ],
+  "primary_horizons": [
+    60,
+    300
+  ],
+  "extension_target": 900,
+  "primary_segment_wall_s": 240,
+  "models_enabled": false,
+  "files": {
+    "config/living-world-g.toml": "0ee2acc4609627db1526e18138ac8af2ef721b0ac196d1b59117019b18f3dabe",
+    "docs/PHASE_G_COMPUTE_ALLOCATION.md": "3cd7757bfca1147a53b68383c42bcf8d36640bc0b5d17ee4b30c399938347d95",
+    "docs/PHASE_G_DEVELOPMENT_NOTES.md": "b686915e0ffac3a8b6b19c8fe3367f643b3f6d292aed532c96e413da75598c9d",
+    "docs/PHASE_G_INTEGRATION.md": "1fa81749906981c19813c99cee332302cc85fde3f137a6e1a83ca23520651c07",
+    "scripts/phase_g_audit.py": "f8c54a4334ee279446d7b416444cdb33ccbfdb636b270ed19fe026f213784bf3",
+    "scripts/phase_g_continuity.py": "09beb64cb1ea139e8f4eaf3cce2ebd654691301e048883e41c88db3ef694d21d",
+    "scripts/phase_g_demo.py": "a3e2d352fee24411589a5214829b9f8ed46e5e7e6ae57e5b1e30e8e9d3aab631",
+    "scripts/phase_g_extend.py": "0ac6adb32d3fa9a7af028f6e04b32576cb2f5fbaa8aa210ed8116a26562dae7f",
+    "scripts/phase_g_false_lesson.py": "9cc89b9e091450a57d0a7877769800a5f26b7a27519d5d8e05f8a209ccd687bf",
+    "tests/test_phase_g_integration.py": "410d61da0ad797dd3c090c5f8c565a357c7e3b1b32d28afb65abfd53f22f1931",
+    "underworld/__init__.py": "a0ecd6379b86b52f833cfb80758fc55c4fdfe83ca1111bad3ca3e32c0a19b7a7",
+    "underworld/__main__.py": "43b07212d584212dd9059a0b5321b49b9b9dc24e3d64ad24d7f2b9193dbf9c7e",
+    "underworld/app.py": "af8b2eac8802bebc07a5e4370c5fb177fd066d0e5798441c76358d14fc847b2c",
+    "underworld/care.py": "a299ace6dff7f3cec36074b3c0d92773700c08a6e8f6eaa8eff7cdaa170e926a",
+    "underworld/cognition.py": "5109f65ad8c057e2961e6969c11effa62ac2258ddd76f9bf8027b904e204399f",
+    "underworld/config.py": "a5eacdbf98781088c5426ea93c321ecd20a81c0abff6f378a1d8a402791eb52e",
+    "underworld/culture.py": "c4d4048c7df1926522a90e33acad3837f79d992dbdcb40100acac09c0c77b04c",
+    "underworld/enclosure.py": "ec4bc72c8c13e1698a8b802b509d9788320b5ccb69e7677b1ad90eadd9dc2865",
+    "underworld/isolation.py": "b93cecd72b510f0299c777f6a0e37e4c9167f68c4098dc5defd873a6f71f820b",
+    "underworld/knowledge.py": "919ae9e6945e8db7743676b0f006b37827cee66905cf2f4b4ac67575aa2b554a",
+    "underworld/lab_policy.py": "045931182e866555b4f66b4260ec24899c56b4e95bb2abfcd9fd673046e7a86f",
+    "underworld/learning.py": "e6882f118c57deefd8ce8eca3e869cce322c99277de8213f3e7100d4e17a27b6",
+    "underworld/lease.py": "6d6235daf99647d856538baf3dee873ed9f07f2fc313498c4995f3174bf60179",
+    "underworld/memory.py": "12b1d50b8973e2f5f02847da58da74351861580b8a9fcdb54e9f0ba9483efcb7",
+    "underworld/native.py": "e655f76c0fb1c41707d6c810a3510c44cc5b94be79430acd575d75cb97826e3a",
+    "underworld/observer.py": "c461e5caafe5e801877358309a752c430efa5d3d7024cc4a8304a31af8af7a71",
+    "underworld/planning.py": "4725d0b1c35a2092a966b62ada464e668e584fd5acb133148d155398ab18d3d7",
+    "underworld/planning_model.py": "ec2b3060201cbbe4270dbee32c0e142c0d8e966eaa694b406f6708566217b257",
+    "underworld/policy.py": "1424f4a1a11a27b5083d4f53a50a895385167066e6b7fadcf25165ad14118f27",
+    "underworld/resources.py": "ad90ab22dee395a85bbfdba8240d6efe071d7deba7e79ff4dd3ad0bdbaa0bf24",
+    "underworld/runtime.py": "d3a7b176a5a32e66a460b5a45605d326cb5392219299d2e95a3e2cbad7560fff",
+    "underworld/stabilization.py": "db056d56de51ca7d58a3e768f4abb2f4c83030233bfd40d153e5d12d23a5efe1",
+    "underworld/storage.py": "d646154369caadba4c1132f759fdeb40f0868129e1a54d1202a6df98cb4e2ca7",
+    "underworld/supervisor.py": "fc2ea7164fdf8b47ea3747b14e6af31a3af9e8f66953f7329ddc93c6ebad3fdc",
+    "underworld/teaching.py": "ee57573291173f57127c113f9663c5239a00f1a18c8decb6f96538ab9423d6f1",
+    "underworld/viewer.py": "c7c77a5f734224c700d233a0d090afe29ae4c3a36e5f46a652e78431e1b1ec9d",
+    "underworld/web/observer.html": "1547e7ac0766dfd8519f6e053827f0a9158c2cce79c15729661966d178af2300",
+    "underworld/web/observer.js": "786b97f078d686eca059628e34238c17eae66ab0cbdcedc14853c40f519129a2",
+    "underworld/web/viewer.html": "19b2048548d72683c16b655b69ec4025f52166981782e4b0bfbbb81accbe23f1",
+    "underworld/web/viewer.js": "fed393fa771e97bf0edf7e9914c795b103ca7145aefef848c5f42ff1754c56fb",
+    "underworld/wire.py": "7e5e26576019ec609b94b575969e9bf50ded0d5d474bdb10d5c9c4cfb4339a88",
+    "underworld/worker.py": "bedf5fcf6c17261ca5e62cca2f87a948f9959f1053cf63226a6468ebb41a3313",
+    "underworld/workshop.py": "c35c33c3d2fe0423fa49141fd45374421f73026f624b281a1951f4fd4e4eeb45"
+  }
+}

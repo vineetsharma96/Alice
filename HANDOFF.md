@@ -1,49 +1,58 @@
-# Underworld Lab — Milestone F handoff (21 October 2026)
+# Underworld Lab - Milestone G handoff (21 October 2026)
 
-Application 0.13.0 / stabilization4 with new source identity. Native UW9 / DB10 /
-checkpoint9 remains build 832c4a705a7ceecd85d8befb3d84f4dff0d4730f024c395eba12985f0d8bd896.
-Read docs/LIVING_WORLD_F_REPORT.md, KNOWLEDGE_OPERATIONS.md and PHASE_F_KNOWLEDGE.md.
-Previous exact handoff is HANDOFF_PRE_F_ARCHIVE.md.
+Application0.14.0 / stabilization5. Native UW9 / DB10 / checkpoint9 unchanged:
+build832c4a705a7ceecd85d8befb3d84f4dff0d4730f024c395eba12985f0d8bd896.
+Read docs/LIVING_WORLD_G_REPORT.md, INTEGRATED_WORLD_OPERATIONS.md,
+PHASE_G_INTEGRATION.md, PHASE_G_COMPUTE_ALLOCATION.md and development notes.
+F handoff exact bytes: HANDOFF_PRE_G_ARCHIVE.md. Exact full F runtime/executable:
+build/runtime-before-milestone-g-20261021, all54 manifest files verified.
+Old saves require their own exact runtime; use a NEW G save. No migration/reset.
 
-Explicit new-world knowledge profiles default to none and choose one recipient.
-Versioned initial assignments (including empty assignments) persist in metadata;
-recipient claims use external_initialization episodes. Existing native embodied
-books/hearing are separate from guided inject_knowledge operator records. Text
-is inert/unverified and cannot grant native skill/materials/host privileges.
-knowledge --test-episode performs one authored own-record apparatus action;
-its durable intent and native terminal memory link preserve lesson provenance.
-No new native laws, model training, reproduction, speech or true 3D were added.
+G adds a bounded authored13-component empty pen, real offcut storage, strict own
+CARE claims/native tests, own observed source routing and verified bounded
+archive rotation/portable bundles. F pure-injection/no-culture bugs are fixed.
+Desktop model-off guard checks every managed inhabitant before threads/time.
+Native rules and Phase9 learner remain unchanged. Models stay off in G evidence.
 
-Both held-out apparatus seeds pass: false lesson physically fails; true recipient
-then tests and pays to write; second learns only after paid reading and reproduces.
-The isolated third stays unknown. Each separate life is 49.8 simulated seconds,
-20.099/16.804 wall seconds in final repeat (shared-host timing), including checks/
-fresh-process continuation. Original confirmation 12.329/12.394 s retained. Per seed:
-75 native accepted, 74 completed, one deliberate PROCESS_CONDITIONS failure, zero rejections.
-Execution is authored lab logic, zero model/fallback calls. Source/event chain
-and fresh-process native/cognitive parity retained under artifacts/living_world_f_*.
+All four held-out cells (seeds2521/2549 x unassigned/assigned) reach300 continuous
+simulated seconds, with all four humans alive. Both assigned arms complete tool,
+feed, trough/water, food and rest goals. Held-out pens remain partial:2521 blocked
+observed occupied site,2549 still active. Tending blocks for unseen animal2521.
+Development4 reached360s and completed13 pen parts in106 primitives,0native
+failures, but this is not held-out pen success. Original development failures
+and logs remain retained. Primary animal survivors:0/2,2/2,1/2,1/2 respectively.
 
-Use a NEW save with F. Old E saves need exact pre-F source/config/executable in
-build/runtime-before-milestone-f-20261021. There is no automatic migration/reset.
-Earlier runtimes remain preserved in their previous archives. Normal desktop
-launchers stay model-off and resume compatible saves. Stabilized viewers remain
-read-only; use explicit CLI intervention between controller runs. Writable manual
-laboratory: config/knowledge-lab-f.toml, new --manual then observe.
+Registered same-life2521 assigned extension reaches537simulated seconds with
+240.516 additional wall seconds, wall_limit; four humans alive, both animals
+dead. Native replay and food/water/animal balances match, archive epoch5. No
+resources/bodies/lessons/goals were reset.900seconds not achieved; other900cells
+are compute-deferred. Sustained husbandry and reliable pen completion are open.
 
-E hierarchical tasks and native authority are unchanged. Profiles are recorded
-information, not new recipe permissions or pretrained knowledge erasure.
-Autonomous teach_procedure and pen planning remain unsupported. G integrated
-four-person demo and E/knowledge-aware bounded archival are next. Long-term
-husbandry, A fair global inference budgets and older research limits stay open.
-Phase9's failed study/learner stay sealed and outside live autonomous policies.
+Independent120s four-human in-flight restart across100s archive matches native,
+cognitive, identity/controller tables and logical epoch/scheduler exactly;
+primary60.838wall seconds, fresh child59.938. Derived archive file hashes are
+verified individually, excluded from cross-file equality as preregistered.
+False CARE-water test yields native INVALID_ARGUMENT and no goal credit.
 
-Unrelated OpenCode/npm edits remain local; do not stage/revert them. Existing
-user viewer8765 was not stopped. No owned test model/viewer should remain running.
+Final239 Python tests (298.263s) plus4native checks pass. Static inventory101
+Python files: no errors/repeated substantial production functions. Package
+interchange, portable archives, agent4 model guard, both read-only viewers and
+Git Bash run.sh pass. Executable:dist/UnderworldLab.exe,12,663,805bytes,SHA256
+3f40a7ba64a79004a35a7268a2b36883250ddce830e7a729aec8eca497aac30b.
+Unsigned local Windows build; no Linux/macOS/hardware FPS certification.
+Phase9 audit3439files/4sources retains advance=false, no live learner/training.
 
-Full checks: 219 Python / 317.003 s + four native pass. Ten F cases rechecked after final
-ablation guard; guard refusal preserves bytes. Static 91 modules / lint / syntax pass.
-Independent Phase 9 audit: 3439 files / 360 trials / 840 rollouts, advance=false unchanged.
+Evidence:artifacts/living_world_g_*.json/.log. Frozen43file registration has no
+source drift. Post-measurement scripts/phase_g_delivery_audit.py verifies exact
+cohort and delivery; software verification=true, held_out_integration_complete=false.
+Worlds:data/living-world-g-confirmation-20261021 and continuity/development dirs.
+Portable backups need their .epochs directory. Native receipts/protected
+knowledge still have hard quotas; no indefinite/unattended integration claim.
+Animal capture, arbitrary pen topology, autonomous teaching/goals, Aglobal model
+budgets, long-term husbandry, reproduction, speech,true3D remain incomplete.
+Do not start another milestone without instruction.
 
-Executable rebuilt; packaged source/save interchange and both injection forms
-verified with no external Python/compiler on PATH. Local dist executable is
-unsigned and ignored by Git; package hash/evidence in artifacts/living_world_f_*.
+Unrelated package.json/package-lock.json/.opencode/env/TinyFish changes remain
+local and must not be staged/reverted. User viewer8765 is untouched; owned probe
+servers were stopped. Git branch codex/stabilization; G changes push to origin/main
+with a normal fast-forward. See git log for the final delivery commit.

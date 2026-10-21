@@ -1,22 +1,27 @@
 # Underworld Lab (Alice)
 
-**21 October: Milestone F** adds explicit per-person initial knowledge profiles,
-guided one-person injection, and source-linked physical lesson testing. Existing
-native books/hearing retain their access rules and costs. Read
-[knowledge workflows](docs/KNOWLEDGE_OPERATIONS.md),
-[the F report](docs/LIVING_WORLD_F_REPORT.md) and
-[prospective protocol](docs/PHASE_F_KNOWLEDGE.md). Verification passes **219 Python
-tests and four native checks**, with both randomized confirmation seeds successful.
+**21 October: Milestone G** adds bounded four-person production/care execution,
+source-linked feed tests and verified archive rotation. Four held-out cells reach
+300 continuous simulated seconds with all four humans alive, matching replay and
+conserved materials. Both assigned arms complete tool, feed and water chains;
+held-out pen completion remains partial. These are authored procedures and
+explicit operator tasks, with models off. Read [the G report](docs/LIVING_WORLD_G_REPORT.md),
+[operations and runnable examples](docs/INTEGRATED_WORLD_OPERATIONS.md),
+[registered protocol](docs/PHASE_G_INTEGRATION.md) and
+[verification evidence](artifacts/living_world_g_checks.json). **239 Python tests,
+four native checks, executable/save/archive smoke checks and both viewers pass.**
+The longest measured G life is537 simulated seconds; sustained husbandry fails
+when both animals die. [Delivery inventory](artifacts/living_world_g_delivery_audit.json).
 
-Use a NEW save with this runtime. Existing E worlds require the exact archived E
-runtime at `build/runtime-before-milestone-f-20261021/UnderworldLab.exe`.
+Use a NEW save with this runtime. Existing F worlds require the exact archived F
+runtime at `build/runtime-before-milestone-g-20261021/UnderworldLab.exe`.
 Earlier worlds require their respective older archives. No save is silently
-migrated, reset or replenished. The [E report](docs/LIVING_WORLD_E_REPORT.md) and
-all earlier experiment results remain historical for their exact source versions.
+migrated, reset or replenished. The [F report](docs/LIVING_WORLD_F_REPORT.md) and
+all earlier experiments remain historical for their exact source versions.
 
 A persistent simulation laboratory with C++ authority, Python orchestration, SQLite saves, and a local browser viewer. The current model-off living world has four inhabitants, two fictional animal species, finite resources, trees, crafting, construction, food production and private memories.
 
-**Current application: 0.13.0 · controller stabilization/4 · native UW9 · SQLite DB10 · checkpoint schema 9.** Native simulation laws/build remain unchanged from final Milestone D. [Current status](docs/STATUS.md), [audit and fixes](docs/CODE_AUDIT_REPORT.md), [D report](docs/LIVING_WORLD_D_REPORT.md), [handoff](HANDOFF.md).
+**Current application: 0.14.0 · controller stabilization/5 · native UW9 · SQLite DB10 · checkpoint schema 9.** Native simulation laws/build remain unchanged from final Milestone D. [Current status](docs/STATUS.md), [audit and fixes](docs/CODE_AUDIT_REPORT.md), [D report](docs/LIVING_WORLD_D_REPORT.md), [handoff](HANDOFF.md).
 
 ## Knowledge and teaching
 
@@ -43,7 +48,8 @@ The registered randomized apparatus demonstration passes both held-out seeds:
 false lessons physically fail; the recipient tests, pays to write a book, and a
 second person learns only after actual reading. A third remains isolated. This is
 an explicit authored experiment with no model calls, not autonomous teaching or
-mastery. The next milestone is G's integrated demonstration and bounded archival.
+mastery. G now integrates own-accessed claims with actual feed tests and bounded archival;
+autonomous teaching remains unsupported.
 
 ## Start here
 
@@ -62,7 +68,7 @@ The launcher opens `http://127.0.0.1:8768/viewer`, creates a world on first laun
 
 Default save: `%LOCALAPPDATA%\UnderworldLab\world.sqlite` on Windows, or `~/.local/share/UnderworldLab/world.sqlite` elsewhere. Each launch resumes the same compatible save. Bodies, needs, memories, stock, animal state and scheduler are preserved. Nothing is replenished or reinitialized when a file already exists.
 
-The executable is an **unsigned local Windows x64 build**, tested on this host, not a signed installer or an independently certified release. The `dist/` directory is intentionally ignored by Git. Milestone F package evidence uses `artifacts/living_world_f_package*.json`; the earlier `food_repair_*` and `code_audit_*` results are historical. A normal rebuild writes `artifacts/package_app.json`, preserving earlier audit reports.
+The executable is an **unsigned local Windows x64 build**, tested on this host, not a signed installer or an independently certified release. The `dist/` directory is intentionally ignored by Git. Milestone G package evidence uses `artifacts/living_world_g_package*.json`; the earlier `food_repair_*` and `code_audit_*` results are historical. A normal rebuild writes `artifacts/package_app.json`, preserving earlier audit reports.
 
 ### One Bash file
 
@@ -131,7 +137,7 @@ Human production/care goals are explicitly operator assigned. E plans their prer
 ## Explicit hierarchical tasks (Milestone E)
 
 The ordinary desktop continues bounded survival. To assign a production/care
-goal, initialize an explicitly new E world and use the same controller:
+goal, initialize a new save with the E physical profile and use the same controller:
 
 ```powershell
 $env:UNDERWORLD_BUILD=(Resolve-Path build/living-d).Path
@@ -146,8 +152,10 @@ Task goals include food/wood acquisition, axe/plank/trough production, actual
 water delivery, animal care, inspection and rest. Plans are authored templates;
 verified own receipts can influence future source choice. Urgent body needs
 preempt tasks between actions. Completion requires native evidence, while
-scarcity, absent targets, blocked routes and unsupported pen/teaching tasks
-remain explicit failures. No model or Phase 9 learner is needed.
+scarcity, absent targets and blocked routes remain explicit failures. G adds
+`build_pen` for a bounded empty blueprint and `feed_animal` with optional own
+CARE lesson provenance; arbitrary pen topology and `teach_procedure` remain
+unsupported. See [G commands and archive bundles](docs/INTEGRATED_WORLD_OPERATIONS.md). No model or Phase 9 learner is needed.
 
 `--task-mode model_assisted` explicitly opts into bounded local inference for
 operator selection; it is not general model planning. The normal model-off

@@ -18,12 +18,12 @@ from .policy import _waypoint, _segment_clear
 from .wire import dumps
 from . import planning
 
-VERSION='stabilization/4'
+VERSION='stabilization/5'
 
 
 def source_id():
     root=Path(__file__).parent
-    return hashlib.sha256(b''.join((root/name).read_bytes() for name in ('stabilization.py','planning.py','planning_model.py'))).hexdigest()
+    return hashlib.sha256(b''.join((root/name).read_bytes() for name in ('stabilization.py','planning.py','planning_model.py','enclosure.py','care.py'))).hexdigest()
 
 
 def _save(db,agent,state):
@@ -35,7 +35,7 @@ def _event(db,agent,tick,kind,data):
     number=db.execute('SELECT count(*) FROM stabilization_events').fetchone()[0]
     if number>=8192: raise ValueError('stabilization event quota reached')
     previous=db.execute('SELECT checksum FROM stabilization_events ORDER BY id DESC LIMIT 1').fetchone()
-    payload=dumps(dict(agent=agent,tick=tick,kind=kind,data=data,previous=previous[0] if previous else None))
+    payload=dumps(dict(agent=agent,tick=tick,kind=kind,data=data,previous=previous[0] if previous else json.loads(db.execute('SELECT payload FROM stabilization_meta').fetchone()[0]).get('event_chain_anchor')))
     if len(payload.encode())>65536: raise ValueError('stabilization audit payload bound')
     db.execute('INSERT INTO stabilization_events(payload,checksum) VALUES(?,?)',(payload,storage.digest(payload)))
 
@@ -51,7 +51,8 @@ def _load(db,agent):
 
 
 def verify_event_chain(db):
-    previous=None
+    row=db.execute('SELECT payload FROM stabilization_meta').fetchone()
+    previous=json.loads(row[0]).get('event_chain_anchor') if row else None
     for payload,checksum in db.execute('SELECT payload,checksum FROM stabilization_events ORDER BY id'):
         if storage.digest(payload)!=checksum or json.loads(payload)['previous']!=previous: raise ValueError('stabilization event chain')
         previous=checksum
@@ -198,12 +199,18 @@ def _next(s,o,own_memory_ids=(),goal=None):
         capacity=2000000000-int(own.get('carried_mass_ug',sum(int(v) for v in own['inventory_ug'].values())))
         if capacity<=0:return None,'capacity_blocked'
         if not resources:
+            remembered=planning.remembered_route(o,s['navigation'].get('resources',{}) if s.get('memory_enabled',True) else {},kinds,s['navigation'].setdefault('approach_memory',{}))
+            if remembered:
+                g['phase']='approach_remembered_source';g['steps']+=1
+                return _action(s,o,remembered['action'],remembered['params'],duration=remembered['duration']),None
             # No hidden resource map. Bounded perceived-space search only.
             g['phase']='search';g['target']=None
             bounds=o['world_bounds_m'];index=s['navigation'].get('search',0)%4
             goals=[(1.,1.),(bounds['width']-1,1.),(1.,bounds['height']-1),(bounds['width']-1,bounds['height']-1)]
+            if math.dist(pos,goals[index])<.5:
+                index=(index+1)%4
             point=_waypoint(pos,goals[index],o['visible_entities'],bounds)
-            s['navigation']['search']=index+1
+            s['navigation']['search']=index if point else index+1
             if not point or g['steps']>=4:return None,'no_observed_supply_after_bounded_search'
             g['steps']+=1
             return _action(s,o,'move',{'x_m':point[0],'y_m':point[1]},duration=max(dt,math.ceil(math.dist(pos,point)/dt)*dt)),None
@@ -239,7 +246,11 @@ def _next(s,o,own_memory_ids=(),goal=None):
 
 
 def _task_request(db,s,o,config,provider):
-    e=s['tasks'];t=e['active'];options,done,blocked=planning.choices(e,o)
+    e=s['tasks'];t=e['active']
+    from .config import episodic_enabled
+    if t.get('lesson_episode_id') and not episodic_enabled(config):
+        planning.finish(db,s,o,'blocked','care_lesson_access_disabled');return None
+    options,done,blocked=planning.choices(e,o)
     if done or blocked:
         planning.finish(db,s,o,'completed' if done else 'blocked',blocked or 'native_observable_goal_predicate')
         return None
@@ -290,6 +301,16 @@ def step(path,agents=None,provider=None,fault=None,external=()):
             o=storage.observe(path,[agent])[0];tick=int(o['tick'])
             with closing(storage._connect(path)) as db:
                 db.execute('BEGIN IMMEDIATE');s=_load(db,agent);s['last_tick']=tick
+                from .config import episodic_enabled
+                s['memory_enabled']=episodic_enabled(config)
+                if episodic_enabled(config):
+                    sites=s['navigation'].setdefault('resources',{})
+                    for seen in o['visible_entities']:
+                        if seen['kind'] not in ('food','water','forage','wood','fiber','stone'):continue
+                        if int(seen.get('mass_ug',0))<=0:sites.pop(seen['entity_id'],None);continue
+                        sites[seen['entity_id']]={k:seen[k] for k in ('entity_id','kind','position_m','radius_m')}
+                        sites[seen['entity_id']]['last_seen_tick']=tick
+                    while len(sites)>32:del sites[next(iter(sites))]
                 pending=s['pending']
                 if pending:
                     rid=pending['request_id']
@@ -309,7 +330,7 @@ def step(path,agents=None,provider=None,fault=None,external=()):
                             elif s['goal']['kind'] not in ('eat','drink'):_finish(db,s,o,'completed','native_terminal_completion')
                 own=o['own_state'];g=s['goal']
                 task=s.get('tasks',{}).get('active')
-                if task and not (s['pending'] and s.get('pending_owner')=='task') and tick-task['created_tick']>=math.ceil(360/o['dt_s']):
+                if task and not (s['pending'] and s.get('pending_owner')=='task') and tick-task['created_tick']>=math.ceil(planning.deadline(task)/o['dt_s']):
                     planning.finish(db,s,o,'blocked','task_deadline_including_survival_preemption')
                 if g and g['kind'] in ('eat','drink'):
                     material='food' if g['kind']=='eat' else 'water'
@@ -325,8 +346,11 @@ def step(path,agents=None,provider=None,fault=None,external=()):
                 if own['busy'] or s['pending']:
                     _save(db,agent,s);db.commit();continue
                 if s.get('tasks',{}).get('active') and not s['goal'] and not _need(o):
+                    s['tasks']['active']['known_resource_sites']=s['navigation'].get('resources',{}) if s['memory_enabled'] else {}
                     req=_task_request(db,s,o,config,provider)
                     if req:
+                        from .care import reserve as reserve_care
+                        reserve_care(db,agent,s['tasks']['active'],req,tick)
                         s['pending']=req;s['pending_owner']='task';s['submitted']+=1;s['authored_steps']+=1
                         _event(db,agent,tick,'request_reserved',dict(request=req,task_id=s['tasks']['active']['id'],executor='authored_hierarchical_executor',own_observation=o))
                         requests.append((tick,req))
@@ -382,10 +406,25 @@ def run(path,seconds,wall_seconds=240,provider=None,agents=None,stop_requested=N
     if type(wall_seconds) not in (int,float) or not 0<wall_seconds<=3600:raise ValueError('bounded wall duration required')
     outcome='target_reached'
     with Lease(path):
-        start=time.perf_counter();initial=storage.inspect(path);target=int(initial['tick'])+math.ceil(seconds/initial['dt_s'])
+        start=time.perf_counter();initial=storage.inspect(path);
+        with closing(storage._connect(path,readonly=True)) as db:_,config,_,_=storage._head(db)
+        if 'execution' in config:
+            from . import runtime
+            runtime.verify_archives(path,config['execution'])
+        target=int(initial['tick'])+math.ceil(seconds/initial['dt_s'])
         while int(storage.inspect(path)['tick'])<target:
             if stop_requested and stop_requested():outcome='stopped';break
             if time.perf_counter()-start>=wall_seconds:outcome='wall_limit';break
+            if 'execution' in config:
+                from . import runtime
+                with closing(storage._connect(path,readonly=True)) as db:
+                    control=runtime.verify_control(db)
+                if int(storage.inspect(path)['tick'])>=control['last_rotation_tick']+config['execution']['epoch_ticks']:
+                    try:runtime.rotate(path,config['execution'])
+                    except ValueError as failure:
+                        if 'unsubmitted controller reservation' in str(failure):pass
+                        elif 'quota' in str(failure):outcome='quota_reached';break
+                        else:raise
             step(path,agents,provider)
     final=storage.inspect(path)
     return dict(status=outcome,initial_tick=initial['tick'],tick=final['tick'],simulated_s=(int(final['tick'])-int(initial['tick']))*final['dt_s'],

@@ -1,0 +1,20 @@
+{
+  "path": "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\data\\living-world-g-confirmation-20261021\\2521-assigned.sqlite",
+  "initial_simulated_s": 300.0,
+  "final_simulated_s": 537.0,
+  "wall_s": 240.5160625999997,
+  "run": {
+    "status": "wall_limit",
+    "initial_tick": "600",
+    "tick": "1074",
+    "simulated_s": 237.0,
+    "wall_s": 240.34145790000912,
+    "state_hash": "113f9056597a31a88806e586bdf79610b19627b37b21eaba26ce7bd6d5c4326a",
+    "replay": {
+      "replay_matches": true,
+      "tick": "1074",
+      "state_hash": "113f9056597a31a88806e586bdf79610b19627b37b21eaba26ce7bd6d5c4326a"
+    }
+  },
+  "note": "Continuation of the same saved life; no new goals, knowledge, bodies, resources or models."
+}

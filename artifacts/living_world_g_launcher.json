@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "command": [
+    "C:\\Program Files\\Git\\bin\\bash.exe",
+    "run.sh",
+    "--db",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\data\\living-world-g-bash-20261021\\world.sqlite",
+    "--seconds",
+    ".4",
+    "--port",
+    "0",
+    "--no-browser",
+    "--exit-after-run"
+  ],
+  "returncode": 0,
+  "stdout": [
+    {
+      "ready": true,
+      "version": "0.14.0",
+      "db": "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\data\\living-world-g-bash-20261021\\world.sqlite",
+      "url": "http://127.0.0.1:59564/viewer",
+      "native_build_id": "832c4a705a7ceecd85d8befb3d84f4dff0d4730f024c395eba12985f0d8bd896",
+      "simulated_seconds_requested": 0.4,
+      "viewer_read_only": true,
+      "model_calls_enabled": false
+    },
+    {
+      "run": {
+        "status": "target_reached",
+        "initial_tick": "0",
+        "tick": "2",
+        "simulated_s": 0.4,
+        "wall_s": 0.41283560000010766,
+        "state_hash": "2e66ce2cf80416a5fe5628a3d80cc8d482c72c21e3074cedf3e40956a3970b39",
+        "replay": {
+          "replay_matches": true,
+          "tick": "2",
+          "state_hash": "2e66ce2cf80416a5fe5628a3d80cc8d482c72c21e3074cedf3e40956a3970b39"
+        }
+      }
+    }
+  ],
+  "stderr": "",
+  "wall_s": 2.7403919999924256,
+  "exe_sha256": "3f40a7ba64a79004a35a7268a2b36883250ddce830e7a729aec8eca497aac30b"
+}

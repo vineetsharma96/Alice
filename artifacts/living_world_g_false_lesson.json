@@ -1,0 +1,2188 @@
+{
+  "passed": true,
+  "history": {
+    "completed_tick": 51,
+    "created_tick": 0,
+    "delivered_ug": 0,
+    "evidence": [
+      "stable-agent-1-2",
+      "stable-agent-1-3",
+      "stable-agent-1-4",
+      "stable-agent-1-5",
+      "stable-agent-1-6",
+      "stable-agent-1-7",
+      "stable-agent-1-8",
+      "stable-agent-1-9",
+      "stable-agent-1-10",
+      "stable-agent-1-11",
+      "stable-agent-1-12",
+      "stable-agent-1-13",
+      "stable-agent-1-14",
+      "stable-agent-1-15",
+      "stable-agent-1-16",
+      "stable-agent-1-17",
+      "stable-agent-1-18",
+      "stable-agent-1-19",
+      "stable-agent-1-20",
+      "stable-agent-1-21",
+      "stable-agent-1-22",
+      "stable-agent-1-23",
+      "stable-agent-1-24",
+      "stable-agent-1-25",
+      "stable-agent-1-26",
+      "stable-agent-1-27",
+      "stable-agent-1-28",
+      "stable-agent-1-29",
+      "stable-agent-1-30",
+      "stable-agent-1-31",
+      "stable-agent-1-32",
+      "stable-agent-1-33",
+      "stable-agent-1-34",
+      "stable-agent-1-35",
+      "stable-agent-1-36",
+      "stable-agent-1-37",
+      "stable-agent-1-38",
+      "stable-agent-1-39",
+      "stable-agent-1-40",
+      "stable-agent-1-41",
+      "stable-agent-1-42",
+      "stable-agent-1-43",
+      "stable-agent-1-44",
+      "stable-agent-1-45",
+      "stable-agent-1-46",
+      "stable-agent-1-47",
+      "stable-agent-1-48",
+      "stable-agent-1-49"
+    ],
+    "execution_origin": "authored_assigned_care_executor",
+    "executor_goal_credit": false,
+    "failures": 1,
+    "goal": "feed_animal",
+    "id": 1,
+    "knowledge_origin": "own_accessed_external_claim",
+    "lesson_episode_id": 1,
+    "lesson_source_id": "operator:false-care",
+    "mode": "adaptive",
+    "native_failures": [
+      {
+        "action": "offer_feed",
+        "description": "",
+        "error": "INVALID_ARGUMENT",
+        "event_refs": [
+          "149"
+        ],
+        "request_id": "stable-agent-1-50",
+        "source": "offer_feed:animal-1",
+        "status": "rejected",
+        "tick": 51
+      }
+    ],
+    "origin": "operator_assigned_authored_procedure",
+    "outcome": "blocked",
+    "procedure_source": null,
+    "reason": "native_care_test_failed",
+    "steps": 49
+  },
+  "tests": [
+    {
+      "episode_id": 52,
+      "tick": 51,
+      "kind": "knowledge_test",
+      "branch_id": "549c0232-5d51-45ff-b738-45846c736a28",
+      "error_code": "INVALID_ARGUMENT",
+      "event_refs": [
+        "149"
+      ],
+      "execution_origin": "authored_assigned_care_executor",
+      "lesson_branch_id": "549c0232-5d51-45ff-b738-45846c736a28",
+      "lesson_episode_id": 1,
+      "lesson_source_id": "operator:false-care",
+      "request_id": "stable-agent-1-50",
+      "skill_granted_by_text": false,
+      "source_type": "operator_injection",
+      "status": "rejected"
+    }
+  ],
+  "decisions": [
+    {
+      "request": {
+        "branch_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "intervention_id": "false-care",
+        "kind": "inject_knowledge",
+        "observation_version": "0",
+        "parameters": {
+          "recipient": "agent-1",
+          "text": "CARE {\"material\":\"water\",\"task\":\"feed-v1\"}"
+        },
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1
+      },
+      "submission": {
+        "branch_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "native_action": false,
+        "recipient": "agent-1",
+        "skill_granted": false,
+        "source_id": "operator:false-care",
+        "source_type": "operator_injection",
+        "status": "recorded",
+        "tick": "0"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "0",
+        "parameters": {
+          "x_m": 2.045405845398161,
+          "y_m": 2.954594154601839
+        },
+        "request_id": "stable-agent-1-2",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "2"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "0",
+        "reason": "",
+        "request_id": "stable-agent-1-2",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "0",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "gather",
+        "agent_id": "agent-1",
+        "observation_version": "1",
+        "parameters": {
+          "mass_kg": 0.025
+        },
+        "request_id": "stable-agent-1-3",
+        "requested_duration": 1,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": [
+          "resource-2"
+        ]
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "5"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "1",
+        "reason": "",
+        "request_id": "stable-agent-1-3",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "1",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "3",
+        "parameters": {
+          "x_m": 2.7349103336902587,
+          "y_m": 3.5117053807264664
+        },
+        "request_id": "stable-agent-1-4",
+        "requested_duration": 1.0,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "10"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "3",
+        "reason": "",
+        "request_id": "stable-agent-1-4",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "3",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "5",
+        "parameters": {
+          "x_m": 2.837141845453482,
+          "y_m": 3.649469957007538
+        },
+        "request_id": "stable-agent-1-5",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "14"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "5",
+        "reason": "",
+        "request_id": "stable-agent-1-5",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "5",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "6",
+        "parameters": {
+          "x_m": 2.8955765820238986,
+          "y_m": 3.7508055618866014
+        },
+        "request_id": "stable-agent-1-6",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "17"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "6",
+        "reason": "",
+        "request_id": "stable-agent-1-6",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "6",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "7",
+        "parameters": {
+          "x_m": 2.95003622067344,
+          "y_m": 3.8733499941881413
+        },
+        "request_id": "stable-agent-1-7",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "20"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "7",
+        "reason": "",
+        "request_id": "stable-agent-1-7",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "7",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "8",
+        "parameters": {
+          "x_m": 2.997178040452571,
+          "y_m": 4.013850917862143
+        },
+        "request_id": "stable-agent-1-8",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "23"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "8",
+        "reason": "",
+        "request_id": "stable-agent-1-8",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "8",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "9",
+        "parameters": {
+          "x_m": 3.0350014089159942,
+          "y_m": 4.168903393767922
+        },
+        "request_id": "stable-agent-1-9",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "26"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "9",
+        "reason": "",
+        "request_id": "stable-agent-1-9",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "9",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "10",
+        "parameters": {
+          "x_m": 3.0625769776809793,
+          "y_m": 4.335321075227885
+        },
+        "request_id": "stable-agent-1-10",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "29"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "10",
+        "reason": "",
+        "request_id": "stable-agent-1-10",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "10",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "11",
+        "parameters": {
+          "x_m": 3.079750339760815,
+          "y_m": 4.510330076719027
+        },
+        "request_id": "stable-agent-1-11",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "32"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "11",
+        "reason": "",
+        "request_id": "stable-agent-1-11",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "11",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "12",
+        "parameters": {
+          "x_m": 3.086878862961008,
+          "y_m": 4.691635290975328
+        },
+        "request_id": "stable-agent-1-12",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "35"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "12",
+        "reason": "",
+        "request_id": "stable-agent-1-12",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "12",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "13",
+        "parameters": {
+          "x_m": 3.084624489360295,
+          "y_m": 4.877408498604414
+        },
+        "request_id": "stable-agent-1-13",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "38"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "13",
+        "reason": "",
+        "request_id": "stable-agent-1-13",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "13",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "14",
+        "parameters": {
+          "x_m": 3.073803843681833,
+          "y_m": 5.066236303666228
+        },
+        "request_id": "stable-agent-1-14",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "41"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "14",
+        "reason": "",
+        "request_id": "stable-agent-1-14",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "14",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "15",
+        "parameters": {
+          "x_m": 3.0552870753745576,
+          "y_m": 5.257052994607157
+        },
+        "request_id": "stable-agent-1-15",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "44"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "15",
+        "reason": "",
+        "request_id": "stable-agent-1-15",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "15",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "16",
+        "parameters": {
+          "x_m": 3.0299340356060607,
+          "y_m": 5.44907287037123
+        },
+        "request_id": "stable-agent-1-16",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "47"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "16",
+        "reason": "",
+        "request_id": "stable-agent-1-16",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "16",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "17",
+        "parameters": {
+          "x_m": 2.9985571054765434,
+          "y_m": 5.641729278724201
+        },
+        "request_id": "stable-agent-1-17",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "50"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "17",
+        "reason": "",
+        "request_id": "stable-agent-1-17",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "17",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "18",
+        "parameters": {
+          "x_m": 2.9619020321125706,
+          "y_m": 5.834623134002166
+        },
+        "request_id": "stable-agent-1-18",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "53"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "18",
+        "reason": "",
+        "request_id": "stable-agent-1-18",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "18",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "19",
+        "parameters": {
+          "x_m": 2.920640348092701,
+          "y_m": 6.0274812091740895
+        },
+        "request_id": "stable-agent-1-19",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "56"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "19",
+        "reason": "",
+        "request_id": "stable-agent-1-19",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "19",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "20",
+        "parameters": {
+          "x_m": 2.8753688644238062,
+          "y_m": 6.22012330197147
+        },
+        "request_id": "stable-agent-1-20",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "59"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "20",
+        "reason": "",
+        "request_id": "stable-agent-1-20",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "20",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "21",
+        "parameters": {
+          "x_m": 2.826613206508436,
+          "y_m": 6.412436922073377
+        },
+        "request_id": "stable-agent-1-21",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "62"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "21",
+        "reason": "",
+        "request_id": "stable-agent-1-21",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "21",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "22",
+        "parameters": {
+          "x_m": 2.774833431768941,
+          "y_m": 6.604358087617894
+        },
+        "request_id": "stable-agent-1-22",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "65"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "22",
+        "reason": "",
+        "request_id": "stable-agent-1-22",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "22",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "23",
+        "parameters": {
+          "x_m": 2.7204305060646923,
+          "y_m": 6.7958569458233455
+        },
+        "request_id": "stable-agent-1-23",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "68"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "23",
+        "reason": "",
+        "request_id": "stable-agent-1-23",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "23",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "24",
+        "parameters": {
+          "x_m": 2.663752908704213,
+          "y_m": 6.986927127819522
+        },
+        "request_id": "stable-agent-1-24",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "71"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "24",
+        "reason": "",
+        "request_id": "stable-agent-1-24",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "24",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "25",
+        "parameters": {
+          "x_m": 2.606520559419412,
+          "y_m": 7.131705863746897
+        },
+        "request_id": "stable-agent-1-25",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "74"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "25",
+        "reason": "",
+        "request_id": "stable-agent-1-25",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "25",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "26",
+        "parameters": {
+          "x_m": 2.533770569048551,
+          "y_m": 7.280443564584578
+        },
+        "request_id": "stable-agent-1-26",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "77"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "26",
+        "reason": "",
+        "request_id": "stable-agent-1-26",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "26",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "27",
+        "parameters": {
+          "x_m": 2.4469466944936107,
+          "y_m": 7.430547513061123
+        },
+        "request_id": "stable-agent-1-27",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "80"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "27",
+        "reason": "",
+        "request_id": "stable-agent-1-27",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "27",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "28",
+        "parameters": {
+          "x_m": 2.3476939376001296,
+          "y_m": 7.58015992993349
+        },
+        "request_id": "stable-agent-1-28",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "83"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "28",
+        "reason": "",
+        "request_id": "stable-agent-1-28",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "28",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "29",
+        "parameters": {
+          "x_m": 2.2376686349103405,
+          "y_m": 7.7280297049159365
+        },
+        "request_id": "stable-agent-1-29",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "86"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "29",
+        "reason": "",
+        "request_id": "stable-agent-1-29",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "29",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "30",
+        "parameters": {
+          "x_m": 2.1184269485077962,
+          "y_m": 7.873377264211658
+        },
+        "request_id": "stable-agent-1-30",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "89"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "30",
+        "reason": "",
+        "request_id": "stable-agent-1-30",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "30",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "31",
+        "parameters": {
+          "x_m": 1.9913691045883692,
+          "y_m": 8.015772718502223
+        },
+        "request_id": "stable-agent-1-31",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "92"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "31",
+        "reason": "",
+        "request_id": "stable-agent-1-31",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "31",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "32",
+        "parameters": {
+          "x_m": 1.8577197827000718,
+          "y_m": 8.155035139548536
+        },
+        "request_id": "stable-agent-1-32",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "95"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "32",
+        "reason": "",
+        "request_id": "stable-agent-1-32",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "32",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "33",
+        "parameters": {
+          "x_m": 1.7185299558315053,
+          "y_m": 8.291153875119775
+        },
+        "request_id": "stable-agent-1-33",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "98"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "33",
+        "reason": "",
+        "request_id": "stable-agent-1-33",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "33",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "34",
+        "parameters": {
+          "x_m": 1.5746901325363072,
+          "y_m": 8.424229518349053
+        },
+        "request_id": "stable-agent-1-34",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "101"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "34",
+        "reason": "",
+        "request_id": "stable-agent-1-34",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "34",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "35",
+        "parameters": {
+          "x_m": 1.4269486157657925,
+          "y_m": 8.554431001974471
+        },
+        "request_id": "stable-agent-1-35",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "104"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "35",
+        "reason": "",
+        "request_id": "stable-agent-1-35",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "35",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "36",
+        "parameters": {
+          "x_m": 1.2759309937245367,
+          "y_m": 8.681965252467503
+        },
+        "request_id": "stable-agent-1-36",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "107"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "36",
+        "reason": "",
+        "request_id": "stable-agent-1-36",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "36",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "37",
+        "parameters": {
+          "x_m": 1.2018536101003343,
+          "y_m": 8.761513953968482
+        },
+        "request_id": "stable-agent-1-37",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "110"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "37",
+        "reason": "",
+        "request_id": "stable-agent-1-37",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "37",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "38",
+        "parameters": {
+          "x_m": 1.0783774702088098,
+          "y_m": 8.906107517749668
+        },
+        "request_id": "stable-agent-1-38",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "113"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "38",
+        "reason": "",
+        "request_id": "stable-agent-1-38",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "38",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "39",
+        "parameters": {
+          "x_m": 1.0028921732514113,
+          "y_m": 9.016103598448783
+        },
+        "request_id": "stable-agent-1-39",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "116"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "39",
+        "reason": "",
+        "request_id": "stable-agent-1-39",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "39",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "40",
+        "parameters": {
+          "x_m": 0.9312709356728031,
+          "y_m": 9.145199218814545
+        },
+        "request_id": "stable-agent-1-40",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "119"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "40",
+        "reason": "",
+        "request_id": "stable-agent-1-40",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "40",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "41",
+        "parameters": {
+          "x_m": 0.8661420827671245,
+          "y_m": 9.29040670824179
+        },
+        "request_id": "stable-agent-1-41",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "122"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "41",
+        "reason": "",
+        "request_id": "stable-agent-1-41",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "41",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "42",
+        "parameters": {
+          "x_m": 0.78451632970594,
+          "y_m": 9.472983271369891
+        },
+        "request_id": "stable-agent-1-42",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "125"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "42",
+        "reason": "",
+        "request_id": "stable-agent-1-42",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "42",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "43",
+        "parameters": {
+          "x_m": 0.7275320170663989,
+          "y_m": 9.631501107325377
+        },
+        "request_id": "stable-agent-1-43",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "128"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "43",
+        "reason": "",
+        "request_id": "stable-agent-1-43",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "43",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "44",
+        "parameters": {
+          "x_m": 0.6792465791826863,
+          "y_m": 9.800397677287839
+        },
+        "request_id": "stable-agent-1-44",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "131"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "44",
+        "reason": "",
+        "request_id": "stable-agent-1-44",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "44",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "45",
+        "parameters": {
+          "x_m": 0.6214197404517798,
+          "y_m": 9.990226851180735
+        },
+        "request_id": "stable-agent-1-45",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "134"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "45",
+        "reason": "",
+        "request_id": "stable-agent-1-45",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "45",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "46",
+        "parameters": {
+          "x_m": 0.57954699874294,
+          "y_m": 10.165196566637022
+        },
+        "request_id": "stable-agent-1-46",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "137"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "46",
+        "reason": "",
+        "request_id": "stable-agent-1-46",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "46",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "47",
+        "parameters": {
+          "x_m": 0.5462407594295772,
+          "y_m": 10.346765594872979
+        },
+        "request_id": "stable-agent-1-47",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "140"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "47",
+        "reason": "",
+        "request_id": "stable-agent-1-47",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "47",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "48",
+        "parameters": {
+          "x_m": 0.5053154509343513,
+          "y_m": 10.537802351014152
+        },
+        "request_id": "stable-agent-1-48",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "143"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "48",
+        "reason": "",
+        "request_id": "stable-agent-1-48",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "48",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "move",
+        "agent_id": "agent-1",
+        "observation_version": "49",
+        "parameters": {
+          "x_m": 0.4755522943128224,
+          "y_m": 10.721682618803232
+        },
+        "request_id": "stable-agent-1-49",
+        "requested_duration": 0.5,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": []
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "0",
+        "error_code": "",
+        "event_refs": [
+          "146"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "49",
+        "reason": "",
+        "request_id": "stable-agent-1-49",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "49",
+        "status": "accepted"
+      }
+    },
+    {
+      "request": {
+        "action_type": "offer_feed",
+        "agent_id": "agent-1",
+        "observation_version": "50",
+        "parameters": {
+          "mass_kg": 0.025,
+          "material": "water"
+        },
+        "request_id": "stable-agent-1-50",
+        "requested_duration": 1,
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "target_ids": [
+          "animal-1"
+        ]
+      },
+      "submission": {
+        "agent_id": "agent-1",
+        "completed_tick": "50",
+        "error_code": "INVALID_ARGUMENT",
+        "event_refs": [
+          "149"
+        ],
+        "observable_effects": {
+          "description": ""
+        },
+        "observation_version": "50",
+        "reason": "INVALID_ARGUMENT",
+        "request_id": "stable-agent-1-50",
+        "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+        "schema_version": 1,
+        "started_tick": "50",
+        "status": "rejected"
+      }
+    }
+  ],
+  "snapshot": {
+    "schema_version": 1,
+    "kind": "world_snapshot",
+    "run_id": "549c0232-5d51-45ff-b738-45846c736a28",
+    "culture": {
+      "enabled": false,
+      "skills": {},
+      "agreements": [],
+      "validated_batches": [],
+      "departed": []
+    },
+    "ecology": {
+      "enabled": true,
+      "controller_origin": "authored_native_ecology_v1",
+      "animals": {
+        "animal-1": {
+          "species": "mossgrazer",
+          "mode": "wander",
+          "age_s": 146.0,
+          "life_stage": "adult",
+          "laying_s": 0.0,
+          "food_reserve_ug": "224000000",
+          "water_reserve_ug": "161000000",
+          "food_metabolized_ug": "26000000",
+          "water_metabolized_ug": "39000000",
+          "eggs_laid_ug": "0",
+          "familiarity": {},
+          "last_feed": {},
+          "handler": "",
+          "guide_until": "0"
+        },
+        "animal-2": {
+          "species": "reedhen",
+          "mode": "wander",
+          "age_s": 146.0,
+          "life_stage": "adult",
+          "laying_s": 26.0,
+          "food_reserve_ug": "224000000",
+          "water_reserve_ug": "161000000",
+          "food_metabolized_ug": "26000000",
+          "water_metabolized_ug": "39000000",
+          "eggs_laid_ug": "0",
+          "familiarity": {},
+          "last_feed": {},
+          "handler": "",
+          "guide_until": "0"
+        }
+      },
+      "freshness_s": {},
+      "structural_body_initial_ug": "2800000000",
+      "food_residue_ug": "52000000",
+      "water_waste_ug": "78000000",
+      "egg_input_ug": "0",
+      "eggs_produced_ug": "0",
+      "forage_regeneration_kg_s": 0.0
+    },
+    "branch_id": "549c0232-5d51-45ff-b738-45846c736a28",
+    "tick": "52",
+    "observation_version": "52",
+    "last_event_seq": "151",
+    "seed": "21",
+    "dt_s": 0.5,
+    "simulated_time_s": 26.0,
+    "laws_version": "culture-6/32b9f13b5fe9",
+    "thermal": {
+      "enabled": false,
+      "open_boundaries": false,
+      "cells": [],
+      "ambient_temperature_k": 0.0,
+      "stored_energy_j": 0.0,
+      "initial_energy_j": 0.0,
+      "heater_input_j": 0.0,
+      "radiation_in_j": 0.0,
+      "radiation_out_j": 0.0,
+      "outflow_energy_j": 0.0,
+      "solar_transferred_j": 0.0,
+      "burned_fuel_ug": "0",
+      "outflow_water_ug": "0",
+      "balance_error_j": 0.0,
+      "global_balance_error_j": 0.0,
+      "energy_tolerance_j": 1e-05
+    },
+    "build_id": "832c4a705a7ceecd85d8befb3d84f4dff0d4730f024c395eba12985f0d8bd896",
+    "world_bounds_m": {
+      "width": 16.0,
+      "height": 16.0
+    },
+    "entities": [
+      {
+        "entity_id": "terrain-1",
+        "kind": "rock",
+        "position_m": [
+          8.0,
+          8.0
+        ],
+        "radius_m": 1.0,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "tree-1",
+        "kind": "tree",
+        "position_m": [
+          2.0,
+          14.0
+        ],
+        "radius_m": 0.6,
+        "mass_kg": 2.0,
+        "mass_ug": "2000000000",
+        "stage": "young",
+        "health": 1.0,
+        "biomass_ug": "2000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "tree-2",
+        "kind": "tree",
+        "position_m": [
+          14.0,
+          2.0
+        ],
+        "radius_m": 0.6,
+        "mass_kg": 8.0,
+        "mass_ug": "8000000000",
+        "stage": "mature",
+        "health": 1.0,
+        "biomass_ug": "8000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "tree-3",
+        "kind": "tree",
+        "position_m": [
+          14.0,
+          14.0
+        ],
+        "radius_m": 0.6,
+        "mass_kg": 8.0,
+        "mass_ug": "8000000000",
+        "stage": "mature",
+        "health": 1.0,
+        "biomass_ug": "8000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "agent-1",
+        "kind": "actor",
+        "position_m": [
+          0.4755522943128224,
+          10.721682618803232
+        ],
+        "radius_m": 0.25,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "workmanship": 0,
+        "inventory_ug": {
+          "water": "25000000"
+        },
+        "alive": true,
+        "body": {
+          "hunger": 0.376,
+          "thirst": 0.4389999999999986,
+          "fatigue": 0.23039999999999955,
+          "health": 1.0,
+          "alive": true,
+          "food_ingested_ug": "0",
+          "water_ingested_ug": "0"
+        },
+        "present": true
+      },
+      {
+        "entity_id": "resource-1",
+        "kind": "food",
+        "position_m": [
+          2.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 8.0,
+        "mass_ug": "8000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "resource-2",
+        "kind": "water",
+        "position_m": [
+          3.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 15.975,
+        "mass_ug": "15975000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "resource-3",
+        "kind": "inert_material",
+        "position_m": [
+          4.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 32.0,
+        "mass_ug": "32000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "resource-4",
+        "kind": "stone",
+        "position_m": [
+          5.0,
+          2.0
+        ],
+        "radius_m": 0.15,
+        "mass_kg": 4.0,
+        "mass_ug": "4000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "animal-1",
+        "kind": "animal",
+        "position_m": [
+          0.20389724326742656,
+          11.862323452095877
+        ],
+        "radius_m": 0.2,
+        "mass_kg": 2.0,
+        "mass_ug": "2000000000",
+        "stage": "wild",
+        "alive": true,
+        "condition": "good",
+        "inventory_ug": {},
+        "body": {
+          "hunger": 0.43999999999999995,
+          "thirst": 0.4633333333333334,
+          "fatigue": 0.2880000000000001,
+          "health": 1.0,
+          "alive": true,
+          "food_ingested_ug": "0",
+          "water_ingested_ug": "0"
+        }
+      },
+      {
+        "entity_id": "animal-2",
+        "kind": "animal",
+        "position_m": [
+          6.97438192481152,
+          13.70034514355473
+        ],
+        "radius_m": 0.2,
+        "mass_kg": 0.8,
+        "mass_ug": "800000000",
+        "stage": "wild",
+        "alive": true,
+        "condition": "good",
+        "inventory_ug": {},
+        "body": {
+          "hunger": 0.43999999999999995,
+          "thirst": 0.4633333333333334,
+          "fatigue": 0.3040000000000001,
+          "health": 1.0,
+          "alive": true,
+          "food_ingested_ug": "0",
+          "water_ingested_ug": "0"
+        }
+      },
+      {
+        "entity_id": "forage-1",
+        "kind": "forage",
+        "position_m": [
+          4.0,
+          4.5
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 2.0,
+        "mass_ug": "2000000000",
+        "inventory_ug": {}
+      }
+    ],
+    "outstanding_actions": [],
+    "material_totals_ug": {
+      "animal": "2800000000",
+      "food": "8000000000",
+      "forage": "2000000000",
+      "fuel_X": "0",
+      "inert_material": "32000000000",
+      "oxygen": "0",
+      "product_P": "0",
+      "stone": "4000000000",
+      "tree": "18000000000",
+      "water": "16000000000"
+    },
+    "event_counts": {
+      "action_accepted": 48,
+      "action_completed": 48,
+      "action_rejected": 1,
+      "ecology_initialized": 1,
+      "mass_transfer": 1,
+      "tick": 52
+    },
+    "solar_input_j": 617.1482431809562,
+    "environment_energy_j": 617.1482431809562,
+    "operator_energy_input_j": 0.0,
+    "operator_sources_ug": {
+      "food": 0,
+      "fuel_X": 0,
+      "inert_material": 0,
+      "oxygen": 0,
+      "product_P": 0,
+      "stone": 0,
+      "water": 0
+    },
+    "mode": "guided",
+    "hearing_range_m": 6.0,
+    "sunlight_w_m2": 0.18907722297340734,
+    "scripted": false,
+    "next_script_tick": "0",
+    "bodies_enabled": true,
+    "initial_mass_ug": {
+      "food": 10500000000,
+      "fuel_X": 0,
+      "inert_material": 32000000000,
+      "oxygen": 0,
+      "product_P": 0,
+      "stone": 4000000000,
+      "tree": 18000000000,
+      "water": 16400000000
+    },
+    "boundary_sources_ug": {
+      "food": 0,
+      "fuel_X": 0,
+      "inert_material": 0,
+      "oxygen": 0,
+      "product_P": 0,
+      "stone": 0,
+      "tree": 0,
+      "water": 0
+    },
+    "config_hash": "c1256fa446b42fb6fd1ba9e4d29efd85368bb4f24bb94e4c19067c0d0b3e6473",
+    "state_hash": "472d4ffe272a4469b34b1e8b8a2e67e8d525d600a7d2cf29dca50937e1908560",
+    "parent_branch_id": null,
+    "interventions": 1,
+    "retained_events": 151,
+    "recorded_decisions": 50,
+    "cognitive_hash": "2eb658d746c217464149d451172a949e2d65a9fa0d5e99d186a84ccab77d5729",
+    "cognition_calls": 0,
+    "episodes": 52
+  },
+  "own": {
+    "entity_id": "agent-1",
+    "kind": "actor",
+    "position_m": [
+      0.4755522943128224,
+      10.721682618803232
+    ],
+    "radius_m": 0.25,
+    "mass_kg": 0.0,
+    "mass_ug": "0",
+    "workmanship": 0,
+    "inventory_ug": {
+      "water": "25000000"
+    },
+    "alive": true,
+    "body": {
+      "hunger": 0.376,
+      "thirst": 0.4389999999999986,
+      "fatigue": 0.23039999999999955,
+      "health": 1.0,
+      "alive": true,
+      "food_ingested_ug": "0",
+      "water_ingested_ug": "0"
+    },
+    "freshness_s": {},
+    "tools": [],
+    "carried_mass_ug": "25000000",
+    "busy": false,
+    "shared_event_refs": []
+  },
+  "wall_s": 7.350283699997817,
+  "replay": {
+    "replay_matches": true,
+    "tick": "52",
+    "state_hash": "472d4ffe272a4469b34b1e8b8a2e67e8d525d600a7d2cf29dca50937e1908560"
+  },
+  "model_calls": 0,
+  "note": "Accepted external claim is unverified. Real gathering costs time; native offer_feed rejects water without granting feeding success or skill."
+}

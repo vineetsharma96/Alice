@@ -1,0 +1,123 @@
+{
+  "passed": true,
+  "page_errors": [],
+  "epoch": 6,
+  "tools": [
+    {
+      "entity_id": "crafted-44",
+      "kind": "tool",
+      "position_m": [
+        3.9838699100999078,
+        1.5080650449500461
+      ],
+      "radius_m": 0,
+      "mass_kg": 0.7,
+      "mass_ug": "700000000",
+      "recipe_id": "crude_axe",
+      "owner_id": "agent-1",
+      "work_s": 0,
+      "durability": 7,
+      "composition_ug": {
+        "fiber": "50000000",
+        "stone": "200000000",
+        "wood": "450000000"
+      },
+      "inventory_ug": {}
+    }
+  ],
+  "pen_components": [
+    {
+      "id": "crafted-28",
+      "kind": "fence",
+      "position": [
+        9.2,
+        12.8
+      ]
+    },
+    {
+      "id": "crafted-29",
+      "kind": "fence",
+      "position": [
+        10.4,
+        12.8
+      ]
+    },
+    {
+      "id": "crafted-33",
+      "kind": "fence",
+      "position": [
+        11.6,
+        12.8
+      ]
+    },
+    {
+      "id": "crafted-34",
+      "kind": "fence",
+      "position": [
+        12.8,
+        12.8
+      ]
+    },
+    {
+      "id": "crafted-36",
+      "kind": "fence",
+      "position": [
+        9.2,
+        10.4
+      ]
+    },
+    {
+      "id": "crafted-37",
+      "kind": "fence",
+      "position": [
+        9.2,
+        11.6
+      ]
+    },
+    {
+      "id": "crafted-39",
+      "kind": "fence",
+      "position": [
+        12.8,
+        10.4
+      ]
+    },
+    {
+      "id": "crafted-40",
+      "kind": "fence",
+      "position": [
+        12.8,
+        11.6
+      ]
+    },
+    {
+      "id": "crafted-42",
+      "kind": "fence",
+      "position": [
+        9.2,
+        9.2
+      ]
+    },
+    {
+      "id": "crafted-43",
+      "kind": "fence",
+      "position": [
+        11.6,
+        9.2
+      ]
+    },
+    {
+      "id": "crafted-46",
+      "kind": "fence",
+      "position": [
+        12.8,
+        9.2
+      ]
+    }
+  ],
+  "native_build_id": "832c4a705a7ceecd85d8befb3d84f4dff0d4730f024c395eba12985f0d8bd896",
+  "private_observation_has_operator_diagnostics": false,
+  "source_shown": "operator:g-care",
+  "read_only": true,
+  "render": "headless Edge/software; no hardware FPS claim"
+}

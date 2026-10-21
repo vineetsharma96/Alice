@@ -73,3 +73,21 @@ tests reserve own provenance before submitting a native action; terminal memory
 and the test link commit together. Native laws/skill remain authoritative.
 See [F report](LIVING_WORLD_F_REPORT.md) and [operations](KNOWLEDGE_OPERATIONS.md).
 The bounded authored apparatus demo is not autonomous teaching or general learning.
+# Milestone G additions (21 October 2026)
+
+- Explicit `build_pen` uses one authored empty blueprint, actual material costs,
+  native geometry and a closed gate. Its bound is 192 primitives, four native
+  failures and 900 simulated seconds including preemption. No animal capture.
+- `feed_animal` may cite only the recipient's own retained CARE episode. A
+  durable intent precedes the native request; terminal native evidence decides
+  effect. False material claims retain native rejection and earn no goal credit.
+- Collection revalidates fresh visibility, even when an own remembered location
+  supplies the route. Operator diagnostics are not inhabitants' observations.
+- Rotation verifies archives before ticks/pruning, protects pending receipts and
+  source links, and stops on missing/corrupt files or quota exhaustion. Prefix
+  anchors declare history retention. Portable backups preserve epoch files.
+- The model-off desktop checks every managed inhabitant before starting threads.
+  Full unattended integration and fair global inference budgets remain open.
+
+See [protocol](PHASE_G_INTEGRATION.md) and [report](LIVING_WORLD_G_REPORT.md).
+Earlier contracts remain historical for their declared runtime versions.

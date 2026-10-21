@@ -35,7 +35,7 @@ def head_hash(state,policy_state):
 def orchestration_id():
     root = Path(__file__).parent
     return digest("".join((root / name).read_text(encoding="utf-8")
-                          for name in ("storage.py", "wire.py", "config.py", "policy.py", "memory.py", "cognition.py", "resources.py", "teaching.py", "knowledge.py", "culture.py", "lab_policy.py", "runtime.py", "lease.py", "isolation.py", "supervisor.py", "worker.py")))
+                          for name in ("storage.py", "wire.py", "config.py", "policy.py", "memory.py", "cognition.py", "resources.py", "teaching.py", "knowledge.py", "care.py", "enclosure.py", "culture.py", "lab_policy.py", "runtime.py", "lease.py", "isolation.py", "supervisor.py", "worker.py")))
 
 
 def laws_version(config):

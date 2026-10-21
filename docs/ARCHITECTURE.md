@@ -108,3 +108,19 @@ tests reserve own provenance before submitting a native action; terminal memory
 and the test link commit together. Native laws/skill remain authoritative.
 See [F report](LIVING_WORLD_F_REPORT.md) and [operations](KNOWLEDGE_OPERATIONS.md).
 The bounded authored apparatus demo is not autonomous teaching or general learning.
+# Milestone G integration (21 October 2026)
+
+Application 0.14.0 / stabilization/5 adds `enclosure.py` (bounded authored pen
+blueprint) and `care.py` (strict own-accessed claim and durable test intent).
+`planning.py` still decomposes explicit tasks using permitted observations;
+`stabilization.py` owns the single physical scheduler and native handoff.
+Operator viewer diagnostics never become policy observations. Native laws remain
+UW9/DB10/checkpoint9. See [G operations](INTEGRATED_WORLD_OPERATIONS.md).
+
+G archive rotation publishes and verifies a full SQLite epoch before pruning.
+Referenced knowledge and procedure evidence remain live, while controller event
+prefixes gain checksummed anchors. Retained replay begins at the declared epoch
+checkpoint. Portable backups include verified `.epochs` files. Native receipts
+and protected knowledge retain hard quotas; this is bounded archival, not an
+indefinite-world guarantee. Earlier architecture sections describe their exact
+historical versions.

@@ -29,7 +29,13 @@ def intervene(path, request, fault=None):
         source="operator"
         if request.get("kind")=="inject_knowledge":
             from .knowledge import inject
-            result=inject(db,world,config,metadata,request);source="operator_knowledge"
+            result=inject(db,world,config,metadata,request)
+            db.execute("INSERT INTO decisions(tick,request,result,source) VALUES(?,?,?,'operator_knowledge')",
+                       (int(world.snapshot()['tick']),dumps(request),dumps(result)))
+            if fault:fault('before_commit')
+            db.commit()
+            if fault:fault('after_commit')
+            return result
         else:result=world.intervene(request,"operator")
         events=world.step(0)  # Drain this transaction's events without advancing physical time.
         world.check_invariants()

@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "primary_simulated_s": 120,
+  "primary_wall_s": 60.83799980000185,
+  "child_wall_s": 59.93796670000302,
+  "stages": [
+    {
+      "status": "target_reached",
+      "initial_tick": "1",
+      "tick": "120",
+      "simulated_s": 59.5,
+      "wall_s": 29.70793760000379,
+      "state_hash": "2c51737014fb5ce9d86eb862764f90566570f29a6b4eed53d865bb7e68426681",
+      "replay": {
+        "replay_matches": true,
+        "tick": "120",
+        "state_hash": "2c51737014fb5ce9d86eb862764f90566570f29a6b4eed53d865bb7e68426681"
+      }
+    },
+    {
+      "status": "target_reached",
+      "initial_tick": "120",
+      "tick": "240",
+      "simulated_s": 60.0,
+      "wall_s": 31.013109899999108,
+      "state_hash": "e8710d42d21356df553cd5689ffcceb18e634fd0ec522fe631a42d06eebac936",
+      "replay": {
+        "replay_matches": true,
+        "tick": "240",
+        "state_hash": "e8710d42d21356df553cd5689ffcceb18e634fd0ec522fe631a42d06eebac936"
+      }
+    }
+  ],
+  "child_result": {
+    "status": "target_reached",
+    "initial_tick": "1",
+    "tick": "240",
+    "simulated_s": 119.5,
+    "wall_s": 59.417116700002225,
+    "state_hash": "e8710d42d21356df553cd5689ffcceb18e634fd0ec522fe631a42d06eebac936",
+    "replay": {
+      "replay_matches": true,
+      "tick": "240",
+      "state_hash": "e8710d42d21356df553cd5689ffcceb18e634fd0ec522fe631a42d06eebac936"
+    }
+  },
+  "equality": {
+    "head": true,
+    "tick": true,
+    "cognitive": true,
+    "tables": true,
+    "runtime_semantics": true,
+    "epoch_semantics": true,
+    "replay_after_id": true,
+    "retained_replay_start_tick": true
+  },
+  "replay": {
+    "data\\living-world-g-continuity-20261021\\world.sqlite": {
+      "replay_matches": true,
+      "tick": "240",
+      "state_hash": "e8710d42d21356df553cd5689ffcceb18e634fd0ec522fe631a42d06eebac936"
+    },
+    "data\\living-world-g-continuity-20261021\\resumed.sqlite": {
+      "replay_matches": true,
+      "tick": "240",
+      "state_hash": "e8710d42d21356df553cd5689ffcceb18e634fd0ec522fe631a42d06eebac936"
+    }
+  },
+  "archives": {
+    "data\\living-world-g-continuity-20261021\\world.sqlite": {
+      "epoch": 1,
+      "verified_retained": 1
+    },
+    "data\\living-world-g-continuity-20261021\\resumed.sqlite": {
+      "epoch": 1,
+      "verified_retained": 1
+    }
+  },
+  "note": "Same life; backup at0.5s, native+identity+memory+controller exact across100s rotation. Archive file SHA/derived chain excluded from cross-file equality, individually verified."
+}

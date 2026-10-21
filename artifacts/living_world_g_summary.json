@@ -1,0 +1,674 @@
+{
+  "software_invariants_pass": true,
+  "gates": {
+    "registered_sources_unchanged": true,
+    "matched_initial_physics": true,
+    "conserved_materials": true,
+    "source_isolation": true,
+    "model_off": true,
+    "native_replay": true
+  },
+  "registered_files": {
+    "config/living-world-g.toml": true,
+    "docs/PHASE_G_COMPUTE_ALLOCATION.md": true,
+    "docs/PHASE_G_DEVELOPMENT_NOTES.md": true,
+    "docs/PHASE_G_INTEGRATION.md": true,
+    "scripts/phase_g_audit.py": true,
+    "scripts/phase_g_continuity.py": true,
+    "scripts/phase_g_demo.py": true,
+    "scripts/phase_g_extend.py": true,
+    "scripts/phase_g_false_lesson.py": true,
+    "tests/test_phase_g_integration.py": true,
+    "underworld/__init__.py": true,
+    "underworld/__main__.py": true,
+    "underworld/app.py": true,
+    "underworld/care.py": true,
+    "underworld/cognition.py": true,
+    "underworld/config.py": true,
+    "underworld/culture.py": true,
+    "underworld/enclosure.py": true,
+    "underworld/isolation.py": true,
+    "underworld/knowledge.py": true,
+    "underworld/lab_policy.py": true,
+    "underworld/learning.py": true,
+    "underworld/lease.py": true,
+    "underworld/memory.py": true,
+    "underworld/native.py": true,
+    "underworld/observer.py": true,
+    "underworld/planning.py": true,
+    "underworld/planning_model.py": true,
+    "underworld/policy.py": true,
+    "underworld/resources.py": true,
+    "underworld/runtime.py": true,
+    "underworld/stabilization.py": true,
+    "underworld/storage.py": true,
+    "underworld/supervisor.py": true,
+    "underworld/teaching.py": true,
+    "underworld/viewer.py": true,
+    "underworld/web/observer.html": true,
+    "underworld/web/observer.js": true,
+    "underworld/web/viewer.html": true,
+    "underworld/web/viewer.js": true,
+    "underworld/wire.py": true,
+    "underworld/worker.py": true,
+    "underworld/workshop.py": true
+  },
+  "runs": [
+    {
+      "seed": 2521,
+      "arm": "unassigned",
+      "simulated_s": 300.0,
+      "wall_s": 141.0940377999941,
+      "stages": [
+        {
+          "target_simulated_s": 60.0,
+          "actual_simulated_s": 60.0,
+          "status": "target_reached",
+          "wall_s": 22.52175490000809
+        },
+        {
+          "target_simulated_s": 300.0,
+          "actual_simulated_s": 300.0,
+          "status": "target_reached",
+          "wall_s": 118.50539320000098
+        }
+      ],
+      "accepted": 32,
+      "completed": 31,
+      "failed": 1,
+      "rejected": 0,
+      "completed_action_types": {
+        "gather": 8,
+        "drink": 4,
+        "move": 15,
+        "eat": 4
+      },
+      "native_errors": [
+        {
+          "agent_id": "agent-4",
+          "detail": "COLLISION",
+          "request_id": "stable-agent-4-8",
+          "schema_version": 1,
+          "seq": "359",
+          "tick": "302",
+          "type": "action_failed",
+          "action": "move"
+        }
+      ],
+      "goals": {
+        "agent-1": [],
+        "agent-2": [],
+        "agent-3": [],
+        "agent-4": []
+      },
+      "active_tasks": {
+        "agent-1": null,
+        "agent-2": null,
+        "agent-3": null,
+        "agent-4": null
+      },
+      "pen_verified": false,
+      "care_source_isolated": true,
+      "knowledge_counts": {
+        "agent-1": {
+          "external_initialization": 1,
+          "operator_injection": 0,
+          "book_read": 0,
+          "unverified_report": 0,
+          "knowledge_test": 0
+        },
+        "agent-2": {
+          "external_initialization": 0,
+          "operator_injection": 1,
+          "book_read": 0,
+          "unverified_report": 0,
+          "knowledge_test": 0
+        },
+        "agent-3": {
+          "external_initialization": 0,
+          "operator_injection": 0,
+          "book_read": 0,
+          "unverified_report": 0,
+          "knowledge_test": 0
+        },
+        "agent-4": {
+          "external_initialization": 0,
+          "operator_injection": 0,
+          "book_read": 0,
+          "unverified_report": 0,
+          "knowledge_test": 0
+        }
+      },
+      "human_survivors": 4,
+      "unmet_needs": {
+        "agent-1": {},
+        "agent-2": {},
+        "agent-3": {},
+        "agent-4": {}
+      },
+      "animal_survivors": 0,
+      "balances": {
+        "food_error_ug": 0,
+        "water_error_ug": 0,
+        "animal_body_error_ug": 0
+      },
+      "model_calls": 0,
+      "fallback_goals": 0,
+      "archive_epoch": 2,
+      "database_bytes": 454656,
+      "archive_bytes": 761856,
+      "replay": {
+        "replay_matches": true,
+        "tick": "600",
+        "state_hash": "fc4f0acd4c4abdb94e0614dd8eea9c0f0f3eb808ae6866fde6114e3facbcadf8"
+      }
+    },
+    {
+      "seed": 2521,
+      "arm": "assigned",
+      "simulated_s": 300.0,
+      "wall_s": 268.7212307000009,
+      "stages": [
+        {
+          "target_simulated_s": 60.0,
+          "actual_simulated_s": 60.0,
+          "status": "target_reached",
+          "wall_s": 35.4099864000018
+        },
+        {
+          "target_simulated_s": 300.0,
+          "actual_simulated_s": 300.0,
+          "status": "target_reached",
+          "wall_s": 233.1316697000002
+        }
+      ],
+      "accepted": 245,
+      "completed": 244,
+      "failed": 1,
+      "rejected": 0,
+      "completed_action_types": {
+        "move": 162,
+        "gather": 7,
+        "gather_plant": 3,
+        "harvest_branch": 3,
+        "eat": 4,
+        "collect_wood": 14,
+        "rest": 1,
+        "offer_feed": 1,
+        "craft": 11,
+        "fell_tree": 2,
+        "begin_construction": 13,
+        "work_construction": 13,
+        "drink": 4,
+        "fill_trough": 1,
+        "store_item": 5
+      },
+      "native_errors": [
+        {
+          "agent_id": "agent-1",
+          "detail": "COLLISION",
+          "request_id": "stable-agent-1-44",
+          "schema_version": 1,
+          "seq": "485",
+          "tick": "181",
+          "type": "action_failed",
+          "action": "move"
+        }
+      ],
+      "goals": {
+        "agent-1": [
+          {
+            "goal": "craft_tool",
+            "outcome": "completed",
+            "reason": "native_observable_goal_predicate",
+            "executor_goal_credit": true,
+            "steps": 15,
+            "failures": 0,
+            "native_failures": [],
+            "lesson_source_id": null,
+            "enclosure_ids": null
+          },
+          {
+            "goal": "build_pen",
+            "outcome": "blocked",
+            "reason": "observed_pen_site_occupied",
+            "executor_goal_credit": false,
+            "steps": 106,
+            "failures": 1,
+            "native_failures": [],
+            "lesson_source_id": null,
+            "enclosure_ids": {
+              "0": "crafted-23",
+              "1": "crafted-28",
+              "10": "crafted-43",
+              "11": "crafted-46",
+              "2": "crafted-29",
+              "3": "crafted-33",
+              "4": "crafted-34",
+              "5": "crafted-36",
+              "6": "crafted-37",
+              "7": "crafted-39",
+              "8": "crafted-40",
+              "9": "crafted-42"
+            }
+          }
+        ],
+        "agent-2": [
+          {
+            "goal": "feed_animal",
+            "outcome": "completed",
+            "reason": "native_observable_goal_predicate",
+            "executor_goal_credit": true,
+            "steps": 46,
+            "failures": 0,
+            "native_failures": [],
+            "lesson_source_id": "operator:g-care",
+            "enclosure_ids": null
+          },
+          {
+            "goal": "provide_water",
+            "outcome": "completed",
+            "reason": "native_observable_goal_predicate",
+            "executor_goal_credit": true,
+            "steps": 36,
+            "failures": 0,
+            "native_failures": [],
+            "lesson_source_id": null,
+            "enclosure_ids": null
+          },
+          {
+            "goal": "tend_animal",
+            "outcome": "blocked",
+            "reason": "assigned_animal_not_observed",
+            "executor_goal_credit": false,
+            "steps": 0,
+            "failures": 0,
+            "native_failures": [],
+            "lesson_source_id": null,
+            "enclosure_ids": null
+          }
+        ],
+        "agent-3": [
+          {
+            "goal": "obtain_food",
+            "outcome": "completed",
+            "reason": "native_observable_goal_predicate",
+            "executor_goal_credit": true,
+            "steps": 5,
+            "failures": 0,
+            "native_failures": [],
+            "lesson_source_id": null,
+            "enclosure_ids": null
+          },
+          {
+            "goal": "rest",
+            "outcome": "completed",
+            "reason": "native_observable_goal_predicate",
+            "executor_goal_credit": true,
+            "steps": 1,
+            "failures": 0,
+            "native_failures": [],
+            "lesson_source_id": null,
+            "enclosure_ids": null
+          }
+        ],
+        "agent-4": []
+      },
+      "active_tasks": {
+        "agent-1": null,
+        "agent-2": null,
+        "agent-3": null,
+        "agent-4": null
+      },
+      "pen_verified": false,
+      "care_source_isolated": true,
+      "knowledge_counts": {
+        "agent-1": {
+          "external_initialization": 1,
+          "operator_injection": 0,
+          "book_read": 0,
+          "unverified_report": 0,
+          "knowledge_test": 0
+        },
+        "agent-2": {
+          "external_initialization": 0,
+          "operator_injection": 1,
+          "book_read": 0,
+          "unverified_report": 0,
+          "knowledge_test": 1
+        },
+        "agent-3": {
+          "external_initialization": 0,
+          "operator_injection": 0,
+          "book_read": 0,
+          "unverified_report": 0,
+          "knowledge_test": 0
+        },
+        "agent-4": {
+          "external_initialization": 0,
+          "operator_injection": 0,
+          "book_read": 0,
+          "unverified_report": 0,
+          "knowledge_test": 0
+        }
+      },
+      "human_survivors": 4,
+      "unmet_needs": {
+        "agent-1": {
+          "fatigue": 0.5037999999999994
+        },
+        "agent-2": {},
+        "agent-3": {},
+        "agent-4": {}
+      },
+      "animal_survivors": 2,
+      "balances": {
+        "food_error_ug": 0,
+        "water_error_ug": 0,
+        "animal_body_error_ug": 0
+      },
+      "model_calls": 0,
+      "fallback_goals": 0,
+      "archive_epoch": 2,
+      "database_bytes": 1691648,
+      "archive_bytes": 3489792,
+      "replay": {
+        "replay_matches": true,
+        "tick": "600",
+        "state_hash": "967bc06b91a6ec1ed0ec09aa61c65f041e0c522625b31d763038cf2ad8f8749e"
+      }
+    },
+    {
+      "seed": 2549,
+      "arm": "unassigned",
+      "simulated_s": 300.0,
+      "wall_s": 134.6872483999905,
+      "stages": [
+        {
+          "target_simulated_s": 60.0,
+          "actual_simulated_s": 60.0,
+          "status": "target_reached",
+          "wall_s": 25.806406199990306
+        },
+        {
+          "target_simulated_s": 300.0,
+          "actual_simulated_s": 300.0,
+          "status": "target_reached",
+          "wall_s": 108.80414959999325
+        }
+      ],
+      "accepted": 28,
+      "completed": 28,
+      "failed": 0,
+      "rejected": 0,
+      "completed_action_types": {
+        "gather": 7,
+        "move": 12,
+        "drink": 4,
+        "gather_plant": 1,
+        "eat": 4
+      },
+      "native_errors": [],
+      "goals": {
+        "agent-1": [],
+        "agent-2": [],
+        "agent-3": [],
+        "agent-4": []
+      },
+      "active_tasks": {
+        "agent-1": null,
+        "agent-2": null,
+        "agent-3": null,
+        "agent-4": null
+      },
+      "pen_verified": false,
+      "care_source_isolated": true,
+      "knowledge_counts": {
+        "agent-1": {
+          "external_initialization": 1,
+          "operator_injection": 0,
+          "book_read": 0,
+          "unverified_report": 0,
+          "knowledge_test": 0
+        },
+        "agent-2": {
+          "external_initialization": 0,
+          "operator_injection": 1,
+          "book_read": 0,
+          "unverified_report": 0,
+          "knowledge_test": 0
+        },
+        "agent-3": {
+          "external_initialization": 0,
+          "operator_injection": 0,
+          "book_read": 0,
+          "unverified_report": 0,
+          "knowledge_test": 0
+        },
+        "agent-4": {
+          "external_initialization": 0,
+          "operator_injection": 0,
+          "book_read": 0,
+          "unverified_report": 0,
+          "knowledge_test": 0
+        }
+      },
+      "human_survivors": 4,
+      "unmet_needs": {
+        "agent-1": {},
+        "agent-2": {},
+        "agent-3": {},
+        "agent-4": {}
+      },
+      "animal_survivors": 1,
+      "balances": {
+        "food_error_ug": 0,
+        "water_error_ug": 0,
+        "animal_body_error_ug": 0
+      },
+      "model_calls": 0,
+      "fallback_goals": 0,
+      "archive_epoch": 2,
+      "database_bytes": 454656,
+      "archive_bytes": 765952,
+      "replay": {
+        "replay_matches": true,
+        "tick": "600",
+        "state_hash": "a08de447b3175bf7d32e5cc909984dc98cd5bf93b383be4e4d01b527339e0316"
+      }
+    },
+    {
+      "seed": 2549,
+      "arm": "assigned",
+      "simulated_s": 300.0,
+      "wall_s": 272.33463250000204,
+      "stages": [
+        {
+          "target_simulated_s": 60.0,
+          "actual_simulated_s": 60.0,
+          "status": "target_reached",
+          "wall_s": 33.58977629999572
+        },
+        {
+          "target_simulated_s": 300.0,
+          "actual_simulated_s": 300.0,
+          "status": "target_reached",
+          "wall_s": 238.604743399992
+        }
+      ],
+      "accepted": 236,
+      "completed": 234,
+      "failed": 1,
+      "rejected": 0,
+      "completed_action_types": {
+        "move": 149,
+        "gather_plant": 4,
+        "eat": 4,
+        "gather": 6,
+        "harvest_branch": 4,
+        "collect_wood": 14,
+        "rest": 1,
+        "offer_feed": 1,
+        "craft": 11,
+        "fell_tree": 2,
+        "begin_construction": 14,
+        "work_construction": 13,
+        "drink": 4,
+        "store_item": 5,
+        "fill_trough": 1,
+        "observe_animal": 1
+      },
+      "native_errors": [
+        {
+          "agent_id": "agent-4",
+          "detail": "COLLISION",
+          "request_id": "stable-agent-4-9",
+          "schema_version": 1,
+          "seq": "716",
+          "tick": "302",
+          "type": "action_failed",
+          "action": "move"
+        }
+      ],
+      "goals": {
+        "agent-1": [
+          {
+            "goal": "craft_tool",
+            "outcome": "completed",
+            "reason": "native_observable_goal_predicate",
+            "executor_goal_credit": true,
+            "steps": 16,
+            "failures": 0,
+            "native_failures": [],
+            "lesson_source_id": null,
+            "enclosure_ids": null
+          }
+        ],
+        "agent-2": [
+          {
+            "goal": "feed_animal",
+            "outcome": "completed",
+            "reason": "native_observable_goal_predicate",
+            "executor_goal_credit": true,
+            "steps": 35,
+            "failures": 0,
+            "native_failures": [],
+            "lesson_source_id": "operator:g-care",
+            "enclosure_ids": null
+          },
+          {
+            "goal": "provide_water",
+            "outcome": "completed",
+            "reason": "native_observable_goal_predicate",
+            "executor_goal_credit": true,
+            "steps": 41,
+            "failures": 0,
+            "native_failures": [],
+            "lesson_source_id": null,
+            "enclosure_ids": null
+          },
+          {
+            "goal": "tend_animal",
+            "outcome": "completed",
+            "reason": "native_observable_goal_predicate",
+            "executor_goal_credit": true,
+            "steps": 1,
+            "failures": 0,
+            "native_failures": [],
+            "lesson_source_id": null,
+            "enclosure_ids": null
+          }
+        ],
+        "agent-3": [
+          {
+            "goal": "obtain_food",
+            "outcome": "completed",
+            "reason": "native_observable_goal_predicate",
+            "executor_goal_credit": true,
+            "steps": 4,
+            "failures": 0,
+            "native_failures": [],
+            "lesson_source_id": null,
+            "enclosure_ids": null
+          },
+          {
+            "goal": "rest",
+            "outcome": "completed",
+            "reason": "native_observable_goal_predicate",
+            "executor_goal_credit": true,
+            "steps": 1,
+            "failures": 0,
+            "native_failures": [],
+            "lesson_source_id": null,
+            "enclosure_ids": null
+          }
+        ],
+        "agent-4": []
+      },
+      "active_tasks": {
+        "agent-1": "build_pen",
+        "agent-2": null,
+        "agent-3": null,
+        "agent-4": null
+      },
+      "pen_verified": false,
+      "care_source_isolated": true,
+      "knowledge_counts": {
+        "agent-1": {
+          "external_initialization": 1,
+          "operator_injection": 0,
+          "book_read": 0,
+          "unverified_report": 0,
+          "knowledge_test": 0
+        },
+        "agent-2": {
+          "external_initialization": 0,
+          "operator_injection": 1,
+          "book_read": 0,
+          "unverified_report": 0,
+          "knowledge_test": 1
+        },
+        "agent-3": {
+          "external_initialization": 0,
+          "operator_injection": 0,
+          "book_read": 0,
+          "unverified_report": 0,
+          "knowledge_test": 0
+        },
+        "agent-4": {
+          "external_initialization": 0,
+          "operator_injection": 0,
+          "book_read": 0,
+          "unverified_report": 0,
+          "knowledge_test": 0
+        }
+      },
+      "human_survivors": 4,
+      "unmet_needs": {
+        "agent-1": {
+          "fatigue": 0.5051999999999994
+        },
+        "agent-2": {},
+        "agent-3": {},
+        "agent-4": {}
+      },
+      "animal_survivors": 1,
+      "balances": {
+        "food_error_ug": 0,
+        "water_error_ug": 0,
+        "animal_body_error_ug": 0
+      },
+      "model_calls": 0,
+      "fallback_goals": 0,
+      "archive_epoch": 2,
+      "database_bytes": 1675264,
+      "archive_bytes": 3362816,
+      "replay": {
+        "replay_matches": true,
+        "tick": "600",
+        "state_hash": "292081fea70d8aad6601c29fbc8224bcfe69adef62a9b78a297b8c6e23a31522"
+      }
+    }
+  ],
+  "interpretation": "Task completion is measured, not guaranteed. Unassigned survival is not penalized for choosing no production. Finite horizons do not prove indefinite operation."
+}

@@ -61,7 +61,7 @@ def inject(db, world, config, metadata, request):
     if type(agent) is not str:raise ValueError('invalid recipient')
     memory.private_view(db, agent)
     own = world.observe_batch([agent])[0]['own_state']
-    if not own['alive'] or not own['present']:raise ValueError('recipient unavailable')
+    if not own['alive'] or not own.get('present',True):raise ValueError('recipient unavailable')
     from .config import episodic_enabled
     if not episodic_enabled(config):raise ValueError('explicit injection requires episodic retention')
     if db.execute("SELECT COUNT(*) FROM decisions WHERE source IN ('operator','operator_knowledge')").fetchone()[0] >= 256:

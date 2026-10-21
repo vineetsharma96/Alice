@@ -46,6 +46,9 @@ function draw(packet){
  $('memories').replaceChildren(...packet.mind.episodes.map(e=>item(`${e.kind.replaceAll('_',' ')} / tick ${e.tick}`,`${e.record.text??json(e.record)}${e.record.source_event_seq?` | source #${e.record.source_event_seq}, origin #${e.record.origin_event_seq??e.record.source_event_seq}`:''}`)));
  if(!packet.mind.episodes.length)$('memories').append(item('No accessed episodes','Nothing is invented to fill this view.'));
  $('knowledge-sources').textContent=packet.knowledge?`Knowledge sources: ${Object.entries(packet.knowledge.counts).map(([k,v])=>`${k}: ${v}`).join(' / ')}. External text grants no skill.`:'';
+ const ig=packet.integration,sourceTask=task||lastTask,careRecord=packet.knowledge?.records.find(r=>r.execution_origin==='authored_assigned_care_executor'||r.text?.startsWith('CARE '));
+ $('integration-state').textContent=ig?`History epoch ${ig.archive_epoch}, replay from tick ${ig.replay_from_tick}. Tools: ${ig.tools.map(t=>`${t.recipe_id} durability ${t.durability}`).join(', ')||'none'}. Care source: ${sourceTask?.lesson_source_id||careRecord?.lesson_source_id||careRecord?.source_id||'none'}.`:'';
+ $('integration-details').textContent=ig?`${ig.boundary}\n${json(ig.operator_diagnostics)}`:'';
  $('receipts').textContent=json(packet.selected.recent_action_results);
  const editable=s.mode==='guided'&&packet.controls.paused&&!packet.controls.read_only;
  $('operator-help').textContent=packet.controls.read_only?'Read-only attachment. Use the runner controls separately.':s.mode!=='guided'?'Closed mode. Operator world changes require an explicit guided branch.':!packet.controls.paused?'Pause before applying an intervention.':'Commands are validated and recorded by the engine. Avatar positioning also delivers your text.';

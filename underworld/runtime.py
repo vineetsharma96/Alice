@@ -8,6 +8,7 @@ import os
 from pathlib import Path
 import re
 import sqlite3
+import shutil
 import threading
 import time
 import uuid
@@ -72,12 +73,91 @@ def _prune_episodes(db,recent):
     for (payload,) in db.execute("SELECT payload FROM plans"):
         plan=loads(payload)
         if plan.get("status")=="pending":protected.update(plan.get("evidence",[]))
+    # Source records are irreplaceable. Their own references must resolve before
+    # deletion, including older lessons and controller procedure evidence.
+    kinds=('book_read','unverified_report','validated_practice','external_initialization',
+           'operator_injection','knowledge_test_intent','knowledge_test','verified_procedure')
+    for agent,ident,payload in db.execute('SELECT agent,id,payload FROM episodes WHERE kind IN ('+','.join('?' for _ in kinds)+')',kinds):
+        protected.add(ident);record=loads(payload)
+        lesson=record.get('lesson_episode_id')
+        if lesson:
+            if not db.execute('SELECT 1 FROM episodes WHERE id=? AND agent=?',(lesson,agent)).fetchone():
+                raise ValueError('knowledge source reference unavailable before rotation')
+            protected.add(lesson)
+        requests=record.get('request_ids',[])+([record['request_id']] if 'request_id' in record else [])
+        for rid in requests:
+            row=db.execute('SELECT id FROM episodes WHERE agent=? AND source=?',(agent,'action:'+rid)).fetchone()
+            if row:protected.add(row[0])
+    if db.execute("SELECT 1 FROM sqlite_master WHERE name='stabilization_agents'").fetchone():
+        from . import stabilization as stable
+        stable.verify_event_chain(db)
+        for (agent,) in db.execute('SELECT agent FROM stabilization_agents'):
+            state=stable._load(db,agent);tasks=state.get('tasks',{})
+            refs=[r['episode_id'] for r in tasks.get('procedures',{}).values()]
+            for task in [tasks.get('active'),*tasks.get('history',[])]:
+                if task:refs += [task[k] for k in ('procedure_source','procedure_episode_id','lesson_episode_id') if task.get(k)]
+            for ident in refs:
+                if not db.execute('SELECT 1 FROM episodes WHERE id=? AND agent=?',(ident,agent)).fetchone():
+                    raise ValueError('controller source reference unavailable before rotation')
+                protected.add(ident)
     removed=0
     for (agent,) in db.execute("SELECT agent FROM identities").fetchall():
         rows=db.execute("SELECT id FROM episodes WHERE agent=? AND kind NOT IN ('book_read','unverified_report','validated_practice') ORDER BY id DESC",(agent,)).fetchall()
         delete=[(r[0],) for r in rows[recent:] if r[0] not in protected]
         db.executemany("DELETE FROM episodes WHERE id=?",delete);removed+=len(delete)
     memory.seal(db);return removed
+
+
+def _fingerprint(db):
+    """Physical head alone cannot distinguish two different knowledge injections."""
+    _,_,metadata,head=storage._head(db)
+    values=[head,metadata,memory.checksum(db),verify_control(db)]
+    if db.execute("SELECT 1 FROM sqlite_master WHERE name='stabilization_meta'").fetchone():
+        values += [db.execute('SELECT * FROM stabilization_meta').fetchall(),
+                   db.execute('SELECT * FROM stabilization_agents ORDER BY agent').fetchall(),
+                   db.execute('SELECT checksum FROM stabilization_events ORDER BY id').fetchall()]
+    return storage.digest(dumps(values))
+
+
+def _controller_requests(db):
+    """Preserve native journal rows until controller reconciliation, and its proofs."""
+    keep=set()
+    if db.execute("SELECT 1 FROM sqlite_master WHERE name='stabilization_agents'").fetchone():
+        from . import stabilization as stable
+        stable.verify_event_chain(db)
+        for (agent,) in db.execute('SELECT agent FROM stabilization_agents'):
+            state=stable._load(db,agent);pending=state['pending']
+            if pending:
+                row=db.execute("SELECT request FROM decisions WHERE json_extract(request,'$.request_id')=? AND json_extract(request,'$.agent_id')=?",(pending['request_id'],agent)).fetchone()
+                if not row:raise ValueError('unsubmitted controller reservation; reconcile before rotation')
+                if loads(row[0])!=pending:raise ValueError('controller reservation/journal mismatch')
+                keep.add((agent,pending['request_id']))
+            tasks=state.get('tasks',{})
+            for task in [tasks.get('active'),*tasks.get('history',[])]:
+                if task:
+                    keep.update((agent,r['request_id']) for r in task.get('receipts',[]))
+                    keep.update((agent,r) for r in task.get('evidence',[]))
+                    keep.update((agent,r['request_id']) for r in task.get('native_failures',[]))
+    for agent,payload in db.execute("SELECT agent,payload FROM episodes WHERE kind IN ('verified_procedure','knowledge_test','knowledge_test_intent')"):
+        record=loads(payload)
+        keep.update((agent,r) for r in record.get('request_ids',[]))
+        if record.get('request_id'):keep.add((agent,record['request_id']))
+    return keep
+
+
+def _compact_controller(db,keep):
+    if not db.execute("SELECT 1 FROM sqlite_master WHERE name='stabilization_meta'").fetchone():return 0
+    from . import stabilization as stable
+    rows=db.execute('SELECT id,checksum FROM stabilization_events ORDER BY id DESC').fetchall()
+    deleted=rows[keep:]
+    if not deleted:return 0
+    payload,=db.execute('SELECT payload FROM stabilization_meta').fetchone();meta=loads(payload)
+    meta['event_chain_anchor']=deleted[0][1]
+    meta['archived_event_count']=meta.get('archived_event_count',0)+len(deleted)
+    text=dumps(meta);db.execute('UPDATE stabilization_meta SET payload=?,checksum=?',(text,storage.digest(text)))
+    db.execute('DELETE FROM stabilization_events WHERE id<=?',(deleted[0][0],))
+    stable.verify_event_chain(db)
+    return len(deleted)
 
 
 def _archive_files(path):
@@ -95,61 +175,118 @@ def _archive_files(path):
     return directory,sorted(files)
 
 
+def verify_archives(path, limits=None):
+    path=Path(path).resolve()
+    with closing(storage._connect(path,readonly=True)) as db:
+        db.execute('BEGIN');_,config,_,_=storage._head(db);control=verify_control(db)
+        limits=limits or config.get('execution',DEFAULTS)
+        records={r[0]:loads(r[1]) for r in db.execute('SELECT epoch,payload FROM runtime_epochs')}
+    for epoch in range(max(1,control['epoch']-limits['checkpoint_keep']+1),control['epoch']+1):
+        record=records.get(epoch)
+        if not record:raise ValueError('retained archive record unavailable')
+        file=Path(str(path)+'.epochs')/record['archive']
+        if file.resolve().parent!=Path(str(path)+'.epochs').resolve() or not file.is_file():
+            raise ValueError('retained archive missing or escaped directory')
+        if hashlib.sha256(file.read_bytes()).hexdigest()!=record['archive_sha256']:
+            raise ValueError('retained archive checksum mismatch')
+    return {'epoch':control['epoch'],'verified_retained':min(control['epoch'],limits['checkpoint_keep'])}
+
+
+def backup(path,name,output):
+    """Explicit portable save: current DB plus its verified retained epoch files."""
+    if output is None:raise ValueError('archive bundle requires an output path')
+    path=Path(path).resolve();output=Path(output).resolve()
+    with Lease(path):
+        verified=verify_archives(path)
+        directory=Path(str(output)+'.epochs')
+        if directory.exists():raise FileExistsError('backup archive directory already exists')
+        result=storage.save(path,name,output)
+        directory.mkdir(exist_ok=False)
+        with closing(storage._connect(path,readonly=True)) as db:
+            control=verify_control(db)
+            records=[loads(r[0]) for r in db.execute('SELECT payload FROM runtime_epochs ORDER BY epoch DESC LIMIT ?', (verified['verified_retained'],))]
+        for record in records:
+            source=Path(str(path)+'.epochs')/record['archive'];target=directory/record['archive']
+            if source.resolve().parent!=Path(str(path)+'.epochs').resolve() or target.resolve().parent!=directory.resolve():
+                raise ValueError('archive bundle path escaped directory')
+            shutil.copy2(source,target)
+        verify_archives(output)
+        return result|{'archive_epoch':control['epoch'],'archive_files':len(records),'archive_directory':str(directory)}
+
+
 def rotate(path,limits=None,fault=None):
     path=Path(path).resolve()
     with Lease(path):
         with closing(storage._connect(path,readonly=True)) as db:
-            db.execute("BEGIN");world,config,metadata,before=storage._head(db);state=verify_control(db)
-        limits=limits or config.get("execution",DEFAULTS)
-        number=state["epoch"]+1;directory,files=_archive_files(path)
-        output=directory/f"epoch-{number:08d}.sqlite"
-        while len(files)>=limits["checkpoint_keep"] and files[0]!=output:
-            old=files.pop(0)
-            if old.resolve().parent!=directory.resolve():raise ValueError("archive target escaped directory")
-            old.unlink()
+            db.execute('BEGIN');world,config,metadata,before=storage._head(db);state=verify_control(db)
+            fingerprint=_fingerprint(db);referenced=_controller_requests(db)
+        limits=limits or config.get('execution',DEFAULTS)
+        verify_archives(path,limits)
+        number=state['epoch']+1;directory,files=_archive_files(path)
+        output=directory/f'epoch-{number:08d}.sqlite'
         size=path.stat().st_size
-        if sum(f.stat().st_size for f in files)+2*size>limits["max_archive_bytes"]:raise ValueError("checkpoint archive disk quota reached")
-        name=f"auto_epoch_{number}"
+        # Never delete the last valid recovery point to make a new backup fit.
+        if sum(f.stat().st_size for f in files)+2*size>limits['max_archive_bytes']:
+            raise ValueError('checkpoint archive disk quota reached')
+        name=f'auto_epoch_{number}'
         if output.exists():
-            if storage.inspect(output)["state_hash"]!=before:raise ValueError("unfinished checkpoint does not match current head")
+            with closing(storage._connect(output,readonly=True)) as archived:
+                archived.execute('BEGIN')
+                if _fingerprint(archived)!=fingerprint:raise ValueError('unfinished checkpoint does not match current physical/cognitive/controller head')
         else:
-            # A kill may leave the named checkpoint committed before its backup
-            # was published. Retire only that matching internal receipt, then retry.
             with closing(storage._connect(path)) as recovery:
-                recovery.execute("BEGIN IMMEDIATE")
-                old=recovery.execute("SELECT state_hash FROM checkpoints WHERE name=?",(name,)).fetchone()
+                recovery.execute('BEGIN IMMEDIATE')
+                old=recovery.execute('SELECT state_hash FROM checkpoints WHERE name=?',(name,)).fetchone()
                 if old:
-                    if old[0]!=before:raise ValueError("unfinished checkpoint receipt does not match current head")
-                    recovery.execute("DELETE FROM checkpoints WHERE name=?",(name,))
+                    if old[0]!=before:raise ValueError('unfinished checkpoint receipt does not match current head')
+                    recovery.execute('DELETE FROM checkpoints WHERE name=?',(name,))
                 recovery.commit()
             storage.save(path,name,output,_automated=True)
-        if fault:fault("after_checkpoint",int(world.snapshot()["tick"]))
+        storage.replay(output)
+        if fault:fault('after_checkpoint',int(world.snapshot()['tick']))
         archive_hash=hashlib.sha256(output.read_bytes()).hexdigest()
         db=storage._connect(path)
         try:
-            db.execute("BEGIN IMMEDIATE");world,_,metadata,current=storage._head(db)
-            if current!=before:raise ValueError("head changed during checkpoint publication")
-            control=verify_control(db);tick=int(world.snapshot()["tick"])
+            db.execute('BEGIN IMMEDIATE');world,_,metadata,current=storage._head(db)
+            if _fingerprint(db)!=fingerprint:raise ValueError('head changed during checkpoint publication')
+            control=verify_control(db);tick=int(world.snapshot()['tick'])
             removed=world._compact_history();events=world.step(0);world.check_invariants()
-            episodes=_prune_episodes(db,limits["memory_recent"])
-            policy=metadata.pop("runtime_policy_state");native=world.checkpoint();hashed=storage.head_hash(native,policy)
-            metadata.update(replay_after_id=0,retained_replay_start_tick=tick,epoch=number)
-            db.execute("DELETE FROM decisions");db.execute("DELETE FROM policy_frames")
+            episodes=_prune_episodes(db,limits['memory_recent'])
+            controller_events=_compact_controller(db,max(16,limits['metrics_keep']))
+            policy=metadata.pop('runtime_policy_state');native=world.checkpoint();hashed=storage.head_hash(native,policy)
+            replay_after=db.execute('SELECT COALESCE(MAX(id),0) FROM decisions').fetchone()[0]
+            metadata.update(replay_after_id=replay_after,retained_replay_start_tick=tick,epoch=number)
+            for ident,request,source in db.execute('SELECT id,request,source FROM decisions').fetchall():
+                r=loads(request)
+                if source in ('operator','operator_knowledge') or (r.get('agent_id'),r.get('request_id')) in referenced:continue
+                db.execute('DELETE FROM decisions WHERE id=?',(ident,))
+            # Rebase the cursor to the retained maximum; a new SQLite row ID
+            # must be greater than replay_after_id even after deleting a suffix.
+            if replay_after and not db.execute('SELECT 1 FROM decisions WHERE id=?',(replay_after,)).fetchone():
+                metadata['replay_after_id']=0 if not db.execute('SELECT 1 FROM decisions LIMIT 1').fetchone() else db.execute('SELECT MAX(id) FROM decisions').fetchone()[0]
+            db.execute('DELETE FROM policy_frames')
             db.execute("DELETE FROM checkpoints WHERE name='initial' OR name GLOB 'auto_epoch_*'")
             db.execute("INSERT INTO checkpoints VALUES('initial',?,?,?,?,?)",(tick,native,hashed,storage.CHECKPOINT_SCHEMA,dumps(policy)))
-            db.execute("UPDATE run SET metadata=?,state=?,state_hash=? WHERE singleton=1",(dumps(metadata),native,hashed))
-            db.executemany("INSERT INTO events VALUES(?,?,?)",[(int(e["seq"]),int(e["tick"]),dumps(e)) for e in events])
-            record={"epoch":number,"tick":tick,"before_hash":before,"after_hash":hashed,"archive":output.name,"archive_sha256":archive_hash,
-                "previous_chain":control.get("chain_head"),"requests_pruned":removed,"episodes_pruned":episodes,"event_counts":world.snapshot()["event_counts"]}
-            record["chain_hash"]=storage.digest(dumps(record));db.execute("INSERT INTO runtime_epochs VALUES(?,?)",(number,dumps(record)))
-            db.execute("DELETE FROM runtime_epochs WHERE epoch<=?",(number-limits["metrics_keep"],))
-            control.update(epoch=number,last_rotation_tick=tick,chain_head=record["chain_hash"]);_save_control(db,control)
-            if fault:fault("rotation_before_commit",tick)
+            db.execute('UPDATE run SET metadata=?,state=?,state_hash=? WHERE singleton=1',(dumps(metadata),native,hashed))
+            db.executemany('INSERT INTO events VALUES(?,?,?)',[(int(e['seq']),int(e['tick']),dumps(e)) for e in events])
+            record={'epoch':number,'tick':tick,'before_hash':before,'after_hash':hashed,'archive':output.name,'archive_sha256':archive_hash,
+                    'previous_chain':control.get('chain_head'),'requests_pruned':removed,'episodes_pruned':episodes,
+                    'controller_events_pruned':controller_events,'event_counts':world.snapshot()['event_counts']}
+            record['chain_hash']=storage.digest(dumps(record));db.execute('INSERT INTO runtime_epochs VALUES(?,?)',(number,dumps(record)))
+            db.execute('DELETE FROM runtime_epochs WHERE epoch<=?',(number-limits['metrics_keep'],))
+            control.update(epoch=number,last_rotation_tick=tick,chain_head=record['chain_hash']);_save_control(db,control)
+            if fault:fault('rotation_before_commit',tick)
             db.commit()
-            # No physics is advanced while reclaiming free pages. SQLite protects VACUUM atomically.
-            db.execute("VACUUM")
+            if fault:fault('rotation_after_commit',tick)
+            db.execute('VACUUM')
         except BaseException:db.rollback();raise
         finally:db.close()
+        # Only a verified, committed replacement permits eviction. All resolved
+        # targets are checked in the intended archive directory before unlink.
+        _,files=_archive_files(path)
+        for old in files[:-limits['checkpoint_keep']]:
+            if old.resolve().parent!=directory.resolve():raise ValueError('archive target escaped directory')
+            old.unlink()
         return record
 
 
@@ -236,6 +373,9 @@ def run(path,simulated_seconds,wall_seconds,provider=None,require_isolation=True
         if fault:fault(stage,tick)
     reason="system_failure";error=None;isolation=None
     with Lease(path):
+        with closing(storage._connect(path,readonly=True)) as db:
+            if db.execute("SELECT 1 FROM sqlite_master WHERE name='stabilization_meta'").fetchone():
+                raise ValueError('stabilized world requires living-world run; legacy supervisor cannot replace its scheduler')
         storage.recover(path);initial=storage.inspect(path);start_tick=int(initial["tick"]);dt=initial["dt_s"];target=start_tick+math.ceil(simulated_seconds/dt-1e-12)
         with closing(storage._connect(path,readonly=True)) as db:_,config,_,_=storage._head(db)
         limits=config.get("execution",DEFAULTS)
