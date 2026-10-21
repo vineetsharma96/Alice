@@ -1,0 +1,42 @@
+{
+  "h4_communication_gate": true,
+  "h4_engineered_need_policy_gate": true,
+  "counts": {
+    "enabled": [
+      10,
+      10
+    ],
+    "muted": [
+      5,
+      10
+    ],
+    "scrambled": [
+      0,
+      10
+    ],
+    "identity": [
+      5,
+      10
+    ]
+  },
+  "self_selected_need_goals": 9,
+  "frozen_prediction_goals": 0,
+  "identity_location_checks": 10,
+  "depleted_cases": 5,
+  "study_wall_s": 392.0924514999997,
+  "python_tests": 304,
+  "native_checks": 4,
+  "python_subprocess_wall_s": 448.5965793000005,
+  "source_pins": "Original G/H0-H3 preserved; H4 prospective registration matches",
+  "phase9_verified_files": 3439,
+  "phase9_advance": false,
+  "new_release_label": null,
+  "auditor_sha256": "6bdfe8cf79d488ffd75e67f8a202b2283e5661f8e70d5dfa901b1e86a9f54d46",
+  "limits": [
+    "Authored scout circuit, remote-water assignment, two landmarks and one-site search cap.",
+    "Need scheduler is engineered; learned relief tables are frozen during scoring.",
+    "Inquiry markers/inspection/rest are not transmitted learned requests.",
+    "Six-decision continuation is short; long unattended survival and stale-report handling remain unestablished.",
+    "H5 composition/UI, autonomous scouting/teaching, neural training, reproduction and true 3D remain deferred."
+  ]
+}

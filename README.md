@@ -1,5 +1,22 @@
 # Underworld Lab (Alice)
 
+**H4 bounded native communication is now verified.** Learned location signals
+achieve 10/10 remote-water goals, versus 5/10 muted and 0/10 scrambled. Resource
+identity and location are tested separately. A separately evaluated engineered
+need scheduler completes nine self-selected drink goals versus zero with learned
+predictions disabled. Teaching, scout routes, task context and motor execution
+remain authored; this is not autonomous scouting or general intelligence.
+
+**304 Python tests and four native checks pass.** Existing worlds, G/H0-H3 source
+pins and failed Phase9 evidence remain unchanged. Read the
+[H4 results and limitations](docs/DEVELOPMENTAL_H4_REPORT.md),
+[H4 source CLI and recovery guide](docs/DEVELOPMENTAL_H4_OPERATIONS.md),
+[prospective protocol](docs/DEVELOPMENTAL_H4_PROTOCOL.md), and [handoff](HANDOFF.md).
+No release number or executable rebuild; H5 and unattended survival remain deferred.
+
+Earlier milestone summaries below are historical; their deferred H4 status is
+superseded by the bounded H4 evidence above.
+
 **21 October: developmental H0-H3 research verified.** Explicit novice profiles
 retain experience and change later choices. Private invented symbols are grounded
 through native perception and interactions, with no shared dictionary or LLM.

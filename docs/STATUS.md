@@ -1,3 +1,28 @@
+# 21 October 2026 - H4 bounded native integration
+
+H4 communication and engineered need-policy gates pass independently: 10/10
+remote-water goals enabled, 5/10 muted, 0/10 scrambled; identity alone never
+provides a location. Five depleted-source cases stop without invalid gathering.
+The separate own-need scheduler completes nine native drink goals versus zero
+under prediction ablation. 304 Python tests and four native checks pass.
+Original G/H0-H3 sources/evidence/worlds remain unchanged; Phase9's 3439-file
+audit still retains its failed outcome and its learner is excluded from live policy.
+
+This is authored scout/task integration and an engineered need scheduler, not
+autonomous scouting or language emergence. Transmitted learned requests, general
+exploration, stale-report trust, long unattended survival and H5 remain deferred.
+An entire scout circuit is not one atomic restartable transaction. Primitive and
+learning updates retain tested recovery. Initial H4 eating-duration and return-
+normalization failures are recorded; prior H1 online/G husbandry failures remain.
+No release label, packaged H4 UI/executable, neural training, reproduction or true 3D.
+
+See [H4 report](DEVELOPMENTAL_H4_REPORT.md),
+[operations](DEVELOPMENTAL_H4_OPERATIONS.md), and [handoff](../HANDOFF.md).
+Earlier records below are historical; earlier deferred H4 notes are superseded
+only by these scoped new results.
+
+---
+
 # 21 October 2026 - native developmental integration
 
 GitHub main through d54a007 is integrated and reviewed. The original dictionary-

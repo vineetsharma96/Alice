@@ -1,0 +1,26 @@
+{
+  "h4_development2.json": {
+    "raw_bytes": 6873403,
+    "sha256": "d71d603be06a671a363f5e38614021c77062c22a9463421bb192e7c81da731f8",
+    "gzip_bytes": 316191,
+    "gzip_sha256": "28cd37aac4f64e6f7ce255aecb01c7f37e73367f71c83d9cbe1de3d4d17eeed7"
+  },
+  "h4_development3.json": {
+    "raw_bytes": 6874133,
+    "sha256": "804a1b0c131ab9369df03b3acd0621aae4207439cb98ce3cd2e39f45718de287",
+    "gzip_bytes": 316446,
+    "gzip_sha256": "2eb323308763fc1248086ea4fdabaf1b3d399a1beb24cd35bd68080a0604e725"
+  },
+  "h4_development4.json": {
+    "raw_bytes": 6882272,
+    "sha256": "dedce77df34c08b23f69d78679186628d46da0e569025ae79adaced60dcea0f8",
+    "gzip_bytes": 317023,
+    "gzip_sha256": "fbce5b9b9eb4177d8f7e70e75e304e1eca8cb8eaecbd7a0e63fe5462e554909f"
+  },
+  "h4_confirmation.json": {
+    "raw_bytes": 34377812,
+    "sha256": "cef49493efa9d844d1af5f2b46110c10202a92b5bdae924e5c1fe7f541f09fbb",
+    "gzip_bytes": 1579359,
+    "gzip_sha256": "7f378f2e612a5746aecf7d270011dcd3a6b4b848ce2fb95f75dbbebeddb4debb"
+  }
+}

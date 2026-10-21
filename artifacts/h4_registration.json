@@ -1,0 +1,15 @@
+{
+  "seeds": [
+    9203,
+    9227,
+    9257,
+    9277,
+    9293
+  ],
+  "files": {
+    "underworld/wayfinding.py": "2c68b13557e62148874e64274d5871b946b3d884c260aabfd1b53a4e1282fc3c",
+    "scripts/wayfinding_study.py": "3a65a932cc8897f1ff403d91e38534637e746ef94c716f9eaae0baa893fb3e2f",
+    "tests/test_wayfinding.py": "89907db00cc9357fa1de764ec5efdfc8ce434bc198257f86ba94fdd41c050019",
+    "docs/DEVELOPMENTAL_H4_PROTOCOL.md": "5a7976962ba909c5f90c43776e179337fd27e4e20dd77cec22122eefb7e4153c"
+  }
+}

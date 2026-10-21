@@ -9,6 +9,21 @@ ROOT=Path(__file__).resolve().parents[1]
 
 
 class LearnerCliTests(unittest.TestCase):
+    def test_h4_cli_continues_native_experience_without_reset(self):
+        with tempfile.TemporaryDirectory() as directory:
+            db=Path(directory)/'h4.sqlite'
+            def run(command):
+                return subprocess.run([sys.executable,str(ROOT/'scripts/learner.py'),command,'--db',str(db),'--agent','agent-2'],
+                                      cwd=ROOT,capture_output=True,text=True,timeout=30)
+            init=run('wayfinding-init');self.assertEqual(init.returncode,0,init.stderr)
+            step=run('need-step');self.assertEqual(step.returncode,0,step.stderr)
+            result=json.loads(step.stdout)
+            self.assertIsNone(result['decision']['goal'])
+            state=run('wayfinding-status');self.assertEqual(state.returncode,0,state.stderr)
+            self.assertEqual(json.loads(state.stdout)['people']['agent-2']['h4']['policy_decisions'],1)
+            self.assertNotEqual(run('wayfinding-init').returncode,0)
+            self.assertEqual(json.loads(run('wayfinding-status').stdout),json.loads(state.stdout))
+
     def test_community_cli_preserves_recruited_life_across_processes(self):
         with tempfile.TemporaryDirectory() as directory:
             db=Path(directory)/'community.sqlite'
