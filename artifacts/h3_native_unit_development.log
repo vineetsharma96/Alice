@@ -1,0 +1,13 @@
+test_auditor_rejects_association_without_native_evidence (test_community.CommunityTests.test_auditor_rejects_association_without_native_evidence) ... ok
+test_budget_evicts_only_weak_entries_and_uncertainty_deduplicates (test_community.CommunityTests.test_budget_evicts_only_weak_entries_and_uncertainty_deduplicates) ... ok
+test_budget_has_hard_protected_and_archive_limits (test_community.CommunityTests.test_budget_has_hard_protected_and_archive_limits) ... ok
+test_native_grounding_survives_budget_interruption (test_community.CommunityTests.test_native_grounding_survives_budget_interruption) ... ok
+test_new_four_person_world_keeps_h2_and_g_defaults (test_community.CommunityTests.test_new_four_person_world_keeps_h2_and_g_defaults) ... ok
+test_private_boundaries_and_no_hidden_target_api (test_community.CommunityTests.test_private_boundaries_and_no_hidden_target_api) ... ok
+test_recruitment_is_once_and_preserves_other_people (test_community.CommunityTests.test_recruitment_is_once_and_preserves_other_people) ... ok
+test_trained_person_cannot_be_reset_as_newcomer (test_community.CommunityTests.test_trained_person_cannot_be_reset_as_newcomer) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 5.584s
+
+OK

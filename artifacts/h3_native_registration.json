@@ -1,0 +1,19 @@
+{
+  "confirmation_seeds": [
+    8101,
+    8111,
+    8123,
+    8147,
+    8161
+  ],
+  "files": {
+    "underworld/community.py": "b3e4603326564b7e698338324842d1201c10384bb3d0aa6b3c948a15d5ead74c",
+    "scripts/community_study.py": "f15acc74dfbb20f7c4f5aea57c6f87e07f6beb59fb247e5f4d4f07526d8f3e4d",
+    "tests/test_community.py": "d3f0ea80b3473c45e698b6a4a9c639e2394188179135a2739d542215334af6a9",
+    "docs/DEVELOPMENTAL_H3_NATIVE_PROTOCOL.md": "dc1a71a201af466870ae7c3f267b25ae86c28fedbb6968d6154c2a627038a577",
+    "underworld/developmental.py": "9dcc073a7b4597ea20230a8d6b5768a451703c90386621210321934aa202b96c",
+    "underworld/symbols.py": "0b3a71f4130ee822fbb84603c455abdd5bd0957aaa5c422962d24f34b0011d29",
+    "config/developmental.toml": "bc3e7172f29f06040d523e5f90ca0f59f2412435d79ebb5381b647a097e773f3",
+    "scripts/developmental_study.py": "1b7fc9520fc0a671547be2693a11bb7a06b6d2529a39c05b97c9014aa8cca7db"
+  }
+}

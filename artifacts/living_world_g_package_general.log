@@ -1,0 +1,9 @@
+{
+  "exe_sha256": "3f40a7ba64a79004a35a7268a2b36883250ddce830e7a729aec8eca497aac30b",
+  "passed": true,
+  "external_python_or_compiler_on_path": false,
+  "source_and_executable_resume_same_save": true,
+  "native_build_id": "832c4a705a7ceecd85d8befb3d84f4dff0d4730f024c395eba12985f0d8bd896",
+  "backup_matches": true,
+  "tick": "6"
+}

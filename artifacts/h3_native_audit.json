@@ -1,0 +1,309 @@
+{
+  "verified": true,
+  "gates": {
+    "registered_sources": true,
+    "h1_sources": true,
+    "h2_sources": true,
+    "g_sources": true,
+    "native_receipts_persistence_isolation_budget": true,
+    "recomputed_metrics": true,
+    "thresholds": true,
+    "compute_caps": true
+  },
+  "counts": {
+    "untrained_newcomer": [
+      19,
+      60
+    ],
+    "newcomer_learned": [
+      60,
+      60
+    ],
+    "post_interference_retained": [
+      60,
+      60
+    ],
+    "ambiguous_unrepaired": [
+      17,
+      60
+    ],
+    "ambiguous_repaired": [
+      60,
+      60
+    ]
+  },
+  "rates": {
+    "untrained_newcomer": 0.31666666666666665,
+    "newcomer_learned": 1.0,
+    "post_interference_retained": 1.0,
+    "ambiguous_unrepaired": 0.2833333333333333,
+    "ambiguous_repaired": 1.0
+  },
+  "native_scored_deliveries": 300,
+  "authored_repairs": 15,
+  "newcomer_improved_seeds": 5,
+  "repair_improved_seeds": 5,
+  "supplementary_check": "Also require repair improvement in at least four seeds, as in incoming algorithm-only gate.",
+  "noncompleted_experiences_in_counterfactuals": {},
+  "community_conventions": [
+    {
+      "seed": 8101,
+      "distinct": true,
+      "productions": {
+        "agent-1": {
+          "[\"0f4168490e38\",0]": "s00",
+          "[\"c1f026582fe6\",0]": "s0a",
+          "[\"c1f026582fe6\",2]": "s05"
+        },
+        "agent-4": {
+          "[\"0f4168490e38\",0]": "s04",
+          "[\"c1f026582fe6\",0]": "s09",
+          "[\"c1f026582fe6\",2]": "s06"
+        }
+      }
+    },
+    {
+      "seed": 8111,
+      "distinct": true,
+      "productions": {
+        "agent-1": {
+          "[\"0f4168490e38\",0]": "s0b",
+          "[\"c1f026582fe6\",0]": "s05",
+          "[\"c1f026582fe6\",2]": "s09"
+        },
+        "agent-4": {
+          "[\"0f4168490e38\",0]": "s02",
+          "[\"c1f026582fe6\",0]": "s00",
+          "[\"c1f026582fe6\",2]": "s01"
+        }
+      }
+    },
+    {
+      "seed": 8123,
+      "distinct": true,
+      "productions": {
+        "agent-1": {
+          "[\"0f4168490e38\",0]": "s0b",
+          "[\"c1f026582fe6\",0]": "s0e",
+          "[\"c1f026582fe6\",2]": "s04"
+        },
+        "agent-4": {
+          "[\"0f4168490e38\",0]": "s03",
+          "[\"c1f026582fe6\",0]": "s05",
+          "[\"c1f026582fe6\",2]": "s0f"
+        }
+      }
+    },
+    {
+      "seed": 8147,
+      "distinct": true,
+      "productions": {
+        "agent-1": {
+          "[\"0f4168490e38\",0]": "s0c",
+          "[\"c1f026582fe6\",0]": "s0f",
+          "[\"c1f026582fe6\",2]": "s0a"
+        },
+        "agent-4": {
+          "[\"0f4168490e38\",0]": "s03",
+          "[\"c1f026582fe6\",0]": "s02",
+          "[\"c1f026582fe6\",2]": "s06"
+        }
+      }
+    },
+    {
+      "seed": 8161,
+      "distinct": true,
+      "productions": {
+        "agent-1": {
+          "[\"0f4168490e38\",0]": "s0f",
+          "[\"c1f026582fe6\",0]": "s0e",
+          "[\"c1f026582fe6\",2]": "s03"
+        },
+        "agent-4": {
+          "[\"0f4168490e38\",0]": "s0c",
+          "[\"c1f026582fe6\",0]": "s0f",
+          "[\"c1f026582fe6\",2]": "s0d"
+        }
+      }
+    }
+  ],
+  "durations": [
+    {
+      "seed": 8101,
+      "arm": "untrained_newcomer",
+      "initial_simulated_s": 133.0,
+      "final_simulated_s": 157.0,
+      "wall_s": 13.662281399999983
+    },
+    {
+      "seed": 8101,
+      "arm": "newcomer_learned",
+      "initial_simulated_s": 133.0,
+      "final_simulated_s": 193.0,
+      "wall_s": 28.18813639999985
+    },
+    {
+      "seed": 8101,
+      "arm": "post_interference_retained",
+      "initial_simulated_s": 133.0,
+      "final_simulated_s": 195.0,
+      "wall_s": 35.83480869999994
+    },
+    {
+      "seed": 8101,
+      "arm": "ambiguous_unrepaired",
+      "initial_simulated_s": 133.0,
+      "final_simulated_s": 213.0,
+      "wall_s": 18.72166930000003
+    },
+    {
+      "seed": 8101,
+      "arm": "ambiguous_repaired",
+      "initial_simulated_s": 133.0,
+      "final_simulated_s": 222.0,
+      "wall_s": 51.51176209999994
+    },
+    {
+      "seed": 8111,
+      "arm": "untrained_newcomer",
+      "initial_simulated_s": 151.0,
+      "final_simulated_s": 175.0,
+      "wall_s": 14.12687179999989
+    },
+    {
+      "seed": 8111,
+      "arm": "newcomer_learned",
+      "initial_simulated_s": 151.0,
+      "final_simulated_s": 211.0,
+      "wall_s": 30.468828699999904
+    },
+    {
+      "seed": 8111,
+      "arm": "post_interference_retained",
+      "initial_simulated_s": 151.0,
+      "final_simulated_s": 213.0,
+      "wall_s": 23.97953110000003
+    },
+    {
+      "seed": 8111,
+      "arm": "ambiguous_unrepaired",
+      "initial_simulated_s": 151.0,
+      "final_simulated_s": 231.0,
+      "wall_s": 20.967955399999937
+    },
+    {
+      "seed": 8111,
+      "arm": "ambiguous_repaired",
+      "initial_simulated_s": 151.0,
+      "final_simulated_s": 240.0,
+      "wall_s": 27.736175700000103
+    },
+    {
+      "seed": 8123,
+      "arm": "untrained_newcomer",
+      "initial_simulated_s": 122.0,
+      "final_simulated_s": 146.0,
+      "wall_s": 14.908500300000014
+    },
+    {
+      "seed": 8123,
+      "arm": "newcomer_learned",
+      "initial_simulated_s": 122.0,
+      "final_simulated_s": 182.0,
+      "wall_s": 32.11157819999994
+    },
+    {
+      "seed": 8123,
+      "arm": "post_interference_retained",
+      "initial_simulated_s": 122.0,
+      "final_simulated_s": 184.0,
+      "wall_s": 30.720035099999905
+    },
+    {
+      "seed": 8123,
+      "arm": "ambiguous_unrepaired",
+      "initial_simulated_s": 122.0,
+      "final_simulated_s": 202.0,
+      "wall_s": 22.852877900000067
+    },
+    {
+      "seed": 8123,
+      "arm": "ambiguous_repaired",
+      "initial_simulated_s": 122.0,
+      "final_simulated_s": 211.0,
+      "wall_s": 26.924013299999842
+    },
+    {
+      "seed": 8147,
+      "arm": "untrained_newcomer",
+      "initial_simulated_s": 128.0,
+      "final_simulated_s": 152.0,
+      "wall_s": 12.538467100000162
+    },
+    {
+      "seed": 8147,
+      "arm": "newcomer_learned",
+      "initial_simulated_s": 128.0,
+      "final_simulated_s": 188.0,
+      "wall_s": 26.41920110000001
+    },
+    {
+      "seed": 8147,
+      "arm": "post_interference_retained",
+      "initial_simulated_s": 128.0,
+      "final_simulated_s": 190.0,
+      "wall_s": 24.024676699999873
+    },
+    {
+      "seed": 8147,
+      "arm": "ambiguous_unrepaired",
+      "initial_simulated_s": 128.0,
+      "final_simulated_s": 208.0,
+      "wall_s": 17.14831190000018
+    },
+    {
+      "seed": 8147,
+      "arm": "ambiguous_repaired",
+      "initial_simulated_s": 128.0,
+      "final_simulated_s": 217.0,
+      "wall_s": 20.38447670000005
+    },
+    {
+      "seed": 8161,
+      "arm": "untrained_newcomer",
+      "initial_simulated_s": 131.0,
+      "final_simulated_s": 155.0,
+      "wall_s": 14.090326599999798
+    },
+    {
+      "seed": 8161,
+      "arm": "newcomer_learned",
+      "initial_simulated_s": 131.0,
+      "final_simulated_s": 191.0,
+      "wall_s": 25.93040700000006
+    },
+    {
+      "seed": 8161,
+      "arm": "post_interference_retained",
+      "initial_simulated_s": 131.0,
+      "final_simulated_s": 193.0,
+      "wall_s": 28.300457300000062
+    },
+    {
+      "seed": 8161,
+      "arm": "ambiguous_unrepaired",
+      "initial_simulated_s": 131.0,
+      "final_simulated_s": 211.0,
+      "wall_s": 17.12808619999987
+    },
+    {
+      "seed": 8161,
+      "arm": "ambiguous_repaired",
+      "initial_simulated_s": 131.0,
+      "final_simulated_s": 220.0,
+      "wall_s": 18.360186399999975
+    }
+  ],
+  "study_wall_s": 732.7794074000001,
+  "claim": "Native scaffolded H3 only; imported dictionary-only H3 experiment remains unaccepted."
+}

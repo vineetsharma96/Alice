@@ -1,0 +1,24 @@
+test_actual_collision_receipt_changes_later_choice_in_matched_branches (test_phase_e_planning.PlanningTests.test_actual_collision_receipt_changes_later_choice_in_matched_branches) ... ok
+test_already_satisfied_goal_does_not_fabricate_new_procedure_credit (test_phase_e_planning.PlanningTests.test_already_satisfied_goal_does_not_fabricate_new_procedure_credit) ... ok
+test_animal_thirst_care_uses_real_native_reports_and_transfer (test_phase_e_planning.PlanningTests.test_animal_thirst_care_uses_real_native_reports_and_transfer) ... ok
+test_animal_warmup_is_matched_before_any_policy_acts (test_phase_e_planning.PlanningTests.test_animal_warmup_is_matched_before_any_policy_acts) ... ok
+test_broken_tool_replans_from_actual_native_scrap (test_phase_e_planning.PlanningTests.test_broken_tool_replans_from_actual_native_scrap) ... ok
+test_crash_after_native_commit_reconciles_one_task_action (test_phase_e_planning.PlanningTests.test_crash_after_native_commit_reconciles_one_task_action) ... ok
+test_desktop_model_off_boundary_rejects_model_assisted_task (test_phase_e_planning.PlanningTests.test_desktop_model_off_boundary_rejects_model_assisted_task) ... ok
+test_harvest_craft_planks_trough_and_real_water_delivery (test_phase_e_planning.PlanningTests.test_harvest_craft_planks_trough_and_real_water_delivery) ... ok
+test_inflight_task_backup_memory_scheduler_and_replay (test_phase_e_planning.PlanningTests.test_inflight_task_backup_memory_scheduler_and_replay) ... ok
+test_invalid_parameters_and_cancel_inflight_are_rejected (test_phase_e_planning.PlanningTests.test_invalid_parameters_and_cancel_inflight_are_rejected) ... ok
+test_missing_procedure_source_fails_closed (test_phase_e_planning.PlanningTests.test_missing_procedure_source_fails_closed) ... ok
+test_model_invalid_choice_falls_back_and_reservation_remains_bounded (test_phase_e_planning.PlanningTests.test_model_invalid_choice_falls_back_and_reservation_remains_bounded) ... ok
+test_model_reservation_survives_interruption_without_extra_call (test_phase_e_planning.PlanningTests.test_model_reservation_survives_interruption_without_extra_call) ... ok
+test_observed_empty_supply_is_bounded_and_not_consumed (test_phase_e_planning.PlanningTests.test_observed_empty_supply_is_bounded_and_not_consumed) ... ok
+test_own_verified_failure_changes_source_choice_under_memory_ablation (test_phase_e_planning.PlanningTests.test_own_verified_failure_changes_source_choice_under_memory_ablation) ... ok
+test_task_deadline_also_applies_while_survival_is_urgent (test_phase_e_planning.PlanningTests.test_task_deadline_also_applies_while_survival_is_urgent) ... ok
+test_unsupported_absent_and_private_procedure_reuse (test_phase_e_planning.PlanningTests.test_unsupported_absent_and_private_procedure_reuse) ... ok
+test_urgent_need_preempts_without_counting_task_completion (test_phase_e_planning.PlanningTests.test_urgent_need_preempts_without_counting_task_completion) ... ok
+test_utility_reference_policy_really_runs (test_phase_e_planning.PlanningTests.test_utility_reference_policy_really_runs) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 73.202s
+
+OK

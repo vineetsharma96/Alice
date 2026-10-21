@@ -1,0 +1,171 @@
+531 INFO: PyInstaller: 6.16.0, contrib hooks: 2026.8
+531 INFO: Python: 3.12.10
+687 INFO: Platform: Windows-10-10.0.19045-SP0
+687 INFO: Python environment: C:\Users\abc\Documents\ChatGPT\UnderWorld\.venv
+687 INFO: wrote C:\Users\abc\Documents\ChatGPT\UnderWorld\build\packaging\UnderworldLab.spec
+702 INFO: Module search paths (PYTHONPATH):
+['C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld',
+ 'C:\\Program '
+ 'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\python312.zip',
+ 'C:\\Program '
+ 'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\DLLs',
+ 'C:\\Program '
+ 'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib',
+ 'C:\\Program '
+ 'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0',
+ 'C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\.venv',
+ 'C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\.venv\\Lib\\site-packages',
+ 'C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\scripts',
+ 'C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld',
+ 'C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\build\\living-d']
+2281 INFO: Appending 'binaries' from .spec
+2281 INFO: Appending 'datas' from .spec
+2296 INFO: checking Analysis
+2327 INFO: Building because _input_datas changed
+2327 INFO: Looking for Python shared library...
+2327 INFO: Using Python shared library: C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\python312.dll
+2327 INFO: Running Analysis Analysis-00.toc
+2327 INFO: Target bytecode optimization level: 0
+2327 INFO: Initializing module dependency graph...
+2327 INFO: Initializing module graph hook caches...
+2484 INFO: Analyzing modules for base_library.zip ...
+7248 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+12484 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+16680 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+18609 INFO: Caching module dependency graph...
+18765 INFO: Analyzing C:\Users\abc\Documents\ChatGPT\UnderWorld\scripts\desktop_entry.py
+18890 INFO: Processing standard module hook 'hook-sqlite3.py' from 'C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+20468 INFO: Processing standard module hook 'hook-platform.py' from 'C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+20702 INFO: Processing standard module hook 'hook-multiprocessing.util.py' from 'C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+21266 INFO: Processing standard module hook 'hook-xml.py' from 'C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+21905 INFO: Processing standard module hook 'hook-_ctypes.py' from 'C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+23140 INFO: Analyzing hidden import '_underworld'
+23140 INFO: Processing module hooks (post-graph stage)...
+23343 INFO: Performing binary vs. data reclassification (55 entries)
+23374 INFO: Looking for ctypes DLLs
+23421 INFO: Analyzing run-time hooks ...
+23421 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+23515 INFO: Including run-time hook 'pyi_rth_multiprocessing.py' from 'C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+23546 INFO: Including run-time hook 'pyi_rth_pkgutil.py' from 'C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+23749 INFO: Creating base_library.zip...
+23843 INFO: Looking for dynamic libraries
+24328 INFO: Extra DLL search directories (AddDllDirectory): []
+24328 INFO: Extra DLL search directories (PATH): []
+26477 INFO: Warnings written to C:\Users\abc\Documents\ChatGPT\UnderWorld\build\packaging\UnderworldLab\warn-UnderworldLab.txt
+26577 INFO: Graph cross-reference written to C:\Users\abc\Documents\ChatGPT\UnderWorld\build\packaging\UnderworldLab\xref-UnderworldLab.html
+26650 INFO: checking PYZ
+26666 INFO: Building because toc changed
+26666 INFO: Building PYZ (ZlibArchive) C:\Users\abc\Documents\ChatGPT\UnderWorld\build\packaging\UnderworldLab\PYZ-00.pyz
+27249 INFO: Building PYZ (ZlibArchive) C:\Users\abc\Documents\ChatGPT\UnderWorld\build\packaging\UnderworldLab\PYZ-00.pyz completed successfully.
+27281 INFO: checking PKG
+27281 INFO: Building because toc changed
+27281 INFO: Building PKG (CArchive) UnderworldLab.pkg
+35531 INFO: Building PKG (CArchive) UnderworldLab.pkg completed successfully.
+35546 INFO: Bootloader C:\Users\abc\Documents\ChatGPT\UnderWorld\.venv\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\run.exe
+35546 INFO: checking EXE
+35546 INFO: Building because toc changed
+35546 INFO: Building EXE from EXE-00.toc
+35546 INFO: Copying bootloader EXE to C:\Users\abc\Documents\ChatGPT\UnderWorld\dist\UnderworldLab.exe
+35562 INFO: Copying icon to EXE
+35562 INFO: Copying 0 resources to EXE
+35562 INFO: Embedding manifest in EXE
+35578 INFO: Appending PKG archive to EXE
+35609 INFO: Fixing EXE headers
+35890 INFO: Building EXE from EXE-00.toc completed successfully.
+35953 INFO: Build complete! The results are available in: C:\Users\abc\Documents\ChatGPT\UnderWorld\dist
+{
+  "executable": "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\dist\\UnderworldLab.exe",
+  "bytes": 12617523,
+  "sha256": "a4060affb114b35bea4ff7214c8f0b3e6176b577054ccd18db33ae4d581f93ca",
+  "native_build_id": "832c4a705a7ceecd85d8befb3d84f4dff0d4730f024c395eba12985f0d8bd896",
+  "command": [
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\.venv\\Scripts\\python.exe",
+    "-m",
+    "PyInstaller",
+    "--noconfirm",
+    "--onefile",
+    "--console",
+    "--name",
+    "UnderworldLab",
+    "--distpath",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\dist",
+    "--workpath",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\build\\packaging",
+    "--specpath",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\build\\packaging",
+    "--paths",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld",
+    "--paths",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\build\\living-d",
+    "--hidden-import",
+    "_underworld",
+    "--hidden-import",
+    "underworld.__main__",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\__init__.py;underworld",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\__main__.py;underworld",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\app.py;underworld",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\cognition.py;underworld",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\config.py;underworld",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\culture.py;underworld",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\isolation.py;underworld",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\lab_policy.py;underworld",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\learning.py;underworld",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\lease.py;underworld",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\memory.py;underworld",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\native.py;underworld",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\observer.py;underworld",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\planning.py;underworld",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\planning_model.py;underworld",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\policy.py;underworld",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\resources.py;underworld",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\runtime.py;underworld",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\stabilization.py;underworld",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\storage.py;underworld",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\supervisor.py;underworld",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\teaching.py;underworld",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\viewer.py;underworld",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\wire.py;underworld",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\worker.py;underworld",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\workshop.py;underworld",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\underworld\\web;underworld/web",
+    "--add-data",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\config;config",
+    "--add-binary",
+    "C:\\mingw64\\bin\\libgcc_s_seh-1.dll;.",
+    "--add-binary",
+    "C:\\mingw64\\bin\\libstdc++-6.dll;.",
+    "--add-binary",
+    "C:\\mingw64\\bin\\libwinpthread-1.dll;.",
+    "C:\\Users\\abc\\Documents\\ChatGPT\\UnderWorld\\scripts\\desktop_entry.py"
+  ],
+  "platform": "win32",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "note": "Unsigned Windows build; model-off desktop path, no bundled worlds/models/environment files. AppContainer runner requires source runtime."
+}

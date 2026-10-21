@@ -9,16 +9,9 @@ ROOT=Path(__file__).resolve().parents[1]
 
 
 def read(name):
-    for cand in (name, name.replace('_repaired', '')):
-        path=ROOT/cand
-        if path.exists():
-            raw=path.read_bytes()
-            return json.loads(raw.decode('utf-8-sig'))
-        gz=Path(str(path)+'.gz')
-        if gz.exists():
-            raw=gzip.decompress(gz.read_bytes())
-            return json.loads(raw.decode('utf-8-sig'))
-    raise FileNotFoundError(name)
+    path=ROOT/name
+    raw=path.read_bytes() if path.exists() else gzip.decompress(Path(str(path)+'.gz').read_bytes())
+    return json.loads(raw.decode('utf-8-sig'))
 
 
 def source_gate(name):
@@ -36,10 +29,7 @@ def food_effect(experience):
 
 
 def model_calls(path):
-    p=Path(path)
-    if not p.exists():
-        return 0
-    con=sqlite3.connect(p.as_uri()+'?mode=ro',uri=True)
+    con=sqlite3.connect(Path(path).as_uri()+'?mode=ro',uri=True)
     try:return con.execute('SELECT COUNT(*) FROM cognition_calls').fetchone()[0]
     finally:con.close()
 
@@ -48,21 +38,15 @@ def main():
     seeds={8101,8111,8123,8147,8161}
     h1=read('artifacts/developmental_h1_confirmation_repaired.json')
     h2=read('artifacts/developmental_h2_confirmation.json')
-    h3=read('artifacts/developmental_h3_confirmation.json')
     gates={
         'h1_registered_sources':source_gate('artifacts/developmental_h1_registration_repaired.json'),
         'h2_registered_sources':source_gate('artifacts/developmental_h2_registration.json'),
-        'h3_registered_sources':source_gate('artifacts/developmental_h3_registration.json'),
         'g_sources_unchanged':source_gate('artifacts/living_world_g_registration.json'),
         'h1_exact_cohort':len(h1['cells'])==20 and {(c['seed'],c['arm']) for c in h1['cells']}==
             {(s,a) for s in seeds for a in ('learning','frozen','memory','authored')},
         'h2_exact_cohort':len(h2['cases'])==5 and {c['seed'] for c in h2['cases']}==seeds and
             all(len(c['arms'])==5 and {r['arm'] for r in c['arms']}=={'learned','silence','shuffled','random','oracle'} for c in h2['cases']),
-        'h3_exact_cohort':len(h3['cases'])==5 and {c['seed'] for c in h3['cases']}==seeds and
-            all(len(c['arms'])==5 and {r['arm'] for r in c['arms']}=={'newcomer_learned','untrained_newcomer','post_interference_retained','ambiguous_unrepaired','ambiguous_repaired'} for c in h3['cases']),
-        'h1_gate':h1['summary']['h1_gate'],
-        'h2_gate':h2['summary']['h2_gate'],
-        'h3_gate':h3['summary']['h3_gate'],
+        'h1_gate':h1['summary']['h1_gate'], 'h2_gate':h2['summary']['h2_gate'],
     }
     h1_counts={a:[0,0] for a in ('learning','frozen','memory','authored')}
     for cell in h1['cells']:
@@ -115,32 +99,20 @@ def main():
                     native_deliveries+=1
     gates['h2_metrics_recomputed']=all(abs(n/d-h2['summary']['rates'][a])<1e-12 for a,(n,d) in h2_counts.items())
     gates['native_token_swaps']=swaps==h2['summary']['causal_token_response_changes'] and swaps>0
-    h3_counts={a:[0,0] for a in ('newcomer_learned','untrained_newcomer','post_interference_retained','ambiguous_unrepaired','ambiguous_repaired')}
-    for case in h3['cases']:
-        assert case['private_isolation_verified'] and case['cohort_recruitment_preserved_existing']
-        assert case['protected_core_retained'] and case['archived_distractor_count']==3 and case['conventions_not_merged']
-        for arm in case['arms']:
-            assert len(arm['trials'])==12 and arm['model_calls']==0
-            for trial in arm['trials']:
-                correct=trial['actual_target']==trial['intended_target']
-                assert correct==trial['success']
-                h3_counts[arm['arm']][0]+=correct;h3_counts[arm['arm']][1]+=1
-    gates['h3_metrics_recomputed']=all(abs(n/d-h3['summary']['rates'][a])<1e-12 for a,(n,d) in h3_counts.items())
     checks=read('artifacts/developmental_checks.json')
     gates['full_regressions']=checks['passed'] and all(c['returncode']==0 for c in checks['checks'])
     phase9=read('artifacts/developmental_phase9_audit.json')
     gates['phase9_sealed_failed']=phase9['verified_files']==3439 and phase9['recomputed_metrics_match'] and phase9['advance'] is False
     online=read('artifacts/developmental_online.json')
     gates['negative_online_diagnostic_retained']=online['missed_feasible_opportunity'] and online['replay']['replay_matches']
-    assert h1['wall_s']<1800 and h2['wall_s']<1800 and h3['wall_s']<1800
-    report={'verification_passed':all(gates.values()),'gates':gates,'h1_counts':h1_counts,'h2_counts':h2_counts,'h3_counts':h3_counts,
+    assert h1['wall_s']<1800 and h2['wall_s']<1800
+    report={'verification_passed':all(gates.values()),'gates':gates,'h1_counts':h1_counts,'h2_counts':h2_counts,
             'verified_native_signal_deliveries':native_deliveries,'token_response_changes':swaps,
             'distinct_seed_production_signatures':len(production_signatures),
-            'h1_wall_s':h1['wall_s'],'h2_wall_s':h2['wall_s'],'h3_wall_s':h3['wall_s'],
+            'h1_wall_s':h1['wall_s'],'h2_wall_s':h2['wall_s'],
             'online_adaptation_failure':online['missed_feasible_opportunity'],
             'status':{'H0':'bounded contracts/persistence verified','H1':'narrow frozen gate passed',
-                      'H2':'scaffolded naming gate passed','H3':'community/newcomer/interference/repair gate passed',
-                      'H4':'deferred','H5':'deferred'},
+                      'H2':'scaffolded naming gate passed','H3':'deferred','H4':'deferred','H5':'deferred'},
             'limits':'Assigned tasks/authored sensory categories and demonstrations; no independent survival, human language, global intelligence or release-label claim.'}
     (ROOT/'artifacts/developmental_delivery_audit.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(report,indent=2))

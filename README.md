@@ -1,5 +1,27 @@
 # Underworld Lab (Alice)
 
+**21 October: developmental H0-H3 research verified.** Explicit novice profiles
+retain experience and change later choices. Private invented symbols are grounded
+through native perception and interactions, with no shared dictionary or LLM.
+H1 completes 45/45 feasible goals versus 16/45 frozen; H2 completes 60/60
+references versus 17/60 silence. The incoming H3 gate was dictionary-only and
+was rejected. Its native replacement scores 60/60 newcomer, retention and repaired
+references, versus 19/60 untrained and 17/60 unrepaired.
+
+**287 Python tests and four native checks pass.** Original G/H1/H2 registrations,
+worlds and failed Phase9 evidence are preserved. Teaching, retention protection
+and repair initiation are explicitly authored. This remains an opt-in source
+research path; H4/H5 and the six-animal expansion are deferred. The existing
+G executable and release number are unchanged.
+
+Read [the integration review and measured limits](docs/H3_INTEGRATION_REVIEW.md),
+[research operations and CLI](docs/DEVELOPMENTAL_OPERATIONS.md),
+[H0/H1/H2 evidence](docs/DEVELOPMENTAL_REPORT.md) and
+[the current handoff](HANDOFF.md). `npm start` now launches the real native
+application; the incoming JavaScript world imitation has been removed.
+
+The Milestone G results below remain the historical survival baseline.
+
 **21 October: Milestone G** adds bounded four-person production/care execution,
 source-linked feed tests and verified archive rotation. Four held-out cells reach
 300 continuous simulated seconds with all four humans alive, matching replay and

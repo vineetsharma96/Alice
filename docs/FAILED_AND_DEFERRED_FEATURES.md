@@ -1,3 +1,28 @@
+# 21 October 2026 - native developmental integration
+
+GitHub main through d54a007 is integrated and reviewed. The original dictionary-
+only H3 gate is not accepted. A separately preregistered native replacement now
+passes: newcomer, post-interference retention and authored repair each 60/60,
+versus 19/60 untrained and 17/60 unrepaired. Native receipt/private-proof audit,
+287 Python tests and four native checks pass. Original G/H1/H2 source pins and
+historical evidence are restored, not repinned; Phase9's 3439-file audit retains
+its failed result and its learner remains outside live autonomous policies.
+
+H3 remains scaffolded research: assigned tasks, authored demonstrations, count-
+based learning, explicit retention protection and tie-triggered physical repair.
+H4/H5, six-animal expansion, autonomous teaching/grammar, longer unattended
+survival, neural training, reproduction and true 3D remain deferred. The incoming
+Node world imitation was replaced with a launcher for the native application.
+The first native H3 setup attempt failed at an occupied station; its log/worlds
+are retained. The H1 online-adaptation counterexample and G husbandry failures
+remain failures. Existing worlds are not reset or replenished.
+
+See [integration results and remaining limits](H3_INTEGRATION_REVIEW.md),
+[operations](DEVELOPMENTAL_OPERATIONS.md), and [current handoff](../HANDOFF.md).
+The earlier status/evidence below is retained as its historical record.
+
+---
+
 # Milestone G - 21 October 2026
 
 Application **0.14.0 / stabilization/5** adds bounded authored pen construction,
@@ -37,7 +62,7 @@ Older entries below are historical.
 
 ---
 
-# Milestone F ï¿½ 21 October 2026
+# Milestone F — 21 October 2026
 
 Application **0.13.0**, native UW9/DB10/checkpoint 9 unchanged. Explicit new-world
 knowledge profiles, private guided operator injection, own-lesson native testing

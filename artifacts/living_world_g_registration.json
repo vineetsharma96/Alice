@@ -16,7 +16,7 @@
   "primary_segment_wall_s": 240,
   "models_enabled": false,
   "files": {
-    "config/living-world-g.toml": "980abb7b1c5dfa865aeb981cf0072b6edc6ad6019155ef32942dda3bbd37fbdf",
+    "config/living-world-g.toml": "0ee2acc4609627db1526e18138ac8af2ef721b0ac196d1b59117019b18f3dabe",
     "docs/PHASE_G_COMPUTE_ALLOCATION.md": "3cd7757bfca1147a53b68383c42bcf8d36640bc0b5d17ee4b30c399938347d95",
     "docs/PHASE_G_DEVELOPMENT_NOTES.md": "b686915e0ffac3a8b6b19c8fe3367f643b3f6d292aed532c96e413da75598c9d",
     "docs/PHASE_G_INTEGRATION.md": "1fa81749906981c19813c99cee332302cc85fde3f137a6e1a83ca23520651c07",

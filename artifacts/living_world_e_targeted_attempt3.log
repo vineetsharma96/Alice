@@ -1,0 +1,15 @@
+test_animal_thirst_care_uses_real_native_reports_and_transfer (test_phase_e_planning.PlanningTests.test_animal_thirst_care_uses_real_native_reports_and_transfer) ... ok
+test_broken_tool_replans_from_actual_native_scrap (test_phase_e_planning.PlanningTests.test_broken_tool_replans_from_actual_native_scrap) ... ok
+test_crash_after_native_commit_reconciles_one_task_action (test_phase_e_planning.PlanningTests.test_crash_after_native_commit_reconciles_one_task_action) ... ok
+test_harvest_craft_planks_trough_and_real_water_delivery (test_phase_e_planning.PlanningTests.test_harvest_craft_planks_trough_and_real_water_delivery) ... ok
+test_inflight_task_backup_memory_scheduler_and_replay (test_phase_e_planning.PlanningTests.test_inflight_task_backup_memory_scheduler_and_replay) ... ok
+test_invalid_parameters_and_cancel_inflight_are_rejected (test_phase_e_planning.PlanningTests.test_invalid_parameters_and_cancel_inflight_are_rejected) ... ok
+test_observed_empty_supply_is_bounded_and_not_consumed (test_phase_e_planning.PlanningTests.test_observed_empty_supply_is_bounded_and_not_consumed) ... ok
+test_own_verified_failure_changes_source_choice_under_memory_ablation (test_phase_e_planning.PlanningTests.test_own_verified_failure_changes_source_choice_under_memory_ablation) ... ok
+test_unsupported_absent_and_private_procedure_reuse (test_phase_e_planning.PlanningTests.test_unsupported_absent_and_private_procedure_reuse) ... ok
+test_urgent_need_preempts_without_counting_task_completion (test_phase_e_planning.PlanningTests.test_urgent_need_preempts_without_counting_task_completion) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 51.148s
+
+OK

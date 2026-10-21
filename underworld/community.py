@@ -1,255 +1,187 @@
-"""Stage H3: four-agent community, newcomer recruitment, finite-budget forgetting and authored repair."""
+"""Opt-in H3 contracts and bounded memory over the unchanged native H2 channel."""
 from contextlib import closing
+import copy
 import hashlib
 import json
-import math
 from pathlib import Path
 
+from . import developmental as dev, symbols, storage
+from .config import load
 from .lease import Lease
-from .wire import dumps
 
-ALPHABET = tuple(f's{i:02x}' for i in range(16))
 DEFAULT_ACTIVE_BUDGET = 6
 DEFAULT_PROTECTION_THRESHOLD = 3
-
-
-def _lazy_deps():
-    from . import developmental as dev, symbols, storage
-    return dev, symbols, storage
+ARCHIVE_BUDGET = 64
 
 
 def module_hash():
     return hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
 
 
-def digest(value):
-    return hashlib.sha256(dumps(value).encode('utf-8')).hexdigest()
+def _limits(budget, threshold):
+    if type(budget) is not int or not 1 <= budget <= 16:
+        raise ValueError('active budget must be an integer in 1..16')
+    if type(threshold) is not int or not 1 <= threshold <= 16:
+        raise ValueError('protection threshold must be an integer in 1..16')
 
 
-def vocabulary_hash(state):
-    return digest({k: state[k] for k in ('production', 'comprehension')})
-
-
-def random_index(state, count):
-    if count <= 0:
-        raise ValueError('empty choice set')
-    x = (int(state['rng']) + 0x9E3779B97F4A7C15) & ((1 << 64) - 1)
-    state['rng'] = x
-    x = ((x ^ (x >> 30)) * 0xBF58476D1CE4E5B9) & ((1 << 64) - 1)
-    x = ((x ^ (x >> 27)) * 0x94D049BB133111EB) & ((1 << 64) - 1)
-    return ((x ^ (x >> 31)) & ((1 << 64) - 1)) % count
-
-
-def _community_contract(db, agent):
-    dev, symbols, _ = _lazy_deps()
+def _contract(db, agent):
     state = symbols._contract(db, agent)
-    ident = 'community-contract-' + agent
-    row = db.execute('SELECT payload,checksum FROM development_records WHERE id=? AND agent=?',
-                     (ident, agent)).fetchone()
-    if not row or hashlib.sha256(row[0].encode()).hexdigest() != row[1]:
-        raise ValueError('missing private H3 community contract')
-    contract = json.loads(row[0])
+    contract = dev._read(db, 'development_records', 'community-contract-' + agent, 'id')
     if contract['module_sha256'] != module_hash():
         raise ValueError('community mechanism source mismatch; original runtime required')
-    return state, contract
+    if contract['agent'] != agent or contract['run_id'] != state['run_id']:
+        raise ValueError('community identity mismatch')
+    if (state['active_budget'], state['protection_threshold']) != (contract['active_budget'], contract['protection_threshold']):
+        raise ValueError('community budget contract mismatch')
+    return state
 
 
-def initialize(path, seed=41, population=4, active_budget=DEFAULT_ACTIVE_BUDGET,
-               protection_threshold=DEFAULT_PROTECTION_THRESHOLD):
-    """Initialize a 4-agent world (32x32 m, 4 agents, 6 animals) with H3 community contracts."""
-    dev, symbols, storage = _lazy_deps()
-    symbols.initialize(path, seed=seed, population=population)
+def initialize(path, seed=41, active_budget=6, protection_threshold=3):
+    """New four-person research cohort; keep H1/H2 and G defaults unchanged."""
+    _limits(active_budget, protection_threshold)
+    config = copy.deepcopy(load(dev.ROOT / 'config/developmental.toml'))
+    config['world'].update(width_m=32., height_m=32., population=4, population_limit=4)
+    dev.initialize(path, config=config, seed=seed)
     with Lease(path), closing(storage._connect(path)) as db:
         db.execute('BEGIN IMMEDIATE')
         for agent, in db.execute('SELECT agent FROM development_people').fetchall():
             state = dev._person(db, agent, agent)
-            state.setdefault('archived_comprehension', {})
-            state.setdefault('exposure_history', [])
-            state.setdefault('community_id', 'community-a' if agent in ('agent-1', 'agent-2') else 'community-b')
-            state.setdefault('cohort_role', 'founder' if agent in ('agent-1', 'agent-2') else 'isolated_peer')
-            state['active_budget'] = int(active_budget)
-            state['protection_threshold'] = int(protection_threshold)
+            state.update(archived_comprehension={}, active_budget=active_budget,
+                         protection_threshold=protection_threshold,
+                         cohort_role='founder' if agent in ('agent-1', 'agent-2') else 'absent_peer',
+                         community_id='a' if agent in ('agent-1', 'agent-2') else 'b',
+                         symbol_control_seed=int(hashlib.sha256(f'{seed}:{agent}:symbol-control'.encode()).hexdigest()[:16], 16))
             dev._put(db, 'development_people', agent, state)
+            dev._record(db, 'signal-contract-' + agent, agent, 'channel_contract', {
+                'run_id': state['run_id'], 'agent': agent, 'module_sha256': symbols.module_hash(),
+                'channel': {'symbols': 16, 'max_tokens': 1, 'delivery': 'native_speak'},
+                'feedback': 'own visible mass change; authored demonstration scaffolding'})
             dev._record(db, 'community-contract-' + agent, agent, 'community_contract', {
-                'run_id': state['run_id'],
-                'agent': agent,
-                'module_sha256': module_hash(),
-                'community_id': state['community_id'],
-                'cohort_role': state['cohort_role'],
-                'active_budget': int(active_budget),
-                'protection_threshold': int(protection_threshold),
-                'repair_affordance': 'authored_repetition_and_physical_deposit_cue',
-                'teaching_mode': 'authored_teaching_controller',
-            })
+                'run_id': state['run_id'], 'agent': agent, 'module_sha256': module_hash(),
+                'active_budget': active_budget, 'protection_threshold': protection_threshold,
+                'archive_budget': ARCHIVE_BUDGET,
+                'teaching_origin': 'authored_controller; native deposit and speech only'})
         db.commit()
     return audit(path)
 
 
-def recruit_newcomer(path, newcomer_id, preserved_agents=('agent-1', 'agent-2'),
-                     active_budget=DEFAULT_ACTIVE_BUDGET,
-                     protection_threshold=DEFAULT_PROTECTION_THRESHOLD):
-    """Declared cohort operation: register/verify a newcomer with empty associations without resetting existing people."""
-    dev, symbols, storage = _lazy_deps()
+def recruit_newcomer(path, newcomer_id):
+    """Activate an existing, never-trained cohort member once; reset no state."""
     with Lease(path), closing(storage._connect(path)) as db:
         db.execute('BEGIN IMMEDIATE')
-        before_hashes = {}
-        for existing in preserved_agents:
-            s = dev._person(db, existing, existing)
-            before_hashes[existing] = symbols.vocabulary_hash(s)
-        state = dev._person(db, newcomer_id, newcomer_id)
-        if state['production'] or state['comprehension'] or state['associations']:
-            raise ValueError('newcomer already has populated associations; refusing silent memory reset')
+        state = _contract(db, newcomer_id)
+        if state['cohort_role'] != 'absent_peer' or any(state[k] for k in
+                ('production', 'comprehension', 'associations', 'objects', 'archived_comprehension')):
+            raise ValueError('newcomer must be an untrained, unrecruited cohort member')
+        hashes = {a: symbols.vocabulary_hash(dev._person(db, a, a))
+                  for a, in db.execute('SELECT agent FROM development_people WHERE agent<>?', (newcomer_id,))}
         state['cohort_role'] = 'recruited_newcomer'
-        state['archived_comprehension'] = {}
-        state['exposure_history'] = []
-        state['active_budget'] = int(active_budget)
-        state['protection_threshold'] = int(protection_threshold)
         state['version'] += 1
         ident = f'recruit-{newcomer_id}-{state["version"]}'
         dev._record(db, ident, newcomer_id, 'cohort_recruitment', {
-            'run_id': state['run_id'],
-            'agent': newcomer_id,
-            'cohort_operation': 'recruit_newcomer',
-            'initial_production_empty': state['production'] == {},
-            'initial_comprehension_empty': state['comprehension'] == {},
-            'preserved_existing_hashes': before_hashes,
-        })
+            'run_id': state['run_id'], 'agent': newcomer_id, 'preserved_other_vocabularies': hashes,
+            'newcomer_initially_empty': True, 'operation': 'activate_predeclared_native_person'})
         dev._put(db, 'development_people', newcomer_id, state)
-        for existing in preserved_agents:
-            after_s = dev._person(db, existing, existing)
-            if symbols.vocabulary_hash(after_s) != before_hashes[existing]:
-                raise ValueError('existing inhabitant vocabulary modified during newcomer recruitment')
         db.commit()
-        return {
-            'newcomer': newcomer_id,
-            'recruitment_record': ident,
-            'preserved_existing_hashes': before_hashes,
-            'newcomer_vocabulary_hash': symbols.vocabulary_hash(state),
-        }
+    return {'record_id': ident, 'preserved_other_vocabularies': hashes}
 
 
 def partner_uncertainty(state, speaker, token, candidate_features):
-    """Compute partner-specific entropy/margin and ambiguity over visible candidate features."""
+    features = sorted(set(candidate_features))
     assoc = state['comprehension'].get(f'{speaker}:{token}', {})
-    counts = [int(assoc.get(f, {}).get('n', 0)) for f in candidate_features]
-    total = sum(counts)
-    best = max(counts, default=0)
-    top_ties = sum(1 for c in counts if c == best)
-    ambiguous = (total == 0) or (top_ties > 1)
-    uncertainty = round(1.0 / (total + max(1, len(candidate_features))), 4)
-    return {
-        'speaker_token': f'{speaker}:{token}',
-        'counts': dict(zip(candidate_features, counts)),
-        'total_exposures': total,
-        'best_count': best,
-        'top_ties': top_ties,
-        'ambiguous': ambiguous,
-        'uncertainty': uncertainty,
-    }
+    counts = {f: int(assoc.get(f, {}).get('n', 0)) for f in features}
+    best = max(counts.values(), default=0)
+    return {'counts': counts, 'total_exposures': sum(counts.values()),
+            'ambiguous': best == 0 or sum(c == best for c in counts.values()) > 1,
+            'origin': 'authored count-tie detector; not calibrated uncertainty'}
 
 
-def enforce_memory_budget(state, speaker=None):
-    """Enforce finite active association budget while protecting consolidated (n >= threshold) entries."""
-    budget = int(state.get('active_budget', DEFAULT_ACTIVE_BUDGET))
-    threshold = int(state.get('protection_threshold', DEFAULT_PROTECTION_THRESHOLD))
-    archived = state.setdefault('archived_comprehension', {})
-
-    items = []
-    for st_key, fmap in list(state['comprehension'].items()):
-        if speaker and not st_key.startswith(speaker + ':'):
-            continue
-        for f_key, entry in list(fmap.items()):
-            protected = int(entry.get('n', 0)) >= threshold
-            entry['protected'] = protected
-            last_ev = entry.get('evidence', [''])[-1]
-            items.append((st_key, f_key, int(entry.get('n', 0)), protected, last_ev, entry))
-
-    if len(items) <= budget:
-        return {
-            'active_count': len(items),
-            'protected_count': sum(1 for it in items if it[3]),
-            'evicted_to_archive': 0,
-        }
-
-    items.sort(key=lambda it: (1 if it[3] else 0, it[2], it[4]), reverse=True)
+def enforce_memory_budget(state):
+    """Finite total active budget. Overflow never exempts protected entries."""
+    budget, threshold = state['active_budget'], state['protection_threshold']
+    _limits(budget, threshold)
+    items = [(s, f, e) for s, values in state['comprehension'].items() for f, e in values.items()]
+    protected = sum(e['n'] >= threshold for _, _, e in items)
+    if protected > budget:
+        raise ValueError('protected memory quota reached; explicit consolidation policy required')
+    items.sort(key=lambda v: (-v[2]['n'], v[0], v[1]))
     evict = items[budget:]
-    evicted_count = 0
-    for st_key, f_key, _n, protected, _last_ev, entry in evict:
-        if protected:
-            continue
-        slot = archived.setdefault(st_key, {})
-        slot[f_key] = dict(entry, archived_reason='finite_budget_interference_eviction')
-        del state['comprehension'][st_key][f_key]
-        if not state['comprehension'][st_key]:
-            del state['comprehension'][st_key]
-        evicted_count += 1
-
-    active_after = sum(len(fmap) for k, fmap in state['comprehension'].items()
-                       if not speaker or k.startswith(speaker + ':'))
-    protected_after = sum(
-        1 for k, fmap in state['comprehension'].items()
-        if not speaker or k.startswith(speaker + ':')
-        for e in fmap.values() if e.get('protected')
-    )
-    return {
-        'active_count': active_after,
-        'protected_count': protected_after,
-        'evicted_to_archive': evicted_count,
-    }
+    archived = copy.deepcopy(state['archived_comprehension'])
+    for speaker_token, feature, entry in evict:
+        archived.setdefault(speaker_token, {})[feature] = dict(entry, archived_reason='finite_active_budget')
+    if sum(len(v) for v in archived.values()) > ARCHIVE_BUDGET:
+        raise ValueError('archived memory quota reached; preserve evidence and stop')
+    state['archived_comprehension'] = archived
+    for speaker_token, feature, _ in evict:
+        del state['comprehension'][speaker_token][feature]
+        if not state['comprehension'][speaker_token]:
+            del state['comprehension'][speaker_token]
+    for values in state['comprehension'].values():
+        for entry in values.values():
+            entry['protected'] = entry['n'] >= threshold
+    return {'active': min(len(items), budget), 'protected': protected, 'evicted': len(evict),
+            'archived': sum(len(v) for v in archived.values())}
 
 
-def record_interference_exposure(path, listener, speaker, token, feature_key, source_tag='interference'):
-    """Record a single-exposure interference association and enforce the finite memory budget."""
-    dev, _, storage = _lazy_deps()
+def reconcile_budget(path, listener):
+    """Idempotent recovery if interrupted after native grounding commits."""
     with Lease(path), closing(storage._connect(path)) as db:
         db.execute('BEGIN IMMEDIATE')
-        state, _ = _community_contract(db, listener)
-        state['version'] += 1
-        ident = f'interf-{listener}-{state["version"]}'
-        payload = {
-            'run_id': state['run_id'],
-            'agent': listener,
-            'speaker': speaker,
-            'token': token,
-            'feature': feature_key,
-            'source_tag': source_tag,
-            'grounded': True,
-            'scaffolding': 'bounded interference exposure',
-        }
-        dev._record(db, ident, listener, 'interference_exposure', payload)
-        assoc = state['comprehension'].setdefault(f'{speaker}:{token}', {})
-        entry = assoc.setdefault(feature_key, {'n': 0, 'evidence': [], 'protected': False})
-        entry['n'] += 1
-        entry['protected'] = entry['n'] >= int(state.get('protection_threshold', DEFAULT_PROTECTION_THRESHOLD))
-        entry['evidence'] = (entry['evidence'] + [ident])[-16:]
-        budget_report = enforce_memory_budget(state, speaker=speaker)
+        state = _contract(db, listener)
+        report = enforce_memory_budget(state)
         dev._put(db, 'development_people', listener, state)
         db.commit()
-        return {'record_id': ident, 'budget_report': budget_report}
+    return report
+
+
+def learn_attention(path, listener, speaker):
+    """No feature or token injection API: use the listener's native attention proof."""
+    reconcile_budget(path, listener)
+    result = symbols.learn_attention(path, listener, speaker)
+    result['budget'] = reconcile_budget(path, listener)
+    return result
+
+
+def select_reference(path, listener, speaker, candidates, after_seq=0):
+    reconcile_budget(path, listener)
+    observation = dev.own_observation(path, listener)
+    report = symbols._heard(observation, speaker, after_seq)
+    state = dev.private_state(path, listener, listener)
+    features = [symbols.percept(e) for e in observation['visible_entities'] if e['entity_id'] in candidates]
+    uncertainty = partner_uncertainty(state, speaker, report['text'], features) if report else {'ambiguous': True}
+    decision = symbols.select_reference(path, listener, speaker, candidates, after_seq)
+    decision['uncertainty'] = uncertainty
+    decision['repair_requested'] = uncertainty['ambiguous']
+    decision['repair_origin'] = 'authored tie detection; no invented request grammar'
+    return decision
 
 
 def audit(path):
-    _, symbols, storage = _lazy_deps()
-    base = symbols.audit(path)
+    result = symbols.audit(path)
+    summary = {}
     with closing(storage._connect(path, readonly=True)) as db:
         db.execute('BEGIN')
-        community_summary = {}
-        for agent, state in base['people'].items():
-            _, contract = _community_contract(db, agent)
-            active_slots = sum(len(v) for v in state['comprehension'].values())
-            protected_slots = sum(
-                1 for fmap in state['comprehension'].values()
-                for e in fmap.values() if int(e.get('n', 0)) >= int(state.get('protection_threshold', DEFAULT_PROTECTION_THRESHOLD))
-            )
-            archived_slots = sum(len(v) for v in state.get('archived_comprehension', {}).values())
-            community_summary[agent] = {
-                'community_id': state.get('community_id', contract.get('community_id')),
-                'cohort_role': state.get('cohort_role', contract.get('cohort_role')),
-                'active_budget': state.get('active_budget', DEFAULT_ACTIVE_BUDGET),
-                'active_associations': active_slots,
-                'protected_associations': protected_slots,
-                'archived_associations': archived_slots,
-                'vocabulary_hash': symbols.vocabulary_hash(state),
-            }
-    base['community'] = community_summary
-    return base
+        for agent in result['people']:
+            state = _contract(db, agent)
+            active = sum(len(v) for v in state['comprehension'].values())
+            archived = sum(len(v) for v in state['archived_comprehension'].values())
+            if active > state['active_budget'] or archived > ARCHIVE_BUDGET:
+                raise ValueError('unreconciled memory quota; call reconcile_budget before resuming')
+            for table in ('comprehension', 'archived_comprehension'):
+                for channel, entries in state[table].items():
+                    for feature, entry in entries.items():
+                        if not entry['evidence'] or len(entry['evidence']) != min(entry['n'], 16):
+                            raise ValueError('association lacks bounded native evidence counts')
+                        for ident in entry['evidence']:
+                            row = db.execute('SELECT kind,payload,checksum FROM development_records WHERE id=? AND agent=?', (ident, agent)).fetchone()
+                            if not row or row[0] != 'grounding' or hashlib.sha256(row[1].encode()).hexdigest() != row[2] or not json.loads(row[1])['grounded']:
+                                raise ValueError('association lacks native private grounding evidence')
+                            proof = json.loads(row[1])
+                            if (proof['message']['speaker_id'] + ':' + proof['message']['text'] != channel
+                                    or proof['observed_feature'] != feature):
+                                raise ValueError('private association differs from native grounding meaning')
+            summary[agent] = {'community_id': state['community_id'], 'cohort_role': state['cohort_role'],
+                              'active': active, 'archived': archived, 'budget': state['active_budget']}
+    result['community'] = summary
+    return result

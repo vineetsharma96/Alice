@@ -1,0 +1,26 @@
+{
+  "exe_sha256": "a4060affb114b35bea4ff7214c8f0b3e6176b577054ccd18db33ae4d581f93ca",
+  "viewer_url": "http://127.0.0.1:55125/viewer",
+  "passed": true,
+  "external_runtime_on_path": false,
+  "completed_task": {
+    "completed_tick": 12,
+    "created_tick": 2,
+    "delivered_ug": 0,
+    "evidence": [
+      "stable-agent-1-2"
+    ],
+    "executor_goal_credit": true,
+    "failures": 0,
+    "goal": "inspect_problem",
+    "id": 1,
+    "mode": "adaptive",
+    "origin": "operator_assigned_authored_procedure",
+    "outcome": "completed",
+    "procedure_episode_id": 2,
+    "procedure_source": null,
+    "reason": "native_observable_goal_predicate",
+    "steps": 1
+  },
+  "desktop_model_guard": true
+}

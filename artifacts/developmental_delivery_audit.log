@@ -1,0 +1,73 @@
+{
+  "verification_passed": true,
+  "gates": {
+    "h1_registered_sources": true,
+    "h2_registered_sources": true,
+    "g_sources_unchanged": true,
+    "h1_exact_cohort": true,
+    "h2_exact_cohort": true,
+    "h1_gate": true,
+    "h2_gate": true,
+    "h1_metrics_recomputed": true,
+    "h2_metrics_recomputed": true,
+    "native_token_swaps": true,
+    "full_regressions": true,
+    "phase9_sealed_failed": true,
+    "negative_online_diagnostic_retained": true
+  },
+  "h1_counts": {
+    "learning": [
+      45,
+      45
+    ],
+    "frozen": [
+      16,
+      45
+    ],
+    "memory": [
+      16,
+      45
+    ],
+    "authored": [
+      45,
+      45
+    ]
+  },
+  "h2_counts": {
+    "learned": [
+      60,
+      60
+    ],
+    "silence": [
+      17,
+      60
+    ],
+    "shuffled": [
+      20,
+      60
+    ],
+    "random": [
+      16,
+      60
+    ],
+    "oracle": [
+      60,
+      60
+    ]
+  },
+  "verified_native_signal_deliveries": 240,
+  "token_response_changes": 40,
+  "distinct_seed_production_signatures": 5,
+  "h1_wall_s": 239.47572790000413,
+  "h2_wall_s": 428.5106201999879,
+  "online_adaptation_failure": true,
+  "status": {
+    "H0": "bounded contracts/persistence verified",
+    "H1": "narrow frozen gate passed",
+    "H2": "scaffolded naming gate passed",
+    "H3": "deferred",
+    "H4": "deferred",
+    "H5": "deferred"
+  },
+  "limits": "Assigned tasks/authored sensory categories and demonstrations; no independent survival, human language, global intelligence or release-label claim."
+}

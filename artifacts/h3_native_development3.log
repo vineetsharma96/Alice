@@ -1,0 +1,42 @@
+{"seed": 41, "arm": "untrained_newcomer", "rate": 0.08333333333333333, "wall_s": 9.723191900000074}
+{"seed": 41, "arm": "newcomer_learned", "rate": 1.0, "wall_s": 20.37378690000014}
+{"seed": 41, "arm": "post_interference_retained", "rate": 1.0, "wall_s": 22.804292999999916}
+{"seed": 41, "arm": "ambiguous_unrepaired", "rate": 0.08333333333333333, "wall_s": 14.565593000000035}
+{"seed": 41, "arm": "ambiguous_repaired", "rate": 1.0, "wall_s": 18.2155937}
+{
+  "rates": {
+    "untrained_newcomer": 0.08333333333333333,
+    "newcomer_learned": 1.0,
+    "post_interference_retained": 1.0,
+    "ambiguous_unrepaired": 0.08333333333333333,
+    "ambiguous_repaired": 1.0
+  },
+  "newcomer_improved_seeds": 1,
+  "retention": true,
+  "conventions_preserved": true,
+  "invariants": true,
+  "h3_gate": true,
+  "interpretation": "Native scaffolded community reference only; authored teaching, budgets and tie repair.",
+  "wilson_intervals": {
+    "untrained_newcomer": [
+      0.014864709450773478,
+      0.35388592179859524
+    ],
+    "newcomer_learned": [
+      0.7574992425007574,
+      1.0
+    ],
+    "post_interference_retained": [
+      0.7574992425007574,
+      1.0
+    ],
+    "ambiguous_unrepaired": [
+      0.014864709450773478,
+      0.35388592179859524
+    ],
+    "ambiguous_repaired": [
+      0.7574992425007574,
+      1.0
+    ]
+  }
+}

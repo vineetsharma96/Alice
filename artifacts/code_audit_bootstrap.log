@@ -1,0 +1,16 @@
+Requirement already satisfied: pybind11==3.0.4 in c:\users\abc\documents\chatgpt\underworld\.venv\lib\site-packages (from -r requirements.txt (line 2)) (3.0.4)
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: C:\Users\abc\Documents\ChatGPT\UnderWorld\.venv\Scripts\python.exe -m pip install --upgrade pip
+-- pybind11::lto disabled (problems with undefined symbols for MinGW for now)
+-- pybind11::thin_lto disabled (problems with undefined symbols for MinGW for now)
+-- Found pybind11: C:/Users/abc/Documents/ChatGPT/UnderWorld/.venv/Lib/site-packages/pybind11/include (found version "3.0.4")
+-- Configuring done (0.8s)
+-- Generating done (0.2s)
+-- Build files have been written to: C:/Users/abc/Documents/ChatGPT/UnderWorld/build/living-d
+[ 11%] Built target underworld_core
+[ 66%] Built target underworld_sim
+[ 77%] Built target underworld_native_tests
+[ 88%] Built target _underworld
+[100%] Built target underworld_thermal_tests
+Ready. Run .\run.cmd or bash run.sh to launch the model-off living world.

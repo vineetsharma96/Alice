@@ -1,0 +1,20 @@
+{
+  "h3_native_development2.json": {
+    "raw_bytes": 3201579,
+    "sha256": "886098201658829dd30359164dd3f8db8aa3bb0a8039152e536408d122ec3430",
+    "gzip_bytes": 170686,
+    "gzip_sha256": "1cf4a08b0c8b88c12c66e971f47c4abd13d78716f8b3d3e0c3474e3184799163"
+  },
+  "h3_native_development3.json": {
+    "raw_bytes": 3201607,
+    "sha256": "97de8ee4f5a273d4245581a3adb141f8c27796c0d9e98f238677688472c75eda",
+    "gzip_bytes": 170692,
+    "gzip_sha256": "cc95d00f32a96d8f481879bc023b9344f28ec977713a51c52d8c85144edc5fbf"
+  },
+  "h3_native_confirmation.json": {
+    "raw_bytes": 15492200,
+    "sha256": "5c4fc6d49adcc12761c9d8e281630b1b7ca7dbd8c84a45e99bba1df3881907fc",
+    "gzip_bytes": 804059,
+    "gzip_sha256": "cb67021d803f842ef466bfc2ea9859956ada78e1dbbe21484312e78205611b89"
+  }
+}

@@ -1,0 +1,26 @@
+test_community_cli_preserves_recruited_life_across_processes (test_learner_cli.LearnerCliTests.test_community_cli_preserves_recruited_life_across_processes) ... FAIL
+test_existing_life_learns_across_processes_and_init_cannot_reset_it (test_learner_cli.LearnerCliTests.test_existing_life_learns_across_processes_and_init_cannot_reset_it) ... FAIL
+
+======================================================================
+FAIL: test_community_cli_preserves_recruited_life_across_processes (test_learner_cli.LearnerCliTests.test_community_cli_preserves_recruited_life_across_processes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\tests\test_learner_cli.py", line 19, in test_community_cli_preserves_recruited_life_across_processes
+    self.assertEqual(initialized.returncode,0,initialized.stderr)
+AssertionError: 2 != 0 : developmental: Native format mismatch: this source requires UW9. Rebuild or set UNDERWORLD_BUILD to build/living-d; preserve old worlds with their pinned runtime.
+
+
+======================================================================
+FAIL: test_existing_life_learns_across_processes_and_init_cannot_reset_it (test_learner_cli.LearnerCliTests.test_existing_life_learns_across_processes_and_init_cannot_reset_it)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\tests\test_learner_cli.py", line 35, in test_existing_life_learns_across_processes_and_init_cannot_reset_it
+    initialized=run('init');self.assertEqual(initialized.returncode,0,initialized.stderr)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : developmental: Native format mismatch: this source requires UW9. Rebuild or set UNDERWORLD_BUILD to build/living-d; preserve old worlds with their pinned runtime.
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 1.394s
+
+FAILED (failures=2)
