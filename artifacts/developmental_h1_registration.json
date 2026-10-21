@@ -1,0 +1,21 @@
+{
+  "mechanism": "developmental-1",
+  "development_seeds": [
+    41
+  ],
+  "confirmation_seeds": [
+    8101,
+    8111,
+    8123,
+    8147,
+    8161
+  ],
+  "files": {
+    "underworld/developmental.py": "34bf2cf8d458270bfc7a55a3c2a49f1ef1b28ccb5c894702d591548ed5f1e9b5",
+    "scripts/developmental_study.py": "1b7fc9520fc0a671547be2693a11bb7a06b6d2529a39c05b97c9014aa8cca7db",
+    "config/developmental.toml": "bc3e7172f29f06040d523e5f90ca0f59f2412435d79ebb5381b647a097e773f3",
+    "docs/DEVELOPMENTAL_PROTOCOL.md": "eed0892fda729ed72c454dad86765854b45f9f1ba1b1456f7fe03b2bbca89893",
+    "docs/DEVELOPMENTAL_CONTRACTS.md": "f1218231f277cf18c9b7fa171a80788949ec18e864155a822fc11d6bea1bd0ab",
+    "tests/test_developmental.py": "73afb5117734b490ac4d80480ab46d8eada5f2229f6c10acee8e16259a697528"
+  }
+}

@@ -1,0 +1,34 @@
+schema_version = 1
+seed = 41
+mode = "guided"
+
+[world]
+width_m = 16.0
+height_m = 16.0
+dt_s = 1.0
+population = 2
+population_limit = 2
+
+[cognition]
+provider = "disabled"
+interval_ticks = 50
+max_concurrency = 1
+max_input_tokens = 1024
+max_output_tokens = 128
+timeout_s = 10.0
+calls_per_simulated_day = 0
+
+[logging]
+level = "INFO"
+event_retention_count = 10000
+max_payload_bytes = 16384
+
+[agency]
+bodies_enabled = true
+policy = "none"
+interval_ticks = 25
+food_kg = 8.0
+water_kg = 16.0
+food_regen_kg_s = 0.0
+water_regen_kg_s = 0.0
+tree_growth_kg_s = 0.0

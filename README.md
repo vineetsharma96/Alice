@@ -23,6 +23,36 @@ A persistent simulation laboratory with C++ authority, Python orchestration, SQL
 
 **Current application: 0.14.0 · controller stabilization/5 · native UW9 · SQLite DB10 · checkpoint schema 9.** Native simulation laws/build remain unchanged from final Milestone D. [Current status](docs/STATUS.md), [audit and fixes](docs/CODE_AUDIT_REPORT.md), [D report](docs/LIVING_WORLD_D_REPORT.md), [handoff](HANDOFF.md).
 
+## Continuous operation
+
+To keep an **existing model-off save** advancing without an overall time cap,
+leave its viewer open and run the continuous source runner in another terminal:
+
+```powershell
+$env:UNDERWORLD_BUILD=(Resolve-Path build/living-d).Path
+.venv/Scripts/python.exe scripts/continuous_world.py --db data/interactive-g-session/world.sqlite
+```
+
+The current viewer stays at `http://127.0.0.1:8768/viewer`. Thirty-second segments
+are progress checkpoints; the next segment continues the same world automatically,
+including after an internal wall window expires. There is no overall duration
+limit. No bodies, memories, stocks or scheduler state are reset. A writer lease
+prevents competing runners, and model-enabled saves are refused. Quota/integrity
+failures or an extinct population stop execution. This does not certify the
+previously deferred full unattended-operation gate.
+
+Stop with Ctrl+C, or create the stop file from another terminal:
+
+```powershell
+New-Item -ItemType File data/interactive-g-session/world.sqlite.continuous-stop
+```
+
+It stops between committed ticks. Remove that stop file before a later restart.
+The existing executable launcher retains its bounded default; this explicit
+continuous runner uses the source Python/native build. Eight focused runner
+checks cover continuation, stopping, replay failure, no progress and quotas;
+the G regression report above remains the earlier 239-test snapshot.
+
 ## Knowledge and teaching
 
 Create a new explicit profile for one person; everyone else has an empty initial

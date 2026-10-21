@@ -10,3 +10,10 @@ models/
 node_modules/
 
 dist/
+
+# Exact compressed developmental traces and SHA manifests are tracked instead.
+/artifacts/developmental_h1_confirmation.json
+/artifacts/developmental_h1_development.json
+/artifacts/developmental_h1_development2.json
+/artifacts/developmental_h2_development.json
+/artifacts/developmental_h2_confirmation.json

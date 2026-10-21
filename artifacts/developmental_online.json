@@ -1,0 +1,5049 @@
+{
+  "seed": 41,
+  "split": "separate_online_development_diagnostic",
+  "training": [
+    {
+      "mechanism": "developmental-1",
+      "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+      "agent": "agent-1",
+      "request": {
+        "action_type": "gather",
+        "agent_id": "agent-1",
+        "observation_version": "0",
+        "parameters": {
+          "mass_kg": 0.001
+        },
+        "request_id": "dev-agent-1-1",
+        "requested_duration": 1,
+        "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+        "schema_version": 1,
+        "target_ids": [
+          "reachable"
+        ]
+      },
+      "before": {
+        "agent_id": "agent-1",
+        "audible_reports": [],
+        "dt_s": 1.0,
+        "hearing_range_m": 6.0,
+        "observation_version": "0",
+        "omissions": {
+          "older_results": 0
+        },
+        "own_state": {
+          "alive": true,
+          "body": {
+            "alive": true,
+            "fatigue": 0.2,
+            "food_ingested_ug": "0",
+            "health": 1.0,
+            "hunger": 0.35,
+            "thirst": 0.4,
+            "water_ingested_ug": "0"
+          },
+          "busy": false,
+          "carried_mass_ug": "0",
+          "entity_id": "agent-1",
+          "freshness_s": {},
+          "inventory_ug": {},
+          "kind": "actor",
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "position_m": [
+            2.0,
+            3.0
+          ],
+          "radius_m": 0.25,
+          "shared_event_refs": [],
+          "tools": [],
+          "workmanship": 0
+        },
+        "read_reports": [],
+        "recent_action_results": [],
+        "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+        "schema_version": 1,
+        "sight_range_m": 8,
+        "social_reports": [],
+        "task_offers": [],
+        "tick": "0",
+        "visible_entities": [
+          {
+            "entity_id": "ambiguous-range",
+            "kind": "food",
+            "mass_kg": 0.05,
+            "mass_ug": "50000000",
+            "position_m": [
+              3.6,
+              3.0
+            ],
+            "radius_m": 0.0
+          },
+          {
+            "entity_id": "reachable",
+            "kind": "food",
+            "mass_kg": 0.05,
+            "mass_ug": "50000000",
+            "position_m": [
+              1.0,
+              3.0
+            ],
+            "radius_m": 0.0
+          },
+          {
+            "entity_id": "resource-1",
+            "kind": "food",
+            "mass_kg": 8.0,
+            "mass_ug": "8000000000",
+            "position_m": [
+              2.0,
+              2.0
+            ],
+            "radius_m": 0.0
+          },
+          {
+            "entity_id": "resource-2",
+            "kind": "water",
+            "mass_kg": 16.0,
+            "mass_ug": "16000000000",
+            "position_m": [
+              3.0,
+              2.0
+            ],
+            "radius_m": 0.0
+          },
+          {
+            "entity_id": "resource-3",
+            "kind": "inert_material",
+            "mass_kg": 32.0,
+            "mass_ug": "32000000000",
+            "position_m": [
+              4.0,
+              2.0
+            ],
+            "radius_m": 0.0
+          },
+          {
+            "entity_id": "resource-4",
+            "kind": "stone",
+            "mass_kg": 4.0,
+            "mass_ug": "4000000000",
+            "position_m": [
+              5.0,
+              2.0
+            ],
+            "radius_m": 0.15
+          },
+          {
+            "entity_id": "terrain-1",
+            "kind": "rock",
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "position_m": [
+              8.0,
+              8.0
+            ],
+            "radius_m": 1.0
+          }
+        ],
+        "world_bounds_m": {
+          "height": 16.0,
+          "width": 16.0
+        }
+      },
+      "after": {
+        "schema_version": 1,
+        "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+        "agent_id": "agent-1",
+        "tick": "1",
+        "observation_version": "1",
+        "own_state": {
+          "entity_id": "agent-1",
+          "kind": "actor",
+          "position_m": [
+            2.0,
+            3.0
+          ],
+          "radius_m": 0.25,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "workmanship": 0,
+          "inventory_ug": {
+            "food": "1000000"
+          },
+          "alive": true,
+          "body": {
+            "hunger": 0.351,
+            "thirst": 0.4015,
+            "fatigue": 0.2008,
+            "health": 1.0,
+            "alive": true,
+            "food_ingested_ug": "0",
+            "water_ingested_ug": "0"
+          },
+          "freshness_s": {},
+          "tools": [],
+          "carried_mass_ug": "1000000",
+          "busy": false,
+          "shared_event_refs": []
+        },
+        "visible_entities": [
+          {
+            "entity_id": "ambiguous-range",
+            "kind": "food",
+            "position_m": [
+              3.6,
+              3.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 0.05,
+            "mass_ug": "50000000"
+          },
+          {
+            "entity_id": "reachable",
+            "kind": "food",
+            "position_m": [
+              1.0,
+              3.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 0.049,
+            "mass_ug": "49000000"
+          },
+          {
+            "entity_id": "resource-1",
+            "kind": "food",
+            "position_m": [
+              2.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 8.0,
+            "mass_ug": "8000000000"
+          },
+          {
+            "entity_id": "resource-2",
+            "kind": "water",
+            "position_m": [
+              3.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 16.0,
+            "mass_ug": "16000000000"
+          },
+          {
+            "entity_id": "resource-3",
+            "kind": "inert_material",
+            "position_m": [
+              4.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 32.0,
+            "mass_ug": "32000000000"
+          },
+          {
+            "entity_id": "resource-4",
+            "kind": "stone",
+            "position_m": [
+              5.0,
+              2.0
+            ],
+            "radius_m": 0.15,
+            "mass_kg": 4.0,
+            "mass_ug": "4000000000"
+          },
+          {
+            "entity_id": "terrain-1",
+            "kind": "rock",
+            "position_m": [
+              8.0,
+              8.0
+            ],
+            "radius_m": 1.0,
+            "mass_kg": 0.0,
+            "mass_ug": "0"
+          }
+        ],
+        "audible_reports": [],
+        "read_reports": [],
+        "social_reports": [],
+        "task_offers": [],
+        "world_bounds_m": {
+          "width": 16.0,
+          "height": 16.0
+        },
+        "sight_range_m": 8,
+        "hearing_range_m": 6.0,
+        "dt_s": 1.0,
+        "recent_action_results": [
+          {
+            "schema_version": 1,
+            "request_id": "dev-agent-1-1",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "0",
+            "completed_tick": "1",
+            "observation_version": "1",
+            "event_refs": [
+              "3",
+              "4",
+              "5"
+            ],
+            "observable_effects": {
+              "description": "gather:1000000ug"
+            }
+          }
+        ],
+        "omissions": {
+          "older_results": 0
+        }
+      },
+      "receipt": {
+        "schema_version": 1,
+        "request_id": "dev-agent-1-1",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "0",
+        "completed_tick": "1",
+        "observation_version": "1",
+        "event_refs": [
+          "3",
+          "4",
+          "5"
+        ],
+        "observable_effects": {
+          "description": "gather:1000000ug"
+        }
+      },
+      "native_events": {
+        "3": {
+          "agent_id": "agent-1",
+          "detail": "gather",
+          "request_id": "dev-agent-1-1",
+          "schema_version": 1,
+          "seq": "3",
+          "tick": "0",
+          "type": "action_accepted"
+        },
+        "4": {
+          "agent_id": "agent-1",
+          "detail": "gather:1000000ug",
+          "request_id": "dev-agent-1-1",
+          "schema_version": 1,
+          "seq": "4",
+          "tick": "1",
+          "type": "mass_transfer"
+        },
+        "5": {
+          "agent_id": "agent-1",
+          "detail": "",
+          "request_id": "dev-agent-1-1",
+          "schema_version": 1,
+          "seq": "5",
+          "tick": "1",
+          "type": "action_completed"
+        }
+      },
+      "prediction": null,
+      "food_gain_ug": 1000000,
+      "goal_success": true,
+      "outcome_category": "food_acquired",
+      "learned": true,
+      "update_version": 1
+    },
+    {
+      "mechanism": "developmental-1",
+      "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+      "agent": "agent-1",
+      "request": {
+        "action_type": "gather",
+        "agent_id": "agent-1",
+        "observation_version": "1",
+        "parameters": {
+          "mass_kg": 0.001
+        },
+        "request_id": "dev-agent-1-2",
+        "requested_duration": 1,
+        "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+        "schema_version": 1,
+        "target_ids": [
+          "reachable"
+        ]
+      },
+      "before": {
+        "agent_id": "agent-1",
+        "audible_reports": [],
+        "dt_s": 1.0,
+        "hearing_range_m": 6.0,
+        "observation_version": "1",
+        "omissions": {
+          "older_results": 0
+        },
+        "own_state": {
+          "alive": true,
+          "body": {
+            "alive": true,
+            "fatigue": 0.2008,
+            "food_ingested_ug": "0",
+            "health": 1.0,
+            "hunger": 0.351,
+            "thirst": 0.4015,
+            "water_ingested_ug": "0"
+          },
+          "busy": false,
+          "carried_mass_ug": "1000000",
+          "entity_id": "agent-1",
+          "freshness_s": {},
+          "inventory_ug": {
+            "food": "1000000"
+          },
+          "kind": "actor",
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "position_m": [
+            2.0,
+            3.0
+          ],
+          "radius_m": 0.25,
+          "shared_event_refs": [],
+          "tools": [],
+          "workmanship": 0
+        },
+        "read_reports": [],
+        "recent_action_results": [
+          {
+            "agent_id": "agent-1",
+            "completed_tick": "1",
+            "error_code": "",
+            "event_refs": [
+              "3",
+              "4",
+              "5"
+            ],
+            "observable_effects": {
+              "description": "gather:1000000ug"
+            },
+            "observation_version": "1",
+            "reason": "",
+            "request_id": "dev-agent-1-1",
+            "schema_version": 1,
+            "started_tick": "0",
+            "status": "completed"
+          }
+        ],
+        "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+        "schema_version": 1,
+        "sight_range_m": 8,
+        "social_reports": [],
+        "task_offers": [],
+        "tick": "1",
+        "visible_entities": [
+          {
+            "entity_id": "ambiguous-range",
+            "kind": "food",
+            "mass_kg": 0.05,
+            "mass_ug": "50000000",
+            "position_m": [
+              3.6,
+              3.0
+            ],
+            "radius_m": 0.0
+          },
+          {
+            "entity_id": "reachable",
+            "kind": "food",
+            "mass_kg": 0.049,
+            "mass_ug": "49000000",
+            "position_m": [
+              1.0,
+              3.0
+            ],
+            "radius_m": 0.0
+          },
+          {
+            "entity_id": "resource-1",
+            "kind": "food",
+            "mass_kg": 8.0,
+            "mass_ug": "8000000000",
+            "position_m": [
+              2.0,
+              2.0
+            ],
+            "radius_m": 0.0
+          },
+          {
+            "entity_id": "resource-2",
+            "kind": "water",
+            "mass_kg": 16.0,
+            "mass_ug": "16000000000",
+            "position_m": [
+              3.0,
+              2.0
+            ],
+            "radius_m": 0.0
+          },
+          {
+            "entity_id": "resource-3",
+            "kind": "inert_material",
+            "mass_kg": 32.0,
+            "mass_ug": "32000000000",
+            "position_m": [
+              4.0,
+              2.0
+            ],
+            "radius_m": 0.0
+          },
+          {
+            "entity_id": "resource-4",
+            "kind": "stone",
+            "mass_kg": 4.0,
+            "mass_ug": "4000000000",
+            "position_m": [
+              5.0,
+              2.0
+            ],
+            "radius_m": 0.15
+          },
+          {
+            "entity_id": "terrain-1",
+            "kind": "rock",
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "position_m": [
+              8.0,
+              8.0
+            ],
+            "radius_m": 1.0
+          }
+        ],
+        "world_bounds_m": {
+          "height": 16.0,
+          "width": 16.0
+        }
+      },
+      "after": {
+        "schema_version": 1,
+        "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+        "agent_id": "agent-1",
+        "tick": "2",
+        "observation_version": "2",
+        "own_state": {
+          "entity_id": "agent-1",
+          "kind": "actor",
+          "position_m": [
+            2.0,
+            3.0
+          ],
+          "radius_m": 0.25,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "workmanship": 0,
+          "inventory_ug": {
+            "food": "2000000"
+          },
+          "alive": true,
+          "body": {
+            "hunger": 0.352,
+            "thirst": 0.403,
+            "fatigue": 0.2016,
+            "health": 1.0,
+            "alive": true,
+            "food_ingested_ug": "0",
+            "water_ingested_ug": "0"
+          },
+          "freshness_s": {},
+          "tools": [],
+          "carried_mass_ug": "2000000",
+          "busy": false,
+          "shared_event_refs": []
+        },
+        "visible_entities": [
+          {
+            "entity_id": "ambiguous-range",
+            "kind": "food",
+            "position_m": [
+              3.6,
+              3.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 0.05,
+            "mass_ug": "50000000"
+          },
+          {
+            "entity_id": "reachable",
+            "kind": "food",
+            "position_m": [
+              1.0,
+              3.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 0.048,
+            "mass_ug": "48000000"
+          },
+          {
+            "entity_id": "resource-1",
+            "kind": "food",
+            "position_m": [
+              2.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 8.0,
+            "mass_ug": "8000000000"
+          },
+          {
+            "entity_id": "resource-2",
+            "kind": "water",
+            "position_m": [
+              3.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 16.0,
+            "mass_ug": "16000000000"
+          },
+          {
+            "entity_id": "resource-3",
+            "kind": "inert_material",
+            "position_m": [
+              4.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 32.0,
+            "mass_ug": "32000000000"
+          },
+          {
+            "entity_id": "resource-4",
+            "kind": "stone",
+            "position_m": [
+              5.0,
+              2.0
+            ],
+            "radius_m": 0.15,
+            "mass_kg": 4.0,
+            "mass_ug": "4000000000"
+          },
+          {
+            "entity_id": "terrain-1",
+            "kind": "rock",
+            "position_m": [
+              8.0,
+              8.0
+            ],
+            "radius_m": 1.0,
+            "mass_kg": 0.0,
+            "mass_ug": "0"
+          }
+        ],
+        "audible_reports": [],
+        "read_reports": [],
+        "social_reports": [],
+        "task_offers": [],
+        "world_bounds_m": {
+          "width": 16.0,
+          "height": 16.0
+        },
+        "sight_range_m": 8,
+        "hearing_range_m": 6.0,
+        "dt_s": 1.0,
+        "recent_action_results": [
+          {
+            "schema_version": 1,
+            "request_id": "dev-agent-1-1",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "0",
+            "completed_tick": "1",
+            "observation_version": "1",
+            "event_refs": [
+              "3",
+              "4",
+              "5"
+            ],
+            "observable_effects": {
+              "description": "gather:1000000ug"
+            }
+          },
+          {
+            "schema_version": 1,
+            "request_id": "dev-agent-1-2",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "1",
+            "completed_tick": "2",
+            "observation_version": "2",
+            "event_refs": [
+              "7",
+              "8",
+              "9"
+            ],
+            "observable_effects": {
+              "description": "gather:1000000ug"
+            }
+          }
+        ],
+        "omissions": {
+          "older_results": 0
+        }
+      },
+      "receipt": {
+        "schema_version": 1,
+        "request_id": "dev-agent-1-2",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "1",
+        "completed_tick": "2",
+        "observation_version": "2",
+        "event_refs": [
+          "7",
+          "8",
+          "9"
+        ],
+        "observable_effects": {
+          "description": "gather:1000000ug"
+        }
+      },
+      "native_events": {
+        "7": {
+          "agent_id": "agent-1",
+          "detail": "gather",
+          "request_id": "dev-agent-1-2",
+          "schema_version": 1,
+          "seq": "7",
+          "tick": "1",
+          "type": "action_accepted"
+        },
+        "8": {
+          "agent_id": "agent-1",
+          "detail": "gather:1000000ug",
+          "request_id": "dev-agent-1-2",
+          "schema_version": 1,
+          "seq": "8",
+          "tick": "2",
+          "type": "mass_transfer"
+        },
+        "9": {
+          "agent_id": "agent-1",
+          "detail": "",
+          "request_id": "dev-agent-1-2",
+          "schema_version": 1,
+          "seq": "9",
+          "tick": "2",
+          "type": "action_completed"
+        }
+      },
+      "prediction": null,
+      "food_gain_ug": 1000000,
+      "goal_success": true,
+      "outcome_category": "food_acquired",
+      "learned": true,
+      "update_version": 2
+    },
+    {
+      "mechanism": "developmental-1",
+      "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+      "agent": "agent-1",
+      "request": {
+        "action_type": "gather",
+        "agent_id": "agent-1",
+        "observation_version": "2",
+        "parameters": {
+          "mass_kg": 0.001
+        },
+        "request_id": "dev-agent-1-3",
+        "requested_duration": 1,
+        "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+        "schema_version": 1,
+        "target_ids": [
+          "reachable"
+        ]
+      },
+      "before": {
+        "agent_id": "agent-1",
+        "audible_reports": [],
+        "dt_s": 1.0,
+        "hearing_range_m": 6.0,
+        "observation_version": "2",
+        "omissions": {
+          "older_results": 0
+        },
+        "own_state": {
+          "alive": true,
+          "body": {
+            "alive": true,
+            "fatigue": 0.2016,
+            "food_ingested_ug": "0",
+            "health": 1.0,
+            "hunger": 0.352,
+            "thirst": 0.403,
+            "water_ingested_ug": "0"
+          },
+          "busy": false,
+          "carried_mass_ug": "2000000",
+          "entity_id": "agent-1",
+          "freshness_s": {},
+          "inventory_ug": {
+            "food": "2000000"
+          },
+          "kind": "actor",
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "position_m": [
+            2.0,
+            3.0
+          ],
+          "radius_m": 0.25,
+          "shared_event_refs": [],
+          "tools": [],
+          "workmanship": 0
+        },
+        "read_reports": [],
+        "recent_action_results": [
+          {
+            "agent_id": "agent-1",
+            "completed_tick": "1",
+            "error_code": "",
+            "event_refs": [
+              "3",
+              "4",
+              "5"
+            ],
+            "observable_effects": {
+              "description": "gather:1000000ug"
+            },
+            "observation_version": "1",
+            "reason": "",
+            "request_id": "dev-agent-1-1",
+            "schema_version": 1,
+            "started_tick": "0",
+            "status": "completed"
+          },
+          {
+            "agent_id": "agent-1",
+            "completed_tick": "2",
+            "error_code": "",
+            "event_refs": [
+              "7",
+              "8",
+              "9"
+            ],
+            "observable_effects": {
+              "description": "gather:1000000ug"
+            },
+            "observation_version": "2",
+            "reason": "",
+            "request_id": "dev-agent-1-2",
+            "schema_version": 1,
+            "started_tick": "1",
+            "status": "completed"
+          }
+        ],
+        "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+        "schema_version": 1,
+        "sight_range_m": 8,
+        "social_reports": [],
+        "task_offers": [],
+        "tick": "2",
+        "visible_entities": [
+          {
+            "entity_id": "ambiguous-range",
+            "kind": "food",
+            "mass_kg": 0.05,
+            "mass_ug": "50000000",
+            "position_m": [
+              3.6,
+              3.0
+            ],
+            "radius_m": 0.0
+          },
+          {
+            "entity_id": "reachable",
+            "kind": "food",
+            "mass_kg": 0.048,
+            "mass_ug": "48000000",
+            "position_m": [
+              1.0,
+              3.0
+            ],
+            "radius_m": 0.0
+          },
+          {
+            "entity_id": "resource-1",
+            "kind": "food",
+            "mass_kg": 8.0,
+            "mass_ug": "8000000000",
+            "position_m": [
+              2.0,
+              2.0
+            ],
+            "radius_m": 0.0
+          },
+          {
+            "entity_id": "resource-2",
+            "kind": "water",
+            "mass_kg": 16.0,
+            "mass_ug": "16000000000",
+            "position_m": [
+              3.0,
+              2.0
+            ],
+            "radius_m": 0.0
+          },
+          {
+            "entity_id": "resource-3",
+            "kind": "inert_material",
+            "mass_kg": 32.0,
+            "mass_ug": "32000000000",
+            "position_m": [
+              4.0,
+              2.0
+            ],
+            "radius_m": 0.0
+          },
+          {
+            "entity_id": "resource-4",
+            "kind": "stone",
+            "mass_kg": 4.0,
+            "mass_ug": "4000000000",
+            "position_m": [
+              5.0,
+              2.0
+            ],
+            "radius_m": 0.15
+          },
+          {
+            "entity_id": "terrain-1",
+            "kind": "rock",
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "position_m": [
+              8.0,
+              8.0
+            ],
+            "radius_m": 1.0
+          }
+        ],
+        "world_bounds_m": {
+          "height": 16.0,
+          "width": 16.0
+        }
+      },
+      "after": {
+        "schema_version": 1,
+        "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+        "agent_id": "agent-1",
+        "tick": "3",
+        "observation_version": "3",
+        "own_state": {
+          "entity_id": "agent-1",
+          "kind": "actor",
+          "position_m": [
+            2.0,
+            3.0
+          ],
+          "radius_m": 0.25,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "workmanship": 0,
+          "inventory_ug": {
+            "food": "3000000"
+          },
+          "alive": true,
+          "body": {
+            "hunger": 0.353,
+            "thirst": 0.4045,
+            "fatigue": 0.2024,
+            "health": 1.0,
+            "alive": true,
+            "food_ingested_ug": "0",
+            "water_ingested_ug": "0"
+          },
+          "freshness_s": {},
+          "tools": [],
+          "carried_mass_ug": "3000000",
+          "busy": false,
+          "shared_event_refs": []
+        },
+        "visible_entities": [
+          {
+            "entity_id": "ambiguous-range",
+            "kind": "food",
+            "position_m": [
+              3.6,
+              3.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 0.05,
+            "mass_ug": "50000000"
+          },
+          {
+            "entity_id": "reachable",
+            "kind": "food",
+            "position_m": [
+              1.0,
+              3.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 0.047,
+            "mass_ug": "47000000"
+          },
+          {
+            "entity_id": "resource-1",
+            "kind": "food",
+            "position_m": [
+              2.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 8.0,
+            "mass_ug": "8000000000"
+          },
+          {
+            "entity_id": "resource-2",
+            "kind": "water",
+            "position_m": [
+              3.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 16.0,
+            "mass_ug": "16000000000"
+          },
+          {
+            "entity_id": "resource-3",
+            "kind": "inert_material",
+            "position_m": [
+              4.0,
+              2.0
+            ],
+            "radius_m": 0.0,
+            "mass_kg": 32.0,
+            "mass_ug": "32000000000"
+          },
+          {
+            "entity_id": "resource-4",
+            "kind": "stone",
+            "position_m": [
+              5.0,
+              2.0
+            ],
+            "radius_m": 0.15,
+            "mass_kg": 4.0,
+            "mass_ug": "4000000000"
+          },
+          {
+            "entity_id": "terrain-1",
+            "kind": "rock",
+            "position_m": [
+              8.0,
+              8.0
+            ],
+            "radius_m": 1.0,
+            "mass_kg": 0.0,
+            "mass_ug": "0"
+          }
+        ],
+        "audible_reports": [],
+        "read_reports": [],
+        "social_reports": [],
+        "task_offers": [],
+        "world_bounds_m": {
+          "width": 16.0,
+          "height": 16.0
+        },
+        "sight_range_m": 8,
+        "hearing_range_m": 6.0,
+        "dt_s": 1.0,
+        "recent_action_results": [
+          {
+            "schema_version": 1,
+            "request_id": "dev-agent-1-1",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "0",
+            "completed_tick": "1",
+            "observation_version": "1",
+            "event_refs": [
+              "3",
+              "4",
+              "5"
+            ],
+            "observable_effects": {
+              "description": "gather:1000000ug"
+            }
+          },
+          {
+            "schema_version": 1,
+            "request_id": "dev-agent-1-2",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "1",
+            "completed_tick": "2",
+            "observation_version": "2",
+            "event_refs": [
+              "7",
+              "8",
+              "9"
+            ],
+            "observable_effects": {
+              "description": "gather:1000000ug"
+            }
+          },
+          {
+            "schema_version": 1,
+            "request_id": "dev-agent-1-3",
+            "agent_id": "agent-1",
+            "status": "completed",
+            "error_code": "",
+            "reason": "",
+            "started_tick": "2",
+            "completed_tick": "3",
+            "observation_version": "3",
+            "event_refs": [
+              "11",
+              "12",
+              "13"
+            ],
+            "observable_effects": {
+              "description": "gather:1000000ug"
+            }
+          }
+        ],
+        "omissions": {
+          "older_results": 0
+        }
+      },
+      "receipt": {
+        "schema_version": 1,
+        "request_id": "dev-agent-1-3",
+        "agent_id": "agent-1",
+        "status": "completed",
+        "error_code": "",
+        "reason": "",
+        "started_tick": "2",
+        "completed_tick": "3",
+        "observation_version": "3",
+        "event_refs": [
+          "11",
+          "12",
+          "13"
+        ],
+        "observable_effects": {
+          "description": "gather:1000000ug"
+        }
+      },
+      "native_events": {
+        "11": {
+          "agent_id": "agent-1",
+          "detail": "gather",
+          "request_id": "dev-agent-1-3",
+          "schema_version": 1,
+          "seq": "11",
+          "tick": "2",
+          "type": "action_accepted"
+        },
+        "12": {
+          "agent_id": "agent-1",
+          "detail": "gather:1000000ug",
+          "request_id": "dev-agent-1-3",
+          "schema_version": 1,
+          "seq": "12",
+          "tick": "3",
+          "type": "mass_transfer"
+        },
+        "13": {
+          "agent_id": "agent-1",
+          "detail": "",
+          "request_id": "dev-agent-1-3",
+          "schema_version": 1,
+          "seq": "13",
+          "tick": "3",
+          "type": "action_completed"
+        }
+      },
+      "prediction": null,
+      "food_gain_ug": 1000000,
+      "goal_success": true,
+      "outcome_category": "food_acquired",
+      "learned": true,
+      "update_version": 3
+    }
+  ],
+  "trials": [
+    {
+      "decision": {
+        "target": "ambiguous-range",
+        "predictions": [
+          {
+            "feature": "[\"c1f026582fe6\",\"stock\",\"near\"]",
+            "n": 3,
+            "successes": 3,
+            "mean": 0.8,
+            "evidence": [
+              "dev-agent-1-1",
+              "dev-agent-1-2",
+              "dev-agent-1-3"
+            ],
+            "uncertain_missing_source": false,
+            "origin": "learned_feature_counts",
+            "target": "ambiguous-range"
+          }
+        ],
+        "observation_version": "3",
+        "origin": "learning",
+        "uncertainty_rule": "abstain if every predicted mean is below0.5"
+      },
+      "experience": {
+        "mechanism": "developmental-1",
+        "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+        "agent": "agent-1",
+        "request": {
+          "action_type": "gather",
+          "agent_id": "agent-1",
+          "observation_version": "3",
+          "parameters": {
+            "mass_kg": 0.001
+          },
+          "request_id": "dev-agent-1-4",
+          "requested_duration": 1,
+          "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+          "schema_version": 1,
+          "target_ids": [
+            "ambiguous-range"
+          ]
+        },
+        "before": {
+          "agent_id": "agent-1",
+          "audible_reports": [],
+          "dt_s": 1.0,
+          "hearing_range_m": 6.0,
+          "observation_version": "3",
+          "omissions": {
+            "older_results": 0
+          },
+          "own_state": {
+            "alive": true,
+            "body": {
+              "alive": true,
+              "fatigue": 0.2024,
+              "food_ingested_ug": "0",
+              "health": 1.0,
+              "hunger": 0.353,
+              "thirst": 0.4045,
+              "water_ingested_ug": "0"
+            },
+            "busy": false,
+            "carried_mass_ug": "3000000",
+            "entity_id": "agent-1",
+            "freshness_s": {},
+            "inventory_ug": {
+              "food": "3000000"
+            },
+            "kind": "actor",
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "position_m": [
+              2.0,
+              3.0
+            ],
+            "radius_m": 0.25,
+            "shared_event_refs": [],
+            "tools": [],
+            "workmanship": 0
+          },
+          "read_reports": [],
+          "recent_action_results": [
+            {
+              "agent_id": "agent-1",
+              "completed_tick": "1",
+              "error_code": "",
+              "event_refs": [
+                "3",
+                "4",
+                "5"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              },
+              "observation_version": "1",
+              "reason": "",
+              "request_id": "dev-agent-1-1",
+              "schema_version": 1,
+              "started_tick": "0",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-1",
+              "completed_tick": "2",
+              "error_code": "",
+              "event_refs": [
+                "7",
+                "8",
+                "9"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              },
+              "observation_version": "2",
+              "reason": "",
+              "request_id": "dev-agent-1-2",
+              "schema_version": 1,
+              "started_tick": "1",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-1",
+              "completed_tick": "3",
+              "error_code": "",
+              "event_refs": [
+                "11",
+                "12",
+                "13"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              },
+              "observation_version": "3",
+              "reason": "",
+              "request_id": "dev-agent-1-3",
+              "schema_version": 1,
+              "started_tick": "2",
+              "status": "completed"
+            }
+          ],
+          "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+          "schema_version": 1,
+          "sight_range_m": 8,
+          "social_reports": [],
+          "task_offers": [],
+          "tick": "3",
+          "visible_entities": [
+            {
+              "entity_id": "ambiguous-range",
+              "kind": "food",
+              "mass_kg": 0.05,
+              "mass_ug": "50000000",
+              "position_m": [
+                3.6,
+                3.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "reachable",
+              "kind": "food",
+              "mass_kg": 0.047,
+              "mass_ug": "47000000",
+              "position_m": [
+                1.0,
+                3.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 16.0,
+              "mass_ug": "16000000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-3",
+              "kind": "inert_material",
+              "mass_kg": 32.0,
+              "mass_ug": "32000000000",
+              "position_m": [
+                4.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-4",
+              "kind": "stone",
+              "mass_kg": 4.0,
+              "mass_ug": "4000000000",
+              "position_m": [
+                5.0,
+                2.0
+              ],
+              "radius_m": 0.15
+            },
+            {
+              "entity_id": "terrain-1",
+              "kind": "rock",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                8.0,
+                8.0
+              ],
+              "radius_m": 1.0
+            }
+          ],
+          "world_bounds_m": {
+            "height": 16.0,
+            "width": 16.0
+          }
+        },
+        "after": {
+          "schema_version": 1,
+          "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+          "agent_id": "agent-1",
+          "tick": "4",
+          "observation_version": "4",
+          "own_state": {
+            "entity_id": "agent-1",
+            "kind": "actor",
+            "position_m": [
+              2.0,
+              3.0
+            ],
+            "radius_m": 0.25,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "workmanship": 0,
+            "inventory_ug": {
+              "food": "3000000"
+            },
+            "alive": true,
+            "body": {
+              "hunger": 0.354,
+              "thirst": 0.406,
+              "fatigue": 0.2032,
+              "health": 1.0,
+              "alive": true,
+              "food_ingested_ug": "0",
+              "water_ingested_ug": "0"
+            },
+            "freshness_s": {},
+            "tools": [],
+            "carried_mass_ug": "3000000",
+            "busy": false,
+            "shared_event_refs": []
+          },
+          "visible_entities": [
+            {
+              "entity_id": "ambiguous-range",
+              "kind": "food",
+              "position_m": [
+                3.6,
+                3.0
+              ],
+              "radius_m": 0.0,
+              "mass_kg": 0.05,
+              "mass_ug": "50000000"
+            },
+            {
+              "entity_id": "reachable",
+              "kind": "food",
+              "position_m": [
+                1.0,
+                3.0
+              ],
+              "radius_m": 0.0,
+              "mass_kg": 0.047,
+              "mass_ug": "47000000"
+            },
+            {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0,
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000"
+            },
+            {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0,
+              "mass_kg": 16.0,
+              "mass_ug": "16000000000"
+            },
+            {
+              "entity_id": "resource-3",
+              "kind": "inert_material",
+              "position_m": [
+                4.0,
+                2.0
+              ],
+              "radius_m": 0.0,
+              "mass_kg": 32.0,
+              "mass_ug": "32000000000"
+            },
+            {
+              "entity_id": "resource-4",
+              "kind": "stone",
+              "position_m": [
+                5.0,
+                2.0
+              ],
+              "radius_m": 0.15,
+              "mass_kg": 4.0,
+              "mass_ug": "4000000000"
+            },
+            {
+              "entity_id": "terrain-1",
+              "kind": "rock",
+              "position_m": [
+                8.0,
+                8.0
+              ],
+              "radius_m": 1.0,
+              "mass_kg": 0.0,
+              "mass_ug": "0"
+            }
+          ],
+          "audible_reports": [],
+          "read_reports": [],
+          "social_reports": [],
+          "task_offers": [],
+          "world_bounds_m": {
+            "width": 16.0,
+            "height": 16.0
+          },
+          "sight_range_m": 8,
+          "hearing_range_m": 6.0,
+          "dt_s": 1.0,
+          "recent_action_results": [
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-1",
+              "agent_id": "agent-1",
+              "status": "completed",
+              "error_code": "",
+              "reason": "",
+              "started_tick": "0",
+              "completed_tick": "1",
+              "observation_version": "1",
+              "event_refs": [
+                "3",
+                "4",
+                "5"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              }
+            },
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-2",
+              "agent_id": "agent-1",
+              "status": "completed",
+              "error_code": "",
+              "reason": "",
+              "started_tick": "1",
+              "completed_tick": "2",
+              "observation_version": "2",
+              "event_refs": [
+                "7",
+                "8",
+                "9"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              }
+            },
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-3",
+              "agent_id": "agent-1",
+              "status": "completed",
+              "error_code": "",
+              "reason": "",
+              "started_tick": "2",
+              "completed_tick": "3",
+              "observation_version": "3",
+              "event_refs": [
+                "11",
+                "12",
+                "13"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              }
+            },
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-4",
+              "agent_id": "agent-1",
+              "status": "rejected",
+              "error_code": "OUT_OF_REACH",
+              "reason": "OUT_OF_REACH",
+              "started_tick": "3",
+              "completed_tick": "3",
+              "observation_version": "3",
+              "event_refs": [
+                "15"
+              ],
+              "observable_effects": {
+                "description": ""
+              }
+            }
+          ],
+          "omissions": {
+            "older_results": 0
+          }
+        },
+        "receipt": {
+          "schema_version": 1,
+          "request_id": "dev-agent-1-4",
+          "agent_id": "agent-1",
+          "status": "rejected",
+          "error_code": "OUT_OF_REACH",
+          "reason": "OUT_OF_REACH",
+          "started_tick": "3",
+          "completed_tick": "3",
+          "observation_version": "3",
+          "event_refs": [
+            "15"
+          ],
+          "observable_effects": {
+            "description": ""
+          }
+        },
+        "native_events": {
+          "15": {
+            "agent_id": "agent-1",
+            "detail": "OUT_OF_REACH",
+            "request_id": "dev-agent-1-4",
+            "schema_version": 1,
+            "seq": "15",
+            "tick": "3",
+            "type": "action_rejected"
+          }
+        },
+        "prediction": {
+          "observation_version": "3",
+          "origin": "learning",
+          "predictions": [
+            {
+              "evidence": [
+                "dev-agent-1-1",
+                "dev-agent-1-2",
+                "dev-agent-1-3"
+              ],
+              "feature": "[\"c1f026582fe6\",\"stock\",\"near\"]",
+              "mean": 0.8,
+              "n": 3,
+              "origin": "learned_feature_counts",
+              "successes": 3,
+              "target": "ambiguous-range",
+              "uncertain_missing_source": false
+            }
+          ],
+          "target": "ambiguous-range",
+          "uncertainty_rule": "abstain if every predicted mean is below0.5"
+        },
+        "food_gain_ug": 0,
+        "goal_success": false,
+        "outcome_category": "OUT_OF_REACH",
+        "learned": true,
+        "update_version": 4
+      }
+    },
+    {
+      "decision": {
+        "target": "ambiguous-range",
+        "predictions": [
+          {
+            "feature": "[\"c1f026582fe6\",\"stock\",\"near\"]",
+            "n": 4,
+            "successes": 3,
+            "mean": 0.6666666666666666,
+            "evidence": [
+              "dev-agent-1-1",
+              "dev-agent-1-2",
+              "dev-agent-1-3",
+              "dev-agent-1-4"
+            ],
+            "uncertain_missing_source": false,
+            "origin": "learned_feature_counts",
+            "target": "ambiguous-range"
+          }
+        ],
+        "observation_version": "4",
+        "origin": "learning",
+        "uncertainty_rule": "abstain if every predicted mean is below0.5"
+      },
+      "experience": {
+        "mechanism": "developmental-1",
+        "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+        "agent": "agent-1",
+        "request": {
+          "action_type": "gather",
+          "agent_id": "agent-1",
+          "observation_version": "4",
+          "parameters": {
+            "mass_kg": 0.001
+          },
+          "request_id": "dev-agent-1-5",
+          "requested_duration": 1,
+          "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+          "schema_version": 1,
+          "target_ids": [
+            "ambiguous-range"
+          ]
+        },
+        "before": {
+          "agent_id": "agent-1",
+          "audible_reports": [],
+          "dt_s": 1.0,
+          "hearing_range_m": 6.0,
+          "observation_version": "4",
+          "omissions": {
+            "older_results": 0
+          },
+          "own_state": {
+            "alive": true,
+            "body": {
+              "alive": true,
+              "fatigue": 0.2032,
+              "food_ingested_ug": "0",
+              "health": 1.0,
+              "hunger": 0.354,
+              "thirst": 0.406,
+              "water_ingested_ug": "0"
+            },
+            "busy": false,
+            "carried_mass_ug": "3000000",
+            "entity_id": "agent-1",
+            "freshness_s": {},
+            "inventory_ug": {
+              "food": "3000000"
+            },
+            "kind": "actor",
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "position_m": [
+              2.0,
+              3.0
+            ],
+            "radius_m": 0.25,
+            "shared_event_refs": [],
+            "tools": [],
+            "workmanship": 0
+          },
+          "read_reports": [],
+          "recent_action_results": [
+            {
+              "agent_id": "agent-1",
+              "completed_tick": "1",
+              "error_code": "",
+              "event_refs": [
+                "3",
+                "4",
+                "5"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              },
+              "observation_version": "1",
+              "reason": "",
+              "request_id": "dev-agent-1-1",
+              "schema_version": 1,
+              "started_tick": "0",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-1",
+              "completed_tick": "2",
+              "error_code": "",
+              "event_refs": [
+                "7",
+                "8",
+                "9"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              },
+              "observation_version": "2",
+              "reason": "",
+              "request_id": "dev-agent-1-2",
+              "schema_version": 1,
+              "started_tick": "1",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-1",
+              "completed_tick": "3",
+              "error_code": "",
+              "event_refs": [
+                "11",
+                "12",
+                "13"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              },
+              "observation_version": "3",
+              "reason": "",
+              "request_id": "dev-agent-1-3",
+              "schema_version": 1,
+              "started_tick": "2",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-1",
+              "completed_tick": "3",
+              "error_code": "OUT_OF_REACH",
+              "event_refs": [
+                "15"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "3",
+              "reason": "OUT_OF_REACH",
+              "request_id": "dev-agent-1-4",
+              "schema_version": 1,
+              "started_tick": "3",
+              "status": "rejected"
+            }
+          ],
+          "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+          "schema_version": 1,
+          "sight_range_m": 8,
+          "social_reports": [],
+          "task_offers": [],
+          "tick": "4",
+          "visible_entities": [
+            {
+              "entity_id": "ambiguous-range",
+              "kind": "food",
+              "mass_kg": 0.05,
+              "mass_ug": "50000000",
+              "position_m": [
+                3.6,
+                3.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "reachable",
+              "kind": "food",
+              "mass_kg": 0.047,
+              "mass_ug": "47000000",
+              "position_m": [
+                1.0,
+                3.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 16.0,
+              "mass_ug": "16000000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-3",
+              "kind": "inert_material",
+              "mass_kg": 32.0,
+              "mass_ug": "32000000000",
+              "position_m": [
+                4.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-4",
+              "kind": "stone",
+              "mass_kg": 4.0,
+              "mass_ug": "4000000000",
+              "position_m": [
+                5.0,
+                2.0
+              ],
+              "radius_m": 0.15
+            },
+            {
+              "entity_id": "terrain-1",
+              "kind": "rock",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                8.0,
+                8.0
+              ],
+              "radius_m": 1.0
+            }
+          ],
+          "world_bounds_m": {
+            "height": 16.0,
+            "width": 16.0
+          }
+        },
+        "after": {
+          "schema_version": 1,
+          "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+          "agent_id": "agent-1",
+          "tick": "5",
+          "observation_version": "5",
+          "own_state": {
+            "entity_id": "agent-1",
+            "kind": "actor",
+            "position_m": [
+              2.0,
+              3.0
+            ],
+            "radius_m": 0.25,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "workmanship": 0,
+            "inventory_ug": {
+              "food": "3000000"
+            },
+            "alive": true,
+            "body": {
+              "hunger": 0.355,
+              "thirst": 0.40750000000000003,
+              "fatigue": 0.204,
+              "health": 1.0,
+              "alive": true,
+              "food_ingested_ug": "0",
+              "water_ingested_ug": "0"
+            },
+            "freshness_s": {},
+            "tools": [],
+            "carried_mass_ug": "3000000",
+            "busy": false,
+            "shared_event_refs": []
+          },
+          "visible_entities": [
+            {
+              "entity_id": "ambiguous-range",
+              "kind": "food",
+              "position_m": [
+                3.6,
+                3.0
+              ],
+              "radius_m": 0.0,
+              "mass_kg": 0.05,
+              "mass_ug": "50000000"
+            },
+            {
+              "entity_id": "reachable",
+              "kind": "food",
+              "position_m": [
+                1.0,
+                3.0
+              ],
+              "radius_m": 0.0,
+              "mass_kg": 0.047,
+              "mass_ug": "47000000"
+            },
+            {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0,
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000"
+            },
+            {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0,
+              "mass_kg": 16.0,
+              "mass_ug": "16000000000"
+            },
+            {
+              "entity_id": "resource-3",
+              "kind": "inert_material",
+              "position_m": [
+                4.0,
+                2.0
+              ],
+              "radius_m": 0.0,
+              "mass_kg": 32.0,
+              "mass_ug": "32000000000"
+            },
+            {
+              "entity_id": "resource-4",
+              "kind": "stone",
+              "position_m": [
+                5.0,
+                2.0
+              ],
+              "radius_m": 0.15,
+              "mass_kg": 4.0,
+              "mass_ug": "4000000000"
+            },
+            {
+              "entity_id": "terrain-1",
+              "kind": "rock",
+              "position_m": [
+                8.0,
+                8.0
+              ],
+              "radius_m": 1.0,
+              "mass_kg": 0.0,
+              "mass_ug": "0"
+            }
+          ],
+          "audible_reports": [],
+          "read_reports": [],
+          "social_reports": [],
+          "task_offers": [],
+          "world_bounds_m": {
+            "width": 16.0,
+            "height": 16.0
+          },
+          "sight_range_m": 8,
+          "hearing_range_m": 6.0,
+          "dt_s": 1.0,
+          "recent_action_results": [
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-1",
+              "agent_id": "agent-1",
+              "status": "completed",
+              "error_code": "",
+              "reason": "",
+              "started_tick": "0",
+              "completed_tick": "1",
+              "observation_version": "1",
+              "event_refs": [
+                "3",
+                "4",
+                "5"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              }
+            },
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-2",
+              "agent_id": "agent-1",
+              "status": "completed",
+              "error_code": "",
+              "reason": "",
+              "started_tick": "1",
+              "completed_tick": "2",
+              "observation_version": "2",
+              "event_refs": [
+                "7",
+                "8",
+                "9"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              }
+            },
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-3",
+              "agent_id": "agent-1",
+              "status": "completed",
+              "error_code": "",
+              "reason": "",
+              "started_tick": "2",
+              "completed_tick": "3",
+              "observation_version": "3",
+              "event_refs": [
+                "11",
+                "12",
+                "13"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              }
+            },
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-4",
+              "agent_id": "agent-1",
+              "status": "rejected",
+              "error_code": "OUT_OF_REACH",
+              "reason": "OUT_OF_REACH",
+              "started_tick": "3",
+              "completed_tick": "3",
+              "observation_version": "3",
+              "event_refs": [
+                "15"
+              ],
+              "observable_effects": {
+                "description": ""
+              }
+            },
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-5",
+              "agent_id": "agent-1",
+              "status": "rejected",
+              "error_code": "OUT_OF_REACH",
+              "reason": "OUT_OF_REACH",
+              "started_tick": "4",
+              "completed_tick": "4",
+              "observation_version": "4",
+              "event_refs": [
+                "17"
+              ],
+              "observable_effects": {
+                "description": ""
+              }
+            }
+          ],
+          "omissions": {
+            "older_results": 0
+          }
+        },
+        "receipt": {
+          "schema_version": 1,
+          "request_id": "dev-agent-1-5",
+          "agent_id": "agent-1",
+          "status": "rejected",
+          "error_code": "OUT_OF_REACH",
+          "reason": "OUT_OF_REACH",
+          "started_tick": "4",
+          "completed_tick": "4",
+          "observation_version": "4",
+          "event_refs": [
+            "17"
+          ],
+          "observable_effects": {
+            "description": ""
+          }
+        },
+        "native_events": {
+          "17": {
+            "agent_id": "agent-1",
+            "detail": "OUT_OF_REACH",
+            "request_id": "dev-agent-1-5",
+            "schema_version": 1,
+            "seq": "17",
+            "tick": "4",
+            "type": "action_rejected"
+          }
+        },
+        "prediction": {
+          "observation_version": "4",
+          "origin": "learning",
+          "predictions": [
+            {
+              "evidence": [
+                "dev-agent-1-1",
+                "dev-agent-1-2",
+                "dev-agent-1-3",
+                "dev-agent-1-4"
+              ],
+              "feature": "[\"c1f026582fe6\",\"stock\",\"near\"]",
+              "mean": 0.6666666666666666,
+              "n": 4,
+              "origin": "learned_feature_counts",
+              "successes": 3,
+              "target": "ambiguous-range",
+              "uncertain_missing_source": false
+            }
+          ],
+          "target": "ambiguous-range",
+          "uncertainty_rule": "abstain if every predicted mean is below0.5"
+        },
+        "food_gain_ug": 0,
+        "goal_success": false,
+        "outcome_category": "OUT_OF_REACH",
+        "learned": true,
+        "update_version": 5
+      }
+    },
+    {
+      "decision": {
+        "target": "ambiguous-range",
+        "predictions": [
+          {
+            "feature": "[\"c1f026582fe6\",\"stock\",\"near\"]",
+            "n": 5,
+            "successes": 3,
+            "mean": 0.5714285714285714,
+            "evidence": [
+              "dev-agent-1-1",
+              "dev-agent-1-2",
+              "dev-agent-1-3",
+              "dev-agent-1-4",
+              "dev-agent-1-5"
+            ],
+            "uncertain_missing_source": false,
+            "origin": "learned_feature_counts",
+            "target": "ambiguous-range"
+          }
+        ],
+        "observation_version": "5",
+        "origin": "learning",
+        "uncertainty_rule": "abstain if every predicted mean is below0.5"
+      },
+      "experience": {
+        "mechanism": "developmental-1",
+        "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+        "agent": "agent-1",
+        "request": {
+          "action_type": "gather",
+          "agent_id": "agent-1",
+          "observation_version": "5",
+          "parameters": {
+            "mass_kg": 0.001
+          },
+          "request_id": "dev-agent-1-6",
+          "requested_duration": 1,
+          "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+          "schema_version": 1,
+          "target_ids": [
+            "ambiguous-range"
+          ]
+        },
+        "before": {
+          "agent_id": "agent-1",
+          "audible_reports": [],
+          "dt_s": 1.0,
+          "hearing_range_m": 6.0,
+          "observation_version": "5",
+          "omissions": {
+            "older_results": 0
+          },
+          "own_state": {
+            "alive": true,
+            "body": {
+              "alive": true,
+              "fatigue": 0.204,
+              "food_ingested_ug": "0",
+              "health": 1.0,
+              "hunger": 0.355,
+              "thirst": 0.40750000000000003,
+              "water_ingested_ug": "0"
+            },
+            "busy": false,
+            "carried_mass_ug": "3000000",
+            "entity_id": "agent-1",
+            "freshness_s": {},
+            "inventory_ug": {
+              "food": "3000000"
+            },
+            "kind": "actor",
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "position_m": [
+              2.0,
+              3.0
+            ],
+            "radius_m": 0.25,
+            "shared_event_refs": [],
+            "tools": [],
+            "workmanship": 0
+          },
+          "read_reports": [],
+          "recent_action_results": [
+            {
+              "agent_id": "agent-1",
+              "completed_tick": "1",
+              "error_code": "",
+              "event_refs": [
+                "3",
+                "4",
+                "5"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              },
+              "observation_version": "1",
+              "reason": "",
+              "request_id": "dev-agent-1-1",
+              "schema_version": 1,
+              "started_tick": "0",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-1",
+              "completed_tick": "2",
+              "error_code": "",
+              "event_refs": [
+                "7",
+                "8",
+                "9"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              },
+              "observation_version": "2",
+              "reason": "",
+              "request_id": "dev-agent-1-2",
+              "schema_version": 1,
+              "started_tick": "1",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-1",
+              "completed_tick": "3",
+              "error_code": "",
+              "event_refs": [
+                "11",
+                "12",
+                "13"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              },
+              "observation_version": "3",
+              "reason": "",
+              "request_id": "dev-agent-1-3",
+              "schema_version": 1,
+              "started_tick": "2",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-1",
+              "completed_tick": "3",
+              "error_code": "OUT_OF_REACH",
+              "event_refs": [
+                "15"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "3",
+              "reason": "OUT_OF_REACH",
+              "request_id": "dev-agent-1-4",
+              "schema_version": 1,
+              "started_tick": "3",
+              "status": "rejected"
+            },
+            {
+              "agent_id": "agent-1",
+              "completed_tick": "4",
+              "error_code": "OUT_OF_REACH",
+              "event_refs": [
+                "17"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "4",
+              "reason": "OUT_OF_REACH",
+              "request_id": "dev-agent-1-5",
+              "schema_version": 1,
+              "started_tick": "4",
+              "status": "rejected"
+            }
+          ],
+          "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+          "schema_version": 1,
+          "sight_range_m": 8,
+          "social_reports": [],
+          "task_offers": [],
+          "tick": "5",
+          "visible_entities": [
+            {
+              "entity_id": "ambiguous-range",
+              "kind": "food",
+              "mass_kg": 0.05,
+              "mass_ug": "50000000",
+              "position_m": [
+                3.6,
+                3.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "reachable",
+              "kind": "food",
+              "mass_kg": 0.047,
+              "mass_ug": "47000000",
+              "position_m": [
+                1.0,
+                3.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 16.0,
+              "mass_ug": "16000000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-3",
+              "kind": "inert_material",
+              "mass_kg": 32.0,
+              "mass_ug": "32000000000",
+              "position_m": [
+                4.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-4",
+              "kind": "stone",
+              "mass_kg": 4.0,
+              "mass_ug": "4000000000",
+              "position_m": [
+                5.0,
+                2.0
+              ],
+              "radius_m": 0.15
+            },
+            {
+              "entity_id": "terrain-1",
+              "kind": "rock",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                8.0,
+                8.0
+              ],
+              "radius_m": 1.0
+            }
+          ],
+          "world_bounds_m": {
+            "height": 16.0,
+            "width": 16.0
+          }
+        },
+        "after": {
+          "schema_version": 1,
+          "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+          "agent_id": "agent-1",
+          "tick": "6",
+          "observation_version": "6",
+          "own_state": {
+            "entity_id": "agent-1",
+            "kind": "actor",
+            "position_m": [
+              2.0,
+              3.0
+            ],
+            "radius_m": 0.25,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "workmanship": 0,
+            "inventory_ug": {
+              "food": "3000000"
+            },
+            "alive": true,
+            "body": {
+              "hunger": 0.356,
+              "thirst": 0.40900000000000003,
+              "fatigue": 0.20479999999999998,
+              "health": 1.0,
+              "alive": true,
+              "food_ingested_ug": "0",
+              "water_ingested_ug": "0"
+            },
+            "freshness_s": {},
+            "tools": [],
+            "carried_mass_ug": "3000000",
+            "busy": false,
+            "shared_event_refs": []
+          },
+          "visible_entities": [
+            {
+              "entity_id": "ambiguous-range",
+              "kind": "food",
+              "position_m": [
+                3.6,
+                3.0
+              ],
+              "radius_m": 0.0,
+              "mass_kg": 0.05,
+              "mass_ug": "50000000"
+            },
+            {
+              "entity_id": "reachable",
+              "kind": "food",
+              "position_m": [
+                1.0,
+                3.0
+              ],
+              "radius_m": 0.0,
+              "mass_kg": 0.047,
+              "mass_ug": "47000000"
+            },
+            {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0,
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000"
+            },
+            {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0,
+              "mass_kg": 16.0,
+              "mass_ug": "16000000000"
+            },
+            {
+              "entity_id": "resource-3",
+              "kind": "inert_material",
+              "position_m": [
+                4.0,
+                2.0
+              ],
+              "radius_m": 0.0,
+              "mass_kg": 32.0,
+              "mass_ug": "32000000000"
+            },
+            {
+              "entity_id": "resource-4",
+              "kind": "stone",
+              "position_m": [
+                5.0,
+                2.0
+              ],
+              "radius_m": 0.15,
+              "mass_kg": 4.0,
+              "mass_ug": "4000000000"
+            },
+            {
+              "entity_id": "terrain-1",
+              "kind": "rock",
+              "position_m": [
+                8.0,
+                8.0
+              ],
+              "radius_m": 1.0,
+              "mass_kg": 0.0,
+              "mass_ug": "0"
+            }
+          ],
+          "audible_reports": [],
+          "read_reports": [],
+          "social_reports": [],
+          "task_offers": [],
+          "world_bounds_m": {
+            "width": 16.0,
+            "height": 16.0
+          },
+          "sight_range_m": 8,
+          "hearing_range_m": 6.0,
+          "dt_s": 1.0,
+          "recent_action_results": [
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-1",
+              "agent_id": "agent-1",
+              "status": "completed",
+              "error_code": "",
+              "reason": "",
+              "started_tick": "0",
+              "completed_tick": "1",
+              "observation_version": "1",
+              "event_refs": [
+                "3",
+                "4",
+                "5"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              }
+            },
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-2",
+              "agent_id": "agent-1",
+              "status": "completed",
+              "error_code": "",
+              "reason": "",
+              "started_tick": "1",
+              "completed_tick": "2",
+              "observation_version": "2",
+              "event_refs": [
+                "7",
+                "8",
+                "9"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              }
+            },
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-3",
+              "agent_id": "agent-1",
+              "status": "completed",
+              "error_code": "",
+              "reason": "",
+              "started_tick": "2",
+              "completed_tick": "3",
+              "observation_version": "3",
+              "event_refs": [
+                "11",
+                "12",
+                "13"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              }
+            },
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-4",
+              "agent_id": "agent-1",
+              "status": "rejected",
+              "error_code": "OUT_OF_REACH",
+              "reason": "OUT_OF_REACH",
+              "started_tick": "3",
+              "completed_tick": "3",
+              "observation_version": "3",
+              "event_refs": [
+                "15"
+              ],
+              "observable_effects": {
+                "description": ""
+              }
+            },
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-5",
+              "agent_id": "agent-1",
+              "status": "rejected",
+              "error_code": "OUT_OF_REACH",
+              "reason": "OUT_OF_REACH",
+              "started_tick": "4",
+              "completed_tick": "4",
+              "observation_version": "4",
+              "event_refs": [
+                "17"
+              ],
+              "observable_effects": {
+                "description": ""
+              }
+            },
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-6",
+              "agent_id": "agent-1",
+              "status": "rejected",
+              "error_code": "OUT_OF_REACH",
+              "reason": "OUT_OF_REACH",
+              "started_tick": "5",
+              "completed_tick": "5",
+              "observation_version": "5",
+              "event_refs": [
+                "19"
+              ],
+              "observable_effects": {
+                "description": ""
+              }
+            }
+          ],
+          "omissions": {
+            "older_results": 0
+          }
+        },
+        "receipt": {
+          "schema_version": 1,
+          "request_id": "dev-agent-1-6",
+          "agent_id": "agent-1",
+          "status": "rejected",
+          "error_code": "OUT_OF_REACH",
+          "reason": "OUT_OF_REACH",
+          "started_tick": "5",
+          "completed_tick": "5",
+          "observation_version": "5",
+          "event_refs": [
+            "19"
+          ],
+          "observable_effects": {
+            "description": ""
+          }
+        },
+        "native_events": {
+          "19": {
+            "agent_id": "agent-1",
+            "detail": "OUT_OF_REACH",
+            "request_id": "dev-agent-1-6",
+            "schema_version": 1,
+            "seq": "19",
+            "tick": "5",
+            "type": "action_rejected"
+          }
+        },
+        "prediction": {
+          "observation_version": "5",
+          "origin": "learning",
+          "predictions": [
+            {
+              "evidence": [
+                "dev-agent-1-1",
+                "dev-agent-1-2",
+                "dev-agent-1-3",
+                "dev-agent-1-4",
+                "dev-agent-1-5"
+              ],
+              "feature": "[\"c1f026582fe6\",\"stock\",\"near\"]",
+              "mean": 0.5714285714285714,
+              "n": 5,
+              "origin": "learned_feature_counts",
+              "successes": 3,
+              "target": "ambiguous-range",
+              "uncertain_missing_source": false
+            }
+          ],
+          "target": "ambiguous-range",
+          "uncertainty_rule": "abstain if every predicted mean is below0.5"
+        },
+        "food_gain_ug": 0,
+        "goal_success": false,
+        "outcome_category": "OUT_OF_REACH",
+        "learned": true,
+        "update_version": 6
+      }
+    },
+    {
+      "decision": {
+        "target": "ambiguous-range",
+        "predictions": [
+          {
+            "feature": "[\"c1f026582fe6\",\"stock\",\"near\"]",
+            "n": 6,
+            "successes": 3,
+            "mean": 0.5,
+            "evidence": [
+              "dev-agent-1-1",
+              "dev-agent-1-2",
+              "dev-agent-1-3",
+              "dev-agent-1-4",
+              "dev-agent-1-5",
+              "dev-agent-1-6"
+            ],
+            "uncertain_missing_source": false,
+            "origin": "learned_feature_counts",
+            "target": "ambiguous-range"
+          }
+        ],
+        "observation_version": "6",
+        "origin": "learning",
+        "uncertainty_rule": "abstain if every predicted mean is below0.5"
+      },
+      "experience": {
+        "mechanism": "developmental-1",
+        "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+        "agent": "agent-1",
+        "request": {
+          "action_type": "gather",
+          "agent_id": "agent-1",
+          "observation_version": "6",
+          "parameters": {
+            "mass_kg": 0.001
+          },
+          "request_id": "dev-agent-1-7",
+          "requested_duration": 1,
+          "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+          "schema_version": 1,
+          "target_ids": [
+            "ambiguous-range"
+          ]
+        },
+        "before": {
+          "agent_id": "agent-1",
+          "audible_reports": [],
+          "dt_s": 1.0,
+          "hearing_range_m": 6.0,
+          "observation_version": "6",
+          "omissions": {
+            "older_results": 0
+          },
+          "own_state": {
+            "alive": true,
+            "body": {
+              "alive": true,
+              "fatigue": 0.20479999999999998,
+              "food_ingested_ug": "0",
+              "health": 1.0,
+              "hunger": 0.356,
+              "thirst": 0.40900000000000003,
+              "water_ingested_ug": "0"
+            },
+            "busy": false,
+            "carried_mass_ug": "3000000",
+            "entity_id": "agent-1",
+            "freshness_s": {},
+            "inventory_ug": {
+              "food": "3000000"
+            },
+            "kind": "actor",
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "position_m": [
+              2.0,
+              3.0
+            ],
+            "radius_m": 0.25,
+            "shared_event_refs": [],
+            "tools": [],
+            "workmanship": 0
+          },
+          "read_reports": [],
+          "recent_action_results": [
+            {
+              "agent_id": "agent-1",
+              "completed_tick": "1",
+              "error_code": "",
+              "event_refs": [
+                "3",
+                "4",
+                "5"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              },
+              "observation_version": "1",
+              "reason": "",
+              "request_id": "dev-agent-1-1",
+              "schema_version": 1,
+              "started_tick": "0",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-1",
+              "completed_tick": "2",
+              "error_code": "",
+              "event_refs": [
+                "7",
+                "8",
+                "9"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              },
+              "observation_version": "2",
+              "reason": "",
+              "request_id": "dev-agent-1-2",
+              "schema_version": 1,
+              "started_tick": "1",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-1",
+              "completed_tick": "3",
+              "error_code": "",
+              "event_refs": [
+                "11",
+                "12",
+                "13"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              },
+              "observation_version": "3",
+              "reason": "",
+              "request_id": "dev-agent-1-3",
+              "schema_version": 1,
+              "started_tick": "2",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-1",
+              "completed_tick": "3",
+              "error_code": "OUT_OF_REACH",
+              "event_refs": [
+                "15"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "3",
+              "reason": "OUT_OF_REACH",
+              "request_id": "dev-agent-1-4",
+              "schema_version": 1,
+              "started_tick": "3",
+              "status": "rejected"
+            },
+            {
+              "agent_id": "agent-1",
+              "completed_tick": "4",
+              "error_code": "OUT_OF_REACH",
+              "event_refs": [
+                "17"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "4",
+              "reason": "OUT_OF_REACH",
+              "request_id": "dev-agent-1-5",
+              "schema_version": 1,
+              "started_tick": "4",
+              "status": "rejected"
+            },
+            {
+              "agent_id": "agent-1",
+              "completed_tick": "5",
+              "error_code": "OUT_OF_REACH",
+              "event_refs": [
+                "19"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "5",
+              "reason": "OUT_OF_REACH",
+              "request_id": "dev-agent-1-6",
+              "schema_version": 1,
+              "started_tick": "5",
+              "status": "rejected"
+            }
+          ],
+          "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+          "schema_version": 1,
+          "sight_range_m": 8,
+          "social_reports": [],
+          "task_offers": [],
+          "tick": "6",
+          "visible_entities": [
+            {
+              "entity_id": "ambiguous-range",
+              "kind": "food",
+              "mass_kg": 0.05,
+              "mass_ug": "50000000",
+              "position_m": [
+                3.6,
+                3.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "reachable",
+              "kind": "food",
+              "mass_kg": 0.047,
+              "mass_ug": "47000000",
+              "position_m": [
+                1.0,
+                3.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 16.0,
+              "mass_ug": "16000000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-3",
+              "kind": "inert_material",
+              "mass_kg": 32.0,
+              "mass_ug": "32000000000",
+              "position_m": [
+                4.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-4",
+              "kind": "stone",
+              "mass_kg": 4.0,
+              "mass_ug": "4000000000",
+              "position_m": [
+                5.0,
+                2.0
+              ],
+              "radius_m": 0.15
+            },
+            {
+              "entity_id": "terrain-1",
+              "kind": "rock",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                8.0,
+                8.0
+              ],
+              "radius_m": 1.0
+            }
+          ],
+          "world_bounds_m": {
+            "height": 16.0,
+            "width": 16.0
+          }
+        },
+        "after": {
+          "schema_version": 1,
+          "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+          "agent_id": "agent-1",
+          "tick": "7",
+          "observation_version": "7",
+          "own_state": {
+            "entity_id": "agent-1",
+            "kind": "actor",
+            "position_m": [
+              2.0,
+              3.0
+            ],
+            "radius_m": 0.25,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "workmanship": 0,
+            "inventory_ug": {
+              "food": "3000000"
+            },
+            "alive": true,
+            "body": {
+              "hunger": 0.357,
+              "thirst": 0.41050000000000003,
+              "fatigue": 0.20559999999999998,
+              "health": 1.0,
+              "alive": true,
+              "food_ingested_ug": "0",
+              "water_ingested_ug": "0"
+            },
+            "freshness_s": {},
+            "tools": [],
+            "carried_mass_ug": "3000000",
+            "busy": false,
+            "shared_event_refs": []
+          },
+          "visible_entities": [
+            {
+              "entity_id": "ambiguous-range",
+              "kind": "food",
+              "position_m": [
+                3.6,
+                3.0
+              ],
+              "radius_m": 0.0,
+              "mass_kg": 0.05,
+              "mass_ug": "50000000"
+            },
+            {
+              "entity_id": "reachable",
+              "kind": "food",
+              "position_m": [
+                1.0,
+                3.0
+              ],
+              "radius_m": 0.0,
+              "mass_kg": 0.047,
+              "mass_ug": "47000000"
+            },
+            {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0,
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000"
+            },
+            {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0,
+              "mass_kg": 16.0,
+              "mass_ug": "16000000000"
+            },
+            {
+              "entity_id": "resource-3",
+              "kind": "inert_material",
+              "position_m": [
+                4.0,
+                2.0
+              ],
+              "radius_m": 0.0,
+              "mass_kg": 32.0,
+              "mass_ug": "32000000000"
+            },
+            {
+              "entity_id": "resource-4",
+              "kind": "stone",
+              "position_m": [
+                5.0,
+                2.0
+              ],
+              "radius_m": 0.15,
+              "mass_kg": 4.0,
+              "mass_ug": "4000000000"
+            },
+            {
+              "entity_id": "terrain-1",
+              "kind": "rock",
+              "position_m": [
+                8.0,
+                8.0
+              ],
+              "radius_m": 1.0,
+              "mass_kg": 0.0,
+              "mass_ug": "0"
+            }
+          ],
+          "audible_reports": [],
+          "read_reports": [],
+          "social_reports": [],
+          "task_offers": [],
+          "world_bounds_m": {
+            "width": 16.0,
+            "height": 16.0
+          },
+          "sight_range_m": 8,
+          "hearing_range_m": 6.0,
+          "dt_s": 1.0,
+          "recent_action_results": [
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-1",
+              "agent_id": "agent-1",
+              "status": "completed",
+              "error_code": "",
+              "reason": "",
+              "started_tick": "0",
+              "completed_tick": "1",
+              "observation_version": "1",
+              "event_refs": [
+                "3",
+                "4",
+                "5"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              }
+            },
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-2",
+              "agent_id": "agent-1",
+              "status": "completed",
+              "error_code": "",
+              "reason": "",
+              "started_tick": "1",
+              "completed_tick": "2",
+              "observation_version": "2",
+              "event_refs": [
+                "7",
+                "8",
+                "9"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              }
+            },
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-3",
+              "agent_id": "agent-1",
+              "status": "completed",
+              "error_code": "",
+              "reason": "",
+              "started_tick": "2",
+              "completed_tick": "3",
+              "observation_version": "3",
+              "event_refs": [
+                "11",
+                "12",
+                "13"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              }
+            },
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-4",
+              "agent_id": "agent-1",
+              "status": "rejected",
+              "error_code": "OUT_OF_REACH",
+              "reason": "OUT_OF_REACH",
+              "started_tick": "3",
+              "completed_tick": "3",
+              "observation_version": "3",
+              "event_refs": [
+                "15"
+              ],
+              "observable_effects": {
+                "description": ""
+              }
+            },
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-5",
+              "agent_id": "agent-1",
+              "status": "rejected",
+              "error_code": "OUT_OF_REACH",
+              "reason": "OUT_OF_REACH",
+              "started_tick": "4",
+              "completed_tick": "4",
+              "observation_version": "4",
+              "event_refs": [
+                "17"
+              ],
+              "observable_effects": {
+                "description": ""
+              }
+            },
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-6",
+              "agent_id": "agent-1",
+              "status": "rejected",
+              "error_code": "OUT_OF_REACH",
+              "reason": "OUT_OF_REACH",
+              "started_tick": "5",
+              "completed_tick": "5",
+              "observation_version": "5",
+              "event_refs": [
+                "19"
+              ],
+              "observable_effects": {
+                "description": ""
+              }
+            },
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-7",
+              "agent_id": "agent-1",
+              "status": "rejected",
+              "error_code": "OUT_OF_REACH",
+              "reason": "OUT_OF_REACH",
+              "started_tick": "6",
+              "completed_tick": "6",
+              "observation_version": "6",
+              "event_refs": [
+                "21"
+              ],
+              "observable_effects": {
+                "description": ""
+              }
+            }
+          ],
+          "omissions": {
+            "older_results": 0
+          }
+        },
+        "receipt": {
+          "schema_version": 1,
+          "request_id": "dev-agent-1-7",
+          "agent_id": "agent-1",
+          "status": "rejected",
+          "error_code": "OUT_OF_REACH",
+          "reason": "OUT_OF_REACH",
+          "started_tick": "6",
+          "completed_tick": "6",
+          "observation_version": "6",
+          "event_refs": [
+            "21"
+          ],
+          "observable_effects": {
+            "description": ""
+          }
+        },
+        "native_events": {
+          "21": {
+            "agent_id": "agent-1",
+            "detail": "OUT_OF_REACH",
+            "request_id": "dev-agent-1-7",
+            "schema_version": 1,
+            "seq": "21",
+            "tick": "6",
+            "type": "action_rejected"
+          }
+        },
+        "prediction": {
+          "observation_version": "6",
+          "origin": "learning",
+          "predictions": [
+            {
+              "evidence": [
+                "dev-agent-1-1",
+                "dev-agent-1-2",
+                "dev-agent-1-3",
+                "dev-agent-1-4",
+                "dev-agent-1-5",
+                "dev-agent-1-6"
+              ],
+              "feature": "[\"c1f026582fe6\",\"stock\",\"near\"]",
+              "mean": 0.5,
+              "n": 6,
+              "origin": "learned_feature_counts",
+              "successes": 3,
+              "target": "ambiguous-range",
+              "uncertain_missing_source": false
+            }
+          ],
+          "target": "ambiguous-range",
+          "uncertainty_rule": "abstain if every predicted mean is below0.5"
+        },
+        "food_gain_ug": 0,
+        "goal_success": false,
+        "outcome_category": "OUT_OF_REACH",
+        "learned": true,
+        "update_version": 7
+      }
+    },
+    {
+      "decision": {
+        "target": null,
+        "predictions": [
+          {
+            "feature": "[\"c1f026582fe6\",\"stock\",\"near\"]",
+            "n": 7,
+            "successes": 3,
+            "mean": 0.4444444444444444,
+            "evidence": [
+              "dev-agent-1-1",
+              "dev-agent-1-2",
+              "dev-agent-1-3",
+              "dev-agent-1-4",
+              "dev-agent-1-5",
+              "dev-agent-1-6",
+              "dev-agent-1-7"
+            ],
+            "uncertain_missing_source": false,
+            "origin": "learned_feature_counts",
+            "target": "ambiguous-range"
+          }
+        ],
+        "observation_version": "7",
+        "origin": "learning",
+        "uncertainty_rule": "abstain if every predicted mean is below0.5"
+      },
+      "experience": {
+        "mechanism": "developmental-1",
+        "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+        "agent": "agent-1",
+        "request": {
+          "action_type": "rest",
+          "agent_id": "agent-1",
+          "observation_version": "7",
+          "parameters": {},
+          "request_id": "dev-agent-1-8",
+          "requested_duration": 1,
+          "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+          "schema_version": 1,
+          "target_ids": []
+        },
+        "before": {
+          "agent_id": "agent-1",
+          "audible_reports": [],
+          "dt_s": 1.0,
+          "hearing_range_m": 6.0,
+          "observation_version": "7",
+          "omissions": {
+            "older_results": 0
+          },
+          "own_state": {
+            "alive": true,
+            "body": {
+              "alive": true,
+              "fatigue": 0.20559999999999998,
+              "food_ingested_ug": "0",
+              "health": 1.0,
+              "hunger": 0.357,
+              "thirst": 0.41050000000000003,
+              "water_ingested_ug": "0"
+            },
+            "busy": false,
+            "carried_mass_ug": "3000000",
+            "entity_id": "agent-1",
+            "freshness_s": {},
+            "inventory_ug": {
+              "food": "3000000"
+            },
+            "kind": "actor",
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "position_m": [
+              2.0,
+              3.0
+            ],
+            "radius_m": 0.25,
+            "shared_event_refs": [],
+            "tools": [],
+            "workmanship": 0
+          },
+          "read_reports": [],
+          "recent_action_results": [
+            {
+              "agent_id": "agent-1",
+              "completed_tick": "1",
+              "error_code": "",
+              "event_refs": [
+                "3",
+                "4",
+                "5"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              },
+              "observation_version": "1",
+              "reason": "",
+              "request_id": "dev-agent-1-1",
+              "schema_version": 1,
+              "started_tick": "0",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-1",
+              "completed_tick": "2",
+              "error_code": "",
+              "event_refs": [
+                "7",
+                "8",
+                "9"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              },
+              "observation_version": "2",
+              "reason": "",
+              "request_id": "dev-agent-1-2",
+              "schema_version": 1,
+              "started_tick": "1",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-1",
+              "completed_tick": "3",
+              "error_code": "",
+              "event_refs": [
+                "11",
+                "12",
+                "13"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              },
+              "observation_version": "3",
+              "reason": "",
+              "request_id": "dev-agent-1-3",
+              "schema_version": 1,
+              "started_tick": "2",
+              "status": "completed"
+            },
+            {
+              "agent_id": "agent-1",
+              "completed_tick": "3",
+              "error_code": "OUT_OF_REACH",
+              "event_refs": [
+                "15"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "3",
+              "reason": "OUT_OF_REACH",
+              "request_id": "dev-agent-1-4",
+              "schema_version": 1,
+              "started_tick": "3",
+              "status": "rejected"
+            },
+            {
+              "agent_id": "agent-1",
+              "completed_tick": "4",
+              "error_code": "OUT_OF_REACH",
+              "event_refs": [
+                "17"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "4",
+              "reason": "OUT_OF_REACH",
+              "request_id": "dev-agent-1-5",
+              "schema_version": 1,
+              "started_tick": "4",
+              "status": "rejected"
+            },
+            {
+              "agent_id": "agent-1",
+              "completed_tick": "5",
+              "error_code": "OUT_OF_REACH",
+              "event_refs": [
+                "19"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "5",
+              "reason": "OUT_OF_REACH",
+              "request_id": "dev-agent-1-6",
+              "schema_version": 1,
+              "started_tick": "5",
+              "status": "rejected"
+            },
+            {
+              "agent_id": "agent-1",
+              "completed_tick": "6",
+              "error_code": "OUT_OF_REACH",
+              "event_refs": [
+                "21"
+              ],
+              "observable_effects": {
+                "description": ""
+              },
+              "observation_version": "6",
+              "reason": "OUT_OF_REACH",
+              "request_id": "dev-agent-1-7",
+              "schema_version": 1,
+              "started_tick": "6",
+              "status": "rejected"
+            }
+          ],
+          "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+          "schema_version": 1,
+          "sight_range_m": 8,
+          "social_reports": [],
+          "task_offers": [],
+          "tick": "7",
+          "visible_entities": [
+            {
+              "entity_id": "ambiguous-range",
+              "kind": "food",
+              "mass_kg": 0.05,
+              "mass_ug": "50000000",
+              "position_m": [
+                3.6,
+                3.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "reachable",
+              "kind": "food",
+              "mass_kg": 0.047,
+              "mass_ug": "47000000",
+              "position_m": [
+                1.0,
+                3.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 16.0,
+              "mass_ug": "16000000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-3",
+              "kind": "inert_material",
+              "mass_kg": 32.0,
+              "mass_ug": "32000000000",
+              "position_m": [
+                4.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            {
+              "entity_id": "resource-4",
+              "kind": "stone",
+              "mass_kg": 4.0,
+              "mass_ug": "4000000000",
+              "position_m": [
+                5.0,
+                2.0
+              ],
+              "radius_m": 0.15
+            },
+            {
+              "entity_id": "terrain-1",
+              "kind": "rock",
+              "mass_kg": 0.0,
+              "mass_ug": "0",
+              "position_m": [
+                8.0,
+                8.0
+              ],
+              "radius_m": 1.0
+            }
+          ],
+          "world_bounds_m": {
+            "height": 16.0,
+            "width": 16.0
+          }
+        },
+        "after": {
+          "schema_version": 1,
+          "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+          "agent_id": "agent-1",
+          "tick": "8",
+          "observation_version": "8",
+          "own_state": {
+            "entity_id": "agent-1",
+            "kind": "actor",
+            "position_m": [
+              2.0,
+              3.0
+            ],
+            "radius_m": 0.25,
+            "mass_kg": 0.0,
+            "mass_ug": "0",
+            "workmanship": 0,
+            "inventory_ug": {
+              "food": "3000000"
+            },
+            "alive": true,
+            "body": {
+              "hunger": 0.358,
+              "thirst": 0.41200000000000003,
+              "fatigue": 0.1906,
+              "health": 1.0,
+              "alive": true,
+              "food_ingested_ug": "0",
+              "water_ingested_ug": "0"
+            },
+            "freshness_s": {},
+            "tools": [],
+            "carried_mass_ug": "3000000",
+            "busy": false,
+            "shared_event_refs": []
+          },
+          "visible_entities": [
+            {
+              "entity_id": "ambiguous-range",
+              "kind": "food",
+              "position_m": [
+                3.6,
+                3.0
+              ],
+              "radius_m": 0.0,
+              "mass_kg": 0.05,
+              "mass_ug": "50000000"
+            },
+            {
+              "entity_id": "reachable",
+              "kind": "food",
+              "position_m": [
+                1.0,
+                3.0
+              ],
+              "radius_m": 0.0,
+              "mass_kg": 0.047,
+              "mass_ug": "47000000"
+            },
+            {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0,
+              "mass_kg": 8.0,
+              "mass_ug": "8000000000"
+            },
+            {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0,
+              "mass_kg": 16.0,
+              "mass_ug": "16000000000"
+            },
+            {
+              "entity_id": "resource-3",
+              "kind": "inert_material",
+              "position_m": [
+                4.0,
+                2.0
+              ],
+              "radius_m": 0.0,
+              "mass_kg": 32.0,
+              "mass_ug": "32000000000"
+            },
+            {
+              "entity_id": "resource-4",
+              "kind": "stone",
+              "position_m": [
+                5.0,
+                2.0
+              ],
+              "radius_m": 0.15,
+              "mass_kg": 4.0,
+              "mass_ug": "4000000000"
+            },
+            {
+              "entity_id": "terrain-1",
+              "kind": "rock",
+              "position_m": [
+                8.0,
+                8.0
+              ],
+              "radius_m": 1.0,
+              "mass_kg": 0.0,
+              "mass_ug": "0"
+            }
+          ],
+          "audible_reports": [],
+          "read_reports": [],
+          "social_reports": [],
+          "task_offers": [],
+          "world_bounds_m": {
+            "width": 16.0,
+            "height": 16.0
+          },
+          "sight_range_m": 8,
+          "hearing_range_m": 6.0,
+          "dt_s": 1.0,
+          "recent_action_results": [
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-1",
+              "agent_id": "agent-1",
+              "status": "completed",
+              "error_code": "",
+              "reason": "",
+              "started_tick": "0",
+              "completed_tick": "1",
+              "observation_version": "1",
+              "event_refs": [
+                "3",
+                "4",
+                "5"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              }
+            },
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-2",
+              "agent_id": "agent-1",
+              "status": "completed",
+              "error_code": "",
+              "reason": "",
+              "started_tick": "1",
+              "completed_tick": "2",
+              "observation_version": "2",
+              "event_refs": [
+                "7",
+                "8",
+                "9"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              }
+            },
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-3",
+              "agent_id": "agent-1",
+              "status": "completed",
+              "error_code": "",
+              "reason": "",
+              "started_tick": "2",
+              "completed_tick": "3",
+              "observation_version": "3",
+              "event_refs": [
+                "11",
+                "12",
+                "13"
+              ],
+              "observable_effects": {
+                "description": "gather:1000000ug"
+              }
+            },
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-4",
+              "agent_id": "agent-1",
+              "status": "rejected",
+              "error_code": "OUT_OF_REACH",
+              "reason": "OUT_OF_REACH",
+              "started_tick": "3",
+              "completed_tick": "3",
+              "observation_version": "3",
+              "event_refs": [
+                "15"
+              ],
+              "observable_effects": {
+                "description": ""
+              }
+            },
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-5",
+              "agent_id": "agent-1",
+              "status": "rejected",
+              "error_code": "OUT_OF_REACH",
+              "reason": "OUT_OF_REACH",
+              "started_tick": "4",
+              "completed_tick": "4",
+              "observation_version": "4",
+              "event_refs": [
+                "17"
+              ],
+              "observable_effects": {
+                "description": ""
+              }
+            },
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-6",
+              "agent_id": "agent-1",
+              "status": "rejected",
+              "error_code": "OUT_OF_REACH",
+              "reason": "OUT_OF_REACH",
+              "started_tick": "5",
+              "completed_tick": "5",
+              "observation_version": "5",
+              "event_refs": [
+                "19"
+              ],
+              "observable_effects": {
+                "description": ""
+              }
+            },
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-7",
+              "agent_id": "agent-1",
+              "status": "rejected",
+              "error_code": "OUT_OF_REACH",
+              "reason": "OUT_OF_REACH",
+              "started_tick": "6",
+              "completed_tick": "6",
+              "observation_version": "6",
+              "event_refs": [
+                "21"
+              ],
+              "observable_effects": {
+                "description": ""
+              }
+            },
+            {
+              "schema_version": 1,
+              "request_id": "dev-agent-1-8",
+              "agent_id": "agent-1",
+              "status": "completed",
+              "error_code": "",
+              "reason": "",
+              "started_tick": "7",
+              "completed_tick": "8",
+              "observation_version": "8",
+              "event_refs": [
+                "23",
+                "24"
+              ],
+              "observable_effects": {
+                "description": "rested"
+              }
+            }
+          ],
+          "omissions": {
+            "older_results": 0
+          }
+        },
+        "receipt": {
+          "schema_version": 1,
+          "request_id": "dev-agent-1-8",
+          "agent_id": "agent-1",
+          "status": "completed",
+          "error_code": "",
+          "reason": "",
+          "started_tick": "7",
+          "completed_tick": "8",
+          "observation_version": "8",
+          "event_refs": [
+            "23",
+            "24"
+          ],
+          "observable_effects": {
+            "description": "rested"
+          }
+        },
+        "native_events": {
+          "23": {
+            "agent_id": "agent-1",
+            "detail": "rest",
+            "request_id": "dev-agent-1-8",
+            "schema_version": 1,
+            "seq": "23",
+            "tick": "7",
+            "type": "action_accepted"
+          },
+          "24": {
+            "agent_id": "agent-1",
+            "detail": "",
+            "request_id": "dev-agent-1-8",
+            "schema_version": 1,
+            "seq": "24",
+            "tick": "8",
+            "type": "action_completed"
+          }
+        },
+        "prediction": null,
+        "food_gain_ug": 0,
+        "goal_success": false,
+        "outcome_category": "completed_without_food",
+        "learned": false,
+        "update_version": 8
+      }
+    }
+  ],
+  "final_reachable_decision": {
+    "target": null,
+    "predictions": [
+      {
+        "feature": "[\"c1f026582fe6\",\"stock\",\"near\"]",
+        "n": 7,
+        "successes": 3,
+        "mean": 0.4444444444444444,
+        "evidence": [
+          "dev-agent-1-1",
+          "dev-agent-1-2",
+          "dev-agent-1-3",
+          "dev-agent-1-4",
+          "dev-agent-1-5",
+          "dev-agent-1-6",
+          "dev-agent-1-7"
+        ],
+        "uncertain_missing_source": false,
+        "origin": "learned_feature_counts",
+        "target": "reachable"
+      }
+    ],
+    "observation_version": "8",
+    "origin": "learning",
+    "uncertainty_rule": "abstain if every predicted mean is below0.5"
+  },
+  "authored_feasibility_probe": {
+    "mechanism": "developmental-1",
+    "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+    "agent": "agent-1",
+    "request": {
+      "action_type": "gather",
+      "agent_id": "agent-1",
+      "observation_version": "8",
+      "parameters": {
+        "mass_kg": 0.001
+      },
+      "request_id": "dev-agent-1-9",
+      "requested_duration": 1,
+      "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+      "schema_version": 1,
+      "target_ids": [
+        "reachable"
+      ]
+    },
+    "before": {
+      "agent_id": "agent-1",
+      "audible_reports": [],
+      "dt_s": 1.0,
+      "hearing_range_m": 6.0,
+      "observation_version": "8",
+      "omissions": {
+        "older_results": 0
+      },
+      "own_state": {
+        "alive": true,
+        "body": {
+          "alive": true,
+          "fatigue": 0.1906,
+          "food_ingested_ug": "0",
+          "health": 1.0,
+          "hunger": 0.358,
+          "thirst": 0.41200000000000003,
+          "water_ingested_ug": "0"
+        },
+        "busy": false,
+        "carried_mass_ug": "3000000",
+        "entity_id": "agent-1",
+        "freshness_s": {},
+        "inventory_ug": {
+          "food": "3000000"
+        },
+        "kind": "actor",
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "position_m": [
+          2.0,
+          3.0
+        ],
+        "radius_m": 0.25,
+        "shared_event_refs": [],
+        "tools": [],
+        "workmanship": 0
+      },
+      "read_reports": [],
+      "recent_action_results": [
+        {
+          "agent_id": "agent-1",
+          "completed_tick": "1",
+          "error_code": "",
+          "event_refs": [
+            "3",
+            "4",
+            "5"
+          ],
+          "observable_effects": {
+            "description": "gather:1000000ug"
+          },
+          "observation_version": "1",
+          "reason": "",
+          "request_id": "dev-agent-1-1",
+          "schema_version": 1,
+          "started_tick": "0",
+          "status": "completed"
+        },
+        {
+          "agent_id": "agent-1",
+          "completed_tick": "2",
+          "error_code": "",
+          "event_refs": [
+            "7",
+            "8",
+            "9"
+          ],
+          "observable_effects": {
+            "description": "gather:1000000ug"
+          },
+          "observation_version": "2",
+          "reason": "",
+          "request_id": "dev-agent-1-2",
+          "schema_version": 1,
+          "started_tick": "1",
+          "status": "completed"
+        },
+        {
+          "agent_id": "agent-1",
+          "completed_tick": "3",
+          "error_code": "",
+          "event_refs": [
+            "11",
+            "12",
+            "13"
+          ],
+          "observable_effects": {
+            "description": "gather:1000000ug"
+          },
+          "observation_version": "3",
+          "reason": "",
+          "request_id": "dev-agent-1-3",
+          "schema_version": 1,
+          "started_tick": "2",
+          "status": "completed"
+        },
+        {
+          "agent_id": "agent-1",
+          "completed_tick": "3",
+          "error_code": "OUT_OF_REACH",
+          "event_refs": [
+            "15"
+          ],
+          "observable_effects": {
+            "description": ""
+          },
+          "observation_version": "3",
+          "reason": "OUT_OF_REACH",
+          "request_id": "dev-agent-1-4",
+          "schema_version": 1,
+          "started_tick": "3",
+          "status": "rejected"
+        },
+        {
+          "agent_id": "agent-1",
+          "completed_tick": "4",
+          "error_code": "OUT_OF_REACH",
+          "event_refs": [
+            "17"
+          ],
+          "observable_effects": {
+            "description": ""
+          },
+          "observation_version": "4",
+          "reason": "OUT_OF_REACH",
+          "request_id": "dev-agent-1-5",
+          "schema_version": 1,
+          "started_tick": "4",
+          "status": "rejected"
+        },
+        {
+          "agent_id": "agent-1",
+          "completed_tick": "5",
+          "error_code": "OUT_OF_REACH",
+          "event_refs": [
+            "19"
+          ],
+          "observable_effects": {
+            "description": ""
+          },
+          "observation_version": "5",
+          "reason": "OUT_OF_REACH",
+          "request_id": "dev-agent-1-6",
+          "schema_version": 1,
+          "started_tick": "5",
+          "status": "rejected"
+        },
+        {
+          "agent_id": "agent-1",
+          "completed_tick": "6",
+          "error_code": "OUT_OF_REACH",
+          "event_refs": [
+            "21"
+          ],
+          "observable_effects": {
+            "description": ""
+          },
+          "observation_version": "6",
+          "reason": "OUT_OF_REACH",
+          "request_id": "dev-agent-1-7",
+          "schema_version": 1,
+          "started_tick": "6",
+          "status": "rejected"
+        },
+        {
+          "agent_id": "agent-1",
+          "completed_tick": "8",
+          "error_code": "",
+          "event_refs": [
+            "23",
+            "24"
+          ],
+          "observable_effects": {
+            "description": "rested"
+          },
+          "observation_version": "8",
+          "reason": "",
+          "request_id": "dev-agent-1-8",
+          "schema_version": 1,
+          "started_tick": "7",
+          "status": "completed"
+        }
+      ],
+      "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+      "schema_version": 1,
+      "sight_range_m": 8,
+      "social_reports": [],
+      "task_offers": [],
+      "tick": "8",
+      "visible_entities": [
+        {
+          "entity_id": "ambiguous-range",
+          "kind": "food",
+          "mass_kg": 0.05,
+          "mass_ug": "50000000",
+          "position_m": [
+            3.6,
+            3.0
+          ],
+          "radius_m": 0.0
+        },
+        {
+          "entity_id": "reachable",
+          "kind": "food",
+          "mass_kg": 0.047,
+          "mass_ug": "47000000",
+          "position_m": [
+            1.0,
+            3.0
+          ],
+          "radius_m": 0.0
+        },
+        {
+          "entity_id": "resource-1",
+          "kind": "food",
+          "mass_kg": 8.0,
+          "mass_ug": "8000000000",
+          "position_m": [
+            2.0,
+            2.0
+          ],
+          "radius_m": 0.0
+        },
+        {
+          "entity_id": "resource-2",
+          "kind": "water",
+          "mass_kg": 16.0,
+          "mass_ug": "16000000000",
+          "position_m": [
+            3.0,
+            2.0
+          ],
+          "radius_m": 0.0
+        },
+        {
+          "entity_id": "resource-3",
+          "kind": "inert_material",
+          "mass_kg": 32.0,
+          "mass_ug": "32000000000",
+          "position_m": [
+            4.0,
+            2.0
+          ],
+          "radius_m": 0.0
+        },
+        {
+          "entity_id": "resource-4",
+          "kind": "stone",
+          "mass_kg": 4.0,
+          "mass_ug": "4000000000",
+          "position_m": [
+            5.0,
+            2.0
+          ],
+          "radius_m": 0.15
+        },
+        {
+          "entity_id": "terrain-1",
+          "kind": "rock",
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "position_m": [
+            8.0,
+            8.0
+          ],
+          "radius_m": 1.0
+        }
+      ],
+      "world_bounds_m": {
+        "height": 16.0,
+        "width": 16.0
+      }
+    },
+    "after": {
+      "schema_version": 1,
+      "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+      "agent_id": "agent-1",
+      "tick": "9",
+      "observation_version": "9",
+      "own_state": {
+        "entity_id": "agent-1",
+        "kind": "actor",
+        "position_m": [
+          2.0,
+          3.0
+        ],
+        "radius_m": 0.25,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "workmanship": 0,
+        "inventory_ug": {
+          "food": "4000000"
+        },
+        "alive": true,
+        "body": {
+          "hunger": 0.359,
+          "thirst": 0.41350000000000003,
+          "fatigue": 0.1914,
+          "health": 1.0,
+          "alive": true,
+          "food_ingested_ug": "0",
+          "water_ingested_ug": "0"
+        },
+        "freshness_s": {},
+        "tools": [],
+        "carried_mass_ug": "4000000",
+        "busy": false,
+        "shared_event_refs": []
+      },
+      "visible_entities": [
+        {
+          "entity_id": "ambiguous-range",
+          "kind": "food",
+          "position_m": [
+            3.6,
+            3.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 0.05,
+          "mass_ug": "50000000"
+        },
+        {
+          "entity_id": "reachable",
+          "kind": "food",
+          "position_m": [
+            1.0,
+            3.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 0.046,
+          "mass_ug": "46000000"
+        },
+        {
+          "entity_id": "resource-1",
+          "kind": "food",
+          "position_m": [
+            2.0,
+            2.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 8.0,
+          "mass_ug": "8000000000"
+        },
+        {
+          "entity_id": "resource-2",
+          "kind": "water",
+          "position_m": [
+            3.0,
+            2.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 16.0,
+          "mass_ug": "16000000000"
+        },
+        {
+          "entity_id": "resource-3",
+          "kind": "inert_material",
+          "position_m": [
+            4.0,
+            2.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 32.0,
+          "mass_ug": "32000000000"
+        },
+        {
+          "entity_id": "resource-4",
+          "kind": "stone",
+          "position_m": [
+            5.0,
+            2.0
+          ],
+          "radius_m": 0.15,
+          "mass_kg": 4.0,
+          "mass_ug": "4000000000"
+        },
+        {
+          "entity_id": "terrain-1",
+          "kind": "rock",
+          "position_m": [
+            8.0,
+            8.0
+          ],
+          "radius_m": 1.0,
+          "mass_kg": 0.0,
+          "mass_ug": "0"
+        }
+      ],
+      "audible_reports": [],
+      "read_reports": [],
+      "social_reports": [],
+      "task_offers": [],
+      "world_bounds_m": {
+        "width": 16.0,
+        "height": 16.0
+      },
+      "sight_range_m": 8,
+      "hearing_range_m": 6.0,
+      "dt_s": 1.0,
+      "recent_action_results": [
+        {
+          "schema_version": 1,
+          "request_id": "dev-agent-1-1",
+          "agent_id": "agent-1",
+          "status": "completed",
+          "error_code": "",
+          "reason": "",
+          "started_tick": "0",
+          "completed_tick": "1",
+          "observation_version": "1",
+          "event_refs": [
+            "3",
+            "4",
+            "5"
+          ],
+          "observable_effects": {
+            "description": "gather:1000000ug"
+          }
+        },
+        {
+          "schema_version": 1,
+          "request_id": "dev-agent-1-2",
+          "agent_id": "agent-1",
+          "status": "completed",
+          "error_code": "",
+          "reason": "",
+          "started_tick": "1",
+          "completed_tick": "2",
+          "observation_version": "2",
+          "event_refs": [
+            "7",
+            "8",
+            "9"
+          ],
+          "observable_effects": {
+            "description": "gather:1000000ug"
+          }
+        },
+        {
+          "schema_version": 1,
+          "request_id": "dev-agent-1-3",
+          "agent_id": "agent-1",
+          "status": "completed",
+          "error_code": "",
+          "reason": "",
+          "started_tick": "2",
+          "completed_tick": "3",
+          "observation_version": "3",
+          "event_refs": [
+            "11",
+            "12",
+            "13"
+          ],
+          "observable_effects": {
+            "description": "gather:1000000ug"
+          }
+        },
+        {
+          "schema_version": 1,
+          "request_id": "dev-agent-1-4",
+          "agent_id": "agent-1",
+          "status": "rejected",
+          "error_code": "OUT_OF_REACH",
+          "reason": "OUT_OF_REACH",
+          "started_tick": "3",
+          "completed_tick": "3",
+          "observation_version": "3",
+          "event_refs": [
+            "15"
+          ],
+          "observable_effects": {
+            "description": ""
+          }
+        },
+        {
+          "schema_version": 1,
+          "request_id": "dev-agent-1-5",
+          "agent_id": "agent-1",
+          "status": "rejected",
+          "error_code": "OUT_OF_REACH",
+          "reason": "OUT_OF_REACH",
+          "started_tick": "4",
+          "completed_tick": "4",
+          "observation_version": "4",
+          "event_refs": [
+            "17"
+          ],
+          "observable_effects": {
+            "description": ""
+          }
+        },
+        {
+          "schema_version": 1,
+          "request_id": "dev-agent-1-6",
+          "agent_id": "agent-1",
+          "status": "rejected",
+          "error_code": "OUT_OF_REACH",
+          "reason": "OUT_OF_REACH",
+          "started_tick": "5",
+          "completed_tick": "5",
+          "observation_version": "5",
+          "event_refs": [
+            "19"
+          ],
+          "observable_effects": {
+            "description": ""
+          }
+        },
+        {
+          "schema_version": 1,
+          "request_id": "dev-agent-1-7",
+          "agent_id": "agent-1",
+          "status": "rejected",
+          "error_code": "OUT_OF_REACH",
+          "reason": "OUT_OF_REACH",
+          "started_tick": "6",
+          "completed_tick": "6",
+          "observation_version": "6",
+          "event_refs": [
+            "21"
+          ],
+          "observable_effects": {
+            "description": ""
+          }
+        },
+        {
+          "schema_version": 1,
+          "request_id": "dev-agent-1-8",
+          "agent_id": "agent-1",
+          "status": "completed",
+          "error_code": "",
+          "reason": "",
+          "started_tick": "7",
+          "completed_tick": "8",
+          "observation_version": "8",
+          "event_refs": [
+            "23",
+            "24"
+          ],
+          "observable_effects": {
+            "description": "rested"
+          }
+        },
+        {
+          "schema_version": 1,
+          "request_id": "dev-agent-1-9",
+          "agent_id": "agent-1",
+          "status": "completed",
+          "error_code": "",
+          "reason": "",
+          "started_tick": "8",
+          "completed_tick": "9",
+          "observation_version": "9",
+          "event_refs": [
+            "26",
+            "27",
+            "28"
+          ],
+          "observable_effects": {
+            "description": "gather:1000000ug"
+          }
+        }
+      ],
+      "omissions": {
+        "older_results": 0
+      }
+    },
+    "receipt": {
+      "schema_version": 1,
+      "request_id": "dev-agent-1-9",
+      "agent_id": "agent-1",
+      "status": "completed",
+      "error_code": "",
+      "reason": "",
+      "started_tick": "8",
+      "completed_tick": "9",
+      "observation_version": "9",
+      "event_refs": [
+        "26",
+        "27",
+        "28"
+      ],
+      "observable_effects": {
+        "description": "gather:1000000ug"
+      }
+    },
+    "native_events": {
+      "26": {
+        "agent_id": "agent-1",
+        "detail": "gather",
+        "request_id": "dev-agent-1-9",
+        "schema_version": 1,
+        "seq": "26",
+        "tick": "8",
+        "type": "action_accepted"
+      },
+      "27": {
+        "agent_id": "agent-1",
+        "detail": "gather:1000000ug",
+        "request_id": "dev-agent-1-9",
+        "schema_version": 1,
+        "seq": "27",
+        "tick": "9",
+        "type": "mass_transfer"
+      },
+      "28": {
+        "agent_id": "agent-1",
+        "detail": "",
+        "request_id": "dev-agent-1-9",
+        "schema_version": 1,
+        "seq": "28",
+        "tick": "9",
+        "type": "action_completed"
+      }
+    },
+    "prediction": null,
+    "food_gain_ug": 1000000,
+    "goal_success": true,
+    "outcome_category": "food_acquired",
+    "learned": false,
+    "update_version": 9
+  },
+  "missed_feasible_opportunity": true,
+  "wall_s": 1.8358714999922086,
+  "snapshot": {
+    "schema_version": 1,
+    "kind": "world_snapshot",
+    "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+    "culture": {
+      "enabled": false,
+      "skills": {},
+      "agreements": [],
+      "validated_batches": [],
+      "departed": []
+    },
+    "ecology": {
+      "enabled": false,
+      "controller_origin": "authored_native_ecology_v1",
+      "animals": {},
+      "freshness_s": {},
+      "structural_body_initial_ug": "0",
+      "food_residue_ug": "0",
+      "water_waste_ug": "0",
+      "egg_input_ug": "0",
+      "eggs_produced_ug": "0",
+      "forage_regeneration_kg_s": 0.0
+    },
+    "branch_id": "2de809b6-a147-438b-af09-f79be757481f",
+    "tick": "9",
+    "observation_version": "9",
+    "last_event_seq": "29",
+    "seed": "41",
+    "dt_s": 1.0,
+    "simulated_time_s": 9.0,
+    "laws_version": "culture-6/4dd37f2454bc",
+    "thermal": {
+      "enabled": false,
+      "open_boundaries": false,
+      "cells": [],
+      "ambient_temperature_k": 0.0,
+      "stored_energy_j": 0.0,
+      "initial_energy_j": 0.0,
+      "heater_input_j": 0.0,
+      "radiation_in_j": 0.0,
+      "radiation_out_j": 0.0,
+      "outflow_energy_j": 0.0,
+      "solar_transferred_j": 0.0,
+      "burned_fuel_ug": "0",
+      "outflow_water_ug": "0",
+      "balance_error_j": 0.0,
+      "global_balance_error_j": 0.0,
+      "energy_tolerance_j": 1e-05
+    },
+    "build_id": "832c4a705a7ceecd85d8befb3d84f4dff0d4730f024c395eba12985f0d8bd896",
+    "world_bounds_m": {
+      "width": 16.0,
+      "height": 16.0
+    },
+    "entities": [
+      {
+        "entity_id": "terrain-1",
+        "kind": "rock",
+        "position_m": [
+          8.0,
+          8.0
+        ],
+        "radius_m": 1.0,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "tree-1",
+        "kind": "tree",
+        "position_m": [
+          2.0,
+          14.0
+        ],
+        "radius_m": 0.6,
+        "mass_kg": 2.0,
+        "mass_ug": "2000000000",
+        "stage": "young",
+        "health": 1.0,
+        "biomass_ug": "2000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "tree-2",
+        "kind": "tree",
+        "position_m": [
+          14.0,
+          2.0
+        ],
+        "radius_m": 0.6,
+        "mass_kg": 8.0,
+        "mass_ug": "8000000000",
+        "stage": "mature",
+        "health": 1.0,
+        "biomass_ug": "8000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "tree-3",
+        "kind": "tree",
+        "position_m": [
+          14.0,
+          14.0
+        ],
+        "radius_m": 0.6,
+        "mass_kg": 8.0,
+        "mass_ug": "8000000000",
+        "stage": "mature",
+        "health": 1.0,
+        "biomass_ug": "8000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "agent-1",
+        "kind": "actor",
+        "position_m": [
+          2.0,
+          3.0
+        ],
+        "radius_m": 0.25,
+        "mass_kg": 0.0,
+        "mass_ug": "0",
+        "workmanship": 0,
+        "inventory_ug": {
+          "food": "4000000"
+        },
+        "alive": true,
+        "body": {
+          "hunger": 0.359,
+          "thirst": 0.41350000000000003,
+          "fatigue": 0.1914,
+          "health": 1.0,
+          "alive": true,
+          "food_ingested_ug": "0",
+          "water_ingested_ug": "0"
+        },
+        "present": true
+      },
+      {
+        "entity_id": "resource-1",
+        "kind": "food",
+        "position_m": [
+          2.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 8.0,
+        "mass_ug": "8000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "resource-2",
+        "kind": "water",
+        "position_m": [
+          3.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 16.0,
+        "mass_ug": "16000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "resource-3",
+        "kind": "inert_material",
+        "position_m": [
+          4.0,
+          2.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 32.0,
+        "mass_ug": "32000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "resource-4",
+        "kind": "stone",
+        "position_m": [
+          5.0,
+          2.0
+        ],
+        "radius_m": 0.15,
+        "mass_kg": 4.0,
+        "mass_ug": "4000000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "reachable",
+        "kind": "food",
+        "position_m": [
+          1.0,
+          3.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 0.046,
+        "mass_ug": "46000000",
+        "inventory_ug": {}
+      },
+      {
+        "entity_id": "ambiguous-range",
+        "kind": "food",
+        "position_m": [
+          3.6,
+          3.0
+        ],
+        "radius_m": 0.0,
+        "mass_kg": 0.05,
+        "mass_ug": "50000000",
+        "inventory_ug": {}
+      }
+    ],
+    "outstanding_actions": [],
+    "material_totals_ug": {
+      "food": "8100000000",
+      "fuel_X": "0",
+      "inert_material": "32000000000",
+      "oxygen": "0",
+      "product_P": "0",
+      "stone": "4000000000",
+      "tree": "18000000000",
+      "water": "16000000000"
+    },
+    "event_counts": {
+      "action_accepted": 5,
+      "action_completed": 5,
+      "action_rejected": 4,
+      "mass_transfer": 4,
+      "operator_introduce_object": 2,
+      "tick": 9
+    },
+    "solar_input_j": 67.0206411499515,
+    "environment_energy_j": 67.0206411499515,
+    "operator_energy_input_j": 0.0,
+    "operator_sources_ug": {
+      "food": 100000000,
+      "fuel_X": 0,
+      "inert_material": 0,
+      "oxygen": 0,
+      "product_P": 0,
+      "stone": 0,
+      "water": 0
+    },
+    "mode": "guided",
+    "hearing_range_m": 6.0,
+    "sunlight_w_m2": 0.06544984227701475,
+    "scripted": false,
+    "next_script_tick": "0",
+    "bodies_enabled": true,
+    "initial_mass_ug": {
+      "food": 8000000000,
+      "fuel_X": 0,
+      "inert_material": 32000000000,
+      "oxygen": 0,
+      "product_P": 0,
+      "stone": 4000000000,
+      "tree": 18000000000,
+      "water": 16000000000
+    },
+    "boundary_sources_ug": {
+      "food": 100000000,
+      "fuel_X": 0,
+      "inert_material": 0,
+      "oxygen": 0,
+      "product_P": 0,
+      "stone": 0,
+      "tree": 0,
+      "water": 0
+    },
+    "config_hash": "242cb3a02953501762bf64e8fecd5107e0faebb206d49bf51bab690c811c60fc",
+    "state_hash": "ba285863fd1f8ca081fb6837398c980d589717dfc4aae376902e9f16923118c5",
+    "parent_branch_id": null,
+    "interventions": 2,
+    "retained_events": 29,
+    "recorded_decisions": 11,
+    "cognitive_hash": "8d1e4ab310f34e2d36cdfae550dcb5712d81633d606e1a4f6ee56a3da92bfb90",
+    "cognition_calls": 0,
+    "episodes": 9
+  },
+  "replay": {
+    "replay_matches": true,
+    "tick": "9",
+    "state_hash": "ba285863fd1f8ca081fb6837398c980d589717dfc4aae376902e9f16923118c5"
+  },
+  "audit": {
+    "meta": {
+      "mechanism": "developmental-1",
+      "people": [
+        "agent-1"
+      ],
+      "priors": {
+        "exploration": "bounded authored curriculum; saved private random tie breaks",
+        "external_sources": "operator-introduced native sources recorded separately",
+        "initial_absences": [
+          "outcome_tables",
+          "validated_procedures",
+          "symbol_meanings",
+          "partner_vocabulary"
+        ],
+        "limits": {
+          "alphabet": 16,
+          "experiences_per_person": 2048,
+          "utterance_tokens": 1
+        },
+        "motor": "native gather/inspect/move/deposit/speak; authored action vocabulary",
+        "protection": "unchanged native bodies; short scaffolded research, not independent survival",
+        "sensory": "native own observations; categorical hash; coarse mass/range bins",
+        "update": "count observable goal outcomes; Beta(1,1) mean heuristic"
+      },
+      "profile": "novice-affordance",
+      "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+      "schema": 1,
+      "source_files": {
+        "config/developmental.toml": "bc3e7172f29f06040d523e5f90ca0f59f2412435d79ebb5381b647a097e773f3",
+        "underworld/developmental.py": "9dcc073a7b4597ea20230a8d6b5768a451703c90386621210321934aa202b96c"
+      }
+    },
+    "people": {
+      "agent-1": {
+        "agent": "agent-1",
+        "associations": {
+          "[\"c1f026582fe6\",\"stock\",\"near\"]": {
+            "evidence": [
+              "dev-agent-1-1",
+              "dev-agent-1-2",
+              "dev-agent-1-3",
+              "dev-agent-1-4",
+              "dev-agent-1-5",
+              "dev-agent-1-6",
+              "dev-agent-1-7"
+            ],
+            "n": 7,
+            "successes": 3
+          }
+        },
+        "comprehension": {},
+        "counter": 9,
+        "experiences": 9,
+        "external_teaching": 0,
+        "mechanism": "developmental-1",
+        "objects": {
+          "ambiguous-range": {
+            "evidence": [
+              "dev-agent-1-4",
+              "dev-agent-1-5",
+              "dev-agent-1-6",
+              "dev-agent-1-7"
+            ],
+            "n": 4,
+            "successes": 0
+          },
+          "reachable": {
+            "evidence": [
+              "dev-agent-1-1",
+              "dev-agent-1-2",
+              "dev-agent-1-3"
+            ],
+            "n": 3,
+            "successes": 3
+          }
+        },
+        "procedures": [],
+        "production": {},
+        "profile": "novice-affordance",
+        "protective_fallbacks": 0,
+        "rng": 15587771517228795853,
+        "run_id": "2de809b6-a147-438b-af09-f79be757481f",
+        "version": 9
+      }
+    },
+    "record_counts": {
+      "agent-1": 9
+    },
+    "pending": 0,
+    "operator_only": true
+  },
+  "interpretation": "Online behavior changes, but coarse feature aliasing can harm feasible choices. Not a general adaptation success or promotion score."
+}
