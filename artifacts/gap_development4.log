@@ -1,0 +1,6 @@
+{"wall_s": 9.851259000000937}
+{"wall_s": 2.931763000000501}
+{"wall_s": 7.170280399999683}
+{"wall_s": 3.3189593000006425}
+{"seed": 53, "online": {"adaptive": 6, "legacy": 0, "frozen": 6, "memory": 6, "authored": 6}, "cooperation": {"learned": true, "muted": false, "scrambled": false, "whole": false}, "wall_s": 84.38712459999988}
+{"online_totals": {"adaptive": 6, "legacy": 0, "frozen": 6, "memory": 6, "authored": 6}, "cooperation_totals": {"learned": 1, "muted": 0, "scrambled": 0, "whole": 0}, "online_gate": true, "location_gate": true, "wall_s": 84.39128660000097}

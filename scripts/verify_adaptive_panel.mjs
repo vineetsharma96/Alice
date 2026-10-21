@@ -1,0 +1,33 @@
+import {chromium} from 'playwright';
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+const [url,output]=process.argv.slice(2);
+const browser=await chromium.launch({channel:'msedge',headless:true});
+const page=await browser.newPage({viewport:{width:1440,height:900}}),errors=[];
+page.on('pageerror',e=>errors.push(e.message));
+try{
+ await page.goto(url);await page.waitForFunction(()=>document.getElementById('status').textContent.includes('Read-only'));
+ assert.equal(await page.locator('#person option').count(),4);
+ await page.selectOption('#person','agent-2');
+ assert.ok((await page.locator('#meanings').innerText()).includes('exposures'));
+ assert.ok((await page.locator('#meanings').innerText()).includes('sources:'));
+ assert.ok((await page.locator('.notice').innerText()).includes('uncertain'));
+ const packet=await page.evaluate(async()=>await(await fetch('/api/adaptive')).json());
+ assert.equal(packet.operator_only,true);assert.equal(packet.read_only,true);
+ await page.getByRole('button',{name:'Refresh evidence'}).click();await page.waitForFunction(()=>!document.getElementById('refresh').disabled);
+ assert.equal(await page.locator('#person').inputValue(),'agent-2');
+ assert.equal(JSON.stringify(await page.evaluate(async()=>await(await fetch('/api/adaptive')).json())),JSON.stringify(packet));
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+ await page.screenshot({path:output+'-desktop.png',fullPage:true});
+ await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+ await page.screenshot({path:output+'-mobile.png',fullPage:true});
+ assert.equal((await page.request.post(new URL('/api/adaptive',url).href,{data:{}})).status(),501);
+ await page.route('**/api/adaptive',route=>{const p=JSON.parse(JSON.stringify(packet));p.people['agent-2'].glosses[0].signal='<img src=x onerror=alert(1)>';return route.fulfill({json:p});});
+ await page.getByRole('button',{name:'Refresh evidence'}).click();await page.waitForFunction(()=>document.getElementById('meanings').textContent.includes('<img'));
+ assert.equal(await page.locator('#meanings img').count(),0);await page.unroute('**/api/adaptive');
+ await page.route('**/api/adaptive',route=>route.fulfill({status:409,body:'missing proof'}));
+ await page.getByRole('button',{name:'Refresh evidence'}).click();await page.waitForFunction(()=>document.getElementById('status').textContent.includes('unavailable'));
+ assert.equal(await page.locator('#history details').count(),0);assert.deepEqual(errors,[]);
+ const result={passed:true,browser:'headless Edge',desktop:[1440,900],mobile:[390,844],page_errors:errors,read_only:true,selection_refresh:true,actual_signals_and_sources:true,uncertainty_visible:true,no_horizontal_overflow:true,safe_text:true,missing_evidence_clears_view:true};
+ await fs.writeFile(output+'.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
+}finally{await browser.close();}

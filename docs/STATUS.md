@@ -1,3 +1,33 @@
+# 22 October 2026 - H0-H5 adaptive gap profile verified
+
+A separate opt-in profile repairs the measured H1 online reach/outcome failure,
+adds durable need-driven plans, stale/depleted-source handling, private
+category/location symbol reuse and context-triggered physical teaching.
+Five held-out seeds: nearby acquisition 30/30 vs unchanged legacy online 0/30;
+unreachable transfer attempts 0/30 vs frozen 30/30; remote water acquisition
+and thirst relief 5/5 vs muted/scrambled/whole-message controls 0/5 each.
+Native-grounded teaching updates 10 vs muted 0. Independent native-save audit
+and all historical G/H0-H5 source registrations pass. 335 Python tests and four
+native checks pass; real Edge desktop/mobile evidence-panel checks pass.
+
+One continuous four-person life reached 1806 simulated seconds (418.850 wall
+seconds after physical warm-up), all alive/health 1, 168 completed relief goals,
+no replenishment, resets, models or operator interventions. Matched continuation
+controls both completed 28 further goals: no survival superiority is established.
+Source pins, body accounting, archive/fresh-process resume and scheduler retries
+are verified. Original worlds and failed Phase9 result remain unchanged.
+
+This closes bounded implementation gaps. Teaching choice, factorization, needs,
+motor routing and sharing remain authored. Learned grammar/conversation,
+learned teaching/request intentions, arbitrary feature transfer, semantic
+calibration and indefinite/multi-seed long survival remain unachieved.
+Read [gap report](DEVELOPMENTAL_GAP_REPORT.md),
+[prospective protocol](DEVELOPMENTAL_GAP_PROTOCOL.md) and
+[operations](DEVELOPMENTAL_GAP_OPERATIONS.md). Earlier entries below are preserved
+as historical evidence and describe their original study boundaries.
+
+---
+
 # 21 October 2026 - H5 bounded symbol sequences and operator evidence
 
 H5's prospective native reuse gate and independent audit pass: learned sequences

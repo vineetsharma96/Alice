@@ -1,69 +1,83 @@
-# Alice handoff - H5 bounded sequence reuse verified
+# Alice handoff - H0-H5 gap milestone completed
 
-Read docs/DEVELOPMENTAL_H5_REPORT.md, DEVELOPMENTAL_H5_PROTOCOL.md and
-DEVELOPMENTAL_H5_OPERATIONS.md. Prior exact H4 handoff is
-HANDOFF_PRE_H5_ARCHIVE.md. All original G/H0-H4 source pins, native laws/config,
-existing worlds and Phase9 evidence remain unchanged. No new release label;
-the existing executable is G. Phase9 remains failed and outside live policies.
+Completed 22 October 2026; native measurements 21 October. Read
+`docs/DEVELOPMENTAL_GAP_REPORT.md`, `docs/DEVELOPMENTAL_GAP_PROTOCOL.md` and
+`docs/DEVELOPMENTAL_GAP_OPERATIONS.md`. Exact prior handoff is archived in
+HANDOFF_PRE_GAP_ARCHIVE.md. All original G/H0-H5 source pins and failed Phase9
+sources/evidence remain unchanged. No executable rebuild or release label.
 
-New underworld/composition.py adds an opt-in, source-contracted private H5
-profile to new four-person native research cohorts. Authored category/mass
-factor encoder, private random token coinage, random order, recipient-learned
-feature intersections and authored overlap scoring. No shared dictionary or
-LLM. At most two IDs and one native simulated second per token. Never call
-this discovered syntax or spontaneous language emergence. Production/learning
-quotas stop explicitly; missing native sources refuse interpretation.
+## Results
 
-Frozen 13-file artifacts/h5_registration.json matches. Development seed 47;
-confirmation 10103/10111/10133/10141/10151. Native learned references 30/30;
-whole-message 6/30, muted 6/30, first-token 6/30, second-token 4/30. Every seed
-learned 6/6. Independent composition_audit.py validates actual native inspections,
-private sources, frozen vocabularies, matched initial heads, replay and invariants.
-Four negative checks reject fabricated goals, altered receipts, missing worlds
-and source repinning. No model calls/native rejections; 300 new completed native
-requests. All four bodies alive/health1 at 25 scored endpoints. Longest life
-93 simulated seconds; study 342.163507 wall seconds. These are short assigned
-reference branches of trained lives, never one pooled lifetime or survival proof.
+Five frozen held-out seeds 11003/11027/11047/11057/11071: adaptive food
+acquisition30/30 vs old online0/30; far transfer attempts0/30 vs frozen30/30;
+Brier.139451 vs frozen.25 (narrow task, not semantic calibration). Authored
+control also30/30 with0far, so no general intelligence claim. Learned private
+category/location factors achieve actual remote water gathering+drinking5/5
+vs muted/scrambled/whole0/5. Context-triggered physical teaching gives10native
+receiver updates vs0muted and becomes quiet after2own disclosures. Teaching,
+factorization, movement, needs and sharing choices are authored. No shared
+lexicon, LLM fabricated language, learned grammar or conversation.
 
-Actual local worlds data/h5-confirmation-20261021; 30-world hash inventory
-artifacts/h5_native_worlds.json. Exact compressed aggregate
-artifacts/h5_confirmation.json.gz; independent h5_audit.json. Both development
-traces and exact matching source ZIPs retained; raw traces remain locally intact.
-Import, occupied-hub route and repeated-fixture-checkpoint failures are retained
-in initial unit logs. Temporary failed unit worlds were not retained.
+Independent `gap_audit.json` verifies actual native saves, all gates, receipts,
+private sources, replay/invariants, zero model calls and six old registrations.
+Negative audit checks refuse fabricated goals/receipts, missing worlds and
+changed registration. `gap_checks.json`:335Python tests plus4nativechecks pass.
+`gap_browser*`:real Edge desktop/mobile read-only panel checks and screenshots.
+`gap_phase9_audit.json`:3439files/4sources,metricsmatch,advance:false.
 
-317 Python suite tests and four native checks pass: artifacts/h5_checks.json/.log.
-Python 892.652s internal / 894.080972s subprocess, with overlapping study compute;
-native .30s internal / .600558s subprocess. Two supplemental pending-update epoch
-checks pass in 15.930s. They were added after the source freeze without changing
-registered mechanism/scoring; separately source-hashed in h5_source_checks.json.
-No full-suite rerun/timeout. Final static inventory and pyflakes pass. Phase9
-independently verifies 3439 files, recomputed metrics match, advance:false.
+## Continuing world
 
-Read-only operator module underworld.learning_panel exposes actual own behavior,
-source IDs, private associations and exposure counts, uncertain feature glosses,
-original signals/responses and separate teaching/learned/authored/random-tie/
-protective-fallback counters. No operator output enters policy inputs. Actual
-headless Edge desktop/mobile, selection/refresh, hostile-text and missing-evidence
-checks pass; artifacts/h5_browser_final*. Startup native environment:
-PATH=C:\mingw64\bin + existing PATH; UNDERWORLD_BUILD=build/living-d absolute.
-Run .venv/Scripts/python.exe -m underworld.learning_panel --db PATH --port 8775.
-The process started this turn on port8775 reads development2/47-learned.sqlite;
-verify process availability before claiming it is still live. Existing user's
-interactive world and viewer were not reset or replaced. No packaged H5 build.
+Actual one-life data/gap-continuity-dev-20261021.sqlite: physical warm-up ends117s;
+same life fresh processes reach329/926/1806sim seconds. Continuation418.850wall
+seconds; all4alive/health1;42goals each; nativefood4.6kg/water10.6kg remain.
+No reset, replenishment or operator intervention. Root body/private snapshot
+matches final1806 trace. `gap_continuity_audit.json` checks actual final saves,
+contiguous windows and ingestion accounting.
+Supplemental matched continuation from1806 adds the same genuinely observed
+legacy memories to BOTH copies: adaptive2114sim/28newgoals/171.900wall,
+legacy2100sim/28newgoals/334.030wall. Both survive with equal remainingstock;
+NO survival superiority claim, not an exact-tick speed benchmark. Supplementary
+control/audit/packager are separately hashed, outside primary14-file freeze.
 
-scripts/learner.py adds sequence-init/status/encode/send/begin/learn/reference.
-Init refuses existing saves. Same message ID/text reconciles one native utterance;
-same attention ID reconciles one learned update. Different payloads/stale heads
-refuse. Native reservation/commit/private commit and fresh-process/epoch recovery
-are verified, including pending attention/message intent. The entire curriculum
-is not atomic: do not blindly replay a lesson circuit or change IDs after unknown
-outcomes. Save/checkpoint names must be unique; preserve all protected archives.
+## Code and use
 
-Remaining: autonomous speaking/teaching/requests, location composition, arbitrary
-unseen features, calibrated semantics, grammar, conversation and long unattended
-survival. Prior H1 online/G husbandry failures and rejected incoming H3 stay
-failed. No neural training, reproduction, new speech engine or true3D.
-Unrelated package/OpenCode/TinyFish/env changes and prior stash remain preserved
-and unstaged. No remote push performed for this milestone. Await user direction
-before expanding the research scope.
+New opt-in underworld/adaptive.py,context_teaching.py,adaptive_panel.py plus
+new webassets; scripts/adaptive_learner.py,adaptive_study.py,adaptive_audit.py,
+adaptive_continuity.py and supplementalcontrol/audit/packager. Old learner.py,
+old panel and native/world policies remain unchanged. Explicit attach only to
+compatible H5 WORKING backups and selected inhabitants, never scored saves.
+No implicit initialization/reset. The three new test modules cover 16tests,
+included in335. Native build build/living-d, UW9, buildID
+832c4a705a7ceecd85d8befb3d84f4dff0d4730f024c395eba12985f0d8bd896.
+PowerShell:prepend C:\mingw64\bin to PATH; set UNDERWORLD_BUILD to absolute
+build/living-d before Python invocations. See operations for exact commands.
+
+Read-only panel was started on8776 with gap-development2/53-learned.sqlite;
+verify availability before claiming it is still running. No viewer/runtime is
+promised active. New default driver does not automatically run contextteaching
+or acquire all communication meanings during the survival run; study circuits
+and teaching CLI are explicit. Existing old viewer/world are unchanged.
+
+## Evidence and boundaries
+
+artifacts/gap_registration.json freezes14files beforeconfirmation. Do not edit
+those sources and silently repin. Revisions require a fresh preregistered study.
+11rawdevelopment/confirmation/continuity traces remain local unchanged, with
+exact tracked gzip + raw/compressed hashes in gap_evidence_archives.json.
+Four development source ZIPs preserve intermediate versions. NativeSQLite
+worlds (74including70confirmation and4continuity/control) remain local ignored
+with SHA256 inventory; source checkout alone is not the actual save archive.
+Initial fixture failures retained in gap_unit_attempt1.log; corrected name/head
+fixtures passed. No native semantics changed. Source/static checks are separate
+from real browser/runtime evidence.
+
+Still unachieved: learned teaching/request/repair intentions, arbitrary unseen
+features, semantic calibration, discovered grammar/conversation, multi-seed
+long survival/animalcare and indefinite operation. Existing2048record/person
+quota and bounded site/source/evidence budgets stop explicitly. No neural
+training, reproduction, new speech engine, true3D or emergence claims.
+
+Unrelated package.json,package-lock.json,.env.example,.nvmrc,.opencode/,
+opencode.json,docs/OPENCODE.md,scripts/start-tinyfish-mcp.ps1/.sh are user work;
+preserve and exclude from milestone commit. Prior pre-pull stash remains.
+No GitHub push requested/performed for this milestone.

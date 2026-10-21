@@ -1,3 +1,35 @@
+# Current milestone: H0-H5 adaptive gap closure
+
+The new opt-in profile is implemented and verified: learning separates food
+quality from reach, everyday plans survive interruption, private category/location
+signals support remote gathering and drinking, and teachers choose new local
+physical demonstrations through an explicit authored rule.
+
+- Five held-out seeds: nearby acquisition **30/30 vs legacy online 0/30**;
+  new unreachable attempts **0/30 vs frozen 30/30**.
+- Remote water goals **5/5 vs 0/5** muted, scrambled and whole-message controls;
+  native-grounded teaching updates **10 vs 0** muted.
+- **335 Python tests and four native checks pass**, plus independent saved-world
+  audits and real desktop/mobile Edge checks.
+- One unchanged four-person life continued through **1806 simulated seconds**,
+  with no replenishment or operator intervention. Both matched survival controls
+  also succeeded; this does not establish survival superiority.
+
+[Results and remaining limits](docs/DEVELOPMENTAL_GAP_REPORT.md) ·
+[Run the new profile and read-only evidence panel](docs/DEVELOPMENTAL_GAP_OPERATIONS.md) ·
+[Prospective protocol](docs/DEVELOPMENTAL_GAP_PROTOCOL.md)
+
+Use `scripts/adaptive_learner.py` for the new opt-in profile. Existing worlds and
+original CLI/default policies keep their source contracts; use explicit attachment
+only on a compatible H5 working backup. No executable rebuild or new release
+label. Historical studies, source hashes and Phase9's failed result are preserved.
+Teaching/need/movement rules and symbol factorization are authored. Grammar,
+unrestricted conversation and indefinite survival remain unproven.
+
+The earlier H5 guide and project documentation below remain available unchanged.
+
+---
+
 # Underworld Lab (Alice)
 
 **H5 bounded symbol reuse is implemented and verified.** Private learned sequences

@@ -1,0 +1,6 @@
+{"frames": 40, "simulated_s": 1061.0, "wall_s": 37.89642280000044}
+{"frames": 80, "simulated_s": 1254.0, "wall_s": 79.18927390000135}
+{"frames": 120, "simulated_s": 1414.0, "wall_s": 123.7261851000003}
+{"frames": 160, "simulated_s": 1578.0, "wall_s": 171.3142700999997}
+{"frames": 200, "simulated_s": 1771.0, "wall_s": 234.28048020000097}
+{"frames": 206, "stop_reason": "horizon_reached", "operator_interventions": 0, "wall_s": 245.3323350999999}

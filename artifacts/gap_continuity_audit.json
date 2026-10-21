@@ -1,0 +1,110 @@
+{
+  "verified": true,
+  "windows": [
+    {
+      "start_sim_s": 117.0,
+      "end_sim_s": 329.0,
+      "wall_s": 37.6182684000014,
+      "frames": 51,
+      "stocks": {
+        "food": {
+          "stock_ug": 7600000000,
+          "carried_ug": 0,
+          "consumed_ug": 400000000
+        },
+        "water": {
+          "stock_ug": 15250000000,
+          "carried_ug": 50000000,
+          "consumed_ug": 700000000
+        }
+      }
+    },
+    {
+      "start_sim_s": 329.0,
+      "end_sim_s": 926.0,
+      "wall_s": 135.89914429999953,
+      "frames": 138,
+      "stocks": {
+        "food": {
+          "stock_ug": 6400000000,
+          "carried_ug": 0,
+          "consumed_ug": 1600000000
+        },
+        "water": {
+          "stock_ug": 13400000000,
+          "carried_ug": 0,
+          "consumed_ug": 2600000000
+        }
+      }
+    },
+    {
+      "start_sim_s": 926.0,
+      "end_sim_s": 1806.0,
+      "wall_s": 245.3323350999999,
+      "frames": 206,
+      "stocks": {
+        "food": {
+          "stock_ug": 4600000000,
+          "carried_ug": 0,
+          "consumed_ug": 3400000000
+        },
+        "water": {
+          "stock_ug": 10600000000,
+          "carried_ug": 0,
+          "consumed_ug": 5400000000
+        }
+      }
+    }
+  ],
+  "controls": {
+    "adaptive": {
+      "end_sim_s": 2114.0,
+      "wall_s": 171.90033219999896,
+      "goals": 28,
+      "frames": 64,
+      "stocks": {
+        "food": {
+          "stock_ug": 4000000000,
+          "carried_ug": 0,
+          "consumed_ug": 4000000000
+        },
+        "water": {
+          "stock_ug": 9800000000,
+          "carried_ug": 0,
+          "consumed_ug": 6200000000
+        }
+      }
+    },
+    "legacy": {
+      "end_sim_s": 2100.0,
+      "wall_s": 334.0304076000011,
+      "goals": 28,
+      "frames": 226,
+      "stocks": {
+        "food": {
+          "stock_ug": 4000000000,
+          "carried_ug": 0,
+          "consumed_ug": 4000000000
+        },
+        "water": {
+          "stock_ug": 9800000000,
+          "carried_ug": 0,
+          "consumed_ug": 6200000000
+        }
+      }
+    }
+  },
+  "final_goals": {
+    "agent-1": 42,
+    "agent-2": 42,
+    "agent-3": 42,
+    "agent-4": 42
+  },
+  "continuing_wall_s": 418.84974780000084,
+  "model_calls": 0,
+  "source_hashes": {
+    "scripts/adaptive_control.py": "e26beed5714db0ce34d2be8a02ed820db88b930befc5de922d99d77db0cba987",
+    "scripts/adaptive_continuity_audit.py": "6859bb4becffa1e73cb581d0c15793194b0710f7714857a9e3930f15cd11edf1"
+  },
+  "scope": "one development life; no demonstrated survival advantage; not indefinite or multi-seed survival"
+}

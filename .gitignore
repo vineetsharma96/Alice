@@ -27,3 +27,16 @@ dist/
 /artifacts/h5_development.json
 /artifacts/h5_development2.json
 /artifacts/h5_confirmation.json
+
+# Exact H0-H5 gap traces are tracked as gzip with SHA256 manifest.
+/artifacts/gap_confirmation.json
+/artifacts/gap_development.json
+/artifacts/gap_development2.json
+/artifacts/gap_development3.json
+/artifacts/gap_development4.json
+/artifacts/gap_teaching_development.json
+/artifacts/gap_continuity_dev_init.json
+/artifacts/gap_continuity_dev_300.json
+/artifacts/gap_continuity_dev_900.json
+/artifacts/gap_continuity_dev_1800.json
+/artifacts/gap_continuity_control.json

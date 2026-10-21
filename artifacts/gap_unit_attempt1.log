@@ -1,0 +1,36 @@
+test_busy_failure_is_distinct_from_reach_and_quality (tests.test_adaptive.AdaptiveTests.test_busy_failure_is_distinct_from_reach_and_quality) ... ok
+test_existing_vocabulary_and_native_body_survive_explicit_attachment (tests.test_adaptive.AdaptiveTests.test_existing_vocabulary_and_native_body_survive_explicit_attachment) ... ok
+test_interrupted_gather_plan_resumes_then_consumes_once_after_epoch (tests.test_adaptive.AdaptiveTests.test_interrupted_gather_plan_resumes_then_consumes_once_after_epoch) ... FAIL
+test_missing_online_proof_refuses_an_action_decision (tests.test_adaptive.AdaptiveTests.test_missing_online_proof_refuses_an_action_decision) ... ok
+test_native_primitive_retries_do_not_repeat_physics (tests.test_adaptive.AdaptiveTests.test_native_primitive_retries_do_not_repeat_physics) ... ok
+test_online_range_failure_does_not_erase_food_affordance (tests.test_adaptive.AdaptiveTests.test_online_range_failure_does_not_erase_food_affordance) ... ok
+test_depleted_report_cannot_cause_a_second_trip (tests.test_adaptive.SituatedSequenceTests.test_depleted_report_cannot_cause_a_second_trip) ... ok
+test_heldout_location_pair_drives_need_acquisition_and_self_triggered_report (tests.test_adaptive.SituatedSequenceTests.test_heldout_location_pair_drives_need_acquisition_and_self_triggered_report) ... ERROR
+test_stale_message_is_refused_before_navigation (tests.test_adaptive.SituatedSequenceTests.test_stale_message_is_refused_before_navigation) ... ok
+test_whole_message_control_has_no_heldout_named_pair (tests.test_adaptive.SituatedSequenceTests.test_whole_message_control_has_no_heldout_named_pair) ... ok
+
+======================================================================
+ERROR: test_heldout_location_pair_drives_need_acquisition_and_self_triggered_report (tests.test_adaptive.SituatedSequenceTests.test_heldout_location_pair_drives_need_acquisition_and_self_triggered_report)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\tests\test_adaptive.py", line 104, in setUp
+    storage.save(self.base,self._testMethodName,self.path)
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\underworld\storage.py", line 497, in save
+    raise ValueError("invalid/reserved checkpoint name")
+ValueError: invalid/reserved checkpoint name
+
+======================================================================
+FAIL: test_interrupted_gather_plan_resumes_then_consumes_once_after_epoch (tests.test_adaptive.AdaptiveTests.test_interrupted_gather_plan_resumes_then_consumes_once_after_epoch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\tests\test_adaptive.py", line 77, in test_interrupted_gather_plan_resumes_then_consumes_once_after_epoch
+    self.assertEqual(storage.inspect(self.path)['state_hash'],head)
+AssertionError: '5e22a8de05783496c60a979e72d6931ea5e2e06241223ac511a00dcd9c5c0e8a' != '3cdc5a95f7eb10ffcdcda8b26fb213fe52829d0ad969ad5908d6b4f2623fd9da'
+- 5e22a8de05783496c60a979e72d6931ea5e2e06241223ac511a00dcd9c5c0e8a
++ 3cdc5a95f7eb10ffcdcda8b26fb213fe52829d0ad969ad5908d6b4f2623fd9da
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 66.412s
+
+FAILED (failures=1, errors=1)

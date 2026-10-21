@@ -1,0 +1,29 @@
+{
+  "seeds": [
+    11003,
+    11027,
+    11047,
+    11057,
+    11071
+  ],
+  "development": [
+    53
+  ],
+  "files": {
+    "underworld/adaptive.py": "5e4f750d2e1e151aaf56fc05a98139c80b38b32fae0d5251afd00628191023dd",
+    "scripts/adaptive_study.py": "55f1be7706833e68f799d7ef966d356913927b03fa58455a2149752929570c45",
+    "tests/test_adaptive.py": "ed237d0582de7c60be247f6e3bc9ec50ee62ebd38e44d6b42d221956511dd832",
+    "docs/DEVELOPMENTAL_GAP_PROTOCOL.md": "0de00a31542a30c5dd08acd3d89508b772d827ce5b229308127df70c1c7b8f99",
+    "scripts/adaptive_continuity.py": "4798ae16f49b94da3e2e8fc65be460950f8bc919111c293fb64bb60f3fd42491",
+    "scripts/adaptive_audit.py": "d71f7fca2871b70e93e1aa0fc74b6582a510bcaafabede60f2854173aec9f69b",
+    "scripts/adaptive_learner.py": "2670ee3d6616a7b7c78b434ca0145b48c0de76c9953aa7d744eaa08a8692c883",
+    "underworld/adaptive_panel.py": "d92aeeb9ac2fa21c8f570bfbeb084eebe87aefac1e1684bcc9c4b7735c1b9711",
+    "underworld/web/adaptive.html": "79bad37a58fb8b2a6ad45f04eed441a22192de79ad3ae4b527e33136c5544e78",
+    "underworld/web/adaptive.js": "74c9d25cf4d3624acb80a340061832b5bd196f49395a732775d1d48458d63c29",
+    "tests/test_adaptive_surfaces.py": "3927077d521774ec394a8598675a2408d1537d734203fd3cf144f5b3ceb37426",
+    "scripts/verify_adaptive_panel.mjs": "4b66daf86b5fbd118451c04c955c796baa9ab7b61b0408bc34f4ee2a77032be2",
+    "underworld/context_teaching.py": "13e28dac6988c6fc250a69f131d6d40dfd9641f28af6a76d2b1112ecbc7c584c",
+    "tests/test_context_teaching.py": "fd2b209264d482fde45ae47d487a97c89c79f5a0904cb75bf3746c34b6b9431c"
+  },
+  "written_utc": 1792589633.064516
+}
