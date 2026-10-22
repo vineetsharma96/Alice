@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "browser": "headless Edge",
+  "desktop": [
+    1440,
+    900
+  ],
+  "mobile": [
+    390,
+    844
+  ],
+  "errors": [],
+  "metrics": {
+    "fps": 29.997000299970004,
+    "frame_ms_p50": 33.30000000000018,
+    "frame_ms_p95": 33.40000000000009,
+    "draw_calls": 30,
+    "triangles": 1332,
+    "geometries": 7,
+    "textures": 0,
+    "quality": "low",
+    "pixel_ratio": 0.8,
+    "context_lost": false,
+    "context_losses": 0,
+    "renderer": "ANGLE (Intel, Intel(R) HD Graphics 520 (0x00001916) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "canvas": [
+      653,
+      444
+    ],
+    "physics_dimensions": 2,
+    "objects": 12
+  },
+  "paused": true,
+  "same_native_head": true,
+  "read_only": true,
+  "appraisal_and_learning_panel": true
+}

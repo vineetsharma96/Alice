@@ -1,99 +1,130 @@
-# Alice handoff - weather milestone completed
+# Alice handoff - F0-F3 emotion milestone completed
 
-22 October 2026. Branch: codex/weather-seasons. Read:
-- Prompt/Alice_Weather_Seasons_Shelter_Prompt.md
-- docs/WEATHER_SEASONS_REPORT.md and docs/WEATHER_OPERATIONS.md
-- docs/WEATHER_CONTRACT.md and docs/WEATHER_EVALUATION_PROTOCOL.md
+22 October 2026. Branch codex/developmental-emotion; baseline
+8160e64389c086bd1049faad5a9a18a9ef4e242a. Exact previous weather handoff:
+HANDOFF_PRE_EMOTION_ARCHIVE.md. Read these first:
+- Prompt/Alice_Developmental_Emotion_Master_Prompt.md
+- docs/EMOTION_REPORT.md and docs/EMOTION_OPERATIONS.md
+- docs/EMOTION_ARCHITECTURE.md, EMOTION_EVALUATION_PROTOCOL.md
+- docs/EMOTION_UPSTREAM_AUDIT.md and EMOTION_DEVELOPMENT_NOTES.md
 
-The exact previous handoff is HANDOFF_PRE_WEATHER_ARCHIVE.md. Original G/H/gap
-sources, worlds, build/living-d and failed Phase9 evidence remain unchanged.
-There is no release label or original executable rebuild.
+## Completed and verified
 
-## W0-W6 outcome
+F0-F3 pass bounded software/native gates. One original offline emotion state and
+pipeline; explicit learned/frozen/disconnected/disabled profiles. Native bodies,
+weather, inventory and validator remain authoritative. Personal appraisal separates
+scarcity, approach errors, contention and unknown responsibility. Cue values start
+at0, acquire expectations from own real thermal/injury changes and safe experience,
+and may add one feasible safety movement when the unchanged policy would rest.
+Authored cue classes, algorithms, need goals, routing, survival and construction
+remain explicitly separate from learned estimates. No Phase9 learner/LLM/neural code.
 
-All bounded stage gates pass. W0: fresh original 335 Python tests and four native
-checks. W1: persistent seeded weather, smooth four-phase seasonal clock, actual
-solar ledger effects, exact pause/batching/fresh-process resume. W2: native
-wetness/cold proxies and distinct fatigue/direct-health ledgers; seasonal growth
-preserves native capacities, boundary sources and zero-rate conservation.
-W3: real 0.8kg wood + 0.1kg fiber, 1s transfer + 12s work; open 1.1m roof, capacity4.
-Partial work, competing builders, blocked placement, coverage edges, entry/exit,
-overflow and repair pass. Repair uses 0.1kg wood + 3s; wear is 0.00002 condition/s.
-W4: own senses and observed private coordinates, bounded authored needs/shelter/
-build/repair/supply goals. W5: existing read-only 3D observer, native sky/rain/
-seasonal appearance, source-separated diagnostics and recorded guided-only forcing.
-The final weather suite has 28 passing checks; real desktop/mobile Edge checks pass.
+Native/policy/cognition/journals commit atomically. Stable operation IDs prevent
+repeat learning. Mid-action fresh-process backup/resume matches; dual replay,
+source checks and out-of-band writer detection refuse drift. All enrolled people
+receive only their own observations/receipts, never the actor's private goal.
+At most16 episodes,64 recent links,8 cue classes/8 evidence links each. Journal
+quotas10000 cognitive/25000 native stop explicitly; indefinite operation unproven.
 
-W6: weather_registration.json freezes 30 files. Untouched seeds13001/13007/13009
-pass all seven gates; weather_audit.json independently verifies 21 native saves.
-Known shelter reached in1.25sim seconds. Reactive construction/protection took
-14.25s after separately recorded real ingredient setup. Exposure health loss:
-primary control .060511/.077063/.077063 versus weather 0/0/.000115; weather health1.
-All four people physically share one roof, latest protection20s. Mild clear,
-carried-batch scarcity, seasonal inputs and three fresh-process restart cases pass.
+Prospective44-file registration: artifacts/emotion_registration.json. It MUST
+remain unchanged against this result. Development53, heldout17011/17021/17027/
+17033/17041. All5 pass bodily and behavior gates. Learned roof movement5/5;
+frozen/disconnected/disabled rest5/5 each. Mild rain rest5/5; safe reversal rest5/5.
+All60 probe requests complete; learned movements reach native protection. Native
+conditioning is explicitly guided weather + assigned real feeding/roof work, not
+spontaneous learning or autonomous survival.843sim seconds/conditioning arm after
+setup;887.396wall seconds for confirmation with two independent seeds in parallel.
+Native probe levels differ, fitted values identical because training is identical.
 
-Primary survival control belongs to the new driver. Supplementary exact unchanged
-underworld.policy.choose on matched common saves/120s gives the same outside
-exposure losses. weather_existing_control* retains requests, source hash and replay.
-This was added after primary registration; no primary gates changed. Old-controller
-resume is not claimed. Authored rules are not developmental intelligence.
+Independent scripts/emotion_audit.py verifies105 actual native saves, recomputes
+gates and checks all8 historical source registrations (202.116wall seconds).
+Tampered receipt/learned-value copies refuse. Raw confirmation is compressed in
+artifacts/emotion_confirmation.json.gz; per-seed counts/costs/latency are in
+emotion_summary.json; emotion_audit.json inventories actual local SQLite hashes.
 
-## Continuing life and evidence
+## Continuous life and observers
 
-Actual save: data/weather-life-20261022.sqlite, seed53. Explicit physical assigned
-setup ends134sim seconds. Same saved life continues in fresh processes through
-300/600/1200/2400s. All four finish alive/health1, spring/year1. No reset, regeneration,
-material input or weather forcing. Food3.45kg + ingested4.55 =8kg; water9 + ingested7
-=16kg. Scheduler cursor1509, 91 eating/140 drinking actions, zero policy rejections.
-Continuation481.164wall seconds;486.075 including setup. weather_continuity_audit.json
-verifies the full native journal, private scheduler, contiguous windows and accounts.
-The natural year causes fatigue but zero direct exposure health loss; it does not
-prove roof necessity or superiority over an unmeasured matched full-year control.
-This is one finite scaffolded year, not indefinite or multi-seed survival.
+Supplemental scripts/emotion_continuity.py advances the SAME four-person save:
+data/emotion-life-20261022.sqlite, seed53. Real assigned roof work + cohort placement
+ends134sim seconds; then300/600/1200 horizons. All4health1;550 completed policy
+actions (66move,268rest,108gather,44eat,64drink), no rejections or fallback.
+ALL550 are authored weather baseline choices; ZERO learned contributions. No
+forcing/regeneration/external material/body resets. Food5.8+ingested2.2=8kg;
+water12.8+ingested3.2=16kg. Private state17943 canonical JSON bytes. Cursor550.
+Progression130.958wall seconds includes physical setup, excludes post-window replay.
 
-Exact gzip traces (13) and SHA manifest: weather_evidence_archives.json. Raw JSON
-and native SQLite stay local ignored data, not exported saves. Historical weather
-stage ZIPs and build/weather-w1/-w2/-w3/-w4 are retained. Original UW9 saves need
-original sources + build/living-d. New weather uses UW10W/ALICE-WEATHER-2, matching
-native and policy/source contracts. No migration or source-check bypass.
-Native weather build:
+Fresh process advancing a copy of the300s backup reproduces exact600s native,
+policy, cognition hash and cursor296. Keep the untouched300s backup at
+data/emotion-life-300-backup-20261022.sqlite; test continuation is a separate file.
+Evidence: artifacts/emotion_life_300/600/1200.json, emotion_life_resume_600.json,
+emotion_continuity_proof.json. No unattended simulation remains running.
+
+Read-only new observer currently serves development3's guided learned-danger
+probe at127.0.0.1:8778, with FORCED weather clearly labeled. Existing weather demo
+at8777 untouched. Actual Edge1440x900/390x844 checks show3D draws, private
+appraisal/learning panel, no page errors/overflow and no GET/POST mutations.
+Panel is a technical diagnostic view with long JSON scrolling, not polished UX.
+
+## Regression and failed history
+
+Original335 Python tests pass620.036s (621.437driver);4 native checks pass.
+New7 emotion +28 weather checks pass. All8 G/H/gap/weather pins match. Phase9
+still3439files/4sources/advance:false. Never revise the failed result or deploy
+its learner. Core, original policies, H-learning/private vocabularies and historical
+native builds/worlds remain unchanged. No release version or tag changed.
+
+Development1 stopped on relative/absolute export path. Development2 bodily
+passed/behavior FAILED:9.9C rounded to10C, training a different safe cue. Corrected
+apparatus9.4C/perceived9C before heldout; learner/thresholds unchanged. Development3
+passes. Exact hash-verified source archives v1/v2 and failed saves/results retained.
+JSON tuple/list retry inconsistency fixed before confirmation. Three native failed
+safety attempts now impose30s cooldown; BUSY and foreign-goal regressions pass.
+
+## Compatibility and continuation commands
+
+Emotion attachment makes a NEW backup copy of a matching ALICE-WEATHER-2 world,
+adds ALICE-EMOTION-1 tables, and preserves source bytes. No UW9/H schema migration.
+H-learning and private communication are preserved in their existing profiles;
+combined H/weather/emotion integration is NOT completed. Write an attached world
+only through emotion_store; old weather writes cause deliberate head-drift refusal.
+Matching native build is unchanged weather UW10W:
 74e4c35419d9cc962673ce24b09d2ec7fa80e844a737c0e82862d1bb23feb71c.
-Do not edit/re-pin registered files against these results. New tuning needs new
-held-out conditions. Supplements have separate source hashes and do not change gates.
+Source hash changes require a new explicit profile/study, not silently repinning.
 
-Failures remain retained: W1 fixture representation/whitespace/connection errors;
-actual one-tick-early forcing expiry; missing renderer-core route; resize fixture.
-Development1 sharing reached only two people;2/3 reached four separately, never
-simultaneously. BEFORE confirmation, authored priorities/trip latch/30s settling
-and1s protected rest fixed this. Native body rates and registered gate thresholds stayed unchanged.
-Development4/5 and the four-person regression pass. A supplementary auditor's
-incorrect synthetic snapshot-field assumption was corrected without changing data.
-False protection/health/source/missing-save audits all refuse. Phase9 audit still
-verifies3439 files/four sources and advance:false; its learner stays excluded.
+Useful commands, from repository:
+.venv/Scripts/python.exe scripts/emotion.py inspect --db data/emotion-life-20261022.sqlite
+.venv/Scripts/python.exe scripts/emotion.py replay --db data/emotion-life-20261022.sqlite
+.venv/Scripts/python.exe -m unittest discover -s emotion_tests -v
+.venv/Scripts/python.exe -m unittest discover -s weather_tests -v
+.venv/Scripts/python.exe -m scripts.emotion_audit --folder data/emotion-confirmation --output artifacts/NEW-emotion-audit.json
 
-## Run, inspect and remaining work
+Do not overwrite experiment/output files. Scripts refuse used destinations.
+Full run and source-matching instructions are in docs/EMOTION_OPERATIONS.md.
 
-Build: scripts/build_weather.ps1. CLI: scripts/weather.py new/run/inspect/save/
-policy-step/replay/force. Four-person bounded continuation: weather_study.py continuity.
-An existing compatible database continues exactly; an absent one creates an explicit
-assigned-scaffold demonstration. Research year2400s does NOT rescale86400s solar day,
-bodies, tools or animals. Normal fictional year31557600s. Native source integration
-is build-generated under build/weather/generated; original core/CMake are untouched.
+## Next stage - not yet implemented/validated
 
-A read-only viewer was started at127.0.0.1:8777 on
- data/weather-final-demo-20261022.sqlite (assigned setup/forced demo, not year life).
-weather_final_browser* records actual 1440x900/390x844 checks and screenshots.
-Verify availability before claiming it still runs. Old development-demo viewers
-were stopped after source changes correctly invalidated their policy contract.
-No unattended simulation process is promised active; original viewer/world untouched.
+F4-F12 remain unvalidated. Slow stress and episode links are plumbing; relationship
+and regulation fields are empty. Valence/stress currently diagnostic; learned cue
+expectation is the demonstrated decision influence. Next register an F4 protocol
+with declared temperament, genuine extended native exposure/supplied safety,
+immediate versus slow recovery, multiple seeds and nonsaturation controls. Do not
+retroactively label current data prospective F4 evidence. Advance to F5 only when
+F4 passes; emotional salience, directional relationships, others' uncertain states,
+regulation, emotional private signals, social emotions, identity and F12 integration
+need their own sources/contracts/gates. Coarse cue generalization, calibrated
+lethal danger and general attention/help-seeking effects remain unproven.
 
-Remaining: learned weather anticipation/integration, unknown-material autonomous
-bootstrap, global forest exhaustion/all blocked topologies, weather animal-care
-integration, multi-seed long survival and indefinite history. Rain collection,
-snow/floods/lightning/fire/storm collapse, enclosed-wall thermodynamics and realistic
-thermoregulation are deferred. Quotas refuse explicitly. No emotions, neural training,
-reproduction, new speech, true3D or consciousness/general-intelligence claims.
+## Upstream/repository details
 
-Unrelated package.json/package-lock.json, .env.example/.nvmrc, .opencode/, opencode.json,
-docs/OPENCODE.md and start-tinyfish scripts are preserved and excluded from this
-milestone commit. No GitHub push requested or performed for this milestone.
+FAtiMA56b7cbd992f953cfe21a7b12cb1a0e6cdf6ccf9f; SELAgents
+c32e55b415ab9751090102c07e6dbcb320eee4eb inspected source/tests/dependencies/licenses.
+No source copied/adapted; no dependencies added; upstream tests not executed.
+FAtiMA Apache2; SELAgents MIT metadata lacks a full grant file; private-state and
+wall-time examples are unsuitable. Audit contains concrete file-level decisions.
+origin/main d54a007 is an ancestor of the initial local weather checkout; fetched
+and inspected without resetting local H4/H5/weather. No GitHub push performed.
+
+Unrelated user package.json changes, .env.example, .nvmrc, .opencode/,
+docs/OPENCODE.md, opencode.json, package-lock.json and scripts/start-tinyfish-mcp.*
+MUST remain untouched and excluded from emotion commits. User emotion prompt is
+relevant and may be tracked. No active agent delegation or unfinished simulation.

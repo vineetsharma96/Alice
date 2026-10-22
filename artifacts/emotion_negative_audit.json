@@ -1,0 +1,10 @@
+{
+  "false_native_receipt": {
+    "rejected": true,
+    "reason": "Emotion replay update mismatch"
+  },
+  "false_learning_value": {
+    "rejected": true,
+    "reason": "Emotion head drift/corruption; all writes must use emotion coordinator"
+  }
+}

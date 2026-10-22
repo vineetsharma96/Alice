@@ -1,3 +1,30 @@
+# 22 October 2026 - F0-F3 emotion milestone verified
+
+Opt-in copied UW10W/ALICE-WEATHER-2 saves now have private affect, bodily signals,
+appraisal, learned threat/safety expectations and atomic/replayable cognition.
+Five held-out seeds pass;60 native probes complete;105 actual saves independently
+replay/audit. Learned safety choice5/5 vs0/5 in each frozen/disconnected/disabled
+control; harmless avoidance0/5, safe reversal5/5. Prospective44-file seal unchanged.
+
+Original335 Python +4 native, new7 emotion and28 weather checks pass. Existing
+G/H/gap/weather source pins and Phase9's3439 evidence files/failed result remain
+unchanged. No copied upstream code or new service/dependency/model. Actual Edge
+3D observer/private evidence panel checks pass at desktop and mobile widths.
+
+Supplementary four-person life reaches1200sim seconds, all health1,550 completed
+AUTHORED actions, no learned contributions, rejections, fallback, forcing or refills.
+Food5.8kg+ingested2.2=8; water12.8+ingested3.2=16. Fresh-process300->600 save/resume
+matches exactly. Progression130.958wall seconds includes assigned physical setup
+and excludes post-window replay checks; confirmation887.396wall seconds.
+
+Development2's failed reversal and exact matching source archive retained; native
+rounded9.9C to10, so it was the wrong cue. Corrected fixture before confirmation;
+no learner/threshold change. F4-F12, broader affect-driven attention/regulation,
+relationships and combined H-learning/communication/weather profile remain unvalidated.
+Read [emotion report](EMOTION_REPORT.md), [operations](EMOTION_OPERATIONS.md) and HANDOFF.md.
+
+---
+
 # 22 October 2026 - W0-W6 opt-in weather validated
 
 Persistent native weather, four fictional seasons, exposure proxies and real

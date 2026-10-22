@@ -1,3 +1,29 @@
+# Current milestone: developmental emotion F0-F3
+
+**F0-F3 are implemented and pass their bounded gates.** Persistent private affect,
+body-derived discomfort/recovery, personal appraisal and learned weather-cue
+expectations run through the existing native action authority on opt-in save copies.
+
+- Five held-out seeds: learned safety choice5/5; frozen/disconnected/disabled0/5;
+  harmless-rain avoidance0/5; reversal after safe experience5/5. All60 probes complete.
+- Independent replay/audit verifies105 actual saves. Original335 Python +4 native,
+  new7 emotion and28 weather checks pass; historical source registrations unchanged.
+- A separate four-person life reaches1200 simulated seconds, all healthy,550 completed
+  authored actions, no refills/resets/forcing; exact fresh-process save/resume.
+
+[Actual results and limits](docs/EMOTION_REPORT.md) ·
+[Run / copy / save / resume / observer](docs/EMOTION_OPERATIONS.md) ·
+[Prospective gates](docs/EMOTION_EVALUATION_PROTOCOL.md) ·
+[Upstream audit](docs/EMOTION_UPSTREAM_AUDIT.md)
+
+Only learned cue expectations have demonstrated a causal decision contribution;
+survival/routing remain authored. F4-F12 are not validated. Existing H-learning and
+private vocabularies remain in their matching worlds; combined H/weather/emotion
+migration is future work. Phase9's failed result is unchanged. No new release.
+Earlier guides below remain as historical evidence.
+
+---
+
 # Current milestone: weather, seasons and shelters
 
 **W0-W6 are implemented and validated for bounded scenarios.** The opt-in native

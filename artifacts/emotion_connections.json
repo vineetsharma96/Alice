@@ -1,0 +1,3336 @@
+{
+  "python_files_parsed": 159,
+  "python_local_import_edges": [
+    {
+      "from": "scripts\\adaptive_audit.py",
+      "module": "underworld",
+      "names": [
+        "adaptive",
+        "context_teaching",
+        "developmental",
+        "storage"
+      ]
+    },
+    {
+      "from": "scripts\\adaptive_audit.py",
+      "module": "scripts.adaptive_study",
+      "names": [
+        "SEEDS",
+        "hashes"
+      ]
+    },
+    {
+      "from": "scripts\\adaptive_continuity.py",
+      "module": "underworld",
+      "names": [
+        "adaptive",
+        "storage",
+        "wayfinding"
+      ]
+    },
+    {
+      "from": "scripts\\adaptive_continuity.py",
+      "module": "scripts.adaptive_study",
+      "names": [
+        "relief",
+        "finish"
+      ]
+    },
+    {
+      "from": "scripts\\adaptive_continuity_audit.py",
+      "module": "scripts.adaptive_audit",
+      "names": [
+        "read",
+        "world"
+      ]
+    },
+    {
+      "from": "scripts\\adaptive_continuity_audit.py",
+      "module": "underworld",
+      "names": [
+        "storage"
+      ]
+    },
+    {
+      "from": "scripts\\adaptive_control.py",
+      "module": "underworld",
+      "names": [
+        "adaptive",
+        "developmental",
+        "storage",
+        "wayfinding"
+      ]
+    },
+    {
+      "from": "scripts\\adaptive_control.py",
+      "module": "scripts.adaptive_study",
+      "names": [
+        "finish"
+      ]
+    },
+    {
+      "from": "scripts\\adaptive_learner.py",
+      "module": "underworld",
+      "names": [
+        "adaptive",
+        "context_teaching"
+      ]
+    },
+    {
+      "from": "scripts\\adaptive_study.py",
+      "module": "underworld",
+      "names": [
+        "adaptive",
+        "context_teaching",
+        "developmental",
+        "storage",
+        "wayfinding"
+      ]
+    },
+    {
+      "from": "scripts\\adaptive_study.py",
+      "module": "scripts.developmental_study",
+      "names": [
+        "introduce",
+        "identifier"
+      ]
+    },
+    {
+      "from": "scripts\\benchmark.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "scripts\\benchmark.py",
+      "module": "underworld.native",
+      "names": [
+        "load_native"
+      ]
+    },
+    {
+      "from": "scripts\\benchmark.py",
+      "module": "underworld",
+      "names": [
+        "storage"
+      ]
+    },
+    {
+      "from": "scripts\\community_audit.py",
+      "module": "underworld",
+      "names": [
+        "community",
+        "developmental",
+        "storage",
+        "symbols"
+      ]
+    },
+    {
+      "from": "scripts\\community_audit.py",
+      "module": "community_study",
+      "names": [
+        "ARMS",
+        "SEEDS"
+      ]
+    },
+    {
+      "from": "scripts\\community_study.py",
+      "module": "underworld",
+      "names": [
+        "community",
+        "developmental",
+        "symbols",
+        "storage",
+        "planning"
+      ]
+    },
+    {
+      "from": "scripts\\community_study.py",
+      "module": "developmental_study",
+      "names": [
+        "introduce",
+        "identifier",
+        "interval",
+        "SEEDS"
+      ]
+    },
+    {
+      "from": "scripts\\composition_audit.py",
+      "module": "underworld",
+      "names": [
+        "composition",
+        "developmental",
+        "storage"
+      ]
+    },
+    {
+      "from": "scripts\\composition_audit.py",
+      "module": "scripts.composition_study",
+      "names": [
+        "SEEDS",
+        "ARMS",
+        "hashes"
+      ]
+    },
+    {
+      "from": "scripts\\composition_audit.py",
+      "module": "scripts.developmental_study",
+      "names": [
+        "interval"
+      ]
+    },
+    {
+      "from": "scripts\\composition_study.py",
+      "module": "underworld",
+      "names": [
+        "composition",
+        "developmental",
+        "storage",
+        "wayfinding"
+      ]
+    },
+    {
+      "from": "scripts\\composition_study.py",
+      "module": "scripts.developmental_study",
+      "names": [
+        "introduce",
+        "identifier",
+        "interval"
+      ]
+    },
+    {
+      "from": "scripts\\continuous_world.py",
+      "module": "underworld",
+      "names": [
+        "stabilization",
+        "storage"
+      ]
+    },
+    {
+      "from": "scripts\\continuous_world.py",
+      "module": "underworld.app",
+      "names": [
+        "validate_model_off"
+      ]
+    },
+    {
+      "from": "scripts\\continuous_world.py",
+      "module": "underworld.lease",
+      "names": [
+        "Lease"
+      ]
+    },
+    {
+      "from": "scripts\\desktop_entry.py",
+      "module": "underworld.app",
+      "names": [
+        "main"
+      ]
+    },
+    {
+      "from": "scripts\\developmental_online.py",
+      "module": "underworld",
+      "names": [
+        "developmental",
+        "storage"
+      ]
+    },
+    {
+      "from": "scripts\\developmental_online.py",
+      "module": "developmental_study",
+      "names": [
+        "introduce"
+      ]
+    },
+    {
+      "from": "scripts\\developmental_study.py",
+      "module": "underworld",
+      "names": [
+        "developmental",
+        "storage",
+        "teaching"
+      ]
+    },
+    {
+      "from": "scripts\\emotion.py",
+      "module": "underworld",
+      "names": [
+        "emotion_store",
+        "weather_store"
+      ]
+    },
+    {
+      "from": "scripts\\emotion_audit.py",
+      "module": "underworld",
+      "names": [
+        "emotion_store",
+        "weather_store"
+      ]
+    },
+    {
+      "from": "scripts\\emotion_audit.py",
+      "module": "scripts.emotion_study",
+      "names": [
+        "HELDOUT",
+        "sources"
+      ]
+    },
+    {
+      "from": "scripts\\emotion_study.py",
+      "module": "underworld",
+      "names": [
+        "emotion_store",
+        "weather_store"
+      ]
+    },
+    {
+      "from": "scripts\\emotion_study.py",
+      "module": "underworld.weather_runtime",
+      "names": [
+        "climate"
+      ]
+    },
+    {
+      "from": "scripts\\emotion_study.py",
+      "module": "underworld.weather_tools",
+      "names": [
+        "JournalWorld",
+        "execute",
+        "walk",
+        "roof"
+      ]
+    },
+    {
+      "from": "scripts\\evidence.py",
+      "module": "underworld",
+      "names": [
+        "storage"
+      ]
+    },
+    {
+      "from": "scripts\\evidence.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "scripts\\food_execution_eval.py",
+      "module": "underworld",
+      "names": [
+        "stabilization"
+      ]
+    },
+    {
+      "from": "scripts\\food_execution_eval.py",
+      "module": "underworld.native",
+      "names": [
+        "load_native"
+      ]
+    },
+    {
+      "from": "scripts\\learner.py",
+      "module": "underworld",
+      "names": [
+        "developmental",
+        "symbols",
+        "community",
+        "wayfinding",
+        "composition"
+      ]
+    },
+    {
+      "from": "scripts\\living_continuity.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "stabilization"
+      ]
+    },
+    {
+      "from": "scripts\\living_continuity.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "scripts\\living_continuity.py",
+      "module": "underworld.planning",
+      "names": [
+        "assign"
+      ]
+    },
+    {
+      "from": "scripts\\package_adaptive_evidence.py",
+      "module": "scripts.adaptive_audit",
+      "names": [
+        "audit",
+        "read"
+      ]
+    },
+    {
+      "from": "scripts\\package_app.py",
+      "module": "underworld.native",
+      "names": [
+        "load_native"
+      ]
+    },
+    {
+      "from": "scripts\\package_weather_evidence.py",
+      "module": "scripts.weather_audit",
+      "names": [
+        "audit",
+        "read"
+      ]
+    },
+    {
+      "from": "scripts\\phase2_evidence.py",
+      "module": "underworld",
+      "names": [
+        "storage"
+      ]
+    },
+    {
+      "from": "scripts\\phase2_evidence.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "scripts\\phase3_baseline.py",
+      "module": "underworld",
+      "names": [
+        "storage"
+      ]
+    },
+    {
+      "from": "scripts\\phase3_baseline.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "scripts\\phase3_baseline.py",
+      "module": "underworld.resources",
+      "names": [
+        "process_memory"
+      ]
+    },
+    {
+      "from": "scripts\\phase3_evidence.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "memory"
+      ]
+    },
+    {
+      "from": "scripts\\phase3_evidence.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "scripts\\phase3_evidence.py",
+      "module": "underworld.resources",
+      "names": [
+        "process_memory"
+      ]
+    },
+    {
+      "from": "scripts\\phase4_evidence.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "teaching",
+        "cognition"
+      ]
+    },
+    {
+      "from": "scripts\\phase4_evidence.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "scripts\\phase4_evidence.py",
+      "module": "underworld.wire",
+      "names": [
+        "dumps"
+      ]
+    },
+    {
+      "from": "scripts\\phase4_model_probe.py",
+      "module": "underworld",
+      "names": [
+        "storage"
+      ]
+    },
+    {
+      "from": "scripts\\phase4_model_probe.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "scripts\\phase4_model_probe.py",
+      "module": "underworld.resources",
+      "names": [
+        "process_memory"
+      ]
+    },
+    {
+      "from": "scripts\\phase4_model_probe.py",
+      "module": "underworld.wire",
+      "names": [
+        "dumps"
+      ]
+    },
+    {
+      "from": "scripts\\phase4_model_probe.py",
+      "module": "phase4_evidence",
+      "names": [
+        "book",
+        "act"
+      ]
+    },
+    {
+      "from": "scripts\\phase5_evidence.py",
+      "module": "underworld",
+      "names": [
+        "storage"
+      ]
+    },
+    {
+      "from": "scripts\\phase5_evidence.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "scripts\\phase5_evidence.py",
+      "module": "underworld.native",
+      "names": [
+        "load_native"
+      ]
+    },
+    {
+      "from": "scripts\\phase5_evidence.py",
+      "module": "underworld.resources",
+      "names": [
+        "process_memory"
+      ]
+    },
+    {
+      "from": "scripts\\phase6_evidence.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "teaching",
+        "culture"
+      ]
+    },
+    {
+      "from": "scripts\\phase6_evidence.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "scripts\\phase6_evidence.py",
+      "module": "underworld.lab_policy",
+      "names": [
+        "Driver"
+      ]
+    },
+    {
+      "from": "scripts\\phase6_evidence.py",
+      "module": "underworld.resources",
+      "names": [
+        "process_memory"
+      ]
+    },
+    {
+      "from": "scripts\\phase7_evidence.py",
+      "module": "underworld",
+      "names": [
+        "runtime",
+        "storage"
+      ]
+    },
+    {
+      "from": "scripts\\phase7_evidence.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "scripts\\phase7_evidence.py",
+      "module": "underworld.resources",
+      "names": [
+        "process_memory"
+      ]
+    },
+    {
+      "from": "scripts\\phase7_evidence.py",
+      "module": "underworld.supervisor",
+      "names": [
+        "run_isolated"
+      ]
+    },
+    {
+      "from": "scripts\\phase7_final_validation.py",
+      "module": "underworld",
+      "names": [
+        "runtime",
+        "storage"
+      ]
+    },
+    {
+      "from": "scripts\\phase7_final_validation.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "scripts\\phase7_final_validation.py",
+      "module": "underworld.resources",
+      "names": [
+        "process_memory"
+      ]
+    },
+    {
+      "from": "scripts\\phase7_final_validation.py",
+      "module": "underworld.supervisor",
+      "names": [
+        "run_isolated"
+      ]
+    },
+    {
+      "from": "scripts\\phase8_demo.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "teaching"
+      ]
+    },
+    {
+      "from": "scripts\\phase8_demo.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "scripts\\phase9_audit.py",
+      "module": "underworld.learning",
+      "names": [
+        "PolicyStore",
+        "registration"
+      ]
+    },
+    {
+      "from": "scripts\\phase9_audit.py",
+      "module": "phase9_experiment",
+      "names": [
+        "summarize"
+      ]
+    },
+    {
+      "from": "scripts\\phase9_experiment.py",
+      "module": "underworld",
+      "names": [
+        "storage"
+      ]
+    },
+    {
+      "from": "scripts\\phase9_experiment.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "scripts\\phase9_experiment.py",
+      "module": "underworld.learning",
+      "names": [
+        "PolicyStore",
+        "registration",
+        "features",
+        "request",
+        "execute",
+        "label_receipt",
+        "world_head",
+        "control",
+        "sha"
+      ]
+    },
+    {
+      "from": "scripts\\phase9_experiment.py",
+      "module": "underworld.wire",
+      "names": [
+        "dumps"
+      ]
+    },
+    {
+      "from": "scripts\\phase9_report.py",
+      "module": "phase9_audit",
+      "names": [
+        "audit"
+      ]
+    },
+    {
+      "from": "scripts\\phase9_report.py",
+      "module": "phase9_experiment",
+      "names": [
+        "score"
+      ]
+    },
+    {
+      "from": "scripts\\phase_c_continuity.py",
+      "module": "living_continuity",
+      "names": [
+        "main"
+      ]
+    },
+    {
+      "from": "scripts\\phase_c_demo.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "stabilization"
+      ]
+    },
+    {
+      "from": "scripts\\phase_c_demo.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "scripts\\phase_c_demo.py",
+      "module": "underworld.lease",
+      "names": [
+        "Lease"
+      ]
+    },
+    {
+      "from": "scripts\\phase_c_demo.py",
+      "module": "underworld.workshop",
+      "names": [
+        "AssignedProcedure"
+      ]
+    },
+    {
+      "from": "scripts\\phase_c_demo.py",
+      "module": "underworld.wire",
+      "names": [
+        "dumps"
+      ]
+    },
+    {
+      "from": "scripts\\phase_d_continuity.py",
+      "module": "living_continuity",
+      "names": [
+        "main"
+      ]
+    },
+    {
+      "from": "scripts\\phase_d_eval.py",
+      "module": "underworld.native",
+      "names": [
+        "load_native"
+      ]
+    },
+    {
+      "from": "scripts\\phase_e_continuity.py",
+      "module": "living_continuity",
+      "names": [
+        "main"
+      ]
+    },
+    {
+      "from": "scripts\\phase_e_eval.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "stabilization",
+        "planning"
+      ]
+    },
+    {
+      "from": "scripts\\phase_e_eval.py",
+      "module": "underworld.lab_policy",
+      "names": [
+        "Driver"
+      ]
+    },
+    {
+      "from": "scripts\\phase_e_eval.py",
+      "module": "underworld.planning_model",
+      "names": [
+        "PlanningModel"
+      ]
+    },
+    {
+      "from": "scripts\\phase_e_eval.py",
+      "module": "stabilization_common",
+      "names": [
+        "model_server"
+      ]
+    },
+    {
+      "from": "scripts\\phase_e_tool_recovery.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "stabilization",
+        "planning"
+      ]
+    },
+    {
+      "from": "scripts\\phase_e_tool_recovery.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "scripts\\phase_e_tool_recovery.py",
+      "module": "underworld.native",
+      "names": [
+        "load_native"
+      ]
+    },
+    {
+      "from": "scripts\\phase_e_tool_recovery.py",
+      "module": "underworld.workshop",
+      "names": [
+        "AssignedProcedure"
+      ]
+    },
+    {
+      "from": "scripts\\phase_f_demo.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "teaching",
+        "culture",
+        "knowledge",
+        "memory"
+      ]
+    },
+    {
+      "from": "scripts\\phase_f_demo.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "scripts\\phase_f_demo.py",
+      "module": "underworld.lab_policy",
+      "names": [
+        "Driver"
+      ]
+    },
+    {
+      "from": "scripts\\phase_g_continuity.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "stabilization",
+        "planning",
+        "runtime",
+        "memory"
+      ]
+    },
+    {
+      "from": "scripts\\phase_g_continuity.py",
+      "module": "phase_g_demo",
+      "names": [
+        "initialize"
+      ]
+    },
+    {
+      "from": "scripts\\phase_g_demo.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "stabilization",
+        "planning",
+        "knowledge",
+        "care",
+        "teaching",
+        "runtime",
+        "memory"
+      ]
+    },
+    {
+      "from": "scripts\\phase_g_demo.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "scripts\\phase_g_extend.py",
+      "module": "underworld",
+      "names": [
+        "stabilization",
+        "storage"
+      ]
+    },
+    {
+      "from": "scripts\\phase_g_extend.py",
+      "module": "phase_g_demo",
+      "names": [
+        "collect"
+      ]
+    },
+    {
+      "from": "scripts\\phase_g_false_lesson.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "stabilization",
+        "planning",
+        "teaching",
+        "knowledge",
+        "care"
+      ]
+    },
+    {
+      "from": "scripts\\phase_g_false_lesson.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "scripts\\replay_phase7_benchmark.py",
+      "module": "underworld",
+      "names": [
+        "storage"
+      ]
+    },
+    {
+      "from": "scripts\\stabilization_baseline.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "cognition"
+      ]
+    },
+    {
+      "from": "scripts\\stabilization_baseline.py",
+      "module": "underworld.policy",
+      "names": [
+        "choose"
+      ]
+    },
+    {
+      "from": "scripts\\stabilization_baseline.py",
+      "module": "stabilization_common",
+      "names": [
+        "create",
+        "read",
+        "write",
+        "model_server"
+      ]
+    },
+    {
+      "from": "scripts\\stabilization_common.py",
+      "module": "underworld",
+      "names": [
+        "storage"
+      ]
+    },
+    {
+      "from": "scripts\\stabilization_common.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "scripts\\stabilization_continuity.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "cognition",
+        "stabilization"
+      ]
+    },
+    {
+      "from": "scripts\\stabilization_continuity.py",
+      "module": "stabilization_common",
+      "names": [
+        "create",
+        "model_server",
+        "read",
+        "write"
+      ]
+    },
+    {
+      "from": "scripts\\stabilization_evaluate.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "cognition",
+        "stabilization"
+      ]
+    },
+    {
+      "from": "scripts\\stabilization_evaluate.py",
+      "module": "underworld.policy",
+      "names": [
+        "choose"
+      ]
+    },
+    {
+      "from": "scripts\\stabilization_evaluate.py",
+      "module": "underworld.lab_policy",
+      "names": [
+        "Driver"
+      ]
+    },
+    {
+      "from": "scripts\\stabilization_evaluate.py",
+      "module": "underworld.wire",
+      "names": [
+        "dumps"
+      ]
+    },
+    {
+      "from": "scripts\\stabilization_evaluate.py",
+      "module": "stabilization_common",
+      "names": [
+        "create",
+        "clone",
+        "read",
+        "write",
+        "model_server"
+      ]
+    },
+    {
+      "from": "scripts\\stabilization_report.py",
+      "module": "underworld",
+      "names": [
+        "stabilization"
+      ]
+    },
+    {
+      "from": "scripts\\stabilization_report.py",
+      "module": "stabilization_common",
+      "names": [
+        "write"
+      ]
+    },
+    {
+      "from": "scripts\\survival_run.py",
+      "module": "underworld",
+      "names": [
+        "storage"
+      ]
+    },
+    {
+      "from": "scripts\\survival_run.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "scripts\\survival_run.py",
+      "module": "underworld.native",
+      "names": [
+        "load_native"
+      ]
+    },
+    {
+      "from": "scripts\\survival_run.py",
+      "module": "underworld.policy",
+      "names": [
+        "choose"
+      ]
+    },
+    {
+      "from": "scripts\\symbol_study.py",
+      "module": "underworld",
+      "names": [
+        "developmental",
+        "symbols",
+        "storage",
+        "planning"
+      ]
+    },
+    {
+      "from": "scripts\\symbol_study.py",
+      "module": "developmental_study",
+      "names": [
+        "introduce",
+        "identifier",
+        "interval",
+        "SEEDS"
+      ]
+    },
+    {
+      "from": "scripts\\verify_living_world.py",
+      "module": "underworld.native",
+      "names": [
+        "load_native"
+      ]
+    },
+    {
+      "from": "scripts\\verify_stabilization.py",
+      "module": "underworld",
+      "names": [
+        "storage"
+      ]
+    },
+    {
+      "from": "scripts\\verify_stabilization.py",
+      "module": "phase8_manifest",
+      "names": [
+        "build"
+      ]
+    },
+    {
+      "from": "scripts\\wayfinding_audit.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "wayfinding"
+      ]
+    },
+    {
+      "from": "scripts\\wayfinding_audit.py",
+      "module": "community_audit",
+      "names": [
+        "registered",
+        "read",
+        "check_experience"
+      ]
+    },
+    {
+      "from": "scripts\\wayfinding_audit.py",
+      "module": "wayfinding_study",
+      "names": [
+        "SEEDS",
+        "ARMS"
+      ]
+    },
+    {
+      "from": "scripts\\wayfinding_study.py",
+      "module": "underworld",
+      "names": [
+        "developmental",
+        "storage",
+        "symbols",
+        "wayfinding"
+      ]
+    },
+    {
+      "from": "scripts\\wayfinding_study.py",
+      "module": "developmental_study",
+      "names": [
+        "introduce",
+        "identifier",
+        "interval"
+      ]
+    },
+    {
+      "from": "scripts\\wayfinding_study.py",
+      "module": "community_study",
+      "names": [
+        "demonstrate"
+      ]
+    },
+    {
+      "from": "scripts\\wayfinding_study.py",
+      "module": "community_audit",
+      "names": [
+        "registered"
+      ]
+    },
+    {
+      "from": "scripts\\weather.py",
+      "module": "underworld",
+      "names": [
+        "weather_store"
+      ]
+    },
+    {
+      "from": "scripts\\weather.py",
+      "module": "underworld.weather_runtime",
+      "names": [
+        "climate",
+        "configuration"
+      ]
+    },
+    {
+      "from": "scripts\\weather_audit.py",
+      "module": "underworld",
+      "names": [
+        "weather_store"
+      ]
+    },
+    {
+      "from": "scripts\\weather_audit.py",
+      "module": "underworld.weather_runtime",
+      "names": [
+        "climate",
+        "load"
+      ]
+    },
+    {
+      "from": "scripts\\weather_audit.py",
+      "module": "scripts.weather_study",
+      "names": [
+        "HELDOUT",
+        "sources",
+        "restarts"
+      ]
+    },
+    {
+      "from": "scripts\\weather_continuity_audit.py",
+      "module": "scripts.weather_audit",
+      "names": [
+        "read",
+        "same",
+        "world"
+      ]
+    },
+    {
+      "from": "scripts\\weather_demo.py",
+      "module": "underworld",
+      "names": [
+        "weather_store"
+      ]
+    },
+    {
+      "from": "scripts\\weather_demo.py",
+      "module": "underworld.weather_tools",
+      "names": [
+        "JournalWorld",
+        "roof",
+        "walk"
+      ]
+    },
+    {
+      "from": "scripts\\weather_existing_control.py",
+      "module": "underworld.policy",
+      "names": [
+        "choose"
+      ]
+    },
+    {
+      "from": "scripts\\weather_existing_control.py",
+      "module": "underworld",
+      "names": [
+        "weather_store"
+      ]
+    },
+    {
+      "from": "scripts\\weather_existing_control.py",
+      "module": "underworld.weather_tools",
+      "names": [
+        "JournalWorld"
+      ]
+    },
+    {
+      "from": "scripts\\weather_existing_control.py",
+      "module": "scripts.weather_study",
+      "names": [
+        "HELDOUT"
+      ]
+    },
+    {
+      "from": "scripts\\weather_study.py",
+      "module": "underworld",
+      "names": [
+        "weather_store"
+      ]
+    },
+    {
+      "from": "scripts\\weather_study.py",
+      "module": "underworld.weather_runtime",
+      "names": [
+        "climate",
+        "load"
+      ]
+    },
+    {
+      "from": "scripts\\weather_study.py",
+      "module": "underworld.weather_tools",
+      "names": [
+        "JournalWorld",
+        "execute",
+        "ingredients",
+        "move",
+        "request",
+        "roof",
+        "site",
+        "walk"
+      ]
+    },
+    {
+      "from": "tests\\ecology_fixtures.py",
+      "module": "underworld.native",
+      "names": [
+        "load_native"
+      ]
+    },
+    {
+      "from": "tests\\ecology_fixtures.py",
+      "module": "underworld.workshop",
+      "names": [
+        "AssignedProcedure"
+      ]
+    },
+    {
+      "from": "tests\\planning_fixtures.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "stabilization"
+      ]
+    },
+    {
+      "from": "tests\\planning_fixtures.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "tests\\planning_fixtures.py",
+      "module": "ecology_fixtures",
+      "names": [
+        "layout",
+        "caretaker_layout"
+      ]
+    },
+    {
+      "from": "tests\\planning_fixtures.py",
+      "module": "ecology_fixtures",
+      "names": [
+        "render"
+      ]
+    },
+    {
+      "from": "tests\\planning_fixtures.py",
+      "module": "underworld.native",
+      "names": [
+        "load_native"
+      ]
+    },
+    {
+      "from": "tests\\planning_fixtures.py",
+      "module": "underworld.native",
+      "names": [
+        "load_native"
+      ]
+    },
+    {
+      "from": "tests\\test_adaptive.py",
+      "module": "underworld",
+      "names": [
+        "adaptive",
+        "composition",
+        "developmental",
+        "storage"
+      ]
+    },
+    {
+      "from": "tests\\test_adaptive.py",
+      "module": "scripts.adaptive_study",
+      "names": [
+        "online",
+        "relief",
+        "train_locations",
+        "prepare",
+        "cooperation"
+      ]
+    },
+    {
+      "from": "tests\\test_adaptive_surfaces.py",
+      "module": "underworld",
+      "names": [
+        "adaptive",
+        "adaptive_panel",
+        "storage"
+      ]
+    },
+    {
+      "from": "tests\\test_code_audit.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "stabilization"
+      ]
+    },
+    {
+      "from": "tests\\test_code_audit.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "tests\\test_code_audit.py",
+      "module": "underworld.observer",
+      "names": [
+        "Controller"
+      ]
+    },
+    {
+      "from": "tests\\test_community.py",
+      "module": "underworld",
+      "names": [
+        "community",
+        "developmental",
+        "symbols",
+        "storage"
+      ]
+    },
+    {
+      "from": "tests\\test_composition.py",
+      "module": "underworld",
+      "names": [
+        "composition",
+        "developmental",
+        "storage",
+        "wayfinding"
+      ]
+    },
+    {
+      "from": "tests\\test_composition.py",
+      "module": "scripts.composition_study",
+      "names": [
+        "train"
+      ]
+    },
+    {
+      "from": "tests\\test_context_teaching.py",
+      "module": "underworld",
+      "names": [
+        "adaptive",
+        "context_teaching",
+        "developmental",
+        "storage",
+        "wayfinding"
+      ]
+    },
+    {
+      "from": "tests\\test_developmental.py",
+      "module": "underworld",
+      "names": [
+        "developmental",
+        "storage",
+        "runtime"
+      ]
+    },
+    {
+      "from": "tests\\test_food_execution.py",
+      "module": "ecology_fixtures",
+      "names": [
+        "world",
+        "layout",
+        "harness",
+        "balances"
+      ]
+    },
+    {
+      "from": "tests\\test_food_execution.py",
+      "module": "underworld",
+      "names": [
+        "stabilization",
+        "storage"
+      ]
+    },
+    {
+      "from": "tests\\test_food_execution.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "tests\\test_food_execution.py",
+      "module": "underworld.lab_policy",
+      "names": [
+        "Driver"
+      ]
+    },
+    {
+      "from": "tests\\test_h5_continuity.py",
+      "module": "underworld",
+      "names": [
+        "composition",
+        "developmental",
+        "storage",
+        "wayfinding"
+      ]
+    },
+    {
+      "from": "tests\\test_learning_panel.py",
+      "module": "underworld",
+      "names": [
+        "composition",
+        "learning_panel",
+        "storage"
+      ]
+    },
+    {
+      "from": "tests\\test_phase1.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "tests\\test_phase1.py",
+      "module": "underworld.native",
+      "names": [
+        "load_native"
+      ]
+    },
+    {
+      "from": "tests\\test_phase1.py",
+      "module": "underworld",
+      "names": [
+        "storage"
+      ]
+    },
+    {
+      "from": "tests\\test_phase1.py",
+      "module": "underworld.wire",
+      "names": [
+        "loads"
+      ]
+    },
+    {
+      "from": "tests\\test_phase2.py",
+      "module": "underworld.config",
+      "names": [
+        "load",
+        "validate"
+      ]
+    },
+    {
+      "from": "tests\\test_phase2.py",
+      "module": "underworld.native",
+      "names": [
+        "load_native"
+      ]
+    },
+    {
+      "from": "tests\\test_phase2.py",
+      "module": "underworld.policy",
+      "names": [
+        "choose"
+      ]
+    },
+    {
+      "from": "tests\\test_phase2.py",
+      "module": "underworld",
+      "names": [
+        "storage"
+      ]
+    },
+    {
+      "from": "tests\\test_phase2.py",
+      "module": "underworld.observer",
+      "names": [
+        "make_server"
+      ]
+    },
+    {
+      "from": "tests\\test_phase3.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "memory",
+        "cognition"
+      ]
+    },
+    {
+      "from": "tests\\test_phase3.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "tests\\test_phase3.py",
+      "module": "underworld.wire",
+      "names": [
+        "dumps",
+        "loads"
+      ]
+    },
+    {
+      "from": "tests\\test_phase4.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "memory",
+        "teaching"
+      ]
+    },
+    {
+      "from": "tests\\test_phase4.py",
+      "module": "underworld.config",
+      "names": [
+        "load",
+        "validate"
+      ]
+    },
+    {
+      "from": "tests\\test_phase4.py",
+      "module": "underworld.native",
+      "names": [
+        "load_native"
+      ]
+    },
+    {
+      "from": "tests\\test_phase4.py",
+      "module": "underworld.observer",
+      "names": [
+        "make_server"
+      ]
+    },
+    {
+      "from": "tests\\test_phase4.py",
+      "module": "underworld.wire",
+      "names": [
+        "dumps",
+        "loads"
+      ]
+    },
+    {
+      "from": "tests\\test_phase4.py",
+      "module": "test_phase3",
+      "names": [
+        "MockProvider",
+        "plan"
+      ]
+    },
+    {
+      "from": "tests\\test_phase5.py",
+      "module": "underworld",
+      "names": [
+        "cognition",
+        "storage",
+        "teaching"
+      ]
+    },
+    {
+      "from": "tests\\test_phase5.py",
+      "module": "underworld.config",
+      "names": [
+        "load",
+        "validate"
+      ]
+    },
+    {
+      "from": "tests\\test_phase5.py",
+      "module": "underworld.native",
+      "names": [
+        "load_native"
+      ]
+    },
+    {
+      "from": "tests\\test_phase5.py",
+      "module": "underworld.wire",
+      "names": [
+        "dumps"
+      ]
+    },
+    {
+      "from": "tests\\test_phase6.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "culture",
+        "cognition"
+      ]
+    },
+    {
+      "from": "tests\\test_phase6.py",
+      "module": "underworld.config",
+      "names": [
+        "load",
+        "validate"
+      ]
+    },
+    {
+      "from": "tests\\test_phase6.py",
+      "module": "underworld.native",
+      "names": [
+        "load_native"
+      ]
+    },
+    {
+      "from": "tests\\test_phase6.py",
+      "module": "underworld.policy",
+      "names": [
+        "_waypoint"
+      ]
+    },
+    {
+      "from": "tests\\test_phase6.py",
+      "module": "underworld.wire",
+      "names": [
+        "dumps"
+      ]
+    },
+    {
+      "from": "tests\\test_phase6.py",
+      "module": "underworld.lab_policy",
+      "names": [
+        "Driver"
+      ]
+    },
+    {
+      "from": "tests\\test_phase7.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "runtime",
+        "memory",
+        "cognition"
+      ]
+    },
+    {
+      "from": "tests\\test_phase7.py",
+      "module": "underworld.config",
+      "names": [
+        "load",
+        "validate"
+      ]
+    },
+    {
+      "from": "tests\\test_phase7.py",
+      "module": "underworld.native",
+      "names": [
+        "load_native"
+      ]
+    },
+    {
+      "from": "tests\\test_phase7.py",
+      "module": "underworld.supervisor",
+      "names": [
+        "run_isolated"
+      ]
+    },
+    {
+      "from": "tests\\test_phase7.py",
+      "module": "underworld.wire",
+      "names": [
+        "dumps",
+        "loads"
+      ]
+    },
+    {
+      "from": "tests\\test_phase8.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "teaching"
+      ]
+    },
+    {
+      "from": "tests\\test_phase8.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "tests\\test_phase8.py",
+      "module": "underworld.observer",
+      "names": [
+        "make_server",
+        "Controller"
+      ]
+    },
+    {
+      "from": "tests\\test_phase8.py",
+      "module": "underworld.viewer",
+      "names": [
+        "packet"
+      ]
+    },
+    {
+      "from": "tests\\test_phase8.py",
+      "module": "underworld.wire",
+      "names": [
+        "dumps"
+      ]
+    },
+    {
+      "from": "tests\\test_phase8.py",
+      "module": "underworld.lease",
+      "names": [
+        "Lease"
+      ]
+    },
+    {
+      "from": "tests\\test_phase9.py",
+      "module": "underworld",
+      "names": [
+        "storage"
+      ]
+    },
+    {
+      "from": "tests\\test_phase9.py",
+      "module": "underworld.learning",
+      "names": [
+        "PolicyStore",
+        "features",
+        "execute",
+        "control",
+        "sha",
+        "world_head",
+        "registration"
+      ]
+    },
+    {
+      "from": "tests\\test_phase9.py",
+      "module": "scripts.phase9_experiment",
+      "names": [
+        "prepare",
+        "clone",
+        "summarize",
+        "bootstrap"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_b_trees.py",
+      "module": "underworld",
+      "names": [
+        "storage"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_b_trees.py",
+      "module": "underworld.config",
+      "names": [
+        "load",
+        "validate"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_b_trees.py",
+      "module": "underworld.native",
+      "names": [
+        "load_native"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_c_crafting.py",
+      "module": "underworld.native",
+      "names": [
+        "load_native"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_c_crafting.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_c_crafting.py",
+      "module": "underworld",
+      "names": [
+        "storage"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_c_crafting.py",
+      "module": "underworld.workshop",
+      "names": [
+        "AssignedProcedure"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_c_crafting.py",
+      "module": "underworld",
+      "names": [
+        "stabilization"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_c_crafting.py",
+      "module": "underworld.observer",
+      "names": [
+        "Controller"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_c_crafting.py",
+      "module": "underworld.viewer",
+      "names": [
+        "packet"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_d_ecology.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "stabilization"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_d_ecology.py",
+      "module": "underworld.native",
+      "names": [
+        "load_native"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_d_ecology.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_d_ecology.py",
+      "module": "ecology_fixtures",
+      "names": [
+        "world",
+        "layout",
+        "pen",
+        "harness",
+        "balances"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_e_planning.py",
+      "module": "planning_fixtures",
+      "names": [
+        "create",
+        "until_done",
+        "collision_layout"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_e_planning.py",
+      "module": "ecology_fixtures",
+      "names": [
+        "balances",
+        "render"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_e_planning.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "stabilization",
+        "planning"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_e_planning.py",
+      "module": "underworld.native",
+      "names": [
+        "load_native"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_e_planning.py",
+      "module": "underworld.workshop",
+      "names": [
+        "AssignedProcedure"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_e_planning.py",
+      "module": "underworld.lab_policy",
+      "names": [
+        "Driver"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_e_planning.py",
+      "module": "underworld",
+      "names": [
+        "memory"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_e_planning.py",
+      "module": "underworld.app",
+      "names": [
+        "main"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_f_knowledge.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "teaching",
+        "knowledge",
+        "culture"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_f_knowledge.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_f_knowledge.py",
+      "module": "underworld.observer",
+      "names": [
+        "Controller"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_f_knowledge.py",
+      "module": "underworld.viewer",
+      "names": [
+        "packet"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_g_integration.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "stabilization",
+        "planning",
+        "runtime",
+        "knowledge",
+        "care",
+        "memory",
+        "enclosure",
+        "teaching"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_g_integration.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_g_integration.py",
+      "module": "test_phase_f_knowledge",
+      "names": [
+        "injection"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_g_integration.py",
+      "module": "underworld.app",
+      "names": [
+        "validate_model_off"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_g_integration.py",
+      "module": "ecology_fixtures",
+      "names": [
+        "render"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_g_integration.py",
+      "module": "underworld.native",
+      "names": [
+        "load_native"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_g_integration.py",
+      "module": "test_phase6",
+      "names": [
+        "act"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_g_integration.py",
+      "module": "ecology_fixtures",
+      "names": [
+        "world",
+        "layout"
+      ]
+    },
+    {
+      "from": "tests\\test_phase_g_integration.py",
+      "module": "test_phase6",
+      "names": [
+        "act"
+      ]
+    },
+    {
+      "from": "tests\\test_scaffold.py",
+      "module": "underworld.config",
+      "names": [
+        "load",
+        "validate"
+      ]
+    },
+    {
+      "from": "tests\\test_stabilization.py",
+      "module": "underworld",
+      "names": [
+        "storage",
+        "stabilization"
+      ]
+    },
+    {
+      "from": "tests\\test_stabilization.py",
+      "module": "underworld.lab_policy",
+      "names": [
+        "Driver"
+      ]
+    },
+    {
+      "from": "tests\\test_stabilization.py",
+      "module": "scripts.stabilization_common",
+      "names": [
+        "create"
+      ]
+    },
+    {
+      "from": "tests\\test_stabilization.py",
+      "module": "underworld.config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "tests\\test_symbols.py",
+      "module": "underworld",
+      "names": [
+        "developmental",
+        "symbols",
+        "storage"
+      ]
+    },
+    {
+      "from": "tests\\test_wayfinding.py",
+      "module": "underworld",
+      "names": [
+        "developmental",
+        "storage",
+        "symbols",
+        "teaching",
+        "wayfinding"
+      ]
+    },
+    {
+      "from": "underworld\\__main__.py",
+      "module": ".config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "underworld\\__main__.py",
+      "module": ".",
+      "names": [
+        "storage"
+      ]
+    },
+    {
+      "from": "underworld\\__main__.py",
+      "module": ".knowledge",
+      "names": [
+        "PROFILES"
+      ]
+    },
+    {
+      "from": "underworld\\__main__.py",
+      "module": ".planning",
+      "names": [
+        "GOALS"
+      ]
+    },
+    {
+      "from": "underworld\\__main__.py",
+      "module": ".observer",
+      "names": [
+        "serve"
+      ]
+    },
+    {
+      "from": "underworld\\__main__.py",
+      "module": ".",
+      "names": [
+        "stabilization"
+      ]
+    },
+    {
+      "from": "underworld\\__main__.py",
+      "module": ".supervisor",
+      "names": [
+        "run_isolated"
+      ]
+    },
+    {
+      "from": "underworld\\__main__.py",
+      "module": ".runtime",
+      "names": [
+        "status",
+        "request_stop"
+      ]
+    },
+    {
+      "from": "underworld\\__main__.py",
+      "module": ".teaching",
+      "names": [
+        "intervene"
+      ]
+    },
+    {
+      "from": "underworld\\__main__.py",
+      "module": ".wire",
+      "names": [
+        "loads"
+      ]
+    },
+    {
+      "from": "underworld\\__main__.py",
+      "module": ".",
+      "names": [
+        "cognition"
+      ]
+    },
+    {
+      "from": "underworld\\__main__.py",
+      "module": ".planning_model",
+      "names": [
+        "PlanningModel"
+      ]
+    },
+    {
+      "from": "underworld\\__main__.py",
+      "module": ".planning",
+      "names": [
+        "assign"
+      ]
+    },
+    {
+      "from": "underworld\\__main__.py",
+      "module": ".wire",
+      "names": [
+        "loads"
+      ]
+    },
+    {
+      "from": "underworld\\__main__.py",
+      "module": ".teaching",
+      "names": [
+        "history"
+      ]
+    },
+    {
+      "from": "underworld\\__main__.py",
+      "module": ".planning",
+      "names": [
+        "cancel"
+      ]
+    },
+    {
+      "from": "underworld\\__main__.py",
+      "module": ".teaching",
+      "names": [
+        "fork"
+      ]
+    },
+    {
+      "from": "underworld\\__main__.py",
+      "module": ".",
+      "names": [
+        "runtime"
+      ]
+    },
+    {
+      "from": "underworld\\__main__.py",
+      "module": ".teaching",
+      "names": [
+        "recall"
+      ]
+    },
+    {
+      "from": "underworld\\__main__.py",
+      "module": ".",
+      "names": [
+        "knowledge"
+      ]
+    },
+    {
+      "from": "underworld\\__main__.py",
+      "module": ".culture",
+      "names": [
+        "recall"
+      ]
+    },
+    {
+      "from": "underworld\\__main__.py",
+      "module": ".runtime",
+      "names": [
+        "backup"
+      ]
+    },
+    {
+      "from": "underworld\\adaptive.py",
+      "module": ".",
+      "names": [
+        "composition",
+        "developmental",
+        "planning",
+        "storage",
+        "symbols",
+        "wayfinding"
+      ]
+    },
+    {
+      "from": "underworld\\adaptive.py",
+      "module": ".lease",
+      "names": [
+        "Lease"
+      ]
+    },
+    {
+      "from": "underworld\\adaptive_panel.py",
+      "module": ".",
+      "names": [
+        "adaptive",
+        "developmental",
+        "storage"
+      ]
+    },
+    {
+      "from": "underworld\\app.py",
+      "module": ".",
+      "names": [
+        "__version__"
+      ]
+    },
+    {
+      "from": "underworld\\app.py",
+      "module": ".",
+      "names": [
+        "storage",
+        "stabilization"
+      ]
+    },
+    {
+      "from": "underworld\\app.py",
+      "module": ".",
+      "names": [
+        "stabilization",
+        "storage"
+      ]
+    },
+    {
+      "from": "underworld\\app.py",
+      "module": ".config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "underworld\\app.py",
+      "module": ".observer",
+      "names": [
+        "make_server"
+      ]
+    },
+    {
+      "from": "underworld\\app.py",
+      "module": ".__main__",
+      "names": [
+        "main"
+      ]
+    },
+    {
+      "from": "underworld\\care.py",
+      "module": ".wire",
+      "names": [
+        "loads",
+        "dumps"
+      ]
+    },
+    {
+      "from": "underworld\\care.py",
+      "module": ".",
+      "names": [
+        "memory"
+      ]
+    },
+    {
+      "from": "underworld\\cognition.py",
+      "module": ".wire",
+      "names": [
+        "dumps",
+        "loads"
+      ]
+    },
+    {
+      "from": "underworld\\cognition.py",
+      "module": ".resources",
+      "names": [
+        "process_memory"
+      ]
+    },
+    {
+      "from": "underworld\\cognition.py",
+      "module": ".isolation",
+      "names": [
+        "token_status"
+      ]
+    },
+    {
+      "from": "underworld\\cognition.py",
+      "module": ".supervisor",
+      "names": [
+        "PipeProvider"
+      ]
+    },
+    {
+      "from": "underworld\\community.py",
+      "module": ".",
+      "names": [
+        "developmental",
+        "symbols",
+        "storage"
+      ]
+    },
+    {
+      "from": "underworld\\community.py",
+      "module": ".config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "underworld\\community.py",
+      "module": ".lease",
+      "names": [
+        "Lease"
+      ]
+    },
+    {
+      "from": "underworld\\composition.py",
+      "module": ".",
+      "names": [
+        "developmental",
+        "storage",
+        "symbols",
+        "wayfinding"
+      ]
+    },
+    {
+      "from": "underworld\\composition.py",
+      "module": ".lease",
+      "names": [
+        "Lease"
+      ]
+    },
+    {
+      "from": "underworld\\context_teaching.py",
+      "module": ".",
+      "names": [
+        "adaptive",
+        "developmental",
+        "storage",
+        "wayfinding"
+      ]
+    },
+    {
+      "from": "underworld\\context_teaching.py",
+      "module": ".lease",
+      "names": [
+        "Lease"
+      ]
+    },
+    {
+      "from": "underworld\\culture.py",
+      "module": ".",
+      "names": [
+        "storage",
+        "memory"
+      ]
+    },
+    {
+      "from": "underworld\\culture.py",
+      "module": ".wire",
+      "names": [
+        "loads",
+        "dumps"
+      ]
+    },
+    {
+      "from": "underworld\\culture.py",
+      "module": ".config",
+      "names": [
+        "episodic_enabled"
+      ]
+    },
+    {
+      "from": "underworld\\developmental.py",
+      "module": ".",
+      "names": [
+        "storage",
+        "runtime"
+      ]
+    },
+    {
+      "from": "underworld\\developmental.py",
+      "module": ".config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "underworld\\developmental.py",
+      "module": ".lease",
+      "names": [
+        "Lease"
+      ]
+    },
+    {
+      "from": "underworld\\developmental.py",
+      "module": ".wire",
+      "names": [
+        "dumps"
+      ]
+    },
+    {
+      "from": "underworld\\emotion.py",
+      "module": ".",
+      "names": [
+        "weather_policy"
+      ]
+    },
+    {
+      "from": "underworld\\emotion_store.py",
+      "module": ".",
+      "names": [
+        "emotion",
+        "weather_store",
+        "weather_policy"
+      ]
+    },
+    {
+      "from": "underworld\\emotion_store.py",
+      "module": ".lease",
+      "names": [
+        "Lease"
+      ]
+    },
+    {
+      "from": "underworld\\emotion_store.py",
+      "module": ".weather_runtime",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "underworld\\emotion_viewer.py",
+      "module": ".",
+      "names": [
+        "emotion_store",
+        "weather_viewer"
+      ]
+    },
+    {
+      "from": "underworld\\enclosure.py",
+      "module": ".",
+      "names": [
+        "planning"
+      ]
+    },
+    {
+      "from": "underworld\\enclosure.py",
+      "module": ".",
+      "names": [
+        "planning"
+      ]
+    },
+    {
+      "from": "underworld\\isolation.py",
+      "module": ".lease",
+      "names": [
+        "Lease"
+      ]
+    },
+    {
+      "from": "underworld\\knowledge.py",
+      "module": ".",
+      "names": [
+        "memory",
+        "storage"
+      ]
+    },
+    {
+      "from": "underworld\\knowledge.py",
+      "module": ".wire",
+      "names": [
+        "loads"
+      ]
+    },
+    {
+      "from": "underworld\\knowledge.py",
+      "module": ".config",
+      "names": [
+        "episodic_enabled"
+      ]
+    },
+    {
+      "from": "underworld\\knowledge.py",
+      "module": ".",
+      "names": [
+        "culture"
+      ]
+    },
+    {
+      "from": "underworld\\knowledge.py",
+      "module": ".lab_policy",
+      "names": [
+        "Driver"
+      ]
+    },
+    {
+      "from": "underworld\\knowledge.py",
+      "module": ".lease",
+      "names": [
+        "Lease"
+      ]
+    },
+    {
+      "from": "underworld\\knowledge.py",
+      "module": ".config",
+      "names": [
+        "episodic_enabled"
+      ]
+    },
+    {
+      "from": "underworld\\lab_policy.py",
+      "module": ".",
+      "names": [
+        "storage"
+      ]
+    },
+    {
+      "from": "underworld\\lab_policy.py",
+      "module": ".policy",
+      "names": [
+        "_waypoint"
+      ]
+    },
+    {
+      "from": "underworld\\learning.py",
+      "module": ".",
+      "names": [
+        "storage"
+      ]
+    },
+    {
+      "from": "underworld\\learning.py",
+      "module": ".lease",
+      "names": [
+        "Lease"
+      ]
+    },
+    {
+      "from": "underworld\\learning.py",
+      "module": ".wire",
+      "names": [
+        "dumps"
+      ]
+    },
+    {
+      "from": "underworld\\learning_panel.py",
+      "module": ".",
+      "names": [
+        "composition",
+        "developmental",
+        "storage"
+      ]
+    },
+    {
+      "from": "underworld\\memory.py",
+      "module": ".wire",
+      "names": [
+        "dumps",
+        "loads"
+      ]
+    },
+    {
+      "from": "underworld\\observer.py",
+      "module": ".",
+      "names": [
+        "storage"
+      ]
+    },
+    {
+      "from": "underworld\\observer.py",
+      "module": ".",
+      "names": [
+        "teaching"
+      ]
+    },
+    {
+      "from": "underworld\\observer.py",
+      "module": ".wire",
+      "names": [
+        "loads"
+      ]
+    },
+    {
+      "from": "underworld\\observer.py",
+      "module": ".stabilization",
+      "names": [
+        "_load"
+      ]
+    },
+    {
+      "from": "underworld\\observer.py",
+      "module": ".stabilization",
+      "names": [
+        "verify_event_chain"
+      ]
+    },
+    {
+      "from": "underworld\\observer.py",
+      "module": ".viewer",
+      "names": [
+        "packet"
+      ]
+    },
+    {
+      "from": "underworld\\observer.py",
+      "module": ".viewer",
+      "names": [
+        "packet"
+      ]
+    },
+    {
+      "from": "underworld\\planning.py",
+      "module": ".",
+      "names": [
+        "memory",
+        "storage"
+      ]
+    },
+    {
+      "from": "underworld\\planning.py",
+      "module": ".lease",
+      "names": [
+        "Lease"
+      ]
+    },
+    {
+      "from": "underworld\\planning.py",
+      "module": ".policy",
+      "names": [
+        "_segment_clear",
+        "_waypoint"
+      ]
+    },
+    {
+      "from": "underworld\\planning.py",
+      "module": ".",
+      "names": [
+        "stabilization"
+      ]
+    },
+    {
+      "from": "underworld\\planning.py",
+      "module": ".",
+      "names": [
+        "stabilization"
+      ]
+    },
+    {
+      "from": "underworld\\planning.py",
+      "module": ".",
+      "names": [
+        "stabilization"
+      ]
+    },
+    {
+      "from": "underworld\\planning.py",
+      "module": ".enclosure",
+      "names": [
+        "store_offcuts"
+      ]
+    },
+    {
+      "from": "underworld\\planning.py",
+      "module": ".enclosure",
+      "names": [
+        "choices"
+      ]
+    },
+    {
+      "from": "underworld\\planning.py",
+      "module": ".",
+      "names": [
+        "care"
+      ]
+    },
+    {
+      "from": "underworld\\planning.py",
+      "module": ".config",
+      "names": [
+        "episodic_enabled"
+      ]
+    },
+    {
+      "from": "underworld\\planning_model.py",
+      "module": ".cognition",
+      "names": [
+        "LlamaCpp",
+        "NoRedirect"
+      ]
+    },
+    {
+      "from": "underworld\\planning_model.py",
+      "module": ".wire",
+      "names": [
+        "dumps"
+      ]
+    },
+    {
+      "from": "underworld\\runtime.py",
+      "module": ".",
+      "names": [
+        "storage",
+        "memory"
+      ]
+    },
+    {
+      "from": "underworld\\runtime.py",
+      "module": ".lease",
+      "names": [
+        "Lease"
+      ]
+    },
+    {
+      "from": "underworld\\runtime.py",
+      "module": ".resources",
+      "names": [
+        "process_memory"
+      ]
+    },
+    {
+      "from": "underworld\\runtime.py",
+      "module": ".wire",
+      "names": [
+        "dumps",
+        "loads"
+      ]
+    },
+    {
+      "from": "underworld\\runtime.py",
+      "module": ".",
+      "names": [
+        "stabilization"
+      ]
+    },
+    {
+      "from": "underworld\\runtime.py",
+      "module": ".isolation",
+      "names": [
+        "token_status",
+        "network_probe"
+      ]
+    },
+    {
+      "from": "underworld\\runtime.py",
+      "module": ".",
+      "names": [
+        "stabilization"
+      ]
+    },
+    {
+      "from": "underworld\\runtime.py",
+      "module": ".",
+      "names": [
+        "stabilization"
+      ]
+    },
+    {
+      "from": "underworld\\stabilization.py",
+      "module": ".",
+      "names": [
+        "storage",
+        "memory",
+        "cognition"
+      ]
+    },
+    {
+      "from": "underworld\\stabilization.py",
+      "module": ".lease",
+      "names": [
+        "Lease"
+      ]
+    },
+    {
+      "from": "underworld\\stabilization.py",
+      "module": ".policy",
+      "names": [
+        "_waypoint",
+        "_segment_clear"
+      ]
+    },
+    {
+      "from": "underworld\\stabilization.py",
+      "module": ".wire",
+      "names": [
+        "dumps"
+      ]
+    },
+    {
+      "from": "underworld\\stabilization.py",
+      "module": ".",
+      "names": [
+        "planning"
+      ]
+    },
+    {
+      "from": "underworld\\stabilization.py",
+      "module": ".config",
+      "names": [
+        "validate"
+      ]
+    },
+    {
+      "from": "underworld\\stabilization.py",
+      "module": ".config",
+      "names": [
+        "episodic_enabled"
+      ]
+    },
+    {
+      "from": "underworld\\stabilization.py",
+      "module": ".config",
+      "names": [
+        "load"
+      ]
+    },
+    {
+      "from": "underworld\\stabilization.py",
+      "module": ".",
+      "names": [
+        "runtime"
+      ]
+    },
+    {
+      "from": "underworld\\stabilization.py",
+      "module": ".planning_model",
+      "names": [
+        "PlanningModel"
+      ]
+    },
+    {
+      "from": "underworld\\stabilization.py",
+      "module": ".config",
+      "names": [
+        "episodic_enabled"
+      ]
+    },
+    {
+      "from": "underworld\\stabilization.py",
+      "module": ".",
+      "names": [
+        "runtime"
+      ]
+    },
+    {
+      "from": "underworld\\stabilization.py",
+      "module": ".care",
+      "names": [
+        "reserve"
+      ]
+    },
+    {
+      "from": "underworld\\storage.py",
+      "module": ".",
+      "names": [
+        "__version__"
+      ]
+    },
+    {
+      "from": "underworld\\storage.py",
+      "module": ".config",
+      "names": [
+        "validate",
+        "episodic_enabled"
+      ]
+    },
+    {
+      "from": "underworld\\storage.py",
+      "module": ".native",
+      "names": [
+        "load_native"
+      ]
+    },
+    {
+      "from": "underworld\\storage.py",
+      "module": ".wire",
+      "names": [
+        "dumps",
+        "loads",
+        "counter"
+      ]
+    },
+    {
+      "from": "underworld\\storage.py",
+      "module": ".policy",
+      "names": [
+        "choose"
+      ]
+    },
+    {
+      "from": "underworld\\storage.py",
+      "module": ".",
+      "names": [
+        "memory",
+        "cognition"
+      ]
+    },
+    {
+      "from": "underworld\\storage.py",
+      "module": ".lease",
+      "names": [
+        "Lease"
+      ]
+    },
+    {
+      "from": "underworld\\storage.py",
+      "module": ".runtime",
+      "names": [
+        "verify_control"
+      ]
+    },
+    {
+      "from": "underworld\\storage.py",
+      "module": ".",
+      "names": [
+        "knowledge"
+      ]
+    },
+    {
+      "from": "underworld\\storage.py",
+      "module": ".knowledge",
+      "names": [
+        "replay_result"
+      ]
+    },
+    {
+      "from": "underworld\\supervisor.py",
+      "module": ".",
+      "names": [
+        "storage",
+        "cognition",
+        "runtime"
+      ]
+    },
+    {
+      "from": "underworld\\supervisor.py",
+      "module": ".isolation",
+      "names": [
+        "AppContainer"
+      ]
+    },
+    {
+      "from": "underworld\\supervisor.py",
+      "module": ".wire",
+      "names": [
+        "dumps"
+      ]
+    },
+    {
+      "from": "underworld\\symbols.py",
+      "module": ".",
+      "names": [
+        "developmental",
+        "storage"
+      ]
+    },
+    {
+      "from": "underworld\\symbols.py",
+      "module": ".lease",
+      "names": [
+        "Lease"
+      ]
+    },
+    {
+      "from": "underworld\\symbols.py",
+      "module": ".wire",
+      "names": [
+        "dumps"
+      ]
+    },
+    {
+      "from": "underworld\\teaching.py",
+      "module": ".",
+      "names": [
+        "storage",
+        "memory"
+      ]
+    },
+    {
+      "from": "underworld\\teaching.py",
+      "module": ".config",
+      "names": [
+        "validate",
+        "episodic_enabled"
+      ]
+    },
+    {
+      "from": "underworld\\teaching.py",
+      "module": ".wire",
+      "names": [
+        "dumps",
+        "loads"
+      ]
+    },
+    {
+      "from": "underworld\\teaching.py",
+      "module": ".knowledge",
+      "names": [
+        "inject"
+      ]
+    },
+    {
+      "from": "underworld\\viewer.py",
+      "module": ".",
+      "names": [
+        "storage",
+        "memory",
+        "culture",
+        "knowledge"
+      ]
+    },
+    {
+      "from": "underworld\\viewer.py",
+      "module": ".config",
+      "names": [
+        "episodic_enabled"
+      ]
+    },
+    {
+      "from": "underworld\\viewer.py",
+      "module": ".wire",
+      "names": [
+        "loads",
+        "counter"
+      ]
+    },
+    {
+      "from": "underworld\\viewer.py",
+      "module": ".observer",
+      "names": [
+        "controller_projection"
+      ]
+    },
+    {
+      "from": "underworld\\viewer.py",
+      "module": ".runtime",
+      "names": [
+        "verify_control"
+      ]
+    },
+    {
+      "from": "underworld\\wayfinding.py",
+      "module": ".",
+      "names": [
+        "community",
+        "developmental",
+        "planning",
+        "storage",
+        "symbols"
+      ]
+    },
+    {
+      "from": "underworld\\wayfinding.py",
+      "module": ".lease",
+      "names": [
+        "Lease"
+      ]
+    },
+    {
+      "from": "underworld\\weather_policy.py",
+      "module": ".",
+      "names": [
+        "planning"
+      ]
+    },
+    {
+      "from": "underworld\\weather_store.py",
+      "module": ".lease",
+      "names": [
+        "Lease"
+      ]
+    },
+    {
+      "from": "underworld\\weather_store.py",
+      "module": ".weather_runtime",
+      "names": [
+        "climate",
+        "load"
+      ]
+    },
+    {
+      "from": "underworld\\weather_store.py",
+      "module": ".weather_policy",
+      "names": [
+        "advance"
+      ]
+    },
+    {
+      "from": "underworld\\weather_store.py",
+      "module": ".weather_policy",
+      "names": [
+        "advance"
+      ]
+    },
+    {
+      "from": "underworld\\weather_tools.py",
+      "module": ".",
+      "names": [
+        "weather_store"
+      ]
+    },
+    {
+      "from": "underworld\\weather_tools.py",
+      "module": "underworld.planning",
+      "names": [
+        "_route"
+      ]
+    },
+    {
+      "from": "underworld\\weather_viewer.py",
+      "module": ".",
+      "names": [
+        "weather_store"
+      ]
+    },
+    {
+      "from": "underworld\\worker.py",
+      "module": ".",
+      "names": [
+        "runtime"
+      ]
+    },
+    {
+      "from": "underworld\\worker.py",
+      "module": ".supervisor",
+      "names": [
+        "PipeProvider"
+      ]
+    },
+    {
+      "from": "underworld\\workshop.py",
+      "module": ".",
+      "names": [
+        "storage"
+      ]
+    },
+    {
+      "from": "underworld\\workshop.py",
+      "module": ".native",
+      "names": [
+        "load_native"
+      ]
+    }
+  ],
+  "native_local_header_edges": [
+    {
+      "from": "core\\bindings.cpp",
+      "include": "world.hpp"
+    },
+    {
+      "from": "core\\bodies.cpp",
+      "include": "world.hpp"
+    },
+    {
+      "from": "core\\crafting.cpp",
+      "include": "world.hpp"
+    },
+    {
+      "from": "core\\culture.cpp",
+      "include": "world.hpp"
+    },
+    {
+      "from": "core\\ecology.cpp",
+      "include": "world.hpp"
+    },
+    {
+      "from": "core\\supervision.cpp",
+      "include": "world.hpp"
+    },
+    {
+      "from": "core\\teaching.cpp",
+      "include": "world.hpp"
+    },
+    {
+      "from": "core\\test_thermal.cpp",
+      "include": "thermal.hpp"
+    },
+    {
+      "from": "core\\test_world.cpp",
+      "include": "world.hpp"
+    },
+    {
+      "from": "core\\thermal.cpp",
+      "include": "thermal.hpp"
+    },
+    {
+      "from": "core\\thermal_world.cpp",
+      "include": "world.hpp"
+    },
+    {
+      "from": "core\\world.cpp",
+      "include": "world.hpp"
+    },
+    {
+      "from": "core\\world.hpp",
+      "include": "thermal.hpp"
+    },
+    {
+      "from": "core\\world.hpp",
+      "include": "culture.hpp"
+    }
+  ],
+  "javascript_local_module_assets": [
+    "/vendor/OrbitControls.js",
+    "/vendor/three.module.min.js"
+  ],
+  "repeated_substantial_production_functions": [],
+  "errors": [],
+  "limits": "Static inventory does not prove all branches, platform integrations or dynamic imports correct; use regression and packaged smoke evidence."
+}
