@@ -1,3 +1,28 @@
+# Current milestone: F4 mood and temperament
+
+**F4 passes its prospective bounded gates.** Slow mood persists beyond immediate
+harm, changes gradually and recovers through real warm, supplied rest. Initial
+balanced/sensitive temperament parameters produce different matched mood curves.
+These traits are authored and fixed; no learned personality change is claimed.
+
+- Five untouched seeds pass; independent audit verifies25 native saves and2175
+  completed assigned actions, with identical physical trajectories across controls.
+- Fresh5 F4 +7 emotion +28 weather checks pass. Existing source/world/research
+  evidence and Phase9's failed result remain preserved.
+- A copied four-person life continues1200->1800 simulated seconds, all healthy,
+  with inherited learning/scheduler and exact fresh-process backup continuation.
+
+[Results and limits](docs/MOOD_F4_REPORT.md) ·
+[Run / copy / save / resume](docs/MOOD_F4_OPERATIONS.md) ·
+[Prospective protocol](docs/MOOD_F4_PROTOCOL.md)
+
+F4 is an opt-in profile on NEW copies, preserving the F0-F3 runtime and worlds.
+Its bounded extra decision rule is authored; a natural survival benefit is not
+established. F5 onward remains unimplemented/unvalidated. Earlier guides below
+retain their historical scope.
+
+---
+
 # Current milestone: developmental emotion F0-F3
 
 **F0-F3 are implemented and pass their bounded gates.** Persistent private affect,

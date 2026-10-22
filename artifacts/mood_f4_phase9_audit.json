@@ -1,0 +1,11 @@
+{
+  "verified_files": 3439,
+  "verified_source_files": 4,
+  "training_trials": 360,
+  "evaluation_rollouts": 840,
+  "paired_evaluation_cases": 210,
+  "finished_policy_journals": 5,
+  "recomputed_metrics_match": true,
+  "evidence_sha256": "21f0fb5a580ca6fffbe7e494961a19cbf7c3bfe06f416ffb0adff367766cd5d5",
+  "advance": false
+}

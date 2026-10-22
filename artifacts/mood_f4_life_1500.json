@@ -1,0 +1,2814 @@
+{
+  "initial_simulated_s": 1200.0,
+  "final_simulated_s": 1500.0,
+  "source_preserved": true,
+  "source_sha256": "2006ca58fd5d37bf572a13101b3f2fdeedc47a6edbf60de92975043c6ff1ce75",
+  "inherited_cursor": 550,
+  "final_cursor": 815,
+  "actions": {
+    "gather": 29,
+    "drink": 21,
+    "move": 42,
+    "rest": 165,
+    "eat": 8
+  },
+  "origins": {
+    "authored_weather_baseline": 265
+  },
+  "additional_authored_mood_choices": 0,
+  "errors": [],
+  "final": {
+    "snapshot": {
+      "schema_version": 1,
+      "kind": "world_snapshot",
+      "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+      "culture": {
+        "enabled": false,
+        "skills": {},
+        "agreements": [],
+        "validated_batches": [],
+        "departed": []
+      },
+      "ecology": {
+        "enabled": false,
+        "controller_origin": "authored_native_ecology_v1",
+        "animals": {},
+        "freshness_s": {},
+        "structural_body_initial_ug": "0",
+        "food_residue_ug": "0",
+        "water_waste_ug": "0",
+        "egg_input_ug": "0",
+        "eggs_produced_ug": "0",
+        "forage_regeneration_kg_s": 0.0
+      },
+      "branch_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+      "tick": "6000",
+      "observation_version": "6000",
+      "last_event_seq": "7991",
+      "seed": "53",
+      "dt_s": 0.25,
+      "simulated_time_s": 1500.0,
+      "laws_version": "culture-6",
+      "thermal": {
+        "enabled": false,
+        "open_boundaries": false,
+        "cells": [],
+        "ambient_temperature_k": 0.0,
+        "stored_energy_j": 0.0,
+        "initial_energy_j": 0.0,
+        "heater_input_j": 0.0,
+        "radiation_in_j": 0.0,
+        "radiation_out_j": 0.0,
+        "outflow_energy_j": 0.0,
+        "solar_transferred_j": 0.0,
+        "burned_fuel_ug": "0",
+        "outflow_water_ug": "0",
+        "balance_error_j": 0.0,
+        "global_balance_error_j": 0.0,
+        "energy_tolerance_j": 0.0005051151563368497
+      },
+      "build_id": "74e4c35419d9cc962673ce24b09d2ec7fa80e844a737c0e82862d1bb23feb71c",
+      "world_bounds_m": {
+        "width": 32.0,
+        "height": 32.0
+      },
+      "entities": [
+        {
+          "entity_id": "terrain-1",
+          "kind": "rock",
+          "position_m": [
+            16.0,
+            16.0
+          ],
+          "radius_m": 1.0,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "tree-1",
+          "kind": "tree",
+          "position_m": [
+            2.0,
+            30.0
+          ],
+          "radius_m": 0.6,
+          "mass_kg": 1.0,
+          "mass_ug": "1000000000",
+          "stage": "young",
+          "health": 0.95,
+          "biomass_ug": "1000000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "tree-2",
+          "kind": "tree",
+          "position_m": [
+            30.0,
+            2.0
+          ],
+          "radius_m": 0.6,
+          "mass_kg": 8.0,
+          "mass_ug": "8000000000",
+          "stage": "mature",
+          "health": 1.0,
+          "biomass_ug": "8000000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "tree-3",
+          "kind": "tree",
+          "position_m": [
+            30.0,
+            30.0
+          ],
+          "radius_m": 0.6,
+          "mass_kg": 8.0,
+          "mass_ug": "8000000000",
+          "stage": "mature",
+          "health": 1.0,
+          "biomass_ug": "8000000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "agent-1",
+          "kind": "actor",
+          "position_m": [
+            3.7,
+            3.7
+          ],
+          "radius_m": 0.25,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "workmanship": 1,
+          "inventory_ug": {
+            "fiber": "0",
+            "food": "0",
+            "water": "0",
+            "wood": "100000000"
+          },
+          "alive": true,
+          "body": {
+            "hunger": 0.5499999999998351,
+            "thirst": 0.5500000000000858,
+            "fatigue": 0.005718008385988591,
+            "health": 1.0,
+            "alive": true,
+            "food_ingested_ug": "650000000",
+            "water_ingested_ug": "1050000000"
+          },
+          "present": true
+        },
+        {
+          "entity_id": "agent-2",
+          "kind": "actor",
+          "position_m": [
+            4.3,
+            3.7
+          ],
+          "radius_m": 0.25,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "workmanship": 0,
+          "inventory_ug": {
+            "food": "0",
+            "water": "0"
+          },
+          "alive": true,
+          "body": {
+            "hunger": 0.5499999999998351,
+            "thirst": 0.5500000000000858,
+            "fatigue": 0.004890997355162441,
+            "health": 1.0,
+            "alive": true,
+            "food_ingested_ug": "650000000",
+            "water_ingested_ug": "1050000000"
+          },
+          "present": true
+        },
+        {
+          "entity_id": "agent-3",
+          "kind": "actor",
+          "position_m": [
+            3.7,
+            4.3
+          ],
+          "radius_m": 0.25,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "workmanship": 0,
+          "inventory_ug": {
+            "food": "0",
+            "water": "0"
+          },
+          "alive": true,
+          "body": {
+            "hunger": 0.5499999999998351,
+            "thirst": 0.5500000000000858,
+            "fatigue": 0.004044552545603487,
+            "health": 1.0,
+            "alive": true,
+            "food_ingested_ug": "650000000",
+            "water_ingested_ug": "1050000000"
+          },
+          "present": true
+        },
+        {
+          "entity_id": "agent-4",
+          "kind": "actor",
+          "position_m": [
+            5.0,
+            3.0
+          ],
+          "radius_m": 0.25,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "workmanship": 0,
+          "inventory_ug": {
+            "food": "0",
+            "water": "0"
+          },
+          "alive": true,
+          "body": {
+            "hunger": 0.5499999999998351,
+            "thirst": 0.4500000000000858,
+            "fatigue": 0.03970446737235233,
+            "health": 1.0,
+            "alive": true,
+            "food_ingested_ug": "650000000",
+            "water_ingested_ug": "1100000000"
+          },
+          "present": true
+        },
+        {
+          "entity_id": "resource-1",
+          "kind": "food",
+          "position_m": [
+            2.0,
+            2.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 5.4,
+          "mass_ug": "5400000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "resource-2",
+          "kind": "water",
+          "position_m": [
+            3.0,
+            2.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 11.75,
+          "mass_ug": "11750000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "resource-3",
+          "kind": "inert_material",
+          "position_m": [
+            4.0,
+            2.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 32.0,
+          "mass_ug": "32000000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "resource-4",
+          "kind": "stone",
+          "position_m": [
+            5.0,
+            2.0
+          ],
+          "radius_m": 0.15,
+          "mass_kg": 4.0,
+          "mass_ug": "4000000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "pile-13",
+          "kind": "wood",
+          "position_m": [
+            3.2,
+            30.0
+          ],
+          "radius_m": 0.15,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "pile-14",
+          "kind": "fiber",
+          "position_m": [
+            0.8,
+            30.0
+          ],
+          "radius_m": 0.15,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "crafted-15",
+          "kind": "lean_to",
+          "position_m": [
+            4.0,
+            4.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 0.9,
+          "mass_ug": "900000000",
+          "recipe_id": "lean_to",
+          "owner_id": "agent-1",
+          "work_s": 12.0,
+          "durability": 0,
+          "composition_ug": {
+            "fiber": "100000000",
+            "wood": "800000000"
+          },
+          "inventory_ug": {}
+        }
+      ],
+      "outstanding_actions": [],
+      "material_totals_ug": {
+        "fiber": "100000000",
+        "food": "8000000000",
+        "fuel_X": "0",
+        "inert_material": "32000000000",
+        "oxygen": "0",
+        "product_P": "0",
+        "stone": "4000000000",
+        "tree": "17000000000",
+        "water": "16000000000",
+        "wood": "900000000"
+      },
+      "event_counts": {
+        "action_accepted": 848,
+        "action_completed": 848,
+        "consumption": 137,
+        "crafting_effect": 2,
+        "mass_transfer": 140,
+        "tick": 6000,
+        "weather_transition": 16
+      },
+      "solar_input_j": 5051151.563368497,
+      "environment_energy_j": 5051151.563368497,
+      "operator_energy_input_j": 0.0,
+      "operator_sources_ug": {
+        "food": 0,
+        "fuel_X": 0,
+        "inert_material": 0,
+        "oxygen": 0,
+        "product_P": 0,
+        "stone": 0,
+        "water": 0
+      },
+      "mode": "closed",
+      "hearing_range_m": 6.0,
+      "sunlight_w_m2": 3.628889612766524,
+      "scripted": false,
+      "next_script_tick": "0",
+      "bodies_enabled": true,
+      "initial_mass_ug": {
+        "food": 8000000000,
+        "fuel_X": 0,
+        "inert_material": 32000000000,
+        "oxygen": 0,
+        "product_P": 0,
+        "stone": 4000000000,
+        "tree": 18000000000,
+        "water": 16000000000
+      },
+      "boundary_sources_ug": {
+        "food": 0,
+        "fuel_X": 0,
+        "inert_material": 0,
+        "oxygen": 0,
+        "product_P": 0,
+        "stone": 0,
+        "tree": 0,
+        "water": 0
+      }
+    },
+    "climate": {
+      "version": 1,
+      "enabled": true,
+      "tick": "6000",
+      "source": "native_authored_climate_v1",
+      "exposure": {
+        "agent-1": {
+          "wetness": 0.09991729573748517,
+          "cold_burden": 0.032995825786504174,
+          "environmental_fatigue_added": 0.02619961887442834,
+          "environmental_health_lost": 0.0,
+          "shelter_id": "crafted-15"
+        },
+        "agent-2": {
+          "wetness": 0.21278278617729388,
+          "cold_burden": 0.03476927184907989,
+          "environmental_fatigue_added": 0.02598495594893971,
+          "environmental_health_lost": 0.0,
+          "shelter_id": "crafted-15"
+        },
+        "agent-3": {
+          "wetness": 0.20250927905597568,
+          "cold_burden": 0.034607845086283326,
+          "environmental_fatigue_added": 0.02714838920493544,
+          "environmental_health_lost": 0.0,
+          "shelter_id": "crafted-15"
+        },
+        "agent-4": {
+          "wetness": 0.47713746189491973,
+          "cold_burden": 0.0566000571992128,
+          "environmental_fatigue_added": 0.028510536458497254,
+          "environmental_health_lost": 0.0,
+          "shelter_id": ""
+        }
+      },
+      "shelters": [
+        {
+          "entity_id": "crafted-15",
+          "position_m": [
+            4.0,
+            4.0
+          ],
+          "coverage_radius_m": 1.1,
+          "capacity": 4,
+          "condition": 0.9723799999998191,
+          "work_s": 12.0,
+          "complete": true,
+          "composition_ug": {
+            "fiber": 100000000,
+            "wood": 800000000
+          },
+          "mass_ug": "900000000",
+          "entrance": "open perimeter; no solid walls",
+          "roof_height_m": 2.0
+        }
+      ],
+      "year_s": 2400.0,
+      "day_s": 86400,
+      "season": "autumn",
+      "year_index": "0",
+      "phase_progress": 0.5,
+      "weather": "rain",
+      "ambient_c": 8.925888923006482,
+      "daylight_factor": 0.65,
+      "growth_factor": 0.19999999999999998,
+      "current": {
+        "offset_c": 3.4258889230064815,
+        "cloud_fraction": 0.7495082546874965,
+        "rain_mm_h": 5.747591426378928,
+        "wind_m_s": [
+          -1.7106139366697457,
+          -1.103987347049082
+        ]
+      },
+      "from": {
+        "offset_c": -1.2863613875132014,
+        "cloud_fraction": 0.6995959383837668,
+        "rain_mm_h": 8.418540304796316,
+        "wind_m_s": [
+          -2.3060648278339864,
+          2.6550844850597004
+        ]
+      },
+      "target": {
+        "offset_c": 3.4258889230064815,
+        "cloud_fraction": 0.7495082546874965,
+        "rain_mm_h": 5.747591426378928,
+        "wind_m_s": [
+          -1.7106139366697457,
+          -1.103987347049082
+        ]
+      },
+      "forced": false,
+      "forced_until_s": 0.0,
+      "forcing_history": {},
+      "transition_start_s": 1440.0,
+      "transition_end_s": 1460.0,
+      "next_change_s": 1530.0,
+      "rng": "136509207505719802"
+    },
+    "people": {
+      "agent-1": {
+        "affect": {
+          "arousal": 0.44660964502816236,
+          "control": 0.5,
+          "valence": -0.5419178131033403
+        },
+        "associations": {
+          "dry/chilly/covered": {
+            "confidence": 0.6164684271236893,
+            "evidence": [
+              "f4:mood-life-127:agent-1",
+              "f4:mood-life-128:agent-1",
+              "f4:mood-life-129:agent-1",
+              "f4:mood-life-130:agent-1",
+              "f4:mood-life-131:agent-1",
+              "f4:mood-life-132:agent-1",
+              "f4:mood-life-133:agent-1",
+              "f4:mood-life-134:agent-1"
+            ],
+            "seconds": 57.5,
+            "value": -0.042101545365162835
+          },
+          "dry/chilly/open": {
+            "confidence": 0.21140310901892334,
+            "evidence": [
+              "f4:mood-life-140:agent-1",
+              "f4:mood-life-141:agent-1",
+              "f4:mood-life-142:agent-1",
+              "f4:mood-life-143:agent-1",
+              "f4:mood-life-144:agent-1",
+              "f4:mood-life-145:agent-1",
+              "f4:mood-life-146:agent-1",
+              "f4:mood-life-147:agent-1"
+            ],
+            "seconds": 14.25,
+            "value": -0.057394193474973286
+          },
+          "dry/mild/covered": {
+            "confidence": 0.5525393448865166,
+            "evidence": [
+              "life-367:agent-1",
+              "life-368:agent-1",
+              "life-369:agent-1",
+              "life-370:agent-1",
+              "life-371:agent-1",
+              "life-372:agent-1",
+              "life-373:agent-1",
+              "life-374:agent-1"
+            ],
+            "seconds": 48.25,
+            "value": 0.2399336886376236
+          },
+          "dry/mild/open": {
+            "confidence": 0.9999949485404334,
+            "evidence": [
+              "life-537:agent-1",
+              "life-538:agent-1",
+              "life-539:agent-1",
+              "life-540:agent-1",
+              "life-541:agent-1",
+              "life-542:agent-1",
+              "life-543:agent-1",
+              "life-544:agent-1"
+            ],
+            "seconds": 731.75,
+            "value": 0.29999999999234483
+          },
+          "rain/chilly/covered": {
+            "confidence": 0.6558462131345877,
+            "evidence": [
+              "f4:mood-life-258:agent-1",
+              "f4:mood-life-259:agent-1",
+              "f4:mood-life-260:agent-1",
+              "f4:mood-life-261:agent-1",
+              "f4:mood-life-262:agent-1",
+              "f4:mood-life-263:agent-1",
+              "f4:mood-life-264:agent-1",
+              "f4:mood-life-265:agent-1"
+            ],
+            "seconds": 64.0,
+            "value": -0.05330446581013119
+          },
+          "rain/chilly/open": {
+            "confidence": 0.6471339185411511,
+            "evidence": [
+              "f4:mood-life-218:agent-1",
+              "f4:mood-life-219:agent-1",
+              "f4:mood-life-220:agent-1",
+              "f4:mood-life-221:agent-1",
+              "f4:mood-life-222:agent-1",
+              "f4:mood-life-223:agent-1",
+              "f4:mood-life-224:agent-1",
+              "f4:mood-life-225:agent-1"
+            ],
+            "seconds": 62.5,
+            "value": -0.0795659923414863
+          },
+          "rain/mild/covered": {
+            "confidence": 0.9662069459807254,
+            "evidence": [
+              "f4:mood-life-242:agent-1",
+              "f4:mood-life-243:agent-1",
+              "f4:mood-life-244:agent-1",
+              "f4:mood-life-245:agent-1",
+              "f4:mood-life-246:agent-1",
+              "f4:mood-life-247:agent-1",
+              "f4:mood-life-248:agent-1",
+              "f4:mood-life-249:agent-1"
+            ],
+            "seconds": 203.25,
+            "value": 0.17151940656898873
+          },
+          "rain/mild/open": {
+            "confidence": 0.9538103716183199,
+            "evidence": [
+              "f4:mood-life-12:agent-1",
+              "f4:mood-life-13:agent-1",
+              "f4:mood-life-14:agent-1",
+              "f4:mood-life-15:agent-1",
+              "f4:mood-life-16:agent-1",
+              "f4:mood-life-17:agent-1",
+              "f4:mood-life-18:agent-1",
+              "f4:mood-life-226:agent-1"
+            ],
+            "seconds": 184.5,
+            "value": 0.2993599554689888
+          }
+        },
+        "body": {
+          "exhaustion": 0.005718008385988591,
+          "hunger": 0.5499999999998351,
+          "injury": 0.0,
+          "thermal": 0.032995825786504174,
+          "thirst": 0.5500000000000858,
+          "wetness": 0.09991729573748517
+        },
+        "caution_blocked_until": 0,
+        "caution_failures": 0,
+        "episodes": [
+          {
+            "cause": "f4:mood-life-250:agent-1",
+            "confidence": 1.0,
+            "harm": 0.07008303756369609,
+            "intensity": 0.027103985674184084,
+            "onset": 5924,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-251:agent-1",
+            "confidence": 1.0,
+            "harm": 0.06991157879139796,
+            "intensity": 0.028423926801146755,
+            "onset": 5928,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-252:agent-1",
+            "confidence": 1.0,
+            "harm": 0.06973839710453708,
+            "intensity": 0.029807232252649002,
+            "onset": 5932,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-253:agent-1",
+            "confidence": 1.0,
+            "harm": 0.0695635015263175,
+            "intensity": 0.031256896081187015,
+            "onset": 5936,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-254:agent-1",
+            "confidence": 1.0,
+            "harm": 0.06938690107929248,
+            "intensity": 0.032776051268207186,
+            "onset": 5940,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-255:agent-1",
+            "confidence": 1.0,
+            "harm": 0.0692086047853364,
+            "intensity": 0.034367976032305875,
+            "onset": 5944,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-256:agent-1",
+            "confidence": 1.0,
+            "harm": 0.06902862166582463,
+            "intensity": 0.03603610041627772,
+            "onset": 5948,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-257:agent-1",
+            "confidence": 1.0,
+            "harm": 0.06884696074138229,
+            "intensity": 0.03778401316457922,
+            "onset": 5952,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-258:agent-1",
+            "confidence": 1.0,
+            "harm": 0.06866363103214326,
+            "intensity": 0.039615468904030754,
+            "onset": 5956,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-259:agent-1",
+            "confidence": 1.0,
+            "harm": 0.06847864155757645,
+            "intensity": 0.04153439564014181,
+            "onset": 5960,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-260:agent-1",
+            "confidence": 1.0,
+            "harm": 0.0682920013364855,
+            "intensity": 0.04354490258273492,
+            "onset": 5964,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-261:agent-1",
+            "confidence": 1.0,
+            "harm": 0.06808003091837596,
+            "intensity": 0.046209432245734504,
+            "onset": 5969,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-262:agent-1",
+            "confidence": 1.0,
+            "harm": 0.06786607200784996,
+            "intensity": 0.048425969696775026,
+            "onset": 5973,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-263:agent-1",
+            "confidence": 1.0,
+            "harm": 0.06767412913967139,
+            "intensity": 0.050764838892049156,
+            "onset": 5977,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-264:agent-1",
+            "confidence": 1.0,
+            "harm": 0.06748057384827992,
+            "intensity": 0.053214970738372495,
+            "onset": 5981,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-265:agent-1",
+            "confidence": 1.0,
+            "harm": 0.06691378501144012,
+            "intensity": 0.06691378501144012,
+            "onset": 6000,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          }
+        ],
+        "initial_bias": "zero cue values; authored bodily drives, no feared species",
+        "last": {
+          "after": {
+            "arousal": 0.44660964502816236,
+            "control": 0.5,
+            "valence": -0.5419178131033403
+          },
+          "appraisal": {
+            "benefit": 0.0,
+            "classification": "observed_outcome",
+            "controllability": 0.5,
+            "dt_s": 4.75,
+            "goal": null,
+            "harm": 0.06691378501144012,
+            "outcome": -0.06691378501144012,
+            "predictability": 0.6274932051049871,
+            "prediction": {
+              "confidence": 0.6274932051049871,
+              "memories": [
+                "f4:mood-life-261:agent-1",
+                "f4:mood-life-262:agent-1",
+                "f4:mood-life-263:agent-1",
+                "f4:mood-life-264:agent-1"
+              ],
+              "value": -0.05096969661943473
+            },
+            "relevance": 0.0,
+            "relief": 0.0,
+            "responsibility": "unknown; intention not inferred",
+            "rule": "alice-mood-f4-1",
+            "surprise": 0.007972044196002694
+          },
+          "before": {
+            "arousal": 0.4424914967866913,
+            "control": 0.5,
+            "valence": -0.5370037287233855
+          },
+          "event": "f4:mood-life-265:agent-1",
+          "learning": {
+            "after": -0.05330446581013119,
+            "before": -0.05096969661943473,
+            "cue": "rain/chilly/covered",
+            "rule": "time-weighted delta, tau30s; native injury/cold CHANGE, safety condition",
+            "target": -0.06691378501144012
+          },
+          "memories": [
+            "f4:mood-life-261:agent-1",
+            "f4:mood-life-262:agent-1",
+            "f4:mood-life-263:agent-1",
+            "f4:mood-life-264:agent-1"
+          ],
+          "mood_after": {
+            "source": "slow_body_derived_stress",
+            "valence": -0.4155378129971035
+          },
+          "mood_before": -0.41709930338296997,
+          "observation_refs": [
+            "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:5981",
+            "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:6000"
+          ],
+          "stress_after": 0.4155378129971035,
+          "stress_before": 0.41709930338296997,
+          "temperament": {
+            "baseline": 0.0,
+            "recovery_s": 180.0,
+            "rise_s": 120.0,
+            "sensitivity": 1.0
+          },
+          "temperament_origin": {
+            "inherited_rule": "alice-affect-1",
+            "inherited_updates": 553,
+            "kind": "authored_initial_parameters_on_inherited_person",
+            "learned": false
+          }
+        },
+        "mode": "learned",
+        "mood": {
+          "source": "slow_body_derived_stress",
+          "valence": -0.4155378129971035
+        },
+        "mood_connected": true,
+        "owner": "agent-1",
+        "recent": [
+          "f4:mood-life-202:agent-1",
+          "f4:mood-life-203:agent-1",
+          "f4:mood-life-204:agent-1",
+          "f4:mood-life-205:agent-1",
+          "f4:mood-life-206:agent-1",
+          "f4:mood-life-207:agent-1",
+          "f4:mood-life-208:agent-1",
+          "f4:mood-life-209:agent-1",
+          "f4:mood-life-210:agent-1",
+          "f4:mood-life-211:agent-1",
+          "f4:mood-life-212:agent-1",
+          "f4:mood-life-213:agent-1",
+          "f4:mood-life-214:agent-1",
+          "f4:mood-life-215:agent-1",
+          "f4:mood-life-216:agent-1",
+          "f4:mood-life-217:agent-1",
+          "f4:mood-life-218:agent-1",
+          "f4:mood-life-219:agent-1",
+          "f4:mood-life-220:agent-1",
+          "f4:mood-life-221:agent-1",
+          "f4:mood-life-222:agent-1",
+          "f4:mood-life-223:agent-1",
+          "f4:mood-life-224:agent-1",
+          "f4:mood-life-225:agent-1",
+          "f4:mood-life-226:agent-1",
+          "f4:mood-life-227:agent-1",
+          "f4:mood-life-228:agent-1",
+          "f4:mood-life-229:agent-1",
+          "f4:mood-life-230:agent-1",
+          "f4:mood-life-231:agent-1",
+          "f4:mood-life-232:agent-1",
+          "f4:mood-life-233:agent-1",
+          "f4:mood-life-234:agent-1",
+          "f4:mood-life-235:agent-1",
+          "f4:mood-life-236:agent-1",
+          "f4:mood-life-237:agent-1",
+          "f4:mood-life-238:agent-1",
+          "f4:mood-life-239:agent-1",
+          "f4:mood-life-240:agent-1",
+          "f4:mood-life-241:agent-1",
+          "f4:mood-life-242:agent-1",
+          "f4:mood-life-243:agent-1",
+          "f4:mood-life-244:agent-1",
+          "f4:mood-life-245:agent-1",
+          "f4:mood-life-246:agent-1",
+          "f4:mood-life-247:agent-1",
+          "f4:mood-life-248:agent-1",
+          "f4:mood-life-249:agent-1",
+          "f4:mood-life-250:agent-1",
+          "f4:mood-life-251:agent-1",
+          "f4:mood-life-252:agent-1",
+          "f4:mood-life-253:agent-1",
+          "f4:mood-life-254:agent-1",
+          "f4:mood-life-255:agent-1",
+          "f4:mood-life-256:agent-1",
+          "f4:mood-life-257:agent-1",
+          "f4:mood-life-258:agent-1",
+          "f4:mood-life-259:agent-1",
+          "f4:mood-life-260:agent-1",
+          "f4:mood-life-261:agent-1",
+          "f4:mood-life-262:agent-1",
+          "f4:mood-life-263:agent-1",
+          "f4:mood-life-264:agent-1",
+          "f4:mood-life-265:agent-1"
+        ],
+        "regulation": {},
+        "relationships": {},
+        "rule": "alice-mood-f4-1",
+        "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+        "schema": 2,
+        "stress": 0.4155378129971035,
+        "temperament": {
+          "baseline": 0.0,
+          "recovery_s": 180.0,
+          "rise_s": 120.0,
+          "sensitivity": 1.0
+        },
+        "temperament_origin": {
+          "inherited_rule": "alice-affect-1",
+          "inherited_updates": 553,
+          "kind": "authored_initial_parameters_on_inherited_person",
+          "learned": false
+        },
+        "tick": 6000,
+        "updates": 819
+      },
+      "agent-2": {
+        "affect": {
+          "arousal": 0.4483665419753499,
+          "control": 0.5,
+          "valence": -0.5429738020359757
+        },
+        "associations": {
+          "dry/chilly/covered": {
+            "confidence": 0.6243760115469973,
+            "evidence": [
+              "f4:mood-life-128:agent-2",
+              "f4:mood-life-129:agent-2",
+              "f4:mood-life-130:agent-2",
+              "f4:mood-life-131:agent-2",
+              "f4:mood-life-132:agent-2",
+              "f4:mood-life-133:agent-2",
+              "f4:mood-life-134:agent-2",
+              "f4:mood-life-135:agent-2"
+            ],
+            "seconds": 58.75,
+            "value": -0.05718269500220107
+          },
+          "dry/chilly/open": {
+            "confidence": 0.19480167598192943,
+            "evidence": [
+              "f4:mood-life-140:agent-2",
+              "f4:mood-life-141:agent-2",
+              "f4:mood-life-142:agent-2",
+              "f4:mood-life-143:agent-2",
+              "f4:mood-life-144:agent-2",
+              "f4:mood-life-145:agent-2",
+              "f4:mood-life-146:agent-2",
+              "f4:mood-life-147:agent-2"
+            ],
+            "seconds": 13.0,
+            "value": -0.046723287999716756
+          },
+          "dry/mild/covered": {
+            "confidence": 0.6486011350567803,
+            "evidence": [
+              "life-372:agent-2",
+              "life-373:agent-2",
+              "life-374:agent-2",
+              "life-375:agent-2",
+              "life-376:agent-2",
+              "life-377:agent-2",
+              "life-378:agent-2",
+              "life-379:agent-2"
+            ],
+            "seconds": 62.75,
+            "value": 0.26295565131498505
+          },
+          "dry/mild/open": {
+            "confidence": 0.9999935676246212,
+            "evidence": [
+              "life-537:agent-2",
+              "life-538:agent-2",
+              "life-539:agent-2",
+              "life-540:agent-2",
+              "life-541:agent-2",
+              "life-542:agent-2",
+              "life-543:agent-2",
+              "life-544:agent-2"
+            ],
+            "seconds": 717.25,
+            "value": 0.2999999999875873
+          },
+          "rain/chilly/covered": {
+            "confidence": 0.6471339185411511,
+            "evidence": [
+              "f4:mood-life-258:agent-2",
+              "f4:mood-life-259:agent-2",
+              "f4:mood-life-260:agent-2",
+              "f4:mood-life-261:agent-2",
+              "f4:mood-life-262:agent-2",
+              "f4:mood-life-263:agent-2",
+              "f4:mood-life-264:agent-2",
+              "f4:mood-life-265:agent-2"
+            ],
+            "seconds": 62.5,
+            "value": -0.041946637280281356
+          },
+          "rain/chilly/open": {
+            "confidence": 0.6558462131345877,
+            "evidence": [
+              "f4:mood-life-178:agent-2",
+              "f4:mood-life-179:agent-2",
+              "f4:mood-life-220:agent-2",
+              "f4:mood-life-221:agent-2",
+              "f4:mood-life-222:agent-2",
+              "f4:mood-life-223:agent-2",
+              "f4:mood-life-224:agent-2",
+              "f4:mood-life-225:agent-2"
+            ],
+            "seconds": 64.0,
+            "value": -0.03541773616680051
+          },
+          "rain/mild/covered": {
+            "confidence": 0.9465584457772258,
+            "evidence": [
+              "f4:mood-life-242:agent-2",
+              "f4:mood-life-243:agent-2",
+              "f4:mood-life-244:agent-2",
+              "f4:mood-life-245:agent-2",
+              "f4:mood-life-246:agent-2",
+              "f4:mood-life-247:agent-2",
+              "f4:mood-life-248:agent-2",
+              "f4:mood-life-249:agent-2"
+            ],
+            "seconds": 175.75,
+            "value": 0.14237273403786888
+          },
+          "rain/mild/open": {
+            "confidence": 0.9707926045615052,
+            "evidence": [
+              "f4:mood-life-232:agent-2",
+              "f4:mood-life-233:agent-2",
+              "f4:mood-life-234:agent-2",
+              "f4:mood-life-235:agent-2",
+              "f4:mood-life-236:agent-2",
+              "f4:mood-life-237:agent-2",
+              "f4:mood-life-238:agent-2",
+              "f4:mood-life-239:agent-2"
+            ],
+            "seconds": 212.0,
+            "value": 0.2624492504929178
+          }
+        },
+        "body": {
+          "exhaustion": 0.004890997355162441,
+          "hunger": 0.5499999999998351,
+          "injury": 0.0,
+          "thermal": 0.03476927184907989,
+          "thirst": 0.5500000000000858,
+          "wetness": 0.21278278617729388
+        },
+        "caution_blocked_until": 0,
+        "caution_failures": 0,
+        "episodes": [
+          {
+            "cause": "f4:mood-life-250:agent-2",
+            "confidence": 1.0,
+            "harm": 0.07385078444147071,
+            "intensity": 0.028561127957812144,
+            "onset": 5924,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-251:agent-2",
+            "confidence": 1.0,
+            "harm": 0.07368099145928693,
+            "intensity": 0.029956455626952275,
+            "onset": 5928,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-252:agent-2",
+            "confidence": 1.0,
+            "harm": 0.07350939153628974,
+            "intensity": 0.031419011581075594,
+            "onset": 5932,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-253:agent-2",
+            "confidence": 1.0,
+            "harm": 0.0733359936926301,
+            "intensity": 0.03295198607841659,
+            "onset": 5936,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-254:agent-2",
+            "confidence": 1.0,
+            "harm": 0.07316080694780407,
+            "intensity": 0.03455871817368509,
+            "onset": 5940,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-255:agent-2",
+            "confidence": 1.0,
+            "harm": 0.07298384032062832,
+            "intensity": 0.03624270251748295,
+            "onset": 5944,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-256:agent-2",
+            "confidence": 1.0,
+            "harm": 0.07280510282942568,
+            "intensity": 0.03800759645875318,
+            "onset": 5948,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-257:agent-2",
+            "confidence": 1.0,
+            "harm": 0.07262460349175975,
+            "intensity": 0.03985722746299261,
+            "onset": 5952,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-258:agent-2",
+            "confidence": 1.0,
+            "harm": 0.07244235132471162,
+            "intensity": 0.041795600860308965,
+            "onset": 5956,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-259:agent-2",
+            "confidence": 1.0,
+            "harm": 0.07225835534469648,
+            "intensity": 0.04382690793696865,
+            "onset": 5960,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-260:agent-2",
+            "confidence": 1.0,
+            "harm": 0.07207262456745532,
+            "intensity": 0.04595553438547654,
+            "onset": 5964,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-261:agent-2",
+            "confidence": 1.0,
+            "harm": 0.07186157483293187,
+            "intensity": 0.048776161357732814,
+            "onset": 5969,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-262:agent-2",
+            "confidence": 1.0,
+            "harm": 0.07164843416128819,
+            "intensity": 0.05112488168041601,
+            "onset": 5973,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-263:agent-2",
+            "confidence": 1.0,
+            "harm": 0.0714571275510833,
+            "intensity": 0.05360260433248576,
+            "onset": 5977,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-264:agent-2",
+            "confidence": 1.0,
+            "harm": 0.07126412445397894,
+            "intensity": 0.05619866698289631,
+            "onset": 5981,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-265:agent-2",
+            "confidence": 1.0,
+            "harm": 0.07069837935042748,
+            "intensity": 0.07069837935042748,
+            "onset": 6000,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          }
+        ],
+        "initial_bias": "zero cue values; authored bodily drives, no feared species",
+        "last": {
+          "after": {
+            "arousal": 0.4483665419753499,
+            "control": 0.5,
+            "valence": -0.5429738020359757
+          },
+          "appraisal": {
+            "benefit": 0.0,
+            "classification": "observed_outcome",
+            "controllability": 0.5,
+            "dt_s": 4.75,
+            "goal": null,
+            "harm": 0.07069837935042748,
+            "outcome": -0.07069837935042748,
+            "predictability": 0.6180631506960511,
+            "prediction": {
+              "confidence": 0.6180631506960511,
+              "memories": [
+                "f4:mood-life-261:agent-2",
+                "f4:mood-life-262:agent-2",
+                "f4:mood-life-263:agent-2",
+                "f4:mood-life-264:agent-2"
+              ],
+              "value": -0.03701408477186697
+            },
+            "relevance": 0.0,
+            "relief": 0.0,
+            "responsibility": "unknown; intention not inferred",
+            "rule": "alice-mood-f4-1",
+            "surprise": 0.016842147289280258
+          },
+          "before": {
+            "arousal": 0.44485639460332255,
+            "control": 0.5,
+            "valence": -0.5387017739194511
+          },
+          "event": "f4:mood-life-265:agent-2",
+          "learning": {
+            "after": -0.041946637280281356,
+            "before": -0.03701408477186697,
+            "cue": "rain/chilly/covered",
+            "rule": "time-weighted delta, tau30s; native injury/cold CHANGE, safety condition",
+            "target": -0.07069837935042748
+          },
+          "memories": [
+            "f4:mood-life-261:agent-2",
+            "f4:mood-life-262:agent-2",
+            "f4:mood-life-263:agent-2",
+            "f4:mood-life-264:agent-2"
+          ],
+          "mood_after": {
+            "source": "slow_body_derived_stress",
+            "valence": -0.4243162467273863
+          },
+          "mood_before": -0.42611247382419476,
+          "observation_refs": [
+            "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:5981",
+            "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:6000"
+          ],
+          "stress_after": 0.4243162467273863,
+          "stress_before": 0.42611247382419476,
+          "temperament": {
+            "baseline": 0.0,
+            "recovery_s": 180.0,
+            "rise_s": 120.0,
+            "sensitivity": 1.0
+          },
+          "temperament_origin": {
+            "inherited_rule": "alice-affect-1",
+            "inherited_updates": 553,
+            "kind": "authored_initial_parameters_on_inherited_person",
+            "learned": false
+          }
+        },
+        "mode": "learned",
+        "mood": {
+          "source": "slow_body_derived_stress",
+          "valence": -0.4243162467273863
+        },
+        "mood_connected": true,
+        "owner": "agent-2",
+        "recent": [
+          "f4:mood-life-202:agent-2",
+          "f4:mood-life-203:agent-2",
+          "f4:mood-life-204:agent-2",
+          "f4:mood-life-205:agent-2",
+          "f4:mood-life-206:agent-2",
+          "f4:mood-life-207:agent-2",
+          "f4:mood-life-208:agent-2",
+          "f4:mood-life-209:agent-2",
+          "f4:mood-life-210:agent-2",
+          "f4:mood-life-211:agent-2",
+          "f4:mood-life-212:agent-2",
+          "f4:mood-life-213:agent-2",
+          "f4:mood-life-214:agent-2",
+          "f4:mood-life-215:agent-2",
+          "f4:mood-life-216:agent-2",
+          "f4:mood-life-217:agent-2",
+          "f4:mood-life-218:agent-2",
+          "f4:mood-life-219:agent-2",
+          "f4:mood-life-220:agent-2",
+          "f4:mood-life-221:agent-2",
+          "f4:mood-life-222:agent-2",
+          "f4:mood-life-223:agent-2",
+          "f4:mood-life-224:agent-2",
+          "f4:mood-life-225:agent-2",
+          "f4:mood-life-226:agent-2",
+          "f4:mood-life-227:agent-2",
+          "f4:mood-life-228:agent-2",
+          "f4:mood-life-229:agent-2",
+          "f4:mood-life-230:agent-2",
+          "f4:mood-life-231:agent-2",
+          "f4:mood-life-232:agent-2",
+          "f4:mood-life-233:agent-2",
+          "f4:mood-life-234:agent-2",
+          "f4:mood-life-235:agent-2",
+          "f4:mood-life-236:agent-2",
+          "f4:mood-life-237:agent-2",
+          "f4:mood-life-238:agent-2",
+          "f4:mood-life-239:agent-2",
+          "f4:mood-life-240:agent-2",
+          "f4:mood-life-241:agent-2",
+          "f4:mood-life-242:agent-2",
+          "f4:mood-life-243:agent-2",
+          "f4:mood-life-244:agent-2",
+          "f4:mood-life-245:agent-2",
+          "f4:mood-life-246:agent-2",
+          "f4:mood-life-247:agent-2",
+          "f4:mood-life-248:agent-2",
+          "f4:mood-life-249:agent-2",
+          "f4:mood-life-250:agent-2",
+          "f4:mood-life-251:agent-2",
+          "f4:mood-life-252:agent-2",
+          "f4:mood-life-253:agent-2",
+          "f4:mood-life-254:agent-2",
+          "f4:mood-life-255:agent-2",
+          "f4:mood-life-256:agent-2",
+          "f4:mood-life-257:agent-2",
+          "f4:mood-life-258:agent-2",
+          "f4:mood-life-259:agent-2",
+          "f4:mood-life-260:agent-2",
+          "f4:mood-life-261:agent-2",
+          "f4:mood-life-262:agent-2",
+          "f4:mood-life-263:agent-2",
+          "f4:mood-life-264:agent-2",
+          "f4:mood-life-265:agent-2"
+        ],
+        "regulation": {},
+        "relationships": {},
+        "rule": "alice-mood-f4-1",
+        "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+        "schema": 2,
+        "stress": 0.4243162467273863,
+        "temperament": {
+          "baseline": 0.0,
+          "recovery_s": 180.0,
+          "rise_s": 120.0,
+          "sensitivity": 1.0
+        },
+        "temperament_origin": {
+          "inherited_rule": "alice-affect-1",
+          "inherited_updates": 553,
+          "kind": "authored_initial_parameters_on_inherited_person",
+          "learned": false
+        },
+        "tick": 6000,
+        "updates": 819
+      },
+      "agent-3": {
+        "affect": {
+          "arousal": 0.4477967313853757,
+          "control": 0.5,
+          "valence": -0.5428215565057347
+        },
+        "associations": {
+          "dry/chilly/covered": {
+            "confidence": 0.6067592791314018,
+            "evidence": [
+              "f4:mood-life-125:agent-3",
+              "f4:mood-life-126:agent-3",
+              "f4:mood-life-127:agent-3",
+              "f4:mood-life-128:agent-3",
+              "f4:mood-life-129:agent-3",
+              "f4:mood-life-130:agent-3",
+              "f4:mood-life-131:agent-3",
+              "f4:mood-life-132:agent-3"
+            ],
+            "seconds": 56.0,
+            "value": -0.04955705030517489
+          },
+          "dry/chilly/open": {
+            "confidence": 0.23087363563142949,
+            "evidence": [
+              "f4:mood-life-140:agent-3",
+              "f4:mood-life-141:agent-3",
+              "f4:mood-life-142:agent-3",
+              "f4:mood-life-143:agent-3",
+              "f4:mood-life-144:agent-3",
+              "f4:mood-life-145:agent-3",
+              "f4:mood-life-146:agent-3",
+              "f4:mood-life-147:agent-3"
+            ],
+            "seconds": 15.75,
+            "value": -0.052247726146372145
+          },
+          "dry/mild/covered": {
+            "confidence": 0.9228882800316833,
+            "evidence": [
+              "life-381:agent-3",
+              "life-382:agent-3",
+              "life-383:agent-3",
+              "life-384:agent-3",
+              "life-385:agent-3",
+              "life-386:agent-3",
+              "life-387:agent-3",
+              "life-388:agent-3"
+            ],
+            "seconds": 153.75,
+            "value": 0.2982161347930583
+          },
+          "dry/mild/open": {
+            "confidence": 0.9999706876022489,
+            "evidence": [
+              "life-537:agent-3",
+              "life-538:agent-3",
+              "life-539:agent-3",
+              "life-540:agent-3",
+              "life-541:agent-3",
+              "life-542:agent-3",
+              "life-543:agent-3",
+              "life-544:agent-3"
+            ],
+            "seconds": 626.25,
+            "value": 0.29999999974223496
+          },
+          "rain/chilly/covered": {
+            "confidence": 0.6351734826550133,
+            "evidence": [
+              "f4:mood-life-258:agent-3",
+              "f4:mood-life-259:agent-3",
+              "f4:mood-life-260:agent-3",
+              "f4:mood-life-261:agent-3",
+              "f4:mood-life-262:agent-3",
+              "f4:mood-life-263:agent-3",
+              "f4:mood-life-264:agent-3",
+              "f4:mood-life-265:agent-3"
+            ],
+            "seconds": 60.5,
+            "value": -0.06140639194547359
+          },
+          "rain/chilly/open": {
+            "confidence": 0.6671289163019205,
+            "evidence": [
+              "f4:mood-life-218:agent-3",
+              "f4:mood-life-219:agent-3",
+              "f4:mood-life-220:agent-3",
+              "f4:mood-life-221:agent-3",
+              "f4:mood-life-222:agent-3",
+              "f4:mood-life-223:agent-3",
+              "f4:mood-life-224:agent-3",
+              "f4:mood-life-225:agent-3"
+            ],
+            "seconds": 66.0,
+            "value": -0.1339186907921533
+          },
+          "rain/mild/covered": {
+            "confidence": 0.9349977460369655,
+            "evidence": [
+              "f4:mood-life-242:agent-3",
+              "f4:mood-life-243:agent-3",
+              "f4:mood-life-244:agent-3",
+              "f4:mood-life-245:agent-3",
+              "f4:mood-life-246:agent-3",
+              "f4:mood-life-247:agent-3",
+              "f4:mood-life-248:agent-3",
+              "f4:mood-life-249:agent-3"
+            ],
+            "seconds": 164.0,
+            "value": 0.17691014080764914
+          },
+          "rain/mild/open": {
+            "confidence": 0.9759871618002666,
+            "evidence": [
+              "f4:mood-life-229:agent-3",
+              "f4:mood-life-230:agent-3",
+              "f4:mood-life-231:agent-3",
+              "f4:mood-life-232:agent-3",
+              "f4:mood-life-233:agent-3",
+              "f4:mood-life-234:agent-3",
+              "f4:mood-life-235:agent-3",
+              "f4:mood-life-236:agent-3"
+            ],
+            "seconds": 223.75,
+            "value": 0.29982701508047804
+          }
+        },
+        "body": {
+          "exhaustion": 0.004044552545603487,
+          "hunger": 0.5499999999998351,
+          "injury": 0.0,
+          "thermal": 0.034607845086283326,
+          "thirst": 0.5500000000000858,
+          "wetness": 0.20250927905597568
+        },
+        "caution_blocked_until": 0,
+        "caution_failures": 0,
+        "episodes": [
+          {
+            "cause": "f4:mood-life-250:agent-3",
+            "confidence": 1.0,
+            "harm": 0.07350782775710837,
+            "intensity": 0.02842849253870129,
+            "onset": 5924,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-251:agent-3",
+            "confidence": 1.0,
+            "harm": 0.07333788314747441,
+            "intensity": 0.029816958197364497,
+            "onset": 5928,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-252:agent-3",
+            "confidence": 1.0,
+            "harm": 0.07316613924546016,
+            "intensity": 0.03127230042654942,
+            "onset": 5932,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-253:agent-3",
+            "confidence": 1.0,
+            "harm": 0.07299260507149583,
+            "intensity": 0.03279769162499268,
+            "onset": 5936,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-254:agent-3",
+            "confidence": 1.0,
+            "harm": 0.0728172896453565,
+            "intensity": 0.03439645208972104,
+            "onset": 5940,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-255:agent-3",
+            "confidence": 1.0,
+            "harm": 0.07264020198613555,
+            "intensity": 0.036072056770754465,
+            "onset": 5944,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-256:agent-3",
+            "confidence": 1.0,
+            "harm": 0.07246135111243333,
+            "intensity": 0.03782814232664298,
+            "onset": 5948,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-257:agent-3",
+            "confidence": 1.0,
+            "harm": 0.07228074604209508,
+            "intensity": 0.03966851449345903,
+            "onset": 5952,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-258:agent-3",
+            "confidence": 1.0,
+            "harm": 0.07209839579247738,
+            "intensity": 0.0415971557812071,
+            "onset": 5956,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-259:agent-3",
+            "confidence": 1.0,
+            "harm": 0.07191430938027216,
+            "intensity": 0.0436182335111949,
+            "onset": 5960,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-260:agent-3",
+            "confidence": 1.0,
+            "harm": 0.07172849582150256,
+            "intensity": 0.04573610820927477,
+            "onset": 5964,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-261:agent-3",
+            "confidence": 1.0,
+            "harm": 0.07151736228236094,
+            "intensity": 0.048542526526502955,
+            "onset": 5969,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-262:agent-3",
+            "confidence": 1.0,
+            "harm": 0.07130414713106056,
+            "intensity": 0.05087921499013126,
+            "onset": 5973,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-263:agent-3",
+            "confidence": 1.0,
+            "harm": 0.07111278260589117,
+            "intensity": 0.053344298597514404,
+            "onset": 5977,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-264:agent-3",
+            "confidence": 1.0,
+            "harm": 0.07091972924566416,
+            "intensity": 0.05592707799235049,
+            "onset": 5981,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f4:mood-life-265:agent-3",
+            "confidence": 1.0,
+            "harm": 0.07035388913697636,
+            "intensity": 0.07035388913697636,
+            "onset": 6000,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          }
+        ],
+        "initial_bias": "zero cue values; authored bodily drives, no feared species",
+        "last": {
+          "after": {
+            "arousal": 0.4477967313853757,
+            "control": 0.5,
+            "valence": -0.5428215565057347
+          },
+          "appraisal": {
+            "benefit": 0.0,
+            "classification": "observed_outcome",
+            "controllability": 0.5,
+            "dt_s": 4.75,
+            "goal": null,
+            "harm": 0.07035388913697636,
+            "outcome": -0.07035388913697636,
+            "predictability": 0.6051173578338769,
+            "prediction": {
+              "confidence": 0.6051173578338769,
+              "memories": [
+                "f4:mood-life-261:agent-3",
+                "f4:mood-life-262:agent-3",
+                "f4:mood-life-263:agent-3",
+                "f4:mood-life-264:agent-3"
+              ],
+              "value": -0.05987138931473549
+            },
+            "relevance": 0.0,
+            "relief": 0.0,
+            "responsibility": "unknown; intention not inferred",
+            "rule": "alice-mood-f4-1",
+            "surprise": 0.005241249911120436
+          },
+          "before": {
+            "arousal": 0.44398202207290083,
+            "control": 0.5,
+            "valence": -0.5384569609453198
+          },
+          "event": "f4:mood-life-265:agent-3",
+          "learning": {
+            "after": -0.06140639194547359,
+            "before": -0.05987138931473549,
+            "cue": "rain/chilly/covered",
+            "rule": "time-weighted delta, tau30s; native injury/cold CHANGE, safety condition",
+            "target": -0.07035388913697636
+          },
+          "memories": [
+            "f4:mood-life-261:agent-3",
+            "f4:mood-life-262:agent-3",
+            "f4:mood-life-263:agent-3",
+            "f4:mood-life-264:agent-3"
+          ],
+          "mood_after": {
+            "source": "slow_body_derived_stress",
+            "valence": -0.4237904840199733
+          },
+          "mood_before": -0.4255726521385556,
+          "observation_refs": [
+            "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:5981",
+            "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:6000"
+          ],
+          "stress_after": 0.4237904840199733,
+          "stress_before": 0.4255726521385556,
+          "temperament": {
+            "baseline": 0.0,
+            "recovery_s": 180.0,
+            "rise_s": 120.0,
+            "sensitivity": 1.0
+          },
+          "temperament_origin": {
+            "inherited_rule": "alice-affect-1",
+            "inherited_updates": 553,
+            "kind": "authored_initial_parameters_on_inherited_person",
+            "learned": false
+          }
+        },
+        "mode": "learned",
+        "mood": {
+          "source": "slow_body_derived_stress",
+          "valence": -0.4237904840199733
+        },
+        "mood_connected": true,
+        "owner": "agent-3",
+        "recent": [
+          "f4:mood-life-202:agent-3",
+          "f4:mood-life-203:agent-3",
+          "f4:mood-life-204:agent-3",
+          "f4:mood-life-205:agent-3",
+          "f4:mood-life-206:agent-3",
+          "f4:mood-life-207:agent-3",
+          "f4:mood-life-208:agent-3",
+          "f4:mood-life-209:agent-3",
+          "f4:mood-life-210:agent-3",
+          "f4:mood-life-211:agent-3",
+          "f4:mood-life-212:agent-3",
+          "f4:mood-life-213:agent-3",
+          "f4:mood-life-214:agent-3",
+          "f4:mood-life-215:agent-3",
+          "f4:mood-life-216:agent-3",
+          "f4:mood-life-217:agent-3",
+          "f4:mood-life-218:agent-3",
+          "f4:mood-life-219:agent-3",
+          "f4:mood-life-220:agent-3",
+          "f4:mood-life-221:agent-3",
+          "f4:mood-life-222:agent-3",
+          "f4:mood-life-223:agent-3",
+          "f4:mood-life-224:agent-3",
+          "f4:mood-life-225:agent-3",
+          "f4:mood-life-226:agent-3",
+          "f4:mood-life-227:agent-3",
+          "f4:mood-life-228:agent-3",
+          "f4:mood-life-229:agent-3",
+          "f4:mood-life-230:agent-3",
+          "f4:mood-life-231:agent-3",
+          "f4:mood-life-232:agent-3",
+          "f4:mood-life-233:agent-3",
+          "f4:mood-life-234:agent-3",
+          "f4:mood-life-235:agent-3",
+          "f4:mood-life-236:agent-3",
+          "f4:mood-life-237:agent-3",
+          "f4:mood-life-238:agent-3",
+          "f4:mood-life-239:agent-3",
+          "f4:mood-life-240:agent-3",
+          "f4:mood-life-241:agent-3",
+          "f4:mood-life-242:agent-3",
+          "f4:mood-life-243:agent-3",
+          "f4:mood-life-244:agent-3",
+          "f4:mood-life-245:agent-3",
+          "f4:mood-life-246:agent-3",
+          "f4:mood-life-247:agent-3",
+          "f4:mood-life-248:agent-3",
+          "f4:mood-life-249:agent-3",
+          "f4:mood-life-250:agent-3",
+          "f4:mood-life-251:agent-3",
+          "f4:mood-life-252:agent-3",
+          "f4:mood-life-253:agent-3",
+          "f4:mood-life-254:agent-3",
+          "f4:mood-life-255:agent-3",
+          "f4:mood-life-256:agent-3",
+          "f4:mood-life-257:agent-3",
+          "f4:mood-life-258:agent-3",
+          "f4:mood-life-259:agent-3",
+          "f4:mood-life-260:agent-3",
+          "f4:mood-life-261:agent-3",
+          "f4:mood-life-262:agent-3",
+          "f4:mood-life-263:agent-3",
+          "f4:mood-life-264:agent-3",
+          "f4:mood-life-265:agent-3"
+        ],
+        "regulation": {},
+        "relationships": {},
+        "rule": "alice-mood-f4-1",
+        "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+        "schema": 2,
+        "stress": 0.4237904840199733,
+        "temperament": {
+          "baseline": 0.0,
+          "recovery_s": 180.0,
+          "rise_s": 120.0,
+          "sensitivity": 1.0
+        },
+        "temperament_origin": {
+          "inherited_rule": "alice-affect-1",
+          "inherited_updates": 553,
+          "kind": "authored_initial_parameters_on_inherited_person",
+          "learned": false
+        },
+        "tick": 6000,
+        "updates": 819
+      },
+      "agent-4": {
+        "affect": {
+          "arousal": 0.4696938658209021,
+          "control": 0.5,
+          "valence": -0.557022209974833
+        },
+        "associations": {
+          "dry/chilly/covered": {
+            "confidence": 0.6132589765454988,
+            "evidence": [
+              "f4:mood-life-126:agent-4",
+              "f4:mood-life-127:agent-4",
+              "f4:mood-life-128:agent-4",
+              "f4:mood-life-129:agent-4",
+              "f4:mood-life-130:agent-4",
+              "f4:mood-life-131:agent-4",
+              "f4:mood-life-132:agent-4",
+              "f4:mood-life-133:agent-4"
+            ],
+            "seconds": 57.0,
+            "value": -0.04721980850832736
+          },
+          "dry/chilly/open": {
+            "confidence": 0.21794744384306752,
+            "evidence": [
+              "f4:mood-life-140:agent-4",
+              "f4:mood-life-141:agent-4",
+              "f4:mood-life-142:agent-4",
+              "f4:mood-life-143:agent-4",
+              "f4:mood-life-144:agent-4",
+              "f4:mood-life-145:agent-4",
+              "f4:mood-life-146:agent-4",
+              "f4:mood-life-147:agent-4"
+            ],
+            "seconds": 14.75,
+            "value": -0.05017710654922067
+          },
+          "dry/mild/covered": {
+            "confidence": 0.7217309052288764,
+            "evidence": [
+              "life-382:agent-4",
+              "life-383:agent-4",
+              "life-384:agent-4",
+              "life-385:agent-4",
+              "life-390:agent-4",
+              "life-391:agent-4",
+              "life-392:agent-4",
+              "life-393:agent-4"
+            ],
+            "seconds": 76.75,
+            "value": 0.2767698932685778
+          },
+          "dry/mild/open": {
+            "confidence": 0.9999918771812988,
+            "evidence": [
+              "life-537:agent-4",
+              "life-538:agent-4",
+              "life-539:agent-4",
+              "life-540:agent-4",
+              "life-541:agent-4",
+              "life-542:agent-4",
+              "life-543:agent-4",
+              "life-544:agent-4"
+            ],
+            "seconds": 703.25,
+            "value": 0.29999999998020593
+          },
+          "rain/chilly/covered": {
+            "confidence": 0.43258633120299617,
+            "evidence": [
+              "f4:mood-life-218:agent-4",
+              "f4:mood-life-219:agent-4",
+              "f4:mood-life-220:agent-4",
+              "f4:mood-life-221:agent-4",
+              "f4:mood-life-222:agent-4",
+              "f4:mood-life-223:agent-4",
+              "f4:mood-life-224:agent-4",
+              "f4:mood-life-225:agent-4"
+            ],
+            "seconds": 34.0,
+            "value": 0.06412360334322403
+          },
+          "rain/chilly/open": {
+            "confidence": 0.7859759028225526,
+            "evidence": [
+              "f4:mood-life-258:agent-4",
+              "f4:mood-life-259:agent-4",
+              "f4:mood-life-260:agent-4",
+              "f4:mood-life-261:agent-4",
+              "f4:mood-life-262:agent-4",
+              "f4:mood-life-263:agent-4",
+              "f4:mood-life-264:agent-4",
+              "f4:mood-life-265:agent-4"
+            ],
+            "seconds": 92.5,
+            "value": -0.1266912349712572
+          },
+          "rain/mild/covered": {
+            "confidence": 0.8901163646236034,
+            "evidence": [
+              "f4:mood-life-71:agent-4",
+              "f4:mood-life-72:agent-4",
+              "f4:mood-life-73:agent-4",
+              "f4:mood-life-74:agent-4",
+              "f4:mood-life-226:agent-4",
+              "f4:mood-life-227:agent-4",
+              "f4:mood-life-228:agent-4",
+              "f4:mood-life-229:agent-4"
+            ],
+            "seconds": 132.5,
+            "value": 0.2323147475554662
+          },
+          "rain/mild/open": {
+            "confidence": 0.9857950767492752,
+            "evidence": [
+              "f4:mood-life-242:agent-4",
+              "f4:mood-life-243:agent-4",
+              "f4:mood-life-244:agent-4",
+              "f4:mood-life-245:agent-4",
+              "f4:mood-life-246:agent-4",
+              "f4:mood-life-247:agent-4",
+              "f4:mood-life-248:agent-4",
+              "f4:mood-life-249:agent-4"
+            ],
+            "seconds": 255.25,
+            "value": 0.14429592783296558
+          }
+        },
+        "body": {
+          "exhaustion": 0.03970446737235233,
+          "hunger": 0.5499999999998351,
+          "injury": 0.0,
+          "thermal": 0.0566000571992128,
+          "thirst": 0.4500000000000858,
+          "wetness": 0.47713746189491973
+        },
+        "caution_blocked_until": 0,
+        "caution_failures": 0,
+        "episodes": [
+          {
+            "cause": "f4:mood-life-250:agent-4",
+            "confidence": 1.0,
+            "harm": 0.12027866850441328,
+            "intensity": 0.04651669535714149,
+            "onset": 5924,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/open"
+          },
+          {
+            "cause": "f4:mood-life-251:agent-4",
+            "confidence": 1.0,
+            "harm": 0.12068397114984707,
+            "intensity": 0.0490664410865376,
+            "onset": 5928,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/open"
+          },
+          {
+            "cause": "f4:mood-life-252:agent-4",
+            "confidence": 1.0,
+            "harm": 0.12108688394747076,
+            "intensity": 0.05175434226229158,
+            "onset": 5932,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/open"
+          },
+          {
+            "cause": "f4:mood-life-253:agent-4",
+            "confidence": 1.0,
+            "harm": 0.12148739102259738,
+            "intensity": 0.054587803561487534,
+            "onset": 5936,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/open"
+          },
+          {
+            "cause": "f4:mood-life-254:agent-4",
+            "confidence": 1.0,
+            "harm": 0.12188547650047836,
+            "intensity": 0.057574622363726936,
+            "onset": 5940,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/open"
+          },
+          {
+            "cause": "f4:mood-life-255:agent-4",
+            "confidence": 1.0,
+            "harm": 0.12228112450625786,
+            "intensity": 0.06072300936089524,
+            "onset": 5944,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/open"
+          },
+          {
+            "cause": "f4:mood-life-256:agent-4",
+            "confidence": 1.0,
+            "harm": 0.12267431916527781,
+            "intensity": 0.06404161023726626,
+            "onset": 5948,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/open"
+          },
+          {
+            "cause": "f4:mood-life-257:agent-4",
+            "confidence": 1.0,
+            "harm": 0.12306504460264713,
+            "intensity": 0.2702897307763078,
+            "onset": 5952,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.4924999999999996,
+            "target": "rain/chilly/open"
+          },
+          {
+            "cause": "f4:mood-life-258:agent-4",
+            "confidence": 1.0,
+            "harm": 0.12345328494368923,
+            "intensity": 0.0712263493391097,
+            "onset": 5956,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/open"
+          },
+          {
+            "cause": "f4:mood-life-259:agent-4",
+            "confidence": 1.0,
+            "harm": 0.12383902431363791,
+            "intensity": 0.07511216511511966,
+            "onset": 5960,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/open"
+          },
+          {
+            "cause": "f4:mood-life-260:agent-4",
+            "confidence": 1.0,
+            "harm": 0.1242222468376466,
+            "intensity": 0.07920760164139228,
+            "onset": 5964,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/open"
+          },
+          {
+            "cause": "f4:mood-life-261:agent-4",
+            "confidence": 1.0,
+            "harm": 0.12465028421470385,
+            "intensity": 0.08460658412063353,
+            "onset": 5969,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/open"
+          },
+          {
+            "cause": "f4:mood-life-262:agent-4",
+            "confidence": 1.0,
+            "harm": 0.12507521307261044,
+            "intensity": 0.08924766527479773,
+            "onset": 5973,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/open"
+          },
+          {
+            "cause": "f4:mood-life-263:agent-4",
+            "confidence": 1.0,
+            "harm": 0.12545014621238337,
+            "intensity": 0.09410474198067495,
+            "onset": 5977,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/open"
+          },
+          {
+            "cause": "f4:mood-life-264:agent-4",
+            "confidence": 1.0,
+            "harm": 0.125822495038546,
+            "intensity": 0.09922322840287932,
+            "onset": 5981,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/open"
+          },
+          {
+            "cause": "f4:mood-life-265:agent-4",
+            "confidence": 1.0,
+            "harm": 0.1268760816730076,
+            "intensity": 0.1268760816730076,
+            "onset": 6000,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/open"
+          }
+        ],
+        "initial_bias": "zero cue values; authored bodily drives, no feared species",
+        "last": {
+          "after": {
+            "arousal": 0.4696938658209021,
+            "control": 0.5,
+            "valence": -0.557022209974833
+          },
+          "appraisal": {
+            "benefit": 0.0,
+            "classification": "observed_outcome",
+            "controllability": 0.5,
+            "dt_s": 4.75,
+            "goal": null,
+            "harm": 0.1268760816730076,
+            "outcome": -0.1268760816730076,
+            "predictability": 0.7683435908231112,
+            "prediction": {
+              "confidence": 0.7683435908231112,
+              "memories": [
+                "f4:mood-life-261:agent-4",
+                "f4:mood-life-262:agent-4",
+                "f4:mood-life-263:agent-4",
+                "f4:mood-life-264:agent-4"
+              ],
+              "value": -0.12665952329061653
+            },
+            "relevance": 0.0,
+            "relief": 0.0,
+            "responsibility": "unknown; intention not inferred",
+            "rule": "alice-mood-f4-1",
+            "surprise": 0.00010827919119553442
+          },
+          "before": {
+            "arousal": 0.47231966602261777,
+            "control": 0.5,
+            "valence": -0.561291813337358
+          },
+          "event": "f4:mood-life-265:agent-4",
+          "learning": {
+            "after": -0.1266912349712572,
+            "before": -0.12665952329061653,
+            "cue": "rain/chilly/open",
+            "rule": "time-weighted delta, tau30s; native injury/cold CHANGE, safety condition",
+            "target": -0.1268760816730076
+          },
+          "memories": [
+            "f4:mood-life-261:agent-4",
+            "f4:mood-life-262:agent-4",
+            "f4:mood-life-263:agent-4",
+            "f4:mood-life-264:agent-4"
+          ],
+          "mood_after": {
+            "source": "slow_body_derived_stress",
+            "valence": -0.4635050653348309
+          },
+          "mood_before": -0.4663492076598384,
+          "observation_refs": [
+            "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:5981",
+            "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:6000"
+          ],
+          "stress_after": 0.4635050653348309,
+          "stress_before": 0.4663492076598384,
+          "temperament": {
+            "baseline": 0.0,
+            "recovery_s": 180.0,
+            "rise_s": 120.0,
+            "sensitivity": 1.0
+          },
+          "temperament_origin": {
+            "inherited_rule": "alice-affect-1",
+            "inherited_updates": 553,
+            "kind": "authored_initial_parameters_on_inherited_person",
+            "learned": false
+          }
+        },
+        "mode": "learned",
+        "mood": {
+          "source": "slow_body_derived_stress",
+          "valence": -0.4635050653348309
+        },
+        "mood_connected": true,
+        "owner": "agent-4",
+        "recent": [
+          "f4:mood-life-202:agent-4",
+          "f4:mood-life-203:agent-4",
+          "f4:mood-life-204:agent-4",
+          "f4:mood-life-205:agent-4",
+          "f4:mood-life-206:agent-4",
+          "f4:mood-life-207:agent-4",
+          "f4:mood-life-208:agent-4",
+          "f4:mood-life-209:agent-4",
+          "f4:mood-life-210:agent-4",
+          "f4:mood-life-211:agent-4",
+          "f4:mood-life-212:agent-4",
+          "f4:mood-life-213:agent-4",
+          "f4:mood-life-214:agent-4",
+          "f4:mood-life-215:agent-4",
+          "f4:mood-life-216:agent-4",
+          "f4:mood-life-217:agent-4",
+          "f4:mood-life-218:agent-4",
+          "f4:mood-life-219:agent-4",
+          "f4:mood-life-220:agent-4",
+          "f4:mood-life-221:agent-4",
+          "f4:mood-life-222:agent-4",
+          "f4:mood-life-223:agent-4",
+          "f4:mood-life-224:agent-4",
+          "f4:mood-life-225:agent-4",
+          "f4:mood-life-226:agent-4",
+          "f4:mood-life-227:agent-4",
+          "f4:mood-life-228:agent-4",
+          "f4:mood-life-229:agent-4",
+          "f4:mood-life-230:agent-4",
+          "f4:mood-life-231:agent-4",
+          "f4:mood-life-232:agent-4",
+          "f4:mood-life-233:agent-4",
+          "f4:mood-life-234:agent-4",
+          "f4:mood-life-235:agent-4",
+          "f4:mood-life-236:agent-4",
+          "f4:mood-life-237:agent-4",
+          "f4:mood-life-238:agent-4",
+          "f4:mood-life-239:agent-4",
+          "f4:mood-life-240:agent-4",
+          "f4:mood-life-241:agent-4",
+          "f4:mood-life-242:agent-4",
+          "f4:mood-life-243:agent-4",
+          "f4:mood-life-244:agent-4",
+          "f4:mood-life-245:agent-4",
+          "f4:mood-life-246:agent-4",
+          "f4:mood-life-247:agent-4",
+          "f4:mood-life-248:agent-4",
+          "f4:mood-life-249:agent-4",
+          "f4:mood-life-250:agent-4",
+          "f4:mood-life-251:agent-4",
+          "f4:mood-life-252:agent-4",
+          "f4:mood-life-253:agent-4",
+          "f4:mood-life-254:agent-4",
+          "f4:mood-life-255:agent-4",
+          "f4:mood-life-256:agent-4",
+          "f4:mood-life-257:agent-4",
+          "f4:mood-life-258:agent-4",
+          "f4:mood-life-259:agent-4",
+          "f4:mood-life-260:agent-4",
+          "f4:mood-life-261:agent-4",
+          "f4:mood-life-262:agent-4",
+          "f4:mood-life-263:agent-4",
+          "f4:mood-life-264:agent-4",
+          "f4:mood-life-265:agent-4"
+        ],
+        "regulation": {},
+        "relationships": {},
+        "rule": "alice-mood-f4-1",
+        "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+        "schema": 2,
+        "stress": 0.4635050653348309,
+        "temperament": {
+          "baseline": 0.0,
+          "recovery_s": 180.0,
+          "rise_s": 120.0,
+          "sensitivity": 1.0
+        },
+        "temperament_origin": {
+          "inherited_rule": "alice-affect-1",
+          "inherited_updates": 553,
+          "kind": "authored_initial_parameters_on_inherited_person",
+          "learned": false
+        },
+        "tick": 6000,
+        "updates": 819
+      }
+    },
+    "policies": {
+      "agent-1": {
+        "assigned": null,
+        "blocked_until": 0,
+        "build_steps": 0,
+        "completed": [],
+        "decisions": 204,
+        "exposure_latch": true,
+        "failures": 0,
+        "fallback": 0,
+        "goal": "reduce_exposure",
+        "last": {
+          "choice": {
+            "action": "rest",
+            "duration": 1,
+            "goal": "reduce_exposure",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "observed_tick": "5969",
+          "own_observation_sha256": "a0f521c9d24e70eb452b2a93267f6114226bddbe2ecb25191d6e663a4429f34a",
+          "receipt": {
+            "agent_id": "agent-1",
+            "completed_tick": "5973",
+            "error_code": "",
+            "event_refs": [
+              "7955",
+              "7959"
+            ],
+            "observable_effects": {
+              "description": "rested"
+            },
+            "observation_version": "5973",
+            "reason": "",
+            "request_id": "weather-agent-1-204",
+            "schema_version": 1,
+            "started_tick": "5969",
+            "status": "completed"
+          }
+        },
+        "memory": {
+          "crafted-15": {
+            "entity": {
+              "composition_ug": {
+                "fiber": "100000000",
+                "wood": "800000000"
+              },
+              "durability": 0,
+              "entity_id": "crafted-15",
+              "kind": "lean_to",
+              "mass_kg": 0.9,
+              "mass_ug": "900000000",
+              "owner_id": "agent-1",
+              "position_m": [
+                4.0,
+                4.0
+              ],
+              "radius_m": 0.0,
+              "recipe_id": "lean_to",
+              "work_s": 12.0
+            },
+            "observer": "agent-1",
+            "source": "own_native_observation",
+            "tick": 5969
+          },
+          "resource-1": {
+            "entity": {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 5.4,
+              "mass_ug": "5400000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            "observer": "agent-1",
+            "source": "own_native_observation",
+            "tick": 5969
+          },
+          "resource-2": {
+            "entity": {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 11.75,
+              "mass_ug": "11750000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            "observer": "agent-1",
+            "source": "own_native_observation",
+            "tick": 5969
+          }
+        },
+        "need": null,
+        "preemptions": 0,
+        "search": 0,
+        "seek_steps": 6,
+        "serial": 204,
+        "sheltered_since": 5838
+      },
+      "agent-2": {
+        "assigned": null,
+        "blocked_until": 0,
+        "build_steps": 0,
+        "completed": [],
+        "decisions": 204,
+        "exposure_latch": true,
+        "failures": 0,
+        "fallback": 0,
+        "goal": "reduce_exposure",
+        "last": {
+          "choice": {
+            "action": "rest",
+            "duration": 1,
+            "goal": "reduce_exposure",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "observed_tick": "5973",
+          "own_observation_sha256": "e7527bef56fff78af8f16d8781e45d943960e13d1b9d1224a8330bc5e6714414",
+          "receipt": {
+            "agent_id": "agent-2",
+            "completed_tick": "5977",
+            "error_code": "",
+            "event_refs": [
+              "7961",
+              "7965"
+            ],
+            "observable_effects": {
+              "description": "rested"
+            },
+            "observation_version": "5977",
+            "reason": "",
+            "request_id": "weather-agent-2-204",
+            "schema_version": 1,
+            "started_tick": "5973",
+            "status": "completed"
+          }
+        },
+        "memory": {
+          "crafted-15": {
+            "entity": {
+              "composition_ug": {
+                "fiber": "100000000",
+                "wood": "800000000"
+              },
+              "durability": 0,
+              "entity_id": "crafted-15",
+              "kind": "lean_to",
+              "mass_kg": 0.9,
+              "mass_ug": "900000000",
+              "owner_id": "agent-1",
+              "position_m": [
+                4.0,
+                4.0
+              ],
+              "radius_m": 0.0,
+              "recipe_id": "lean_to",
+              "work_s": 12.0
+            },
+            "observer": "agent-2",
+            "source": "own_native_observation",
+            "tick": 5973
+          },
+          "resource-1": {
+            "entity": {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 5.4,
+              "mass_ug": "5400000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            "observer": "agent-2",
+            "source": "own_native_observation",
+            "tick": 5973
+          },
+          "resource-2": {
+            "entity": {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 11.75,
+              "mass_ug": "11750000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            "observer": "agent-2",
+            "source": "own_native_observation",
+            "tick": 5973
+          }
+        },
+        "need": null,
+        "preemptions": 0,
+        "search": 0,
+        "seek_steps": 11,
+        "serial": 204,
+        "sheltered_since": 5892
+      },
+      "agent-3": {
+        "assigned": null,
+        "blocked_until": 0,
+        "build_steps": 0,
+        "completed": [],
+        "decisions": 204,
+        "exposure_latch": true,
+        "failures": 0,
+        "fallback": 0,
+        "goal": "reduce_exposure",
+        "last": {
+          "choice": {
+            "action": "rest",
+            "duration": 1,
+            "goal": "reduce_exposure",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "observed_tick": "5977",
+          "own_observation_sha256": "5085da8a23a75392aa00579bac2cefbc662edab1b28bc4a2fd72ccd130310bb6",
+          "receipt": {
+            "agent_id": "agent-3",
+            "completed_tick": "5981",
+            "error_code": "",
+            "event_refs": [
+              "7967",
+              "7971"
+            ],
+            "observable_effects": {
+              "description": "rested"
+            },
+            "observation_version": "5981",
+            "reason": "",
+            "request_id": "weather-agent-3-204",
+            "schema_version": 1,
+            "started_tick": "5977",
+            "status": "completed"
+          }
+        },
+        "memory": {
+          "crafted-15": {
+            "entity": {
+              "composition_ug": {
+                "fiber": "100000000",
+                "wood": "800000000"
+              },
+              "durability": 0,
+              "entity_id": "crafted-15",
+              "kind": "lean_to",
+              "mass_kg": 0.9,
+              "mass_ug": "900000000",
+              "owner_id": "agent-1",
+              "position_m": [
+                4.0,
+                4.0
+              ],
+              "radius_m": 0.0,
+              "recipe_id": "lean_to",
+              "work_s": 12.0
+            },
+            "observer": "agent-3",
+            "source": "own_native_observation",
+            "tick": 5977
+          },
+          "resource-1": {
+            "entity": {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 5.4,
+              "mass_ug": "5400000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            "observer": "agent-3",
+            "source": "own_native_observation",
+            "tick": 5977
+          },
+          "resource-2": {
+            "entity": {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 11.75,
+              "mass_ug": "11750000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            "observer": "agent-3",
+            "source": "own_native_observation",
+            "tick": 5977
+          }
+        },
+        "need": null,
+        "preemptions": 0,
+        "search": 0,
+        "seek_steps": 13,
+        "serial": 204,
+        "sheltered_since": 5880
+      },
+      "agent-4": {
+        "assigned": null,
+        "blocked_until": 0,
+        "build_steps": 0,
+        "completed": [],
+        "decisions": 203,
+        "exposure_latch": true,
+        "failures": 0,
+        "fallback": 0,
+        "goal": "seek_observed_shelter",
+        "last": {
+          "choice": {
+            "action": "move",
+            "duration": 1.25,
+            "goal": "seek_observed_shelter",
+            "origin": "authored_weather_baseline",
+            "parameters": {
+              "x_m": 5,
+              "y_m": 3
+            },
+            "targets": []
+          },
+          "observed_tick": "5964",
+          "own_observation_sha256": "6cdee679f232ba4c6ce7afba33362aad0f912eb5487f3aea400b574bc4127b23",
+          "receipt": {
+            "agent_id": "agent-4",
+            "completed_tick": "5969",
+            "error_code": "",
+            "event_refs": [
+              "7948",
+              "7953"
+            ],
+            "observable_effects": {
+              "description": ""
+            },
+            "observation_version": "5969",
+            "reason": "",
+            "request_id": "weather-agent-4-203",
+            "schema_version": 1,
+            "started_tick": "5964",
+            "status": "completed"
+          }
+        },
+        "memory": {
+          "crafted-15": {
+            "entity": {
+              "composition_ug": {
+                "fiber": "100000000",
+                "wood": "800000000"
+              },
+              "durability": 0,
+              "entity_id": "crafted-15",
+              "kind": "lean_to",
+              "mass_kg": 0.9,
+              "mass_ug": "900000000",
+              "owner_id": "agent-1",
+              "position_m": [
+                4.0,
+                4.0
+              ],
+              "radius_m": 0.0,
+              "recipe_id": "lean_to",
+              "work_s": 12.0
+            },
+            "observer": "agent-4",
+            "source": "own_native_observation",
+            "tick": 5964
+          },
+          "resource-1": {
+            "entity": {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 5.4,
+              "mass_ug": "5400000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            "observer": "agent-4",
+            "source": "own_native_observation",
+            "tick": 5964
+          },
+          "resource-2": {
+            "entity": {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 11.75,
+              "mass_ug": "11750000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            "observer": "agent-4",
+            "source": "own_native_observation",
+            "tick": 5964
+          }
+        },
+        "need": null,
+        "preemptions": 0,
+        "search": 0,
+        "seek_steps": 20,
+        "serial": 203,
+        "sheltered_since": null
+      }
+    },
+    "hash": "d2d01d18e8d095131487478d462222e5fea93a04ebb82ac5e1665c5016b6ba85",
+    "operations": 266
+  },
+  "wall_s": 117.6014920000016,
+  "replay": {
+    "verified": true,
+    "operations": 266,
+    "physical": {
+      "replay_matches": true,
+      "operations": 885,
+      "state_hash": "3a957872e8ae476d8b6719012dc6e87259f4d77c742b06b3264ee0b3bf3accbb"
+    },
+    "hash": "d2d01d18e8d095131487478d462222e5fea93a04ebb82ac5e1665c5016b6ba85"
+  }
+}

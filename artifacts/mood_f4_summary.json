@@ -1,0 +1,284 @@
+{
+  "verified": true,
+  "rows": [
+    {
+      "seed": 18101,
+      "gates": {
+        "gradual": true,
+        "temperament": true,
+        "persists": true,
+        "recovers": true,
+        "disabled": true,
+        "physical_equal": true,
+        "finite": true,
+        "replays": true,
+        "resumed": true
+      },
+      "wall_s": 383.3455284999982,
+      "arms": {
+        "balanced": {
+          "stress": {
+            "cold40": 0.0268653810729206,
+            "cold120": 0.44016006024545173,
+            "warm210": 0.2636302062543397,
+            "warm900": 0.0057042645055815815
+          },
+          "actual_final_simulated_s": 1032.0,
+          "private_bytes": 4419,
+          "sqlite_bytes": 2031616,
+          "updates": 292
+        },
+        "sensitive": {
+          "stress": {
+            "cold40": 0.06326841853339116,
+            "cold120": 0.7143826858171094,
+            "warm210": 0.4651169145616438,
+            "warm900": 0.0262401007374762
+          },
+          "actual_final_simulated_s": 1032.0,
+          "private_bytes": 4407,
+          "sqlite_bytes": 2031616,
+          "updates": 292
+        },
+        "disabled": {
+          "stress": {
+            "cold40": 0.0,
+            "cold120": 0.0,
+            "warm210": 0.0,
+            "warm900": 0.0
+          },
+          "actual_final_simulated_s": 1032.0,
+          "private_bytes": 3808,
+          "sqlite_bytes": 2019328,
+          "updates": 292
+        }
+      }
+    },
+    {
+      "seed": 18121,
+      "gates": {
+        "gradual": true,
+        "temperament": true,
+        "persists": true,
+        "recovers": true,
+        "disabled": true,
+        "physical_equal": true,
+        "finite": true,
+        "replays": true,
+        "resumed": true
+      },
+      "wall_s": 406.3689164999996,
+      "arms": {
+        "balanced": {
+          "stress": {
+            "cold40": 0.0268653810729206,
+            "cold120": 0.44016006024545173,
+            "warm210": 0.2636302062543397,
+            "warm900": 0.0057042645055815815
+          },
+          "actual_final_simulated_s": 1032.0,
+          "private_bytes": 4419,
+          "sqlite_bytes": 2031616,
+          "updates": 292
+        },
+        "sensitive": {
+          "stress": {
+            "cold40": 0.06326841853339116,
+            "cold120": 0.7143826858171094,
+            "warm210": 0.4651169145616438,
+            "warm900": 0.0262401007374762
+          },
+          "actual_final_simulated_s": 1032.0,
+          "private_bytes": 4407,
+          "sqlite_bytes": 2031616,
+          "updates": 292
+        },
+        "disabled": {
+          "stress": {
+            "cold40": 0.0,
+            "cold120": 0.0,
+            "warm210": 0.0,
+            "warm900": 0.0
+          },
+          "actual_final_simulated_s": 1032.0,
+          "private_bytes": 3808,
+          "sqlite_bytes": 2019328,
+          "updates": 292
+        }
+      }
+    },
+    {
+      "seed": 18127,
+      "gates": {
+        "gradual": true,
+        "temperament": true,
+        "persists": true,
+        "recovers": true,
+        "disabled": true,
+        "physical_equal": true,
+        "finite": true,
+        "replays": true,
+        "resumed": true
+      },
+      "wall_s": 351.44705629999953,
+      "arms": {
+        "balanced": {
+          "stress": {
+            "cold40": 0.0268653810729206,
+            "cold120": 0.44016006024545173,
+            "warm210": 0.2636302062543397,
+            "warm900": 0.0057042645055815815
+          },
+          "actual_final_simulated_s": 1032.0,
+          "private_bytes": 4419,
+          "sqlite_bytes": 2031616,
+          "updates": 292
+        },
+        "sensitive": {
+          "stress": {
+            "cold40": 0.06326841853339116,
+            "cold120": 0.7143826858171094,
+            "warm210": 0.4651169145616438,
+            "warm900": 0.0262401007374762
+          },
+          "actual_final_simulated_s": 1032.0,
+          "private_bytes": 4407,
+          "sqlite_bytes": 2031616,
+          "updates": 292
+        },
+        "disabled": {
+          "stress": {
+            "cold40": 0.0,
+            "cold120": 0.0,
+            "warm210": 0.0,
+            "warm900": 0.0
+          },
+          "actual_final_simulated_s": 1032.0,
+          "private_bytes": 3808,
+          "sqlite_bytes": 2019328,
+          "updates": 292
+        }
+      }
+    },
+    {
+      "seed": 18143,
+      "gates": {
+        "gradual": true,
+        "temperament": true,
+        "persists": true,
+        "recovers": true,
+        "disabled": true,
+        "physical_equal": true,
+        "finite": true,
+        "replays": true,
+        "resumed": true
+      },
+      "wall_s": 377.244353099999,
+      "arms": {
+        "balanced": {
+          "stress": {
+            "cold40": 0.0268653810729206,
+            "cold120": 0.44016006024545173,
+            "warm210": 0.2636302062543397,
+            "warm900": 0.0057042645055815815
+          },
+          "actual_final_simulated_s": 1032.0,
+          "private_bytes": 4419,
+          "sqlite_bytes": 2031616,
+          "updates": 292
+        },
+        "sensitive": {
+          "stress": {
+            "cold40": 0.06326841853339116,
+            "cold120": 0.7143826858171094,
+            "warm210": 0.4651169145616438,
+            "warm900": 0.0262401007374762
+          },
+          "actual_final_simulated_s": 1032.0,
+          "private_bytes": 4407,
+          "sqlite_bytes": 2031616,
+          "updates": 292
+        },
+        "disabled": {
+          "stress": {
+            "cold40": 0.0,
+            "cold120": 0.0,
+            "warm210": 0.0,
+            "warm900": 0.0
+          },
+          "actual_final_simulated_s": 1032.0,
+          "private_bytes": 3808,
+          "sqlite_bytes": 2019328,
+          "updates": 292
+        }
+      }
+    },
+    {
+      "seed": 18149,
+      "gates": {
+        "gradual": true,
+        "temperament": true,
+        "persists": true,
+        "recovers": true,
+        "disabled": true,
+        "physical_equal": true,
+        "finite": true,
+        "replays": true,
+        "resumed": true
+      },
+      "wall_s": 282.2522527000001,
+      "arms": {
+        "balanced": {
+          "stress": {
+            "cold40": 0.0268653810729206,
+            "cold120": 0.44016006024545173,
+            "warm210": 0.2636302062543397,
+            "warm900": 0.0057042645055815815
+          },
+          "actual_final_simulated_s": 1032.0,
+          "private_bytes": 4419,
+          "sqlite_bytes": 2031616,
+          "updates": 292
+        },
+        "sensitive": {
+          "stress": {
+            "cold40": 0.06326841853339116,
+            "cold120": 0.7143826858171094,
+            "warm210": 0.4651169145616438,
+            "warm900": 0.0262401007374762
+          },
+          "actual_final_simulated_s": 1032.0,
+          "private_bytes": 4407,
+          "sqlite_bytes": 2031616,
+          "updates": 292
+        },
+        "disabled": {
+          "stress": {
+            "cold40": 0.0,
+            "cold120": 0.0,
+            "warm210": 0.0,
+            "warm900": 0.0
+          },
+          "actual_final_simulated_s": 1032.0,
+          "private_bytes": 3808,
+          "sqlite_bytes": 2019328,
+          "updates": 292
+        }
+      }
+    }
+  ],
+  "confirmation_wall_s": 1017.2819539999982,
+  "audit_wall_s": 66.76757609999913,
+  "worlds": 25,
+  "counts": {
+    "accepted": 2175,
+    "completed": 2175,
+    "rejected": 0
+  },
+  "notes": [
+    "Assigned real feeding and weather, not autonomous regulation.",
+    "Initial temperament differences are authored; no trait learning.",
+    "All forced bodily histories are identical; replication is not population generalization.",
+    "Per-seed wall times overlap with two workers; exclude extra standalone audit time."
+  ]
+}

@@ -1,3 +1,31 @@
+# 22 October 2026 - F4 mood and temperament verified
+
+F4 implements persistent declared initial temperament and a single slow mood/stress
+component, separate from immediate affect and body values. Five untouched seeds
+pass the unchanged55-file prospective protocol;25 native saves independently
+replay/audit and2175 assigned native actions complete without rejection.
+Cold120s stress balanced.440/sensitive.714; after warm210s, thermal0/harmful
+active episodes0 but stress.264/.465; after warm900s,.0057/.0262. Physical heads
+match across balanced/sensitive/disabled controls. This is configured temperament,
+not learned traits, self-regulation, natural population generalization or improved survival.
+
+New5 F4,7 legacy emotion and28 weather checks pass. Actual Edge desktop/mobile
+observer checks pass. All nine older source registrations match; Phase9 still
+verifies3439files/4sources/advance:false. No native/release/dependency changes.
+
+F4 attaches only to a NEW backup copy, preserving old learning/history/body state.
+A four-person copy progresses1200->1500->1800sim seconds, all health1; source
+world remains unchanged. Cursor550->1080;530 completed new policy actions,
+529 authored survival and1 reused learned cue;0 extra mood-threshold choices.
+Food4.9+ingested3.1=8kg; water10.85+ingested5.15=16kg, no forcing/refill/reset.
+Fresh-process backup continuation matches exactly. Progression250.785wall seconds
+excludes post-window replay; primary confirmation1017.282s/audit66.768s.
+
+See [F4 report](MOOD_F4_REPORT.md), [operations](MOOD_F4_OPERATIONS.md) and HANDOFF.md.
+F5 and later remain outside this milestone. Prior entries below retain their scope.
+
+---
+
 # 22 October 2026 - F0-F3 emotion milestone verified
 
 Opt-in copied UW10W/ALICE-WEATHER-2 saves now have private affect, bodily signals,
