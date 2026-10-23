@@ -1,0 +1,31 @@
+FF                                                                       [100%]
+================================== FAILURES ===================================
+_ FoundationReviewTests.test_care_acceptance_retry_cannot_reset_applied_transfers _
+
+self = <tests.test_foundations_review.FoundationReviewTests testMethod=test_care_acceptance_retry_cannot_reset_applied_transfers>
+
+    def test_care_acceptance_retry_cannot_reset_applied_transfers(self):
+        state=early.initial_state();early.register_species(state,species())
+        early.add_individual(state,early_person('a','male'));early.add_individual(state,early_person('b','female'))
+        proposal=early.propose_care(state,'a','b','food',1,0,1,'care')
+        early.accept_care(state,proposal,True);early.apply_care(state,'care',0)
+        before=deepcopy(state);early.accept_care(state,proposal,True)
+>       self.assertEqual(before,state)
+E       AssertionError: {'sch[2599 chars]s': [0], 'total_spent': 1.0, 'status': 'comple[71 chars]: {}} != {'sch[2599 chars]s': [], 'total_spent': 0.0, 'status': 'active'[67 chars]: {}}
+E       Diff is 6478 characters long. Set self.maxDiff to None to see it.
+
+tests\test_foundations_review.py:79: AssertionError
+______ FoundationReviewTests.test_generation_order_must_be_a_permutation ______
+
+self = <tests.test_foundations_review.FoundationReviewTests testMethod=test_generation_order_must_be_a_permutation>
+
+    def test_generation_order_must_be_a_permutation(self):
+>       with self.assertRaises(ValueError):world.generate_order_invariant(1,world.preset_config(width=4,height=4),orders=[[(0,0)]*16]*2)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: ValueError not raised
+
+tests\test_foundations_review.py:83: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_foundations_review.py::FoundationReviewTests::test_care_acceptance_retry_cannot_reset_applied_transfers
+FAILED tests/test_foundations_review.py::FoundationReviewTests::test_generation_order_must_be_a_permutation
+2 failed, 8 deselected in 0.52s

@@ -1,0 +1,46 @@
+F..                                                                      [100%]
+================================== FAILURES ===================================
+_ IntegrationF12Tests.test_real_action_interval_is_not_the_whole_telemetry_segment _
+
+self = <tests.test_integration_f12.IntegrationF12Tests testMethod=test_real_action_interval_is_not_the_whole_telemetry_segment>
+
+    def test_real_action_interval_is_not_the_whole_telemetry_segment(self):
+        observation=storage.observe(self.destination,['agent-1'])[0]
+        request={'schema_version':1,'run_id':self.run_id,'request_id':'actual-rest',
+            'agent_id':'agent-1','observation_version':observation['tick'],'action_type':'rest',
+            'target_ids':[],'parameters':{},'requested_duration':1.0}
+>       storage.advance(self.destination,20,decisions=[request])
+
+tests\test_integration_f12.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+underworld\storage.py:378: in advance
+    return _advance(path, ticks, decisions, fault)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+path = WindowsPath('C:/Users/abc/AppData/Local/Temp/tmp8hg9kduh/f12.sqlite')
+ticks = 20
+decisions = ({'schema_version': 1, 'run_id': 'b84c3bc5-8721-45c8-80ea-a45b3f2a2ebe', 'request_id': 'actual-rest', 'agent_id': 'agent-1', ...},)
+fault = None, stop_requested = None
+
+    def _advance(path, ticks, decisions=(), fault=None, stop_requested=None):
+        if type(ticks) is not int or not 1 <= ticks <= 100000:
+            raise ValueError("advance ticks must be integer in [1,100000]")
+        # Repeated calls can reach the explicit Phase 1 run guard, not an unbounded loop.
+        db = _connect(path)
+        try:
+            db.execute("BEGIN IMMEDIATE")
+            world, config, metadata, state_hash = _head(db)
+            policy_state=metadata["runtime_policy_state"]
+            start = int(world.snapshot()["tick"])
+            if start + ticks > 1000000:
+                raise ValueError("Phase 1 run limit is 1,000,000 ticks")
+            by_tick = {}
+>           for at_tick, request in decisions:
+                ^^^^^^^^^^^^^^^^
+E           ValueError: too many values to unpack (expected 2)
+
+underworld\storage.py:406: ValueError
+=========================== short test summary info ===========================
+FAILED tests/test_integration_f12.py::IntegrationF12Tests::test_real_action_interval_is_not_the_whole_telemetry_segment
+1 failed, 2 passed in 5.59s

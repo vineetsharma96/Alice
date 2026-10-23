@@ -1,0 +1,46 @@
+{
+  "living_world_g_registration": {
+    "files": 43,
+    "mismatches": []
+  },
+  "developmental_h1_registration_repaired": {
+    "files": 6,
+    "mismatches": []
+  },
+  "developmental_h2_registration": {
+    "files": 8,
+    "mismatches": []
+  },
+  "h3_native_registration": {
+    "files": 8,
+    "mismatches": []
+  },
+  "h4_registration": {
+    "files": 4,
+    "mismatches": []
+  },
+  "h5_registration": {
+    "files": 13,
+    "mismatches": []
+  },
+  "gap_registration": {
+    "files": 14,
+    "mismatches": []
+  },
+  "weather_registration": {
+    "files": 30,
+    "mismatches": []
+  },
+  "emotion_registration": {
+    "files": 44,
+    "mismatches": []
+  },
+  "mood_f4_registration": {
+    "files": 55,
+    "mismatches": []
+  },
+  "memory_f5_registration": {
+    "files": 59,
+    "mismatches": []
+  }
+}

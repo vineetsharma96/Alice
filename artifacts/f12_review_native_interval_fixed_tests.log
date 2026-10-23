@@ -1,0 +1,21 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_ IntegrationF12Tests.test_real_action_interval_is_not_the_whole_telemetry_segment _
+
+self = <tests.test_integration_f12.IntegrationF12Tests testMethod=test_real_action_interval_is_not_the_whole_telemetry_segment>
+
+    def test_real_action_interval_is_not_the_whole_telemetry_segment(self):
+        observation=storage.observe(self.destination,['agent-1'])[0]
+        request={'schema_version':1,'run_id':self.run_id,'request_id':'actual-rest',
+            'agent_id':'agent-1','observation_version':observation['tick'],'action_type':'rest',
+            'target_ids':[],'parameters':{},'requested_duration':1.0}
+        storage.advance(self.destination,20,decisions=[(int(observation['tick']),request)])
+        r=integration.record_native_outcome(self.destination,'agent-1','actual-rest')
+        self.assertEqual(r['evidence_provenance'],'native_journal_verified')
+>       self.assertEqual(r['evidence']['elapsed_s'],1.0)
+E       AssertionError: 0.0 != 1.0
+
+tests\test_integration_f12.py:33: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_integration_f12.py::IntegrationF12Tests::test_real_action_interval_is_not_the_whole_telemetry_segment
+1 failed in 4.38s

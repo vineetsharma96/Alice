@@ -1,3 +1,20 @@
+# 23 October 2026 - integrated life connections and measured limits
+
+ALICE-LIFE-1 connects weather, F0-F5 memory/mood and F6-F11 social components
+to native actions on compatible save copies. Five held-out four-person worlds
+reach 180 simulated seconds; an eight-person world reaches 90, all alive with
+exact replay and zero native rejections. Native signal acquisition and
+gratitude-like reciprocation have bounded controlled evidence.
+
+Not completed: full F6 helper-reliability/repair and F7 causal-assistance gates;
+F8 learned-strategy benefit; unsupported F10 social prerequisites; historical
+H-series UW9-to-UW10W migration; long-horizon integrated sustainability. Later
+modules existing in code do not imply that these scientific gates passed.
+Read [integrated results](LIFE_INTEGRATION_REPORT.md) and [handoff](../HANDOFF.md).
+Historical entries below retain their original scope and failed outcomes.
+
+---
+
 # 22 October 2026 - W0-W6 opt-in weather validated
 
 Persistent native weather, four fictional seasons, exposure proxies and real

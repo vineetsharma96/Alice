@@ -1,0 +1,216 @@
+{
+  "simulated_s": 30.0,
+  "tick": "120",
+  "alive": 4,
+  "population": 4,
+  "actions": {
+    "rest": 6
+  },
+  "accepted_requests": 0,
+  "completed_actions": 6,
+  "achieved_need_goals": 0,
+  "rejections": {},
+  "decision_origins": {
+    "authored_weather_baseline": 6
+  },
+  "scheduled_turns": {
+    "agent-1": 2,
+    "agent-2": 2,
+    "agent-3": 1,
+    "agent-4": 1
+  },
+  "next_turn": [
+    "agent-3",
+    6
+  ],
+  "unmet_needs": {
+    "agent-1": {
+      "hunger": 0.3799999999999967,
+      "thirst": 0.4450000000000017,
+      "fatigue": 0.06600000000000032,
+      "health": 1.0,
+      "alive": true,
+      "food_ingested_ug": "0",
+      "water_ingested_ug": "0"
+    },
+    "agent-2": {
+      "hunger": 0.3799999999999967,
+      "thirst": 0.4450000000000017,
+      "fatigue": 0.06600000000000034,
+      "health": 1.0,
+      "alive": true,
+      "food_ingested_ug": "0",
+      "water_ingested_ug": "0"
+    },
+    "agent-3": {
+      "hunger": 0.3799999999999967,
+      "thirst": 0.4450000000000017,
+      "fatigue": 0.14500000000000052,
+      "health": 1.0,
+      "alive": true,
+      "food_ingested_ug": "0",
+      "water_ingested_ug": "0"
+    },
+    "agent-4": {
+      "hunger": 0.3799999999999967,
+      "thirst": 0.4450000000000017,
+      "fatigue": 0.14500000000000052,
+      "health": 1.0,
+      "alive": true,
+      "food_ingested_ug": "0",
+      "water_ingested_ug": "0"
+    }
+  },
+  "material_totals_ug": {
+    "animal": "2800000000",
+    "eggs": "60000000",
+    "food": "16000000000",
+    "forage": "2000000000",
+    "fuel_X": "80000000",
+    "inert_material": "32000000000",
+    "oxygen": "160000000",
+    "product_P": "0",
+    "stone": "4000000000",
+    "tree": "18000000000",
+    "water": "64000000000"
+  },
+  "boundary_sources_ug": {
+    "food": 0,
+    "fuel_X": 0,
+    "inert_material": 0,
+    "oxygen": 0,
+    "product_P": 0,
+    "stone": 0,
+    "tree": 0,
+    "water": 0
+  },
+  "operator_sources_ug": {
+    "food": 0,
+    "fuel_X": 0,
+    "inert_material": 0,
+    "oxygen": 0,
+    "product_P": 0,
+    "stone": 0,
+    "water": 0
+  },
+  "source_hash": "bb8e3f79003a6fa72598abad66a53a2967c88d988989abe6a17cdea170bab7e4",
+  "operations": 6,
+  "private_state_bytes": {
+    "agent-1": 18182,
+    "agent-2": 18563,
+    "agent-3": 16175,
+    "agent-4": 16570
+  },
+  "social": {
+    "agent-1": {
+      "deliveries": 0,
+      "grounded": 0,
+      "help_received": 0,
+      "relationships": 0,
+      "inferences": 0,
+      "social_states": [],
+      "preferences": {
+        "recovery": {
+          "confidence": 0.6,
+          "contexts": [
+            "dry/mild/open"
+          ],
+          "evidence": [
+            "native:weather-agent-1-1",
+            "native:weather-agent-1-2"
+          ],
+          "negative": 0,
+          "positive": 2,
+          "score": 2,
+          "uncertainty": 0.4
+        }
+      }
+    },
+    "agent-2": {
+      "deliveries": 0,
+      "grounded": 0,
+      "help_received": 0,
+      "relationships": 0,
+      "inferences": 0,
+      "social_states": [],
+      "preferences": {
+        "recovery": {
+          "confidence": 0.6,
+          "contexts": [
+            "dry/mild/open"
+          ],
+          "evidence": [
+            "native:weather-agent-2-1",
+            "native:weather-agent-2-2"
+          ],
+          "negative": 0,
+          "positive": 2,
+          "score": 2,
+          "uncertainty": 0.4
+        }
+      }
+    },
+    "agent-3": {
+      "deliveries": 0,
+      "grounded": 0,
+      "help_received": 0,
+      "relationships": 0,
+      "inferences": 0,
+      "social_states": [],
+      "preferences": {
+        "recovery": {
+          "confidence": 0.4,
+          "contexts": [
+            "dry/mild/open"
+          ],
+          "evidence": [
+            "native:weather-agent-3-1"
+          ],
+          "negative": 0,
+          "positive": 1,
+          "score": 1,
+          "uncertainty": 0.6
+        }
+      }
+    },
+    "agent-4": {
+      "deliveries": 0,
+      "grounded": 0,
+      "help_received": 0,
+      "relationships": 0,
+      "inferences": 0,
+      "social_states": [],
+      "preferences": {
+        "recovery": {
+          "confidence": 0.4,
+          "contexts": [
+            "dry/mild/open"
+          ],
+          "evidence": [
+            "native:weather-agent-4-1"
+          ],
+          "negative": 0,
+          "positive": 1,
+          "score": 1,
+          "uncertainty": 0.6
+        }
+      }
+    }
+  },
+  "status": "target_reached",
+  "initial_simulated_s": 0.0,
+  "simulated_duration_s": 30.0,
+  "execution_wall_s": 2.395020099997055,
+  "replay": {
+    "verified": true,
+    "operations": 6,
+    "physical": {
+      "replay_matches": true,
+      "operations": 6,
+      "state_hash": "055a1c5cffe7e9dd8d0e60154a8676f8508b91c2ca870d710a0def11d24f4473"
+    },
+    "hash": "bb8e3f79003a6fa72598abad66a53a2967c88d988989abe6a17cdea170bab7e4"
+  },
+  "replay_wall_s": 0.2263470000034431,
+  "total_wall_s": 2.6213732999895
+}

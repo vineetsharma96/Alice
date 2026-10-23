@@ -1,0 +1,57 @@
+{
+  "baseline_archive_verified": true,
+  "original_survival_results_unchanged": true,
+  "historical_registrations": {
+    "living_world_g_registration": {
+      "files": 43,
+      "mismatches": []
+    },
+    "developmental_h1_registration_repaired": {
+      "files": 6,
+      "mismatches": []
+    },
+    "developmental_h2_registration": {
+      "files": 8,
+      "mismatches": []
+    },
+    "h3_native_registration": {
+      "files": 8,
+      "mismatches": []
+    },
+    "h4_registration": {
+      "files": 4,
+      "mismatches": []
+    },
+    "h5_registration": {
+      "files": 13,
+      "mismatches": []
+    },
+    "gap_registration": {
+      "files": 14,
+      "mismatches": []
+    },
+    "weather_registration": {
+      "files": 30,
+      "mismatches": []
+    },
+    "emotion_registration": {
+      "files": 44,
+      "mismatches": []
+    },
+    "mood_f4_registration": {
+      "files": 55,
+      "mismatches": []
+    },
+    "memory_f5_registration": {
+      "files": 59,
+      "mismatches": []
+    }
+  },
+  "retained_world_sha256": {
+    "control.sqlite": "8bd23e62bc984f6a64df2c7c649fca29d6aec400ba64026e12d3d7370ec86e8e",
+    "f6.sqlite": "3118c251d63861f9905b79231dde2eaf721dcee78946656494f07251f967b9f8",
+    "f7.sqlite": "4171f1d925c59d723d219ea86bd28438ee7df277dab742cb00b5dba365698e98",
+    "integrated.sqlite": "d8788029e2307233e1c307d8583d1876ed53c9845d6fc3955f6128d39c1619c0",
+    "source.sqlite": "124ea7cd771a9682be81696aecb243ee5521d29dbb6e45e8ef24644ee9a2d31b"
+  }
+}

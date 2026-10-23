@@ -85,6 +85,17 @@ class ConnectionAuditTests(unittest.TestCase):
         self.assertEqual(result.returncode,0,result.stderr)
         self.assertEqual(stabilization.status(self.path)['calls'],0)
 
+    def test_relative_native_build_overrides_resolve_from_checkout(self):
+        env=os.environ|{'PYTHONPATH':str(ROOT),'UNDERWORLD_BUILD':'build/living-d',
+                        'UNDERWORLD_TOOLCHAIN':r'C:\mingw64\bin'}
+        result=subprocess.run([sys.executable,'-c',
+                               'from underworld.native_paths import configure_build; configure_build(); '
+                               'from underworld.native import load_native; '
+                               'print(load_native().world_format)'],
+                              cwd=self.tmp.name,env=env,text=True,capture_output=True,timeout=45)
+        self.assertEqual(result.returncode,0,result.stderr)
+        self.assertEqual(result.stdout.strip(),'UW9')
+
     def test_checkpoint_schema_has_one_authority(self):
         storage.create(self.path,self.config,scripted=False);storage.save(self.path,'snapshot')
         with closing(storage._connect(self.path,readonly=True)) as db:

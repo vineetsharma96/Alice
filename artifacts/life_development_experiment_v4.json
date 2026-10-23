@@ -1,0 +1,1009 @@
+{
+  "protocol": "docs/LIFE_INTEGRATION_PROTOCOL.md",
+  "development": true,
+  "runs": [
+    {
+      "seed": 61,
+      "apparatus": "native routing/gathering, assigned transfers/speech, logged cold exposure",
+      "branches": {
+        "connected": {
+          "trust": 0.3333333333333333,
+          "gratitude": true,
+          "action": "give",
+          "completed": true,
+          "nonparticipant_relations": {},
+          "communication": {
+            "trials": [
+              {
+                "meaning": "calm",
+                "token": "sig-bebdb54dc7f4",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "calm",
+                "token": "sig-bebdb54dc7f4",
+                "prior_prediction": {
+                  "meaning": "calm",
+                  "confidence": 0.5,
+                  "uncertainty": 0.57735,
+                  "scores": {
+                    "calm": 1,
+                    "danger": 0,
+                    "distress": 0,
+                    "help": 0,
+                    "relief": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "calm",
+                "token": "sig-bebdb54dc7f4",
+                "prior_prediction": {
+                  "meaning": "calm",
+                  "confidence": 0.666667,
+                  "uncertainty": 0.447214,
+                  "scores": {
+                    "calm": 2,
+                    "danger": 0,
+                    "distress": 0,
+                    "help": 0,
+                    "relief": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "calm",
+                "token": "sig-bebdb54dc7f4",
+                "prior_prediction": {
+                  "meaning": "calm",
+                  "confidence": 0.75,
+                  "uncertainty": 0.377964,
+                  "scores": {
+                    "calm": 3,
+                    "danger": 0,
+                    "distress": 0,
+                    "help": 0,
+                    "relief": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "calm",
+                "token": "sig-bebdb54dc7f4",
+                "prior_prediction": {
+                  "meaning": "calm",
+                  "confidence": 0.8,
+                  "uncertainty": 0.333333,
+                  "scores": {
+                    "calm": 4,
+                    "danger": 0,
+                    "distress": 0,
+                    "help": 0,
+                    "relief": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "calm",
+                "token": "sig-bebdb54dc7f4",
+                "prior_prediction": {
+                  "meaning": "calm",
+                  "confidence": 0.833333,
+                  "uncertainty": 0.301511,
+                  "scores": {
+                    "calm": 5,
+                    "danger": 0,
+                    "distress": 0,
+                    "help": 0,
+                    "relief": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "calm",
+                "token": "sig-bebdb54dc7f4",
+                "prior_prediction": {
+                  "meaning": "calm",
+                  "confidence": 0.857143,
+                  "uncertainty": 0.27735,
+                  "scores": {
+                    "calm": 6,
+                    "danger": 0,
+                    "distress": 0,
+                    "help": 0,
+                    "relief": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "calm",
+                "token": "sig-bebdb54dc7f4",
+                "prior_prediction": {
+                  "meaning": "calm",
+                  "confidence": 0.875,
+                  "uncertainty": 0.258199,
+                  "scores": {
+                    "calm": 7,
+                    "danger": 0,
+                    "distress": 0,
+                    "help": 0,
+                    "relief": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "distress",
+                "token": "sig-2b662d0375d1",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "distress",
+                "token": "sig-2b662d0375d1",
+                "prior_prediction": {
+                  "meaning": "distress",
+                  "confidence": 0.5,
+                  "uncertainty": 0.5,
+                  "scores": {
+                    "calm": 0,
+                    "danger": 0,
+                    "distress": 1,
+                    "help": 0,
+                    "relief": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "distress",
+                "token": "sig-2b662d0375d1",
+                "prior_prediction": {
+                  "meaning": "distress",
+                  "confidence": 0.666667,
+                  "uncertainty": 0.333333,
+                  "scores": {
+                    "calm": 0,
+                    "danger": 0,
+                    "distress": 2,
+                    "help": 0,
+                    "relief": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "distress",
+                "token": "sig-2b662d0375d1",
+                "prior_prediction": {
+                  "meaning": "distress",
+                  "confidence": 0.75,
+                  "uncertainty": 0.25,
+                  "scores": {
+                    "calm": 0,
+                    "danger": 0,
+                    "distress": 3,
+                    "help": 0,
+                    "relief": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "distress",
+                "token": "sig-2b662d0375d1",
+                "prior_prediction": {
+                  "meaning": "distress",
+                  "confidence": 0.8,
+                  "uncertainty": 0.2,
+                  "scores": {
+                    "calm": 0,
+                    "danger": 0,
+                    "distress": 4,
+                    "help": 0,
+                    "relief": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "distress",
+                "token": "sig-2b662d0375d1",
+                "prior_prediction": {
+                  "meaning": "distress",
+                  "confidence": 0.833333,
+                  "uncertainty": 0.19245,
+                  "scores": {
+                    "calm": 0,
+                    "danger": 0,
+                    "distress": 5,
+                    "help": 0,
+                    "relief": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "distress",
+                "token": "sig-2b662d0375d1",
+                "prior_prediction": {
+                  "meaning": "distress",
+                  "confidence": 0.857143,
+                  "uncertainty": 0.185695,
+                  "scores": {
+                    "calm": 0,
+                    "danger": 0,
+                    "distress": 6,
+                    "help": 0,
+                    "relief": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "distress",
+                "token": "sig-2b662d0375d1",
+                "prior_prediction": {
+                  "meaning": "distress",
+                  "confidence": 0.875,
+                  "uncertainty": 0.179605,
+                  "scores": {
+                    "calm": 0,
+                    "danger": 0,
+                    "distress": 7,
+                    "help": 0,
+                    "relief": 0
+                  }
+                },
+                "completed": true
+              }
+            ],
+            "accuracy": 1.0,
+            "native_completed": true,
+            "unfamiliar_prediction": {
+              "meaning": null,
+              "confidence": 0.0,
+              "uncertainty": 1.0,
+              "scores": {
+                "distress": 0,
+                "relief": 0,
+                "calm": 0,
+                "danger": 0,
+                "help": 0
+              }
+            }
+          },
+          "backup_equal": true,
+          "replay": {
+            "verified": true,
+            "operations": 20,
+            "physical": {
+              "replay_matches": true,
+              "operations": 54,
+              "state_hash": "21cb0670dee62742807685bc09d950b067e950db970fadd8fb00f91184d858a7"
+            },
+            "hash": "9fe8d85260f0c504059e5e96de970a7149e2953bbf1b698ec103cbba6e3e9526"
+          },
+          "world": "data\\life-dev-experiment-v4\\61-connected.sqlite"
+        },
+        "disconnected": {
+          "trust": 0.3333333333333333,
+          "gratitude": true,
+          "action": "rest",
+          "completed": true,
+          "nonparticipant_relations": {},
+          "backup_equal": true,
+          "replay": {
+            "verified": true,
+            "operations": 2,
+            "physical": {
+              "replay_matches": true,
+              "operations": 19,
+              "state_hash": "47b7f11c19de0376dbd8e3dcd59947f17ae81e7c7bea6adda5142fd4dd37237c"
+            },
+            "hash": "017cd01b89f66bc7d15da909867566e11a6e88815db3ecbc0f7de20bd5eb215b"
+          },
+          "world": "data\\life-dev-experiment-v4\\61-disconnected.sqlite"
+        },
+        "frozen": {
+          "trust": 0,
+          "gratitude": false,
+          "action": "speak",
+          "completed": true,
+          "nonparticipant_relations": {},
+          "communication": {
+            "trials": [
+              {
+                "meaning": "calm",
+                "token": "sig-bebdb54dc7f4",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "calm",
+                "token": "sig-bebdb54dc7f4",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "calm",
+                "token": "sig-bebdb54dc7f4",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "calm",
+                "token": "sig-bebdb54dc7f4",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "calm",
+                "token": "sig-bebdb54dc7f4",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "calm",
+                "token": "sig-bebdb54dc7f4",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "calm",
+                "token": "sig-bebdb54dc7f4",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "calm",
+                "token": "sig-bebdb54dc7f4",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "distress",
+                "token": "sig-2b662d0375d1",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "distress",
+                "token": "sig-2b662d0375d1",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "distress",
+                "token": "sig-2b662d0375d1",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "distress",
+                "token": "sig-2b662d0375d1",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "distress",
+                "token": "sig-2b662d0375d1",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "distress",
+                "token": "sig-2b662d0375d1",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "distress",
+                "token": "sig-2b662d0375d1",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "distress",
+                "token": "sig-2b662d0375d1",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              }
+            ],
+            "accuracy": 0.0,
+            "native_completed": true,
+            "unfamiliar_prediction": {
+              "meaning": null,
+              "confidence": 0.0,
+              "uncertainty": 1.0,
+              "scores": {
+                "distress": 0,
+                "relief": 0,
+                "calm": 0,
+                "danger": 0,
+                "help": 0
+              }
+            }
+          },
+          "backup_equal": true,
+          "replay": {
+            "verified": true,
+            "operations": 20,
+            "physical": {
+              "replay_matches": true,
+              "operations": 54,
+              "state_hash": "8da85abc269a8ffff273baa7d91a80009a80e348880399f76392c5062369c87d"
+            },
+            "hash": "37ca1a70ecc37ee7fba6b0bb4dbc46c52ed96ed42c55817176aebf125cb0691f"
+          },
+          "world": "data\\life-dev-experiment-v4\\61-frozen.sqlite"
+        },
+        "relationships_disabled": {
+          "trust": 0,
+          "gratitude": true,
+          "action": "give",
+          "completed": true,
+          "nonparticipant_relations": {},
+          "backup_equal": true,
+          "replay": {
+            "verified": true,
+            "operations": 2,
+            "physical": {
+              "replay_matches": true,
+              "operations": 20,
+              "state_hash": "275f6ebe9700e7b1019d7916bc1b5484824b761438f6af33d2b6f68234299008"
+            },
+            "hash": "beb224edd7ee485d006e93f9c962233d1e91c9b688b2e7c47c432e82b104b8a6"
+          },
+          "world": "data\\life-dev-experiment-v4\\61-relationships_disabled.sqlite"
+        },
+        "shuffled": {
+          "trust": 0.3333333333333333,
+          "gratitude": true,
+          "action": "give",
+          "completed": true,
+          "nonparticipant_relations": {},
+          "communication": {
+            "trials": [
+              {
+                "meaning": "calm",
+                "token": "sig-bebdb54dc7f4",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "calm",
+                "token": "sig-bebdb54dc7f4",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "calm",
+                "token": "sig-bebdb54dc7f4",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "calm",
+                "token": "sig-bebdb54dc7f4",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "calm",
+                "token": "sig-bebdb54dc7f4",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "calm",
+                "token": "sig-bebdb54dc7f4",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "calm",
+                "token": "sig-bebdb54dc7f4",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "calm",
+                "token": "sig-bebdb54dc7f4",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "distress",
+                "token": "sig-2b662d0375d1",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "distress",
+                "token": "sig-2b662d0375d1",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "distress",
+                "token": "sig-2b662d0375d1",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "distress",
+                "token": "sig-2b662d0375d1",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "distress",
+                "token": "sig-2b662d0375d1",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "distress",
+                "token": "sig-2b662d0375d1",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "distress",
+                "token": "sig-2b662d0375d1",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              },
+              {
+                "meaning": "distress",
+                "token": "sig-2b662d0375d1",
+                "prior_prediction": {
+                  "meaning": null,
+                  "confidence": 0.0,
+                  "uncertainty": 1.0,
+                  "scores": {
+                    "distress": 0,
+                    "relief": 0,
+                    "calm": 0,
+                    "danger": 0,
+                    "help": 0
+                  }
+                },
+                "completed": true
+              }
+            ],
+            "accuracy": 0.0,
+            "native_completed": true,
+            "unfamiliar_prediction": {
+              "meaning": null,
+              "confidence": 0.0,
+              "uncertainty": 1.0,
+              "scores": {
+                "distress": 0,
+                "relief": 0,
+                "calm": 0,
+                "danger": 0,
+                "help": 0
+              }
+            }
+          },
+          "backup_equal": true,
+          "replay": {
+            "verified": true,
+            "operations": 20,
+            "physical": {
+              "replay_matches": true,
+              "operations": 54,
+              "state_hash": "21cb0670dee62742807685bc09d950b067e950db970fadd8fb00f91184d858a7"
+            },
+            "hash": "d42a89ea5dd0b8c5b661df5dc76573f3f7f069f5606c71fd8800efb26cf0481d"
+          },
+          "world": "data\\life-dev-experiment-v4\\61-shuffled.sqlite"
+        }
+      },
+      "mechanism_only": {
+        "helper_before": {
+          "other": "agent-2",
+          "score": 0.5117903626690361,
+          "confidence": 0.6321205588285577,
+          "origin": "directional witnessed relationship estimate; native feasibility still required"
+        },
+        "helper_after": {
+          "other": "agent-3",
+          "score": 0.5868212020127762,
+          "confidence": 0.986876271263059,
+          "origin": "directional witnessed relationship estimate; native feasibility still required"
+        },
+        "ambiguity": [
+          "ambiguous"
+        ],
+        "corrected": {
+          "applied": true,
+          "source_event_ids": [
+            "drinking"
+          ]
+        }
+      },
+      "gates": {
+        "F6_directional_native_help": true,
+        "F7_uncertainty_mechanism": true,
+        "F9_acquired_native_signals": true,
+        "F10_native_gratitude_behavior": true,
+        "persistence": true
+      },
+      "source_unchanged": true,
+      "wall_s": 22.560557499993593
+    }
+  ]
+}

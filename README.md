@@ -1,3 +1,58 @@
+[Manual controls](docs/MANUAL_LIFE_CONTROL.md) are running at http://127.0.0.1:8782/,
+paused initially, with Run, Pause and Step and no overall tick limit.
+
+# Latest code review
+
+The new world/plant/lifecycle/microbial research modules were reviewed and
+ten reproduced defects corrected. 76 focused tests and three subtests pass.
+These remain isolated research models; native integration is not claimed.
+Older JSON requires its matching sources after the kg-unit correction.
+
+[Fixes, validation and compatibility](docs/FOUNDATIONS_CODE_REVIEW.md) | [Handoff](HANDOFF.md)
+
+---
+
+# Integrated inhabitants - current runtime
+
+A new opt-in profile connects weather, bodily needs, emotional memory, private
+social learning and native actions for every inhabitant. Five four-person
+worlds reached 180 simulated seconds; an eight-person world reached 90.
+All survived and replayed; no native actions were rejected.
+
+Five held-out seeds demonstrate native signal acquisition and gratitude-like
+reciprocation with explicit controls. Full F12 is still unpassed: learned
+regulation benefit, broader social gates and historical H-world migration
+remain open. Existing worlds and research evidence are preserved.
+
+[Run commands, actual results and limits](docs/LIFE_INTEGRATION_REPORT.md) |
+[Current handoff](HANDOFF.md) | [Protocol](docs/LIFE_INTEGRATION_PROTOCOL.md)
+
+Earlier sections retain their original dates and milestone scope.
+
+---
+
+# Current review: F6–F12 additions
+
+The new relationship, inference, regulation, communication, social-emotion and
+value modules have been reviewed and corrected. They are bounded opt-in UW9
+sidecars; **the full F12 integrated milestone is still pending**. Earlier F0–F5
+and weather worlds remain available and unchanged.
+
+The corrected continuity check reached 90 simulated seconds in 162.978 wall
+seconds: 4/4 healthy inhabitants, four survival goals completed, exact native
+control equality and successful replay. The existing authored stabilization
+executor performed those actions. This does not establish a benefit from F12.
+
+[Review, runnable commands and limitations](docs/F12_CODE_REVIEW.md) ·
+[Current handoff](HANDOFF.md)
+
+Missing work includes compatible weather/F0–F5 integration, live scheduling,
+causal F6/F7 inputs, grounded native communication, and prospective stage gates.
+The F9 feedback fixture does not demonstrate language emergence. Earlier
+sections below are dated milestone history, not the current integration status.
+
+---
+
 # Current milestone: F5 emotional memory
 
 **F5 passes its prospective bounded gates.** Private salience and recent evidence

@@ -1,0 +1,2835 @@
+{
+  "rule": "alice-integration-f12-1",
+  "config": {
+    "schema_version": 1,
+    "seed": 20261020,
+    "mode": "closed",
+    "world": {
+      "width_m": 16.0,
+      "height_m": 16.0,
+      "dt_s": 0.2,
+      "population": 4,
+      "population_limit": 8
+    },
+    "cognition": {
+      "provider": "disabled",
+      "interval_ticks": 50,
+      "max_concurrency": 1,
+      "max_input_tokens": 1024,
+      "max_output_tokens": 128,
+      "timeout_s": 10.0,
+      "calls_per_simulated_day": 24
+    },
+    "logging": {
+      "level": "INFO",
+      "event_retention_count": 10000,
+      "max_payload_bytes": 16384
+    },
+    "agency": {
+      "bodies_enabled": true,
+      "policy": "none",
+      "interval_ticks": 25,
+      "food_kg": 8.0,
+      "water_kg": 16.0,
+      "food_regen_kg_s": 0.0,
+      "water_regen_kg_s": 0.0,
+      "tree_growth_kg_s": 0.005
+    }
+  },
+  "requested_seconds": 90.0,
+  "segment_seconds": 30.0,
+  "source_sha256": "d10e641f519b1fec50c1f06996b1d44282d2e33366bef5f0c33489cec73858fa",
+  "source_unchanged": true,
+  "actors": [
+    "agent-1",
+    "agent-2",
+    "agent-3",
+    "agent-4"
+  ],
+  "communication_handshake": {
+    "performed": true,
+    "speaker": "agent-1",
+    "receiver": "agent-2",
+    "token": "sig-9e2686753e28",
+    "initial_meaning": null,
+    "feedback_changed": true
+  },
+  "integrated": {
+    "stages": [
+      {
+        "duration_s": 30.0,
+        "stabilization": {
+          "status": "target_reached",
+          "initial_tick": "0",
+          "tick": "150",
+          "simulated_s": 30.0,
+          "wall_s": 26.6088635000051,
+          "state_hash": "4525cfb88fed4bd04a194564ef986c408551ca7344fc108001d23a106a6598ec",
+          "replay": {
+            "replay_matches": true,
+            "tick": "150",
+            "state_hash": "4525cfb88fed4bd04a194564ef986c408551ca7344fc108001d23a106a6598ec"
+          }
+        },
+        "telemetry": {
+          "f8_outcomes": 0,
+          "f6_observations": 4,
+          "f7_observations": 4,
+          "f10_events": 0,
+          "f11_events": 0,
+          "f11_summaries": 0
+        },
+        "native": {
+          "tick": 150,
+          "simulated_time_s": 30.0,
+          "alive": 4,
+          "population": 4,
+          "health_min": 1.0,
+          "hunger_mean": 0.3799999999999967,
+          "thirst_mean": 0.4450000000000034,
+          "fatigue_mean": 0.22399999999999903,
+          "material_totals_ug": {
+            "food": "8000000000",
+            "fuel_X": "0",
+            "inert_material": "32000000000",
+            "oxygen": "0",
+            "product_P": "0",
+            "stone": "4000000000",
+            "tree": "18150000000",
+            "water": "16000000000"
+          },
+          "state_hash": "4525cfb88fed4bd04a194564ef986c408551ca7344fc108001d23a106a6598ec",
+          "replay": {
+            "replay_matches": true,
+            "tick": "150",
+            "state_hash": "4525cfb88fed4bd04a194564ef986c408551ca7344fc108001d23a106a6598ec"
+          }
+        },
+        "controller": {
+          "goals_completed": 0,
+          "goals_blocked": 0,
+          "submitted": 0,
+          "authored_steps": 0,
+          "fallback_goals": 0,
+          "per_actor": {
+            "agent-1": {
+              "agent": "agent-1",
+              "authored_steps": 0,
+              "call_limit": 0,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 0,
+              "last_tick": 149,
+              "memory_enabled": true,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {
+                "resources": {
+                  "resource-1": {
+                    "entity_id": "resource-1",
+                    "kind": "food",
+                    "last_seen_tick": 149,
+                    "position_m": [
+                      2.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-2": {
+                    "entity_id": "resource-2",
+                    "kind": "water",
+                    "last_seen_tick": 149,
+                    "position_m": [
+                      3.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-4": {
+                    "entity_id": "resource-4",
+                    "kind": "stone",
+                    "last_seen_tick": 149,
+                    "position_m": [
+                      5.0,
+                      2.0
+                    ],
+                    "radius_m": 0.15
+                  }
+                }
+              },
+              "next_call_tick": 0,
+              "next_goal_tick": 0,
+              "pending": null,
+              "sequence": 0,
+              "submitted": 0
+            },
+            "agent-2": {
+              "agent": "agent-2",
+              "authored_steps": 0,
+              "call_limit": 0,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 0,
+              "last_tick": 149,
+              "memory_enabled": true,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {
+                "resources": {
+                  "resource-1": {
+                    "entity_id": "resource-1",
+                    "kind": "food",
+                    "last_seen_tick": 149,
+                    "position_m": [
+                      2.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-2": {
+                    "entity_id": "resource-2",
+                    "kind": "water",
+                    "last_seen_tick": 149,
+                    "position_m": [
+                      3.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-4": {
+                    "entity_id": "resource-4",
+                    "kind": "stone",
+                    "last_seen_tick": 149,
+                    "position_m": [
+                      5.0,
+                      2.0
+                    ],
+                    "radius_m": 0.15
+                  }
+                }
+              },
+              "next_call_tick": 0,
+              "next_goal_tick": 0,
+              "pending": null,
+              "sequence": 0,
+              "submitted": 0
+            },
+            "agent-3": {
+              "agent": "agent-3",
+              "authored_steps": 0,
+              "call_limit": 0,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 0,
+              "last_tick": 149,
+              "memory_enabled": true,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {
+                "resources": {
+                  "resource-4": {
+                    "entity_id": "resource-4",
+                    "kind": "stone",
+                    "last_seen_tick": 149,
+                    "position_m": [
+                      5.0,
+                      2.0
+                    ],
+                    "radius_m": 0.15
+                  }
+                }
+              },
+              "next_call_tick": 0,
+              "next_goal_tick": 0,
+              "pending": null,
+              "sequence": 0,
+              "submitted": 0
+            },
+            "agent-4": {
+              "agent": "agent-4",
+              "authored_steps": 0,
+              "call_limit": 0,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 0,
+              "last_tick": 149,
+              "memory_enabled": true,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {
+                "resources": {
+                  "resource-1": {
+                    "entity_id": "resource-1",
+                    "kind": "food",
+                    "last_seen_tick": 149,
+                    "position_m": [
+                      2.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-2": {
+                    "entity_id": "resource-2",
+                    "kind": "water",
+                    "last_seen_tick": 149,
+                    "position_m": [
+                      3.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-4": {
+                    "entity_id": "resource-4",
+                    "kind": "stone",
+                    "last_seen_tick": 149,
+                    "position_m": [
+                      5.0,
+                      2.0
+                    ],
+                    "radius_m": 0.15
+                  }
+                }
+              },
+              "next_call_tick": 0,
+              "next_goal_tick": 0,
+              "pending": null,
+              "sequence": 0,
+              "submitted": 0
+            }
+          }
+        },
+        "f12": {
+          "schema": "alice-integration-store-f12-1",
+          "rule": "alice-integration-f12-1",
+          "run_id": "bd91419e-9380-4127-a43b-f3d3d48b3388",
+          "actors": [
+            "agent-1",
+            "agent-2",
+            "agent-3",
+            "agent-4"
+          ],
+          "native_tick": 150,
+          "native_state_hash": "4525cfb88fed4bd04a194564ef986c408551ca7344fc108001d23a106a6598ec",
+          "source_db_sha256": "cd29dcb49aa61894146fbdfa837b2ad3179cb1db8cfe7f47dca012281b0f572b",
+          "source_native_state_hash": "aecf776c3bce001daa4a1781d05057e618d13c2d1c6f8dde6f0a110dcde5f6f5",
+          "native_schema": {
+            "checkpoint_schema": 9,
+            "storage_db_version": 10
+          },
+          "state_hash": "d15600e3bdb82a61083a9c7c071511bc1bf9e92fb3998e7235dc50ec4f0fc62d",
+          "operation_count": 4,
+          "overlay_summaries": {
+            "agent-1": {
+              "f8": {
+                "revision": 0,
+                "evidence_count": 0,
+                "failure_streaks": {
+                  "move_to_safety": 0,
+                  "reconsider": 0,
+                  "request_help": 0,
+                  "rest": 0,
+                  "switch_plan": 0
+                }
+              },
+              "f9": {
+                "revision": 1,
+                "evidence_count": 1,
+                "production_count": 1,
+                "partner_count": 0
+              },
+              "f10": {
+                "revision": 0,
+                "evidence_count": 0,
+                "available": []
+              },
+              "f11": {
+                "revision": 0,
+                "evidence_count": 0,
+                "declared_value_count": 2,
+                "acquired_value_count": 0,
+                "commitment_count": 0,
+                "summary_evidence_count": 0
+              }
+            },
+            "agent-2": {
+              "f8": {
+                "revision": 0,
+                "evidence_count": 0,
+                "failure_streaks": {
+                  "move_to_safety": 0,
+                  "reconsider": 0,
+                  "request_help": 0,
+                  "rest": 0,
+                  "switch_plan": 0
+                }
+              },
+              "f9": {
+                "revision": 2,
+                "evidence_count": 2,
+                "production_count": 0,
+                "partner_count": 1
+              },
+              "f10": {
+                "revision": 0,
+                "evidence_count": 0,
+                "available": []
+              },
+              "f11": {
+                "revision": 0,
+                "evidence_count": 0,
+                "declared_value_count": 2,
+                "acquired_value_count": 0,
+                "commitment_count": 0,
+                "summary_evidence_count": 0
+              }
+            },
+            "agent-3": {
+              "f8": {
+                "revision": 0,
+                "evidence_count": 0,
+                "failure_streaks": {
+                  "move_to_safety": 0,
+                  "reconsider": 0,
+                  "request_help": 0,
+                  "rest": 0,
+                  "switch_plan": 0
+                }
+              },
+              "f9": {
+                "revision": 0,
+                "evidence_count": 0,
+                "production_count": 0,
+                "partner_count": 0
+              },
+              "f10": {
+                "revision": 0,
+                "evidence_count": 0,
+                "available": []
+              },
+              "f11": {
+                "revision": 0,
+                "evidence_count": 0,
+                "declared_value_count": 2,
+                "acquired_value_count": 0,
+                "commitment_count": 0,
+                "summary_evidence_count": 0
+              }
+            },
+            "agent-4": {
+              "f8": {
+                "revision": 0,
+                "evidence_count": 0,
+                "failure_streaks": {
+                  "move_to_safety": 0,
+                  "reconsider": 0,
+                  "request_help": 0,
+                  "rest": 0,
+                  "switch_plan": 0
+                }
+              },
+              "f9": {
+                "revision": 0,
+                "evidence_count": 0,
+                "production_count": 0,
+                "partner_count": 0
+              },
+              "f10": {
+                "revision": 0,
+                "evidence_count": 0,
+                "available": []
+              },
+              "f11": {
+                "revision": 0,
+                "evidence_count": 0,
+                "declared_value_count": 2,
+                "acquired_value_count": 0,
+                "commitment_count": 0,
+                "summary_evidence_count": 0
+              }
+            }
+          }
+        },
+        "f12_replay": {
+          "replay_matches": true,
+          "operations": 4,
+          "state_hash": "d15600e3bdb82a61083a9c7c071511bc1bf9e92fb3998e7235dc50ec4f0fc62d",
+          "last_operation_id": "f12-op-6e041a419042ee485c6ea4e56a1af964"
+        },
+        "f6_replay": {
+          "replay_matches": true,
+          "operations": 2,
+          "state_hash": "a1de7bff74043c5ab78bc8bc394fddcc28702272183d42e94d4cab34915dfa64"
+        },
+        "f7_replay": {
+          "replay_matches": true,
+          "operations": 5,
+          "state_hash": "7338edb0c9465439cf8c61f727d41e10cbaf7fea65a430c4b0c1361f07531ce8"
+        }
+      },
+      {
+        "duration_s": 30.0,
+        "stabilization": {
+          "status": "target_reached",
+          "initial_tick": "150",
+          "tick": "300",
+          "simulated_s": 30.0,
+          "wall_s": 28.62745200000063,
+          "state_hash": "b813f4b0ac1d869148ae802df0dc2c89ab8dddebb871bd887aa103f8f94d15f8",
+          "replay": {
+            "replay_matches": true,
+            "tick": "300",
+            "state_hash": "b813f4b0ac1d869148ae802df0dc2c89ab8dddebb871bd887aa103f8f94d15f8"
+          }
+        },
+        "telemetry": {
+          "f8_outcomes": 0,
+          "f6_observations": 4,
+          "f7_observations": 4,
+          "f10_events": 0,
+          "f11_events": 0,
+          "f11_summaries": 0
+        },
+        "native": {
+          "tick": 300,
+          "simulated_time_s": 60.0,
+          "alive": 4,
+          "population": 4,
+          "health_min": 1.0,
+          "hunger_mean": 0.40999999999999337,
+          "thirst_mean": 0.49000000000000676,
+          "fatigue_mean": 0.24799999999999806,
+          "material_totals_ug": {
+            "food": "8000000000",
+            "fuel_X": "0",
+            "inert_material": "32000000000",
+            "oxygen": "0",
+            "product_P": "0",
+            "stone": "4000000000",
+            "tree": "18300000000",
+            "water": "16000000000"
+          },
+          "state_hash": "b813f4b0ac1d869148ae802df0dc2c89ab8dddebb871bd887aa103f8f94d15f8",
+          "replay": {
+            "replay_matches": true,
+            "tick": "300",
+            "state_hash": "b813f4b0ac1d869148ae802df0dc2c89ab8dddebb871bd887aa103f8f94d15f8"
+          }
+        },
+        "controller": {
+          "goals_completed": 0,
+          "goals_blocked": 0,
+          "submitted": 0,
+          "authored_steps": 0,
+          "fallback_goals": 0,
+          "per_actor": {
+            "agent-1": {
+              "agent": "agent-1",
+              "authored_steps": 0,
+              "call_limit": 0,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 0,
+              "last_tick": 299,
+              "memory_enabled": true,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {
+                "resources": {
+                  "resource-1": {
+                    "entity_id": "resource-1",
+                    "kind": "food",
+                    "last_seen_tick": 299,
+                    "position_m": [
+                      2.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-2": {
+                    "entity_id": "resource-2",
+                    "kind": "water",
+                    "last_seen_tick": 299,
+                    "position_m": [
+                      3.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-4": {
+                    "entity_id": "resource-4",
+                    "kind": "stone",
+                    "last_seen_tick": 299,
+                    "position_m": [
+                      5.0,
+                      2.0
+                    ],
+                    "radius_m": 0.15
+                  }
+                }
+              },
+              "next_call_tick": 0,
+              "next_goal_tick": 0,
+              "pending": null,
+              "sequence": 0,
+              "submitted": 0
+            },
+            "agent-2": {
+              "agent": "agent-2",
+              "authored_steps": 0,
+              "call_limit": 0,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 0,
+              "last_tick": 299,
+              "memory_enabled": true,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {
+                "resources": {
+                  "resource-1": {
+                    "entity_id": "resource-1",
+                    "kind": "food",
+                    "last_seen_tick": 299,
+                    "position_m": [
+                      2.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-2": {
+                    "entity_id": "resource-2",
+                    "kind": "water",
+                    "last_seen_tick": 299,
+                    "position_m": [
+                      3.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-4": {
+                    "entity_id": "resource-4",
+                    "kind": "stone",
+                    "last_seen_tick": 299,
+                    "position_m": [
+                      5.0,
+                      2.0
+                    ],
+                    "radius_m": 0.15
+                  }
+                }
+              },
+              "next_call_tick": 0,
+              "next_goal_tick": 0,
+              "pending": null,
+              "sequence": 0,
+              "submitted": 0
+            },
+            "agent-3": {
+              "agent": "agent-3",
+              "authored_steps": 0,
+              "call_limit": 0,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 0,
+              "last_tick": 299,
+              "memory_enabled": true,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {
+                "resources": {
+                  "resource-4": {
+                    "entity_id": "resource-4",
+                    "kind": "stone",
+                    "last_seen_tick": 299,
+                    "position_m": [
+                      5.0,
+                      2.0
+                    ],
+                    "radius_m": 0.15
+                  }
+                }
+              },
+              "next_call_tick": 0,
+              "next_goal_tick": 0,
+              "pending": null,
+              "sequence": 0,
+              "submitted": 0
+            },
+            "agent-4": {
+              "agent": "agent-4",
+              "authored_steps": 0,
+              "call_limit": 0,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 0,
+              "last_tick": 299,
+              "memory_enabled": true,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {
+                "resources": {
+                  "resource-1": {
+                    "entity_id": "resource-1",
+                    "kind": "food",
+                    "last_seen_tick": 299,
+                    "position_m": [
+                      2.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-2": {
+                    "entity_id": "resource-2",
+                    "kind": "water",
+                    "last_seen_tick": 299,
+                    "position_m": [
+                      3.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-4": {
+                    "entity_id": "resource-4",
+                    "kind": "stone",
+                    "last_seen_tick": 299,
+                    "position_m": [
+                      5.0,
+                      2.0
+                    ],
+                    "radius_m": 0.15
+                  }
+                }
+              },
+              "next_call_tick": 0,
+              "next_goal_tick": 0,
+              "pending": null,
+              "sequence": 0,
+              "submitted": 0
+            }
+          }
+        },
+        "f12": {
+          "schema": "alice-integration-store-f12-1",
+          "rule": "alice-integration-f12-1",
+          "run_id": "bd91419e-9380-4127-a43b-f3d3d48b3388",
+          "actors": [
+            "agent-1",
+            "agent-2",
+            "agent-3",
+            "agent-4"
+          ],
+          "native_tick": 300,
+          "native_state_hash": "b813f4b0ac1d869148ae802df0dc2c89ab8dddebb871bd887aa103f8f94d15f8",
+          "source_db_sha256": "cd29dcb49aa61894146fbdfa837b2ad3179cb1db8cfe7f47dca012281b0f572b",
+          "source_native_state_hash": "aecf776c3bce001daa4a1781d05057e618d13c2d1c6f8dde6f0a110dcde5f6f5",
+          "native_schema": {
+            "checkpoint_schema": 9,
+            "storage_db_version": 10
+          },
+          "state_hash": "d15600e3bdb82a61083a9c7c071511bc1bf9e92fb3998e7235dc50ec4f0fc62d",
+          "operation_count": 4,
+          "overlay_summaries": {
+            "agent-1": {
+              "f8": {
+                "revision": 0,
+                "evidence_count": 0,
+                "failure_streaks": {
+                  "move_to_safety": 0,
+                  "reconsider": 0,
+                  "request_help": 0,
+                  "rest": 0,
+                  "switch_plan": 0
+                }
+              },
+              "f9": {
+                "revision": 1,
+                "evidence_count": 1,
+                "production_count": 1,
+                "partner_count": 0
+              },
+              "f10": {
+                "revision": 0,
+                "evidence_count": 0,
+                "available": []
+              },
+              "f11": {
+                "revision": 0,
+                "evidence_count": 0,
+                "declared_value_count": 2,
+                "acquired_value_count": 0,
+                "commitment_count": 0,
+                "summary_evidence_count": 0
+              }
+            },
+            "agent-2": {
+              "f8": {
+                "revision": 0,
+                "evidence_count": 0,
+                "failure_streaks": {
+                  "move_to_safety": 0,
+                  "reconsider": 0,
+                  "request_help": 0,
+                  "rest": 0,
+                  "switch_plan": 0
+                }
+              },
+              "f9": {
+                "revision": 2,
+                "evidence_count": 2,
+                "production_count": 0,
+                "partner_count": 1
+              },
+              "f10": {
+                "revision": 0,
+                "evidence_count": 0,
+                "available": []
+              },
+              "f11": {
+                "revision": 0,
+                "evidence_count": 0,
+                "declared_value_count": 2,
+                "acquired_value_count": 0,
+                "commitment_count": 0,
+                "summary_evidence_count": 0
+              }
+            },
+            "agent-3": {
+              "f8": {
+                "revision": 0,
+                "evidence_count": 0,
+                "failure_streaks": {
+                  "move_to_safety": 0,
+                  "reconsider": 0,
+                  "request_help": 0,
+                  "rest": 0,
+                  "switch_plan": 0
+                }
+              },
+              "f9": {
+                "revision": 0,
+                "evidence_count": 0,
+                "production_count": 0,
+                "partner_count": 0
+              },
+              "f10": {
+                "revision": 0,
+                "evidence_count": 0,
+                "available": []
+              },
+              "f11": {
+                "revision": 0,
+                "evidence_count": 0,
+                "declared_value_count": 2,
+                "acquired_value_count": 0,
+                "commitment_count": 0,
+                "summary_evidence_count": 0
+              }
+            },
+            "agent-4": {
+              "f8": {
+                "revision": 0,
+                "evidence_count": 0,
+                "failure_streaks": {
+                  "move_to_safety": 0,
+                  "reconsider": 0,
+                  "request_help": 0,
+                  "rest": 0,
+                  "switch_plan": 0
+                }
+              },
+              "f9": {
+                "revision": 0,
+                "evidence_count": 0,
+                "production_count": 0,
+                "partner_count": 0
+              },
+              "f10": {
+                "revision": 0,
+                "evidence_count": 0,
+                "available": []
+              },
+              "f11": {
+                "revision": 0,
+                "evidence_count": 0,
+                "declared_value_count": 2,
+                "acquired_value_count": 0,
+                "commitment_count": 0,
+                "summary_evidence_count": 0
+              }
+            }
+          }
+        },
+        "f12_replay": {
+          "replay_matches": true,
+          "operations": 4,
+          "state_hash": "d15600e3bdb82a61083a9c7c071511bc1bf9e92fb3998e7235dc50ec4f0fc62d",
+          "last_operation_id": "f12-op-6e041a419042ee485c6ea4e56a1af964"
+        },
+        "f6_replay": {
+          "replay_matches": true,
+          "operations": 2,
+          "state_hash": "a1de7bff74043c5ab78bc8bc394fddcc28702272183d42e94d4cab34915dfa64"
+        },
+        "f7_replay": {
+          "replay_matches": true,
+          "operations": 5,
+          "state_hash": "7338edb0c9465439cf8c61f727d41e10cbaf7fea65a430c4b0c1361f07531ce8"
+        }
+      },
+      {
+        "duration_s": 30.0,
+        "stabilization": {
+          "status": "target_reached",
+          "initial_tick": "300",
+          "tick": "450",
+          "simulated_s": 30.0,
+          "wall_s": 29.481026399997063,
+          "state_hash": "6c56db641c1ee97aedce9a390889d89508d3d2ae3eea795beec563fc6e226310",
+          "replay": {
+            "replay_matches": true,
+            "tick": "450",
+            "state_hash": "6c56db641c1ee97aedce9a390889d89508d3d2ae3eea795beec563fc6e226310"
+          }
+        },
+        "telemetry": {
+          "f8_outcomes": 7,
+          "f6_observations": 4,
+          "f7_observations": 4,
+          "f10_events": 30,
+          "f11_events": 15,
+          "f11_summaries": 15
+        },
+        "native": {
+          "tick": 450,
+          "simulated_time_s": 90.0,
+          "alive": 4,
+          "population": 4,
+          "health_min": 1.0,
+          "hunger_mean": 0.43999999999999007,
+          "thirst_mean": 0.026250000000000055,
+          "fatigue_mean": 0.2735599999999976,
+          "material_totals_ug": {
+            "food": "8000000000",
+            "fuel_X": "0",
+            "inert_material": "32000000000",
+            "oxygen": "0",
+            "product_P": "0",
+            "stone": "4000000000",
+            "tree": "18450000000",
+            "water": "16000000000"
+          },
+          "state_hash": "6c56db641c1ee97aedce9a390889d89508d3d2ae3eea795beec563fc6e226310",
+          "replay": {
+            "replay_matches": true,
+            "tick": "450",
+            "state_hash": "6c56db641c1ee97aedce9a390889d89508d3d2ae3eea795beec563fc6e226310"
+          }
+        },
+        "controller": {
+          "goals_completed": 4,
+          "goals_blocked": 0,
+          "submitted": 15,
+          "authored_steps": 15,
+          "fallback_goals": 0,
+          "per_actor": {
+            "agent-1": {
+              "agent": "agent-1",
+              "authored_steps": 2,
+              "call_limit": 0,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 1,
+              "last_tick": 449,
+              "memory_enabled": true,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {
+                "resources": {
+                  "resource-1": {
+                    "entity_id": "resource-1",
+                    "kind": "food",
+                    "last_seen_tick": 449,
+                    "position_m": [
+                      2.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-2": {
+                    "entity_id": "resource-2",
+                    "kind": "water",
+                    "last_seen_tick": 449,
+                    "position_m": [
+                      3.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-4": {
+                    "entity_id": "resource-4",
+                    "kind": "stone",
+                    "last_seen_tick": 449,
+                    "position_m": [
+                      5.0,
+                      2.0
+                    ],
+                    "radius_m": 0.15
+                  }
+                }
+              },
+              "next_call_tick": 0,
+              "next_goal_tick": 344,
+              "pending": null,
+              "pending_owner": "survival",
+              "sequence": 3,
+              "submitted": 2
+            },
+            "agent-2": {
+              "agent": "agent-2",
+              "authored_steps": 3,
+              "call_limit": 0,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 1,
+              "last_tick": 449,
+              "memory_enabled": true,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {
+                "resources": {
+                  "resource-1": {
+                    "entity_id": "resource-1",
+                    "kind": "food",
+                    "last_seen_tick": 449,
+                    "position_m": [
+                      2.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-2": {
+                    "entity_id": "resource-2",
+                    "kind": "water",
+                    "last_seen_tick": 449,
+                    "position_m": [
+                      3.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-4": {
+                    "entity_id": "resource-4",
+                    "kind": "stone",
+                    "last_seen_tick": 449,
+                    "position_m": [
+                      5.0,
+                      2.0
+                    ],
+                    "radius_m": 0.15
+                  }
+                }
+              },
+              "next_call_tick": 0,
+              "next_goal_tick": 357,
+              "pending": null,
+              "pending_owner": "survival",
+              "sequence": 4,
+              "submitted": 3
+            },
+            "agent-3": {
+              "agent": "agent-3",
+              "authored_steps": 6,
+              "call_limit": 0,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 1,
+              "last_tick": 449,
+              "memory_enabled": true,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {
+                "approach_memory": {},
+                "resources": {
+                  "resource-1": {
+                    "entity_id": "resource-1",
+                    "kind": "food",
+                    "last_seen_tick": 449,
+                    "position_m": [
+                      2.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-2": {
+                    "entity_id": "resource-2",
+                    "kind": "water",
+                    "last_seen_tick": 449,
+                    "position_m": [
+                      3.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-4": {
+                    "entity_id": "resource-4",
+                    "kind": "stone",
+                    "last_seen_tick": 449,
+                    "position_m": [
+                      5.0,
+                      2.0
+                    ],
+                    "radius_m": 0.15
+                  }
+                },
+                "search": 0
+              },
+              "next_call_tick": 0,
+              "next_goal_tick": 385,
+              "pending": null,
+              "pending_owner": "survival",
+              "sequence": 7,
+              "submitted": 6
+            },
+            "agent-4": {
+              "agent": "agent-4",
+              "authored_steps": 4,
+              "call_limit": 0,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 1,
+              "last_tick": 449,
+              "memory_enabled": true,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {
+                "resources": {
+                  "resource-1": {
+                    "entity_id": "resource-1",
+                    "kind": "food",
+                    "last_seen_tick": 449,
+                    "position_m": [
+                      2.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-2": {
+                    "entity_id": "resource-2",
+                    "kind": "water",
+                    "last_seen_tick": 449,
+                    "position_m": [
+                      3.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-4": {
+                    "entity_id": "resource-4",
+                    "kind": "stone",
+                    "last_seen_tick": 449,
+                    "position_m": [
+                      5.0,
+                      2.0
+                    ],
+                    "radius_m": 0.15
+                  }
+                }
+              },
+              "next_call_tick": 0,
+              "next_goal_tick": 368,
+              "pending": null,
+              "pending_owner": "survival",
+              "sequence": 5,
+              "submitted": 4
+            }
+          }
+        },
+        "f12": {
+          "schema": "alice-integration-store-f12-1",
+          "rule": "alice-integration-f12-1",
+          "run_id": "bd91419e-9380-4127-a43b-f3d3d48b3388",
+          "actors": [
+            "agent-1",
+            "agent-2",
+            "agent-3",
+            "agent-4"
+          ],
+          "native_tick": 450,
+          "native_state_hash": "6c56db641c1ee97aedce9a390889d89508d3d2ae3eea795beec563fc6e226310",
+          "source_db_sha256": "cd29dcb49aa61894146fbdfa837b2ad3179cb1db8cfe7f47dca012281b0f572b",
+          "source_native_state_hash": "aecf776c3bce001daa4a1781d05057e618d13c2d1c6f8dde6f0a110dcde5f6f5",
+          "native_schema": {
+            "checkpoint_schema": 9,
+            "storage_db_version": 10
+          },
+          "state_hash": "aac87f553d3cae52a11f12935713b4b4c4b4525cae2c2cfde4f060e12a18314d",
+          "operation_count": 71,
+          "overlay_summaries": {
+            "agent-1": {
+              "f8": {
+                "revision": 0,
+                "evidence_count": 0,
+                "failure_streaks": {
+                  "move_to_safety": 0,
+                  "reconsider": 0,
+                  "request_help": 0,
+                  "rest": 0,
+                  "switch_plan": 0
+                }
+              },
+              "f9": {
+                "revision": 1,
+                "evidence_count": 1,
+                "production_count": 1,
+                "partner_count": 0
+              },
+              "f10": {
+                "revision": 4,
+                "evidence_count": 4,
+                "available": [
+                  "pride"
+                ]
+              },
+              "f11": {
+                "revision": 4,
+                "evidence_count": 2,
+                "declared_value_count": 2,
+                "acquired_value_count": 1,
+                "commitment_count": 1,
+                "summary_evidence_count": 2
+              }
+            },
+            "agent-2": {
+              "f8": {
+                "revision": 1,
+                "evidence_count": 1,
+                "failure_streaks": {
+                  "move_to_safety": 1,
+                  "reconsider": 0,
+                  "request_help": 0,
+                  "rest": 0,
+                  "switch_plan": 0
+                }
+              },
+              "f9": {
+                "revision": 2,
+                "evidence_count": 2,
+                "production_count": 0,
+                "partner_count": 1
+              },
+              "f10": {
+                "revision": 6,
+                "evidence_count": 6,
+                "available": [
+                  "pride"
+                ]
+              },
+              "f11": {
+                "revision": 6,
+                "evidence_count": 3,
+                "declared_value_count": 2,
+                "acquired_value_count": 1,
+                "commitment_count": 1,
+                "summary_evidence_count": 3
+              }
+            },
+            "agent-3": {
+              "f8": {
+                "revision": 4,
+                "evidence_count": 4,
+                "failure_streaks": {
+                  "move_to_safety": 4,
+                  "reconsider": 0,
+                  "request_help": 0,
+                  "rest": 0,
+                  "switch_plan": 0
+                }
+              },
+              "f9": {
+                "revision": 0,
+                "evidence_count": 0,
+                "production_count": 0,
+                "partner_count": 0
+              },
+              "f10": {
+                "revision": 12,
+                "evidence_count": 12,
+                "available": [
+                  "pride"
+                ]
+              },
+              "f11": {
+                "revision": 12,
+                "evidence_count": 6,
+                "declared_value_count": 2,
+                "acquired_value_count": 1,
+                "commitment_count": 1,
+                "summary_evidence_count": 6
+              }
+            },
+            "agent-4": {
+              "f8": {
+                "revision": 2,
+                "evidence_count": 2,
+                "failure_streaks": {
+                  "move_to_safety": 2,
+                  "reconsider": 0,
+                  "request_help": 0,
+                  "rest": 0,
+                  "switch_plan": 0
+                }
+              },
+              "f9": {
+                "revision": 0,
+                "evidence_count": 0,
+                "production_count": 0,
+                "partner_count": 0
+              },
+              "f10": {
+                "revision": 8,
+                "evidence_count": 8,
+                "available": [
+                  "pride"
+                ]
+              },
+              "f11": {
+                "revision": 8,
+                "evidence_count": 4,
+                "declared_value_count": 2,
+                "acquired_value_count": 1,
+                "commitment_count": 1,
+                "summary_evidence_count": 4
+              }
+            }
+          }
+        },
+        "f12_replay": {
+          "replay_matches": true,
+          "operations": 71,
+          "state_hash": "aac87f553d3cae52a11f12935713b4b4c4b4525cae2c2cfde4f060e12a18314d",
+          "last_operation_id": "survival-f11-summary-agent-4-stable-agent-4-5"
+        },
+        "f6_replay": {
+          "replay_matches": true,
+          "operations": 2,
+          "state_hash": "a1de7bff74043c5ab78bc8bc394fddcc28702272183d42e94d4cab34915dfa64"
+        },
+        "f7_replay": {
+          "replay_matches": true,
+          "operations": 7,
+          "state_hash": "9f955ce087b92686e13ae8d635bb3fc86d19c80ba1785bf77bf4c9e53e7b1472"
+        }
+      }
+    ],
+    "final": {
+      "native": {
+        "tick": 450,
+        "simulated_time_s": 90.0,
+        "alive": 4,
+        "population": 4,
+        "health_min": 1.0,
+        "hunger_mean": 0.43999999999999007,
+        "thirst_mean": 0.026250000000000055,
+        "fatigue_mean": 0.2735599999999976,
+        "material_totals_ug": {
+          "food": "8000000000",
+          "fuel_X": "0",
+          "inert_material": "32000000000",
+          "oxygen": "0",
+          "product_P": "0",
+          "stone": "4000000000",
+          "tree": "18450000000",
+          "water": "16000000000"
+        },
+        "state_hash": "6c56db641c1ee97aedce9a390889d89508d3d2ae3eea795beec563fc6e226310",
+        "replay": {
+          "replay_matches": true,
+          "tick": "450",
+          "state_hash": "6c56db641c1ee97aedce9a390889d89508d3d2ae3eea795beec563fc6e226310"
+        }
+      },
+      "controller": {
+        "goals_completed": 4,
+        "goals_blocked": 0,
+        "submitted": 15,
+        "authored_steps": 15,
+        "fallback_goals": 0,
+        "per_actor": {
+          "agent-1": {
+            "agent": "agent-1",
+            "authored_steps": 2,
+            "call_limit": 0,
+            "calls": 0,
+            "fallback_goals": 0,
+            "goal": null,
+            "goals_blocked": 0,
+            "goals_completed": 1,
+            "last_tick": 449,
+            "memory_enabled": true,
+            "model": false,
+            "model_goals": 0,
+            "model_latency_s": 0.0,
+            "navigation": {
+              "resources": {
+                "resource-1": {
+                  "entity_id": "resource-1",
+                  "kind": "food",
+                  "last_seen_tick": 449,
+                  "position_m": [
+                    2.0,
+                    2.0
+                  ],
+                  "radius_m": 0.0
+                },
+                "resource-2": {
+                  "entity_id": "resource-2",
+                  "kind": "water",
+                  "last_seen_tick": 449,
+                  "position_m": [
+                    3.0,
+                    2.0
+                  ],
+                  "radius_m": 0.0
+                },
+                "resource-4": {
+                  "entity_id": "resource-4",
+                  "kind": "stone",
+                  "last_seen_tick": 449,
+                  "position_m": [
+                    5.0,
+                    2.0
+                  ],
+                  "radius_m": 0.15
+                }
+              }
+            },
+            "next_call_tick": 0,
+            "next_goal_tick": 344,
+            "pending": null,
+            "pending_owner": "survival",
+            "sequence": 3,
+            "submitted": 2
+          },
+          "agent-2": {
+            "agent": "agent-2",
+            "authored_steps": 3,
+            "call_limit": 0,
+            "calls": 0,
+            "fallback_goals": 0,
+            "goal": null,
+            "goals_blocked": 0,
+            "goals_completed": 1,
+            "last_tick": 449,
+            "memory_enabled": true,
+            "model": false,
+            "model_goals": 0,
+            "model_latency_s": 0.0,
+            "navigation": {
+              "resources": {
+                "resource-1": {
+                  "entity_id": "resource-1",
+                  "kind": "food",
+                  "last_seen_tick": 449,
+                  "position_m": [
+                    2.0,
+                    2.0
+                  ],
+                  "radius_m": 0.0
+                },
+                "resource-2": {
+                  "entity_id": "resource-2",
+                  "kind": "water",
+                  "last_seen_tick": 449,
+                  "position_m": [
+                    3.0,
+                    2.0
+                  ],
+                  "radius_m": 0.0
+                },
+                "resource-4": {
+                  "entity_id": "resource-4",
+                  "kind": "stone",
+                  "last_seen_tick": 449,
+                  "position_m": [
+                    5.0,
+                    2.0
+                  ],
+                  "radius_m": 0.15
+                }
+              }
+            },
+            "next_call_tick": 0,
+            "next_goal_tick": 357,
+            "pending": null,
+            "pending_owner": "survival",
+            "sequence": 4,
+            "submitted": 3
+          },
+          "agent-3": {
+            "agent": "agent-3",
+            "authored_steps": 6,
+            "call_limit": 0,
+            "calls": 0,
+            "fallback_goals": 0,
+            "goal": null,
+            "goals_blocked": 0,
+            "goals_completed": 1,
+            "last_tick": 449,
+            "memory_enabled": true,
+            "model": false,
+            "model_goals": 0,
+            "model_latency_s": 0.0,
+            "navigation": {
+              "approach_memory": {},
+              "resources": {
+                "resource-1": {
+                  "entity_id": "resource-1",
+                  "kind": "food",
+                  "last_seen_tick": 449,
+                  "position_m": [
+                    2.0,
+                    2.0
+                  ],
+                  "radius_m": 0.0
+                },
+                "resource-2": {
+                  "entity_id": "resource-2",
+                  "kind": "water",
+                  "last_seen_tick": 449,
+                  "position_m": [
+                    3.0,
+                    2.0
+                  ],
+                  "radius_m": 0.0
+                },
+                "resource-4": {
+                  "entity_id": "resource-4",
+                  "kind": "stone",
+                  "last_seen_tick": 449,
+                  "position_m": [
+                    5.0,
+                    2.0
+                  ],
+                  "radius_m": 0.15
+                }
+              },
+              "search": 0
+            },
+            "next_call_tick": 0,
+            "next_goal_tick": 385,
+            "pending": null,
+            "pending_owner": "survival",
+            "sequence": 7,
+            "submitted": 6
+          },
+          "agent-4": {
+            "agent": "agent-4",
+            "authored_steps": 4,
+            "call_limit": 0,
+            "calls": 0,
+            "fallback_goals": 0,
+            "goal": null,
+            "goals_blocked": 0,
+            "goals_completed": 1,
+            "last_tick": 449,
+            "memory_enabled": true,
+            "model": false,
+            "model_goals": 0,
+            "model_latency_s": 0.0,
+            "navigation": {
+              "resources": {
+                "resource-1": {
+                  "entity_id": "resource-1",
+                  "kind": "food",
+                  "last_seen_tick": 449,
+                  "position_m": [
+                    2.0,
+                    2.0
+                  ],
+                  "radius_m": 0.0
+                },
+                "resource-2": {
+                  "entity_id": "resource-2",
+                  "kind": "water",
+                  "last_seen_tick": 449,
+                  "position_m": [
+                    3.0,
+                    2.0
+                  ],
+                  "radius_m": 0.0
+                },
+                "resource-4": {
+                  "entity_id": "resource-4",
+                  "kind": "stone",
+                  "last_seen_tick": 449,
+                  "position_m": [
+                    5.0,
+                    2.0
+                  ],
+                  "radius_m": 0.15
+                }
+              }
+            },
+            "next_call_tick": 0,
+            "next_goal_tick": 368,
+            "pending": null,
+            "pending_owner": "survival",
+            "sequence": 5,
+            "submitted": 4
+          }
+        }
+      },
+      "f12": {
+        "schema": "alice-integration-store-f12-1",
+        "rule": "alice-integration-f12-1",
+        "run_id": "bd91419e-9380-4127-a43b-f3d3d48b3388",
+        "actors": [
+          "agent-1",
+          "agent-2",
+          "agent-3",
+          "agent-4"
+        ],
+        "native_tick": 450,
+        "native_state_hash": "6c56db641c1ee97aedce9a390889d89508d3d2ae3eea795beec563fc6e226310",
+        "source_db_sha256": "cd29dcb49aa61894146fbdfa837b2ad3179cb1db8cfe7f47dca012281b0f572b",
+        "source_native_state_hash": "aecf776c3bce001daa4a1781d05057e618d13c2d1c6f8dde6f0a110dcde5f6f5",
+        "native_schema": {
+          "checkpoint_schema": 9,
+          "storage_db_version": 10
+        },
+        "state_hash": "aac87f553d3cae52a11f12935713b4b4c4b4525cae2c2cfde4f060e12a18314d",
+        "operation_count": 71,
+        "overlay_summaries": {
+          "agent-1": {
+            "f8": {
+              "revision": 0,
+              "evidence_count": 0,
+              "failure_streaks": {
+                "move_to_safety": 0,
+                "reconsider": 0,
+                "request_help": 0,
+                "rest": 0,
+                "switch_plan": 0
+              }
+            },
+            "f9": {
+              "revision": 1,
+              "evidence_count": 1,
+              "production_count": 1,
+              "partner_count": 0
+            },
+            "f10": {
+              "revision": 4,
+              "evidence_count": 4,
+              "available": [
+                "pride"
+              ]
+            },
+            "f11": {
+              "revision": 4,
+              "evidence_count": 2,
+              "declared_value_count": 2,
+              "acquired_value_count": 1,
+              "commitment_count": 1,
+              "summary_evidence_count": 2
+            }
+          },
+          "agent-2": {
+            "f8": {
+              "revision": 1,
+              "evidence_count": 1,
+              "failure_streaks": {
+                "move_to_safety": 1,
+                "reconsider": 0,
+                "request_help": 0,
+                "rest": 0,
+                "switch_plan": 0
+              }
+            },
+            "f9": {
+              "revision": 2,
+              "evidence_count": 2,
+              "production_count": 0,
+              "partner_count": 1
+            },
+            "f10": {
+              "revision": 6,
+              "evidence_count": 6,
+              "available": [
+                "pride"
+              ]
+            },
+            "f11": {
+              "revision": 6,
+              "evidence_count": 3,
+              "declared_value_count": 2,
+              "acquired_value_count": 1,
+              "commitment_count": 1,
+              "summary_evidence_count": 3
+            }
+          },
+          "agent-3": {
+            "f8": {
+              "revision": 4,
+              "evidence_count": 4,
+              "failure_streaks": {
+                "move_to_safety": 4,
+                "reconsider": 0,
+                "request_help": 0,
+                "rest": 0,
+                "switch_plan": 0
+              }
+            },
+            "f9": {
+              "revision": 0,
+              "evidence_count": 0,
+              "production_count": 0,
+              "partner_count": 0
+            },
+            "f10": {
+              "revision": 12,
+              "evidence_count": 12,
+              "available": [
+                "pride"
+              ]
+            },
+            "f11": {
+              "revision": 12,
+              "evidence_count": 6,
+              "declared_value_count": 2,
+              "acquired_value_count": 1,
+              "commitment_count": 1,
+              "summary_evidence_count": 6
+            }
+          },
+          "agent-4": {
+            "f8": {
+              "revision": 2,
+              "evidence_count": 2,
+              "failure_streaks": {
+                "move_to_safety": 2,
+                "reconsider": 0,
+                "request_help": 0,
+                "rest": 0,
+                "switch_plan": 0
+              }
+            },
+            "f9": {
+              "revision": 0,
+              "evidence_count": 0,
+              "production_count": 0,
+              "partner_count": 0
+            },
+            "f10": {
+              "revision": 8,
+              "evidence_count": 8,
+              "available": [
+                "pride"
+              ]
+            },
+            "f11": {
+              "revision": 8,
+              "evidence_count": 4,
+              "declared_value_count": 2,
+              "acquired_value_count": 1,
+              "commitment_count": 1,
+              "summary_evidence_count": 4
+            }
+          }
+        }
+      },
+      "f12_replay": {
+        "replay_matches": true,
+        "operations": 71,
+        "state_hash": "aac87f553d3cae52a11f12935713b4b4c4b4525cae2c2cfde4f060e12a18314d",
+        "last_operation_id": "survival-f11-summary-agent-4-stable-agent-4-5"
+      },
+      "f6_replay": {
+        "replay_matches": true,
+        "operations": 2,
+        "state_hash": "a1de7bff74043c5ab78bc8bc394fddcc28702272183d42e94d4cab34915dfa64"
+      },
+      "f7_replay": {
+        "replay_matches": true,
+        "operations": 7,
+        "state_hash": "9f955ce087b92686e13ae8d635bb3fc86d19c80ba1785bf77bf4c9e53e7b1472"
+      }
+    }
+  },
+  "control": {
+    "stages": [
+      {
+        "duration_s": 30.0,
+        "stabilization": {
+          "status": "target_reached",
+          "initial_tick": "0",
+          "tick": "150",
+          "simulated_s": 30.0,
+          "wall_s": 26.845160199998645,
+          "state_hash": "4525cfb88fed4bd04a194564ef986c408551ca7344fc108001d23a106a6598ec",
+          "replay": {
+            "replay_matches": true,
+            "tick": "150",
+            "state_hash": "4525cfb88fed4bd04a194564ef986c408551ca7344fc108001d23a106a6598ec"
+          }
+        },
+        "native": {
+          "tick": 150,
+          "simulated_time_s": 30.0,
+          "alive": 4,
+          "population": 4,
+          "health_min": 1.0,
+          "hunger_mean": 0.3799999999999967,
+          "thirst_mean": 0.4450000000000034,
+          "fatigue_mean": 0.22399999999999903,
+          "material_totals_ug": {
+            "food": "8000000000",
+            "fuel_X": "0",
+            "inert_material": "32000000000",
+            "oxygen": "0",
+            "product_P": "0",
+            "stone": "4000000000",
+            "tree": "18150000000",
+            "water": "16000000000"
+          },
+          "state_hash": "4525cfb88fed4bd04a194564ef986c408551ca7344fc108001d23a106a6598ec",
+          "replay": {
+            "replay_matches": true,
+            "tick": "150",
+            "state_hash": "4525cfb88fed4bd04a194564ef986c408551ca7344fc108001d23a106a6598ec"
+          }
+        },
+        "controller": {
+          "goals_completed": 0,
+          "goals_blocked": 0,
+          "submitted": 0,
+          "authored_steps": 0,
+          "fallback_goals": 0,
+          "per_actor": {
+            "agent-1": {
+              "agent": "agent-1",
+              "authored_steps": 0,
+              "call_limit": 0,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 0,
+              "last_tick": 149,
+              "memory_enabled": true,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {
+                "resources": {
+                  "resource-1": {
+                    "entity_id": "resource-1",
+                    "kind": "food",
+                    "last_seen_tick": 149,
+                    "position_m": [
+                      2.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-2": {
+                    "entity_id": "resource-2",
+                    "kind": "water",
+                    "last_seen_tick": 149,
+                    "position_m": [
+                      3.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-4": {
+                    "entity_id": "resource-4",
+                    "kind": "stone",
+                    "last_seen_tick": 149,
+                    "position_m": [
+                      5.0,
+                      2.0
+                    ],
+                    "radius_m": 0.15
+                  }
+                }
+              },
+              "next_call_tick": 0,
+              "next_goal_tick": 0,
+              "pending": null,
+              "sequence": 0,
+              "submitted": 0
+            },
+            "agent-2": {
+              "agent": "agent-2",
+              "authored_steps": 0,
+              "call_limit": 0,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 0,
+              "last_tick": 149,
+              "memory_enabled": true,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {
+                "resources": {
+                  "resource-1": {
+                    "entity_id": "resource-1",
+                    "kind": "food",
+                    "last_seen_tick": 149,
+                    "position_m": [
+                      2.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-2": {
+                    "entity_id": "resource-2",
+                    "kind": "water",
+                    "last_seen_tick": 149,
+                    "position_m": [
+                      3.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-4": {
+                    "entity_id": "resource-4",
+                    "kind": "stone",
+                    "last_seen_tick": 149,
+                    "position_m": [
+                      5.0,
+                      2.0
+                    ],
+                    "radius_m": 0.15
+                  }
+                }
+              },
+              "next_call_tick": 0,
+              "next_goal_tick": 0,
+              "pending": null,
+              "sequence": 0,
+              "submitted": 0
+            },
+            "agent-3": {
+              "agent": "agent-3",
+              "authored_steps": 0,
+              "call_limit": 0,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 0,
+              "last_tick": 149,
+              "memory_enabled": true,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {
+                "resources": {
+                  "resource-4": {
+                    "entity_id": "resource-4",
+                    "kind": "stone",
+                    "last_seen_tick": 149,
+                    "position_m": [
+                      5.0,
+                      2.0
+                    ],
+                    "radius_m": 0.15
+                  }
+                }
+              },
+              "next_call_tick": 0,
+              "next_goal_tick": 0,
+              "pending": null,
+              "sequence": 0,
+              "submitted": 0
+            },
+            "agent-4": {
+              "agent": "agent-4",
+              "authored_steps": 0,
+              "call_limit": 0,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 0,
+              "last_tick": 149,
+              "memory_enabled": true,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {
+                "resources": {
+                  "resource-1": {
+                    "entity_id": "resource-1",
+                    "kind": "food",
+                    "last_seen_tick": 149,
+                    "position_m": [
+                      2.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-2": {
+                    "entity_id": "resource-2",
+                    "kind": "water",
+                    "last_seen_tick": 149,
+                    "position_m": [
+                      3.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-4": {
+                    "entity_id": "resource-4",
+                    "kind": "stone",
+                    "last_seen_tick": 149,
+                    "position_m": [
+                      5.0,
+                      2.0
+                    ],
+                    "radius_m": 0.15
+                  }
+                }
+              },
+              "next_call_tick": 0,
+              "next_goal_tick": 0,
+              "pending": null,
+              "sequence": 0,
+              "submitted": 0
+            }
+          }
+        }
+      },
+      {
+        "duration_s": 30.0,
+        "stabilization": {
+          "status": "target_reached",
+          "initial_tick": "150",
+          "tick": "300",
+          "simulated_s": 30.0,
+          "wall_s": 25.829735100007383,
+          "state_hash": "b813f4b0ac1d869148ae802df0dc2c89ab8dddebb871bd887aa103f8f94d15f8",
+          "replay": {
+            "replay_matches": true,
+            "tick": "300",
+            "state_hash": "b813f4b0ac1d869148ae802df0dc2c89ab8dddebb871bd887aa103f8f94d15f8"
+          }
+        },
+        "native": {
+          "tick": 300,
+          "simulated_time_s": 60.0,
+          "alive": 4,
+          "population": 4,
+          "health_min": 1.0,
+          "hunger_mean": 0.40999999999999337,
+          "thirst_mean": 0.49000000000000676,
+          "fatigue_mean": 0.24799999999999806,
+          "material_totals_ug": {
+            "food": "8000000000",
+            "fuel_X": "0",
+            "inert_material": "32000000000",
+            "oxygen": "0",
+            "product_P": "0",
+            "stone": "4000000000",
+            "tree": "18300000000",
+            "water": "16000000000"
+          },
+          "state_hash": "b813f4b0ac1d869148ae802df0dc2c89ab8dddebb871bd887aa103f8f94d15f8",
+          "replay": {
+            "replay_matches": true,
+            "tick": "300",
+            "state_hash": "b813f4b0ac1d869148ae802df0dc2c89ab8dddebb871bd887aa103f8f94d15f8"
+          }
+        },
+        "controller": {
+          "goals_completed": 0,
+          "goals_blocked": 0,
+          "submitted": 0,
+          "authored_steps": 0,
+          "fallback_goals": 0,
+          "per_actor": {
+            "agent-1": {
+              "agent": "agent-1",
+              "authored_steps": 0,
+              "call_limit": 0,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 0,
+              "last_tick": 299,
+              "memory_enabled": true,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {
+                "resources": {
+                  "resource-1": {
+                    "entity_id": "resource-1",
+                    "kind": "food",
+                    "last_seen_tick": 299,
+                    "position_m": [
+                      2.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-2": {
+                    "entity_id": "resource-2",
+                    "kind": "water",
+                    "last_seen_tick": 299,
+                    "position_m": [
+                      3.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-4": {
+                    "entity_id": "resource-4",
+                    "kind": "stone",
+                    "last_seen_tick": 299,
+                    "position_m": [
+                      5.0,
+                      2.0
+                    ],
+                    "radius_m": 0.15
+                  }
+                }
+              },
+              "next_call_tick": 0,
+              "next_goal_tick": 0,
+              "pending": null,
+              "sequence": 0,
+              "submitted": 0
+            },
+            "agent-2": {
+              "agent": "agent-2",
+              "authored_steps": 0,
+              "call_limit": 0,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 0,
+              "last_tick": 299,
+              "memory_enabled": true,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {
+                "resources": {
+                  "resource-1": {
+                    "entity_id": "resource-1",
+                    "kind": "food",
+                    "last_seen_tick": 299,
+                    "position_m": [
+                      2.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-2": {
+                    "entity_id": "resource-2",
+                    "kind": "water",
+                    "last_seen_tick": 299,
+                    "position_m": [
+                      3.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-4": {
+                    "entity_id": "resource-4",
+                    "kind": "stone",
+                    "last_seen_tick": 299,
+                    "position_m": [
+                      5.0,
+                      2.0
+                    ],
+                    "radius_m": 0.15
+                  }
+                }
+              },
+              "next_call_tick": 0,
+              "next_goal_tick": 0,
+              "pending": null,
+              "sequence": 0,
+              "submitted": 0
+            },
+            "agent-3": {
+              "agent": "agent-3",
+              "authored_steps": 0,
+              "call_limit": 0,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 0,
+              "last_tick": 299,
+              "memory_enabled": true,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {
+                "resources": {
+                  "resource-4": {
+                    "entity_id": "resource-4",
+                    "kind": "stone",
+                    "last_seen_tick": 299,
+                    "position_m": [
+                      5.0,
+                      2.0
+                    ],
+                    "radius_m": 0.15
+                  }
+                }
+              },
+              "next_call_tick": 0,
+              "next_goal_tick": 0,
+              "pending": null,
+              "sequence": 0,
+              "submitted": 0
+            },
+            "agent-4": {
+              "agent": "agent-4",
+              "authored_steps": 0,
+              "call_limit": 0,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 0,
+              "last_tick": 299,
+              "memory_enabled": true,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {
+                "resources": {
+                  "resource-1": {
+                    "entity_id": "resource-1",
+                    "kind": "food",
+                    "last_seen_tick": 299,
+                    "position_m": [
+                      2.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-2": {
+                    "entity_id": "resource-2",
+                    "kind": "water",
+                    "last_seen_tick": 299,
+                    "position_m": [
+                      3.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-4": {
+                    "entity_id": "resource-4",
+                    "kind": "stone",
+                    "last_seen_tick": 299,
+                    "position_m": [
+                      5.0,
+                      2.0
+                    ],
+                    "radius_m": 0.15
+                  }
+                }
+              },
+              "next_call_tick": 0,
+              "next_goal_tick": 0,
+              "pending": null,
+              "sequence": 0,
+              "submitted": 0
+            }
+          }
+        }
+      },
+      {
+        "duration_s": 30.0,
+        "stabilization": {
+          "status": "target_reached",
+          "initial_tick": "300",
+          "tick": "450",
+          "simulated_s": 30.0,
+          "wall_s": 29.11377779999748,
+          "state_hash": "6c56db641c1ee97aedce9a390889d89508d3d2ae3eea795beec563fc6e226310",
+          "replay": {
+            "replay_matches": true,
+            "tick": "450",
+            "state_hash": "6c56db641c1ee97aedce9a390889d89508d3d2ae3eea795beec563fc6e226310"
+          }
+        },
+        "native": {
+          "tick": 450,
+          "simulated_time_s": 90.0,
+          "alive": 4,
+          "population": 4,
+          "health_min": 1.0,
+          "hunger_mean": 0.43999999999999007,
+          "thirst_mean": 0.026250000000000055,
+          "fatigue_mean": 0.2735599999999976,
+          "material_totals_ug": {
+            "food": "8000000000",
+            "fuel_X": "0",
+            "inert_material": "32000000000",
+            "oxygen": "0",
+            "product_P": "0",
+            "stone": "4000000000",
+            "tree": "18450000000",
+            "water": "16000000000"
+          },
+          "state_hash": "6c56db641c1ee97aedce9a390889d89508d3d2ae3eea795beec563fc6e226310",
+          "replay": {
+            "replay_matches": true,
+            "tick": "450",
+            "state_hash": "6c56db641c1ee97aedce9a390889d89508d3d2ae3eea795beec563fc6e226310"
+          }
+        },
+        "controller": {
+          "goals_completed": 4,
+          "goals_blocked": 0,
+          "submitted": 15,
+          "authored_steps": 15,
+          "fallback_goals": 0,
+          "per_actor": {
+            "agent-1": {
+              "agent": "agent-1",
+              "authored_steps": 2,
+              "call_limit": 0,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 1,
+              "last_tick": 449,
+              "memory_enabled": true,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {
+                "resources": {
+                  "resource-1": {
+                    "entity_id": "resource-1",
+                    "kind": "food",
+                    "last_seen_tick": 449,
+                    "position_m": [
+                      2.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-2": {
+                    "entity_id": "resource-2",
+                    "kind": "water",
+                    "last_seen_tick": 449,
+                    "position_m": [
+                      3.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-4": {
+                    "entity_id": "resource-4",
+                    "kind": "stone",
+                    "last_seen_tick": 449,
+                    "position_m": [
+                      5.0,
+                      2.0
+                    ],
+                    "radius_m": 0.15
+                  }
+                }
+              },
+              "next_call_tick": 0,
+              "next_goal_tick": 344,
+              "pending": null,
+              "pending_owner": "survival",
+              "sequence": 3,
+              "submitted": 2
+            },
+            "agent-2": {
+              "agent": "agent-2",
+              "authored_steps": 3,
+              "call_limit": 0,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 1,
+              "last_tick": 449,
+              "memory_enabled": true,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {
+                "resources": {
+                  "resource-1": {
+                    "entity_id": "resource-1",
+                    "kind": "food",
+                    "last_seen_tick": 449,
+                    "position_m": [
+                      2.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-2": {
+                    "entity_id": "resource-2",
+                    "kind": "water",
+                    "last_seen_tick": 449,
+                    "position_m": [
+                      3.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-4": {
+                    "entity_id": "resource-4",
+                    "kind": "stone",
+                    "last_seen_tick": 449,
+                    "position_m": [
+                      5.0,
+                      2.0
+                    ],
+                    "radius_m": 0.15
+                  }
+                }
+              },
+              "next_call_tick": 0,
+              "next_goal_tick": 357,
+              "pending": null,
+              "pending_owner": "survival",
+              "sequence": 4,
+              "submitted": 3
+            },
+            "agent-3": {
+              "agent": "agent-3",
+              "authored_steps": 6,
+              "call_limit": 0,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 1,
+              "last_tick": 449,
+              "memory_enabled": true,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {
+                "approach_memory": {},
+                "resources": {
+                  "resource-1": {
+                    "entity_id": "resource-1",
+                    "kind": "food",
+                    "last_seen_tick": 449,
+                    "position_m": [
+                      2.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-2": {
+                    "entity_id": "resource-2",
+                    "kind": "water",
+                    "last_seen_tick": 449,
+                    "position_m": [
+                      3.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-4": {
+                    "entity_id": "resource-4",
+                    "kind": "stone",
+                    "last_seen_tick": 449,
+                    "position_m": [
+                      5.0,
+                      2.0
+                    ],
+                    "radius_m": 0.15
+                  }
+                },
+                "search": 0
+              },
+              "next_call_tick": 0,
+              "next_goal_tick": 385,
+              "pending": null,
+              "pending_owner": "survival",
+              "sequence": 7,
+              "submitted": 6
+            },
+            "agent-4": {
+              "agent": "agent-4",
+              "authored_steps": 4,
+              "call_limit": 0,
+              "calls": 0,
+              "fallback_goals": 0,
+              "goal": null,
+              "goals_blocked": 0,
+              "goals_completed": 1,
+              "last_tick": 449,
+              "memory_enabled": true,
+              "model": false,
+              "model_goals": 0,
+              "model_latency_s": 0.0,
+              "navigation": {
+                "resources": {
+                  "resource-1": {
+                    "entity_id": "resource-1",
+                    "kind": "food",
+                    "last_seen_tick": 449,
+                    "position_m": [
+                      2.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-2": {
+                    "entity_id": "resource-2",
+                    "kind": "water",
+                    "last_seen_tick": 449,
+                    "position_m": [
+                      3.0,
+                      2.0
+                    ],
+                    "radius_m": 0.0
+                  },
+                  "resource-4": {
+                    "entity_id": "resource-4",
+                    "kind": "stone",
+                    "last_seen_tick": 449,
+                    "position_m": [
+                      5.0,
+                      2.0
+                    ],
+                    "radius_m": 0.15
+                  }
+                }
+              },
+              "next_call_tick": 0,
+              "next_goal_tick": 368,
+              "pending": null,
+              "pending_owner": "survival",
+              "sequence": 5,
+              "submitted": 4
+            }
+          }
+        }
+      }
+    ],
+    "final": {
+      "native": {
+        "tick": 450,
+        "simulated_time_s": 90.0,
+        "alive": 4,
+        "population": 4,
+        "health_min": 1.0,
+        "hunger_mean": 0.43999999999999007,
+        "thirst_mean": 0.026250000000000055,
+        "fatigue_mean": 0.2735599999999976,
+        "material_totals_ug": {
+          "food": "8000000000",
+          "fuel_X": "0",
+          "inert_material": "32000000000",
+          "oxygen": "0",
+          "product_P": "0",
+          "stone": "4000000000",
+          "tree": "18450000000",
+          "water": "16000000000"
+        },
+        "state_hash": "6c56db641c1ee97aedce9a390889d89508d3d2ae3eea795beec563fc6e226310",
+        "replay": {
+          "replay_matches": true,
+          "tick": "450",
+          "state_hash": "6c56db641c1ee97aedce9a390889d89508d3d2ae3eea795beec563fc6e226310"
+        }
+      },
+      "controller": {
+        "goals_completed": 4,
+        "goals_blocked": 0,
+        "submitted": 15,
+        "authored_steps": 15,
+        "fallback_goals": 0,
+        "per_actor": {
+          "agent-1": {
+            "agent": "agent-1",
+            "authored_steps": 2,
+            "call_limit": 0,
+            "calls": 0,
+            "fallback_goals": 0,
+            "goal": null,
+            "goals_blocked": 0,
+            "goals_completed": 1,
+            "last_tick": 449,
+            "memory_enabled": true,
+            "model": false,
+            "model_goals": 0,
+            "model_latency_s": 0.0,
+            "navigation": {
+              "resources": {
+                "resource-1": {
+                  "entity_id": "resource-1",
+                  "kind": "food",
+                  "last_seen_tick": 449,
+                  "position_m": [
+                    2.0,
+                    2.0
+                  ],
+                  "radius_m": 0.0
+                },
+                "resource-2": {
+                  "entity_id": "resource-2",
+                  "kind": "water",
+                  "last_seen_tick": 449,
+                  "position_m": [
+                    3.0,
+                    2.0
+                  ],
+                  "radius_m": 0.0
+                },
+                "resource-4": {
+                  "entity_id": "resource-4",
+                  "kind": "stone",
+                  "last_seen_tick": 449,
+                  "position_m": [
+                    5.0,
+                    2.0
+                  ],
+                  "radius_m": 0.15
+                }
+              }
+            },
+            "next_call_tick": 0,
+            "next_goal_tick": 344,
+            "pending": null,
+            "pending_owner": "survival",
+            "sequence": 3,
+            "submitted": 2
+          },
+          "agent-2": {
+            "agent": "agent-2",
+            "authored_steps": 3,
+            "call_limit": 0,
+            "calls": 0,
+            "fallback_goals": 0,
+            "goal": null,
+            "goals_blocked": 0,
+            "goals_completed": 1,
+            "last_tick": 449,
+            "memory_enabled": true,
+            "model": false,
+            "model_goals": 0,
+            "model_latency_s": 0.0,
+            "navigation": {
+              "resources": {
+                "resource-1": {
+                  "entity_id": "resource-1",
+                  "kind": "food",
+                  "last_seen_tick": 449,
+                  "position_m": [
+                    2.0,
+                    2.0
+                  ],
+                  "radius_m": 0.0
+                },
+                "resource-2": {
+                  "entity_id": "resource-2",
+                  "kind": "water",
+                  "last_seen_tick": 449,
+                  "position_m": [
+                    3.0,
+                    2.0
+                  ],
+                  "radius_m": 0.0
+                },
+                "resource-4": {
+                  "entity_id": "resource-4",
+                  "kind": "stone",
+                  "last_seen_tick": 449,
+                  "position_m": [
+                    5.0,
+                    2.0
+                  ],
+                  "radius_m": 0.15
+                }
+              }
+            },
+            "next_call_tick": 0,
+            "next_goal_tick": 357,
+            "pending": null,
+            "pending_owner": "survival",
+            "sequence": 4,
+            "submitted": 3
+          },
+          "agent-3": {
+            "agent": "agent-3",
+            "authored_steps": 6,
+            "call_limit": 0,
+            "calls": 0,
+            "fallback_goals": 0,
+            "goal": null,
+            "goals_blocked": 0,
+            "goals_completed": 1,
+            "last_tick": 449,
+            "memory_enabled": true,
+            "model": false,
+            "model_goals": 0,
+            "model_latency_s": 0.0,
+            "navigation": {
+              "approach_memory": {},
+              "resources": {
+                "resource-1": {
+                  "entity_id": "resource-1",
+                  "kind": "food",
+                  "last_seen_tick": 449,
+                  "position_m": [
+                    2.0,
+                    2.0
+                  ],
+                  "radius_m": 0.0
+                },
+                "resource-2": {
+                  "entity_id": "resource-2",
+                  "kind": "water",
+                  "last_seen_tick": 449,
+                  "position_m": [
+                    3.0,
+                    2.0
+                  ],
+                  "radius_m": 0.0
+                },
+                "resource-4": {
+                  "entity_id": "resource-4",
+                  "kind": "stone",
+                  "last_seen_tick": 449,
+                  "position_m": [
+                    5.0,
+                    2.0
+                  ],
+                  "radius_m": 0.15
+                }
+              },
+              "search": 0
+            },
+            "next_call_tick": 0,
+            "next_goal_tick": 385,
+            "pending": null,
+            "pending_owner": "survival",
+            "sequence": 7,
+            "submitted": 6
+          },
+          "agent-4": {
+            "agent": "agent-4",
+            "authored_steps": 4,
+            "call_limit": 0,
+            "calls": 0,
+            "fallback_goals": 0,
+            "goal": null,
+            "goals_blocked": 0,
+            "goals_completed": 1,
+            "last_tick": 449,
+            "memory_enabled": true,
+            "model": false,
+            "model_goals": 0,
+            "model_latency_s": 0.0,
+            "navigation": {
+              "resources": {
+                "resource-1": {
+                  "entity_id": "resource-1",
+                  "kind": "food",
+                  "last_seen_tick": 449,
+                  "position_m": [
+                    2.0,
+                    2.0
+                  ],
+                  "radius_m": 0.0
+                },
+                "resource-2": {
+                  "entity_id": "resource-2",
+                  "kind": "water",
+                  "last_seen_tick": 449,
+                  "position_m": [
+                    3.0,
+                    2.0
+                  ],
+                  "radius_m": 0.0
+                },
+                "resource-4": {
+                  "entity_id": "resource-4",
+                  "kind": "stone",
+                  "last_seen_tick": 449,
+                  "position_m": [
+                    5.0,
+                    2.0
+                  ],
+                  "radius_m": 0.15
+                }
+              }
+            },
+            "next_call_tick": 0,
+            "next_goal_tick": 368,
+            "pending": null,
+            "pending_owner": "survival",
+            "sequence": 5,
+            "submitted": 4
+          }
+        }
+      }
+    }
+  },
+  "native_state_hash_matches_control": true,
+  "integrated_all_alive": true,
+  "control_all_alive": true,
+  "integrated_replay_matches": true,
+  "unverified": [
+    "F8-F11 proposal choices are not native scheduler inputs",
+    "no humanlike emotion or communication claim",
+    "no indefinite lifelong survival claim",
+    "no multi-seed scientific survival gate"
+  ]
+}

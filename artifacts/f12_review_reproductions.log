@@ -1,0 +1,141 @@
+FFFFFF                                                                   [100%]
+================================== FAILURES ===================================
+______ ReviewRegressions.test_embedded_private_state_cannot_change_owner ______
+
+self = <tests.test_f12_review_regressions.ReviewRegressions testMethod=test_embedded_private_state_cannot_change_owner>
+
+    def test_embedded_private_state_cannot_change_owner(self):
+        state=integration_f12._initial_states(['agent-1'],'test-run',[])['agent-1']
+        state=deepcopy(state);state['f9']['owner']='agent-2'
+>       with self.assertRaises(ValueError):integration_f12._validate_state('agent-1',state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: ValueError not raised
+
+tests\test_f12_review_regressions.py:22: AssertionError
+_____ ReviewRegressions.test_nonfinite_candidate_coordinates_are_rejected _____
+
+self = <tests.test_f12_review_regressions.ReviewRegressions testMethod=test_nonfinite_candidate_coordinates_are_rejected>
+
+    def test_nonfinite_candidate_coordinates_are_rejected(self):
+>       with self.assertRaises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: ValueError not raised
+
+tests\test_f12_review_regressions.py:14: AssertionError
+_ ReviewRegressions.test_receipt_missing_action_with_error_code_is_value_error _
+
+self = <tests.test_f12_review_regressions.ReviewRegressions testMethod=test_receipt_missing_action_with_error_code_is_value_error>
+
+    def test_receipt_missing_action_with_error_code_is_value_error(self):
+        with self.assertRaises(ValueError):
+>           regulation_f8._receipt({'strategy':'rest', 'receipt':{
+                'request_id':'bad','status':'failed','error_code':'BUSY'},
+                'result':{},'estimated_cost_s':0})
+
+tests\test_f12_review_regressions.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def _receipt(outcome):
+        """Normalize a direct native result or a receipt/result envelope."""
+        if type(outcome) is not dict:
+            raise ValueError("F8 outcome must be a native-shaped mapping")
+        _reject_private_keys(outcome, "outcome")
+        if "receipt" in outcome:
+            if set(outcome) != {"strategy", "receipt", "result", "estimated_cost_s"}:
+                raise ValueError("Malformed F8 receipt/result envelope")
+            receipt = outcome["receipt"]
+            if type(receipt) is not dict or not set(receipt).issubset({"request_id", "status", "action_type", "error_code"}):
+                raise ValueError("Malformed F8 native receipt")
+            if set(receipt) < {"request_id", "status", "action_type"}:
+                raise ValueError("Incomplete F8 native receipt")
+            result = outcome["result"]
+            strategy = outcome["strategy"]
+            estimated_cost = outcome["estimated_cost_s"]
+        else:
+            allowed = {"request_id", "status", "action_type", "strategy", "result", "error_code", "estimated_cost_s"}
+            if not set(outcome).issubset(allowed) or not {"request_id", "status", "action_type", "result"}.issubset(outcome):
+                raise ValueError("Malformed F8 native result envelope")
+            receipt = {key: outcome[key] for key in ("request_id", "status", "action_type") if key in outcome}
+            if "error_code" in outcome:
+                receipt["error_code"] = outcome["error_code"]
+            result = outcome["result"]
+            strategy = outcome.get("strategy")
+            estimated_cost = outcome.get("estimated_cost_s", 0.0)
+        _text(receipt["request_id"], "receipt request_id")
+        if receipt["status"] not in {"completed", "failed", "rejected", "expired"}:
+            raise ValueError("Invalid F8 receipt status")
+>       _text(receipt["action_type"], "receipt action_type")
+              ^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'action_type'
+
+underworld\regulation_f8.py:336: KeyError
+_____ IntegrationF12Tests.test_operation_identity_includes_operation_kind _____
+
+self = <tests.test_integration_f12.IntegrationF12Tests testMethod=test_operation_identity_includes_operation_kind>
+
+    def test_operation_identity_includes_operation_kind(self):
+        event = self.event('kind-conflict', 'represented_standard', provenance='seeded')
+        integration.observe_social(self.destination, 'agent-1', event, operation_id='same-kind-id')
+>       with self.assertRaisesRegex(ValueError, 'conflicting'):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: ValueError not raised
+
+tests\test_integration_f12.py:28: AssertionError
+_______ IntegrationF12Tests.test_attach_preserves_existing_f8_learning ________
+
+self = <tests.test_integration_f12.IntegrationF12Tests testMethod=test_attach_preserves_existing_f8_learning>
+
+    def test_attach_preserves_existing_f8_learning(self):
+        from underworld import regulation_store_f8
+        f8 = self.root / 'f8.sqlite'
+        regulation_store_f8.attach(self.source, f8)
+        observation = storage.observe(f8, ['agent-1'])[0]
+        regulation_store_f8.record_outcome(f8, 'agent-1', observation,
+            {'request_id':'guided-existing', 'status':'completed', 'action_type':'rest',
+             'strategy':'rest', 'result':{}, 'estimated_cost_s':1})
+        inherited = self.root / 'inherited.sqlite'
+        result = integration.attach(f8, inherited)
+>       self.assertEqual(result['overlay_summaries']['agent-1']['f8']['revision'], 1)
+E       AssertionError: 0 != 1
+
+tests\test_integration_f12.py:41: AssertionError
+_____ OthersStoreF7Tests.test_wire_roundtrip_native_snapshot_is_accepted ______
+
+self = <tests.test_others_store_f7.OthersStoreF7Tests testMethod=test_wire_roundtrip_native_snapshot_is_accepted>
+
+    def test_wire_roundtrip_native_snapshot_is_accepted(self):
+        native = json.loads(json.dumps(self.native()))
+>       result = store.record_observation(self.destination, 'agent-1', native, envelope())
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_others_store_f7.py:27: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+underworld\others_store_f7.py:287: in record_observation
+    native_observation = _native_is_current(world, observer, observation)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+world = <_underworld.World object at 0x000002B590A00C70>, observer = 'agent-1'
+observation = {'schema_version': 1, 'run_id': 'e0227aca-f359-4496-9d8e-4ef252f3af6b', 'agent_id': 'agent-1', 'tick': '0', ...}
+
+    def _native_is_current(world, observer, observation):
+        if type(observer) is not str or not observer:
+            raise ValueError("invalid F7 observer")
+        current = world.observe_batch([observer])[0]
+        if observation is None:
+            return current
+        if type(observation) is not dict or observation.get("agent_id") != observer:
+            raise ValueError("Foreign F7 native observation")
+        if observation != current:
+>           raise ValueError("F7 observation must match the current native observation")
+E           ValueError: F7 observation must match the current native observation
+
+underworld\others_store_f7.py:150: ValueError
+=========================== short test summary info ===========================
+FAILED tests/test_f12_review_regressions.py::ReviewRegressions::test_embedded_private_state_cannot_change_owner
+FAILED tests/test_f12_review_regressions.py::ReviewRegressions::test_nonfinite_candidate_coordinates_are_rejected
+FAILED tests/test_f12_review_regressions.py::ReviewRegressions::test_receipt_missing_action_with_error_code_is_value_error
+FAILED tests/test_integration_f12.py::IntegrationF12Tests::test_operation_identity_includes_operation_kind
+FAILED tests/test_integration_f12.py::IntegrationF12Tests::test_attach_preserves_existing_f8_learning
+FAILED tests/test_others_store_f7.py::OthersStoreF7Tests::test_wire_roundtrip_native_snapshot_is_accepted
+6 failed in 1.76s

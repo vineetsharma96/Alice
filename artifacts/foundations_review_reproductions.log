@@ -1,0 +1,129 @@
+FFFFFFF                                                                  [100%]
+================================== FAILURES ===================================
+______ FoundationReviewTests.test_adult_starts_with_adult_function_scale ______
+
+self = <tests.test_foundations_review.FoundationReviewTests testMethod=test_adult_starts_with_adult_function_scale>
+
+    def test_adult_starts_with_adult_function_scale(self):
+        state=self.setup_care()
+>       self.assertEqual(state['individuals']['a']['function_scale'],1)
+E       AssertionError: 0.8 != 1
+
+tests\test_foundations_review.py:43: AssertionError
+________ FoundationReviewTests.test_conflicting_care_retry_is_rejected ________
+
+self = <tests.test_foundations_review.FoundationReviewTests testMethod=test_conflicting_care_retry_is_rejected>
+
+    def test_conflicting_care_retry_is_rejected(self):
+        state=self.setup_care();proposal=life.care_proposal(state,'a','b','food',1,0,'care')
+        life.apply_care_receipt(state,proposal);before=deepcopy(state)
+        proposal['amount']=2
+>       with self.assertRaises(ValueError):life.apply_care_receipt(state,proposal)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: ValueError not raised
+
+tests\test_foundations_review.py:38: AssertionError
+________ FoundationReviewTests.test_density_times_volume_is_kilograms _________
+
+self = <tests.test_foundations_review.FoundationReviewTests testMethod=test_density_times_volume_is_kilograms>
+
+    def test_density_times_volume_is_kilograms(self):
+>       self.assertEqual(world._material_mass('stone',1),2600)
+E       AssertionError: 2.6 != 2600
+
+tests\test_foundations_review.py:15: AssertionError
+_ FoundationReviewTests.test_failed_population_add_does_not_leave_invalid_state _
+
+self = <tests.test_foundations_review.FoundationReviewTests testMethod=test_failed_population_add_does_not_leave_invalid_state>
+
+    def test_failed_population_add_does_not_leave_invalid_state(self):
+        state=early.initial_state();early.register_species(state,species())
+        before=deepcopy(state)
+        with patch.object(early,'MAX_INDIVIDUALS',0):
+            with self.assertRaises(ValueError):early.add_individual(state,early_person('a','male'))
+>       self.assertEqual(before,state)
+E       AssertionError: {'sch[1337 chars]s': {}, 'relationships': {}, 'partnership_invi[156 chars]: {}} != {'sch[1337 chars]s': {'a': {'id': 'a', 'species_id': 'humanlike[601 chars]: {}}
+E       Diff is 4523 characters long. Set self.maxDiff to None to see it.
+
+tests\test_foundations_review.py:50: AssertionError
+________ FoundationReviewTests.test_minimum_supported_depth_generates _________
+
+self = <tests.test_foundations_review.FoundationReviewTests testMethod=test_minimum_supported_depth_generates>
+
+    def test_minimum_supported_depth_generates(self):
+>       state=world.generate(61,world.preset_config(width=4,height=4,layer_depth_m=.5))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_foundations_review.py:20: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+underworld\world_generation_g01.py:302: in generate
+    validate_manifest(manifest)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+manifest = {'contract_version': 'alice.world.g01/v1', 'generator_version': 'g01.1', 'seed': 61, 'revision': 0, ...}
+
+    def validate_manifest(manifest: Mapping[str, Any]) -> bool:
+        if not isinstance(manifest, Mapping) or manifest.get("contract_version") != CONTRACT_VERSION:
+            raise ValueError("unsupported world manifest contract")
+        if manifest.get("generator_version") != GENERATOR_VERSION:
+            raise ValueError("unsupported generator version")
+        cfg = validate_config(manifest.get("config", {}))
+        if manifest.get("revision", -1) < 0 or len(manifest.get("cells", [])) != cfg["width"] * cfg["height"]:
+            raise ValueError("invalid cell count or revision")
+        seen = set()
+        for cell in manifest["cells"]:
+            coord = (cell["coord"]["x"], cell["coord"]["y"])
+            if coord in seen or not (0 <= coord[0] < cfg["width"] and 0 <= coord[1] < cfg["height"]):
+                raise ValueError("invalid or duplicate cell coordinate")
+            seen.add(coord)
+            for bounded in ("elevation", "slope", "moisture"):
+                _number(cell[bounded], f"cell {bounded}", 0.0, 1.0)
+            total_depth = 0.0
+            for horizon in cell["horizons"]:
+                _number(horizon["thickness_m"], "horizon thickness", 0.0, cfg["layer_depth_m"])
+                _number(horizon["porosity"], "horizon porosity", 0.0, 1.0)
+                _number(horizon["water_m3"], "horizon water", 0.0, horizon["water_capacity_m3"] + EPSILON)
+                texture = horizon["texture"]
+                if any(float(texture.get(k, -1)) < -EPSILON for k in ("sand", "silt", "clay")) or abs(sum(texture.values()) - 1.0) > 1e-6:
+                    raise ValueError("invalid texture fractions")
+                total_depth += horizon["thickness_m"]
+            if total_depth > cfg["layer_depth_m"] + 1e-6 or cell["surface_water_m3"] < -EPSILON:
+>               raise ValueError("invalid horizon depth or surface water")
+E               ValueError: invalid horizon depth or surface water
+
+underworld\world_generation_g01.py:333: ValueError
+_ FoundationReviewTests.test_negative_care_receipt_is_rejected_without_changing_state _
+
+self = <tests.test_foundations_review.FoundationReviewTests testMethod=test_negative_care_receipt_is_rejected_without_changing_state>
+
+    def test_negative_care_receipt_is_rejected_without_changing_state(self):
+        state=self.setup_care();proposal=life.care_proposal(state,'a','b','food',1,0,'care')
+        proposal['amount']=-1;before=deepcopy(state)
+>       with self.assertRaises(ValueError):life.apply_care_receipt(state,proposal)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: ValueError not raised
+
+tests\test_foundations_review.py:31: AssertionError
+_ FoundationReviewTests.test_save_cannot_overwrite_when_existence_check_races _
+
+self = <tests.test_foundations_review.FoundationReviewTests testMethod=test_save_cannot_overwrite_when_existence_check_races>
+
+    def test_save_cannot_overwrite_when_existence_check_races(self):
+        state=world.generate(1,world.preset_config(width=4,height=4))
+        with tempfile.TemporaryDirectory() as folder:
+            path=Path(folder)/'world.json';path.write_bytes(b'original evidence')
+            with patch.object(Path,'exists',return_value=False):
+>               with self.assertRaises(FileExistsError):world.save(state,path)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E               AssertionError: FileExistsError not raised
+
+tests\test_foundations_review.py:57: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_foundations_review.py::FoundationReviewTests::test_adult_starts_with_adult_function_scale
+FAILED tests/test_foundations_review.py::FoundationReviewTests::test_conflicting_care_retry_is_rejected
+FAILED tests/test_foundations_review.py::FoundationReviewTests::test_density_times_volume_is_kilograms
+FAILED tests/test_foundations_review.py::FoundationReviewTests::test_failed_population_add_does_not_leave_invalid_state
+FAILED tests/test_foundations_review.py::FoundationReviewTests::test_minimum_supported_depth_generates
+FAILED tests/test_foundations_review.py::FoundationReviewTests::test_negative_care_receipt_is_rejected_without_changing_state
+FAILED tests/test_foundations_review.py::FoundationReviewTests::test_save_cannot_overwrite_when_existence_check_races
+7 failed in 0.95s

@@ -1,3 +1,225 @@
+# Current foundation review - 23 October 2026
+
+Reviewed the latest other-agent G01/G47, L02/L59 and M03/M48 additions.
+Fixed ten reproduced defects: mass units/minimum soil depth, unchecked care
+receipts/conflicting retries, incorrect adult function, partial error writes,
+checkpoint overwrites, unspent plant nutrients, care replay double-spending,
+and the generation-order check that ignored its input.
+See docs/FOUNDATIONS_CODE_REVIEW.md for evidence, fixes and compatibility.
+
+Final targeted verification: 76 tests + 3 subtests passed in 25.36s.
+All 11 historical source seals and previous integrated production code match.
+This review did not rerun the slow full repository suite. Earlier 512-test
+claims below are historical other-agent evidence, not current review results.
+
+New numeric data identifiers: g01.2 and g47.2. Old JSON is not silently
+rescaled; use archived matching sources. Saves now refuse existing paths.
+The foundation models remain isolated JSON experiments, not native-world
+integration. Proposals are not authenticated physical receipts. Full social,
+ecological, reproductive and long-horizon scientific gates remain unproved.
+Original review snapshot: artifacts/foundations_review_original.zip.
+Final tests: artifacts/foundations_review_verified_checks.log.
+Historical integrity: artifacts/foundations_review_integrity.json.
+Existing worlds, Phase 9 failure and unrelated setup changes are untouched.
+
+---
+
+# Current: integrated inhabitants profile - 23 October 2026
+
+## Alice specifications 01–03 foundation slices — October 23, 2026
+
+The supplied Alice environmental, lifecycle and microorganism specifications
+now have ordered additive foundations and continuation slices. Alice 01 G0–G3 is implemented in
+`underworld/world_generation_g01.py`; Alice 02 L0–L4 is implemented in
+`underworld/lifecycle_l02.py`; Alice 03 M0–M3 is implemented in
+`underworld/micro_ecology_m03.py`. The ordered cross-stage smoke generates a
+G01 soil/plant-litter manifest, feeds that substrate into M03 microbial ecology,
+then registers an L02 species and mature individuals. Focused ordered checks
+pass. G4–G7, L5–L9 and M4–M8 continuation sidecars are also implemented and the
+extended smoke passes G01 → G47 → M03 → M48 → L02 → L59. Disease remains
+explicitly disabled. These are sidecars and do not replace native/storage
+authority or alter existing worlds. Viewer and live-world integration remain
+deferred.
+
+See [ordered foundation report](ALICE_01_02_03_FOUNDATIONS_REPORT.md).
+
+Final repository verification after all three specification continuations:
+`512 passed, 352 subtests passed in 728.39s` with
+`UNDERWORLD_CORE=build/underworld_core.exe`.
+The new ordered foundation group itself is 26/26. A prior full run had two
+transient unrelated Windows isolation failures; the final rerun passed.
+
+---
+
+Implemented ALICE-LIFE-1 in life_store.py/life_affect.py. It connects UW10W
+weather/exposure/shelter, the single F0-F5 mood/memory engine, and F6-F11
+private social modules to native execution. Start with LIFE_INTEGRATION_REPORT.md
+and the prospectively written LIFE_INTEGRATION_PROTOCOL.md.
+
+Five held-out seeds pass bounded native-help/directional-trust, native-signal
+acquisition (100%; shuffled/frozen 0%), gratitude reciprocation and persistence
+probes. Acquired recovery preferences affect choices in two contexts (5/5).
+F6 repair/ranking and F7 ambiguity checks also include explicitly synthetic
+mechanism evidence. Do not call those complete native social acceptance gates.
+
+F8 real rest reduces fatigue, but useful learned strategy selection is NOT
+established; the improvement gate remains unpassed. Full F12 is not achieved.
+Other F10 emotions lack grounded prerequisites. Historical H-series UW9 worlds
+and vocabularies are preserved separately; there is no UW9-to-UW10W migration.
+Native signal learning here starts with new private associations.
+
+All inhabitants in five closed four-person worlds reached 30/90/180 seconds;
+20/20 survived, 224 completed actions, no rejection, all actors scheduled.
+An eight-person world reached 90 seconds, 8/8 survived, 22 completed actions.
+Source unchanged, backups equal and fresh-process replay passed for every run.
+Raw evidence: artifacts/life_heldout_20261023.json, life_recovery_heldout.json,
+life_continuity_heldout.json. Actual worlds/backups remain under data/life-*.
+
+CLI: scripts/life.py new/attach/run/save/replay/inspect. Use NEW paths to enroll
+compatible existing F5/world copies. Run uses absolute simulated horizons and
+a default 600-second wall budget. No resets/refills/rescues. Quotas remain.
+Viewer: python -m underworld.life_viewer --db PATH --port 8781 (read-only).
+Browser inspected; diagnostics loaded, favicon 404 only. Viewing never runs AI.
+All 11 historical source seals match (artifacts/life_historical_integrity.json).
+Full regression log: artifacts/life_full_suite.log; record its actual outcome.
+Previous handoff bytes: HANDOFF_PRE_LIFE_INTEGRATION.md. Earlier sections below
+are historical. Failed Phase 9 and unrelated OpenCode/package changes preserved.
+
+Final validation: 465 Python tests + 352 subtests passed in 944.78s;
+all 4 native checks passed in 0.38s. See docs/LIFE_VALIDATION.md and raw logs.
+
+---
+
+# Current review: F6–F12 bounded additions — 23 October 2026
+
+Reviewed the other agent's additions and fixed execution, persistence and
+measurement bugs. **Full F12 acceptance is not established.** These UW9
+sidecars do not yet connect UW10W weather, F0–F5 affect/mood/memory, H-series
+communication, or F12 proposals to the live action scheduler. F6–F11 scientific
+gates remain pending. Preserve all earlier evidence and source registrations.
+
+Read [F12 code review](F12_CODE_REVIEW.md) for fixes, commands, evidence
+and the remaining integration work. Six new cases reproduced pre-fix bugs;
+75 focused checks pass. The corrected continuous test reached 90 simulated
+seconds in 162.978 wall seconds, with 4/4 healthy in both branches and matching
+native states. This demonstrates isolation, not a survival benefit from F12.
+Actual databases remain in data/f12-review-20261023-90s/; use new paths for reruns.
+The F9 handshake is authored feedback, not verified native signal delivery.
+
+Use the new `record-native` F12 command for native-journal-verified regulation
+outcomes. Legacy guided/social/value evidence is still caller-supplied.
+All 11 historical registrations match; the frozen native loader was restored
+and optional custom-build resolution moved to underworld/native_paths.py.
+The exact pre-review handoff is HANDOFF_PRE_F12_REVIEW.md. Earlier sections
+below are historical and retain their original claims and dates.
+
+Validation follow-up: full run 456 tests + 343 subtests passed; standalone
+native executable checks failed because the invocation omitted the documented
+MinGW runtime PATH. With that PATH, all affected checks plus F6-F12 and code
+audit passed: 87 tests + 21 subtests in 18.22s. Full logs and limits are in
+docs/F12_CODE_REVIEW.md and artifacts/f12_review_final_followup.log.
+
+---
+
+# 22 October 2026 — F8 durable regulation slice started
+
+F9, F10, F11 and F12 bounded slices are now implemented additively. F9 provides
+private per-agent emotional signal associations learned from public feedback;
+F10 provides prerequisite-gated social/self-evaluative states; F11 separates
+declared values from evidence-acquired preferences and revisable commitments;
+F12 connects all four overlays to one copied native SQLite world with a single
+bounded operation journal, current-observation validation, proposal-only
+selection, backup/resume/replay and a final all-path smoke test. These are
+implementation/integration results, not claims that the later scientific gates
+passed. Native scheduler integration, viewer wiring, humanlike language or
+emotion, and indefinite lifelong evaluation remain deferred.
+
+Read [F9 slice](F9_COMMUNICATION_SLICE.md),
+[F10 slice](F10_SOCIAL_EMOTIONS_SLICE.md),
+[F11 slice](F11_IDENTITY_VALUES_SLICE.md), and
+[F12 integration](F12_INTEGRATION_SLICE.md).
+
+---
+
+F8 now has an additive pure learner and copy-only SQLite overlay. It proposes
+finite strategies (`rest`, moving to safety, requesting help, reconsidering an
+uncertain interpretation, and switching a failing plan), filters unsafe
+proposals during danger, and learns context-specific efficacy only from the
+inhabitant's own observations plus native-shaped result receipts. Efficacy,
+uncertainty, failure streaks, elapsed time, supplied cost and burden changes are
+bounded and persisted; a completed receipt without observed relief is not a free
+stress reset. Focused pure/durable checks pass, including current-native
+validation, idempotence, copy-only backup and fresh-process replay. The
+prospective F8 comparison gate, native scheduler behavior and viewer integration
+remain deferred.
+
+The complete repository suite passes when the existing native-core executable
+is supplied (`UNDERWORLD_CORE=build/underworld_core.exe`): 448 tests and 352
+subtests in the final run. A prior run had two transient Windows isolation
+failures in unrelated pre-existing Phase 7 tests; both passed when rerun
+individually and the next full run passed. An unconfigured attempt still stops
+at the scaffold setup because `UNDERWORLD_CORE` is absent.
+
+Read [F8 slice](F8_REGULATION_SLICE.md) and [F8 report](F8_REGULATION_REPORT.md).
+
+## Connected-world survival check — October 23, 2026
+
+`scripts/f12_survival_check.py` now runs matched integrated/control branches
+with F6 and F7 stores chained into F12, then native stabilization. Over 90
+simulated seconds with the four-person `living-world.toml` configuration, the
+integrated branch kept 4/4 inhabitants alive at minimum health 1.0, completed
+4 survival goals with 0 blocked goals, and matched the native-only control's
+native state hash exactly. Source bytes stayed unchanged. F6 replay matched 2
+operations, F7 replay matched 7, and F12 replay matched 71. F9 feedback changed
+the receiver association; F10 pride prerequisites and F11 survival preference/
+summary evidence were retained. This verifies sidecar connection and native
+isolation, not causal survival improvement: F8-F11 proposals were not fed into
+the native scheduler.
+
+See [F12 survival check](F12_SURVIVAL_CHECK.md) and
+`artifacts/f12_survival_90s.json`.
+
+---
+
+# 22 October 2026 — F7 durable understanding slice started
+
+F6's additive durable relationship overlay now has directional native-shaped
+event ingestion, bounded evidence, idempotent operations, copy-only attachment,
+backup/resume/replay, visible-candidate helper ranking, and a public-offer-based
+task-response receipt path. The focused F6/F7 checks pass. F7 starts with a
+directional public-observation estimator for another inhabitant's possible needs,
+goals and affect, with confidence, uncertainty, provenance and correction. It
+rejects private target state and ignores operator labels. Neither stage claims
+the full prospective held-out gate or native scheduler integration yet.
+
+F7 now also has a copy-only durable inference overlay with strict current-native
+observation checks, public-only envelopes, directional observer-target state,
+bounded provenance, idempotent operations and fresh-process replay. Focused F7
+checks pass. The overlay now derives a conservative public envelope from the
+current native snapshot using only visible geometry/resource/shelter kinds and
+public social-report edges. The prospective F7 study, native scheduler behavior
+and viewer integration remain deferred.
+
+Read [F6 report](F6_RELATIONSHIPS_REPORT.md),
+[F7 slice](F7_UNDERSTANDING_SLICE.md), and
+[F7 durable report](F7_UNDERSTANDING_REPORT.md). Earlier F5 results remain below.
+
+---
+
+# 22 October 2026 — F6 relationship slice started
+
+F5 remains verified and frozen. F6 now has an additive bounded relationship
+estimator with directional familiarity, trust, reliability, attachment and
+uncertainty derived only from strict witnessed event records. Helper ranking is
+deterministic and native feasibility remains authoritative. Five F6 unit tests
+pass, including directional isolation, repair after negative evidence, bounded
+helper choice and rejection of private target state. The native helper-choice,
+durable overlay, save/resume and held-out multi-seed F6 gates are not yet run.
+
+Read [the F6 slice](RELATIONSHIPS_F6_SLICE.md). Earlier F5 results remain below.
+
+---
+
 # 22 October 2026 — F5 emotional memory verified
 
 F5 passes all gates on five held-out seeds using 59 frozen source files. Relevant
@@ -270,7 +492,7 @@ Older entries below are historical.
 
 ---
 
-# Milestone F � 21 October 2026
+# Milestone F � 21 October 2026
 
 Application **0.13.0**, native UW9/DB10/checkpoint 9 unchanged. Explicit new-world
 knowledge profiles, private guided operator injection, own-lesson native testing
