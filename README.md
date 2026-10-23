@@ -1,3 +1,30 @@
+# Current milestone: F5 emotional memory
+
+**F5 passes its prospective bounded gates.** Private salience and recent evidence
+now influence retained experience and retrieval, with factual history preserved.
+Five held-out seeds show relevant caution, unrelated-context restraint and
+correction after safe experience. The unchanged F4 baseline performs equally on
+these probes; no superiority or general intelligence is claimed.
+
+- 65 F5 saves + 5 setup worlds independently audited; all 45 probes and 2,040
+  main-arm native actions completed without rejection or failure.
+- 46 fresh regression checks pass. The memory index stays within 32 links and
+  24,000 bytes; journals retain explicit quotas.
+- A new copy of the four-person F4 life continues 1,800→2,100→2,400 simulated
+  seconds, all healthy, with exact fresh-process resume and one attributable
+  memory-driven shelter choice. Existing worlds and historical failures stay intact.
+
+[Results and limits](docs/MEMORY_F5_REPORT.md) ·
+[Run, copy, save and resume](docs/MEMORY_F5_OPERATIONS.md) ·
+[Protocol](docs/MEMORY_F5_PROTOCOL.md) ·
+[Retained failures](docs/MEMORY_F5_DEVELOPMENT_NOTES.md)
+
+F5 is opt-in on NEW compatible save copies. The original runtime and earlier
+worlds remain available. F4 was pushed before F5 work; F6 has not started.
+Earlier sections below retain their historical scope.
+
+---
+
 # Current milestone: F4 mood and temperament
 
 **F4 passes its prospective bounded gates.** Slow mood persists beyond immediate

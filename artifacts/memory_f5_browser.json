@@ -1,0 +1,160 @@
+{
+  "passed": true,
+  "browser": "headless Edge",
+  "desktop": [
+    1440,
+    900
+  ],
+  "mobile": [
+    390,
+    844
+  ],
+  "errors": [],
+  "metrics": {
+    "fps": 30.000967773153995,
+    "frame_ms_p50": 33.30000000000018,
+    "frame_ms_p95": 66.70000000000027,
+    "draw_calls": 30,
+    "triangles": 1332,
+    "geometries": 7,
+    "textures": 0,
+    "quality": "low",
+    "pixel_ratio": 0.8,
+    "context_lost": false,
+    "context_losses": 0,
+    "renderer": "ANGLE (Intel, Intel(R) HD Graphics 520 (0x00001916) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "canvas": [
+      653,
+      444
+    ],
+    "physics_dimensions": 2,
+    "objects": 12
+  },
+  "paused": true,
+  "same_native_head": true,
+  "read_only": true,
+  "retained": 32,
+  "retrieval": {
+    "value": -0.5371676848079091,
+    "confidence": 0.4948381561336402,
+    "memories": [
+      "f5:step-351-40:agent-1",
+      "f5:step-391-40:agent-1",
+      "f5:step-431-40:agent-1",
+      "f5:step-471-40:agent-1",
+      "f5:step-511-40:agent-1",
+      "f5:step-551-40:agent-1",
+      "f5:step-591-40:agent-1",
+      "f5:step-2207-40:agent-1",
+      "f5:step-2247-40:agent-1",
+      "f5:step-2287-40:agent-1",
+      "f5:step-2327-40:agent-1",
+      "f5:step-2367-40:agent-1",
+      "f5:step-2407-40:agent-1",
+      "f5:step-2447-40:agent-1",
+      "f5:step-2487-40:agent-1",
+      "f5:probe-choice:agent-1"
+    ],
+    "weights": [
+      {
+        "event": "f5:step-351-40:agent-1",
+        "weight": 0.006656040441772136,
+        "outcome": -1,
+        "salience": 0.7000000000000001
+      },
+      {
+        "event": "f5:step-391-40:agent-1",
+        "weight": 0.006751346950757629,
+        "outcome": -1,
+        "salience": 0.671653131057379
+      },
+      {
+        "event": "f5:step-431-40:agent-1",
+        "weight": 0.006921205524002537,
+        "outcome": -1,
+        "salience": 0.6513417119032593
+      },
+      {
+        "event": "f5:step-471-40:agent-1",
+        "weight": 0.0071531141939712925,
+        "outcome": -1,
+        "salience": 0.6367879441171443
+      },
+      {
+        "event": "f5:step-511-40:agent-1",
+        "weight": 0.007437921900916679,
+        "outcome": -1,
+        "salience": 0.6263597138115727
+      },
+      {
+        "event": "f5:step-551-40:agent-1",
+        "weight": 0.007769033990055351,
+        "outcome": -1,
+        "salience": 0.6188875602837562
+      },
+      {
+        "event": "f5:step-591-40:agent-1",
+        "weight": 0.008141811443632446,
+        "outcome": -1,
+        "salience": 0.6135335283236614
+      },
+      {
+        "event": "f5:step-2207-40:agent-1",
+        "weight": 0.02839075382221334,
+        "outcome": -0.01349999999999997,
+        "salience": 0.2267484606675036
+      },
+      {
+        "event": "f5:step-2247-40:agent-1",
+        "weight": 0.02921165504835246,
+        "outcome": -0.01349999999999997,
+        "salience": 0.22069684050081934
+      },
+      {
+        "event": "f5:step-2287-40:agent-1",
+        "weight": 0.030273722581417455,
+        "outcome": -0.01350000000000003,
+        "salience": 0.21636066517169034
+      },
+      {
+        "event": "f5:step-2327-40:agent-1",
+        "weight": 0.03154361644185896,
+        "outcome": -0.01350000000000003,
+        "salience": 0.21325365978023175
+      },
+      {
+        "event": "f5:step-2367-40:agent-1",
+        "weight": 0.037336677438768444,
+        "outcome": 0.3,
+        "salience": 0.23877739313513005
+      },
+      {
+        "event": "f5:step-2407-40:agent-1",
+        "weight": 0.03743944771940459,
+        "outcome": 0.3,
+        "salience": 0.22649545996471704
+      },
+      {
+        "event": "f5:step-2447-40:agent-1",
+        "weight": 0.03826585553917437,
+        "outcome": 0.3,
+        "salience": 0.21898482665277405
+      },
+      {
+        "event": "f5:step-2487-40:agent-1",
+        "weight": 0.03945778261317326,
+        "outcome": 0.3,
+        "salience": 0.2136032227225284
+      },
+      {
+        "event": "f5:probe-choice:agent-1",
+        "weight": 0.3601264324972998,
+        "outcome": -1,
+        "salience": 0.7202528649945996
+      }
+    ],
+    "rule": "alice-emotional-memory-f5-1",
+    "context": "rain/chilly/open",
+    "origin": "retrieved own acquired journal links; authored weights"
+  }
+}

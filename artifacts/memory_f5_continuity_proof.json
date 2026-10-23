@@ -1,0 +1,87 @@
+{
+  "verified": true,
+  "source_sha256": "c3eac345940d52c613fc27003b95da446e0a5dd2bbe5c626a52ba88669b88d29",
+  "original_simulated_s": 1800.0,
+  "final_simulated_s": 2400.0,
+  "source_preserved": true,
+  "initial_cognitive_fields_preserved": true,
+  "initial_native_and_policy_exact": true,
+  "inactive_f4_history_exact": true,
+  "native_history_prefix_exact": true,
+  "inherited_cursor": 1080,
+  "final_cursor": 1490,
+  "fresh_resume_matches": true,
+  "hash": "ac469c335b603974a4edc1498f9544d81c370a6a35577e7c529890ea5cb2f0bf",
+  "health": {
+    "agent-1": 1.0,
+    "agent-2": 1.0,
+    "agent-3": 1.0,
+    "agent-4": 1.0
+  },
+  "no_weather_forcing": true,
+  "material_totals_ug": {
+    "fiber": "100000000",
+    "food": "8000000000",
+    "fuel_X": "0",
+    "inert_material": "32000000000",
+    "oxygen": "0",
+    "product_P": "0",
+    "stone": "4000000000",
+    "tree": "17000000000",
+    "water": "16000000000",
+    "wood": "900000000"
+  },
+  "initial_mass_ug": {
+    "food": 8000000000,
+    "fuel_X": 0,
+    "inert_material": 32000000000,
+    "oxygen": 0,
+    "product_P": 0,
+    "stone": 4000000000,
+    "tree": 18000000000,
+    "water": 16000000000
+  },
+  "remaining": [
+    {
+      "entity_id": "resource-1",
+      "kind": "food",
+      "position_m": [
+        2.0,
+        2.0
+      ],
+      "radius_m": 0.0,
+      "mass_kg": 3.4,
+      "mass_ug": "3400000000",
+      "inventory_ug": {}
+    },
+    {
+      "entity_id": "resource-2",
+      "kind": "water",
+      "position_m": [
+        3.0,
+        2.0
+      ],
+      "radius_m": 0.0,
+      "mass_kg": 9.0,
+      "mass_ug": "9000000000",
+      "inventory_ug": {}
+    }
+  ],
+  "index_bytes": {
+    "agent-1": 16652,
+    "agent-2": 16663,
+    "agent-3": 16648,
+    "agent-4": 16561
+  },
+  "window_wall_s": 417.00741389999894,
+  "replay": {
+    "verified": true,
+    "operations": 412,
+    "physical": {
+      "replay_matches": true,
+      "operations": 1565,
+      "state_hash": "08ceb08b843d265183db5a1893e8b7e099b1e3c141fc8acdf8ba6a2fe5a11e81"
+    },
+    "hash": "ac469c335b603974a4edc1498f9544d81c370a6a35577e7c529890ea5cb2f0bf"
+  }
+}

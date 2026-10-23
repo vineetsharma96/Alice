@@ -1,0 +1,446 @@
+{
+  "passed": true,
+  "gates": {
+    "relevant": true,
+    "unrelated": true,
+    "frozen": true,
+    "correction": true,
+    "native": true,
+    "memory": true,
+    "resume": true,
+    "replay": true,
+    "physical_equal": true,
+    "source_preserved": true
+  },
+  "seeds": [
+    19201,
+    19207,
+    19213,
+    19219,
+    19231
+  ],
+  "wall_s": 1430.661679799996,
+  "arms": {
+    "connected": {
+      "probes": {
+        "relevant": {
+          "changed": 5,
+          "completed": 5,
+          "actual_shelter": 5,
+          "actions": [
+            "move",
+            "move",
+            "move",
+            "move",
+            "move"
+          ],
+          "values": [
+            -0.8839439310343056,
+            -0.8839439310343056,
+            -0.8839439310343056,
+            -0.8839439310343056,
+            -0.8839439310343056
+          ],
+          "support": [
+            0.6149537260233044,
+            0.6149537260233044,
+            0.6149537260233044,
+            0.6149537260233044,
+            0.6149537260233044
+          ],
+          "mean_wall_s": 0.13861418000014963,
+          "max_wall_s": 0.16504869999334915
+        },
+        "unrelated": {
+          "changed": 0,
+          "completed": 5,
+          "actual_shelter": 0,
+          "actions": [
+            "rest",
+            "rest",
+            "rest",
+            "rest",
+            "rest"
+          ],
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "support": [
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "mean_wall_s": 0.13318345999869052,
+          "max_wall_s": 0.14594729999953415
+        },
+        "corrected": {
+          "changed": 0,
+          "completed": 5,
+          "actual_shelter": 0,
+          "actions": [
+            "rest",
+            "rest",
+            "rest",
+            "rest",
+            "rest"
+          ],
+          "values": [
+            -0.04601776696360776,
+            -0.04601776696360776,
+            -0.04601776696360776,
+            -0.04601776696360776,
+            -0.04601776696360776
+          ],
+          "support": [
+            0.2886814907390514,
+            0.2886814907390514,
+            0.2886814907390514,
+            0.2886814907390514,
+            0.2886814907390514
+          ],
+          "mean_wall_s": 0.22817637999978616,
+          "max_wall_s": 0.37181529999361373
+        }
+      },
+      "private_index_bytes": [
+        17943,
+        17943,
+        17943,
+        17943,
+        17943
+      ],
+      "sqlite_bytes": [
+        2367488,
+        2367488,
+        2367488,
+        2367488,
+        2367488
+      ],
+      "native_final_s": [
+        930.75,
+        930.75,
+        930.75,
+        930.75,
+        930.75
+      ],
+      "retained_negative": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ]
+    },
+    "disconnected": {
+      "probes": {
+        "relevant": {
+          "changed": 5,
+          "completed": 5,
+          "actual_shelter": 5,
+          "actions": [
+            "move",
+            "move",
+            "move",
+            "move",
+            "move"
+          ],
+          "values": [
+            -0.8839439310343056,
+            -0.8839439310343056,
+            -0.8839439310343056,
+            -0.8839439310343056,
+            -0.8839439310343056
+          ],
+          "support": [
+            0.6149537260233044,
+            0.6149537260233044,
+            0.6149537260233044,
+            0.6149537260233044,
+            0.6149537260233044
+          ],
+          "mean_wall_s": 0.17090223999985027,
+          "max_wall_s": 0.20308659999864176
+        },
+        "unrelated": {
+          "changed": 0,
+          "completed": 5,
+          "actual_shelter": 0,
+          "actions": [
+            "rest",
+            "rest",
+            "rest",
+            "rest",
+            "rest"
+          ],
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "support": [
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "mean_wall_s": 0.17414718000072754,
+          "max_wall_s": 0.25494809999509016
+        },
+        "corrected": {
+          "changed": 0,
+          "completed": 5,
+          "actual_shelter": 0,
+          "actions": [
+            "rest",
+            "rest",
+            "rest",
+            "rest",
+            "rest"
+          ],
+          "values": [
+            -0.04601776696360776,
+            -0.04601776696360776,
+            -0.04601776696360776,
+            -0.04601776696360776,
+            -0.04601776696360776
+          ],
+          "support": [
+            0.2886814907390514,
+            0.2886814907390514,
+            0.2886814907390514,
+            0.2886814907390514,
+            0.2886814907390514
+          ],
+          "mean_wall_s": 0.15393285999889486,
+          "max_wall_s": 0.18226949999370845
+        }
+      },
+      "private_index_bytes": [
+        17946,
+        17946,
+        17946,
+        17946,
+        17946
+      ],
+      "sqlite_bytes": [
+        2367488,
+        2367488,
+        2367488,
+        2367488,
+        2367488
+      ],
+      "native_final_s": [
+        930.75,
+        930.75,
+        930.75,
+        930.75,
+        930.75
+      ],
+      "retained_negative": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ]
+    },
+    "frozen": {
+      "probes": {
+        "relevant": {
+          "changed": 0,
+          "completed": 5,
+          "actual_shelter": 0,
+          "actions": [
+            "rest",
+            "rest",
+            "rest",
+            "rest",
+            "rest"
+          ],
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "support": [
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "mean_wall_s": 0.14214260000153445,
+          "max_wall_s": 0.1897101000067778
+        },
+        "unrelated": {
+          "changed": 0,
+          "completed": 5,
+          "actual_shelter": 0,
+          "actions": [
+            "rest",
+            "rest",
+            "rest",
+            "rest",
+            "rest"
+          ],
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "support": [
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "mean_wall_s": 0.1337903199993889,
+          "max_wall_s": 0.17879720000200905
+        },
+        "corrected": {
+          "changed": 0,
+          "completed": 5,
+          "actual_shelter": 0,
+          "actions": [
+            "rest",
+            "rest",
+            "rest",
+            "rest",
+            "rest"
+          ],
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "support": [
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "mean_wall_s": 0.17461815999704414,
+          "max_wall_s": 0.22401229999377392
+        }
+      },
+      "private_index_bytes": [
+        165,
+        165,
+        165,
+        165,
+        165
+      ],
+      "sqlite_bytes": [
+        2334720,
+        2334720,
+        2334720,
+        2334720,
+        2334720
+      ],
+      "native_final_s": [
+        930.75,
+        930.75,
+        930.75,
+        930.75,
+        930.75
+      ],
+      "retained_negative": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "per_seed_gates": {
+    "19201": {
+      "relevant": true,
+      "unrelated": true,
+      "frozen": true,
+      "correction": true,
+      "native": true,
+      "memory": true,
+      "resume": true,
+      "replay": true,
+      "physical_equal": true,
+      "source_preserved": true
+    },
+    "19207": {
+      "relevant": true,
+      "unrelated": true,
+      "frozen": true,
+      "correction": true,
+      "native": true,
+      "memory": true,
+      "resume": true,
+      "replay": true,
+      "physical_equal": true,
+      "source_preserved": true
+    },
+    "19213": {
+      "relevant": true,
+      "unrelated": true,
+      "frozen": true,
+      "correction": true,
+      "native": true,
+      "memory": true,
+      "resume": true,
+      "replay": true,
+      "physical_equal": true,
+      "source_preserved": true
+    },
+    "19219": {
+      "relevant": true,
+      "unrelated": true,
+      "frozen": true,
+      "correction": true,
+      "native": true,
+      "memory": true,
+      "resume": true,
+      "replay": true,
+      "physical_equal": true,
+      "source_preserved": true
+    },
+    "19231": {
+      "relevant": true,
+      "unrelated": true,
+      "frozen": true,
+      "correction": true,
+      "native": true,
+      "memory": true,
+      "resume": true,
+      "replay": true,
+      "physical_equal": true,
+      "source_preserved": true
+    }
+  },
+  "source_count": 59,
+  "audit": {
+    "verified": true,
+    "worlds": 65,
+    "wall_s": 334.6244910999885,
+    "main_accepted": 2040,
+    "main_completed": 2040,
+    "peak_index_bytes": 17994,
+    "rejections": 0,
+    "failures": 0
+  }
+}

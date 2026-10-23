@@ -1,3 +1,31 @@
+# 22 October 2026 — F5 emotional memory verified
+
+F5 passes all gates on five held-out seeds using 59 frozen source files. Relevant
+caution 5/5, unrelated 0/5, correction after safe evidence 5/5. The unchanged F4
+baseline succeeds equally on these probes. Private memory retains at most 32
+salient/recent links per person; current belief changes without rewriting events.
+
+Independent audit verifies 65 F5 saves plus five source worlds; 2,040 main actions
+and all 45 probes complete. No rejection/failure or material refill. Five fresh
+mid-conditioning resumes match. Fresh 6 F5 + 5 F4 + 7 emotion + 28 weather tests
+pass. Final static inventory: 185 Python files. Historical research/source seals
+remain unchanged; Phase9 remains failed and excluded from policies.
+
+A new copy continues the existing four-person life from 1,800 through 2,100 to
+2,400 simulated seconds, all health 1, cursor 1,080→1,490. One of 410 completed
+choices uses acquired memory to enter shelter where the old F4 estimate would
+not select the same alternative. No survival benefit is claimed. Actual food/
+water accounting closes; no forcing/reset/refill. Fresh-process continuation of
+the 2,100s backup matches exactly. Execution windows: 417.007 wall seconds before
+replay; confirmation: 1,430.662 seconds. Failed development 2 and all audit/tool
+fixes remain documented with original evidence and source snapshots.
+
+[Results](MEMORY_F5_REPORT.md) · [Operations](MEMORY_F5_OPERATIONS.md) ·
+[Failures](MEMORY_F5_DEVELOPMENT_NOTES.md). F6 remains deferred. Earlier entries
+below retain their historical scope.
+
+---
+
 # 22 October 2026 - F4 mood and temperament verified
 
 F4 implements persistent declared initial temperament and a single slow mood/stress

@@ -1,0 +1,5046 @@
+{
+  "initial_simulated_s": 1800.0,
+  "final_simulated_s": 2100.0,
+  "source_preserved": true,
+  "source_sha256": "c3eac345940d52c613fc27003b95da446e0a5dd2bbe5c626a52ba88669b88d29",
+  "inherited_cursor": 1080,
+  "final_cursor": 1354,
+  "actions": {
+    "gather": 32,
+    "move": 51,
+    "rest": 160,
+    "eat": 14,
+    "drink": 17
+  },
+  "origins": {
+    "authored_weather_baseline": 274
+  },
+  "choices_using_acquired_memory": 0,
+  "errors": [],
+  "final": {
+    "snapshot": {
+      "schema_version": 1,
+      "kind": "world_snapshot",
+      "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+      "culture": {
+        "enabled": false,
+        "skills": {},
+        "agreements": [],
+        "validated_batches": [],
+        "departed": []
+      },
+      "ecology": {
+        "enabled": false,
+        "controller_origin": "authored_native_ecology_v1",
+        "animals": {},
+        "freshness_s": {},
+        "structural_body_initial_ug": "0",
+        "food_residue_ug": "0",
+        "water_waste_ug": "0",
+        "egg_input_ug": "0",
+        "eggs_produced_ug": "0",
+        "forage_regeneration_kg_s": 0.0
+      },
+      "branch_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+      "tick": "8400",
+      "observation_version": "8400",
+      "last_event_seq": "11595",
+      "seed": "53",
+      "dt_s": 0.25,
+      "simulated_time_s": 2100.0,
+      "laws_version": "culture-6",
+      "thermal": {
+        "enabled": false,
+        "open_boundaries": false,
+        "cells": [],
+        "ambient_temperature_k": 0.0,
+        "stored_energy_j": 0.0,
+        "initial_energy_j": 0.0,
+        "heater_input_j": 0.0,
+        "radiation_in_j": 0.0,
+        "radiation_out_j": 0.0,
+        "outflow_energy_j": 0.0,
+        "solar_transferred_j": 0.0,
+        "burned_fuel_ug": "0",
+        "outflow_water_ug": "0",
+        "balance_error_j": 0.0,
+        "global_balance_error_j": 0.0,
+        "energy_tolerance_j": 0.000859540783862422
+      },
+      "build_id": "74e4c35419d9cc962673ce24b09d2ec7fa80e844a737c0e82862d1bb23feb71c",
+      "world_bounds_m": {
+        "width": 32.0,
+        "height": 32.0
+      },
+      "entities": [
+        {
+          "entity_id": "terrain-1",
+          "kind": "rock",
+          "position_m": [
+            16.0,
+            16.0
+          ],
+          "radius_m": 1.0,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "tree-1",
+          "kind": "tree",
+          "position_m": [
+            2.0,
+            30.0
+          ],
+          "radius_m": 0.6,
+          "mass_kg": 1.0,
+          "mass_ug": "1000000000",
+          "stage": "young",
+          "health": 0.95,
+          "biomass_ug": "1000000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "tree-2",
+          "kind": "tree",
+          "position_m": [
+            30.0,
+            2.0
+          ],
+          "radius_m": 0.6,
+          "mass_kg": 8.0,
+          "mass_ug": "8000000000",
+          "stage": "mature",
+          "health": 1.0,
+          "biomass_ug": "8000000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "tree-3",
+          "kind": "tree",
+          "position_m": [
+            30.0,
+            30.0
+          ],
+          "radius_m": 0.6,
+          "mass_kg": 8.0,
+          "mass_ug": "8000000000",
+          "stage": "mature",
+          "health": 1.0,
+          "biomass_ug": "8000000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "agent-1",
+          "kind": "actor",
+          "position_m": [
+            3.7,
+            3.7
+          ],
+          "radius_m": 0.25,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "workmanship": 1,
+          "inventory_ug": {
+            "fiber": "0",
+            "food": "0",
+            "water": "0",
+            "wood": "100000000"
+          },
+          "alive": true,
+          "body": {
+            "hunger": 0.5499999999997691,
+            "thirst": 0.5500000000001201,
+            "fatigue": 0.005081500503143809,
+            "health": 1.0,
+            "alive": true,
+            "food_ingested_ug": "950000000",
+            "water_ingested_ug": "1500000000"
+          },
+          "present": true
+        },
+        {
+          "entity_id": "agent-2",
+          "kind": "actor",
+          "position_m": [
+            4.3,
+            3.7
+          ],
+          "radius_m": 0.25,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "workmanship": 0,
+          "inventory_ug": {
+            "food": "0",
+            "water": "0"
+          },
+          "alive": true,
+          "body": {
+            "hunger": 0.5499999999997691,
+            "thirst": 0.5500000000001201,
+            "fatigue": 0.00415987501900014,
+            "health": 1.0,
+            "alive": true,
+            "food_ingested_ug": "950000000",
+            "water_ingested_ug": "1500000000"
+          },
+          "present": true
+        },
+        {
+          "entity_id": "agent-3",
+          "kind": "actor",
+          "position_m": [
+            3.7,
+            4.3
+          ],
+          "radius_m": 0.25,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "workmanship": 0,
+          "inventory_ug": {
+            "food": "0",
+            "water": "0"
+          },
+          "alive": true,
+          "body": {
+            "hunger": 0.5499999999997691,
+            "thirst": 0.5500000000001201,
+            "fatigue": 0.007558459135183883,
+            "health": 1.0,
+            "alive": true,
+            "food_ingested_ug": "950000000",
+            "water_ingested_ug": "1500000000"
+          },
+          "present": true
+        },
+        {
+          "entity_id": "agent-4",
+          "kind": "actor",
+          "position_m": [
+            3.0,
+            3.35
+          ],
+          "radius_m": 0.25,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "workmanship": 0,
+          "inventory_ug": {
+            "food": "0",
+            "water": "50000000"
+          },
+          "alive": true,
+          "body": {
+            "hunger": 0.5499999999997691,
+            "thirst": 0.5500000000001201,
+            "fatigue": 0.03611132236317699,
+            "health": 1.0,
+            "alive": true,
+            "food_ingested_ug": "950000000",
+            "water_ingested_ug": "1500000000"
+          },
+          "present": true
+        },
+        {
+          "entity_id": "resource-1",
+          "kind": "food",
+          "position_m": [
+            2.0,
+            2.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 4.2,
+          "mass_ug": "4200000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "resource-2",
+          "kind": "water",
+          "position_m": [
+            3.0,
+            2.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 9.95,
+          "mass_ug": "9950000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "resource-3",
+          "kind": "inert_material",
+          "position_m": [
+            4.0,
+            2.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 32.0,
+          "mass_ug": "32000000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "resource-4",
+          "kind": "stone",
+          "position_m": [
+            5.0,
+            2.0
+          ],
+          "radius_m": 0.15,
+          "mass_kg": 4.0,
+          "mass_ug": "4000000000",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "pile-13",
+          "kind": "wood",
+          "position_m": [
+            3.2,
+            30.0
+          ],
+          "radius_m": 0.15,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "pile-14",
+          "kind": "fiber",
+          "position_m": [
+            0.8,
+            30.0
+          ],
+          "radius_m": 0.15,
+          "mass_kg": 0.0,
+          "mass_ug": "0",
+          "inventory_ug": {}
+        },
+        {
+          "entity_id": "crafted-15",
+          "kind": "lean_to",
+          "position_m": [
+            4.0,
+            4.0
+          ],
+          "radius_m": 0.0,
+          "mass_kg": 0.9,
+          "mass_ug": "900000000",
+          "recipe_id": "lean_to",
+          "owner_id": "agent-1",
+          "work_s": 12.0,
+          "durability": 0,
+          "composition_ug": {
+            "fiber": "100000000",
+            "wood": "800000000"
+          },
+          "inventory_ug": {}
+        }
+      ],
+      "outstanding_actions": [],
+      "material_totals_ug": {
+        "fiber": "100000000",
+        "food": "8000000000",
+        "fuel_X": "0",
+        "inert_material": "32000000000",
+        "oxygen": "0",
+        "product_P": "0",
+        "stone": "4000000000",
+        "tree": "17000000000",
+        "water": "16000000000",
+        "wood": "900000000"
+      },
+      "event_counts": {
+        "action_accepted": 1387,
+        "action_completed": 1387,
+        "consumption": 196,
+        "crafting_effect": 2,
+        "mass_transfer": 200,
+        "tick": 8400,
+        "weather_transition": 23
+      },
+      "solar_input_j": 8595407.83862422,
+      "environment_energy_j": 8595407.83862422,
+      "operator_energy_input_j": 0.0,
+      "operator_sources_ug": {
+        "food": 0,
+        "fuel_X": 0,
+        "inert_material": 0,
+        "oxygen": 0,
+        "product_P": 0,
+        "stone": 0,
+        "water": 0
+      },
+      "mode": "closed",
+      "hearing_range_m": 6.0,
+      "sunlight_w_m2": 5.40230525544083,
+      "scripted": false,
+      "next_script_tick": "0",
+      "bodies_enabled": true,
+      "initial_mass_ug": {
+        "food": 8000000000,
+        "fuel_X": 0,
+        "inert_material": 32000000000,
+        "oxygen": 0,
+        "product_P": 0,
+        "stone": 4000000000,
+        "tree": 18000000000,
+        "water": 16000000000
+      },
+      "boundary_sources_ug": {
+        "food": 0,
+        "fuel_X": 0,
+        "inert_material": 0,
+        "oxygen": 0,
+        "product_P": 0,
+        "stone": 0,
+        "tree": 0,
+        "water": 0
+      }
+    },
+    "climate": {
+      "version": 1,
+      "enabled": true,
+      "tick": "8400",
+      "source": "native_authored_climate_v1",
+      "exposure": {
+        "agent-1": {
+          "wetness": 0.0,
+          "cold_burden": 0.07661847700178176,
+          "environmental_fatigue_added": 0.23435097299180907,
+          "environmental_health_lost": 0.0,
+          "shelter_id": "crafted-15"
+        },
+        "agent-2": {
+          "wetness": 0.0,
+          "cold_burden": 0.07661847700178176,
+          "environmental_fatigue_added": 0.2389159347738052,
+          "environmental_health_lost": 0.0,
+          "shelter_id": "crafted-15"
+        },
+        "agent-3": {
+          "wetness": 0.0,
+          "cold_burden": 0.11156100087603321,
+          "environmental_fatigue_added": 0.23970322879540873,
+          "environmental_health_lost": 0.0,
+          "shelter_id": "crafted-15"
+        },
+        "agent-4": {
+          "wetness": 0.0013314740091539675,
+          "cold_burden": 0.12428547978341581,
+          "environmental_fatigue_added": 0.2512791338346948,
+          "environmental_health_lost": 0.0,
+          "shelter_id": ""
+        }
+      },
+      "shelters": [
+        {
+          "entity_id": "crafted-15",
+          "position_m": [
+            4.0,
+            4.0
+          ],
+          "coverage_radius_m": 1.1,
+          "capacity": 4,
+          "condition": 0.9603799999997404,
+          "work_s": 12.0,
+          "complete": true,
+          "composition_ug": {
+            "fiber": 100000000,
+            "wood": 800000000
+          },
+          "mass_ug": "900000000",
+          "entrance": "open perimeter; no solid walls",
+          "roof_height_m": 2.0
+        }
+      ],
+      "year_s": 2400.0,
+      "day_s": 86400,
+      "season": "winter",
+      "year_index": "0",
+      "phase_progress": 0.5,
+      "weather": "rain",
+      "ambient_c": 7.364210755600663,
+      "daylight_factor": 0.7,
+      "growth_factor": 0.525,
+      "current": {
+        "offset_c": 1.3642107556006628,
+        "cloud_fraction": 0.7579636373181031,
+        "rain_mm_h": 3.0872246696245877,
+        "wind_m_s": [
+          -0.3935088287224433,
+          -1.220431587990224
+        ]
+      },
+      "from": {
+        "offset_c": -2.4445331033972133,
+        "cloud_fraction": 0.2396610611761302,
+        "rain_mm_h": 0.0,
+        "wind_m_s": [
+          -2.4269500853520443,
+          2.4851153326288786
+        ]
+      },
+      "target": {
+        "offset_c": 1.3642107556006628,
+        "cloud_fraction": 0.7579636373181031,
+        "rain_mm_h": 3.0872246696245877,
+        "wind_m_s": [
+          -0.3935088287224433,
+          -1.220431587990224
+        ]
+      },
+      "forced": false,
+      "forced_until_s": 0.0,
+      "forcing_history": {},
+      "transition_start_s": 2070.0,
+      "transition_end_s": 2090.0,
+      "next_change_s": 2160.0,
+      "rng": "13978220779031196454"
+    },
+    "people": {
+      "agent-1": {
+        "affect": {
+          "arousal": 0.4332381337098993,
+          "control": 0.5,
+          "valence": -0.5413663849429837
+        },
+        "associations": {
+          "dry/chilly/covered": {
+            "confidence": 0.9971677013881353,
+            "evidence": [
+              "f5:memory-life-243:agent-1",
+              "f5:memory-life-244:agent-1",
+              "f5:memory-life-245:agent-1",
+              "f5:memory-life-246:agent-1",
+              "f5:memory-life-247:agent-1",
+              "f5:memory-life-248:agent-1",
+              "f5:memory-life-249:agent-1",
+              "f5:memory-life-250:agent-1"
+            ],
+            "seconds": 352.0,
+            "value": -0.01441030175503417
+          },
+          "dry/chilly/open": {
+            "confidence": 0.9215923149892429,
+            "evidence": [
+              "f5:memory-life-217:agent-1",
+              "f5:memory-life-218:agent-1",
+              "f5:memory-life-219:agent-1",
+              "f5:memory-life-220:agent-1",
+              "f5:memory-life-221:agent-1",
+              "f5:memory-life-222:agent-1",
+              "f5:memory-life-223:agent-1",
+              "f5:memory-life-224:agent-1"
+            ],
+            "seconds": 152.75,
+            "value": -0.3129191966973255
+          },
+          "dry/mild/covered": {
+            "confidence": 0.5525393448865166,
+            "evidence": [
+              "life-367:agent-1",
+              "life-368:agent-1",
+              "life-369:agent-1",
+              "life-370:agent-1",
+              "life-371:agent-1",
+              "life-372:agent-1",
+              "life-373:agent-1",
+              "life-374:agent-1"
+            ],
+            "seconds": 48.25,
+            "value": 0.2399336886376236
+          },
+          "dry/mild/open": {
+            "confidence": 0.9999949485404334,
+            "evidence": [
+              "life-537:agent-1",
+              "life-538:agent-1",
+              "life-539:agent-1",
+              "life-540:agent-1",
+              "life-541:agent-1",
+              "life-542:agent-1",
+              "life-543:agent-1",
+              "life-544:agent-1"
+            ],
+            "seconds": 731.75,
+            "value": 0.29999999999234483
+          },
+          "rain/chilly/covered": {
+            "confidence": 0.9319491459749898,
+            "evidence": [
+              "f5:memory-life-267:agent-1",
+              "f5:memory-life-268:agent-1",
+              "f5:memory-life-269:agent-1",
+              "f5:memory-life-270:agent-1",
+              "f5:memory-life-271:agent-1",
+              "f5:memory-life-272:agent-1",
+              "f5:memory-life-273:agent-1",
+              "f5:memory-life-274:agent-1"
+            ],
+            "seconds": 161.25,
+            "value": 0.08844542629695448
+          },
+          "rain/chilly/open": {
+            "confidence": 0.8896575609656927,
+            "evidence": [
+              "f4:mood-life-340:agent-1",
+              "f4:mood-life-341:agent-1",
+              "f4:mood-life-342:agent-1",
+              "f4:mood-life-343:agent-1",
+              "f4:mood-life-344:agent-1",
+              "f4:mood-life-345:agent-1",
+              "f4:mood-life-346:agent-1",
+              "f4:mood-life-347:agent-1"
+            ],
+            "seconds": 132.25,
+            "value": -0.1045821308163102
+          },
+          "rain/mild/covered": {
+            "confidence": 0.9662069459807254,
+            "evidence": [
+              "f4:mood-life-242:agent-1",
+              "f4:mood-life-243:agent-1",
+              "f4:mood-life-244:agent-1",
+              "f4:mood-life-245:agent-1",
+              "f4:mood-life-246:agent-1",
+              "f4:mood-life-247:agent-1",
+              "f4:mood-life-248:agent-1",
+              "f4:mood-life-249:agent-1"
+            ],
+            "seconds": 203.25,
+            "value": 0.17151940656898873
+          },
+          "rain/mild/open": {
+            "confidence": 0.9538103716183199,
+            "evidence": [
+              "f4:mood-life-12:agent-1",
+              "f4:mood-life-13:agent-1",
+              "f4:mood-life-14:agent-1",
+              "f4:mood-life-15:agent-1",
+              "f4:mood-life-16:agent-1",
+              "f4:mood-life-17:agent-1",
+              "f4:mood-life-18:agent-1",
+              "f4:mood-life-226:agent-1"
+            ],
+            "seconds": 184.5,
+            "value": 0.2993599554689888
+          }
+        },
+        "body": {
+          "exhaustion": 0.005081500503143809,
+          "hunger": 0.5499999999997691,
+          "injury": 0.0,
+          "thermal": 0.07661847700178176,
+          "thirst": 0.5500000000001201,
+          "wetness": 0.0
+        },
+        "caution_blocked_until": 0,
+        "caution_failures": 0,
+        "emotional_memory": {
+          "encoded": 275,
+          "entries": [
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 2.0,
+              "end_tick": 7227,
+              "event": "f5:memory-life-4:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:7219",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:7227"
+              ],
+              "outcome": -0.9896351836572933,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-1-272",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.7583744259804245,
+              "start_tick": 7219,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 2.0,
+              "end_tick": 7271,
+              "event": "f5:memory-life-12:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:7263",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:7271"
+              ],
+              "outcome": -1,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-1-274",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.7434830695969987,
+              "start_tick": 7263,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 0.5,
+              "end_tick": 7472,
+              "event": "f5:memory-life-60:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:7470",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:7472"
+              ],
+              "outcome": -0.48501669192990704,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-1-286",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.44153093773269647,
+              "start_tick": 7470,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 7509,
+              "event": "f5:memory-life-68:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:7505",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:7509"
+              ],
+              "outcome": -1,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-1-288",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.7321863176343679,
+              "start_tick": 7505,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 7814,
+              "event": "f5:memory-life-144:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:7810",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:7814"
+              ],
+              "outcome": -0.47242117963150243,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-1-307",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.4360000396237012,
+              "start_tick": 7810,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 7976,
+              "event": "f5:memory-life-176:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:7972",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:7976"
+              ],
+              "outcome": -0.4082304124653491,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-1-315",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.40276173964929174,
+              "start_tick": 7972,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 7980,
+              "event": "f5:memory-life-177:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:7976",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:7980"
+              ],
+              "outcome": -0.39216990919287154,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.3934375214432782,
+              "start_tick": 7976,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 0.5,
+              "end_tick": 8094,
+              "event": "f5:memory-life-204:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8092",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8094"
+              ],
+              "outcome": -0.4649951522261997,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-1-322",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.42976411365132683,
+              "start_tick": 8092,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8098,
+              "event": "f5:memory-life-205:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8094",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8098"
+              ],
+              "outcome": -1,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.6703320338395791,
+              "start_tick": 8094,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8131,
+              "event": "f5:memory-life-212:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8127",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8131"
+              ],
+              "outcome": -0.8580654090979597,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-1-324",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.6809549568232391,
+              "start_tick": 8127,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8168,
+              "event": "f5:memory-life-220:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8164",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8168"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-1-326",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.3348560237929979,
+              "start_tick": 8164,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8172,
+              "event": "f5:memory-life-221:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8168",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8172"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.23516413156209454,
+              "start_tick": 8168,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8176,
+              "event": "f5:memory-life-222:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8172",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8176"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.23401131420632532,
+              "start_tick": 8172,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8180,
+              "event": "f5:memory-life-223:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8176",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8180"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.2328962906989102,
+              "start_tick": 8176,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 0.5,
+              "end_tick": 8182,
+              "event": "f5:memory-life-224:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8180",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8182"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-1-327",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.23181782201012244,
+              "start_tick": 8180,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8271,
+              "event": "f5:memory-life-246:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8267",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8271"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.20170237600308458,
+              "start_tick": 8267,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8275,
+              "event": "f5:memory-life-247:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8271",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8275"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.2016465654792576,
+              "start_tick": 8271,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8279,
+              "event": "f5:memory-life-248:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8275",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8279"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-1-333",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.20159258464203583,
+              "start_tick": 8275,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8283,
+              "event": "f5:memory-life-249:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8279",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8283"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.20154037350715742,
+              "start_tick": 8279,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8287,
+              "event": "f5:memory-life-250:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8283",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8287"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.2014898740568786,
+              "start_tick": 8283,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8350,
+              "event": "f5:memory-life-265:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8346",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8350"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.20216150817805922,
+              "start_tick": 8346,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8354,
+              "event": "f5:memory-life-266:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8350",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8354"
+              ],
+              "outcome": 0.3,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.2320906455111424,
+              "start_tick": 8350,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8358,
+              "event": "f5:memory-life-267:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8354",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8358"
+              ],
+              "outcome": 0.3,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.23103858901323754,
+              "start_tick": 8354,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8362,
+              "event": "f5:memory-life-268:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8358",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8362"
+              ],
+              "outcome": 0.3,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-1-338",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.23002102302984725,
+              "start_tick": 8358,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8366,
+              "event": "f5:memory-life-269:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8362",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8366"
+              ],
+              "outcome": 0.3,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.22903681682740934,
+              "start_tick": 8362,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8370,
+              "event": "f5:memory-life-270:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8366",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8370"
+              ],
+              "outcome": 0.3,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.22808487674221717,
+              "start_tick": 8366,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8374,
+              "event": "f5:memory-life-271:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8370",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8374"
+              ],
+              "outcome": 0.3,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.22716414496512508,
+              "start_tick": 8370,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8378,
+              "event": "f5:memory-life-272:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8374",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8378"
+              ],
+              "outcome": 0.3,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-1-339",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.22627359836609617,
+              "start_tick": 8374,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8382,
+              "event": "f5:memory-life-273:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8378",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8382"
+              ],
+              "outcome": 0.3,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.22541224735728596,
+              "start_tick": 8378,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 4.5,
+              "end_tick": 8400,
+              "event": "f5:memory-life-274:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8382",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8400"
+              ],
+              "outcome": 0.3,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.22457913479339828,
+              "start_tick": 8382,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            }
+          ],
+          "evicted": 245,
+          "mode": "connected",
+          "origin": "new private index; historical events not retroactively encoded",
+          "rule": "alice-emotional-memory-f5-1"
+        },
+        "episodes": [
+          {
+            "cause": "f5:memory-life-204:agent-1",
+            "confidence": 1.0,
+            "harm": 0.4649951522261997,
+            "intensity": 0.01014546675109476,
+            "onset": 8094,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/covered"
+          },
+          {
+            "cause": "f5:memory-life-205:agent-1",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.022937090641928937,
+            "onset": 8098,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-206:agent-1",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.024113100426816875,
+            "onset": 8102,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-207:agent-1",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.02534940552272495,
+            "onset": 8106,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-208:agent-1",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.0266490973363555,
+            "onset": 8110,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-209:agent-1",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.02836781644971312,
+            "onset": 8115,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-210:agent-1",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.029822265500883703,
+            "onset": 8119,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-211:agent-1",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.032958700542707366,
+            "onset": 8127,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-212:agent-1",
+            "confidence": 1.0,
+            "harm": 0.8580654090979597,
+            "intensity": 0.02973070442954336,
+            "onset": 8131,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.4924999999999996,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-220:agent-1",
+            "confidence": 1.0,
+            "harm": 0.0,
+            "intensity": 0.027098935877780554,
+            "onset": 8168,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.4924999999999996,
+            "target": "dry/chilly/open"
+          }
+        ],
+        "initial_bias": "zero cue values; authored bodily drives, no feared species",
+        "last": {
+          "after": {
+            "arousal": 0.4332381337098993,
+            "control": 0.5,
+            "valence": -0.5413663849429837
+          },
+          "appraisal": {
+            "benefit": 0.0,
+            "classification": "observed_outcome",
+            "controllability": 0.5,
+            "dt_s": 4.5,
+            "goal": null,
+            "harm": 0.0,
+            "outcome": 0.3,
+            "predictability": 0.9266490629922779,
+            "prediction": {
+              "confidence": 0.9266490629922779,
+              "memories": [
+                "f5:memory-life-270:agent-1",
+                "f5:memory-life-271:agent-1",
+                "f5:memory-life-272:agent-1",
+                "f5:memory-life-273:agent-1"
+              ],
+              "value": 0.054208652066017354
+            },
+            "relevance": 0.0,
+            "relief": 0.0,
+            "responsibility": "unknown; intention not inferred",
+            "rule": "alice-mood-f4-1",
+            "surprise": 0.12289567396699132
+          },
+          "before": {
+            "arousal": 0.4293952827005252,
+            "control": 0.5,
+            "valence": -0.5364597963011817
+          },
+          "emotional_memory": {
+            "encoded": {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 4.5,
+              "end_tick": 8400,
+              "event": "f5:memory-life-274:agent-1",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8382",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8400"
+              ],
+              "outcome": 0.3,
+              "owner": "agent-1",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.22457913479339828,
+              "start_tick": 8382,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            "evicted": 245,
+            "mode": "connected",
+            "retained": 30,
+            "rule": "alice-emotional-memory-f5-1"
+          },
+          "event": "f5:memory-life-274:agent-1",
+          "learning": {
+            "after": 0.08844542629695448,
+            "before": 0.054208652066017354,
+            "cue": "rain/chilly/covered",
+            "rule": "time-weighted delta, tau30s; native injury/cold CHANGE, safety condition",
+            "target": 0.3
+          },
+          "memories": [
+            "f5:memory-life-270:agent-1",
+            "f5:memory-life-271:agent-1",
+            "f5:memory-life-272:agent-1",
+            "f5:memory-life-273:agent-1"
+          ],
+          "mood_after": {
+            "source": "slow_body_derived_stress",
+            "valence": -0.390434536734691
+          },
+          "mood_before": -0.3912773196160146,
+          "observation_refs": [
+            "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8382",
+            "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-1:8400"
+          ],
+          "stress_after": 0.390434536734691,
+          "stress_before": 0.3912773196160146,
+          "temperament": {
+            "baseline": 0.0,
+            "recovery_s": 180.0,
+            "rise_s": 120.0,
+            "sensitivity": 1.0
+          },
+          "temperament_origin": {
+            "inherited_rule": "alice-affect-1",
+            "inherited_updates": 553,
+            "kind": "authored_initial_parameters_on_inherited_person",
+            "learned": false
+          }
+        },
+        "mode": "learned",
+        "mood": {
+          "source": "slow_body_derived_stress",
+          "valence": -0.390434536734691
+        },
+        "mood_connected": true,
+        "owner": "agent-1",
+        "recent": [
+          "f5:memory-life-211:agent-1",
+          "f5:memory-life-212:agent-1",
+          "f5:memory-life-213:agent-1",
+          "f5:memory-life-214:agent-1",
+          "f5:memory-life-215:agent-1",
+          "f5:memory-life-216:agent-1",
+          "f5:memory-life-217:agent-1",
+          "f5:memory-life-218:agent-1",
+          "f5:memory-life-219:agent-1",
+          "f5:memory-life-220:agent-1",
+          "f5:memory-life-221:agent-1",
+          "f5:memory-life-222:agent-1",
+          "f5:memory-life-223:agent-1",
+          "f5:memory-life-224:agent-1",
+          "f5:memory-life-225:agent-1",
+          "f5:memory-life-226:agent-1",
+          "f5:memory-life-227:agent-1",
+          "f5:memory-life-228:agent-1",
+          "f5:memory-life-229:agent-1",
+          "f5:memory-life-230:agent-1",
+          "f5:memory-life-231:agent-1",
+          "f5:memory-life-232:agent-1",
+          "f5:memory-life-233:agent-1",
+          "f5:memory-life-234:agent-1",
+          "f5:memory-life-235:agent-1",
+          "f5:memory-life-236:agent-1",
+          "f5:memory-life-237:agent-1",
+          "f5:memory-life-238:agent-1",
+          "f5:memory-life-239:agent-1",
+          "f5:memory-life-240:agent-1",
+          "f5:memory-life-241:agent-1",
+          "f5:memory-life-242:agent-1",
+          "f5:memory-life-243:agent-1",
+          "f5:memory-life-244:agent-1",
+          "f5:memory-life-245:agent-1",
+          "f5:memory-life-246:agent-1",
+          "f5:memory-life-247:agent-1",
+          "f5:memory-life-248:agent-1",
+          "f5:memory-life-249:agent-1",
+          "f5:memory-life-250:agent-1",
+          "f5:memory-life-251:agent-1",
+          "f5:memory-life-252:agent-1",
+          "f5:memory-life-253:agent-1",
+          "f5:memory-life-254:agent-1",
+          "f5:memory-life-255:agent-1",
+          "f5:memory-life-256:agent-1",
+          "f5:memory-life-257:agent-1",
+          "f5:memory-life-258:agent-1",
+          "f5:memory-life-259:agent-1",
+          "f5:memory-life-260:agent-1",
+          "f5:memory-life-261:agent-1",
+          "f5:memory-life-262:agent-1",
+          "f5:memory-life-263:agent-1",
+          "f5:memory-life-264:agent-1",
+          "f5:memory-life-265:agent-1",
+          "f5:memory-life-266:agent-1",
+          "f5:memory-life-267:agent-1",
+          "f5:memory-life-268:agent-1",
+          "f5:memory-life-269:agent-1",
+          "f5:memory-life-270:agent-1",
+          "f5:memory-life-271:agent-1",
+          "f5:memory-life-272:agent-1",
+          "f5:memory-life-273:agent-1",
+          "f5:memory-life-274:agent-1"
+        ],
+        "regulation": {},
+        "relationships": {},
+        "rule": "alice-mood-f4-1",
+        "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+        "schema": 2,
+        "stress": 0.390434536734691,
+        "temperament": {
+          "baseline": 0.0,
+          "recovery_s": 180.0,
+          "rise_s": 120.0,
+          "sensitivity": 1.0
+        },
+        "temperament_origin": {
+          "inherited_rule": "alice-affect-1",
+          "inherited_updates": 553,
+          "kind": "authored_initial_parameters_on_inherited_person",
+          "learned": false
+        },
+        "tick": 8400,
+        "updates": 1360
+      },
+      "agent-2": {
+        "affect": {
+          "arousal": 0.4334818514810864,
+          "control": 0.5,
+          "valence": -0.5415727207537299
+        },
+        "associations": {
+          "dry/chilly/covered": {
+            "confidence": 0.9967366467240238,
+            "evidence": [
+              "f5:memory-life-243:agent-2",
+              "f5:memory-life-244:agent-2",
+              "f5:memory-life-245:agent-2",
+              "f5:memory-life-246:agent-2",
+              "f5:memory-life-247:agent-2",
+              "f5:memory-life-248:agent-2",
+              "f5:memory-life-249:agent-2",
+              "f5:memory-life-250:agent-2"
+            ],
+            "seconds": 343.5,
+            "value": -0.015627151063115602
+          },
+          "dry/chilly/open": {
+            "confidence": 0.9319491459749898,
+            "evidence": [
+              "f5:memory-life-222:agent-2",
+              "f5:memory-life-223:agent-2",
+              "f5:memory-life-224:agent-2",
+              "f5:memory-life-225:agent-2",
+              "f5:memory-life-226:agent-2",
+              "f5:memory-life-227:agent-2",
+              "f5:memory-life-228:agent-2",
+              "f5:memory-life-229:agent-2"
+            ],
+            "seconds": 161.25,
+            "value": -0.32013630013203187
+          },
+          "dry/mild/covered": {
+            "confidence": 0.6486011350567803,
+            "evidence": [
+              "life-372:agent-2",
+              "life-373:agent-2",
+              "life-374:agent-2",
+              "life-375:agent-2",
+              "life-376:agent-2",
+              "life-377:agent-2",
+              "life-378:agent-2",
+              "life-379:agent-2"
+            ],
+            "seconds": 62.75,
+            "value": 0.26295565131498505
+          },
+          "dry/mild/open": {
+            "confidence": 0.9999935676246212,
+            "evidence": [
+              "life-537:agent-2",
+              "life-538:agent-2",
+              "life-539:agent-2",
+              "life-540:agent-2",
+              "life-541:agent-2",
+              "life-542:agent-2",
+              "life-543:agent-2",
+              "life-544:agent-2"
+            ],
+            "seconds": 717.25,
+            "value": 0.2999999999875873
+          },
+          "rain/chilly/covered": {
+            "confidence": 0.9209361875468394,
+            "evidence": [
+              "f5:memory-life-267:agent-2",
+              "f5:memory-life-268:agent-2",
+              "f5:memory-life-269:agent-2",
+              "f5:memory-life-270:agent-2",
+              "f5:memory-life-271:agent-2",
+              "f5:memory-life-272:agent-2",
+              "f5:memory-life-273:agent-2",
+              "f5:memory-life-274:agent-2"
+            ],
+            "seconds": 152.25,
+            "value": 0.08190965190257946
+          },
+          "rain/chilly/open": {
+            "confidence": 0.9050273825849761,
+            "evidence": [
+              "f4:mood-life-345:agent-2",
+              "f4:mood-life-346:agent-2",
+              "f4:mood-life-347:agent-2",
+              "f4:mood-life-348:agent-2",
+              "f4:mood-life-349:agent-2",
+              "f4:mood-life-350:agent-2",
+              "f4:mood-life-351:agent-2",
+              "f4:mood-life-352:agent-2"
+            ],
+            "seconds": 141.25,
+            "value": -0.10408894779252974
+          },
+          "rain/mild/covered": {
+            "confidence": 0.9465584457772258,
+            "evidence": [
+              "f4:mood-life-242:agent-2",
+              "f4:mood-life-243:agent-2",
+              "f4:mood-life-244:agent-2",
+              "f4:mood-life-245:agent-2",
+              "f4:mood-life-246:agent-2",
+              "f4:mood-life-247:agent-2",
+              "f4:mood-life-248:agent-2",
+              "f4:mood-life-249:agent-2"
+            ],
+            "seconds": 175.75,
+            "value": 0.14237273403786888
+          },
+          "rain/mild/open": {
+            "confidence": 0.9707926045615052,
+            "evidence": [
+              "f4:mood-life-232:agent-2",
+              "f4:mood-life-233:agent-2",
+              "f4:mood-life-234:agent-2",
+              "f4:mood-life-235:agent-2",
+              "f4:mood-life-236:agent-2",
+              "f4:mood-life-237:agent-2",
+              "f4:mood-life-238:agent-2",
+              "f4:mood-life-239:agent-2"
+            ],
+            "seconds": 212.0,
+            "value": 0.2624492504929178
+          }
+        },
+        "body": {
+          "exhaustion": 0.00415987501900014,
+          "hunger": 0.5499999999997691,
+          "injury": 0.0,
+          "thermal": 0.07661847700178176,
+          "thirst": 0.5500000000001201,
+          "wetness": 0.0
+        },
+        "caution_blocked_until": 0,
+        "caution_failures": 0,
+        "emotional_memory": {
+          "encoded": 275,
+          "entries": [
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 2.0,
+              "end_tick": 7235,
+              "event": "f5:memory-life-5:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:7227",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:7235"
+              ],
+              "outcome": -1,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-2-272",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.7600504567934008,
+              "start_tick": 7227,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 2.0,
+              "end_tick": 7279,
+              "event": "f5:memory-life-13:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:7271",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:7279"
+              ],
+              "outcome": -1,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-2-274",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.7410034870527455,
+              "start_tick": 7271,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 7320,
+              "event": "f5:memory-life-22:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:7316",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:7320"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.20559423950368835,
+              "start_tick": 7316,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 7324,
+              "event": "f5:memory-life-23:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:7320",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:7324"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.20541083851791983,
+              "start_tick": 7320,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.25,
+              "end_tick": 7477,
+              "event": "f5:memory-life-61:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:7472",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:7477"
+              ],
+              "outcome": -0.5879158548284507,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-2-286",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.49243331929162343,
+              "start_tick": 7472,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 7513,
+              "event": "f5:memory-life-69:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:7509",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:7513"
+              ],
+              "outcome": -1,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-2-288",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.7404336079360286,
+              "start_tick": 7509,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 7818,
+              "event": "f5:memory-life-145:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:7814",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:7818"
+              ],
+              "outcome": -0.7361583554060155,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-2-307",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.5676141033490654,
+              "start_tick": 7814,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.25,
+              "end_tick": 8115,
+              "event": "f5:memory-life-209:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8110",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8115"
+              ],
+              "outcome": -0.5717632917577542,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-2-323",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.4850335081766324,
+              "start_tick": 8110,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8119,
+              "event": "f5:memory-life-210:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8115",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8119"
+              ],
+              "outcome": -1,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.6656124279424356,
+              "start_tick": 8115,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 2.0,
+              "end_tick": 8127,
+              "event": "f5:memory-life-211:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8119",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8127"
+              ],
+              "outcome": -1,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.6634613966976391,
+              "start_tick": 8119,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8186,
+              "event": "f5:memory-life-225:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8182",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8186"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-2-327",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.33663611563325607,
+              "start_tick": 8182,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8190,
+              "event": "f5:memory-life-226:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8186",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8190"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.23688586505032888,
+              "start_tick": 8186,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8194,
+              "event": "f5:memory-life-227:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8190",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8194"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.2356766025568846,
+              "start_tick": 8190,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8198,
+              "event": "f5:memory-life-228:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8194",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8198"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.23450698440351628,
+              "start_tick": 8194,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.25,
+              "end_tick": 8203,
+              "event": "f5:memory-life-229:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8198",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8203"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-2-328",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.23337571089416242,
+              "start_tick": 8198,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8271,
+              "event": "f5:memory-life-246:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8267",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8271"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.2018461297631836,
+              "start_tick": 8267,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8275,
+              "event": "f5:memory-life-247:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8271",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8275"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.20178560643053023,
+              "start_tick": 8271,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8279,
+              "event": "f5:memory-life-248:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8275",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8279"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.20172706728873305,
+              "start_tick": 8275,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8283,
+              "event": "f5:memory-life-249:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8279",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8283"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-2-333",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.2016704472882784,
+              "start_tick": 8279,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8287,
+              "event": "f5:memory-life-250:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8283",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8287"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.2016156835122294,
+              "start_tick": 8283,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8350,
+              "event": "f5:memory-life-265:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8346",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8350"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-2-337",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.20213520187348036,
+              "start_tick": 8346,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8354,
+              "event": "f5:memory-life-266:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8350",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8354"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.20206520162980954,
+              "start_tick": 8350,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8358,
+              "event": "f5:memory-life-267:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8354",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8358"
+              ],
+              "outcome": 0.3,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.23199749626709346,
+              "start_tick": 8354,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8362,
+              "event": "f5:memory-life-268:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8358",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8362"
+              ],
+              "outcome": 0.3,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.2309484935646457,
+              "start_tick": 8358,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8366,
+              "event": "f5:memory-life-269:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8362",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8366"
+              ],
+              "outcome": 0.3,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-2-338",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.22993388126138906,
+              "start_tick": 8362,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8370,
+              "event": "f5:memory-life-270:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8366",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8370"
+              ],
+              "outcome": 0.3,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.22895253190593212,
+              "start_tick": 8366,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8374,
+              "event": "f5:memory-life-271:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8370",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8374"
+              ],
+              "outcome": 0.3,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.22800335500913652,
+              "start_tick": 8370,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8378,
+              "event": "f5:memory-life-272:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8374",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8378"
+              ],
+              "outcome": 0.3,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.22708529583235026,
+              "start_tick": 8374,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8382,
+              "event": "f5:memory-life-273:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8378",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8382"
+              ],
+              "outcome": 0.3,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-2-339",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.22619733421536736,
+              "start_tick": 8378,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 4.5,
+              "end_tick": 8400,
+              "event": "f5:memory-life-274:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8382",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8400"
+              ],
+              "outcome": 0.3,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.22533848344281143,
+              "start_tick": 8382,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            }
+          ],
+          "evicted": 245,
+          "mode": "connected",
+          "origin": "new private index; historical events not retroactively encoded",
+          "rule": "alice-emotional-memory-f5-1"
+        },
+        "episodes": [
+          {
+            "cause": "f5:memory-life-209:agent-2",
+            "confidence": 1.0,
+            "harm": 0.5717632917577542,
+            "intensity": 0.01621967611326774,
+            "onset": 8115,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/covered"
+          },
+          {
+            "cause": "f5:memory-life-210:agent-2",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.029822265500883703,
+            "onset": 8119,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-211:agent-2",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.032958700542707366,
+            "onset": 8127,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-212:agent-2",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.03464852925466103,
+            "onset": 8131,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-213:agent-2",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.03642499733736425,
+            "onset": 8135,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-214:agent-2",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.03829254688634466,
+            "onset": 8139,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-215:agent-2",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.042852126867040215,
+            "onset": 8148,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-217:agent-2",
+            "confidence": 1.0,
+            "harm": 0.0,
+            "intensity": 0.023324270262636903,
+            "onset": 8156,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.4924999999999996,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-225:agent-2",
+            "confidence": 1.0,
+            "harm": 0.0,
+            "intensity": 0.03393661298437131,
+            "onset": 8186,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.4924999999999996,
+            "target": "dry/chilly/open"
+          }
+        ],
+        "initial_bias": "zero cue values; authored bodily drives, no feared species",
+        "last": {
+          "after": {
+            "arousal": 0.4334818514810864,
+            "control": 0.5,
+            "valence": -0.5415727207537299
+          },
+          "appraisal": {
+            "benefit": 0.0,
+            "classification": "observed_outcome",
+            "controllability": 0.5,
+            "dt_s": 4.5,
+            "goal": null,
+            "harm": 0.0,
+            "outcome": 0.3,
+            "predictability": 0.9147783696482231,
+            "prediction": {
+              "confidence": 0.9147783696482231,
+              "memories": [
+                "f5:memory-life-270:agent-2",
+                "f5:memory-life-271:agent-2",
+                "f5:memory-life-272:agent-2",
+                "f5:memory-life-273:agent-2"
+              ],
+              "value": 0.04661516557188575
+            },
+            "relevance": 0.0,
+            "relief": 0.0,
+            "responsibility": "unknown; intention not inferred",
+            "rule": "alice-mood-f4-1",
+            "surprise": 0.1266924172140571
+          },
+          "before": {
+            "arousal": 0.4297775082508985,
+            "control": 0.5,
+            "valence": -0.5367833952674779
+          },
+          "emotional_memory": {
+            "encoded": {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 4.5,
+              "end_tick": 8400,
+              "event": "f5:memory-life-274:agent-2",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8382",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8400"
+              ],
+              "outcome": 0.3,
+              "owner": "agent-2",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.22533848344281143,
+              "start_tick": 8382,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            "evicted": 245,
+            "mode": "connected",
+            "retained": 30,
+            "rule": "alice-emotional-memory-f5-1"
+          },
+          "event": "f5:memory-life-274:agent-2",
+          "learning": {
+            "after": 0.08190965190257946,
+            "before": 0.04661516557188575,
+            "cue": "rain/chilly/covered",
+            "rule": "time-weighted delta, tau30s; native injury/cold CHANGE, safety condition",
+            "target": 0.3
+          },
+          "memories": [
+            "f5:memory-life-270:agent-2",
+            "f5:memory-life-271:agent-2",
+            "f5:memory-life-272:agent-2",
+            "f5:memory-life-273:agent-2"
+          ],
+          "mood_after": {
+            "source": "slow_body_derived_stress",
+            "valence": -0.39845393549001096
+          },
+          "mood_before": -0.3994997304173589,
+          "observation_refs": [
+            "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8382",
+            "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-2:8400"
+          ],
+          "stress_after": 0.39845393549001096,
+          "stress_before": 0.3994997304173589,
+          "temperament": {
+            "baseline": 0.0,
+            "recovery_s": 180.0,
+            "rise_s": 120.0,
+            "sensitivity": 1.0
+          },
+          "temperament_origin": {
+            "inherited_rule": "alice-affect-1",
+            "inherited_updates": 553,
+            "kind": "authored_initial_parameters_on_inherited_person",
+            "learned": false
+          }
+        },
+        "mode": "learned",
+        "mood": {
+          "source": "slow_body_derived_stress",
+          "valence": -0.39845393549001096
+        },
+        "mood_connected": true,
+        "owner": "agent-2",
+        "recent": [
+          "f5:memory-life-211:agent-2",
+          "f5:memory-life-212:agent-2",
+          "f5:memory-life-213:agent-2",
+          "f5:memory-life-214:agent-2",
+          "f5:memory-life-215:agent-2",
+          "f5:memory-life-216:agent-2",
+          "f5:memory-life-217:agent-2",
+          "f5:memory-life-218:agent-2",
+          "f5:memory-life-219:agent-2",
+          "f5:memory-life-220:agent-2",
+          "f5:memory-life-221:agent-2",
+          "f5:memory-life-222:agent-2",
+          "f5:memory-life-223:agent-2",
+          "f5:memory-life-224:agent-2",
+          "f5:memory-life-225:agent-2",
+          "f5:memory-life-226:agent-2",
+          "f5:memory-life-227:agent-2",
+          "f5:memory-life-228:agent-2",
+          "f5:memory-life-229:agent-2",
+          "f5:memory-life-230:agent-2",
+          "f5:memory-life-231:agent-2",
+          "f5:memory-life-232:agent-2",
+          "f5:memory-life-233:agent-2",
+          "f5:memory-life-234:agent-2",
+          "f5:memory-life-235:agent-2",
+          "f5:memory-life-236:agent-2",
+          "f5:memory-life-237:agent-2",
+          "f5:memory-life-238:agent-2",
+          "f5:memory-life-239:agent-2",
+          "f5:memory-life-240:agent-2",
+          "f5:memory-life-241:agent-2",
+          "f5:memory-life-242:agent-2",
+          "f5:memory-life-243:agent-2",
+          "f5:memory-life-244:agent-2",
+          "f5:memory-life-245:agent-2",
+          "f5:memory-life-246:agent-2",
+          "f5:memory-life-247:agent-2",
+          "f5:memory-life-248:agent-2",
+          "f5:memory-life-249:agent-2",
+          "f5:memory-life-250:agent-2",
+          "f5:memory-life-251:agent-2",
+          "f5:memory-life-252:agent-2",
+          "f5:memory-life-253:agent-2",
+          "f5:memory-life-254:agent-2",
+          "f5:memory-life-255:agent-2",
+          "f5:memory-life-256:agent-2",
+          "f5:memory-life-257:agent-2",
+          "f5:memory-life-258:agent-2",
+          "f5:memory-life-259:agent-2",
+          "f5:memory-life-260:agent-2",
+          "f5:memory-life-261:agent-2",
+          "f5:memory-life-262:agent-2",
+          "f5:memory-life-263:agent-2",
+          "f5:memory-life-264:agent-2",
+          "f5:memory-life-265:agent-2",
+          "f5:memory-life-266:agent-2",
+          "f5:memory-life-267:agent-2",
+          "f5:memory-life-268:agent-2",
+          "f5:memory-life-269:agent-2",
+          "f5:memory-life-270:agent-2",
+          "f5:memory-life-271:agent-2",
+          "f5:memory-life-272:agent-2",
+          "f5:memory-life-273:agent-2",
+          "f5:memory-life-274:agent-2"
+        ],
+        "regulation": {},
+        "relationships": {},
+        "rule": "alice-mood-f4-1",
+        "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+        "schema": 2,
+        "stress": 0.39845393549001096,
+        "temperament": {
+          "baseline": 0.0,
+          "recovery_s": 180.0,
+          "rise_s": 120.0,
+          "sensitivity": 1.0
+        },
+        "temperament_origin": {
+          "inherited_rule": "alice-affect-1",
+          "inherited_updates": 553,
+          "kind": "authored_initial_parameters_on_inherited_person",
+          "learned": false
+        },
+        "tick": 8400,
+        "updates": 1360
+      },
+      "agent-3": {
+        "affect": {
+          "arousal": 0.43412463927239164,
+          "control": 0.5,
+          "valence": -0.5423393659403042
+        },
+        "associations": {
+          "dry/chilly/covered": {
+            "confidence": 0.9962399887641745,
+            "evidence": [
+              "f5:memory-life-243:agent-3",
+              "f5:memory-life-244:agent-3",
+              "f5:memory-life-245:agent-3",
+              "f5:memory-life-246:agent-3",
+              "f5:memory-life-247:agent-3",
+              "f5:memory-life-248:agent-3",
+              "f5:memory-life-249:agent-3",
+              "f5:memory-life-250:agent-3"
+            ],
+            "seconds": 335.0,
+            "value": -0.016466126132544598
+          },
+          "dry/chilly/open": {
+            "confidence": 0.940937948456227,
+            "evidence": [
+              "f5:memory-life-235:agent-3",
+              "f5:memory-life-236:agent-3",
+              "f5:memory-life-237:agent-3",
+              "f5:memory-life-238:agent-3",
+              "f5:memory-life-239:agent-3",
+              "f5:memory-life-240:agent-3",
+              "f5:memory-life-241:agent-3",
+              "f5:memory-life-242:agent-3"
+            ],
+            "seconds": 169.75,
+            "value": -0.213300639023192
+          },
+          "dry/mild/covered": {
+            "confidence": 0.9228882800316833,
+            "evidence": [
+              "life-381:agent-3",
+              "life-382:agent-3",
+              "life-383:agent-3",
+              "life-384:agent-3",
+              "life-385:agent-3",
+              "life-386:agent-3",
+              "life-387:agent-3",
+              "life-388:agent-3"
+            ],
+            "seconds": 153.75,
+            "value": 0.2982161347930583
+          },
+          "dry/mild/open": {
+            "confidence": 0.9999706876022489,
+            "evidence": [
+              "life-537:agent-3",
+              "life-538:agent-3",
+              "life-539:agent-3",
+              "life-540:agent-3",
+              "life-541:agent-3",
+              "life-542:agent-3",
+              "life-543:agent-3",
+              "life-544:agent-3"
+            ],
+            "seconds": 626.25,
+            "value": 0.29999999974223496
+          },
+          "rain/chilly/covered": {
+            "confidence": 0.9376505233103266,
+            "evidence": [
+              "f5:memory-life-267:agent-3",
+              "f5:memory-life-268:agent-3",
+              "f5:memory-life-269:agent-3",
+              "f5:memory-life-270:agent-3",
+              "f5:memory-life-271:agent-3",
+              "f5:memory-life-272:agent-3",
+              "f5:memory-life-273:agent-3",
+              "f5:memory-life-274:agent-3"
+            ],
+            "seconds": 166.5,
+            "value": 0.01666236346351304
+          },
+          "rain/chilly/open": {
+            "confidence": 0.8795675984762373,
+            "evidence": [
+              "f4:mood-life-362:agent-3",
+              "f4:mood-life-363:agent-3",
+              "f4:mood-life-364:agent-3",
+              "f4:mood-life-365:agent-3",
+              "f4:mood-life-366:agent-3",
+              "f4:mood-life-367:agent-3",
+              "f4:mood-life-368:agent-3",
+              "f4:mood-life-369:agent-3"
+            ],
+            "seconds": 127.0,
+            "value": -0.16247702088324414
+          },
+          "rain/mild/covered": {
+            "confidence": 0.9349977460369655,
+            "evidence": [
+              "f4:mood-life-242:agent-3",
+              "f4:mood-life-243:agent-3",
+              "f4:mood-life-244:agent-3",
+              "f4:mood-life-245:agent-3",
+              "f4:mood-life-246:agent-3",
+              "f4:mood-life-247:agent-3",
+              "f4:mood-life-248:agent-3",
+              "f4:mood-life-249:agent-3"
+            ],
+            "seconds": 164.0,
+            "value": 0.17691014080764914
+          },
+          "rain/mild/open": {
+            "confidence": 0.9759871618002666,
+            "evidence": [
+              "f4:mood-life-229:agent-3",
+              "f4:mood-life-230:agent-3",
+              "f4:mood-life-231:agent-3",
+              "f4:mood-life-232:agent-3",
+              "f4:mood-life-233:agent-3",
+              "f4:mood-life-234:agent-3",
+              "f4:mood-life-235:agent-3",
+              "f4:mood-life-236:agent-3"
+            ],
+            "seconds": 223.75,
+            "value": 0.29982701508047804
+          }
+        },
+        "body": {
+          "exhaustion": 0.007558459135183883,
+          "hunger": 0.5499999999997691,
+          "injury": 0.0,
+          "thermal": 0.11156100087603321,
+          "thirst": 0.5500000000001201,
+          "wetness": 0.0
+        },
+        "caution_blocked_until": 0,
+        "caution_failures": 0,
+        "emotional_memory": {
+          "encoded": 275,
+          "entries": [
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 7208,
+              "event": "f5:memory-life-1:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:7204",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:7208"
+              ],
+              "outcome": -0.22970422553302006,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.3132522676524546,
+              "start_tick": 7204,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.75,
+              "end_tick": 7215,
+              "event": "f5:memory-life-2:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:7208",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:7215"
+              ],
+              "outcome": -0.8091412668678069,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-3-270",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.6022701774564383,
+              "start_tick": 7208,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 7219,
+              "event": "f5:memory-life-3:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:7215",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:7219"
+              ],
+              "outcome": -1,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.6880508606419757,
+              "start_tick": 7215,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 2.0,
+              "end_tick": 7227,
+              "event": "f5:memory-life-4:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:7219",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:7227"
+              ],
+              "outcome": -1,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.6851642100742164,
+              "start_tick": 7219,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 2.0,
+              "end_tick": 7259,
+              "event": "f5:memory-life-10:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:7251",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:7259"
+              ],
+              "outcome": -1,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-3-272",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.7632296819102826,
+              "start_tick": 7251,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 2.0,
+              "end_tick": 7304,
+              "event": "f5:memory-life-18:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:7296",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:7304"
+              ],
+              "outcome": -1,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-3-274",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.7428316610358827,
+              "start_tick": 7296,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.5,
+              "end_tick": 7483,
+              "event": "f5:memory-life-62:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:7477",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:7483"
+              ],
+              "outcome": -0.48462783964346257,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-3-285",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.44022782776861286,
+              "start_tick": 7477,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 7517,
+              "event": "f5:memory-life-70:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:7513",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:7517"
+              ],
+              "outcome": -1,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-3-287",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.7414957912520745,
+              "start_tick": 7513,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 7806,
+              "event": "f5:memory-life-142:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:7802",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:7806"
+              ],
+              "outcome": -0.47266227012925793,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-3-305",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.4356531554522713,
+              "start_tick": 7802,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8119,
+              "event": "f5:memory-life-210:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8115",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8119"
+              ],
+              "outcome": -0.46462851389549953,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-3-322",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.4316664260310957,
+              "start_tick": 8115,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8239,
+              "event": "f5:memory-life-238:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8235",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8239"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-3-329",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.22519849309809442,
+              "start_tick": 8235,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8243,
+              "event": "f5:memory-life-239:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8239",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8243"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.22437238823236164,
+              "start_tick": 8239,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8247,
+              "event": "f5:memory-life-240:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8243",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8247"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.22357336630553837,
+              "start_tick": 8243,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8251,
+              "event": "f5:memory-life-241:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8247",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8251"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.2228005394332767,
+              "start_tick": 8247,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8255,
+              "event": "f5:memory-life-242:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8251",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8255"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-3-330",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.2220530488395401,
+              "start_tick": 8251,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8271,
+              "event": "f5:memory-life-246:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8267",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8271"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-3-331",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.20194524295662408,
+              "start_tick": 8267,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8275,
+              "event": "f5:memory-life-247:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8271",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8275"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.20188147030699602,
+              "start_tick": 8271,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8279,
+              "event": "f5:memory-life-248:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8275",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8279"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.2018197883735054,
+              "start_tick": 8275,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8283,
+              "event": "f5:memory-life-249:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8279",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8283"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.20176012861432438,
+              "start_tick": 8279,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8287,
+              "event": "f5:memory-life-250:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8283",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8287"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-3-332",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.2017024247346936,
+              "start_tick": 8283,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8291,
+              "event": "f5:memory-life-251:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8287",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8291"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.20644274464144435,
+              "start_tick": 8287,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8295,
+              "event": "f5:memory-life-252:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8291",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8295"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.20623152634849914,
+              "start_tick": 8291,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8299,
+              "event": "f5:memory-life-253:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8295",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8299"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.2060272326148462,
+              "start_tick": 8295,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8303,
+              "event": "f5:memory-life-254:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8299",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8303"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-3-333",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.2058296364264295,
+              "start_tick": 8299,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8366,
+              "event": "f5:memory-life-269:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8362",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8366"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.20344855270036258,
+              "start_tick": 8362,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8370,
+              "event": "f5:memory-life-270:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8366",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8370"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-3-337",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.20333549569515139,
+              "start_tick": 8366,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8374,
+              "event": "f5:memory-life-271:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8370",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8374"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.20322614513943885,
+              "start_tick": 8370,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8378,
+              "event": "f5:memory-life-272:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8374",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8378"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.203120379521357,
+              "start_tick": 8374,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8382,
+              "event": "f5:memory-life-273:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8378",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8382"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.20301808131267082,
+              "start_tick": 8378,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 4.5,
+              "end_tick": 8400,
+              "event": "f5:memory-life-274:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8382",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8400"
+              ],
+              "outcome": 0.3,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.2329191368381791,
+              "start_tick": 8382,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            }
+          ],
+          "evicted": 245,
+          "mode": "connected",
+          "origin": "new private index; historical events not retroactively encoded",
+          "rule": "alice-emotional-memory-f5-1"
+        },
+        "episodes": [
+          {
+            "cause": "f5:memory-life-210:agent-3",
+            "confidence": 1.0,
+            "harm": 0.46462851389549953,
+            "intensity": 0.013856274900672627,
+            "onset": 8119,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/covered"
+          },
+          {
+            "cause": "f5:memory-life-211:agent-3",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.032958700542707366,
+            "onset": 8127,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-212:agent-3",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.03464852925466103,
+            "onset": 8131,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-213:agent-3",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.03642499733736425,
+            "onset": 8135,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-214:agent-3",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.03829254688634466,
+            "onset": 8139,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-215:agent-3",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.042852126867040215,
+            "onset": 8148,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-216:agent-3",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.04504920239355782,
+            "onset": 8152,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-217:agent-3",
+            "confidence": 1.0,
+            "harm": 0.369328584568715,
+            "intensity": 0.01749100451207688,
+            "onset": 8156,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-226:agent-3",
+            "confidence": 1.0,
+            "harm": 0.0,
+            "intensity": 0.035676580339368845,
+            "onset": 8190,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.4924999999999996,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-234:agent-3",
+            "confidence": 1.0,
+            "harm": 0.0,
+            "intensity": 0.053892669165950056,
+            "onset": 8223,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.4924999999999996,
+            "target": "dry/chilly/open"
+          }
+        ],
+        "initial_bias": "zero cue values; authored bodily drives, no feared species",
+        "last": {
+          "after": {
+            "arousal": 0.43412463927239164,
+            "control": 0.5,
+            "valence": -0.5423393659403042
+          },
+          "appraisal": {
+            "benefit": 0.0,
+            "classification": "observed_outcome",
+            "controllability": 0.5,
+            "dt_s": 4.5,
+            "goal": null,
+            "harm": 0.0,
+            "outcome": 0.3,
+            "predictability": 0.9327944872602503,
+            "prediction": {
+              "confidence": 0.9327944872602503,
+              "memories": [
+                "f5:memory-life-270:agent-3",
+                "f5:memory-life-271:agent-3",
+                "f5:memory-life-272:agent-3",
+                "f5:memory-life-273:agent-3"
+              ],
+              "value": -0.02919136838179085
+            },
+            "relevance": 0.0,
+            "relief": 0.0,
+            "responsibility": "unknown; intention not inferred",
+            "rule": "alice-mood-f4-1",
+            "surprise": 0.16459568419089543
+          },
+          "before": {
+            "arousal": 0.4307856001766868,
+            "control": 0.5,
+            "valence": -0.5379857342555299
+          },
+          "emotional_memory": {
+            "encoded": {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 4.5,
+              "end_tick": 8400,
+              "event": "f5:memory-life-274:agent-3",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8382",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8400"
+              ],
+              "outcome": 0.3,
+              "owner": "agent-3",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.2329191368381791,
+              "start_tick": 8382,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            "evicted": 245,
+            "mode": "connected",
+            "retained": 30,
+            "rule": "alice-emotional-memory-f5-1"
+          },
+          "event": "f5:memory-life-274:agent-3",
+          "learning": {
+            "after": 0.01666236346351304,
+            "before": -0.02919136838179085,
+            "cue": "rain/chilly/covered",
+            "rule": "time-weighted delta, tau30s; native injury/cold CHANGE, safety condition",
+            "target": 0.3
+          },
+          "memories": [
+            "f5:memory-life-270:agent-3",
+            "f5:memory-life-271:agent-3",
+            "f5:memory-life-272:agent-3",
+            "f5:memory-life-273:agent-3"
+          ],
+          "mood_after": {
+            "source": "slow_body_derived_stress",
+            "valence": -0.40848472959645143
+          },
+          "mood_before": -0.4097844552855597,
+          "observation_refs": [
+            "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8382",
+            "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-3:8400"
+          ],
+          "stress_after": 0.40848472959645143,
+          "stress_before": 0.4097844552855597,
+          "temperament": {
+            "baseline": 0.0,
+            "recovery_s": 180.0,
+            "rise_s": 120.0,
+            "sensitivity": 1.0
+          },
+          "temperament_origin": {
+            "inherited_rule": "alice-affect-1",
+            "inherited_updates": 553,
+            "kind": "authored_initial_parameters_on_inherited_person",
+            "learned": false
+          }
+        },
+        "mode": "learned",
+        "mood": {
+          "source": "slow_body_derived_stress",
+          "valence": -0.40848472959645143
+        },
+        "mood_connected": true,
+        "owner": "agent-3",
+        "recent": [
+          "f5:memory-life-211:agent-3",
+          "f5:memory-life-212:agent-3",
+          "f5:memory-life-213:agent-3",
+          "f5:memory-life-214:agent-3",
+          "f5:memory-life-215:agent-3",
+          "f5:memory-life-216:agent-3",
+          "f5:memory-life-217:agent-3",
+          "f5:memory-life-218:agent-3",
+          "f5:memory-life-219:agent-3",
+          "f5:memory-life-220:agent-3",
+          "f5:memory-life-221:agent-3",
+          "f5:memory-life-222:agent-3",
+          "f5:memory-life-223:agent-3",
+          "f5:memory-life-224:agent-3",
+          "f5:memory-life-225:agent-3",
+          "f5:memory-life-226:agent-3",
+          "f5:memory-life-227:agent-3",
+          "f5:memory-life-228:agent-3",
+          "f5:memory-life-229:agent-3",
+          "f5:memory-life-230:agent-3",
+          "f5:memory-life-231:agent-3",
+          "f5:memory-life-232:agent-3",
+          "f5:memory-life-233:agent-3",
+          "f5:memory-life-234:agent-3",
+          "f5:memory-life-235:agent-3",
+          "f5:memory-life-236:agent-3",
+          "f5:memory-life-237:agent-3",
+          "f5:memory-life-238:agent-3",
+          "f5:memory-life-239:agent-3",
+          "f5:memory-life-240:agent-3",
+          "f5:memory-life-241:agent-3",
+          "f5:memory-life-242:agent-3",
+          "f5:memory-life-243:agent-3",
+          "f5:memory-life-244:agent-3",
+          "f5:memory-life-245:agent-3",
+          "f5:memory-life-246:agent-3",
+          "f5:memory-life-247:agent-3",
+          "f5:memory-life-248:agent-3",
+          "f5:memory-life-249:agent-3",
+          "f5:memory-life-250:agent-3",
+          "f5:memory-life-251:agent-3",
+          "f5:memory-life-252:agent-3",
+          "f5:memory-life-253:agent-3",
+          "f5:memory-life-254:agent-3",
+          "f5:memory-life-255:agent-3",
+          "f5:memory-life-256:agent-3",
+          "f5:memory-life-257:agent-3",
+          "f5:memory-life-258:agent-3",
+          "f5:memory-life-259:agent-3",
+          "f5:memory-life-260:agent-3",
+          "f5:memory-life-261:agent-3",
+          "f5:memory-life-262:agent-3",
+          "f5:memory-life-263:agent-3",
+          "f5:memory-life-264:agent-3",
+          "f5:memory-life-265:agent-3",
+          "f5:memory-life-266:agent-3",
+          "f5:memory-life-267:agent-3",
+          "f5:memory-life-268:agent-3",
+          "f5:memory-life-269:agent-3",
+          "f5:memory-life-270:agent-3",
+          "f5:memory-life-271:agent-3",
+          "f5:memory-life-272:agent-3",
+          "f5:memory-life-273:agent-3",
+          "f5:memory-life-274:agent-3"
+        ],
+        "regulation": {},
+        "relationships": {},
+        "rule": "alice-mood-f4-1",
+        "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+        "schema": 2,
+        "stress": 0.40848472959645143,
+        "temperament": {
+          "baseline": 0.0,
+          "recovery_s": 180.0,
+          "rise_s": 120.0,
+          "sensitivity": 1.0
+        },
+        "temperament_origin": {
+          "inherited_rule": "alice-affect-1",
+          "inherited_updates": 553,
+          "kind": "authored_initial_parameters_on_inherited_person",
+          "learned": false
+        },
+        "tick": 8400,
+        "updates": 1360
+      },
+      "agent-4": {
+        "affect": {
+          "arousal": 0.4617679252092706,
+          "control": 0.5,
+          "valence": -0.5694922726587854
+        },
+        "associations": {
+          "dry/chilly/covered": {
+            "confidence": 0.993537032275917,
+            "evidence": [
+              "f5:memory-life-243:agent-4",
+              "f5:memory-life-244:agent-4",
+              "f5:memory-life-245:agent-4",
+              "f5:memory-life-246:agent-4",
+              "f5:memory-life-247:agent-4",
+              "f5:memory-life-248:agent-4",
+              "f5:memory-life-249:agent-4",
+              "f5:memory-life-250:agent-4"
+            ],
+            "seconds": 302.5,
+            "value": -0.04675447319309982
+          },
+          "dry/chilly/open": {
+            "confidence": 0.9656390087501168,
+            "evidence": [
+              "f5:memory-life-208:agent-4",
+              "f5:memory-life-209:agent-4",
+              "f5:memory-life-210:agent-4",
+              "f5:memory-life-211:agent-4",
+              "f5:memory-life-212:agent-4",
+              "f5:memory-life-213:agent-4",
+              "f5:memory-life-214:agent-4",
+              "f5:memory-life-215:agent-4"
+            ],
+            "seconds": 202.25,
+            "value": -0.1825922377211685
+          },
+          "dry/mild/covered": {
+            "confidence": 0.7217309052288764,
+            "evidence": [
+              "life-382:agent-4",
+              "life-383:agent-4",
+              "life-384:agent-4",
+              "life-385:agent-4",
+              "life-390:agent-4",
+              "life-391:agent-4",
+              "life-392:agent-4",
+              "life-393:agent-4"
+            ],
+            "seconds": 76.75,
+            "value": 0.2767698932685778
+          },
+          "dry/mild/open": {
+            "confidence": 0.9999918771812988,
+            "evidence": [
+              "life-537:agent-4",
+              "life-538:agent-4",
+              "life-539:agent-4",
+              "life-540:agent-4",
+              "life-541:agent-4",
+              "life-542:agent-4",
+              "life-543:agent-4",
+              "life-544:agent-4"
+            ],
+            "seconds": 703.25,
+            "value": 0.29999999998020593
+          },
+          "rain/chilly/covered": {
+            "confidence": 0.8195858071295292,
+            "evidence": [
+              "f4:mood-life-372:agent-4",
+              "f4:mood-life-373:agent-4",
+              "f4:mood-life-374:agent-4",
+              "f4:mood-life-375:agent-4",
+              "f4:mood-life-376:agent-4",
+              "f4:mood-life-377:agent-4",
+              "f4:mood-life-378:agent-4",
+              "f5:memory-life-251:agent-4"
+            ],
+            "seconds": 102.75,
+            "value": -0.06843249665259345
+          },
+          "rain/chilly/open": {
+            "confidence": 0.9583796757227505,
+            "evidence": [
+              "f5:memory-life-267:agent-4",
+              "f5:memory-life-268:agent-4",
+              "f5:memory-life-269:agent-4",
+              "f5:memory-life-270:agent-4",
+              "f5:memory-life-271:agent-4",
+              "f5:memory-life-272:agent-4",
+              "f5:memory-life-273:agent-4",
+              "f5:memory-life-274:agent-4"
+            ],
+            "seconds": 190.75,
+            "value": -0.09840733617931652
+          },
+          "rain/mild/covered": {
+            "confidence": 0.8901163646236034,
+            "evidence": [
+              "f4:mood-life-71:agent-4",
+              "f4:mood-life-72:agent-4",
+              "f4:mood-life-73:agent-4",
+              "f4:mood-life-74:agent-4",
+              "f4:mood-life-226:agent-4",
+              "f4:mood-life-227:agent-4",
+              "f4:mood-life-228:agent-4",
+              "f4:mood-life-229:agent-4"
+            ],
+            "seconds": 132.5,
+            "value": 0.2323147475554662
+          },
+          "rain/mild/open": {
+            "confidence": 0.9857950767492752,
+            "evidence": [
+              "f4:mood-life-242:agent-4",
+              "f4:mood-life-243:agent-4",
+              "f4:mood-life-244:agent-4",
+              "f4:mood-life-245:agent-4",
+              "f4:mood-life-246:agent-4",
+              "f4:mood-life-247:agent-4",
+              "f4:mood-life-248:agent-4",
+              "f4:mood-life-249:agent-4"
+            ],
+            "seconds": 255.25,
+            "value": 0.14429592783296558
+          }
+        },
+        "body": {
+          "exhaustion": 0.03611132236317699,
+          "hunger": 0.5499999999997691,
+          "injury": 0.0,
+          "thermal": 0.12428547978341581,
+          "thirst": 0.5500000000001201,
+          "wetness": 0.0013314740091539675
+        },
+        "caution_blocked_until": 0,
+        "caution_failures": 0,
+        "emotional_memory": {
+          "encoded": 275,
+          "entries": [
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 2.0,
+              "end_tick": 7235,
+              "event": "f5:memory-life-5:agent-4",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:7227",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:7235"
+              ],
+              "outcome": -0.8091070396850665,
+              "owner": "agent-4",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.5973321552897,
+              "start_tick": 7227,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 7239,
+              "event": "f5:memory-life-6:agent-4",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:7235",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:7239"
+              ],
+              "outcome": -0.8574324732952462,
+              "owner": "agent-4",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.6167424244248447,
+              "start_tick": 7235,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 7243,
+              "event": "f5:memory-life-7:agent-4",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:7239",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:7243"
+              ],
+              "outcome": -0.8669166450411455,
+              "owner": "agent-4",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-4-272",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.6190660605497557,
+              "start_tick": 7239,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 7247,
+              "event": "f5:memory-life-8:agent-4",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:7243",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:7247"
+              ],
+              "outcome": -0.85881268389712,
+              "owner": "agent-4",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.6126438236298801,
+              "start_tick": 7243,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 7344,
+              "event": "f5:memory-life-28:agent-4",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:7340",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:7344"
+              ],
+              "outcome": -1,
+              "owner": "agent-4",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.6918233109405483,
+              "start_tick": 7340,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 7348,
+              "event": "f5:memory-life-29:agent-4",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:7344",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:7348"
+              ],
+              "outcome": -1,
+              "owner": "agent-4",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.6888129847412638,
+              "start_tick": 7344,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 7352,
+              "event": "f5:memory-life-30:agent-4",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:7348",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:7352"
+              ],
+              "outcome": -1,
+              "owner": "agent-4",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.6859013487736131,
+              "start_tick": 7348,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8024,
+              "event": "f5:memory-life-188:agent-4",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8020",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8024"
+              ],
+              "outcome": -1,
+              "owner": "agent-4",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.6838067229152203,
+              "start_tick": 8020,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8131,
+              "event": "f5:memory-life-212:agent-4",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8127",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8131"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-4",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.22175123123681265,
+              "start_tick": 8127,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8135,
+              "event": "f5:memory-life-213:agent-4",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8131",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8135"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-4",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.22103814105755232,
+              "start_tick": 8131,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8139,
+              "event": "f5:memory-life-214:agent-4",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8135",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8139"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-4",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.22034842875507615,
+              "start_tick": 8135,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 2.25,
+              "end_tick": 8148,
+              "event": "f5:memory-life-215:agent-4",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8139",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8148"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-4",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-4-324",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.21968132791142067,
+              "start_tick": 8139,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8275,
+              "event": "f5:memory-life-247:agent-4",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8271",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8275"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-4",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-4-332",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.20534231016597132,
+              "start_tick": 8271,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8279,
+              "event": "f5:memory-life-248:agent-4",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8275",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8279"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-4",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.20516716840629615,
+              "start_tick": 8275,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8283,
+              "event": "f5:memory-life-249:agent-4",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8279",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8283"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-4",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.20499776847647158,
+              "start_tick": 8279,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "dry/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8287,
+              "event": "f5:memory-life-250:agent-4",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8283",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8287"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-4",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.20483392213692475,
+              "start_tick": 8283,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/covered",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8291,
+              "event": "f5:memory-life-251:agent-4",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8287",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8291"
+              ],
+              "outcome": -0.3191867597075714,
+              "owner": "agent-4",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-4-333",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.35360006460955246,
+              "start_tick": 8287,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8295,
+              "event": "f5:memory-life-252:agent-4",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8291",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8295"
+              ],
+              "outcome": -1,
+              "owner": "agent-4",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.6884514908840413,
+              "start_tick": 8291,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8299,
+              "event": "f5:memory-life-253:agent-4",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8295",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8299"
+              ],
+              "outcome": -1,
+              "owner": "agent-4",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.6855517060946821,
+              "start_tick": 8295,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8303,
+              "event": "f5:memory-life-254:agent-4",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8299",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8303"
+              ],
+              "outcome": -1,
+              "owner": "agent-4",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.6827469875584811,
+              "start_tick": 8299,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8307,
+              "event": "f5:memory-life-255:agent-4",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8303",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8307"
+              ],
+              "outcome": -0.6250000000000006,
+              "owner": "agent-4",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-4-334",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.49253421863294733,
+              "start_tick": 8303,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8374,
+              "event": "f5:memory-life-271:agent-4",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8370",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8374"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-4",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": "weather-agent-4-338",
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.21263575208427776,
+              "start_tick": 8370,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8378,
+              "event": "f5:memory-life-272:agent-4",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8374",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8378"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-4",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.21222150285761252,
+              "start_tick": 8374,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 1.0,
+              "end_tick": 8382,
+              "event": "f5:memory-life-273:agent-4",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8378",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8382"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-4",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.21182083433596968,
+              "start_tick": 8378,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            {
+              "confidence": 1.0,
+              "context": "rain/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 4.5,
+              "end_tick": 8400,
+              "event": "f5:memory-life-274:agent-4",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8382",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8400"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-4",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.2114333012908804,
+              "start_tick": 8382,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            }
+          ],
+          "evicted": 250,
+          "mode": "connected",
+          "origin": "new private index; historical events not retroactively encoded",
+          "rule": "alice-emotional-memory-f5-1"
+        },
+        "episodes": [
+          {
+            "cause": "f5:memory-life-190:agent-4",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.01005183574463358,
+            "onset": 8032,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-191:agent-4",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.010567204383852653,
+            "onset": 8036,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-192:agent-4",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.01110899653824231,
+            "onset": 8040,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-193:agent-4",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.011678566970395444,
+            "onset": 8044,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-194:agent-4",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.012277339903068443,
+            "onset": 8048,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-195:agent-4",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.013568559012200937,
+            "onset": 8056,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-203:agent-4",
+            "confidence": 1.0,
+            "harm": 0.0,
+            "intensity": 0.010427070854804843,
+            "onset": 8092,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.490000000000001,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-211:agent-4",
+            "confidence": 1.0,
+            "harm": 0.0,
+            "intensity": 0.016149763265926632,
+            "onset": 8127,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.490000000000001,
+            "target": "dry/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-251:agent-4",
+            "confidence": 1.0,
+            "harm": 0.3191867597075714,
+            "intensity": 0.08171817073078196,
+            "onset": 8291,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/covered"
+          },
+          {
+            "cause": "f5:memory-life-252:agent-4",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.26914634872918397,
+            "onset": 8295,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-253:agent-4",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.282945777114133,
+            "onset": 8299,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-254:agent-4",
+            "confidence": 1.0,
+            "harm": 1.0,
+            "intensity": 0.29745271732174067,
+            "onset": 8303,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-255:agent-4",
+            "confidence": 1.0,
+            "harm": 0.6250000000000006,
+            "intensity": 0.19543965266178387,
+            "onset": 8307,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.0,
+            "target": "rain/chilly/open"
+          },
+          {
+            "cause": "f5:memory-life-267:agent-4",
+            "confidence": 1.0,
+            "harm": 0.0,
+            "intensity": 0.29134101695065623,
+            "onset": 8358,
+            "origin": "authored appraisal of observed change",
+            "relief": 0.4924999999999996,
+            "target": "rain/chilly/open"
+          }
+        ],
+        "initial_bias": "zero cue values; authored bodily drives, no feared species",
+        "last": {
+          "after": {
+            "arousal": 0.4617679252092706,
+            "control": 0.5,
+            "valence": -0.5694922726587854
+          },
+          "appraisal": {
+            "benefit": 0.0,
+            "classification": "observed_outcome",
+            "controllability": 0.5,
+            "dt_s": 4.5,
+            "goal": null,
+            "harm": 0.0,
+            "outcome": 0.0,
+            "predictability": 0.9551381121068738,
+            "prediction": {
+              "confidence": 0.9551381121068738,
+              "memories": [
+                "f5:memory-life-270:agent-4",
+                "f5:memory-life-271:agent-4",
+                "f5:memory-life-272:agent-4",
+                "f5:memory-life-273:agent-4"
+              ],
+              "value": -0.11433301290880378
+            },
+            "relevance": 0.0,
+            "relief": 0.0,
+            "responsibility": "unknown; intention not inferred",
+            "rule": "alice-mood-f4-1",
+            "surprise": 0.05716650645440189
+          },
+          "before": {
+            "arousal": 0.47413890235848316,
+            "control": 0.5,
+            "valence": -0.5805699687336019
+          },
+          "emotional_memory": {
+            "encoded": {
+              "confidence": 1.0,
+              "context": "rain/chilly/open",
+              "dt_s": 0.25,
+              "duration_s": 4.5,
+              "end_tick": 8400,
+              "event": "f5:memory-life-274:agent-4",
+              "observation_refs": [
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8382",
+                "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8400"
+              ],
+              "outcome": 0.0,
+              "owner": "agent-4",
+              "provenance": "own native observations + linked journal appraisal",
+              "receipt_ref": null,
+              "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+              "salience": 0.2114333012908804,
+              "start_tick": 8382,
+              "uncertainty": "observed bodily interval; cause/intention not inferred"
+            },
+            "evicted": 250,
+            "mode": "connected",
+            "retained": 25,
+            "rule": "alice-emotional-memory-f5-1"
+          },
+          "event": "f5:memory-life-274:agent-4",
+          "learning": {
+            "after": -0.09840733617931652,
+            "before": -0.11433301290880378,
+            "cue": "rain/chilly/open",
+            "rule": "time-weighted delta, tau30s; native injury/cold CHANGE, safety condition",
+            "target": 0.0
+          },
+          "memories": [
+            "f5:memory-life-270:agent-4",
+            "f5:memory-life-271:agent-4",
+            "f5:memory-life-272:agent-4",
+            "f5:memory-life-273:agent-4"
+          ],
+          "mood_after": {
+            "source": "slow_body_derived_stress",
+            "valence": -0.43536300701389297
+          },
+          "mood_before": -0.4373431595353128,
+          "observation_refs": [
+            "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8382",
+            "c648c31d-f2c8-4de5-a5e9-ee3657316fe8:agent-4:8400"
+          ],
+          "stress_after": 0.43536300701389297,
+          "stress_before": 0.4373431595353128,
+          "temperament": {
+            "baseline": 0.0,
+            "recovery_s": 180.0,
+            "rise_s": 120.0,
+            "sensitivity": 1.0
+          },
+          "temperament_origin": {
+            "inherited_rule": "alice-affect-1",
+            "inherited_updates": 553,
+            "kind": "authored_initial_parameters_on_inherited_person",
+            "learned": false
+          }
+        },
+        "mode": "learned",
+        "mood": {
+          "source": "slow_body_derived_stress",
+          "valence": -0.43536300701389297
+        },
+        "mood_connected": true,
+        "owner": "agent-4",
+        "recent": [
+          "f5:memory-life-211:agent-4",
+          "f5:memory-life-212:agent-4",
+          "f5:memory-life-213:agent-4",
+          "f5:memory-life-214:agent-4",
+          "f5:memory-life-215:agent-4",
+          "f5:memory-life-216:agent-4",
+          "f5:memory-life-217:agent-4",
+          "f5:memory-life-218:agent-4",
+          "f5:memory-life-219:agent-4",
+          "f5:memory-life-220:agent-4",
+          "f5:memory-life-221:agent-4",
+          "f5:memory-life-222:agent-4",
+          "f5:memory-life-223:agent-4",
+          "f5:memory-life-224:agent-4",
+          "f5:memory-life-225:agent-4",
+          "f5:memory-life-226:agent-4",
+          "f5:memory-life-227:agent-4",
+          "f5:memory-life-228:agent-4",
+          "f5:memory-life-229:agent-4",
+          "f5:memory-life-230:agent-4",
+          "f5:memory-life-231:agent-4",
+          "f5:memory-life-232:agent-4",
+          "f5:memory-life-233:agent-4",
+          "f5:memory-life-234:agent-4",
+          "f5:memory-life-235:agent-4",
+          "f5:memory-life-236:agent-4",
+          "f5:memory-life-237:agent-4",
+          "f5:memory-life-238:agent-4",
+          "f5:memory-life-239:agent-4",
+          "f5:memory-life-240:agent-4",
+          "f5:memory-life-241:agent-4",
+          "f5:memory-life-242:agent-4",
+          "f5:memory-life-243:agent-4",
+          "f5:memory-life-244:agent-4",
+          "f5:memory-life-245:agent-4",
+          "f5:memory-life-246:agent-4",
+          "f5:memory-life-247:agent-4",
+          "f5:memory-life-248:agent-4",
+          "f5:memory-life-249:agent-4",
+          "f5:memory-life-250:agent-4",
+          "f5:memory-life-251:agent-4",
+          "f5:memory-life-252:agent-4",
+          "f5:memory-life-253:agent-4",
+          "f5:memory-life-254:agent-4",
+          "f5:memory-life-255:agent-4",
+          "f5:memory-life-256:agent-4",
+          "f5:memory-life-257:agent-4",
+          "f5:memory-life-258:agent-4",
+          "f5:memory-life-259:agent-4",
+          "f5:memory-life-260:agent-4",
+          "f5:memory-life-261:agent-4",
+          "f5:memory-life-262:agent-4",
+          "f5:memory-life-263:agent-4",
+          "f5:memory-life-264:agent-4",
+          "f5:memory-life-265:agent-4",
+          "f5:memory-life-266:agent-4",
+          "f5:memory-life-267:agent-4",
+          "f5:memory-life-268:agent-4",
+          "f5:memory-life-269:agent-4",
+          "f5:memory-life-270:agent-4",
+          "f5:memory-life-271:agent-4",
+          "f5:memory-life-272:agent-4",
+          "f5:memory-life-273:agent-4",
+          "f5:memory-life-274:agent-4"
+        ],
+        "regulation": {},
+        "relationships": {},
+        "rule": "alice-mood-f4-1",
+        "run_id": "c648c31d-f2c8-4de5-a5e9-ee3657316fe8",
+        "schema": 2,
+        "stress": 0.43536300701389297,
+        "temperament": {
+          "baseline": 0.0,
+          "recovery_s": 180.0,
+          "rise_s": 120.0,
+          "sensitivity": 1.0
+        },
+        "temperament_origin": {
+          "inherited_rule": "alice-affect-1",
+          "inherited_updates": 553,
+          "kind": "authored_initial_parameters_on_inherited_person",
+          "learned": false
+        },
+        "tick": 8400,
+        "updates": 1360
+      }
+    },
+    "policies": {
+      "agent-1": {
+        "assigned": null,
+        "blocked_until": 0,
+        "build_steps": 0,
+        "completed": [],
+        "decisions": 339,
+        "exposure_latch": false,
+        "failures": 0,
+        "fallback": 0,
+        "goal": "reduce_exposure",
+        "last": {
+          "choice": {
+            "action": "rest",
+            "duration": 1,
+            "goal": "reduce_exposure",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "observed_tick": "8374",
+          "own_observation_sha256": "eef624f00856f0cd6e0c00cf9cc0397ba7fe36e5c4e8910e765dd2ae858ccec0",
+          "receipt": {
+            "agent_id": "agent-1",
+            "completed_tick": "8378",
+            "error_code": "",
+            "event_refs": [
+              "11566",
+              "11570"
+            ],
+            "observable_effects": {
+              "description": "rested"
+            },
+            "observation_version": "8378",
+            "reason": "",
+            "request_id": "weather-agent-1-339",
+            "schema_version": 1,
+            "started_tick": "8374",
+            "status": "completed"
+          }
+        },
+        "memory": {
+          "crafted-15": {
+            "entity": {
+              "composition_ug": {
+                "fiber": "100000000",
+                "wood": "800000000"
+              },
+              "durability": 0,
+              "entity_id": "crafted-15",
+              "kind": "lean_to",
+              "mass_kg": 0.9,
+              "mass_ug": "900000000",
+              "owner_id": "agent-1",
+              "position_m": [
+                4.0,
+                4.0
+              ],
+              "radius_m": 0.0,
+              "recipe_id": "lean_to",
+              "work_s": 12.0
+            },
+            "observer": "agent-1",
+            "source": "own_native_observation",
+            "tick": 8374
+          },
+          "resource-1": {
+            "entity": {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 4.2,
+              "mass_ug": "4200000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            "observer": "agent-1",
+            "source": "own_native_observation",
+            "tick": 8374
+          },
+          "resource-2": {
+            "entity": {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 9.95,
+              "mass_ug": "9950000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            "observer": "agent-1",
+            "source": "own_native_observation",
+            "tick": 8374
+          }
+        },
+        "need": null,
+        "preemptions": 0,
+        "search": 0,
+        "seek_steps": 13,
+        "serial": 339,
+        "sheltered_since": 8194
+      },
+      "agent-2": {
+        "assigned": null,
+        "blocked_until": 0,
+        "build_steps": 0,
+        "completed": [],
+        "decisions": 339,
+        "exposure_latch": false,
+        "failures": 0,
+        "fallback": 0,
+        "goal": "reduce_exposure",
+        "last": {
+          "choice": {
+            "action": "rest",
+            "duration": 1,
+            "goal": "reduce_exposure",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "observed_tick": "8378",
+          "own_observation_sha256": "d611c8e2cd4da4dc82cd41ecf527546c1f36e31926c8433703749af46d8c871a",
+          "receipt": {
+            "agent_id": "agent-2",
+            "completed_tick": "8382",
+            "error_code": "",
+            "event_refs": [
+              "11572",
+              "11576"
+            ],
+            "observable_effects": {
+              "description": "rested"
+            },
+            "observation_version": "8382",
+            "reason": "",
+            "request_id": "weather-agent-2-339",
+            "schema_version": 1,
+            "started_tick": "8378",
+            "status": "completed"
+          }
+        },
+        "memory": {
+          "crafted-15": {
+            "entity": {
+              "composition_ug": {
+                "fiber": "100000000",
+                "wood": "800000000"
+              },
+              "durability": 0,
+              "entity_id": "crafted-15",
+              "kind": "lean_to",
+              "mass_kg": 0.9,
+              "mass_ug": "900000000",
+              "owner_id": "agent-1",
+              "position_m": [
+                4.0,
+                4.0
+              ],
+              "radius_m": 0.0,
+              "recipe_id": "lean_to",
+              "work_s": 12.0
+            },
+            "observer": "agent-2",
+            "source": "own_native_observation",
+            "tick": 8378
+          },
+          "resource-1": {
+            "entity": {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 4.2,
+              "mass_ug": "4200000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            "observer": "agent-2",
+            "source": "own_native_observation",
+            "tick": 8378
+          },
+          "resource-2": {
+            "entity": {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 9.95,
+              "mass_ug": "9950000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            "observer": "agent-2",
+            "source": "own_native_observation",
+            "tick": 8378
+          }
+        },
+        "need": null,
+        "preemptions": 0,
+        "search": 0,
+        "seek_steps": 22,
+        "serial": 339,
+        "sheltered_since": 8215
+      },
+      "agent-3": {
+        "assigned": null,
+        "blocked_until": 0,
+        "build_steps": 0,
+        "completed": [],
+        "decisions": 337,
+        "exposure_latch": true,
+        "failures": 0,
+        "fallback": 0,
+        "goal": "reduce_exposure",
+        "last": {
+          "choice": {
+            "action": "rest",
+            "duration": 1,
+            "goal": "reduce_exposure",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "observed_tick": "8366",
+          "own_observation_sha256": "69095f6db7ace9cc720efc3f84feeec160bcee00d37162e96c90ada3bf07e5e7",
+          "receipt": {
+            "agent_id": "agent-3",
+            "completed_tick": "8370",
+            "error_code": "",
+            "event_refs": [
+              "11553",
+              "11557"
+            ],
+            "observable_effects": {
+              "description": "rested"
+            },
+            "observation_version": "8370",
+            "reason": "",
+            "request_id": "weather-agent-3-337",
+            "schema_version": 1,
+            "started_tick": "8366",
+            "status": "completed"
+          }
+        },
+        "memory": {
+          "crafted-15": {
+            "entity": {
+              "composition_ug": {
+                "fiber": "100000000",
+                "wood": "800000000"
+              },
+              "durability": 0,
+              "entity_id": "crafted-15",
+              "kind": "lean_to",
+              "mass_kg": 0.9,
+              "mass_ug": "900000000",
+              "owner_id": "agent-1",
+              "position_m": [
+                4.0,
+                4.0
+              ],
+              "radius_m": 0.0,
+              "recipe_id": "lean_to",
+              "work_s": 12.0
+            },
+            "observer": "agent-3",
+            "source": "own_native_observation",
+            "tick": 8366
+          },
+          "resource-1": {
+            "entity": {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 4.2,
+              "mass_ug": "4200000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            "observer": "agent-3",
+            "source": "own_native_observation",
+            "tick": 8366
+          },
+          "resource-2": {
+            "entity": {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 10.0,
+              "mass_ug": "10000000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            "observer": "agent-3",
+            "source": "own_native_observation",
+            "tick": 8366
+          }
+        },
+        "need": null,
+        "preemptions": 0,
+        "search": 0,
+        "seek_steps": 25,
+        "serial": 337,
+        "sheltered_since": 8267
+      },
+      "agent-4": {
+        "assigned": null,
+        "blocked_until": 0,
+        "build_steps": 0,
+        "completed": [],
+        "decisions": 338,
+        "exposure_latch": true,
+        "failures": 0,
+        "fallback": 0,
+        "goal": "prepare_supplies",
+        "last": {
+          "choice": {
+            "action": "gather",
+            "duration": 1,
+            "goal": "prepare_supplies",
+            "origin": "authored_weather_baseline",
+            "parameters": {
+              "mass_kg": 0.05
+            },
+            "targets": [
+              "resource-2"
+            ]
+          },
+          "observed_tick": "8370",
+          "own_observation_sha256": "c799c78f98bdad1d07b5d79e2c9f1554129003e9318f6d0050c94b2704fef991",
+          "receipt": {
+            "agent_id": "agent-4",
+            "completed_tick": "8374",
+            "error_code": "",
+            "event_refs": [
+              "11559",
+              "11563",
+              "11564"
+            ],
+            "observable_effects": {
+              "description": "gather:50000000ug"
+            },
+            "observation_version": "8374",
+            "reason": "",
+            "request_id": "weather-agent-4-338",
+            "schema_version": 1,
+            "started_tick": "8370",
+            "status": "completed"
+          }
+        },
+        "memory": {
+          "crafted-15": {
+            "entity": {
+              "composition_ug": {
+                "fiber": "100000000",
+                "wood": "800000000"
+              },
+              "durability": 0,
+              "entity_id": "crafted-15",
+              "kind": "lean_to",
+              "mass_kg": 0.9,
+              "mass_ug": "900000000",
+              "owner_id": "agent-1",
+              "position_m": [
+                4.0,
+                4.0
+              ],
+              "radius_m": 0.0,
+              "recipe_id": "lean_to",
+              "work_s": 12.0
+            },
+            "observer": "agent-4",
+            "source": "own_native_observation",
+            "tick": 8370
+          },
+          "resource-1": {
+            "entity": {
+              "entity_id": "resource-1",
+              "kind": "food",
+              "mass_kg": 4.2,
+              "mass_ug": "4200000000",
+              "position_m": [
+                2.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            "observer": "agent-4",
+            "source": "own_native_observation",
+            "tick": 8370
+          },
+          "resource-2": {
+            "entity": {
+              "entity_id": "resource-2",
+              "kind": "water",
+              "mass_kg": 10.0,
+              "mass_ug": "10000000000",
+              "position_m": [
+                3.0,
+                2.0
+              ],
+              "radius_m": 0.0
+            },
+            "observer": "agent-4",
+            "source": "own_native_observation",
+            "tick": 8370
+          }
+        },
+        "need": "water",
+        "preemptions": 0,
+        "search": 0,
+        "seek_steps": 39,
+        "serial": 338,
+        "sheltered_since": null
+      }
+    },
+    "hash": "2e9deb1fda1cd29553eb2a202d3f2825db7630e1c3812354211b7f4adee55de4",
+    "operations": 275
+  },
+  "wall_s": 257.4080371000018,
+  "replay": {
+    "verified": true,
+    "operations": 275,
+    "physical": {
+      "replay_matches": true,
+      "operations": 1427,
+      "state_hash": "a7b9738538b12e12dab4bc4f587334ab0f66f7f4f1d7fffeaa3c03394a4f2d28"
+    },
+    "hash": "2e9deb1fda1cd29553eb2a202d3f2825db7630e1c3812354211b7f4adee55de4"
+  }
+}

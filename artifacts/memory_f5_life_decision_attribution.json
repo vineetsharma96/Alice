@@ -1,0 +1,30 @@
+[
+  {
+    "operation": "memory-life-296",
+    "agent": "agent-4",
+    "memory": {
+      "confidence": 0.2952787097638871,
+      "memories": [
+        "f5:memory-life-292:agent-4",
+        "f5:memory-life-293:agent-4",
+        "f5:memory-life-294:agent-4",
+        "f5:memory-life-295:agent-4"
+      ],
+      "value": -0.3338079973612416
+    },
+    "legacy_f4_prediction": {
+      "confidence": 0.9775358221337153,
+      "memories": [
+        "f5:memory-life-292:agent-4",
+        "f5:memory-life-293:agent-4",
+        "f5:memory-life-294:agent-4",
+        "f5:memory-life-295:agent-4"
+      ],
+      "value": 0.18393601819746527
+    },
+    "threshold": -0.10294677495147253,
+    "legacy_also_eligible": false,
+    "native_status": "completed",
+    "note": "Same-frame eligibility only; no claim of counterfactual life outcome"
+  }
+]

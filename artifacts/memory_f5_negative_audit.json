@@ -1,0 +1,15 @@
+{
+  "source_preserved": true,
+  "cases": {
+    "resealed_index": {
+      "rejected": true,
+      "reason": "Emotion replay final mismatch"
+    },
+    "rewritten_appraisal": {
+      "rejected": true,
+      "reason": "Emotion replay update mismatch"
+    }
+  },
+  "source_sha256": "2d7cded291cc0a7d0683657d53cc3c2f7c35882c67e6bd0ff754aad50fac50b0",
+  "verifier_sha256": "0f24a24a472f94ab3f9ce162805cf5ca339b8dbbce74f601d9af08c4c3e11e99"
+}
