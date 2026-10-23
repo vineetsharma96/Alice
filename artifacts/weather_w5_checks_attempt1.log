@@ -1,0 +1,39 @@
+test_declared_profiles_and_tampered_climate_refusal (test_weather_clock.WeatherClockTests.test_declared_profiles_and_tampered_climate_refusal) ... ok
+test_disabled_native_matches_old_runtime_bodies_and_resources (test_weather_clock.WeatherClockTests.test_disabled_native_matches_old_runtime_bodies_and_resources) ... ok
+test_fresh_process_resume (test_weather_clock.WeatherClockTests.test_fresh_process_resume) ... ok
+test_invalid_config_and_new_world_only (test_weather_clock.WeatherClockTests.test_invalid_config_and_new_world_only) ... ok
+test_repeatability_fractional_resume_and_inspection (test_weather_clock.WeatherClockTests.test_repeatability_fractional_resume_and_inspection) ... ok
+test_season_boundary_and_long_calendar (test_weather_clock.WeatherClockTests.test_season_boundary_and_long_calendar) ... ok
+test_weather_changes_actual_solar_ledger_and_batching_is_invariant (test_weather_clock.WeatherClockTests.test_weather_changes_actual_solar_ledger_and_batching_is_invariant) ... ok
+test_cold_rain_actual_damage_persists_and_mild_has_none (test_weather_exposure.WeatherExposureTests.test_cold_rain_actual_damage_persists_and_mild_has_none) ... ok
+test_cold_recovers_when_season_becomes_warm_without_refilling (test_weather_exposure.WeatherExposureTests.test_cold_recovers_when_season_becomes_warm_without_refilling) ... ok
+test_forage_regeneration_uses_seasonal_food_boundary (test_weather_exposure.WeatherExposureTests.test_forage_regeneration_uses_seasonal_food_boundary) ... ok
+test_seasonal_growth_uses_explicit_boundary_ledger_and_zero_stays_zero (test_weather_exposure.WeatherExposureTests.test_seasonal_growth_uses_explicit_boundary_ledger_and_zero_stays_zero) ... ok
+test_assigned_build_uses_real_prerequisites_and_need_preemption (test_weather_policy.WeatherPolicyTests.test_assigned_build_uses_real_prerequisites_and_need_preemption) ... ok
+test_authored_response_reaches_observed_roof (test_weather_policy.WeatherPolicyTests.test_authored_response_reaches_observed_roof) ... ok
+test_local_scarcity_search_and_blocked_sites_stop_without_building (test_weather_policy.WeatherPolicyTests.test_local_scarcity_search_and_blocked_sites_stop_without_building) ... ok
+test_own_senses_do_not_disclose_future_or_hidden_shelter (test_weather_policy.WeatherPolicyTests.test_own_senses_do_not_disclose_future_or_hidden_shelter) ... ok
+test_policy_save_resume_and_native_replay (test_weather_policy.WeatherPolicyTests.test_policy_save_resume_and_native_replay) ... ok
+test_blocked_and_missing_material_rejections_preserve_inventory (test_weather_shelter.WeatherShelterTests.test_blocked_and_missing_material_rejections_preserve_inventory) ... ok
+test_capacity_never_credits_fifth_occupant (test_weather_shelter.WeatherShelterTests.test_capacity_never_credits_fifth_occupant) ... ok
+test_competing_builders_do_not_duplicate_work (test_weather_shelter.WeatherShelterTests.test_competing_builders_do_not_duplicate_work) ... ok
+test_native_coverage_edge_entry_exit_and_real_exposure_difference (test_weather_shelter.WeatherShelterTests.test_native_coverage_edge_entry_exit_and_real_exposure_difference) ... ok
+test_real_inputs_partial_restart_completion_and_repair (test_weather_shelter.WeatherShelterTests.test_real_inputs_partial_restart_completion_and_repair) ... ok
+test_atomic_journal_inspection_backup_and_replay (test_weather_store.WeatherStoreTests.test_atomic_journal_inspection_backup_and_replay) ... ok
+test_invalid_operation_rolls_back_and_old_schema_refused (test_weather_store.WeatherStoreTests.test_invalid_operation_rolls_back_and_old_schema_refused) ... ok
+test_forced_duration_applies_to_every_elapsed_interval (test_weather_viewer.WeatherViewerTests.test_forced_duration_applies_to_every_elapsed_interval) ... FAIL
+test_forcing_authority_staleness_idempotency_and_resume (test_weather_viewer.WeatherViewerTests.test_forcing_authority_staleness_idempotency_and_resume) ... ok
+test_readonly_observer_and_recorded_forcing_replay (test_weather_viewer.WeatherViewerTests.test_readonly_observer_and_recorded_forcing_replay) ... ok
+
+======================================================================
+FAIL: test_forced_duration_applies_to_every_elapsed_interval (test_weather_viewer.WeatherViewerTests.test_forced_duration_applies_to_every_elapsed_interval)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\weather_tests\test_weather_viewer.py", line 23, in test_forced_duration_applies_to_every_elapsed_interval
+    self.assertAlmostEqual(w.weather_snapshot()['exposure']['agent-1']['wetness'],.012*5,places=12)
+AssertionError: 0.056000000000000015 != 0.06 within 12 places (0.003999999999999983 difference)
+
+----------------------------------------------------------------------
+Ran 26 tests in 4.049s
+
+FAILED (failures=1)

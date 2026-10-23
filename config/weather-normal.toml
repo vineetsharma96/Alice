@@ -1,0 +1,6 @@
+# Same authored climate; 365.25 ordinary 86400-second days per fictional year.
+enabled = true
+year_s = 31557600.0
+transition_s = 20.0
+change_s = 90.0
+temperature_bias_c = 0.0

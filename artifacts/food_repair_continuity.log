@@ -1,0 +1,126 @@
+{
+  "fixture_wall_s": 4.0389736000070116,
+  "initial_tick": "163",
+  "runs": [
+    {
+      "status": "target_reached",
+      "initial_tick": "163",
+      "tick": "164",
+      "simulated_s": 1.0,
+      "wall_s": 3.431311399996048,
+      "state_hash": "df2785a674c948b9b25a986c1cbb900fcf9668c53973b42bb4ad33f53b4cda71",
+      "replay": {
+        "replay_matches": true,
+        "tick": "164",
+        "state_hash": "df2785a674c948b9b25a986c1cbb900fcf9668c53973b42bb4ad33f53b4cda71"
+      }
+    },
+    {
+      "status": "target_reached",
+      "initial_tick": "164",
+      "tick": "193",
+      "simulated_s": 29.0,
+      "wall_s": 6.6723212999932,
+      "state_hash": "daf84e94ec32bb15f2ce23f3944b0e0dde1b0d832adeb31586429e93494fc74b",
+      "replay": {
+        "replay_matches": true,
+        "tick": "193",
+        "state_hash": "daf84e94ec32bb15f2ce23f3944b0e0dde1b0d832adeb31586429e93494fc74b"
+      }
+    },
+    {
+      "status": "target_reached",
+      "initial_tick": "193",
+      "tick": "223",
+      "simulated_s": 30.0,
+      "wall_s": 5.144838499996695,
+      "state_hash": "fee62c6cbf796443105794c659c0e31628f008262ef3cc4ad9065ea8fbb06484",
+      "replay": {
+        "replay_matches": true,
+        "tick": "223",
+        "state_hash": "fee62c6cbf796443105794c659c0e31628f008262ef3cc4ad9065ea8fbb06484"
+      }
+    },
+    {
+      "status": "target_reached",
+      "initial_tick": "223",
+      "tick": "283",
+      "simulated_s": 60.0,
+      "wall_s": 10.543870599998627,
+      "state_hash": "75732dcdec459e9750fe02bed7c823c02811e4a79a136e998c434d0daedc5188",
+      "replay": {
+        "replay_matches": true,
+        "tick": "283",
+        "state_hash": "75732dcdec459e9750fe02bed7c823c02811e4a79a136e998c434d0daedc5188"
+      }
+    }
+  ],
+  "resumed": {
+    "status": "target_reached",
+    "initial_tick": "164",
+    "tick": "283",
+    "simulated_s": 119.0,
+    "wall_s": 17.396020000000135,
+    "state_hash": "75732dcdec459e9750fe02bed7c823c02811e4a79a136e998c434d0daedc5188",
+    "replay": {
+      "replay_matches": true,
+      "tick": "283",
+      "state_hash": "75732dcdec459e9750fe02bed7c823c02811e4a79a136e998c434d0daedc5188"
+    }
+  },
+  "head_equal": true,
+  "controller_equal": true,
+  "memories_equal": true,
+  "final_own": {
+    "entity_id": "agent-1",
+    "kind": "actor",
+    "position_m": [
+      3.0,
+      3.1
+    ],
+    "radius_m": 0.25,
+    "mass_kg": 0.0,
+    "mass_ug": "0",
+    "workmanship": 0,
+    "inventory_ug": {
+      "plant_food": "0",
+      "water": "0"
+    },
+    "alive": true,
+    "body": {
+      "hunger": 0.2330000000000002,
+      "thirst": 0.22449999999999487,
+      "fatigue": 0.4280000000000046,
+      "health": 1.0,
+      "alive": true,
+      "food_ingested_ug": "200000000",
+      "water_ingested_ug": "300000000"
+    },
+    "freshness_s": {},
+    "tools": [],
+    "carried_mass_ug": "0",
+    "busy": false,
+    "shared_event_refs": []
+  },
+  "controller": {
+    "agent": "agent-1",
+    "authored_steps": 4,
+    "call_limit": 2,
+    "calls": 0,
+    "fallback_goals": 0,
+    "goal": null,
+    "goals_blocked": 0,
+    "goals_completed": 2,
+    "last_tick": 282,
+    "model": false,
+    "model_goals": 0,
+    "model_latency_s": 0.0,
+    "navigation": {},
+    "next_call_tick": 163,
+    "next_goal_tick": 169,
+    "pending": null,
+    "sequence": 6,
+    "submitted": 4
+  },
+  "passed": true
+}

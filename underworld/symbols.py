@@ -29,8 +29,8 @@ def _contract(db, agent):
     return state
 
 
-def initialize(path, seed=41, population=4):
-    dev.initialize(path, seed=seed, population=population)
+def initialize(path, seed=41):
+    dev.initialize(path, seed=seed, population=2)
     with Lease(path), closing(storage._connect(path)) as db:
         db.execute('BEGIN IMMEDIATE')
         for agent, in db.execute('SELECT agent FROM development_people').fetchall():

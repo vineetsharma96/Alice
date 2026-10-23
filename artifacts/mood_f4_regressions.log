@@ -1,0 +1,10 @@
+test_bounded_authored_mood_influence_uses_native_executor (test_mood.MoodTests.test_bounded_authored_mood_influence_uses_native_executor) ... ok
+test_disabled_keeps_exact_weather_actions_and_bounds (test_mood.MoodTests.test_disabled_keeps_exact_weather_actions_and_bounds) ... ok
+test_inherited_history_source_bytes_scheduler_and_exact_resume (test_mood.MoodTests.test_inherited_history_source_bytes_scheduler_and_exact_resume) ... ok
+test_parameters_and_single_rate_aware_pipeline (test_mood.MoodTests.test_parameters_and_single_rate_aware_pipeline) ... ok
+test_actual_mood_panel_is_read_only (test_viewer.ViewerTests.test_actual_mood_panel_is_read_only) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 5.775s
+
+OK

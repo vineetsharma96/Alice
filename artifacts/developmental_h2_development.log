@@ -1,0 +1,44 @@
+{"seed": 41, "arm": "learned", "rate": 1.0, "wall_s": 10.841806800002814}
+{"seed": 41, "arm": "silence", "rate": 0.08333333333333333, "wall_s": 11.108175199988182}
+{"seed": 41, "arm": "shuffled", "rate": 0.4166666666666667, "wall_s": 10.910594000000856}
+{"seed": 41, "arm": "random", "rate": 0.0, "wall_s": 12.531202300000587}
+{"seed": 41, "arm": "oracle", "rate": 1.0, "wall_s": 11.178446099991561}
+{
+  "rates": {
+    "learned": 1.0,
+    "silence": 0.08333333333333333,
+    "shuffled": 0.4166666666666667,
+    "random": 0.0,
+    "oracle": 1.0
+  },
+  "improved_seeds": {
+    "silence": 1,
+    "shuffled": 1
+  },
+  "causal_token_response_changes": 7,
+  "invariants": true,
+  "h2_gate": true,
+  "wilson_intervals": {
+    "learned": [
+      0.7574992425007574,
+      1.0
+    ],
+    "silence": [
+      0.014864709450773478,
+      0.35388592179859524
+    ],
+    "shuffled": [
+      0.19325746190524656,
+      0.6804926643446272
+    ],
+    "random": [
+      0.0,
+      0.2425007574992425
+    ],
+    "oracle": [
+      0.7574992425007574,
+      1.0
+    ]
+  },
+  "interpretation": "Scaffolded, one-token naming protocol over three authored sensory classes; no human language or spontaneous intention claim."
+}

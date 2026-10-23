@@ -1,0 +1,19 @@
+test_disabled_matches_original_native_policy (test_memory.MemoryTests.test_disabled_matches_original_native_policy) ... ok
+test_foreign_clock_parameters_and_modes (test_memory.MemoryTests.test_foreign_clock_parameters_and_modes) ... ok
+test_inherited_f4_atomic_retry_pending_and_fresh_resume (test_memory.MemoryTests.test_inherited_f4_atomic_retry_pending_and_fresh_resume) ... ok
+test_relevance_correction_and_observer_labels (test_memory.MemoryTests.test_relevance_correction_and_observer_labels) ... FAIL
+test_salience_bounded_retention_and_immutable_facts (test_memory.MemoryTests.test_salience_bounded_retention_and_immutable_facts) ... ok
+test_memory_observer_is_read_only (test_viewer.ViewerTests.test_memory_observer_is_read_only) ... ok
+
+======================================================================
+FAIL: test_relevance_correction_and_observer_labels (test_memory.MemoryTests.test_relevance_correction_and_observer_labels)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\memory_tests\test_memory.py", line 43, in test_relevance_correction_and_observer_labels
+    self.assertGreater(memory.retrieve(s,key)['value'],0)
+AssertionError: -0.12205900697952822 not greater than 0
+
+----------------------------------------------------------------------
+Ran 6 tests in 4.253s
+
+FAILED (failures=1)

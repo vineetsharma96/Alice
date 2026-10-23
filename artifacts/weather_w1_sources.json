@@ -1,0 +1,16 @@
+{
+  "weather_native/CMakeLists.txt": "9d64e1c58c1146c81422a9b1d8e55da7c80a2ebd9440d1e508900fdc5a45f940",
+  "weather_native/integrate.py": "3fb6a92c4bbf5718cf2777b3f89c62d5945133d174d9c8559dae793469a212a1",
+  "weather_native/weather.cpp": "419fc09bfc2754e441c1419eaa448f9762b170a8b50e3e3a38b29d9ef138d8cc",
+  "weather_native/weather.hpp": "4a3892850a75b151b6abb45c34e51952496231d340120df11bfbeb86ea8d179f",
+  "weather_native/weather_bindings.inc": "6c129f4bdbaaa58ef9ef1008da56054a35aa95043d669e07382ba024d5c9fc58",
+  "weather_tests/test_weather_clock.py": "fc3dca1e0e9b0a3750a9146826c4c7e0265f0b98a5ae13e1876bcb967f84a865",
+  "weather_tests/test_weather_store.py": "03c08f7b186cf5c8c195541a41d38194940b4a0a90a2686fcdfde3269c57399f",
+  "underworld/weather_runtime.py": "dc20ea5c463742bfad96feeae74c0ee22acfda36ea26d5603557edff982158b4",
+  "underworld/weather_store.py": "97e69dc5490a54ce01b563f774a61afa90f44e94e8d1a7a61d6d5a591a9bd1b5",
+  "scripts/weather.py": "2f19241760404d3c50e27c87e64187f34513e0916d4bd4c9dc1cdcf648e85eb0",
+  "scripts/build_weather.ps1": "07bc65c1e6ce0f0d34648e7ba0f22c8a000ff923b3d019900aa8a77f514fde82",
+  "docs/WEATHER_CONTRACT.md": "8a6e9889e3e587729acb25a0774a19987b6a8397c800208749fd2ad983377107",
+  "config/weather-research.toml": "a144f96c408c957e75558e65371f535c2bc4cbf34ec6031812e384af306b8147",
+  "config/weather-normal.toml": "a41020b4edc9e133cc9327b679cc62e3fe9c58dcb70e786805a201f297d5126f"
+}

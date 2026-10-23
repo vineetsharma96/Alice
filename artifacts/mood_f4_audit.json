@@ -1,0 +1,700 @@
+{
+  "verified": true,
+  "rows": [
+    {
+      "seed": 18101,
+      "gates": {
+        "gradual": true,
+        "temperament": true,
+        "persists": true,
+        "recovers": true,
+        "disabled": true,
+        "physical_equal": true,
+        "resumed": true
+      },
+      "arms": {
+        "balanced": {
+          "samples": {
+            "cold40": {
+              "stress": 0.0268653810729206,
+              "time_s": 52.0,
+              "thermal": 0.48000000000000037,
+              "harmful": 4
+            },
+            "cold120": {
+              "stress": 0.44016006024545173,
+              "time_s": 132.0,
+              "thermal": 1.0,
+              "harmful": 14
+            },
+            "warm210": {
+              "stress": 0.2636302062543397,
+              "time_s": 342.0,
+              "thermal": 0.0,
+              "harmful": 0
+            },
+            "warm900": {
+              "stress": 0.0057042645055815815,
+              "time_s": 1032.0,
+              "thermal": 0.0,
+              "harmful": 0
+            }
+          },
+          "hash": "5c8c72983ffe42792f1495a664086c3d0547be4c4cfddeea611118c0d03858f5",
+          "native_hash": "ba1ab92b03f8e21532c803f2fea342c512ce8e68a27ad9aeb935a775d0862412",
+          "accepted": 145,
+          "completed": 145,
+          "rejected": 0,
+          "physical": {
+            "replay_matches": true,
+            "operations": 312,
+            "state_hash": "9d6f5e929afdbba09a6236cece493a9708c68546b17e9462fe7b1bd6d1c5eaeb"
+          },
+          "sqlite_sha256": "d91b21de872913e218424b57d29d532de9ad7ac6820507bd46668a13ee79b35d"
+        },
+        "sensitive": {
+          "samples": {
+            "cold40": {
+              "stress": 0.06326841853339116,
+              "time_s": 52.0,
+              "thermal": 0.48000000000000037,
+              "harmful": 4
+            },
+            "cold120": {
+              "stress": 0.7143826858171094,
+              "time_s": 132.0,
+              "thermal": 1.0,
+              "harmful": 14
+            },
+            "warm210": {
+              "stress": 0.4651169145616438,
+              "time_s": 342.0,
+              "thermal": 0.0,
+              "harmful": 0
+            },
+            "warm900": {
+              "stress": 0.0262401007374762,
+              "time_s": 1032.0,
+              "thermal": 0.0,
+              "harmful": 0
+            }
+          },
+          "hash": "b0bb75373ecd240426fdf311251a97927397663cee1d8463cb394b6e180bad99",
+          "native_hash": "ba1ab92b03f8e21532c803f2fea342c512ce8e68a27ad9aeb935a775d0862412",
+          "accepted": 145,
+          "completed": 145,
+          "rejected": 0,
+          "physical": {
+            "replay_matches": true,
+            "operations": 312,
+            "state_hash": "9d6f5e929afdbba09a6236cece493a9708c68546b17e9462fe7b1bd6d1c5eaeb"
+          },
+          "sqlite_sha256": "9b92c9c0af99d3c66747226533f0ceaaf486331f893293a2417c8f0e5fed76ee"
+        },
+        "disabled": {
+          "samples": {
+            "cold40": {
+              "stress": 0.0,
+              "time_s": 52.0,
+              "thermal": 0.48000000000000037,
+              "harmful": 0
+            },
+            "cold120": {
+              "stress": 0.0,
+              "time_s": 132.0,
+              "thermal": 1.0,
+              "harmful": 0
+            },
+            "warm210": {
+              "stress": 0.0,
+              "time_s": 342.0,
+              "thermal": 0.0,
+              "harmful": 0
+            },
+            "warm900": {
+              "stress": 0.0,
+              "time_s": 1032.0,
+              "thermal": 0.0,
+              "harmful": 0
+            }
+          },
+          "hash": "8c496429b5ca36a332d472f9777205fc8f33bc2be8add712530923d2dadf8e4f",
+          "native_hash": "ba1ab92b03f8e21532c803f2fea342c512ce8e68a27ad9aeb935a775d0862412",
+          "accepted": 145,
+          "completed": 145,
+          "rejected": 0,
+          "physical": {
+            "replay_matches": true,
+            "operations": 312,
+            "state_hash": "9d6f5e929afdbba09a6236cece493a9708c68546b17e9462fe7b1bd6d1c5eaeb"
+          },
+          "sqlite_sha256": "c72734ec29d13111d9501bfaada4da3e7ac31c1ddde53532107ec4b7fb9a9974"
+        }
+      }
+    },
+    {
+      "seed": 18121,
+      "gates": {
+        "gradual": true,
+        "temperament": true,
+        "persists": true,
+        "recovers": true,
+        "disabled": true,
+        "physical_equal": true,
+        "resumed": true
+      },
+      "arms": {
+        "balanced": {
+          "samples": {
+            "cold40": {
+              "stress": 0.0268653810729206,
+              "time_s": 52.0,
+              "thermal": 0.48000000000000037,
+              "harmful": 4
+            },
+            "cold120": {
+              "stress": 0.44016006024545173,
+              "time_s": 132.0,
+              "thermal": 1.0,
+              "harmful": 14
+            },
+            "warm210": {
+              "stress": 0.2636302062543397,
+              "time_s": 342.0,
+              "thermal": 0.0,
+              "harmful": 0
+            },
+            "warm900": {
+              "stress": 0.0057042645055815815,
+              "time_s": 1032.0,
+              "thermal": 0.0,
+              "harmful": 0
+            }
+          },
+          "hash": "f49474e571a58f45ca715121880755ed804f2a450bac1cc820aaaccd3dc6d546",
+          "native_hash": "cc8c602e53ab1da6423ee35ce9d2d082364786f9623613d2009e28db83192790",
+          "accepted": 145,
+          "completed": 145,
+          "rejected": 0,
+          "physical": {
+            "replay_matches": true,
+            "operations": 312,
+            "state_hash": "41ef64d01215e52e1cfe1892ef3dbcc3a91874b4118a553bd1bf469a75d0ad3c"
+          },
+          "sqlite_sha256": "710c625cd77e4600c6f6703596589019744ed986e78ad0ead43bc8900789fdcc"
+        },
+        "sensitive": {
+          "samples": {
+            "cold40": {
+              "stress": 0.06326841853339116,
+              "time_s": 52.0,
+              "thermal": 0.48000000000000037,
+              "harmful": 4
+            },
+            "cold120": {
+              "stress": 0.7143826858171094,
+              "time_s": 132.0,
+              "thermal": 1.0,
+              "harmful": 14
+            },
+            "warm210": {
+              "stress": 0.4651169145616438,
+              "time_s": 342.0,
+              "thermal": 0.0,
+              "harmful": 0
+            },
+            "warm900": {
+              "stress": 0.0262401007374762,
+              "time_s": 1032.0,
+              "thermal": 0.0,
+              "harmful": 0
+            }
+          },
+          "hash": "d91da5abb118c963ea60ab8d3e931d6ea161dc68fdc517dd41459ea3182bd2b1",
+          "native_hash": "cc8c602e53ab1da6423ee35ce9d2d082364786f9623613d2009e28db83192790",
+          "accepted": 145,
+          "completed": 145,
+          "rejected": 0,
+          "physical": {
+            "replay_matches": true,
+            "operations": 312,
+            "state_hash": "41ef64d01215e52e1cfe1892ef3dbcc3a91874b4118a553bd1bf469a75d0ad3c"
+          },
+          "sqlite_sha256": "8aaeb3c0a631d4c3d73bd8bafd3bdde796fc7bdfc7839eda779e422268493b61"
+        },
+        "disabled": {
+          "samples": {
+            "cold40": {
+              "stress": 0.0,
+              "time_s": 52.0,
+              "thermal": 0.48000000000000037,
+              "harmful": 0
+            },
+            "cold120": {
+              "stress": 0.0,
+              "time_s": 132.0,
+              "thermal": 1.0,
+              "harmful": 0
+            },
+            "warm210": {
+              "stress": 0.0,
+              "time_s": 342.0,
+              "thermal": 0.0,
+              "harmful": 0
+            },
+            "warm900": {
+              "stress": 0.0,
+              "time_s": 1032.0,
+              "thermal": 0.0,
+              "harmful": 0
+            }
+          },
+          "hash": "09d44f4afef21d191533ddd615385c45db6d057307dfd8965af4a77bf609de09",
+          "native_hash": "cc8c602e53ab1da6423ee35ce9d2d082364786f9623613d2009e28db83192790",
+          "accepted": 145,
+          "completed": 145,
+          "rejected": 0,
+          "physical": {
+            "replay_matches": true,
+            "operations": 312,
+            "state_hash": "41ef64d01215e52e1cfe1892ef3dbcc3a91874b4118a553bd1bf469a75d0ad3c"
+          },
+          "sqlite_sha256": "e7a7f92679083dfe9e161349d5bd69d70f19ed8e3407a380a09953f8af74e552"
+        }
+      }
+    },
+    {
+      "seed": 18127,
+      "gates": {
+        "gradual": true,
+        "temperament": true,
+        "persists": true,
+        "recovers": true,
+        "disabled": true,
+        "physical_equal": true,
+        "resumed": true
+      },
+      "arms": {
+        "balanced": {
+          "samples": {
+            "cold40": {
+              "stress": 0.0268653810729206,
+              "time_s": 52.0,
+              "thermal": 0.48000000000000037,
+              "harmful": 4
+            },
+            "cold120": {
+              "stress": 0.44016006024545173,
+              "time_s": 132.0,
+              "thermal": 1.0,
+              "harmful": 14
+            },
+            "warm210": {
+              "stress": 0.2636302062543397,
+              "time_s": 342.0,
+              "thermal": 0.0,
+              "harmful": 0
+            },
+            "warm900": {
+              "stress": 0.0057042645055815815,
+              "time_s": 1032.0,
+              "thermal": 0.0,
+              "harmful": 0
+            }
+          },
+          "hash": "1e0375c434d50e2a239a1533224c3ca5494577817b5797359d166130fb7d46f0",
+          "native_hash": "367e614a37dafda945f83a2d14e1edfc59e4de1cf6c2af246a936d6b76b10858",
+          "accepted": 145,
+          "completed": 145,
+          "rejected": 0,
+          "physical": {
+            "replay_matches": true,
+            "operations": 312,
+            "state_hash": "3f8e77cf7a1915f55d3fa264799708cdf302146b44a628b95fab4ab88f4e173c"
+          },
+          "sqlite_sha256": "59db909b479e2ede3ae4ee6827ec3c896b39317a486ffdf61d38d95d91fe985f"
+        },
+        "sensitive": {
+          "samples": {
+            "cold40": {
+              "stress": 0.06326841853339116,
+              "time_s": 52.0,
+              "thermal": 0.48000000000000037,
+              "harmful": 4
+            },
+            "cold120": {
+              "stress": 0.7143826858171094,
+              "time_s": 132.0,
+              "thermal": 1.0,
+              "harmful": 14
+            },
+            "warm210": {
+              "stress": 0.4651169145616438,
+              "time_s": 342.0,
+              "thermal": 0.0,
+              "harmful": 0
+            },
+            "warm900": {
+              "stress": 0.0262401007374762,
+              "time_s": 1032.0,
+              "thermal": 0.0,
+              "harmful": 0
+            }
+          },
+          "hash": "0d68edc8cbad7586c2b070e5461c244cc8c57a00ff58b9c398e3cd5a2d77f1a0",
+          "native_hash": "367e614a37dafda945f83a2d14e1edfc59e4de1cf6c2af246a936d6b76b10858",
+          "accepted": 145,
+          "completed": 145,
+          "rejected": 0,
+          "physical": {
+            "replay_matches": true,
+            "operations": 312,
+            "state_hash": "3f8e77cf7a1915f55d3fa264799708cdf302146b44a628b95fab4ab88f4e173c"
+          },
+          "sqlite_sha256": "91b3f821f22c9aed478a28f6cc27b1b33e808a6eb2bba551842d7dd55a0eaffd"
+        },
+        "disabled": {
+          "samples": {
+            "cold40": {
+              "stress": 0.0,
+              "time_s": 52.0,
+              "thermal": 0.48000000000000037,
+              "harmful": 0
+            },
+            "cold120": {
+              "stress": 0.0,
+              "time_s": 132.0,
+              "thermal": 1.0,
+              "harmful": 0
+            },
+            "warm210": {
+              "stress": 0.0,
+              "time_s": 342.0,
+              "thermal": 0.0,
+              "harmful": 0
+            },
+            "warm900": {
+              "stress": 0.0,
+              "time_s": 1032.0,
+              "thermal": 0.0,
+              "harmful": 0
+            }
+          },
+          "hash": "0e612485a305210e2bf25b3f8946168479651644e5341b17df4ab473c24d90b8",
+          "native_hash": "367e614a37dafda945f83a2d14e1edfc59e4de1cf6c2af246a936d6b76b10858",
+          "accepted": 145,
+          "completed": 145,
+          "rejected": 0,
+          "physical": {
+            "replay_matches": true,
+            "operations": 312,
+            "state_hash": "3f8e77cf7a1915f55d3fa264799708cdf302146b44a628b95fab4ab88f4e173c"
+          },
+          "sqlite_sha256": "1a82dcc63dbcf4ec1b2589be17760936d7a155dbc5c2c13d2015a114d510972f"
+        }
+      }
+    },
+    {
+      "seed": 18143,
+      "gates": {
+        "gradual": true,
+        "temperament": true,
+        "persists": true,
+        "recovers": true,
+        "disabled": true,
+        "physical_equal": true,
+        "resumed": true
+      },
+      "arms": {
+        "balanced": {
+          "samples": {
+            "cold40": {
+              "stress": 0.0268653810729206,
+              "time_s": 52.0,
+              "thermal": 0.48000000000000037,
+              "harmful": 4
+            },
+            "cold120": {
+              "stress": 0.44016006024545173,
+              "time_s": 132.0,
+              "thermal": 1.0,
+              "harmful": 14
+            },
+            "warm210": {
+              "stress": 0.2636302062543397,
+              "time_s": 342.0,
+              "thermal": 0.0,
+              "harmful": 0
+            },
+            "warm900": {
+              "stress": 0.0057042645055815815,
+              "time_s": 1032.0,
+              "thermal": 0.0,
+              "harmful": 0
+            }
+          },
+          "hash": "2a80f20877ab4522feb83cbd2cc948dd86ebd8d4fbff487c00c7f1cce0b184bf",
+          "native_hash": "6742b07de8fd94b08e0b502c7d1af79c6e94f3fdafe929d9ab011d196d9a0144",
+          "accepted": 145,
+          "completed": 145,
+          "rejected": 0,
+          "physical": {
+            "replay_matches": true,
+            "operations": 312,
+            "state_hash": "2534e6ffdeaff6b0dbdfff94efb555e4b41e6d8bca8b2265c8b2eb87d7c3daed"
+          },
+          "sqlite_sha256": "e8a353567977df8e47c8b74c7a4d15ccdfc315dddbe1be9510bc06ecacb0b044"
+        },
+        "sensitive": {
+          "samples": {
+            "cold40": {
+              "stress": 0.06326841853339116,
+              "time_s": 52.0,
+              "thermal": 0.48000000000000037,
+              "harmful": 4
+            },
+            "cold120": {
+              "stress": 0.7143826858171094,
+              "time_s": 132.0,
+              "thermal": 1.0,
+              "harmful": 14
+            },
+            "warm210": {
+              "stress": 0.4651169145616438,
+              "time_s": 342.0,
+              "thermal": 0.0,
+              "harmful": 0
+            },
+            "warm900": {
+              "stress": 0.0262401007374762,
+              "time_s": 1032.0,
+              "thermal": 0.0,
+              "harmful": 0
+            }
+          },
+          "hash": "7ab0d7c7ef6dbc79f75e9528bd726886c7bfa43856978c4bc8034d309ea6d200",
+          "native_hash": "6742b07de8fd94b08e0b502c7d1af79c6e94f3fdafe929d9ab011d196d9a0144",
+          "accepted": 145,
+          "completed": 145,
+          "rejected": 0,
+          "physical": {
+            "replay_matches": true,
+            "operations": 312,
+            "state_hash": "2534e6ffdeaff6b0dbdfff94efb555e4b41e6d8bca8b2265c8b2eb87d7c3daed"
+          },
+          "sqlite_sha256": "e4192bc66293bfb7240a07d97983f7e3a8175fd8bf88d6c95a88f9f0c5c6a5b2"
+        },
+        "disabled": {
+          "samples": {
+            "cold40": {
+              "stress": 0.0,
+              "time_s": 52.0,
+              "thermal": 0.48000000000000037,
+              "harmful": 0
+            },
+            "cold120": {
+              "stress": 0.0,
+              "time_s": 132.0,
+              "thermal": 1.0,
+              "harmful": 0
+            },
+            "warm210": {
+              "stress": 0.0,
+              "time_s": 342.0,
+              "thermal": 0.0,
+              "harmful": 0
+            },
+            "warm900": {
+              "stress": 0.0,
+              "time_s": 1032.0,
+              "thermal": 0.0,
+              "harmful": 0
+            }
+          },
+          "hash": "9dea4d1a5a8181cba578a8f35709e19efc16540c0e804cb15e8a9fdcf52d722b",
+          "native_hash": "6742b07de8fd94b08e0b502c7d1af79c6e94f3fdafe929d9ab011d196d9a0144",
+          "accepted": 145,
+          "completed": 145,
+          "rejected": 0,
+          "physical": {
+            "replay_matches": true,
+            "operations": 312,
+            "state_hash": "2534e6ffdeaff6b0dbdfff94efb555e4b41e6d8bca8b2265c8b2eb87d7c3daed"
+          },
+          "sqlite_sha256": "45edd6977cfa4141b3cca7453a0e1d033174f08104e4327a5e2a991dc85a9563"
+        }
+      }
+    },
+    {
+      "seed": 18149,
+      "gates": {
+        "gradual": true,
+        "temperament": true,
+        "persists": true,
+        "recovers": true,
+        "disabled": true,
+        "physical_equal": true,
+        "resumed": true
+      },
+      "arms": {
+        "balanced": {
+          "samples": {
+            "cold40": {
+              "stress": 0.0268653810729206,
+              "time_s": 52.0,
+              "thermal": 0.48000000000000037,
+              "harmful": 4
+            },
+            "cold120": {
+              "stress": 0.44016006024545173,
+              "time_s": 132.0,
+              "thermal": 1.0,
+              "harmful": 14
+            },
+            "warm210": {
+              "stress": 0.2636302062543397,
+              "time_s": 342.0,
+              "thermal": 0.0,
+              "harmful": 0
+            },
+            "warm900": {
+              "stress": 0.0057042645055815815,
+              "time_s": 1032.0,
+              "thermal": 0.0,
+              "harmful": 0
+            }
+          },
+          "hash": "0045b7949d1833000a2e0ad465fd1750f8b1fc89bf4544f2071d395dbac7c671",
+          "native_hash": "88e24cb6b397bdee902c4283716162e8e7124623931bb87960883ecfe34f2c58",
+          "accepted": 145,
+          "completed": 145,
+          "rejected": 0,
+          "physical": {
+            "replay_matches": true,
+            "operations": 312,
+            "state_hash": "1fe20f326c57269d7dd6b542261713db21cded1e4d9a9c64330d46a7f4a725f7"
+          },
+          "sqlite_sha256": "07f46652750cc9dd53c0e94f44a6931bd64587015a802bc42118187c10fdd703"
+        },
+        "sensitive": {
+          "samples": {
+            "cold40": {
+              "stress": 0.06326841853339116,
+              "time_s": 52.0,
+              "thermal": 0.48000000000000037,
+              "harmful": 4
+            },
+            "cold120": {
+              "stress": 0.7143826858171094,
+              "time_s": 132.0,
+              "thermal": 1.0,
+              "harmful": 14
+            },
+            "warm210": {
+              "stress": 0.4651169145616438,
+              "time_s": 342.0,
+              "thermal": 0.0,
+              "harmful": 0
+            },
+            "warm900": {
+              "stress": 0.0262401007374762,
+              "time_s": 1032.0,
+              "thermal": 0.0,
+              "harmful": 0
+            }
+          },
+          "hash": "1b6ecff7bfafe9e10af6d27ec39b5b8bd869cd565489ade2b509aa8755c8fa3a",
+          "native_hash": "88e24cb6b397bdee902c4283716162e8e7124623931bb87960883ecfe34f2c58",
+          "accepted": 145,
+          "completed": 145,
+          "rejected": 0,
+          "physical": {
+            "replay_matches": true,
+            "operations": 312,
+            "state_hash": "1fe20f326c57269d7dd6b542261713db21cded1e4d9a9c64330d46a7f4a725f7"
+          },
+          "sqlite_sha256": "7f3e898da35ac2c5fdfee6367da6b820292989443970cc178d29c9b3253bd759"
+        },
+        "disabled": {
+          "samples": {
+            "cold40": {
+              "stress": 0.0,
+              "time_s": 52.0,
+              "thermal": 0.48000000000000037,
+              "harmful": 0
+            },
+            "cold120": {
+              "stress": 0.0,
+              "time_s": 132.0,
+              "thermal": 1.0,
+              "harmful": 0
+            },
+            "warm210": {
+              "stress": 0.0,
+              "time_s": 342.0,
+              "thermal": 0.0,
+              "harmful": 0
+            },
+            "warm900": {
+              "stress": 0.0,
+              "time_s": 1032.0,
+              "thermal": 0.0,
+              "harmful": 0
+            }
+          },
+          "hash": "e69142025a69f0c93fc6440eb8fc4c6f91e3d441d52aff1540240aabf88516b0",
+          "native_hash": "88e24cb6b397bdee902c4283716162e8e7124623931bb87960883ecfe34f2c58",
+          "accepted": 145,
+          "completed": 145,
+          "rejected": 0,
+          "physical": {
+            "replay_matches": true,
+            "operations": 312,
+            "state_hash": "1fe20f326c57269d7dd6b542261713db21cded1e4d9a9c64330d46a7f4a725f7"
+          },
+          "sqlite_sha256": "02cf8d33e6d923366ce816c1f6b86e9faa0625a502f43a2c6ff91ff470af42cc"
+        }
+      }
+    }
+  ],
+  "worlds": {
+    "data\\mood-f4-confirmation\\seed-18101\\balanced.sqlite": "d91b21de872913e218424b57d29d532de9ad7ac6820507bd46668a13ee79b35d",
+    "data\\mood-f4-confirmation\\seed-18101\\sensitive.sqlite": "9b92c9c0af99d3c66747226533f0ceaaf486331f893293a2417c8f0e5fed76ee",
+    "data\\mood-f4-confirmation\\seed-18101\\disabled.sqlite": "c72734ec29d13111d9501bfaada4da3e7ac31c1ddde53532107ec4b7fb9a9974",
+    "data\\mood-f4-confirmation\\seed-18101\\balanced-mid-recovery.sqlite": "7fda7684090fc329b0ae732000bb178626361036558cc8756f83b16e5082e91e",
+    "data\\mood-f4-confirmation\\seed-18101\\assigned-source.sqlite": "f6a7d74b4233a4d27c05965ca95b3ab892e4cc09c7849844ef78d0af2a1259ee",
+    "data\\mood-f4-confirmation\\seed-18121\\balanced.sqlite": "710c625cd77e4600c6f6703596589019744ed986e78ad0ead43bc8900789fdcc",
+    "data\\mood-f4-confirmation\\seed-18121\\sensitive.sqlite": "8aaeb3c0a631d4c3d73bd8bafd3bdde796fc7bdfc7839eda779e422268493b61",
+    "data\\mood-f4-confirmation\\seed-18121\\disabled.sqlite": "e7a7f92679083dfe9e161349d5bd69d70f19ed8e3407a380a09953f8af74e552",
+    "data\\mood-f4-confirmation\\seed-18121\\balanced-mid-recovery.sqlite": "e582eac6f73ce4a22370086f554695f2595eaba29fc1881d39b270f5a2a568b6",
+    "data\\mood-f4-confirmation\\seed-18121\\assigned-source.sqlite": "cfc7ff0f818e75c7ec22dbec4fa77dabe42649eca23558b59a31c83771c26c30",
+    "data\\mood-f4-confirmation\\seed-18127\\balanced.sqlite": "59db909b479e2ede3ae4ee6827ec3c896b39317a486ffdf61d38d95d91fe985f",
+    "data\\mood-f4-confirmation\\seed-18127\\sensitive.sqlite": "91b3f821f22c9aed478a28f6cc27b1b33e808a6eb2bba551842d7dd55a0eaffd",
+    "data\\mood-f4-confirmation\\seed-18127\\disabled.sqlite": "1a82dcc63dbcf4ec1b2589be17760936d7a155dbc5c2c13d2015a114d510972f",
+    "data\\mood-f4-confirmation\\seed-18127\\balanced-mid-recovery.sqlite": "207329d5407fa5ecdd3f75bc12bacacddda2073c644e9bfedef578a024ed3858",
+    "data\\mood-f4-confirmation\\seed-18127\\assigned-source.sqlite": "231c7228eba06de24639b50186e88f30903d79e269ca4ae6745000826371ff45",
+    "data\\mood-f4-confirmation\\seed-18143\\balanced.sqlite": "e8a353567977df8e47c8b74c7a4d15ccdfc315dddbe1be9510bc06ecacb0b044",
+    "data\\mood-f4-confirmation\\seed-18143\\sensitive.sqlite": "e4192bc66293bfb7240a07d97983f7e3a8175fd8bf88d6c95a88f9f0c5c6a5b2",
+    "data\\mood-f4-confirmation\\seed-18143\\disabled.sqlite": "45edd6977cfa4141b3cca7453a0e1d033174f08104e4327a5e2a991dc85a9563",
+    "data\\mood-f4-confirmation\\seed-18143\\balanced-mid-recovery.sqlite": "26bf3b3cf11c46f8523039e716a7bc85ee3bdafd365d908d911fa72a88c0b98d",
+    "data\\mood-f4-confirmation\\seed-18143\\assigned-source.sqlite": "087b8eb5f1638f75b22b4deb068161482919a67bfe183f60fee520eac492eaf3",
+    "data\\mood-f4-confirmation\\seed-18149\\balanced.sqlite": "07f46652750cc9dd53c0e94f44a6931bd64587015a802bc42118187c10fdd703",
+    "data\\mood-f4-confirmation\\seed-18149\\sensitive.sqlite": "7f3e898da35ac2c5fdfee6367da6b820292989443970cc178d29c9b3253bd759",
+    "data\\mood-f4-confirmation\\seed-18149\\disabled.sqlite": "02cf8d33e6d923366ce816c1f6b86e9faa0625a502f43a2c6ff91ff470af42cc",
+    "data\\mood-f4-confirmation\\seed-18149\\balanced-mid-recovery.sqlite": "2cd56aebfe84c884c9991b3db7425b4ab236cce3abd8d95c2047acfad1604aa6",
+    "data\\mood-f4-confirmation\\seed-18149\\assigned-source.sqlite": "75284157813243abeb76352ffce622ef242271885e0b17055cdc87bd74cd1326"
+  },
+  "historical": {
+    "living_world_g_registration": 43,
+    "developmental_h1_registration_repaired": 6,
+    "developmental_h2_registration": 8,
+    "h3_native_registration": 8,
+    "h4_registration": 4,
+    "h5_registration": 13,
+    "gap_registration": 14,
+    "weather_registration": 30,
+    "emotion_registration": 44
+  },
+  "wall_s": 66.76757609999913,
+  "auditor_sha256": "cd0c7d711abf90093bd60b39744790d7ba7057893b83fd5af21329efb48dce51"
+}

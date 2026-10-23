@@ -1,0 +1,840 @@
+{
+  "artifacts": {
+    "weather_action_costs.json": {
+      "bytes": 5580,
+      "sha256": "f1102a570d2fd84dfd3bdc4485eb179d4b1fe6199a1a6469234c9618fed89e17"
+    },
+    "weather_audit.json": {
+      "bytes": 8119,
+      "sha256": "17791e5361c12d9ea9e6bac6a88f7a99dccca4629911c65a534d4bbb96638fd8"
+    },
+    "weather_audit.log": {
+      "bytes": 39,
+      "sha256": "fb2b3714f9ced6669c69a03a126fcfe76e49cae51baf0ccc07360d6ddf11c743"
+    },
+    "weather_confirmation.log": {
+      "bytes": 520,
+      "sha256": "7d848358bec23d93ee86d9a4be884f941b656db451d71a3ef4f31d87cc3153fa"
+    },
+    "weather_connections.json": {
+      "bytes": 64636,
+      "sha256": "fd6939a28822605152238f497be579e9ba9807465b382b55693944e61b6c7ee5"
+    },
+    "weather_connections_final.json": {
+      "bytes": 65629,
+      "sha256": "81139c82af6fa418cb39cf163e8a60c430513adb95915337b618e82a22598c46"
+    },
+    "weather_continuity_1200.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "weather_continuity_2400.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "weather_continuity_300.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "weather_continuity_300_total_wall.json": {
+      "bytes": 46,
+      "sha256": "a5147a7e64fb072fa7eff54213c606ef1232ddd5e8cb715a5d03c3955c74f056"
+    },
+    "weather_continuity_600.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "weather_continuity_audit.json": {
+      "bytes": 2763,
+      "sha256": "2faa8480d02639d7220a69f9d390e5f1879e5271aef678dc5651ab0c5f0344c9"
+    },
+    "weather_continuity_audit.log": {
+      "bytes": 464,
+      "sha256": "a4cf0095948be3f2516d5ed80526ba408bfda20dde63ca2295d66333151f07d2"
+    },
+    "weather_continuity_audit_final.log": {
+      "bytes": 1843,
+      "sha256": "47b58ac3b7523189def9575e0570c50fee7130aa23dd75d5133f9a45e91ced1e"
+    },
+    "weather_development.log": {
+      "bytes": 344,
+      "sha256": "3f5a7bc6aa86aab05a897adbdaf3c84ae59b2156b23585563f5229eba9716d1b"
+    },
+    "weather_development2.log": {
+      "bytes": 344,
+      "sha256": "401ce8bee24ce8c20646e6976b1701f38fa58e3a7cea956defaf03886bd8489b"
+    },
+    "weather_development2_sources.zip": {
+      "bytes": 46324,
+      "sha256": "425bea5c6fde65555079d0654053f68ceb33d1f41d531da0b93dd2f7a4453460"
+    },
+    "weather_development3.log": {
+      "bytes": 343,
+      "sha256": "05aa5f88bfb6957965f3e028edf22cfb7bcfb33dd85b50451b7c1e76258a32dd"
+    },
+    "weather_development3_sources.zip": {
+      "bytes": 46575,
+      "sha256": "9c5a8c1cd5776c149fac1257e3b6972f1021d291166a898e4af1427e255dcd71"
+    },
+    "weather_development4.log": {
+      "bytes": 341,
+      "sha256": "9aa7157f05ac54e9426040465eb33a1997ae28540b4c20a1a13eb6a34b6db388"
+    },
+    "weather_development5.log": {
+      "bytes": 340,
+      "sha256": "87c29043663fe748e798df4a1f3b1b661f5177534fce7cbfaf8007282296ce00"
+    },
+    "weather_development_sources.zip": {
+      "bytes": 46176,
+      "sha256": "159edac8bb6ccc20615386cf5b744df6ff2ad402307e6e997f6f38229319e7f6"
+    },
+    "weather_evidence_archives.json": {
+      "bytes": 5832,
+      "sha256": "4bc27b0f2ca8e2e490c666deb70dfa67d1727ade86310deac4d64b976de940ee"
+    },
+    "weather_evidence_archives.log": {
+      "bytes": 383,
+      "sha256": "da04bc76e873822a160b9ae1ccdf8284663b3763ad6b1252e7804ac355c15830"
+    },
+    "weather_evidence_archives_delivery.log": {
+      "bytes": 383,
+      "sha256": "47dbc940da39b775d04fa5c60252db7b8f91b7fbbe035a92460bfeec7f133232"
+    },
+    "weather_evidence_archives_final.log": {
+      "bytes": 383,
+      "sha256": "da04bc76e873822a160b9ae1ccdf8284663b3763ad6b1252e7804ac355c15830"
+    },
+    "weather_existing_control.log": {
+      "bytes": 250,
+      "sha256": "a6a5e00db2e68191db47b659d64bdbf943c47dbc8bf4ec21287d8b320a37343a"
+    },
+    "weather_existing_control_audit.json": {
+      "bytes": 761,
+      "sha256": "72326daa24b3da24a841436c93ac098d33eb8e32f0b56fe7585e93068596ca04"
+    },
+    "weather_final_browser-desktop.png": {
+      "bytes": 183568,
+      "sha256": "295188333c1bbd54407a394d7016eb13ef2e56f487b5b4d9e8a848f80e68cde5"
+    },
+    "weather_final_browser-mobile.png": {
+      "bytes": 118418,
+      "sha256": "93af651a2a824c3d4a1bc768b6389b64fec37fe2cb12784c3e977d66b6ddf9a6"
+    },
+    "weather_final_browser.json": {
+      "bytes": 759,
+      "sha256": "898e17e093066a1b8f514d169af4489f3f262349bcf2bda1df4b4b4475f54f06"
+    },
+    "weather_final_browser.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "weather_final_demo.log": {
+      "bytes": 167,
+      "sha256": "d00ecd6bef125788a284323663a18500fe8f7138c1872d30a2bbbd673a67eb8a"
+    },
+    "weather_final_sources.zip": {
+      "bytes": 50310,
+      "sha256": "7db0b36112269bec1adbf9539639e17a713d7dc208a4b6dd6be5e9367bb591eb"
+    },
+    "weather_phase9_audit.json": {
+      "bytes": 338,
+      "sha256": "29a2dd0224f069e36e8253757da77523481e6ecb3e36dc9f83488af703522564"
+    },
+    "weather_registration.json": {
+      "bytes": 3338,
+      "sha256": "8917b17f131ebbcddcc53cd0edf4bf7122825821b8e4b25e85d183f308a20ec2"
+    },
+    "weather_w0_baseline.json": {
+      "bytes": 52050,
+      "sha256": "da135539db463786d0520fc9a511dff3aa8a09e8032ac541e78e32d3fdbe9569"
+    },
+    "weather_w0_baseline.log": {
+      "bytes": 50883,
+      "sha256": "46a704f2c6a8c432e31609e2477785f0ffdcdbe02c403b9defb5f9f5d4563b67"
+    },
+    "weather_w1_build.log": {
+      "bytes": 16441,
+      "sha256": "860581d31bae5a1e4022724b2e382e0df5e61776f0119161c29fe1dc834cdd48"
+    },
+    "weather_w1_checks.log": {
+      "bytes": 1080,
+      "sha256": "46603f247fa405495ed225b70ac7839879331eddeb619ce4235bb5001c2f2856"
+    },
+    "weather_w1_checks_attempt1.log": {
+      "bytes": 5223,
+      "sha256": "9f33a333cde67e97625dc1761d3eb2d91168c8408f981cc537259b40d66e4c20"
+    },
+    "weather_w1_checks_final.log": {
+      "bytes": 1412,
+      "sha256": "4e5767447d260c575dd991e98050bd35e1b5f49b1056c1f2c67c3ef8fad57cdf"
+    },
+    "weather_w1_final_sources.zip": {
+      "bytes": 15944,
+      "sha256": "ecd20348401651f866be3f5ba8256fa1caa057e360f81b0c43b9fab714da2958"
+    },
+    "weather_w1_new.json": {
+      "bytes": 6827,
+      "sha256": "405b669ddbca3de7a37d026edbbb806dc1d26a94d0506505717f5d1584d7c220"
+    },
+    "weather_w1_replay.json": {
+      "bytes": 137,
+      "sha256": "541afaf46261ac2c972128e4b4c0a63cc88d4073ed4336116066685ec0e5fbff"
+    },
+    "weather_w1_saved.json": {
+      "bytes": 7196,
+      "sha256": "7dbf7e63b9b5ea552d3a99c0a7fb25ae770f60fca02fb41694b823f58016bc86"
+    },
+    "weather_w1_sources.json": {
+      "bytes": 1443,
+      "sha256": "045c4846aa70f0ce0febaf346c6070c086166be5878c59279948b1a2e8a44c4b"
+    },
+    "weather_w1_sources.zip": {
+      "bytes": 15665,
+      "sha256": "e82a60027de6512be46982c108d9735351a5d24ffccbadcbc4f7ed423ebfd200"
+    },
+    "weather_w1_stage.json": {
+      "bytes": 2329,
+      "sha256": "7b7a2077e7a4d22aa44b25c0101fe115622cfed48bdb1b230d4bf989e809de84"
+    },
+    "weather_w1_transition.json": {
+      "bytes": 7196,
+      "sha256": "7dbf7e63b9b5ea552d3a99c0a7fb25ae770f60fca02fb41694b823f58016bc86"
+    },
+    "weather_w2_build.log": {
+      "bytes": 15968,
+      "sha256": "a3c3521fc7d0fcfce28704dc14a64ac27b88000437348cc3b2ccc657d096e397"
+    },
+    "weather_w2_checks.log": {
+      "bytes": 2109,
+      "sha256": "ef9e3bf839cb722f4381a9fdd8d28d776faa4f8bc49e8f19066e0d52dae73fdc"
+    },
+    "weather_w2_sources.zip": {
+      "bytes": 16223,
+      "sha256": "1bb5dae06be49a9089df28c60c07205cba67cf7649e3b003efc32f0adb894e4d"
+    },
+    "weather_w2_stage.json": {
+      "bytes": 18322,
+      "sha256": "f14d9dbcb838b8d64acf0feae8dee9a3c07a47a524dab0a194afc1deb6e2098f"
+    },
+    "weather_w3_build_attempt1.log": {
+      "bytes": 15968,
+      "sha256": "431a78611b26d27b850f996cf2631ecfcea06396d50837cfdc7a197aefb0e2b7"
+    },
+    "weather_w3_build_final.log": {
+      "bytes": 15968,
+      "sha256": "e45fba0252c1edf4cd139a77a16f2c7aea4d105661dafb64691abfbd13a98a47"
+    },
+    "weather_w3_checks.log": {
+      "bytes": 2912,
+      "sha256": "dcbb70c7cce324488b235a453043046af55bc935c71040c863e9fa85c918b357"
+    },
+    "weather_w3_checks_attempt1.log": {
+      "bytes": 2632,
+      "sha256": "da1807a25006bbf17199edc78284dccfd066721b3f26d5a942ac60410a433fee"
+    },
+    "weather_w3_sources.zip": {
+      "bytes": 14357,
+      "sha256": "36eb78ec4b1234ed571019c422f946d8c60ba0481a65233eb809943315b4d9b6"
+    },
+    "weather_w3_stage.json": {
+      "bytes": 24674,
+      "sha256": "87e4b592d27a9e0c4e62c06e1212d94105299025b28f7f5ec02b9be55f7f2a20"
+    },
+    "weather_w4_build.log": {
+      "bytes": 15968,
+      "sha256": "a138ccdf7dd30af7ccbe5fa3bc7f4de37297f0b2c137737646a94396eaa34e7f"
+    },
+    "weather_w4_checks.log": {
+      "bytes": 3707,
+      "sha256": "1bc375cbd1fb543973bd38f16a86dc0a13a79e4c0cb21a93bc6646e1e4419b85"
+    },
+    "weather_w4_checks_attempt1.log": {
+      "bytes": 3524,
+      "sha256": "e47d16cd1da46e1aefde9cec5be95d9115eb73f2a9ffab706ae779139bc8f7f0"
+    },
+    "weather_w4_sources.zip": {
+      "bytes": 24251,
+      "sha256": "87ee53f47ae041ff2f2769ff04b2f0629f53874ebd75ad472ad70e475c452b20"
+    },
+    "weather_w4_stage.json": {
+      "bytes": 1868,
+      "sha256": "9ed0b0877fe95ef7221aa133197d69bedeb48231eb8062473d2788b91afb528f"
+    },
+    "weather_w5_browser.log": {
+      "bytes": 275,
+      "sha256": "43724a6d10f457ab2026938e34223759f19cf9f45223476e3c327272658294f4"
+    },
+    "weather_w5_browser_failed.png": {
+      "bytes": 30726,
+      "sha256": "2b67109b3992a3dfa206787b1c06310b003739903cc6414d78e44ad99149ed95"
+    },
+    "weather_w5_browser_final-desktop.png": {
+      "bytes": 183568,
+      "sha256": "295188333c1bbd54407a394d7016eb13ef2e56f487b5b4d9e8a848f80e68cde5"
+    },
+    "weather_w5_browser_final.log": {
+      "bytes": 425,
+      "sha256": "6b4c4b3ced7bfef1191f9c2accaa14c43cd2691cc0db5c62caebdfaae0d9762c"
+    },
+    "weather_w5_browser_pass-desktop.png": {
+      "bytes": 183568,
+      "sha256": "295188333c1bbd54407a394d7016eb13ef2e56f487b5b4d9e8a848f80e68cde5"
+    },
+    "weather_w5_browser_pass-mobile.png": {
+      "bytes": 118418,
+      "sha256": "93af651a2a824c3d4a1bc768b6389b64fec37fe2cb12784c3e977d66b6ddf9a6"
+    },
+    "weather_w5_browser_pass.json": {
+      "bytes": 743,
+      "sha256": "bd9f4927c560ac77ba64ace07a12f5a703a308b18a2a7a47369151beb0d030cf"
+    },
+    "weather_w5_browser_pass.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "weather_w5_build.log": {
+      "bytes": 17604,
+      "sha256": "bb6dbb1f788d52de0171e967f003b9eff394d99fb89c40dd8f3bc0d64f436652"
+    },
+    "weather_w5_build_final.log": {
+      "bytes": 17604,
+      "sha256": "789b5b738eac7d2c241eddc7cf98fc8cdd1d78fcbf20525a35621a653b6690d7"
+    },
+    "weather_w5_checks.log": {
+      "bytes": 4178,
+      "sha256": "9bf0c71298b7e5b569688f80005011ace6cca1a9c48649fd2ed090d10c7921d4"
+    },
+    "weather_w5_checks_attempt1.log": {
+      "bytes": 4892,
+      "sha256": "b0fee45445263f8d35d47fbfcef6502cd959b584c16b6a9a6b6005ad45d8d45e"
+    },
+    "weather_w5_checks_final.log": {
+      "bytes": 4178,
+      "sha256": "f7f1f488e6f6dc21764b244b31cfe22e06d700619c3cecd8541136dacbadbfec"
+    },
+    "weather_w5_demo.log": {
+      "bytes": 167,
+      "sha256": "0fdc04e38e168489bc71d47473861cb160e0dc61b21e74df230596be73d148cf"
+    },
+    "weather_w5_mobile_failed.png": {
+      "bytes": 118022,
+      "sha256": "8d5bad5dc09fcdfa00e5ea10f44f15090a8c515aee2795810af0ee6c84fdbf39"
+    },
+    "weather_w6_checks.log": {
+      "bytes": 4323,
+      "sha256": "c1eee14ec178289de8c9901da37af2c438a8415f48a17474823de18f1b091779"
+    },
+    "weather_w6_checks2.log": {
+      "bytes": 4323,
+      "sha256": "f22321e203d245d3726137dc631a1ca8628a03b64caeb2e6e2628bdcbde399d8"
+    },
+    "weather_w6_checks3.log": {
+      "bytes": 5065,
+      "sha256": "3e39b92af92917ff08ab4b7eacce71404cccd33269add41bf7ed3002ddd4a755"
+    },
+    "weather_w6_checks4.log": {
+      "bytes": 4486,
+      "sha256": "c8e845d7393639177c95161d991f0aa350f3b430bd66b3e0089e12133b218510"
+    }
+  },
+  "local_native_worlds": [
+    {
+      "path": "data/weather-confirmation-20261022/13001/blocked.sqlite",
+      "bytes": 94208,
+      "sha256": "44d77dcfd19704db806cca2d41f1138c9fe91a27e78674b1ac32a40fb875bd37"
+    },
+    {
+      "path": "data/weather-confirmation-20261022/13001/build.sqlite",
+      "bytes": 1589248,
+      "sha256": "8ab6ac028a49d173349a993d904acc8e0fa087aaf1636e788fe6da551e16551f"
+    },
+    {
+      "path": "data/weather-confirmation-20261022/13001/mild.sqlite",
+      "bytes": 86016,
+      "sha256": "d583540cef810a68b4648d2ef78155a4ed63eb71503bc8e2c4b30d3cdb3468e0"
+    },
+    {
+      "path": "data/weather-confirmation-20261022/13001/reachable-common.sqlite",
+      "bytes": 94208,
+      "sha256": "398cf9ea29862712b1b29ec7cfe92b68ea75af3c2b98cfa271926485905f9c42"
+    },
+    {
+      "path": "data/weather-confirmation-20261022/13001/reachable-survival.sqlite",
+      "bytes": 532480,
+      "sha256": "d8681eacb0a46d3c64b40f598442998a4890a1802364dc8ce4177206aa79c130"
+    },
+    {
+      "path": "data/weather-confirmation-20261022/13001/reachable-weather.sqlite",
+      "bytes": 1720320,
+      "sha256": "90a453ce9981ab6e3060433c0b2c6cb16537495b07ea13483fc1b13ff8424e8d"
+    },
+    {
+      "path": "data/weather-confirmation-20261022/13001/sharing.sqlite",
+      "bytes": 1863680,
+      "sha256": "7b56ccf18eab398a665ffd2928daa43b7d74dbaf71acd23e6fcd0c20ba49eaef"
+    },
+    {
+      "path": "data/weather-confirmation-20261022/13007/blocked.sqlite",
+      "bytes": 94208,
+      "sha256": "664832f4672983ad9f335ed454d2b3f1a51c73defd14910ddc08dd59126e5ce9"
+    },
+    {
+      "path": "data/weather-confirmation-20261022/13007/build.sqlite",
+      "bytes": 1589248,
+      "sha256": "0b7b42679206b854e9befd8969cce8a19762328a7248f0a76e5c6542af77ca62"
+    },
+    {
+      "path": "data/weather-confirmation-20261022/13007/mild.sqlite",
+      "bytes": 86016,
+      "sha256": "835498c6f8e8bb932f9058341fd22ab61fcc8e234e41c4ae544e45e4d2515ca2"
+    },
+    {
+      "path": "data/weather-confirmation-20261022/13007/reachable-common.sqlite",
+      "bytes": 94208,
+      "sha256": "5ecfb1e888bc9196a067faba2957b0768581e15870b52b04c212118b7e6ebf94"
+    },
+    {
+      "path": "data/weather-confirmation-20261022/13007/reachable-survival.sqlite",
+      "bytes": 532480,
+      "sha256": "b862a7baa230ebce6d761776433457c86622d16bc49cb98c3dfba43107bb4bcf"
+    },
+    {
+      "path": "data/weather-confirmation-20261022/13007/reachable-weather.sqlite",
+      "bytes": 1720320,
+      "sha256": "5566852bdc50ef10554a4d746e5b296c1fab048caa4ab3e874b70abcefd442f3"
+    },
+    {
+      "path": "data/weather-confirmation-20261022/13007/sharing.sqlite",
+      "bytes": 1888256,
+      "sha256": "aa146c40a7975558ef24355f00fddb2f9ff8e381d4a736c7bc0f9aa8e64ff532"
+    },
+    {
+      "path": "data/weather-confirmation-20261022/13009/blocked.sqlite",
+      "bytes": 94208,
+      "sha256": "6e4679e3f90917638e5bbcaab5b22eff12ae75b83cf140cf4bb0f3e3c6d765c0"
+    },
+    {
+      "path": "data/weather-confirmation-20261022/13009/build.sqlite",
+      "bytes": 1589248,
+      "sha256": "c03ba45384182690452eeb982251be7a3aa0022d9ba9744be85d2a0bbc9a3adb"
+    },
+    {
+      "path": "data/weather-confirmation-20261022/13009/mild.sqlite",
+      "bytes": 86016,
+      "sha256": "c4d8a5fddd74844c4c32b7078088959300c43fc859643d4ffcc23be9170f372f"
+    },
+    {
+      "path": "data/weather-confirmation-20261022/13009/reachable-common.sqlite",
+      "bytes": 94208,
+      "sha256": "aea54d12d5173a360d4355eb9c6df822e8ac5a4acce05a5caf0055ebef0e7cfb"
+    },
+    {
+      "path": "data/weather-confirmation-20261022/13009/reachable-survival.sqlite",
+      "bytes": 532480,
+      "sha256": "85054cf6e6271dc3b73b526e42704b5d1099c9f524bd3c735865d21e4e9a0625"
+    },
+    {
+      "path": "data/weather-confirmation-20261022/13009/reachable-weather.sqlite",
+      "bytes": 1720320,
+      "sha256": "d71ec04beb1a0829c81d522fe51e53e977ffbe1a65e1f9884a36559de0061473"
+    },
+    {
+      "path": "data/weather-confirmation-20261022/13009/sharing.sqlite",
+      "bytes": 1830912,
+      "sha256": "8991cc983d090f5ebcdcded478cd6c500d80c558c1dcb94b3e1152a2200c2e77"
+    },
+    {
+      "path": "data/weather-dev-20261022/53/blocked.sqlite",
+      "bytes": 102400,
+      "sha256": "b51fdc2d695995c4437fd7b0810bdd78081cae1c21221b5b85c8c37021f5451d"
+    },
+    {
+      "path": "data/weather-dev-20261022/53/build.sqlite",
+      "bytes": 602112,
+      "sha256": "55cc5d76a7ab4de692d73879bc94ee4362c417168f2aa8ba1e8e25f92eb2fcca"
+    },
+    {
+      "path": "data/weather-dev-20261022/53/mild.sqlite",
+      "bytes": 94208,
+      "sha256": "b51f254ed9b1cf016e2589a95007aef0e395bd05f777c62ea3dba015a27da13b"
+    },
+    {
+      "path": "data/weather-dev-20261022/53/reachable-common.sqlite",
+      "bytes": 102400,
+      "sha256": "ab3dd109f910ce8b70c752a69a92b4284fcaad65bf31ad0f8a4c485090c06037"
+    },
+    {
+      "path": "data/weather-dev-20261022/53/reachable-survival.sqlite",
+      "bytes": 540672,
+      "sha256": "e0816bd34b2edebcfe029c97b5ac44df5766dc5b5aa1a42492fe33870ec211f9"
+    },
+    {
+      "path": "data/weather-dev-20261022/53/reachable-weather.sqlite",
+      "bytes": 577536,
+      "sha256": "738aa838e30ef55596ab106bd694c7ab6d226bd03f020a1f47f5543919b4a9ac"
+    },
+    {
+      "path": "data/weather-dev-20261022/53/sharing.sqlite",
+      "bytes": 1138688,
+      "sha256": "0799c68632ef5b0ea7f84a02306cff5e3f724630c0f2d45ea67be13fc535129d"
+    },
+    {
+      "path": "data/weather-dev-20261022/71/blocked.sqlite",
+      "bytes": 94208,
+      "sha256": "d6994ed5a8ea0f52222ad3bc30c2b33cd2794089759f8c6386657bbaa72af8cf"
+    },
+    {
+      "path": "data/weather-dev-20261022/71/build.sqlite",
+      "bytes": 593920,
+      "sha256": "a3038dad4f32e670ea48c49825beea8768abd9d5329c54cb168516238f866e9c"
+    },
+    {
+      "path": "data/weather-dev-20261022/71/mild.sqlite",
+      "bytes": 86016,
+      "sha256": "91c24d3a0b02951bcbc923d184c81cb151536bcf6e9ed51da133cc7298acde6a"
+    },
+    {
+      "path": "data/weather-dev-20261022/71/reachable-common.sqlite",
+      "bytes": 94208,
+      "sha256": "e10889195fd89726e465c9bc43636c39118833dfdb2e55096db10e57abfad9b6"
+    },
+    {
+      "path": "data/weather-dev-20261022/71/reachable-survival.sqlite",
+      "bytes": 532480,
+      "sha256": "eedc7536ed3dc48454eebcb643445f6220d3628a0594eb78fda9c018244def08"
+    },
+    {
+      "path": "data/weather-dev-20261022/71/reachable-weather.sqlite",
+      "bytes": 565248,
+      "sha256": "da6cb8a841630e58d1aaae049396d64979bcb41c2eab49993a1e4604f9cf7edc"
+    },
+    {
+      "path": "data/weather-dev-20261022/71/sharing.sqlite",
+      "bytes": 1191936,
+      "sha256": "91777257ab1e3078235297b9becf66f4587056bada72fb05d9a30d794169fb11"
+    },
+    {
+      "path": "data/weather-dev2-20261022/53/blocked.sqlite",
+      "bytes": 102400,
+      "sha256": "c8c69e5e2c3324bd03c1976bf2162376f438451171cefb6052b0d907830b2e2e"
+    },
+    {
+      "path": "data/weather-dev2-20261022/53/build.sqlite",
+      "bytes": 544768,
+      "sha256": "1decc573cdc82c5f3d92103d9eb7e82972db83f9e64e8bd7c88ca7444cdfc4e0"
+    },
+    {
+      "path": "data/weather-dev2-20261022/53/mild.sqlite",
+      "bytes": 94208,
+      "sha256": "af8ade1c0be929d100730e339c487d738ff4dbf8084529d4e02d2451f7b61fa2"
+    },
+    {
+      "path": "data/weather-dev2-20261022/53/reachable-common.sqlite",
+      "bytes": 102400,
+      "sha256": "72af458ee4295a614abb7ae4d8b444db26c5dea249da15d26e585c94950b7347"
+    },
+    {
+      "path": "data/weather-dev2-20261022/53/reachable-survival.sqlite",
+      "bytes": 540672,
+      "sha256": "8aa5392e8885d69d493ecba21da1690e05b5ef23c998950e624bda18ac8f82bd"
+    },
+    {
+      "path": "data/weather-dev2-20261022/53/reachable-weather.sqlite",
+      "bytes": 512000,
+      "sha256": "bd62e98cbb06ede5413dcc7b3736b3f9c88cfdb75a1587ce4369f77ca3bfaf10"
+    },
+    {
+      "path": "data/weather-dev2-20261022/53/sharing.sqlite",
+      "bytes": 937984,
+      "sha256": "1455185c425c8f4f112d6d648663d781b42e114b64a19b6f146ed32b3ebdaee7"
+    },
+    {
+      "path": "data/weather-dev2-20261022/71/blocked.sqlite",
+      "bytes": 94208,
+      "sha256": "273f43c530fa77e6adbf4831ddd4bcb9dde763f89dbb1e0ec624c972769f679d"
+    },
+    {
+      "path": "data/weather-dev2-20261022/71/build.sqlite",
+      "bytes": 532480,
+      "sha256": "6891e8f0c7c530f7c49fc941ead962cd68f6733573ffd5ebdf3a93c8d2322349"
+    },
+    {
+      "path": "data/weather-dev2-20261022/71/mild.sqlite",
+      "bytes": 86016,
+      "sha256": "2cdb57a5f4a788c0e3a69cdd4dbfc84b206fc12ae66cae707644c00e8d370699"
+    },
+    {
+      "path": "data/weather-dev2-20261022/71/reachable-common.sqlite",
+      "bytes": 94208,
+      "sha256": "f7f2ec234c0e2605cf6fd15f55b9a508ec4ef3a53348afffecf7a74e50c64bef"
+    },
+    {
+      "path": "data/weather-dev2-20261022/71/reachable-survival.sqlite",
+      "bytes": 532480,
+      "sha256": "b6aeb5a7144c4c5979b7989011a347b83ca190ed7bd510472aa53853a70e4fe0"
+    },
+    {
+      "path": "data/weather-dev2-20261022/71/reachable-weather.sqlite",
+      "bytes": 507904,
+      "sha256": "accf5d1f1d1533bb607931fceb70a5c2f1034eaa597b7f47b68ffa4ff5487f4e"
+    },
+    {
+      "path": "data/weather-dev2-20261022/71/sharing.sqlite",
+      "bytes": 958464,
+      "sha256": "86e67c5b0061582c7e64c169c30a2fe3567b301c352a1ed85ccaa9d19c388bb4"
+    },
+    {
+      "path": "data/weather-dev3-20261022/53/blocked.sqlite",
+      "bytes": 102400,
+      "sha256": "732d6de12536540d7dbdea77d8810574408dfa57bf4b6d688ac56417ac3355ed"
+    },
+    {
+      "path": "data/weather-dev3-20261022/53/build.sqlite",
+      "bytes": 544768,
+      "sha256": "9dde7f209f5d8cb3e08901a0fbe43dd28f0d5ba42f900dc364223b01ef2e6baa"
+    },
+    {
+      "path": "data/weather-dev3-20261022/53/mild.sqlite",
+      "bytes": 94208,
+      "sha256": "7104573d49b499101622182b0036e30f7b1219a821e8ba82db836223d61c27fd"
+    },
+    {
+      "path": "data/weather-dev3-20261022/53/reachable-common.sqlite",
+      "bytes": 102400,
+      "sha256": "59e3abb10189b86e07765ae6de8e71e0804a71d9427ef1d3423d21c95dbeff47"
+    },
+    {
+      "path": "data/weather-dev3-20261022/53/reachable-survival.sqlite",
+      "bytes": 540672,
+      "sha256": "2ccb5f1a76aadaea777c3c6e12367d54af87cb7c202de5f84ac69ce1a1cae3d8"
+    },
+    {
+      "path": "data/weather-dev3-20261022/53/reachable-weather.sqlite",
+      "bytes": 512000,
+      "sha256": "a0b1e123cd42a3bd106f1334b8f323cfb9d6dbb44a15967101c3b66d3de05340"
+    },
+    {
+      "path": "data/weather-dev3-20261022/53/sharing.sqlite",
+      "bytes": 888832,
+      "sha256": "c8164a6fd206063c8c7d7122c2b81c8aaa0b7d50589b6aa66cea94184a95382b"
+    },
+    {
+      "path": "data/weather-dev3-20261022/71/blocked.sqlite",
+      "bytes": 94208,
+      "sha256": "6c87894f063abc12bb0842d0d5917b1bf244ac6c248ad3f13f076d9b40ab37a2"
+    },
+    {
+      "path": "data/weather-dev3-20261022/71/build.sqlite",
+      "bytes": 532480,
+      "sha256": "cefb3c891e25ebe72274b286cc382001f74a77f89ed4fa16db0a57724e1fad88"
+    },
+    {
+      "path": "data/weather-dev3-20261022/71/mild.sqlite",
+      "bytes": 86016,
+      "sha256": "98d66e555877d03bffd2e1fdb8522a0a90b637a09e8440aace14ca929148201e"
+    },
+    {
+      "path": "data/weather-dev3-20261022/71/reachable-common.sqlite",
+      "bytes": 94208,
+      "sha256": "d96dc0b42319863f790d9ca596fb768ce1c6b870e14a14f35450b60e4d7a34c9"
+    },
+    {
+      "path": "data/weather-dev3-20261022/71/reachable-survival.sqlite",
+      "bytes": 532480,
+      "sha256": "356f6ef99c0fbdab4f3274ba4638caf855e3c07e5b97ca8be1cceb35fd5a575b"
+    },
+    {
+      "path": "data/weather-dev3-20261022/71/reachable-weather.sqlite",
+      "bytes": 507904,
+      "sha256": "53ae646ec2436287be34e278892143b7820051ecc70f07154b26d67c83ee8fa0"
+    },
+    {
+      "path": "data/weather-dev3-20261022/71/sharing.sqlite",
+      "bytes": 978944,
+      "sha256": "b6ffc9c7754a3868925892b3fc740a3845777eecd0cb93bdfbc8a378632981a1"
+    },
+    {
+      "path": "data/weather-dev4-20261022/53/blocked.sqlite",
+      "bytes": 102400,
+      "sha256": "838c6350f06494a78297f9f2c8eddef051e2a9502a33574c621131e98d8dfe71"
+    },
+    {
+      "path": "data/weather-dev4-20261022/53/build.sqlite",
+      "bytes": 1597440,
+      "sha256": "f72d4dc6069b8f00be22748ce11e30ddb661ec9eeef30d1de3afcc169fa29b3d"
+    },
+    {
+      "path": "data/weather-dev4-20261022/53/mild.sqlite",
+      "bytes": 94208,
+      "sha256": "7f3af063ff40dfcd27a59e57a55e0519226412a25dcf8a9941b7d54ea8ecffa5"
+    },
+    {
+      "path": "data/weather-dev4-20261022/53/reachable-common.sqlite",
+      "bytes": 102400,
+      "sha256": "a80925f0896e596baf4e3c33abd9c0a709f8caa0eee21a8b1a5aeffdd529fce4"
+    },
+    {
+      "path": "data/weather-dev4-20261022/53/reachable-survival.sqlite",
+      "bytes": 540672,
+      "sha256": "447ddd9f87b737a23ccb713313d6740b5e9042dcf0e81d54a736afc02f3c2bd7"
+    },
+    {
+      "path": "data/weather-dev4-20261022/53/reachable-weather.sqlite",
+      "bytes": 1728512,
+      "sha256": "3a509c4114284f2b11b76ed93747bd869a635fe329334eb2d10665550be43a3e"
+    },
+    {
+      "path": "data/weather-dev4-20261022/53/sharing.sqlite",
+      "bytes": 1880064,
+      "sha256": "1431fb831908f32f5bfa15f7d230e4bc64dcb2095db99b8e02053634aeb42bdd"
+    },
+    {
+      "path": "data/weather-dev4-20261022/71/blocked.sqlite",
+      "bytes": 94208,
+      "sha256": "52949ee849f09106f26686bffadf131f1bd83631e0df0bb337f0606a3f08402a"
+    },
+    {
+      "path": "data/weather-dev4-20261022/71/build.sqlite",
+      "bytes": 1589248,
+      "sha256": "8ff592e305c372e5161a758f57aed1baa8cb7ffa54d5884307e3279548d56423"
+    },
+    {
+      "path": "data/weather-dev4-20261022/71/mild.sqlite",
+      "bytes": 86016,
+      "sha256": "21e671ee905463cbace9689a90f3df73d0e5125727b4a178c6c79f7c72039ffe"
+    },
+    {
+      "path": "data/weather-dev4-20261022/71/reachable-common.sqlite",
+      "bytes": 94208,
+      "sha256": "b182b3aaef297df55999abadabe53f62aca950608db6a1a05dcb7c0960ea7575"
+    },
+    {
+      "path": "data/weather-dev4-20261022/71/reachable-survival.sqlite",
+      "bytes": 532480,
+      "sha256": "6b006b75c5b3e50a8b05dc84d0d7ee53893f293fa47683163d5bcecef733ed21"
+    },
+    {
+      "path": "data/weather-dev4-20261022/71/reachable-weather.sqlite",
+      "bytes": 1720320,
+      "sha256": "a7acb416c5d01babaf3b9ab8da3d8d4d1957280fb23d63e9d0c739b2ed54f667"
+    },
+    {
+      "path": "data/weather-dev4-20261022/71/sharing.sqlite",
+      "bytes": 1892352,
+      "sha256": "5c1b8056ae3ce769a3b4fc8237a0fa822482a385ea3524f6182055c3d006140d"
+    },
+    {
+      "path": "data/weather-dev5-20261022/53/blocked.sqlite",
+      "bytes": 102400,
+      "sha256": "2f4a05c951aab92adf60376fc0cd095055ee3e8ef8c9faa3ffacac15a8ba0b6f"
+    },
+    {
+      "path": "data/weather-dev5-20261022/53/build.sqlite",
+      "bytes": 1597440,
+      "sha256": "aadc3962454b2b2c566ba940fe23dc9569d0b5996bdf5c36c0e8d01c15cd3939"
+    },
+    {
+      "path": "data/weather-dev5-20261022/53/mild.sqlite",
+      "bytes": 94208,
+      "sha256": "208b949ddeda466f326cadd96a61ba7b2574adf2c3431656fecda102aade2d59"
+    },
+    {
+      "path": "data/weather-dev5-20261022/53/reachable-common.sqlite",
+      "bytes": 102400,
+      "sha256": "234e0755170011ef9facc575e84d0ae1896e49df6923f66c4bc9704f8d8bebd0"
+    },
+    {
+      "path": "data/weather-dev5-20261022/53/reachable-survival.sqlite",
+      "bytes": 540672,
+      "sha256": "02c82bf79027d1f42f3872cfdd3fc07d14d5e2cd7e6bec1e6d373eba73dc98f6"
+    },
+    {
+      "path": "data/weather-dev5-20261022/53/reachable-weather.sqlite",
+      "bytes": 1728512,
+      "sha256": "ea32a17f519519769e0b31b6aadb33bea88d76c809f15d6997e7c5fb3b66a2a8"
+    },
+    {
+      "path": "data/weather-dev5-20261022/53/sharing.sqlite",
+      "bytes": 1880064,
+      "sha256": "0fb13f0cf77634ebc4b6a8497a760214233ce407c0df697010480f70093e3317"
+    },
+    {
+      "path": "data/weather-dev5-20261022/71/blocked.sqlite",
+      "bytes": 94208,
+      "sha256": "0923146d0d1813f129a1229e08284d94dc23dcadb7a28fafc6cfcba6054f4fa5"
+    },
+    {
+      "path": "data/weather-dev5-20261022/71/build.sqlite",
+      "bytes": 1589248,
+      "sha256": "418873fc017359808c06294bf66127586a893825974d346e17dbda47b60ab6a1"
+    },
+    {
+      "path": "data/weather-dev5-20261022/71/mild.sqlite",
+      "bytes": 86016,
+      "sha256": "4f7ebdc2d5dadc82c8addff6e33fc17b00742374da6baf930aea62c740c22a8d"
+    },
+    {
+      "path": "data/weather-dev5-20261022/71/reachable-common.sqlite",
+      "bytes": 94208,
+      "sha256": "be80cb71967c5fc532c601a3ea95dadb69b52e1c2846c18de063bb7eee879f1f"
+    },
+    {
+      "path": "data/weather-dev5-20261022/71/reachable-survival.sqlite",
+      "bytes": 532480,
+      "sha256": "d8a9f2c4ceb54e81c697577afdf856583f0abe59d60af75f2792fc8bcd8e37d4"
+    },
+    {
+      "path": "data/weather-dev5-20261022/71/reachable-weather.sqlite",
+      "bytes": 1720320,
+      "sha256": "c7cec0e2818c28f4f71762e6ded7297ac535e4effe86e84f7b32a6fbb3dfd343"
+    },
+    {
+      "path": "data/weather-dev5-20261022/71/sharing.sqlite",
+      "bytes": 1892352,
+      "sha256": "ff19810c2c4a9e95e86e2ec6696ef9804adde7e796a0148e1cae521bafad9a55"
+    },
+    {
+      "path": "data/weather-existing-control-20261022/13001.sqlite",
+      "bytes": 196608,
+      "sha256": "c959fc28afa34d6d878ce4e22bf36482bb064dbac6967d031b5e74d0eafa0380"
+    },
+    {
+      "path": "data/weather-existing-control-20261022/13007.sqlite",
+      "bytes": 196608,
+      "sha256": "4925d4da957f97e6ce4313f17ef266a983614b20f10b502e1054966f99774246"
+    },
+    {
+      "path": "data/weather-existing-control-20261022/13009.sqlite",
+      "bytes": 196608,
+      "sha256": "8e73f9a35bfa32ccf026e4788e5aab409a53be99e9145b73f2a6f713f906445c"
+    },
+    {
+      "path": "data/weather-final-demo-20261022.sqlite",
+      "bytes": 180224,
+      "sha256": "7d3d5ae6c861191113ed59d20d763095eb63b4dc1e0c1949b4ebd28e53e94b92"
+    },
+    {
+      "path": "data/weather-life-20261022.sqlite",
+      "bytes": 25100288,
+      "sha256": "698919b8ecad6241e2439917a86f8e0f563e42a159afd5b5ad177c1ac2e4a7fd"
+    },
+    {
+      "path": "data/weather-w1-20261022.sqlite",
+      "bytes": 90112,
+      "sha256": "04bf309b5d09d38d1c4343513ae13c36ec19a4c1b213f99f3ff614c1e2d8ac8f"
+    },
+    {
+      "path": "data/weather-w1-resume-20261022.sqlite",
+      "bytes": 90112,
+      "sha256": "6276732978fe046101ea53453f66735a52400bb4f5f13424b91f6997f5e68ec2"
+    },
+    {
+      "path": "data/weather-w5-demo-20261022.sqlite",
+      "bytes": 180224,
+      "sha256": "f9fb1f7bf850436df6914b2ad6c30fc0e71f25699599ebab69346cd514176746"
+    }
+  ],
+  "original_runtime_preserved": true,
+  "weather_build_id": "74e4c35419d9cc962673ce24b09d2ec7fa80e844a737c0e82862d1bb23feb71c",
+  "scope": "Local save inventory is not a portable SQLite export. Trace archive hashes are in weather_evidence_archives.json."
+}

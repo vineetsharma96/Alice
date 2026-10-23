@@ -1,0 +1,2 @@
+{"seed": 53, "online": {"adaptive": 6, "legacy": 0, "frozen": 6, "memory": 6, "authored": 6}, "cooperation": {"learned": true, "muted": false, "scrambled": false, "whole": false}, "wall_s": 70.88080049999917}
+{"online_totals": {"adaptive": 6, "legacy": 0, "frozen": 6, "memory": 6, "authored": 6}, "cooperation_totals": {"learned": 1, "muted": 0, "scrambled": 0, "whole": 0}, "online_gate": true, "location_gate": true, "wall_s": 70.88317989999996}

@@ -1,0 +1,61 @@
+{"seed": 43, "site": 0, "arm": "enabled", "success": true, "wall_s": 2.0137869999998657}
+{"seed": 43, "site": 0, "arm": "muted", "success": true, "wall_s": 2.1659097000001566}
+{"seed": 43, "site": 0, "arm": "scrambled", "success": false, "wall_s": 1.4657248000003165}
+{"seed": 43, "site": 0, "arm": "identity", "success": true, "wall_s": 2.6041637999996965}
+{"seed": 43, "site": 1, "arm": "enabled", "success": true, "wall_s": 2.356266599999799}
+{"seed": 43, "site": 1, "arm": "muted", "success": false, "wall_s": 1.403678900000159}
+{"seed": 43, "site": 1, "arm": "scrambled", "success": false, "wall_s": 1.4437161999999262}
+{"seed": 43, "site": 1, "arm": "identity", "success": false, "wall_s": 1.5978491999999278}
+{
+  "counts": {
+    "enabled": [
+      2,
+      2
+    ],
+    "muted": [
+      1,
+      2
+    ],
+    "scrambled": [
+      0,
+      2
+    ],
+    "identity": [
+      1,
+      2
+    ]
+  },
+  "rates": {
+    "enabled": 1.0,
+    "muted": 0.5,
+    "scrambled": 0.0,
+    "identity": 0.5
+  },
+  "improved_over_scrambled_seeds": 1,
+  "native_invariants": true,
+  "matched_initial_heads": true,
+  "identity_location_separate": true,
+  "scarcity_gate": true,
+  "communication_gate": true,
+  "need_policy_gate": true,
+  "h4_gate": true,
+  "wilson_intervals": {
+    "enabled": [
+      0.34237195288961925,
+      1.0
+    ],
+    "muted": [
+      0.09452865480086614,
+      0.9054713451991339
+    ],
+    "scrambled": [
+      0.0,
+      0.6576280471103807
+    ],
+    "identity": [
+      0.09452865480086614,
+      0.9054713451991339
+    ]
+  },
+  "claim": "Bounded authored scout integration plus separately measured engineered need selection; not general independent intelligence."
+}

@@ -1,0 +1,33 @@
+{
+  "h5_reuse_gate": true,
+  "invented_syntax": false,
+  "totals": {
+    "learned": 30,
+    "whole": 6,
+    "muted": 6,
+    "first": 6,
+    "second": 4
+  },
+  "python_full_suite": 317,
+  "python_additional_epoch_checks": 2,
+  "native_checks": 4,
+  "wall_study_s": 342.1635067999996,
+  "wall_python_subprocess_s": 894.0809724000001,
+  "phase9_unchanged_failed": true,
+  "historical_document_bodies_preserved": true,
+  "h4_handoff_archive_exact": true,
+  "frozen_source_hashes_match": true,
+  "exact_trace_and_development_archives_verified": true,
+  "evidence_sha256": {
+    "artifacts/h5_audit.json": "cb3b30ce0c8d400b4b4c3a633890beb79f627e766a943e70f8f7d2306cd85a4d",
+    "artifacts/h5_registration.json": "169ce0d786fba5e113ef5e5b98ee2c91c146d2505e527fb2677e09b3ad9b131e",
+    "artifacts/h5_checks.json": "6292314c8edae1ad9af09ec7d239627d94d8ba6d8af1f3ca249b48efb32378e6",
+    "artifacts/h5_browser_final.json": "92db79f8814ee3660c5d6fe0a8917a55163287291f36c5e84ee1ef56886a45a1",
+    "artifacts/h5_phase9_audit.json": "29a2dd0224f069e36e8253757da77523481e6ecb3e36dc9f83488af703522564",
+    "artifacts/h5_continuity_checks.log": "0c212e0905f5d49404a15a156551a098b506c191cff7aa74895e3884225fadb9",
+    "artifacts/h5_native_worlds.json": "5616aaf4c3abd7ba5ce06bfbb30f4a5230b711a8ea8841970937bff0f2e5e4ee",
+    "artifacts/h5_source_checks.json": "090cff29a921dcd1d31ab1093fba2c6fa167151a6d8216b5423c205d0a020831",
+    "artifacts/h5_connections_final.json": "2e1044bd400fbea3ed0026c4a1afeeeafb34f01503d7a27b52b386e6a9d9bbb1"
+  },
+  "limitations": "Authored factorization/teaching/scoring; short object-attribute reference task; no emergent syntax or unattended survival claim."
+}

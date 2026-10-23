@@ -1,0 +1,21 @@
+seed-19201/connected-corrected.sqlite verified
+seed-19201/connected-mid.sqlite verified
+seed-19201/connected-relevant.sqlite verified
+seed-19201/connected-unrelated.sqlite verified
+seed-19201/connected.sqlite verified
+seed-19201/disconnected-corrected.sqlite verified
+seed-19201/disconnected-relevant.sqlite verified
+seed-19201/disconnected-unrelated.sqlite verified
+seed-19201/disconnected.sqlite verified
+seed-19201/frozen-corrected.sqlite verified
+seed-19201/frozen-relevant.sqlite verified
+seed-19201/frozen-unrelated.sqlite verified
+seed-19201/frozen.sqlite verified
+Traceback (most recent call last):
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\scripts\memory_audit.py", line 138, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\scripts\memory_audit.py", line 130, in main
+    files=json.loads((ROOT/'artifacts'/f'{name}.json').read_text(encoding='utf8'))['files']
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'files'

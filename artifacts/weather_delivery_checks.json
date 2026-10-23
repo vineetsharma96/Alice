@@ -1,0 +1,19 @@
+{
+  "source_freeze": true,
+  "native_source_manifest": true,
+  "historical_registrations": true,
+  "original_python_tests": 335,
+  "native_checks": 4,
+  "weather_checks": 28,
+  "heldout_native_audit": true,
+  "continuous_year_audit": true,
+  "browser": true,
+  "phase9_advance": false,
+  "previous_handoff_byte_preserved": true,
+  "historical_document_bodies_preserved": true,
+  "exact_trace_archives": 13,
+  "native_build_id": "74e4c35419d9cc962673ce24b09d2ec7fa80e844a737c0e82862d1bb23feb71c",
+  "local_native_saves": 99,
+  "github_push": false,
+  "scope": "bounded authored weather milestone; no learned weather integration or indefinite survival claim"
+}

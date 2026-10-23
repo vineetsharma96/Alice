@@ -10,7 +10,7 @@ the existing native build and separate, source-pinned SQLite extension tables.
 | H0 | Explicit novice priors, private persistent state, receipts/checksums and bounded archive protection implemented and tested |
 | H1 | Registered frozen source-choice gate passed across five seeds; general online adaptation remains limited |
 | H2 | Registered scaffolded three-class naming/reference gate passed across five seeds |
-| H3 | Deferred: community/newcomer/interference studies |
+| H3 | Subsequently verified in a separate [native integration study](H3_INTEGRATION_REVIEW.md); original incoming dictionary-only gate rejected |
 | H4 | Deferred: useful cooperative world tasks and independent goal selection |
 | H5 | Deferred: sequences/composition and observer learning panels |
 
@@ -160,14 +160,17 @@ protocol over known sensory classes. It does not establish arbitrary object
 names, locations, grammar, compositionality, unrestricted conversation, autonomous
 teaching, independent world cooperation or sustained husbandry. Coarse features
 can harm online choices. Confidence is uncalibrated; exposure/evidence budgets
-remain finite. H3-H5, broader/longer horizons and unattended integration remain
-deferred. No consciousness, general intelligence or civilization claim is made.
+remain finite. H4/H5, broader/longer horizons and unattended integration remain
+deferred. Separate native H3 results and their authored scaffolding are described
+in [the integration review](H3_INTEGRATION_REVIEW.md). No consciousness, general intelligence or civilization claim is made.
 
 ## Verification and evidence
 
-Fifteen H0/H1 and fifteen H2 focused checks pass before confirmation. Final full
-regression, sealed Phase9 audit and delivery inventory are recorded after their
-runs finish. Raw current worlds are local under `data/developmental-*`; output
+Fifteen H0/H1 and fifteen H2 focused checks pass before confirmation. The original
+full check passes 278 Python tests and four native checks; its Python subprocess
+takes 414.670 seconds. The independent delivery audit passes, and the sealed
+Phase9 audit verifies 3439 files with its failed outcome retained. The later H3
+integration passes 287 Python tests and four native checks; see its separate report. Raw current worlds are local under `data/developmental-*`; output
 traces use `artifacts/developmental_*`. See
 [operations and unified CLI](DEVELOPMENTAL_OPERATIONS.md) for repeatable commands.
 

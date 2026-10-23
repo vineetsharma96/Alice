@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\scripts\wayfinding_study.py", line 312, in <module>
+    main()
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\scripts\wayfinding_study.py", line 303, in main
+    cases.append(seed_case(args.directory, seed))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\scripts\wayfinding_study.py", line 197, in seed_case
+    training = train(life, seed)
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\scripts\wayfinding_study.py", line 48, in train
+    relief.append(wf.learn_relief(path, 'agent-2', g['request']['request_id'], c['request']['request_id']))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\underworld\wayfinding.py", line 283, in learn_relief
+    raise ValueError('uncompleted actions cannot teach a successful relief prediction')
+ValueError: uncompleted actions cannot teach a successful relief prediction

@@ -1,0 +1,6 @@
+test_model_invalid_choice_falls_back_and_reservation_remains_bounded (test_phase_e_planning.PlanningTests.test_model_invalid_choice_falls_back_and_reservation_remains_bounded) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 4.278s
+
+OK

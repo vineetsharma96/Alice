@@ -1,0 +1,394 @@
+{
+  "verified": true,
+  "worlds": [
+    {
+      "world": "data\\memory-f5-confirmation\\seed-19213\\connected-corrected.sqlite",
+      "sha256": "901d63b3e574e488b1981bd4bb83906789a3d2e6651ca6222a17484a5aba02bd",
+      "verified": true,
+      "peak_index_bytes": 17991,
+      "accepted": 137,
+      "completed": 137,
+      "rejections": {},
+      "failures": {},
+      "actions": {
+        "drink": 13,
+        "eat": 9,
+        "gather": 22,
+        "move": 16,
+        "rest": 77
+      },
+      "simulated_s": 935.75,
+      "replay": {
+        "verified": true,
+        "operations": 278,
+        "physical": {
+          "replay_matches": true,
+          "operations": 323,
+          "state_hash": "59f720914e44ba1e22d0270e5d49dbe8fabc2372f92cfe0e5c2acda725a411e6"
+        },
+        "hash": "111fe3da35b24aa87a392e5bf307b33acb453c2da02fb5a6cdfc898157dd2d27"
+      }
+    },
+    {
+      "world": "data\\memory-f5-confirmation\\seed-19213\\connected-mid.sqlite",
+      "sha256": "c840f71642185ec93edfc127700d106a002b7539775af487f157410745b5c609",
+      "verified": true,
+      "peak_index_bytes": 15745,
+      "accepted": 70,
+      "completed": 70,
+      "rejections": {},
+      "failures": {},
+      "actions": {
+        "drink": 7,
+        "eat": 5,
+        "gather": 12,
+        "move": 8,
+        "rest": 38
+      },
+      "simulated_s": 511.75,
+      "replay": {
+        "verified": true,
+        "operations": 142,
+        "physical": {
+          "replay_matches": true,
+          "operations": 187,
+          "state_hash": "69748befea0c0d6d99b3dcbb0d15ffce21bd97ba04301d823e2c61ac511c960e"
+        },
+        "hash": "920a3b7dac600b49155ab739badb67b1ba336883828dca4f69570b9f0b8b2649"
+      }
+    },
+    {
+      "world": "data\\memory-f5-confirmation\\seed-19213\\connected-relevant.sqlite",
+      "sha256": "c82842faa03e3f00c75659631c042686281a72f76308eb664915ae3c9cf8edc4",
+      "verified": true,
+      "peak_index_bytes": 16264,
+      "accepted": 71,
+      "completed": 71,
+      "rejections": {},
+      "failures": {},
+      "actions": {
+        "drink": 7,
+        "eat": 5,
+        "gather": 12,
+        "move": 9,
+        "rest": 38
+      },
+      "simulated_s": 513.75,
+      "replay": {
+        "verified": true,
+        "operations": 144,
+        "physical": {
+          "replay_matches": true,
+          "operations": 190,
+          "state_hash": "720357ccb48662822e1b59e313672ffb9eacc0e710096d5915abcd76d21c42b1"
+        },
+        "hash": "da14f24017f48920e062b744afbf0e5d3aca9e6dbc6d096e2fb3dbe2a4e53586"
+      }
+    },
+    {
+      "world": "data\\memory-f5-confirmation\\seed-19213\\connected-unrelated.sqlite",
+      "sha256": "bf877ee46e6b9db9081c5f3263a5e6a61a60a2e9b504f8316741a51c4ca78bbc",
+      "verified": true,
+      "peak_index_bytes": 15745,
+      "accepted": 71,
+      "completed": 71,
+      "rejections": {},
+      "failures": {},
+      "actions": {
+        "drink": 7,
+        "eat": 5,
+        "gather": 12,
+        "move": 8,
+        "rest": 39
+      },
+      "simulated_s": 516.75,
+      "replay": {
+        "verified": true,
+        "operations": 144,
+        "physical": {
+          "replay_matches": true,
+          "operations": 189,
+          "state_hash": "721c279c668821ab7c95f561b385efce75dabb43f776d7cab423300fd54d28a1"
+        },
+        "hash": "fed827d9f213cd32949ed409dde3fa2863901fae6d8335cfad624973d7aec0aa"
+      }
+    },
+    {
+      "world": "data\\memory-f5-confirmation\\seed-19213\\connected.sqlite",
+      "sha256": "a4e7e507efbbb3efca5a505b9e82eab1b621ec814762af1fc7d3c2627955052b",
+      "verified": true,
+      "peak_index_bytes": 17991,
+      "accepted": 136,
+      "completed": 136,
+      "rejections": {},
+      "failures": {},
+      "actions": {
+        "drink": 13,
+        "eat": 9,
+        "gather": 22,
+        "move": 16,
+        "rest": 76
+      },
+      "simulated_s": 930.75,
+      "replay": {
+        "verified": true,
+        "operations": 276,
+        "physical": {
+          "replay_matches": true,
+          "operations": 321,
+          "state_hash": "d5cfa8308fbd9ccfdb3d77bdae7fa4e856f89dc42a81a5a91226951f5b70eed9"
+        },
+        "hash": "028ef642f21ed1f913b823f95a2cd5d747e07458bf2229093d52771ae237c1d7"
+      }
+    },
+    {
+      "world": "data\\memory-f5-confirmation\\seed-19213\\disconnected-corrected.sqlite",
+      "sha256": "1175f7d36dbd8252fecd147dfa900252a564addc879dc27d7e2eba79030e23a7",
+      "verified": true,
+      "peak_index_bytes": 17994,
+      "accepted": 137,
+      "completed": 137,
+      "rejections": {},
+      "failures": {},
+      "actions": {
+        "drink": 13,
+        "eat": 9,
+        "gather": 22,
+        "move": 16,
+        "rest": 77
+      },
+      "simulated_s": 935.75,
+      "replay": {
+        "verified": true,
+        "operations": 278,
+        "physical": {
+          "replay_matches": true,
+          "operations": 323,
+          "state_hash": "59f720914e44ba1e22d0270e5d49dbe8fabc2372f92cfe0e5c2acda725a411e6"
+        },
+        "hash": "33e89e4aeacab59ca85c61804ebb5318b4a875a65a6479fbf545f6806e4ba6b1"
+      }
+    },
+    {
+      "world": "data\\memory-f5-confirmation\\seed-19213\\disconnected-relevant.sqlite",
+      "sha256": "a3d941ffbd32d1884fea4f3e953998dc1f148be42287986f43798e7360560381",
+      "verified": true,
+      "peak_index_bytes": 16267,
+      "accepted": 71,
+      "completed": 71,
+      "rejections": {},
+      "failures": {},
+      "actions": {
+        "drink": 7,
+        "eat": 5,
+        "gather": 12,
+        "move": 9,
+        "rest": 38
+      },
+      "simulated_s": 513.75,
+      "replay": {
+        "verified": true,
+        "operations": 144,
+        "physical": {
+          "replay_matches": true,
+          "operations": 190,
+          "state_hash": "720357ccb48662822e1b59e313672ffb9eacc0e710096d5915abcd76d21c42b1"
+        },
+        "hash": "aa7a2ed5434a3126fab1e888a56e67c2fc707bf6bb53a80cdb8a9212ca0a252e"
+      }
+    },
+    {
+      "world": "data\\memory-f5-confirmation\\seed-19213\\disconnected-unrelated.sqlite",
+      "sha256": "7ad3fe233caa75d3c7ee8fa9c1f7976d04d09d7ae6b5adf778ce09afe8ae8ce8",
+      "verified": true,
+      "peak_index_bytes": 15748,
+      "accepted": 71,
+      "completed": 71,
+      "rejections": {},
+      "failures": {},
+      "actions": {
+        "drink": 7,
+        "eat": 5,
+        "gather": 12,
+        "move": 8,
+        "rest": 39
+      },
+      "simulated_s": 516.75,
+      "replay": {
+        "verified": true,
+        "operations": 144,
+        "physical": {
+          "replay_matches": true,
+          "operations": 189,
+          "state_hash": "721c279c668821ab7c95f561b385efce75dabb43f776d7cab423300fd54d28a1"
+        },
+        "hash": "329fd37f1b2f042438c684337fd67def2f03cc794b97e55c060cee8bc8ffcc35"
+      }
+    },
+    {
+      "world": "data\\memory-f5-confirmation\\seed-19213\\disconnected.sqlite",
+      "sha256": "88286a8f5d2d075d789938ae793ec12bf23a29076e21965f1631e4a68c4a9691",
+      "verified": true,
+      "peak_index_bytes": 17994,
+      "accepted": 136,
+      "completed": 136,
+      "rejections": {},
+      "failures": {},
+      "actions": {
+        "drink": 13,
+        "eat": 9,
+        "gather": 22,
+        "move": 16,
+        "rest": 76
+      },
+      "simulated_s": 930.75,
+      "replay": {
+        "verified": true,
+        "operations": 276,
+        "physical": {
+          "replay_matches": true,
+          "operations": 321,
+          "state_hash": "d5cfa8308fbd9ccfdb3d77bdae7fa4e856f89dc42a81a5a91226951f5b70eed9"
+        },
+        "hash": "83bcd9b10141ece7f05d70c13054bbcb1ba363cd2448fef74d0ed431f92f1644"
+      }
+    },
+    {
+      "world": "data\\memory-f5-confirmation\\seed-19213\\frozen-corrected.sqlite",
+      "sha256": "11b16d6f12342bf9c39a2cbc277a684dc4ce93154740bcf9b35d0ec3dd7e1ff0",
+      "verified": true,
+      "peak_index_bytes": 165,
+      "accepted": 137,
+      "completed": 137,
+      "rejections": {},
+      "failures": {},
+      "actions": {
+        "drink": 13,
+        "eat": 9,
+        "gather": 22,
+        "move": 16,
+        "rest": 77
+      },
+      "simulated_s": 935.75,
+      "replay": {
+        "verified": true,
+        "operations": 278,
+        "physical": {
+          "replay_matches": true,
+          "operations": 323,
+          "state_hash": "59f720914e44ba1e22d0270e5d49dbe8fabc2372f92cfe0e5c2acda725a411e6"
+        },
+        "hash": "bd3ea30d463a6ef6563955f25a6c565401796b49491465573d22cfd671c707ee"
+      }
+    },
+    {
+      "world": "data\\memory-f5-confirmation\\seed-19213\\frozen-relevant.sqlite",
+      "sha256": "41f63465761f4a9cdf2b8c3caa1f7aad031cb0f40f80c1164dabae85f3c02405",
+      "verified": true,
+      "peak_index_bytes": 165,
+      "accepted": 71,
+      "completed": 71,
+      "rejections": {},
+      "failures": {},
+      "actions": {
+        "drink": 7,
+        "eat": 5,
+        "gather": 12,
+        "move": 8,
+        "rest": 39
+      },
+      "simulated_s": 516.75,
+      "replay": {
+        "verified": true,
+        "operations": 144,
+        "physical": {
+          "replay_matches": true,
+          "operations": 189,
+          "state_hash": "1678756eff9cf066df8b2558045d137e7e0ce1b850d7af5b0cc0b300ca1f1aed"
+        },
+        "hash": "dba4a69c618f7ce21ad87b9028c8349c3366a216aa8f14b1f44f282694178216"
+      }
+    },
+    {
+      "world": "data\\memory-f5-confirmation\\seed-19213\\frozen-unrelated.sqlite",
+      "sha256": "37162b5de220431c299ba97b84b9e7ea48acf8d1f90661f2a28c3982fb88b0cd",
+      "verified": true,
+      "peak_index_bytes": 165,
+      "accepted": 71,
+      "completed": 71,
+      "rejections": {},
+      "failures": {},
+      "actions": {
+        "drink": 7,
+        "eat": 5,
+        "gather": 12,
+        "move": 8,
+        "rest": 39
+      },
+      "simulated_s": 516.75,
+      "replay": {
+        "verified": true,
+        "operations": 144,
+        "physical": {
+          "replay_matches": true,
+          "operations": 189,
+          "state_hash": "721c279c668821ab7c95f561b385efce75dabb43f776d7cab423300fd54d28a1"
+        },
+        "hash": "0254d5639dee3ce8f3d2902b7577d9ac700264f66f7ce4a6fb0d29f6ebd5118c"
+      }
+    },
+    {
+      "world": "data\\memory-f5-confirmation\\seed-19213\\frozen.sqlite",
+      "sha256": "05bf7a913365b30c17dac2d281ff2c07c1f7cb3c351b6f283179bec6c507c318",
+      "verified": true,
+      "peak_index_bytes": 165,
+      "accepted": 136,
+      "completed": 136,
+      "rejections": {},
+      "failures": {},
+      "actions": {
+        "drink": 13,
+        "eat": 9,
+        "gather": 22,
+        "move": 16,
+        "rest": 76
+      },
+      "simulated_s": 930.75,
+      "replay": {
+        "verified": true,
+        "operations": 276,
+        "physical": {
+          "replay_matches": true,
+          "operations": 321,
+          "state_hash": "d5cfa8308fbd9ccfdb3d77bdae7fa4e856f89dc42a81a5a91226951f5b70eed9"
+        },
+        "hash": "d08cd73aa28950d0ce0f2e1cf586d996b7b93d6462087f05ce6d9c773af72033"
+      }
+    }
+  ],
+  "source_worlds": [
+    {
+      "world": "data\\memory-f5-confirmation\\seed-19213\\assigned-source.sqlite",
+      "sha256": "b44ba83213420add7fdea9b5282e09b20718ac275bed7c47c8d412b2ffc103bd",
+      "physical": {
+        "replay_matches": true,
+        "operations": 45,
+        "state_hash": "8a12d1067047dcf9036b9c05b2748b3afbcead378b56113db6bc7966a38e9a8f"
+      }
+    }
+  ],
+  "historical_registrations": {
+    "living_world_g_registration": 43,
+    "developmental_h1_registration_repaired": 6,
+    "developmental_h2_registration": 8,
+    "h3_native_registration": 8,
+    "h4_registration": 4,
+    "h5_registration": 13,
+    "gap_registration": 14,
+    "weather_registration": 30,
+    "emotion_registration": 44,
+    "mood_f4_registration": 55
+  },
+  "wall_s": 67.78158740000072,
+  "audit_source_sha256": "ac94ac8ed15dfc2a04ccdca9aa405c26e14acc073adc99a4e79fd3687417a5fc"
+}

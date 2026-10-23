@@ -1,0 +1,6 @@
+people ['agent-1', 'agent-2', 'agent-3', 'agent-4']
+agent-1 {'action': 'rest', 'duration': 5, 'goal': 'reduce_exposure', 'origin': 'authored_weather_baseline', 'parameters': {}, 'targets': []} completed
+agent-2 {'action': 'rest', 'duration': 5, 'goal': 'reduce_exposure', 'origin': 'authored_weather_baseline', 'parameters': {}, 'targets': []} completed
+agent-3 {'action': 'rest', 'duration': 5, 'goal': 'reduce_exposure', 'origin': 'authored_weather_baseline', 'parameters': {}, 'targets': []} completed
+agent-4 {'action': 'rest', 'duration': 5, 'goal': 'reduce_exposure', 'origin': 'authored_weather_baseline', 'parameters': {}, 'targets': []} completed
+{'verified': True, 'operations': 4, 'physical': {'replay_matches': True, 'operations': 4, 'state_hash': 'dcdbae7bb04d53230c227a147084764d1cc6dc0f0e2872bca96b79d2ea6c5470'}, 'hash': 'b29b07dd6761befb7edfc229e66aff2981220772710b4a2255244b471ea94a06'}

@@ -18,9 +18,9 @@ void World::configure_ecology(double forage,double rate){
         throw std::invalid_argument("INVALID_ARGUMENT: new-world ecology only");
     // Stage placement before mutating the world: failed initialization grants nothing.
     std::vector<Entity> added;
-    for(unsigned i=0;i<6;++i){
-        Entity e;e.id="animal-"+std::to_string(i+1);e.kind="animal";e.radius=.2;e.mass_ug=(i%2)?800000000:2*kg;e.stage="wild";
-        std::vector<Point> positions={{4,3.8},{3.7,4.6},{8.5,6.2},{12.4,9.8},{18.2,14.5},{22.6,19.4}};
+    for(unsigned i=0;i<2;++i){
+        Entity e;e.id="animal-"+std::to_string(i+1);e.kind="animal";e.radius=.2;e.mass_ug=i?800000000:2*kg;e.stage="wild";
+        std::vector<Point> positions={{4,3.8},{3.7,4.6}};
         for(double y=1;y<height_-1;y+=.6)for(double x=1;x<width_-1;x+=.6)positions.push_back({x,y});
         bool placed=false;
         for(const auto p:positions)if(clear_placement(p,.2)&&std::all_of(added.begin(),added.end(),[&](const auto& o){return dist(p,o.position)>=.4;})){e.position=p;placed=true;break;}
@@ -33,10 +33,10 @@ void World::configure_ecology(double forage,double rate){
         if(clear_placement(p,0)&&std::all_of(added.begin(),added.end(),[&](const auto& e){return dist(p,e.position)>=e.radius;})){forage_position=p;forage_placed=true;break;}
     }
     if(!forage_placed)throw std::invalid_argument("NO_PLACEMENT: forage");
-    ecology_.enabled=true;ecology_.forage_rate=rate;ecology_.body_initial=8400000000;
-    for(unsigned i=0;i<added.size();++i){Animal a;a.species=(i%2)?"reedhen":"mossgrazer";ecology_.animals.emplace(added[i].id,a);entities_.push_back(added[i]);}
+    ecology_.enabled=true;ecology_.forage_rate=rate;ecology_.body_initial=2800000000;
+    for(unsigned i=0;i<added.size();++i){Animal a;a.species=i?"reedhen":"mossgrazer";ecology_.animals.emplace(added[i].id,a);entities_.push_back(added[i]);}
     Entity patch;patch.id="forage-1";patch.kind="forage";patch.position=forage_position;patch.mass_ug=std::llround(forage*kg);entities_.push_back(patch);
-    initial_mass_["food"]+=patch.mass_ug+1500000000;initial_mass_["water"]+=1200000000;
+    initial_mass_["food"]+=patch.mass_ug+500000000;initial_mass_["water"]+=400000000;
     event("ecology_initialized","","","authored_v1:declared_initial_body_food_water_and_forage");rebuild_grid();check_invariants();
 }
 void World::transfer_freshness(const std::string& source,const std::string& destination,const std::string& material,double initial){

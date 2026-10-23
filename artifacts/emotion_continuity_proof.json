@@ -1,0 +1,63 @@
+{
+  "fresh_process_resume_matches": true,
+  "matched_600_hash": "b02ac22f937f5c7e87b84e66c5fa2e944ba4593c3acde841c05b635eb227894c",
+  "matched_cursor": 296,
+  "final_cursor": 550,
+  "actions": {
+    "move": 66,
+    "rest": 268,
+    "gather": 108,
+    "drink": 64,
+    "eat": 44
+  },
+  "fallback": {
+    "agent-1": 0,
+    "agent-2": 0,
+    "agent-3": 0,
+    "agent-4": 0
+  },
+  "forcing_history": {},
+  "native_initial_mass_ug": {
+    "food": 8000000000,
+    "fuel_X": 0,
+    "inert_material": 32000000000,
+    "oxygen": 0,
+    "product_P": 0,
+    "stone": 4000000000,
+    "tree": 18000000000,
+    "water": 16000000000
+  },
+  "native_totals_ug": {
+    "fiber": "100000000",
+    "food": "8000000000",
+    "fuel_X": "0",
+    "inert_material": "32000000000",
+    "oxygen": "0",
+    "product_P": "0",
+    "stone": "4000000000",
+    "tree": "17000000000",
+    "water": "16000000000",
+    "wood": "900000000"
+  },
+  "native_boundary_sources_ug": {
+    "food": 0,
+    "fuel_X": 0,
+    "inert_material": 0,
+    "oxygen": 0,
+    "product_P": 0,
+    "stone": 0,
+    "tree": 0,
+    "water": 0
+  },
+  "native_operator_sources_ug": {
+    "food": 0,
+    "fuel_X": 0,
+    "inert_material": 0,
+    "oxygen": 0,
+    "product_P": 0,
+    "stone": 0,
+    "water": 0
+  },
+  "private_bytes": 17943,
+  "progress_wall_s": 130.95758360000036
+}

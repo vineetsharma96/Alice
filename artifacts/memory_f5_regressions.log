@@ -1,0 +1,11 @@
+test_disabled_matches_original_native_policy (test_memory.MemoryTests.test_disabled_matches_original_native_policy) ... ok
+test_foreign_clock_parameters_and_modes (test_memory.MemoryTests.test_foreign_clock_parameters_and_modes) ... ok
+test_inherited_f4_atomic_retry_pending_and_fresh_resume (test_memory.MemoryTests.test_inherited_f4_atomic_retry_pending_and_fresh_resume) ... ok
+test_relevance_correction_and_observer_labels (test_memory.MemoryTests.test_relevance_correction_and_observer_labels) ... ok
+test_salience_bounded_retention_and_immutable_facts (test_memory.MemoryTests.test_salience_bounded_retention_and_immutable_facts) ... ok
+test_memory_observer_is_read_only (test_viewer.ViewerTests.test_memory_observer_is_read_only) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 4.674s
+
+OK

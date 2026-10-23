@@ -1,0 +1,20 @@
+test_archive_preserves_both_private_vocabularies (test_symbols.SymbolTests.test_archive_preserves_both_private_vocabularies) ... ok
+test_duplicate_grounding_cannot_double_update (test_symbols.SymbolTests.test_duplicate_grounding_cannot_double_update) ... ok
+test_empty_independent_vocabularies_and_private_coinage (test_symbols.SymbolTests.test_empty_independent_vocabularies_and_private_coinage) ... ok
+test_frozen_production_refuses_unknown_percept (test_symbols.SymbolTests.test_frozen_production_refuses_unknown_percept) ... ok
+test_grounding_rollback_retries_without_physical_replay (test_symbols.SymbolTests.test_grounding_rollback_retries_without_physical_replay) ... ok
+test_listener_never_queries_speakers_private_state (test_symbols.SymbolTests.test_listener_never_queries_speakers_private_state) ... ok
+test_missing_grounding_source_is_not_fabricated (test_symbols.SymbolTests.test_missing_grounding_source_is_not_fabricated) ... ok
+test_native_demonstration_then_message_only_reference (test_symbols.SymbolTests.test_native_demonstration_then_message_only_reference) ... ok
+test_native_occlusion_blocks_tokens (test_symbols.SymbolTests.test_native_occlusion_blocks_tokens) ... ok
+test_native_speech_crash_resume_delivers_only_once (test_symbols.SymbolTests.test_native_speech_crash_resume_delivers_only_once) ... ok
+test_old_text_speech_is_not_an_invented_symbol (test_symbols.SymbolTests.test_old_text_speech_is_not_an_invented_symbol) ... ok
+test_out_of_hearing_range_does_not_deliver_a_token (test_symbols.SymbolTests.test_out_of_hearing_range_does_not_deliver_a_token) ... ok
+test_same_seed_reproduces_coinage_without_a_shared_store (test_symbols.SymbolTests.test_same_seed_reproduces_coinage_without_a_shared_store) ... ok
+test_signal_without_observable_demonstration_teaches_no_meaning (test_symbols.SymbolTests.test_signal_without_observable_demonstration_teaches_no_meaning) ... ok
+test_stale_token_is_not_new_delivery (test_symbols.SymbolTests.test_stale_token_is_not_new_delivery) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 20.113s
+
+OK

@@ -1,0 +1,16 @@
+{
+  "h5_registered_sources_match": true,
+  "historical_registrations": {
+    "developmental_h1_registration_repaired": true,
+    "developmental_h2_registration": true,
+    "h3_native_registration": true,
+    "h4_registration": true,
+    "living_world_g_registration": true
+  },
+  "pyflakes_returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "wall_s": 1.0632015000001047,
+  "supplementary_continuity_source_sha256": "36e12b25ea22960e2a1fa8ac687bbc1fc4adf1fc3c21061a4d5de0ce452ef5fb",
+  "note": "Supplementary epoch checks added after confirmation freeze; no registered mechanism or scoring source changed."
+}

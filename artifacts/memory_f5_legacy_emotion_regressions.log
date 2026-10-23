@@ -1,0 +1,12 @@
+test_disabled_equivalence_atomic_retry_drift_and_source_save_preservation (test_emotion.EmotionTests.test_disabled_equivalence_atomic_retry_drift_and_source_save_preservation) ... ok
+test_mid_action_fresh_process_resume_and_private_learning_replay (test_emotion.EmotionTests.test_mid_action_fresh_process_resume_and_private_learning_replay) ... ok
+test_native_contention_bounds_emotional_retries (test_emotion.EmotionTests.test_native_contention_bounds_emotional_retries) ... ok
+test_native_need_relief_goal_appraisal_and_distinct_rejections (test_emotion.EmotionTests.test_native_need_relief_goal_appraisal_and_distinct_rejections) ... ok
+test_other_person_never_receives_actors_private_goal (test_emotion.EmotionTests.test_other_person_never_receives_actors_private_goal) ... ok
+test_time_rate_bounds_privacy_and_duplicate_interval (test_emotion.EmotionTests.test_time_rate_bounds_privacy_and_duplicate_interval) ... ok
+test_readonly_existing_scene_private_panel_and_no_mutation (test_viewer.ViewerTests.test_readonly_existing_scene_private_panel_and_no_mutation) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 4.943s
+
+OK

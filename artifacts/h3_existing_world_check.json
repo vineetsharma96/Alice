@@ -1,0 +1,12 @@
+{
+  "existing_save": "data\\interactive-g-session\\world.sqlite",
+  "operation": "read-only inspection; no advancement/reset",
+  "tick": "10765",
+  "simulated_time_s": 5382.5,
+  "state_hash": "5975cb5874a94e9562ddae9f2fc71f6acea3ede171b8bcc62a7d061676f216fa",
+  "replay": {
+    "replay_matches": true,
+    "tick": "10765",
+    "state_hash": "5975cb5874a94e9562ddae9f2fc71f6acea3ede171b8bcc62a7d061676f216fa"
+  }
+}

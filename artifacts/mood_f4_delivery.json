@@ -1,0 +1,110 @@
+{
+  "files": {
+    "artifacts/mood_f4_audit.json": {
+      "sha256": "0ef0e8f6cea756abef93bace326667cc101dc268bf887296b2611214fe373e3f",
+      "bytes": 25492
+    },
+    "artifacts/mood_f4_audit.log": {
+      "sha256": "5931dfbce125b17ae0e5c863d9fba8cce7279dbbbb05980433df4f0e1c0c015c",
+      "bytes": 175
+    },
+    "artifacts/mood_f4_browser-desktop.png": {
+      "sha256": "5958add8058d5a22442db487412e14929801ca16b58cd686ce99ca8d2f6e5f89",
+      "bytes": 181950
+    },
+    "artifacts/mood_f4_browser-mobile.png": {
+      "sha256": "a2095152851d58928f5d24f63e16d88849e7d7c04e1589ba1dd8b28308cc2636",
+      "bytes": 120870
+    },
+    "artifacts/mood_f4_browser.json": {
+      "sha256": "6d8308d87d4b1e9ff6574d4dc9204c9e68cc3bfbffb473fa911eea44ff9cc31e",
+      "bytes": 797
+    },
+    "artifacts/mood_f4_confirmation.json.gz": {
+      "sha256": "195b67584321c3f3f3fde0da85867f79ca2f31f37311beebf4a6f61c698a5e7b",
+      "bytes": 112767
+    },
+    "artifacts/mood_f4_connections.json": {
+      "sha256": "8f4e37e6e8ec933678b31ff3a6e658015a162664be1367113b75fc881ec782cd",
+      "bytes": 69876
+    },
+    "artifacts/mood_f4_connections_final.json": {
+      "sha256": "1459833536b9d370117a2e46997355552def9f6440b237ad5c5045d69cbf64c4",
+      "bytes": 70047
+    },
+    "artifacts/mood_f4_continuity_proof.json": {
+      "sha256": "2386d8ee8ed133c6738691af1e86e092700d016b750c875b8068876c7651d8ce",
+      "bytes": 1716
+    },
+    "artifacts/mood_f4_development_1.json.gz": {
+      "sha256": "17d80c997c69f9e0f05e02cbbc67b557d187d3e57b1064e20b81652a2d890ad3",
+      "bytes": 24958
+    },
+    "artifacts/mood_f4_development_sources.zip": {
+      "sha256": "5cfbbc2ff3d72e372b2840570bb4b60be0dc6042d4e255cce456629fe0d346e2",
+      "bytes": 104528
+    },
+    "artifacts/mood_f4_frozen_sources.zip": {
+      "sha256": "06795c6849f173bba635241c115470cb93411d3797262ad4a941a625a0153bbc",
+      "bytes": 172850
+    },
+    "artifacts/mood_f4_legacy_emotion_regressions.log": {
+      "sha256": "20b420f5ec0436528912d6d80418a9385d21e4c33458fffa5cc4b58034a37e3b",
+      "bytes": 1183
+    },
+    "artifacts/mood_f4_life_1500.json": {
+      "sha256": "6f9002cca11109bebc2a3ac45eafe42089b08e9079e774b34acd72a4076156f7",
+      "bytes": 93913
+    },
+    "artifacts/mood_f4_life_1800.json": {
+      "sha256": "dd80e73632599d0f46e3a0fec54578db75d9ec75f23fe05b46e2aa85a24b839e",
+      "bytes": 78571
+    },
+    "artifacts/mood_f4_life_resume_1800.json": {
+      "sha256": "262921c9f95563f8607ae492f555e4949fed71687813f5978f9fe1063717c578",
+      "bytes": 78570
+    },
+    "artifacts/mood_f4_negative_audit.json": {
+      "sha256": "9e09dd3a15705cf50a5938b88b420e05b2af5fd41012845ec97eb26067f14d4f",
+      "bytes": 270
+    },
+    "artifacts/mood_f4_negative_regression.json": {
+      "sha256": "b0c6e70b58168ac660242622e265061a7f993a4b14b6c9ce5596a1c14cadf2b8",
+      "bytes": 338
+    },
+    "artifacts/mood_f4_phase9_audit.json": {
+      "sha256": "29a2dd0224f069e36e8253757da77523481e6ecb3e36dc9f83488af703522564",
+      "bytes": 338
+    },
+    "artifacts/mood_f4_registration.json": {
+      "sha256": "0eebcc5dd29614af99964af4f6b05504865a2b182ab6a09e03e60cf332c24fe3",
+      "bytes": 5869
+    },
+    "artifacts/mood_f4_regressions.log": {
+      "sha256": "df668f1127e8c847bda5be8fcc21f3342a36f795ccd65641596bacdace4e42d0",
+      "bytes": 771
+    },
+    "artifacts/mood_f4_summary.json": {
+      "sha256": "0f74ba4fad40600a109c5ad385f287ae2c92a93b8564a679b40e8163c6daca7c",
+      "bytes": 8005
+    },
+    "artifacts/mood_f4_weather_regressions.log": {
+      "sha256": "b6da455100ca040601022de711463058e42f6402a1ad0a85e088f735552756fd",
+      "bytes": 4486
+    }
+  },
+  "supplementary_sources": {
+    "scripts/mood_audit.py": "cd0c7d711abf90093bd60b39744790d7ba7057893b83fd5af21329efb48dce51",
+    "scripts/mood_negative_audit.py": "57621168076b13e02f875ea19802fd930d7494857bfeb108651953f96d36fc5a",
+    "scripts/mood_continuity.py": "1f153e967d82870eec5b8b07ec973ad7a286b060f9050e6108ada49347e2033a",
+    "scripts/mood_summary.py": "ccaa12958cb55f1ff35abe7556bc4f930c89cb0c120c8788b1e5a177cea8070e",
+    "scripts/package_mood_evidence.py": "6ca9b2d52021bf852b49017ee918be95f1a002d7067f84b5c7ff3c3ad0ed7772",
+    "docs/MOOD_F4_REPORT.md": "458fdd57e1732bc1b2f5ee5550b28fc5296013674951f7403cc06007713439dc",
+    "docs/MOOD_F4_OPERATIONS.md": "7ce63875cb66e3bbce450920dc010e4aced57fa13b8ea833039c212b8f65730d",
+    "docs/MOOD_F4_DEVELOPMENT_NOTES.md": "a0c22f8eb9c1b1cb12b991397e16c9fece988b11342bef0624941a2d53750bcd",
+    "README.md": "14f1099bb431a98f24910462df316880d9f4bc2bac010dc068ffa86bebef1250",
+    "docs/STATUS.md": "2afde1c14cf741ae63ee81f41a79a6c6cc57765ab0973e0c9ef73a8b5d84bd2a",
+    "HANDOFF.md": "8ef0578b6d3d017302754df4db1bcc06ff1c7972b9bfe9d51e2b5e20b83233ad"
+  },
+  "note": "Actual25 study SQLite saves remain local in ignored data/mood-f4-confirmation; audit inventories their hashes. No source world/reset/release change."
+}

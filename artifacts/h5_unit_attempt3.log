@@ -1,0 +1,105 @@
+test_fresh_process_continues_pending_native_message_once (tests.test_composition.CompositionTests.test_fresh_process_continues_pending_native_message_once) ... ok
+test_heldout_combinations_reuse_learned_parts_without_updates (tests.test_composition.CompositionTests.test_heldout_combinations_reuse_learned_parts_without_updates) ... ERROR
+test_learning_before_and_after_commit_is_exactly_once (tests.test_composition.CompositionTests.test_learning_before_and_after_commit_is_exactly_once) ... ERROR
+test_logical_message_recovery_at_all_commit_boundaries (tests.test_composition.CompositionTests.test_logical_message_recovery_at_all_commit_boundaries) ... ERROR
+test_no_physical_demonstration_means_no_learning (tests.test_composition.CompositionTests.test_no_physical_demonstration_means_no_learning) ... ERROR
+test_parser_refuses_unbounded_duplicate_and_malformed_signals (tests.test_composition.CompositionTests.test_parser_refuses_unbounded_duplicate_and_malformed_signals) ... ERROR
+test_private_access_and_unseen_factor_refusal (tests.test_composition.CompositionTests.test_private_access_and_unseen_factor_refusal) ... ERROR
+test_proof_tampering_and_budget_overflow_fail_closed (tests.test_composition.CompositionTests.test_proof_tampering_and_budget_overflow_fail_closed) ... ERROR
+test_save_archive_and_missing_archive_protection (tests.test_composition.CompositionTests.test_save_archive_and_missing_archive_protection) ... ERROR
+test_unsubmitted_message_at_changed_head_refuses_reexecution (tests.test_composition.CompositionTests.test_unsubmitted_message_at_changed_head_refuses_reexecution) ... ERROR
+
+======================================================================
+ERROR: test_heldout_combinations_reuse_learned_parts_without_updates (tests.test_composition.CompositionTests.test_heldout_combinations_reuse_learned_parts_without_updates)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\tests\test_composition.py", line 30, in setUp
+    storage.save(self.base, 'test', self.path)
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\underworld\storage.py", line 505, in save
+    db.execute("INSERT INTO checkpoints VALUES(?,?,?,?,?,?)",
+sqlite3.IntegrityError: UNIQUE constraint failed: checkpoints.name
+
+======================================================================
+ERROR: test_learning_before_and_after_commit_is_exactly_once (tests.test_composition.CompositionTests.test_learning_before_and_after_commit_is_exactly_once)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\tests\test_composition.py", line 30, in setUp
+    storage.save(self.base, 'test', self.path)
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\underworld\storage.py", line 505, in save
+    db.execute("INSERT INTO checkpoints VALUES(?,?,?,?,?,?)",
+sqlite3.IntegrityError: UNIQUE constraint failed: checkpoints.name
+
+======================================================================
+ERROR: test_logical_message_recovery_at_all_commit_boundaries (tests.test_composition.CompositionTests.test_logical_message_recovery_at_all_commit_boundaries)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\tests\test_composition.py", line 30, in setUp
+    storage.save(self.base, 'test', self.path)
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\underworld\storage.py", line 505, in save
+    db.execute("INSERT INTO checkpoints VALUES(?,?,?,?,?,?)",
+sqlite3.IntegrityError: UNIQUE constraint failed: checkpoints.name
+
+======================================================================
+ERROR: test_no_physical_demonstration_means_no_learning (tests.test_composition.CompositionTests.test_no_physical_demonstration_means_no_learning)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\tests\test_composition.py", line 30, in setUp
+    storage.save(self.base, 'test', self.path)
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\underworld\storage.py", line 505, in save
+    db.execute("INSERT INTO checkpoints VALUES(?,?,?,?,?,?)",
+sqlite3.IntegrityError: UNIQUE constraint failed: checkpoints.name
+
+======================================================================
+ERROR: test_parser_refuses_unbounded_duplicate_and_malformed_signals (tests.test_composition.CompositionTests.test_parser_refuses_unbounded_duplicate_and_malformed_signals)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\tests\test_composition.py", line 30, in setUp
+    storage.save(self.base, 'test', self.path)
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\underworld\storage.py", line 505, in save
+    db.execute("INSERT INTO checkpoints VALUES(?,?,?,?,?,?)",
+sqlite3.IntegrityError: UNIQUE constraint failed: checkpoints.name
+
+======================================================================
+ERROR: test_private_access_and_unseen_factor_refusal (tests.test_composition.CompositionTests.test_private_access_and_unseen_factor_refusal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\tests\test_composition.py", line 30, in setUp
+    storage.save(self.base, 'test', self.path)
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\underworld\storage.py", line 505, in save
+    db.execute("INSERT INTO checkpoints VALUES(?,?,?,?,?,?)",
+sqlite3.IntegrityError: UNIQUE constraint failed: checkpoints.name
+
+======================================================================
+ERROR: test_proof_tampering_and_budget_overflow_fail_closed (tests.test_composition.CompositionTests.test_proof_tampering_and_budget_overflow_fail_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\tests\test_composition.py", line 30, in setUp
+    storage.save(self.base, 'test', self.path)
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\underworld\storage.py", line 505, in save
+    db.execute("INSERT INTO checkpoints VALUES(?,?,?,?,?,?)",
+sqlite3.IntegrityError: UNIQUE constraint failed: checkpoints.name
+
+======================================================================
+ERROR: test_save_archive_and_missing_archive_protection (tests.test_composition.CompositionTests.test_save_archive_and_missing_archive_protection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\tests\test_composition.py", line 30, in setUp
+    storage.save(self.base, 'test', self.path)
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\underworld\storage.py", line 505, in save
+    db.execute("INSERT INTO checkpoints VALUES(?,?,?,?,?,?)",
+sqlite3.IntegrityError: UNIQUE constraint failed: checkpoints.name
+
+======================================================================
+ERROR: test_unsubmitted_message_at_changed_head_refuses_reexecution (tests.test_composition.CompositionTests.test_unsubmitted_message_at_changed_head_refuses_reexecution)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\tests\test_composition.py", line 30, in setUp
+    storage.save(self.base, 'test', self.path)
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\underworld\storage.py", line 505, in save
+    db.execute("INSERT INTO checkpoints VALUES(?,?,?,?,?,?)",
+sqlite3.IntegrityError: UNIQUE constraint failed: checkpoints.name
+
+----------------------------------------------------------------------
+Ran 10 tests in 15.492s
+
+FAILED (errors=9)

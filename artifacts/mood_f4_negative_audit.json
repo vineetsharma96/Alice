@@ -1,0 +1,12 @@
+{
+  "forged_mood": {
+    "rejected": true,
+    "reason": "Emotion replay final mismatch",
+    "head_checksum_resealed": true
+  },
+  "forged_trait": {
+    "rejected": true,
+    "reason": "Emotion replay final mismatch",
+    "head_checksum_resealed": true
+  }
+}

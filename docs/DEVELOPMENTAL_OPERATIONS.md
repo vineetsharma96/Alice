@@ -96,3 +96,49 @@ not unrestricted language, spontaneous teaching or independent goal formation.
 Research native saves/SQLite tables use the source runtime. The existing desktop
 executable remains the G application, with its original capabilities and pins.
 No developmental UI panel was added; H5 observer explanations remain deferred.
+
+## Native H3 community verification
+
+The incoming dictionary-only H3 experiment is retained but does not establish
+native behavior. The replacement uses actual movement, speech, deposits and
+inspection receipts. Read [the new protocol](DEVELOPMENTAL_H3_NATIVE_PROTOCOL.md).
+H1/H2 and G default configurations are unchanged; only a new H3 cohort has four
+people in a 32 by 32 metre world. There is no animal expansion in this study.
+
+```powershell
+$env:PATH='C:\mingw64\bin;'+$env:PATH
+$env:UNDERWORLD_BUILD=(Resolve-Path build/living-d).Path
+.venv/Scripts/python.exe scripts/community_study.py --split development --directory data/my-h3-development --output artifacts/my-h3-development.json
+.venv/Scripts/python.exe scripts/community_study.py --register artifacts/my-h3-registration.json
+.venv/Scripts/python.exe scripts/community_study.py --split confirmation --registration artifacts/my-h3-registration.json --directory data/my-h3-confirmation --output artifacts/my-h3-confirmation.json
+.venv/Scripts/python.exe scripts/community_audit.py --study artifacts/my-h3-confirmation.json --registration artifacts/my-h3-registration.json --output artifacts/my-h3-audit.json
+```
+
+All output worlds must be new paths. Each confirmation arm resumes a saved
+training life in a new process. Branches are counterfactuals, not consecutive
+episodes, and native needs/resources keep advancing. The independent audit
+requires those local database files; checked-in compressed traces alone cannot
+prove a live database exists. Missing databases fail explicitly.
+
+For a separate manual research cohort:
+
+```powershell
+.venv/Scripts/python.exe scripts/learner.py community-init --db data/my-community/world.sqlite --seed 41
+.venv/Scripts/python.exe scripts/learner.py recruit --db data/my-community/world.sqlite --agent agent-3
+.venv/Scripts/python.exe scripts/learner.py community-status --db data/my-community/world.sqlite
+```
+
+`community-demonstrate` and `community-reference` accept the same explicit
+speaker, listener, target and alternatives as the H2 commands. They require
+actual visibility, hearing range and carried supplies; they grant none of these.
+Teaching and tie-triggered repair are authored scaffolding. Unknown signals
+remain uncertain, and a repair request is an authored flag, not invented grammar.
+After an interruption, `community-reconcile --agent ID` reconciles a pending
+native request and then its bounded memory. Repeat for the listener if interrupted
+between grounding and budget consolidation. Do not reinitialize the cohort.
+
+`npm start -- --seconds 0` now opens the existing native application's viewer.
+It prefers the existing Windows executable, or uses the source virtual environment
+and `build/living-d`. `PORT` forwards the native viewer port; the existing native
+launcher options still apply. This entry point contains no separate JavaScript
+simulation, cloned learner state, invented bodies or synthetic evidence panel.

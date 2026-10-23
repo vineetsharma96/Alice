@@ -1,4 +1,14 @@
-# H3 registration details: small community, newcomer acquisition, interference and repair
+# Incoming H3 proposal - native gate not established by its original experiment
+
+Review note: the d54a007 study that accompanied this proposal executes in-memory
+dictionary operations, without the native interactions described below. Its
+claimed gate is not accepted. The original source and protocol bytes are retained
+in `artifacts/incoming_d54a007_sources.zip` and Git. Use
+[the native replacement protocol](DEVELOPMENTAL_H3_NATIVE_PROTOCOL.md) for the
+current implementation, thresholds and limitations. In particular, no six-animal
+expansion is part of the replacement experiment.
+
+## Original proposal (retained for comparison)
 
 Conditional on the verified H0, H1 and H2 gates. Development seed 41; held-out
 confirmation seeds 8101, 8111, 8123, 8147, 8161. World dimensions are 32.0 x 32.0 m

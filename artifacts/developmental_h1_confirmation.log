@@ -1,0 +1,55 @@
+{"seed": 8101, "arm": "learning", "completion": 1.0, "wall_s": 11.15522799998871, "simulated_s": 27.0}
+{"seed": 8101, "arm": "frozen", "completion": 0.3333333333333333, "wall_s": 9.267658500000834, "simulated_s": 27.0}
+{"seed": 8101, "arm": "memory", "completion": 0.3333333333333333, "wall_s": 9.446216600001208, "simulated_s": 27.0}
+{"seed": 8101, "arm": "authored", "completion": 1.0, "wall_s": 9.075228200003039, "simulated_s": 27.0}
+{"seed": 8111, "arm": "learning", "completion": 1.0, "wall_s": 11.718416700008675, "simulated_s": 27.0}
+{"seed": 8111, "arm": "frozen", "completion": 0.3333333333333333, "wall_s": 10.423420999999507, "simulated_s": 27.0}
+{"seed": 8111, "arm": "memory", "completion": 0.3333333333333333, "wall_s": 10.150177600007737, "simulated_s": 27.0}
+{"seed": 8111, "arm": "authored", "completion": 1.0, "wall_s": 10.174116100009996, "simulated_s": 27.0}
+{"seed": 8123, "arm": "learning", "completion": 1.0, "wall_s": 11.386695499997586, "simulated_s": 27.0}
+{"seed": 8123, "arm": "frozen", "completion": 0.3333333333333333, "wall_s": 8.821978899999522, "simulated_s": 27.0}
+{"seed": 8123, "arm": "memory", "completion": 0.3333333333333333, "wall_s": 9.039665399992373, "simulated_s": 27.0}
+{"seed": 8123, "arm": "authored", "completion": 1.0, "wall_s": 10.08689379999123, "simulated_s": 27.0}
+{"seed": 8147, "arm": "learning", "completion": 1.0, "wall_s": 11.550821800003177, "simulated_s": 27.0}
+{"seed": 8147, "arm": "frozen", "completion": 0.4444444444444444, "wall_s": 8.957316100000753, "simulated_s": 27.0}
+{"seed": 8147, "arm": "memory", "completion": 0.4444444444444444, "wall_s": 11.368976600002497, "simulated_s": 27.0}
+{"seed": 8147, "arm": "authored", "completion": 1.0, "wall_s": 12.473512600001413, "simulated_s": 27.0}
+{"seed": 8161, "arm": "learning", "completion": 1.0, "wall_s": 14.459103400004096, "simulated_s": 27.0}
+{"seed": 8161, "arm": "frozen", "completion": 0.3333333333333333, "wall_s": 12.25747009999759, "simulated_s": 27.0}
+{"seed": 8161, "arm": "memory", "completion": 0.3333333333333333, "wall_s": 8.779092000011588, "simulated_s": 27.0}
+{"seed": 8161, "arm": "authored", "completion": 1.0, "wall_s": 12.674720999988494, "simulated_s": 27.0}
+{
+  "rates": {
+    "learning": 1.0,
+    "frozen": 0.3555555555555555,
+    "memory": 0.3555555555555555,
+    "authored": 1.0
+  },
+  "improved_seeds": {
+    "frozen": 5,
+    "memory": 5
+  },
+  "invariants": true,
+  "complete": true,
+  "same_state_ablation_changed_choices": 50,
+  "h1_gate": true,
+  "wilson_completion_intervals": {
+    "learning": [
+      0.9213457380593594,
+      1.0000000000000002
+    ],
+    "frozen": [
+      0.23218891356904048,
+      0.5016445398804781
+    ],
+    "memory": [
+      0.23218891356904048,
+      0.5016445398804781
+    ],
+    "authored": [
+      0.9213457380593594,
+      1.0000000000000002
+    ]
+  },
+  "interpretation": "Narrow native source-choice learning. Authored curriculum and sensory categories; no general intelligence claim."
+}

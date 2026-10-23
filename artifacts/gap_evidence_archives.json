@@ -1,0 +1,488 @@
+{
+  "archives": [
+    {
+      "raw": "artifacts/gap_confirmation.json",
+      "archive": "artifacts/gap_confirmation.json.gz",
+      "raw_bytes": 27841736,
+      "archive_bytes": 1119619,
+      "raw_sha256": "2e03f8a2fe15c904e586001e416e69d7b2c1981a92e7384e6c666942efd63a35",
+      "archive_sha256": "08fcde067f06db42abf89efa2244874cbb8c29d20a486db21dc437a02fd8512d"
+    },
+    {
+      "raw": "artifacts/gap_development.json",
+      "archive": "artifacts/gap_development.json.gz",
+      "raw_bytes": 4070269,
+      "archive_bytes": 154309,
+      "raw_sha256": "573ce91cc63822983876aa44808d63422dd2b40ca6be9956e1d0c226882fa536",
+      "archive_sha256": "3c13bb3a282f3fafb8ac6927be0b35687712907b002347620d6c9dbbcccb77f1"
+    },
+    {
+      "raw": "artifacts/gap_development2.json",
+      "archive": "artifacts/gap_development2.json.gz",
+      "raw_bytes": 4070267,
+      "archive_bytes": 154315,
+      "raw_sha256": "e6b13739a10b2f4dc9cf6977ed0d33cb24ca294ea1e180d8f9dcb7d1a4feba5d",
+      "archive_sha256": "2f4ed3ab3e03fbcd2984f2df2d2dd975d35067879b22f5e4f5288d2a526fb450"
+    },
+    {
+      "raw": "artifacts/gap_development3.json",
+      "archive": "artifacts/gap_development3.json.gz",
+      "raw_bytes": 5350153,
+      "archive_bytes": 210772,
+      "raw_sha256": "f07573fdd201fff470596c6fa26f1640f97c34b61a9b2a2346fe25677821552d",
+      "archive_sha256": "86adff889dae4af8ef15f1b374f22a305bf36dd750bafebcaa7f296e0a554d46"
+    },
+    {
+      "raw": "artifacts/gap_development4.json",
+      "archive": "artifacts/gap_development4.json.gz",
+      "raw_bytes": 5351237,
+      "archive_bytes": 211332,
+      "raw_sha256": "404bb264d060ee9252c0aa39506fec906b31ba45ed482c97ad8c3c8abc686f9d",
+      "archive_sha256": "911fd9530af9c52adbcf6bfd10bca8aeff09841bfae63f2fcf0deaa9824c3000"
+    },
+    {
+      "raw": "artifacts/gap_teaching_development.json",
+      "archive": "artifacts/gap_teaching_development.json.gz",
+      "raw_bytes": 194197,
+      "archive_bytes": 13426,
+      "raw_sha256": "92bae505f36b8b074c24d8984800faa5a51b3651298b2c0668e1395cc8ce0a4b",
+      "archive_sha256": "b3583b1d5527f13b2e76fdc07bfb13ad28e44f6ca2e777ee52da0ba81eb8f559"
+    },
+    {
+      "raw": "artifacts/gap_continuity_dev_init.json",
+      "archive": "artifacts/gap_continuity_dev_init.json.gz",
+      "raw_bytes": 25402,
+      "archive_bytes": 3726,
+      "raw_sha256": "e2b96f8d1b7d67d5b2537d897b5e86d0f9428270cb7c53e3eeac53ff3a8198a3",
+      "archive_sha256": "8f32f5e4c10aaceba6e4d9bf74d0d03305ad8bc2cbf51363b7871da2d396c9c6"
+    },
+    {
+      "raw": "artifacts/gap_continuity_dev_300.json",
+      "archive": "artifacts/gap_continuity_dev_300.json.gz",
+      "raw_bytes": 61410,
+      "archive_bytes": 5656,
+      "raw_sha256": "906ebfc9158c6a7c4c2df3e1a38d41b18394c7d2b2df1ad60002b4f315d494ba",
+      "archive_sha256": "83b522454be44b296484b2e7cd3273687e33a07f01504ff1ebb6c0f90d855284"
+    },
+    {
+      "raw": "artifacts/gap_continuity_dev_900.json",
+      "archive": "artifacts/gap_continuity_dev_900.json.gz",
+      "raw_bytes": 83682,
+      "archive_bytes": 8355,
+      "raw_sha256": "34ee283cd15c4e20cb87a4b1dbf1cba745e1b01f39245a9cbbb0e53a6abba6f7",
+      "archive_sha256": "ae42e27a94b90098054ded5e130824fdfa66b44551e09acfbd40b34c1db5d31c"
+    },
+    {
+      "raw": "artifacts/gap_continuity_dev_1800.json",
+      "archive": "artifacts/gap_continuity_dev_1800.json.gz",
+      "raw_bytes": 120152,
+      "archive_bytes": 9826,
+      "raw_sha256": "3d7d683c8e1357f3f72592667f49a97a6519706927d2d3fc555d73fd11157683",
+      "archive_sha256": "03d56cf560f20aa6642934d221a99df525577127a72c80e39814ae25ecf8d5aa"
+    },
+    {
+      "raw": "artifacts/gap_continuity_control.json",
+      "archive": "artifacts/gap_continuity_control.json.gz",
+      "raw_bytes": 249709,
+      "archive_bytes": 17323,
+      "raw_sha256": "4eca4217cea029a5af54e929cc47581b1fd13ac472a7f0d88b2df2bfbfb04bfe",
+      "archive_sha256": "ea6fbe09597fd514e8fc2825a7c1ad3f99accb37450fd18c0447909f72c1d5f4"
+    }
+  ],
+  "negative_checks": {
+    "false_goal": {
+      "refused": true,
+      "reason": "reported gap food goal not achieved"
+    },
+    "false_receipt": {
+      "refused": true,
+      "reason": "gap trace/native receipt mismatch"
+    },
+    "missing_world": {
+      "refused": true,
+      "reason": "unable to open database file"
+    },
+    "changed_registration": {
+      "refused": true,
+      "reason": "new gap source registration mismatch"
+    }
+  },
+  "native_worlds": [
+    {
+      "path": "data/gap-confirmation-20261021/11003-learned.sqlite",
+      "bytes": 2330624,
+      "sha256": "df6ceda0b230a95b33729e173cf1a7cd39ad3f645a9d865d1b71481c2b2e8243"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11003-muted.sqlite",
+      "bytes": 2142208,
+      "sha256": "f79d70b3eee95bdf03fcf697d69654db87c0bd92675df558e371af8df30a820f"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11003-online-adaptive.sqlite",
+      "bytes": 471040,
+      "sha256": "998078ffe172fe4dfc9c06cc055ad46e051759a3a3b28e39a3e4c8d0edbedb37"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11003-online-authored.sqlite",
+      "bytes": 458752,
+      "sha256": "a9d65be3bc4201678a730071abd3722f8d9a8fc0b91cc1eb7ad72416f15ebb9d"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11003-online-frozen.sqlite",
+      "bytes": 458752,
+      "sha256": "b15254534f9b4d2a0e9e966cff7df39bc1d59ef5dbfcae67e3cba5e0d3bdd0fe"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11003-online-legacy.sqlite",
+      "bytes": 454656,
+      "sha256": "c23194411cf0d1ab639e6821b3ef52a2b4b27ed8c6a0077b29099cf8c4a9281e"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11003-online-memory.sqlite",
+      "bytes": 458752,
+      "sha256": "89c901d3a1f5400e86825c33aa2c22b62896975c4f1eab314ba77b14eb925442"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11003-scrambled.sqlite",
+      "bytes": 2379776,
+      "sha256": "9e66e28dae123ef39eda2b07183cd78ea89e7ff58235e1de25ef9c05f2d608e5"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11003-setup.sqlite",
+      "bytes": 2129920,
+      "sha256": "a0c9fbae2aa60127f5acee7615d329ce7ddb655c4c3cb17aee7617506b3f3ce4"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11003-teaching-base.sqlite",
+      "bytes": 339968,
+      "sha256": "2c1af1679a837498294b7c84ac40d2f97f7b980a0e93a2c52215497d9728b797"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11003-teaching-enabled.sqlite",
+      "bytes": 421888,
+      "sha256": "8786ffff9ba41b5a75789081e2dbb06081424e398898a9c6f1ebf30ac6e091da"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11003-teaching-muted.sqlite",
+      "bytes": 380928,
+      "sha256": "9d39c9d207932830eb526eb712c17352167afa89d9c4f26812d94e4054835e16"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11003-training.sqlite",
+      "bytes": 1785856,
+      "sha256": "76fcea7f5f404c4a457146083d4bc4eeca4511c5b9f4bfc981e504a9dd5f9357"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11003-whole.sqlite",
+      "bytes": 2199552,
+      "sha256": "a22e2ac95917526134b8f6fb32db2fe55db5d76464e280185fff15c43c1980dd"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11027-learned.sqlite",
+      "bytes": 2293760,
+      "sha256": "b848877b5dd1ae6a36d289c51342f62a1c8e131f65660a73e2c045b4ac6f9a72"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11027-muted.sqlite",
+      "bytes": 2080768,
+      "sha256": "f8e2de75f82d94abe9a4c823136b88b5d86cae8c45272d6986ba3f8dca6c3416"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11027-online-adaptive.sqlite",
+      "bytes": 471040,
+      "sha256": "5a2a54c433b51017c501b44d8d141a699ad27c9c84c4b2fc342b280cd0f4efdf"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11027-online-authored.sqlite",
+      "bytes": 458752,
+      "sha256": "19b9ea6ead6c7b82a4a3c39a51ca2efd61299f7700f2acd56602f4d12616c449"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11027-online-frozen.sqlite",
+      "bytes": 458752,
+      "sha256": "7beba0bb0eb1bf2d8642ce34a73587ae142f8bae1b4465761c7ea06ea6f90a00"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11027-online-legacy.sqlite",
+      "bytes": 454656,
+      "sha256": "477ebc5c4e272f0c926497d2b79a1559eb54f5b1e78d909ea7e543165c514160"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11027-online-memory.sqlite",
+      "bytes": 458752,
+      "sha256": "db55f460fb0ddae730b9355a177a251d06ee42184d874c6d22517e403e4eab4d"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11027-scrambled.sqlite",
+      "bytes": 2338816,
+      "sha256": "5f903d9cced054d952864b1bbcf597e8291c81caadaa1ed2ee3106307284438a"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11027-setup.sqlite",
+      "bytes": 2080768,
+      "sha256": "e6237ed3a32a3a848efc1a5b68aba61e2a2451fb6362b04484cffae9b74c709f"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11027-teaching-base.sqlite",
+      "bytes": 286720,
+      "sha256": "6205c4723b8385e670a498e991263730270da5bc45eb692e9fff5d53cac6aa60"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11027-teaching-enabled.sqlite",
+      "bytes": 376832,
+      "sha256": "5feec5c8314b734f3ee23a806f0df39e3d2fd2f4414e63829a881e7623bd993c"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11027-teaching-muted.sqlite",
+      "bytes": 319488,
+      "sha256": "e87457e251322fbe31109975540f770d4e589f5ff4c7294b9758476a87019057"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11027-training.sqlite",
+      "bytes": 1744896,
+      "sha256": "8fd14aeeb1055269b26421bd2f398a1c5499433343e289a666c2ba74cf460c61"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11027-whole.sqlite",
+      "bytes": 2138112,
+      "sha256": "35214276a15826d4a6213cf4c69215771e78ca61f325df9f6f6fffa9b520cb33"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11047-learned.sqlite",
+      "bytes": 2232320,
+      "sha256": "c2c9b4b8bfb6cb8661fbbebbcbdf0d6c09be44d3a8d3d2b43ad84ae03e84bd96"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11047-muted.sqlite",
+      "bytes": 2023424,
+      "sha256": "b2b35acca00071549d3bd8bd1447b2d38dcca706cc009067fbcb5d9442e421b4"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11047-online-adaptive.sqlite",
+      "bytes": 471040,
+      "sha256": "ed9f1be77810a4aa37cf648811c3d9fad7436d1b293b861d9465e9e147e5b10a"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11047-online-authored.sqlite",
+      "bytes": 458752,
+      "sha256": "9280570e80627754a25f3e7a4d5f20a06025db383d93c676a95f55a769018e2f"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11047-online-frozen.sqlite",
+      "bytes": 458752,
+      "sha256": "128cf5f4e4d1ab0b3f2c304e8efd5ff1e37b026aef813000a2b52c97ef08a3d5"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11047-online-legacy.sqlite",
+      "bytes": 454656,
+      "sha256": "8b204b8b6c6ed70acdd5e343297b44831b5e127a4128c9dfdcfac0fa0011e4de"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11047-online-memory.sqlite",
+      "bytes": 458752,
+      "sha256": "6cd30672694855068d32530a7f1d20ae8568fbe8f6372f8fe3ad25f24ff6d36b"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11047-scrambled.sqlite",
+      "bytes": 2277376,
+      "sha256": "8e33c15d39f9c59be2bd7608cfa3f1fc42146b3d1592175c5ffe64915cc4ef05"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11047-setup.sqlite",
+      "bytes": 2015232,
+      "sha256": "a427f60ba330f727b2600ddf2bac0b194ef2c5b3903b3922f3c0daeffddeffb6"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11047-teaching-base.sqlite",
+      "bytes": 241664,
+      "sha256": "ef6e30a873d31b0b9dc23bc5711dfffb091173e3d21aceaf601c88e3897946ec"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11047-teaching-enabled.sqlite",
+      "bytes": 331776,
+      "sha256": "094a091d5bf43258a4a7f5135896b5f6f2a2cd27cac1943f2aeb4383668f97c0"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11047-teaching-muted.sqlite",
+      "bytes": 278528,
+      "sha256": "09d93a58187a3973eb2b9da6ac3aea7a8dd1969ae12e0c942f0ed26411e8df0f"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11047-training.sqlite",
+      "bytes": 1679360,
+      "sha256": "fe869a179819f30378649b3e7d404e67625a1dc43566b9737332cf15b7676af7"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11047-whole.sqlite",
+      "bytes": 2076672,
+      "sha256": "e2cd3c0d08f563fa65ec8649b760d51e2402d8eb26887e5301d210df1046ae3f"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11057-learned.sqlite",
+      "bytes": 2318336,
+      "sha256": "dfb5ab6502ccf727584d01820c2dcd73e0d33dc1f0e8b6ea5fe8641aa58840a6"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11057-muted.sqlite",
+      "bytes": 2129920,
+      "sha256": "b6ed802f6bc0975e6933b36c04f8804e41975f832ccc13524a73236eab419854"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11057-online-adaptive.sqlite",
+      "bytes": 471040,
+      "sha256": "bee4df2441454c0ad7e12c614e6311f5a5f9f77f1eec946a071916311c712783"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11057-online-authored.sqlite",
+      "bytes": 458752,
+      "sha256": "925fa670758d4f377057911db2cc9e169222aafe375b5bdd4b15c1432061daab"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11057-online-frozen.sqlite",
+      "bytes": 458752,
+      "sha256": "4504e322efa459c668818bfcc006c25c08327375e3ece98e3aeef9c3f0595e2b"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11057-online-legacy.sqlite",
+      "bytes": 454656,
+      "sha256": "fd585f7904e2e8e1a4f19af8d60c4073475f269ec873ed27f38968996e589de3"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11057-online-memory.sqlite",
+      "bytes": 458752,
+      "sha256": "9bc86ae69783bac80d0394a9a29374fd3797f91e61cf1761d8d5c5a926e0c3b8"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11057-scrambled.sqlite",
+      "bytes": 2367488,
+      "sha256": "1f8cf8e40b6cb86f5e167bf63304529da0de92340d4d468d9112ca2eabd3ac25"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11057-setup.sqlite",
+      "bytes": 2117632,
+      "sha256": "eaefb598d953f7d75131be1c354d589935cf11e2e64b040503ea265f8ce7a5c6"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11057-teaching-base.sqlite",
+      "bytes": 294912,
+      "sha256": "21031b5e41bcc5de1a2b752b4584ea3628454861f9aaa578189f6e114cae5a66"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11057-teaching-enabled.sqlite",
+      "bytes": 393216,
+      "sha256": "f8b6873c775d75d76790132c66cf83da62875c9f50195ae1dfd559747062048c"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11057-teaching-muted.sqlite",
+      "bytes": 331776,
+      "sha256": "d6c7a7c6b3bf82a3d740eb4fef0303b701b7690297f54e8ada2f786df57b71b5"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11057-training.sqlite",
+      "bytes": 1773568,
+      "sha256": "196310e8e075bfcbaa7531831d417591f517fceca0b3712d0bee58601ca8c5ba"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11057-whole.sqlite",
+      "bytes": 2187264,
+      "sha256": "d56e240d9f15398a372d602f9878329a961ca973f3069050413f2115d03f7ccf"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11071-learned.sqlite",
+      "bytes": 2236416,
+      "sha256": "e63f74c1bebe7437be1d84fb5d8dea03cef50d3caf632dff69dc1295b600bd2e"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11071-muted.sqlite",
+      "bytes": 2031616,
+      "sha256": "3b30fe73bc2a82bc0f1ed12fd5b8c4d2f86ad6ba9895aeaf9953a3913ffa0071"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11071-online-adaptive.sqlite",
+      "bytes": 471040,
+      "sha256": "88b9edb094dbe479593991909e85b8f828f71f4108a850664a593c69346ad213"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11071-online-authored.sqlite",
+      "bytes": 458752,
+      "sha256": "20cf28eddbbe5659d3ba25b955a8c75152b97c386ee5cab6eb8ae0e187bd7973"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11071-online-frozen.sqlite",
+      "bytes": 458752,
+      "sha256": "a1b0dfa9f7549f8fabc9d42c213dae490e9ee9aeeecddf583004f360bc38b8af"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11071-online-legacy.sqlite",
+      "bytes": 454656,
+      "sha256": "0299b377c08c6ac7e3fee41ed9b98038f3b2286e1fa77f7a3fd077d040673b83"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11071-online-memory.sqlite",
+      "bytes": 458752,
+      "sha256": "6aa45746bed920237e12890740d3c232c25a699870bf10a50e037a23330eae35"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11071-scrambled.sqlite",
+      "bytes": 2281472,
+      "sha256": "af94344ddea7330299c36e9c64a1c3f644b626c0fa4255a1989aa58189fe8512"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11071-setup.sqlite",
+      "bytes": 2023424,
+      "sha256": "1c20e826b5df20c6a6f933f4fe0c00ad3150b27ef1d691783f40866a29cce080"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11071-teaching-base.sqlite",
+      "bytes": 241664,
+      "sha256": "6e647fcba9def20e24254b58ddf2810428ed37a94e2eccae8035632607ce7066"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11071-teaching-enabled.sqlite",
+      "bytes": 331776,
+      "sha256": "2efc4541af4896dcc19893cec0444b6a494c0fac49add4ad259b9c64518616bb"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11071-teaching-muted.sqlite",
+      "bytes": 278528,
+      "sha256": "4fbd8b771a71d342c1606a66a21226b96af9a00102ee1ece0fbb95c0151ac5dd"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11071-training.sqlite",
+      "bytes": 1683456,
+      "sha256": "f43b10675843b97e60195d4d3e6b0a2daf95cf6d973a7a8be9ac942c17bac57e"
+    },
+    {
+      "path": "data/gap-confirmation-20261021/11071-whole.sqlite",
+      "bytes": 2084864,
+      "sha256": "d7ca18c536578c2d353ec37eb4c096472ea8fe573be8a16a576e3e452de2f647"
+    },
+    {
+      "path": "data/gap-continuity-dev-20261021.sqlite",
+      "bytes": 12480512,
+      "sha256": "8e71b238f4c00c623fc7890acd4348fd63cdb1436c692d05d8ca428eb48b1a39"
+    },
+    {
+      "path": "data/gap-continuity-control-20261021/adaptive.sqlite",
+      "bytes": 14610432,
+      "sha256": "7cc8b71047883d1c849c9fa887a39ae0d3ca2aa74199c848153f5b5292211d2e"
+    },
+    {
+      "path": "data/gap-continuity-control-20261021/common.sqlite",
+      "bytes": 12713984,
+      "sha256": "026f5f3d50cdf9be86b69e934b04d888adc440dc2396870460ad7df75ddce525"
+    },
+    {
+      "path": "data/gap-continuity-control-20261021/legacy.sqlite",
+      "bytes": 18018304,
+      "sha256": "8e2f7f189684fdb9507e3c7a3b7162e18676cffe335adc8a21077194e6c130e7"
+    }
+  ],
+  "supplemental_source_hashes": {
+    "scripts/package_adaptive_evidence.py": "e46e588990605eb019b9853f1c23899ff5718e7cefabf1bc454fc2a16e69d81c",
+    "scripts/adaptive_control.py": "e26beed5714db0ce34d2be8a02ed820db88b930befc5de922d99d77db0cba987",
+    "scripts/adaptive_continuity_audit.py": "6859bb4becffa1e73cb581d0c15793194b0710f7714857a9e3930f15cd11edf1"
+  },
+  "scope": "Exact compressed traces are portable. Actual SQLite saves remain local ignored data; hashes are inventory, not exported saves."
+}

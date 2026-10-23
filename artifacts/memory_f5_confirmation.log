@@ -1,0 +1,6 @@
+{"seed": 19201, "gates": {"relevant": true, "unrelated": true, "frozen": true, "correction": true, "native": true, "memory": true, "resume": true, "replay": true, "physical_equal": true, "source_preserved": true}, "wall_s": 519.1900300000052}
+{"seed": 19207, "gates": {"relevant": true, "unrelated": true, "frozen": true, "correction": true, "native": true, "memory": true, "resume": true, "replay": true, "physical_equal": true, "source_preserved": true}, "wall_s": 528.1068977000032}
+{"seed": 19213, "gates": {"relevant": true, "unrelated": true, "frozen": true, "correction": true, "native": true, "memory": true, "resume": true, "replay": true, "physical_equal": true, "source_preserved": true}, "wall_s": 549.7734681000002}
+{"seed": 19219, "gates": {"relevant": true, "unrelated": true, "frozen": true, "correction": true, "native": true, "memory": true, "resume": true, "replay": true, "physical_equal": true, "source_preserved": true}, "wall_s": 558.8073521000042}
+{"seed": 19231, "gates": {"relevant": true, "unrelated": true, "frozen": true, "correction": true, "native": true, "memory": true, "resume": true, "replay": true, "physical_equal": true, "source_preserved": true}, "wall_s": 361.07049329999427}
+{"passed": true, "wall_s": 1430.661679799996}

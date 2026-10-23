@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.20)
+project(AliceWeather LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+find_package(Python 3.11 REQUIRED COMPONENTS Interpreter Development.Module)
+execute_process(COMMAND "${Python_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/integrate.py" "${CMAKE_CURRENT_BINARY_DIR}/generated" COMMAND_ERROR_IS_FATAL ANY)
+execute_process(COMMAND "${Python_EXECUTABLE}" -m pybind11 --cmakedir OUTPUT_VARIABLE pybind11_DIR OUTPUT_STRIP_TRAILING_WHITESPACE COMMAND_ERROR_IS_FATAL ANY)
+find_package(pybind11 3.0.4 EXACT CONFIG REQUIRED)
+file(READ "${CMAKE_CURRENT_BINARY_DIR}/generated/source_manifest.json" SOURCE_MANIFEST)
+string(SHA256 WEATHER_BUILD "${SOURCE_MANIFEST}${CMAKE_CXX_COMPILER_ID}${CMAKE_CXX_COMPILER_VERSION}${CMAKE_BUILD_TYPE}${CMAKE_CXX_FLAGS}${CMAKE_SYSTEM_NAME}${CMAKE_SYSTEM_PROCESSOR}")
+set(G "${CMAKE_CURRENT_BINARY_DIR}/generated")
+pybind11_add_module(_underworld_weather NO_EXTRAS
+    "${G}/bindings.cpp" "${G}/world.cpp" "${G}/bodies.cpp" "${G}/crafting.cpp"
+    "${G}/teaching.cpp" "${G}/thermal.cpp" "${G}/thermal_world.cpp"
+    "${G}/culture.cpp" "${G}/supervision.cpp" "${G}/ecology.cpp" weather.cpp)
+target_include_directories(_underworld_weather PRIVATE "${G}" "${CMAKE_CURRENT_SOURCE_DIR}")
+target_compile_definitions(_underworld_weather PRIVATE UW_BUILD_ID="${WEATHER_BUILD}")
+if(MSVC)
+    target_compile_options(_underworld_weather PRIVATE /W4 /permissive-)
+else()
+    target_compile_options(_underworld_weather PRIVATE -Wall -Wextra -Wpedantic)
+endif()

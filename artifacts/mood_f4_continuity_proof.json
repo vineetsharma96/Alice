@@ -1,0 +1,71 @@
+{
+  "original_source_unchanged": true,
+  "original_source_hash": "2006ca58fd5d37bf572a13101b3f2fdeedc47a6edbf60de92975043c6ff1ce75",
+  "original_native_time_s": 1200.0,
+  "inherited_cognitive_fields_match": true,
+  "inherited_scheduler": 550,
+  "final_scheduler": 1080,
+  "progress_wall_s": 250.78521790000013,
+  "final_time_s": 1800.0,
+  "health": {
+    "agent-1": 1.0,
+    "agent-2": 1.0,
+    "agent-3": 1.0,
+    "agent-4": 1.0
+  },
+  "food_ingested_ug": 3100000000,
+  "water_ingested_ug": 5150000000,
+  "initial_mass": {
+    "food": 8000000000,
+    "fuel_X": 0,
+    "inert_material": 32000000000,
+    "oxygen": 0,
+    "product_P": 0,
+    "stone": 4000000000,
+    "tree": 18000000000,
+    "water": 16000000000
+  },
+  "totals": {
+    "fiber": "100000000",
+    "food": "8000000000",
+    "fuel_X": "0",
+    "inert_material": "32000000000",
+    "oxygen": "0",
+    "product_P": "0",
+    "stone": "4000000000",
+    "tree": "17000000000",
+    "water": "16000000000",
+    "wood": "900000000"
+  },
+  "boundaries": {
+    "food": 0,
+    "fuel_X": 0,
+    "inert_material": 0,
+    "oxygen": 0,
+    "product_P": 0,
+    "stone": 0,
+    "tree": 0,
+    "water": 0
+  },
+  "external": {
+    "food": 0,
+    "fuel_X": 0,
+    "inert_material": 0,
+    "oxygen": 0,
+    "product_P": 0,
+    "stone": 0,
+    "water": 0
+  },
+  "forcing_history": {},
+  "private_bytes": 31830,
+  "fallback": {
+    "agent-1": 0,
+    "agent-2": 0,
+    "agent-3": 0,
+    "agent-4": 0
+  },
+  "additional_authored_mood_choices": 0,
+  "final_hash": "cc49b0371949a1bd35c81d33bcdf03061f3652c6a9304cd9f41b2803dda16eaa",
+  "fresh_process_resume_matches": true,
+  "resume_wall_s": 109.4973175999985
+}

@@ -1,0 +1,31 @@
+{
+  "h5_confirmation.json": {
+    "raw_bytes": 13287837,
+    "raw_sha256": "f458b5bfc1c7ebf0b3f1bf4655a7b2fa60632a9eeb0573291ad2478938c01db3",
+    "archive": "h5_confirmation.json.gz",
+    "archive_bytes": 536814,
+    "archive_sha256": "c786022b522c7425469c134725a0f91a373d6ee0f5de8d7b13d770359a6bd129"
+  },
+  "h5_development.json": {
+    "raw_bytes": 2717094,
+    "raw_sha256": "b6a774da6e296dfdec4e77ca1b42b1c88c63a311ecb9744fed0f6938d0157a5d",
+    "archive": "h5_development.json.gz",
+    "archive_bytes": 110031,
+    "archive_sha256": "85ac47688052eae955028b19ecc04414d3e931dd3b5484e8170d1f2874df9334"
+  },
+  "h5_development2.json": {
+    "raw_bytes": 2717100,
+    "raw_sha256": "06898e67d0142fd961d4a80a9faf259ef6fb0aaaa83239e4581b31c11da7e9cd",
+    "archive": "h5_development2.json.gz",
+    "archive_bytes": 110043,
+    "archive_sha256": "0096e3a94c17456d11f0f4b7ebb17c9d520c2a115a4675d0f3e777ecad0f77ea"
+  },
+  "development1_source_snapshot_matches": {
+    "underworld/composition.py": true,
+    "scripts/composition_study.py": true,
+    "tests/test_composition.py": true,
+    "docs/DEVELOPMENTAL_H5_PROTOCOL.md": true
+  },
+  "note": "Original raw traces remain locally unchanged; exact gzip copies are tracked. Each development source ZIP matches every source hash in its original trace. Frozen confirmation has its separate 13-file registration.",
+  "development2_source_snapshot_matches": true
+}

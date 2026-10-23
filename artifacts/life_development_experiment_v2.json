@@ -1,0 +1,12 @@
+{
+  "protocol": "docs/LIFE_INTEGRATION_PROTOCOL.md",
+  "development": true,
+  "runs": [
+    {
+      "seed": 61,
+      "error": "ValueError('GUIDED_WEATHER_ONLY')",
+      "gates": {},
+      "failed": true
+    }
+  ]
+}

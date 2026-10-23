@@ -1,0 +1,127 @@
+{
+  "worlds": {
+    "data\\h5-confirmation-20261021\\10103-first.sqlite": {
+      "bytes": 1179648,
+      "sha256": "25522d910fc4177130b4773a19419b73038ac48ab3551f698e26c41534a5f750"
+    },
+    "data\\h5-confirmation-20261021\\10103-learned.sqlite": {
+      "bytes": 1134592,
+      "sha256": "93f293a05268f88d468bbb5d787444cd77e1dc6978131db4ea3b69c4eab9b9b6"
+    },
+    "data\\h5-confirmation-20261021\\10103-muted.sqlite": {
+      "bytes": 1130496,
+      "sha256": "632853df42cd6e8f19bbb2409257f9223c4b1b3b90a10544a4f296fb7e385158"
+    },
+    "data\\h5-confirmation-20261021\\10103-second.sqlite": {
+      "bytes": 1196032,
+      "sha256": "f73650686c3ab8630d756622236506638a3e41c44b78fc2b28a9ba2705039c8d"
+    },
+    "data\\h5-confirmation-20261021\\10103-training.sqlite": {
+      "bytes": 897024,
+      "sha256": "8e9f9e173c7dcf93ba03869057ee78c7f01950d1e022a281d27ab389137c6f37"
+    },
+    "data\\h5-confirmation-20261021\\10103-whole.sqlite": {
+      "bytes": 1146880,
+      "sha256": "39c55b10f234882ca2c102e46f44403b4c69219805fca3e1b78112be9a50d597"
+    },
+    "data\\h5-confirmation-20261021\\10111-first.sqlite": {
+      "bytes": 1073152,
+      "sha256": "e119e20febc10d18161a44f0404f5df028d07026c0032be130a7b3e1e6782273"
+    },
+    "data\\h5-confirmation-20261021\\10111-learned.sqlite": {
+      "bytes": 1024000,
+      "sha256": "0d6baa4edca54e79e7f25bab72a6ab193d1e0280205f7ff9c0fef53e81d0fb1a"
+    },
+    "data\\h5-confirmation-20261021\\10111-muted.sqlite": {
+      "bytes": 1032192,
+      "sha256": "ce181e2872f5c7248fcaf8c898bba5b158b0023303153fce1abeeda27118cc10"
+    },
+    "data\\h5-confirmation-20261021\\10111-second.sqlite": {
+      "bytes": 1089536,
+      "sha256": "8e1a1b9c4b3440a6f7409d99b76292200909a0f55461edd83402f31d69235539"
+    },
+    "data\\h5-confirmation-20261021\\10111-training.sqlite": {
+      "bytes": 802816,
+      "sha256": "c2abc15867b342db0c726823e4766747d9edcd435c2e1e4307c238a21e2c3afd"
+    },
+    "data\\h5-confirmation-20261021\\10111-whole.sqlite": {
+      "bytes": 1044480,
+      "sha256": "51a4061da50d05b0f5a92645fa029543e6983379a379ff64230c57accf5049c5"
+    },
+    "data\\h5-confirmation-20261021\\10133-first.sqlite": {
+      "bytes": 1069056,
+      "sha256": "cf29691e8c944cefdd205decb428c079b53cc9daedc87d644cc94d36b1d5729a"
+    },
+    "data\\h5-confirmation-20261021\\10133-learned.sqlite": {
+      "bytes": 1019904,
+      "sha256": "6b24bbdd173349dfa995bf65c3d2403d5f6c909321096b0cc57f27407538b3cd"
+    },
+    "data\\h5-confirmation-20261021\\10133-muted.sqlite": {
+      "bytes": 1028096,
+      "sha256": "c87d1864815fb52ac9793ab75ed0443d0b7d412e4b99c84da79b145d2b9c6d28"
+    },
+    "data\\h5-confirmation-20261021\\10133-second.sqlite": {
+      "bytes": 1085440,
+      "sha256": "59efc89dd92545dbd75bae5744b5e7b2f26ca3ec3d5473242c082942b1994d8f"
+    },
+    "data\\h5-confirmation-20261021\\10133-training.sqlite": {
+      "bytes": 811008,
+      "sha256": "8fa310c18dbd5b54094a7a13dbfdb2bf2816af12927f084aee4859aa6e851a2a"
+    },
+    "data\\h5-confirmation-20261021\\10133-whole.sqlite": {
+      "bytes": 1036288,
+      "sha256": "e342ef884fe9d5decf5d2081569789d4ae470667fd67860f17b28ce6ba382483"
+    },
+    "data\\h5-confirmation-20261021\\10141-first.sqlite": {
+      "bytes": 1191936,
+      "sha256": "051eeffd1e8599ca44c9a18dfe36ff54e1dcbc202b98a9e191ce919c36cd54b9"
+    },
+    "data\\h5-confirmation-20261021\\10141-learned.sqlite": {
+      "bytes": 1146880,
+      "sha256": "e141c177aaf2b5d188df97599ea1e063f7b490822cb3cd6cfeb797b367c72b19"
+    },
+    "data\\h5-confirmation-20261021\\10141-muted.sqlite": {
+      "bytes": 1150976,
+      "sha256": "f2d7aa352bbae720e636c1a07b2d1df5d894b4ff86702ca8f557e53ebd683daa"
+    },
+    "data\\h5-confirmation-20261021\\10141-second.sqlite": {
+      "bytes": 1208320,
+      "sha256": "da92ca926369e900dce3070112e156ee8159952d7d1146a7970c3721c2e604d6"
+    },
+    "data\\h5-confirmation-20261021\\10141-training.sqlite": {
+      "bytes": 909312,
+      "sha256": "b16864a8b0161eff84842fa4a7affcbddf07a3f9efafbb2765e20c3abd18d262"
+    },
+    "data\\h5-confirmation-20261021\\10141-whole.sqlite": {
+      "bytes": 1163264,
+      "sha256": "00052c6bc56783de624ce93fcbf9549114459bdf6373487066975255035749c4"
+    },
+    "data\\h5-confirmation-20261021\\10151-first.sqlite": {
+      "bytes": 1134592,
+      "sha256": "287e0bd0cb7671e4dda7b5c52d1856835a50e16dd3241e9be197e5db6482d581"
+    },
+    "data\\h5-confirmation-20261021\\10151-learned.sqlite": {
+      "bytes": 1081344,
+      "sha256": "26eb9bb2ea7c2b4f008604052fe512c0019dfc5dbedf9dfe46876ed11d8118a8"
+    },
+    "data\\h5-confirmation-20261021\\10151-muted.sqlite": {
+      "bytes": 1089536,
+      "sha256": "9c055e48f5ef4f4af471abcf0df0bed2174d6c2cce9aa724739e047616c339d8"
+    },
+    "data\\h5-confirmation-20261021\\10151-second.sqlite": {
+      "bytes": 1150976,
+      "sha256": "4ef69af2d9af1c270e468a8c878771d3aa4bd1ebdaa2e0cccb464f01e0d731ca"
+    },
+    "data\\h5-confirmation-20261021\\10151-training.sqlite": {
+      "bytes": 856064,
+      "sha256": "09a4d1c9467210d089731fc125c4d077cb4d0e99ec55f4efe100908407d16700"
+    },
+    "data\\h5-confirmation-20261021\\10151-whole.sqlite": {
+      "bytes": 1101824,
+      "sha256": "88dadd926f0759fb88212a69cec9291e76f18b40d87e8d931619fd4c2d97490c"
+    }
+  },
+  "count": 30,
+  "compressed_trace_reaudited": true,
+  "note": "Actual local databases required for audit; hash inventory is not a substitute for those files."
+}

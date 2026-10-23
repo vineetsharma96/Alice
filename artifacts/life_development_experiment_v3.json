@@ -1,0 +1,12 @@
+{
+  "protocol": "docs/LIFE_INTEGRATION_PROTOCOL.md",
+  "development": true,
+  "runs": [
+    {
+      "seed": 61,
+      "error": "ValueError(\"'data\\\\\\\\life-dev-experiment-v3\\\\\\\\61-connected.sqlite' is not in the subpath of 'C:\\\\\\\\Users\\\\\\\\abc\\\\\\\\Documents\\\\\\\\ChatGPT\\\\\\\\UnderWorld'\")",
+      "gates": {},
+      "failed": true
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "browser": "headless Edge",
+  "desktop": [
+    1440,
+    900
+  ],
+  "mobile": [
+    390,
+    844
+  ],
+  "page_errors": [],
+  "read_only": true,
+  "selection_refresh": true,
+  "actual_signals_and_sources": true,
+  "uncertainty_visible": true,
+  "no_horizontal_overflow": true,
+  "safe_text": true,
+  "missing_evidence_clears_view": true
+}

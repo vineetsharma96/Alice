@@ -1,0 +1,2 @@
+{"mode": "adaptive", "goals": 28, "stop": "horizon_reached", "simulated_s": 2114.0}
+{"mode": "legacy", "goals": 28, "stop": "horizon_reached", "simulated_s": 2100.0}

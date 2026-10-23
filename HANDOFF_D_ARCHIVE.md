@@ -1,4 +1,4 @@
-# Underworld Lab handoff ï¿½ Milestone D
+# Underworld Lab handoff — Milestone D
 
 D's bounded native animal/care/food-production loop is implemented. Read [D report](docs/LIVING_WORLD_D_REPORT.md) and [contract/protocol](docs/PHASE_D_ECOLOGY.md) before continuing. The historical C handoff is [archived separately](HANDOFF_C_ARCHIVE.md).
 

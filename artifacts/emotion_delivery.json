@@ -1,0 +1,141 @@
+{
+  "files": {
+    "artifacts/emotion_audit.json": {
+      "sha256": "a53ad22bdd81f3139bc8866bc3176b3ca6b7e47d1b4157a82b9419022dc28e07",
+      "bytes": 75817
+    },
+    "artifacts/emotion_audit.log": {
+      "sha256": "26cfbf4081b3a13bac21177745aa59cb28a880bb81dd9842dd50570cd4ab00da",
+      "bytes": 305
+    },
+    "artifacts/emotion_browser_development-desktop.png": {
+      "sha256": "cd0038f38cdb4a0527aff7f64f99bd209d725eaa649544f49a1b9036ce403350",
+      "bytes": 539741
+    },
+    "artifacts/emotion_browser_development-mobile.png": {
+      "sha256": "6039eec2942fbce1f06e48d591131ffe84f56ec3c0b544e5c1d9889ff12fbacd",
+      "bytes": 332324
+    },
+    "artifacts/emotion_browser_development.json": {
+      "sha256": "ba6805787ee7ee6a2d2a3ff2a181397cc592e1984aded9e38c0bf0831d889f69",
+      "bytes": 754
+    },
+    "artifacts/emotion_browser_final-desktop.png": {
+      "sha256": "663028be8d10d19e9c2e0a8efd0abd7ed892af3ba5ca14486cf2b8d31f3c8b0f",
+      "bytes": 539982
+    },
+    "artifacts/emotion_browser_final-mobile.png": {
+      "sha256": "990200a4fa2ae413d079bc16d68c3b5f82e8786bcdd664e01547c14958a1c5a9",
+      "bytes": 332386
+    },
+    "artifacts/emotion_browser_final.json": {
+      "sha256": "bdee7a0a198511547b04a3193bf1c1e3f01d074025dbceeb2a357df7ab7a8bc4",
+      "bytes": 754
+    },
+    "artifacts/emotion_confirmation.json.gz": {
+      "sha256": "8c8acc6c15a2723513410dff9cc664fc4eaefd35283f2a7ae1fce5080cff71e3",
+      "bytes": 133274
+    },
+    "artifacts/emotion_connections.json": {
+      "sha256": "a22e1a467d7fb71c5c0febd890fbe357722d3aea19673788c92ca93e40c685bc",
+      "bytes": 67408
+    },
+    "artifacts/emotion_connections_final.json": {
+      "sha256": "f32fe9dd1b1e462c97030683ea741dad45c87b44bdd8d38ca43b396f482b56f4",
+      "bytes": 67932
+    },
+    "artifacts/emotion_continuity_proof.json": {
+      "sha256": "b3fdb709f9ab1ec5a4f62a71bb545ff4fbef964141b852aaa021886fd2000732",
+      "bytes": 1379
+    },
+    "artifacts/emotion_development_2.json.gz": {
+      "sha256": "b83f9e80c4b25b434d454e9241394572d7331a8d88018ad2671065e78eb6eeab",
+      "bytes": 29564
+    },
+    "artifacts/emotion_development_3.json.gz": {
+      "sha256": "73379bbb9934fdfbd82ea24614bbcad7625094175e1bf1e3c608dd1236f15296",
+      "bytes": 29498
+    },
+    "artifacts/emotion_development_sources_v1.zip": {
+      "sha256": "5fca179a2e7b66d223b6eeab0c60f76e0c3e60b5ce9e3401c078cf6d2eb94cd2",
+      "bytes": 86320
+    },
+    "artifacts/emotion_development_sources_v2.zip": {
+      "sha256": "91b6ee54f7c92465c5a218cf26c3aea838da30279c81452d290660779c8c7211",
+      "bytes": 82622
+    },
+    "artifacts/emotion_frozen_sources.zip": {
+      "sha256": "8f42fe13fc193e625f3a0dbf9b870870b7356e802f81d83c5d5497c2d06630dc",
+      "bytes": 140117
+    },
+    "artifacts/emotion_historical_pins.json": {
+      "sha256": "246b62ec3938bf4f3054df517b951e38baadbbf879e9334f964f507fe08234ef",
+      "bytes": 289
+    },
+    "artifacts/emotion_life_1200.json": {
+      "sha256": "3bac804201aff430cd01147d1ba05b3adf51ea58f6272cfd8d6a608f176755ec",
+      "bytes": 56998
+    },
+    "artifacts/emotion_life_300.json": {
+      "sha256": "d6c604511d771ec7228b8fd2e8a1f62c137a5771cf4ac6f7fcf74df9eb0751b7",
+      "bytes": 54225
+    },
+    "artifacts/emotion_life_600.json": {
+      "sha256": "115fd9196e721fdb7ac0cafc96e325b850ad02cd4e3134addcd13eeb3163f322",
+      "bytes": 55819
+    },
+    "artifacts/emotion_life_resume_600.json": {
+      "sha256": "55dc2724a727b1bdfc7a93040a9a8756f877ceb6f53efe300e8a81031e784377",
+      "bytes": 55818
+    },
+    "artifacts/emotion_negative_audit.json": {
+      "sha256": "7a9d1242715262db8c20931f76b4eca955f22c2ec6be118e2e41fb3e97d21646",
+      "bytes": 255
+    },
+    "artifacts/emotion_original_regressions.json": {
+      "sha256": "0d9dc741c7c85ba6002ce84f660830fdf5cb9b3bd8d25c1e01e95377681e5498",
+      "bytes": 52050
+    },
+    "artifacts/emotion_original_regressions.log": {
+      "sha256": "97cd1330c23c6e0e47415b5e6626319836c3c7abe01d118d8d00890b6ee9ccae",
+      "bytes": 50883
+    },
+    "artifacts/emotion_phase9_audit.json": {
+      "sha256": "29a2dd0224f069e36e8253757da77523481e6ecb3e36dc9f83488af703522564",
+      "bytes": 338
+    },
+    "artifacts/emotion_registration.json": {
+      "sha256": "5d9c5af9509093bdd6993bd66e2dfcf7f3534499b597042d3f659f7bb130fba5",
+      "bytes": 4785
+    },
+    "artifacts/emotion_regressions.log": {
+      "sha256": "dcd91679647d89fc3d71088d186e0fd2be6f7b32cde14c830734706573afd29c",
+      "bytes": 1183
+    },
+    "artifacts/emotion_summary.json": {
+      "sha256": "0269cfdce2cda3b8f742ec057191cf6a22ae8a2264c3f55cddd78771c09ae678",
+      "bytes": 31347
+    },
+    "artifacts/emotion_upstream_inventory.json": {
+      "sha256": "ea98481e8a975db0ba5dc8262a93be2c9f869b5995192a1bd62e46d35f66e4c2",
+      "bytes": 130470
+    },
+    "artifacts/emotion_weather_regressions.log": {
+      "sha256": "50eb290fd7a3b6d50d7b15370918400457117ce0ea67d8d495e0ae49b3eaa5e9",
+      "bytes": 4486
+    }
+  },
+  "supplementary_sources": {
+    "scripts/emotion_audit.py": "c33ae230eab613118c337a66a91e1f4d0a45140fda17704d98ad4b2af997b995",
+    "scripts/emotion_continuity.py": "d422cd396cd7b25f494e44a86f15dcd763cc04f3fa77903c1a2204e6f648f83c",
+    "scripts/emotion_summary.py": "f7952d53969f963e025feb5485886bd8b81d6e3316cdf9e9f83ea6364bb11c06",
+    "scripts/package_emotion_evidence.py": "fd78fe6e14eee62c12c01d62f8d75a41a2366340763ad988434bf932b60471aa",
+    "docs/EMOTION_REPORT.md": "8687dbab5b0f357d6fbe6137179f7d800e1290ae5ddbda1dcf385bdd30205a9c",
+    "docs/EMOTION_OPERATIONS.md": "8e1f21de6a5a439d7ec2e663908e8a4d5e082b27f5823d6f888e561bd4db7446",
+    "docs/EMOTION_DEVELOPMENT_NOTES.md": "fd621ce0601d0f6fa7db39c98e0cf13812e9c1c7584d685e39644a1bcf3fa3b5",
+    "HANDOFF.md": "c683a3a280b88c929e20096642a372ed6e138d48372348193c7519174cd9c790",
+    "README.md": "187ffb00aa12b4785991feb66b8b9d8eb77a2933e04c320b5f7f6a136567180d",
+    "docs/STATUS.md": "2db58269e3a56998e0cc643b6ebc3e11fdbb38c5f6bf548ddde4e482462ef2a2"
+  },
+  "note": "Native SQLite saves remain local in ignored data/emotion-confirmation; replay audit records their exact hashes. No save reset, migration or release."
+}

@@ -1,0 +1,7 @@
+# Opt-in fictional accelerated climate. 600 simulated seconds per season.
+# The 86400-second solar day, body rates and existing clocks are NOT rescaled.
+enabled = true
+year_s = 2400.0
+transition_s = 20.0
+change_s = 90.0
+temperature_bias_c = 0.0

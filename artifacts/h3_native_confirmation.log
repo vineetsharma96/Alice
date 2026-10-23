@@ -1,0 +1,62 @@
+{"seed": 8101, "arm": "untrained_newcomer", "rate": 0.4166666666666667, "wall_s": 13.662281399999983}
+{"seed": 8101, "arm": "newcomer_learned", "rate": 1.0, "wall_s": 28.18813639999985}
+{"seed": 8101, "arm": "post_interference_retained", "rate": 1.0, "wall_s": 35.83480869999994}
+{"seed": 8101, "arm": "ambiguous_unrepaired", "rate": 0.25, "wall_s": 18.72166930000003}
+{"seed": 8101, "arm": "ambiguous_repaired", "rate": 1.0, "wall_s": 51.51176209999994}
+{"seed": 8111, "arm": "untrained_newcomer", "rate": 0.25, "wall_s": 14.12687179999989}
+{"seed": 8111, "arm": "newcomer_learned", "rate": 1.0, "wall_s": 30.468828699999904}
+{"seed": 8111, "arm": "post_interference_retained", "rate": 1.0, "wall_s": 23.97953110000003}
+{"seed": 8111, "arm": "ambiguous_unrepaired", "rate": 0.4166666666666667, "wall_s": 20.967955399999937}
+{"seed": 8111, "arm": "ambiguous_repaired", "rate": 1.0, "wall_s": 27.736175700000103}
+{"seed": 8123, "arm": "untrained_newcomer", "rate": 0.3333333333333333, "wall_s": 14.908500300000014}
+{"seed": 8123, "arm": "newcomer_learned", "rate": 1.0, "wall_s": 32.11157819999994}
+{"seed": 8123, "arm": "post_interference_retained", "rate": 1.0, "wall_s": 30.720035099999905}
+{"seed": 8123, "arm": "ambiguous_unrepaired", "rate": 0.25, "wall_s": 22.852877900000067}
+{"seed": 8123, "arm": "ambiguous_repaired", "rate": 1.0, "wall_s": 26.924013299999842}
+{"seed": 8147, "arm": "untrained_newcomer", "rate": 0.3333333333333333, "wall_s": 12.538467100000162}
+{"seed": 8147, "arm": "newcomer_learned", "rate": 1.0, "wall_s": 26.41920110000001}
+{"seed": 8147, "arm": "post_interference_retained", "rate": 1.0, "wall_s": 24.024676699999873}
+{"seed": 8147, "arm": "ambiguous_unrepaired", "rate": 0.16666666666666666, "wall_s": 17.14831190000018}
+{"seed": 8147, "arm": "ambiguous_repaired", "rate": 1.0, "wall_s": 20.38447670000005}
+{"seed": 8161, "arm": "untrained_newcomer", "rate": 0.25, "wall_s": 14.090326599999798}
+{"seed": 8161, "arm": "newcomer_learned", "rate": 1.0, "wall_s": 25.93040700000006}
+{"seed": 8161, "arm": "post_interference_retained", "rate": 1.0, "wall_s": 28.300457300000062}
+{"seed": 8161, "arm": "ambiguous_unrepaired", "rate": 0.3333333333333333, "wall_s": 17.12808619999987}
+{"seed": 8161, "arm": "ambiguous_repaired", "rate": 1.0, "wall_s": 18.360186399999975}
+{
+  "rates": {
+    "untrained_newcomer": 0.31666666666666665,
+    "newcomer_learned": 1.0,
+    "post_interference_retained": 1.0,
+    "ambiguous_unrepaired": 0.2833333333333333,
+    "ambiguous_repaired": 1.0
+  },
+  "newcomer_improved_seeds": 5,
+  "retention": true,
+  "conventions_preserved": true,
+  "invariants": true,
+  "h3_gate": true,
+  "interpretation": "Native scaffolded community reference only; authored teaching, budgets and tie repair.",
+  "wilson_intervals": {
+    "untrained_newcomer": [
+      0.21305705841174333,
+      0.4423400494301654
+    ],
+    "newcomer_learned": [
+      0.9398260695220669,
+      0.9999999999999999
+    ],
+    "post_interference_retained": [
+      0.9398260695220669,
+      0.9999999999999999
+    ],
+    "ambiguous_unrepaired": [
+      0.1850667860430859,
+      0.40767525049735165
+    ],
+    "ambiguous_repaired": [
+      0.9398260695220669,
+      0.9999999999999999
+    ]
+  }
+}

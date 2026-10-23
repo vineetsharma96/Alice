@@ -1,0 +1,369 @@
+{
+  "verified": true,
+  "online_gate": true,
+  "location_gate": true,
+  "online_totals": {
+    "adaptive": 30,
+    "legacy": 0,
+    "frozen": 30,
+    "memory": 30,
+    "authored": 30
+  },
+  "far_attempts": {
+    "adaptive": 0,
+    "legacy": 0,
+    "frozen": 30,
+    "memory": 30,
+    "authored": 0
+  },
+  "mean_prequential_brier": {
+    "adaptive": 0.1394512774238842,
+    "legacy": 0.25308641975308643,
+    "frozen": 0.25,
+    "memory": 0.25,
+    "authored": 0.0
+  },
+  "online_native_rejections": {
+    "adaptive": [
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH"
+    ],
+    "legacy": [
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH"
+    ],
+    "frozen": [
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH"
+    ],
+    "memory": [
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH",
+      "OUT_OF_REACH"
+    ],
+    "authored": []
+  },
+  "cooperation_totals": {
+    "learned": 5,
+    "muted": 0,
+    "scrambled": 0,
+    "whole": 0
+  },
+  "teaching_updates": {
+    "enabled": 10,
+    "muted": 0
+  },
+  "teaching_gate": true,
+  "native_scored_cooperation_requests": 135,
+  "per_seed": [
+    {
+      "seed": 11003,
+      "cooperation": {
+        "learned": true,
+        "muted": false,
+        "scrambled": false,
+        "whole": false
+      },
+      "wall_s": 90.06937229999858
+    },
+    {
+      "seed": 11027,
+      "cooperation": {
+        "learned": true,
+        "muted": false,
+        "scrambled": false,
+        "whole": false
+      },
+      "wall_s": 105.71044699999948
+    },
+    {
+      "seed": 11047,
+      "cooperation": {
+        "learned": true,
+        "muted": false,
+        "scrambled": false,
+        "whole": false
+      },
+      "wall_s": 120.68735000000015
+    },
+    {
+      "seed": 11057,
+      "cooperation": {
+        "learned": true,
+        "muted": false,
+        "scrambled": false,
+        "whole": false
+      },
+      "wall_s": 148.53716340000028
+    },
+    {
+      "seed": 11071,
+      "cooperation": {
+        "learned": true,
+        "muted": false,
+        "scrambled": false,
+        "whole": false
+      },
+      "wall_s": 108.3223876000011
+    }
+  ],
+  "durations": [
+    {
+      "seed": 11003,
+      "mode": "learned",
+      "start_sim_s": 280.0,
+      "end_sim_s": 305.0,
+      "wall_s": 8.52111800000057
+    },
+    {
+      "seed": 11003,
+      "mode": "muted",
+      "start_sim_s": 280.0,
+      "end_sim_s": 311.0,
+      "wall_s": 1.9313395999997738
+    },
+    {
+      "seed": 11003,
+      "mode": "scrambled",
+      "start_sim_s": 280.0,
+      "end_sim_s": 311.0,
+      "wall_s": 7.796912900001189
+    },
+    {
+      "seed": 11003,
+      "mode": "whole",
+      "start_sim_s": 280.0,
+      "end_sim_s": 312.0,
+      "wall_s": 2.3571197999990545
+    },
+    {
+      "seed": 11027,
+      "mode": "learned",
+      "start_sim_s": 257.0,
+      "end_sim_s": 282.0,
+      "wall_s": 14.090682100000777
+    },
+    {
+      "seed": 11027,
+      "mode": "muted",
+      "start_sim_s": 257.0,
+      "end_sim_s": 288.0,
+      "wall_s": 2.744505800001207
+    },
+    {
+      "seed": 11027,
+      "mode": "scrambled",
+      "start_sim_s": 257.0,
+      "end_sim_s": 288.0,
+      "wall_s": 12.886109800001577
+    },
+    {
+      "seed": 11027,
+      "mode": "whole",
+      "start_sim_s": 257.0,
+      "end_sim_s": 289.0,
+      "wall_s": 2.5020963000006304
+    },
+    {
+      "seed": 11047,
+      "mode": "learned",
+      "start_sim_s": 248.0,
+      "end_sim_s": 273.0,
+      "wall_s": 10.901996399999916
+    },
+    {
+      "seed": 11047,
+      "mode": "muted",
+      "start_sim_s": 248.0,
+      "end_sim_s": 279.0,
+      "wall_s": 2.418943799999397
+    },
+    {
+      "seed": 11047,
+      "mode": "scrambled",
+      "start_sim_s": 248.0,
+      "end_sim_s": 279.0,
+      "wall_s": 12.211048400000436
+    },
+    {
+      "seed": 11047,
+      "mode": "whole",
+      "start_sim_s": 248.0,
+      "end_sim_s": 280.0,
+      "wall_s": 4.500619200000074
+    },
+    {
+      "seed": 11057,
+      "mode": "learned",
+      "start_sim_s": 279.0,
+      "end_sim_s": 304.0,
+      "wall_s": 11.831664199999068
+    },
+    {
+      "seed": 11057,
+      "mode": "muted",
+      "start_sim_s": 279.0,
+      "end_sim_s": 310.0,
+      "wall_s": 1.8530325000010635
+    },
+    {
+      "seed": 11057,
+      "mode": "scrambled",
+      "start_sim_s": 279.0,
+      "end_sim_s": 310.0,
+      "wall_s": 9.282049100000222
+    },
+    {
+      "seed": 11057,
+      "mode": "whole",
+      "start_sim_s": 279.0,
+      "end_sim_s": 311.0,
+      "wall_s": 2.3892328000001726
+    },
+    {
+      "seed": 11071,
+      "mode": "learned",
+      "start_sim_s": 253.0,
+      "end_sim_s": 278.0,
+      "wall_s": 10.948900100000174
+    },
+    {
+      "seed": 11071,
+      "mode": "muted",
+      "start_sim_s": 253.0,
+      "end_sim_s": 284.0,
+      "wall_s": 1.8292351000000053
+    },
+    {
+      "seed": 11071,
+      "mode": "scrambled",
+      "start_sim_s": 253.0,
+      "end_sim_s": 284.0,
+      "wall_s": 11.462626700000328
+    },
+    {
+      "seed": 11071,
+      "mode": "whole",
+      "start_sim_s": 253.0,
+      "end_sim_s": 285.0,
+      "wall_s": 2.285153699998773
+    }
+  ],
+  "old_source_registrations_match": {
+    "living_world_g_registration": true,
+    "developmental_h1_registration_repaired": true,
+    "developmental_h2_registration": true,
+    "h3_native_registration": true,
+    "h4_registration": true,
+    "h5_registration": true
+  },
+  "wall_s": 573.3382946999991,
+  "model_calls": 0,
+  "scope": "authored feature/geometry/motor/need/reporting priors; narrow transfer, not learned grammar or semantic calibration"
+}

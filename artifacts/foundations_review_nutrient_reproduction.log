@@ -1,0 +1,24 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_ FoundationReviewTests.test_exhausted_soil_cannot_supply_unlimited_plant_nutrients _
+
+self = <tests.test_foundations_review.FoundationReviewTests testMethod=test_exhausted_soil_cannot_supply_unlimited_plant_nutrients>
+
+    def test_exhausted_soil_cannot_supply_unlimited_plant_nutrients(self):
+        manifest=world.generate(61,world.preset_config(width=4,height=4))
+        for cell in manifest['cells']:
+            for horizon in cell['horizons']:
+                horizon['nutrients_available']={k:0 for k in ('N','P','K')}
+        manifest['manifest_hash']=world.manifest_hash(manifest)
+        state=plants.initialize(manifest,initial_plants=2)
+        before={p['plant_id']:p['biomass_kg'] for p in state['plants']}
+        result=plants.plant_step(state,days=1)
+        for p in result['plants']:
+>           if p['plant_id'] in before:self.assertEqual(p['biomass_kg'],before[p['plant_id']])
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           AssertionError: 0.45256459 != 0.43973959
+
+tests\test_foundations_review.py:71: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_foundations_review.py::FoundationReviewTests::test_exhausted_soil_cannot_supply_unlimited_plant_nutrients
+1 failed, 7 deselected in 0.70s

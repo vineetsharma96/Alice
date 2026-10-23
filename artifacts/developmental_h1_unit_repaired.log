@@ -1,0 +1,45 @@
+test_archival_refuses_unreconciled_learner_intent (test_developmental.DevelopmentalTests.test_archival_refuses_unreconciled_learner_intent) ... ok
+test_archive_preserves_recoverable_experience_and_missing_archive_refuses (test_developmental.DevelopmentalTests.test_archive_preserves_recoverable_experience_and_missing_archive_refuses) ... ERROR
+test_crash_after_physical_commit_reconciles_once (test_developmental.DevelopmentalTests.test_crash_after_physical_commit_reconciles_once) ... ok
+test_crash_before_update_commit_rolls_back_learning_only (test_developmental.DevelopmentalTests.test_crash_before_update_commit_rolls_back_learning_only) ... ok
+test_experiences_survive_beyond_recent_episode_lookup (test_developmental.DevelopmentalTests.test_experiences_survive_beyond_recent_episode_lookup) ... ok
+test_fresh_process_backup_retains_private_state (test_developmental.DevelopmentalTests.test_fresh_process_backup_retains_private_state) ... ok
+test_frozen_evaluation_does_not_update_tables (test_developmental.DevelopmentalTests.test_frozen_evaluation_does_not_update_tables) ... ok
+test_inflight_resume_never_resubmits_native_request (test_developmental.DevelopmentalTests.test_inflight_resume_never_resubmits_native_request) ... ok
+test_initial_manifest_and_private_empty_tables (test_developmental.DevelopmentalTests.test_initial_manifest_and_private_empty_tables) ... ok
+test_interrupted_archive_rejects_same_native_head_with_changed_learning_state (test_developmental.DevelopmentalTests.test_interrupted_archive_rejects_same_native_head_with_changed_learning_state) ... ERROR
+test_missing_evidence_becomes_uncertain (test_developmental.DevelopmentalTests.test_missing_evidence_becomes_uncertain) ... ok
+test_native_experience_changes_reusable_prediction_and_choice (test_developmental.DevelopmentalTests.test_native_experience_changes_reusable_prediction_and_choice) ... ok
+test_native_rejections_remain_distinct (test_developmental.DevelopmentalTests.test_native_rejections_remain_distinct) ... ok
+test_orphan_archive_is_not_used_as_native_proof (test_developmental.DevelopmentalTests.test_orphan_archive_is_not_used_as_native_proof) ... ok
+
+======================================================================
+ERROR: test_archive_preserves_recoverable_experience_and_missing_archive_refuses (test_developmental.DevelopmentalTests.test_archive_preserves_recoverable_experience_and_missing_archive_refuses)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\tests\test_developmental.py", line 121, in test_archive_preserves_recoverable_experience_and_missing_archive_refuses
+    dev.archive(self.path)
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\underworld\developmental.py", line 216, in archive
+    return runtime.rotate(path, limits, fault=verify_snapshot)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\underworld\runtime.py", line 243, in rotate
+    recovery.commit()
+sqlite3.OperationalError: database is locked
+
+======================================================================
+ERROR: test_interrupted_archive_rejects_same_native_head_with_changed_learning_state (test_developmental.DevelopmentalTests.test_interrupted_archive_rejects_same_native_head_with_changed_learning_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\tests\test_developmental.py", line 161, in test_interrupted_archive_rejects_same_native_head_with_changed_learning_state
+    dev.archive(self.path, fault=fault)
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\underworld\developmental.py", line 216, in archive
+    return runtime.rotate(path, limits, fault=verify_snapshot)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\underworld\runtime.py", line 243, in rotate
+    recovery.commit()
+sqlite3.OperationalError: database is locked
+
+----------------------------------------------------------------------
+Ran 14 tests in 38.724s
+
+FAILED (errors=2)

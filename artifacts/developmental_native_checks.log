@@ -1,0 +1,13 @@
+Test project C:/Users/abc/Documents/ChatGPT/UnderWorld/build/living-d
+    Start 1: native_world
+1/4 Test #1: native_world .....................   Passed    0.12 sec
+    Start 2: native_thermal
+2/4 Test #2: native_thermal ...................   Passed    0.04 sec
+    Start 3: core_scene
+3/4 Test #3: core_scene .......................   Passed    0.04 sec
+    Start 4: core_reject_population
+4/4 Test #4: core_reject_population ...........   Passed    0.04 sec
+
+100% tests passed, 0 tests failed out of 4
+
+Total Test time (real) =   0.26 sec

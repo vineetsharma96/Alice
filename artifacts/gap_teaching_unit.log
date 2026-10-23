@@ -1,0 +1,8 @@
+test_native_teaching_interruption_does_not_duplicate_deposit (tests.test_context_teaching.ContextTeachingTests.test_native_teaching_interruption_does_not_duplicate_deposit) ... ok
+test_no_inventory_does_not_fabricate_a_demonstration (tests.test_context_teaching.ContextTeachingTests.test_no_inventory_does_not_fabricate_a_demonstration) ... ok
+test_teaching_self_selects_local_information_and_stops_after_disclosures (tests.test_context_teaching.ContextTeachingTests.test_teaching_self_selects_local_information_and_stops_after_disclosures) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 8.787s
+
+OK

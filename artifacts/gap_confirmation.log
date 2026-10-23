@@ -1,0 +1,26 @@
+{"wall_s": 8.52111800000057}
+{"wall_s": 1.9313395999997738}
+{"wall_s": 7.796912900001189}
+{"wall_s": 2.3571197999990545}
+{"seed": 11003, "online": {"adaptive": 6, "legacy": 0, "frozen": 6, "memory": 6, "authored": 6}, "cooperation": {"learned": true, "muted": false, "scrambled": false, "whole": false}, "wall_s": 90.06937229999858}
+{"wall_s": 14.090682100000777}
+{"wall_s": 2.744505800001207}
+{"wall_s": 12.886109800001577}
+{"wall_s": 2.5020963000006304}
+{"seed": 11027, "online": {"adaptive": 6, "legacy": 0, "frozen": 6, "memory": 6, "authored": 6}, "cooperation": {"learned": true, "muted": false, "scrambled": false, "whole": false}, "wall_s": 105.71044699999948}
+{"wall_s": 10.901996399999916}
+{"wall_s": 2.418943799999397}
+{"wall_s": 12.211048400000436}
+{"wall_s": 4.500619200000074}
+{"seed": 11047, "online": {"adaptive": 6, "legacy": 0, "frozen": 6, "memory": 6, "authored": 6}, "cooperation": {"learned": true, "muted": false, "scrambled": false, "whole": false}, "wall_s": 120.68735000000015}
+{"wall_s": 11.831664199999068}
+{"wall_s": 1.8530325000010635}
+{"wall_s": 9.282049100000222}
+{"wall_s": 2.3892328000001726}
+{"seed": 11057, "online": {"adaptive": 6, "legacy": 0, "frozen": 6, "memory": 6, "authored": 6}, "cooperation": {"learned": true, "muted": false, "scrambled": false, "whole": false}, "wall_s": 148.53716340000028}
+{"wall_s": 10.948900100000174}
+{"wall_s": 1.8292351000000053}
+{"wall_s": 11.462626700000328}
+{"wall_s": 2.285153699998773}
+{"seed": 11071, "online": {"adaptive": 6, "legacy": 0, "frozen": 6, "memory": 6, "authored": 6}, "cooperation": {"learned": true, "muted": false, "scrambled": false, "whole": false}, "wall_s": 108.3223876000011}
+{"online_totals": {"adaptive": 30, "legacy": 0, "frozen": 30, "memory": 30, "authored": 30}, "cooperation_totals": {"learned": 5, "muted": 0, "scrambled": 0, "whole": 0}, "online_gate": true, "location_gate": true, "wall_s": 573.3382946999991}

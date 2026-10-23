@@ -1,0 +1,5201 @@
+{
+  "protocol": "docs/LIFE_INTEGRATION_PROTOCOL.md",
+  "development": false,
+  "runs": [
+    {
+      "seed": 20301,
+      "branches": {
+        "connected": {
+          "before_fatigue": 0.28159999999999796,
+          "after_fatigue": 0.26659999999999806,
+          "real_recovery": true,
+          "regulation_selection": "move_to_safety",
+          "regulation_evidence": [
+            {
+              "burden_after": 0.45299999999998863,
+              "burden_before": 0.45199999999998874,
+              "context": "strained",
+              "cost_s": 1.0,
+              "elapsed_s": 1.0,
+              "failure_streak": 1,
+              "outcome_score": 0.29965,
+              "request_id": "life-recovery",
+              "status": "completed",
+              "strategy": "rest"
+            }
+          ],
+          "values": {
+            "acquired_preferences": {
+              "recovery": {
+                "confidence": 0.4,
+                "contexts": [
+                  "dry/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery"
+                ],
+                "negative": 0,
+                "positive": 1,
+                "score": 1,
+                "uncertainty": 0.6
+              }
+            },
+            "commitments": {
+              "recovery": {
+                "basis": "acquired",
+                "commitment_id": "recovery",
+                "confidence": 0.4,
+                "contexts": [
+                  "dry/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery"
+                ],
+                "status": "active",
+                "uncertainty": 0.6,
+                "value": "recovery"
+              }
+            },
+            "declared_values": [],
+            "evidence": [
+              {
+                "context": [
+                  "dry/mild/open"
+                ],
+                "evidence_id": "native:life-recovery",
+                "kind": "native_outcome",
+                "outcome": "rest",
+                "owner": "agent-1",
+                "provenance": "native",
+                "run_id": "8bf9e025-81da-4984-8dda-478538ed9882",
+                "source": "native:life-recovery",
+                "status": "succeeded",
+                "value": "recovery"
+              }
+            ],
+            "last_update": [
+              "native:life-recovery"
+            ],
+            "origin": "declared values remain separate from preferences acquired from retained public/native evidence",
+            "owner": "agent-1",
+            "revision": 2,
+            "revision_history": [
+              {
+                "evidence_id": "native:life-recovery",
+                "kind": "event",
+                "revision": 1
+              },
+              {
+                "evidence_id": "native:life-recovery",
+                "kind": "summary",
+                "revision": 2
+              }
+            ],
+            "rule": "alice-identity-values-f11-1",
+            "run_id": "8bf9e025-81da-4984-8dda-478538ed9882",
+            "seen_evidence": [
+              {
+                "context": [
+                  "dry/mild/open"
+                ],
+                "evidence_id": "native:life-recovery",
+                "kind": "native_outcome",
+                "outcome": "rest",
+                "owner": "agent-1",
+                "provenance": "native",
+                "run_id": "8bf9e025-81da-4984-8dda-478538ed9882",
+                "source": "native:life-recovery",
+                "status": "succeeded",
+                "value": "recovery"
+              }
+            ],
+            "summary": {
+              "claims": [
+                "recovery"
+              ],
+              "confidence": 0.32,
+              "contexts": [
+                "dry/mild/open"
+              ],
+              "evidence": [
+                "native:life-recovery"
+              ],
+              "text": "Observed personal outcomes",
+              "uncertainty": 0.68
+            }
+          },
+          "first_choice": {
+            "action": "rest",
+            "duration": 1,
+            "goal": "acquired_recovery",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "second_choice": {
+            "action": "rest",
+            "duration": 1,
+            "goal": "acquired_recovery",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "first_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11505728144435466,
+            "changed": true,
+            "emotional_memory": {
+              "confidence": 0.2202896598265064,
+              "context": "dry/mild/open",
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.30000000000000004,
+              "weights": [
+                {
+                  "event": "life:idle:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.22872576504112627
+                },
+                {
+                  "event": "life:recovery:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.2010702198004176,
+                  "weight": 0.02010702198004176
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11505728144435466,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.2202896598265064,
+                  "context": "dry/mild/open",
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.30000000000000004,
+                  "weights": [
+                    {
+                      "event": "life:idle:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.22872576504112627
+                    },
+                    {
+                      "event": "life:recovery:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.2010702198004176,
+                      "weight": 0.02010702198004176
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12356796389113332,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.2202896598265064,
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "value": 0.30000000000000004
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": {
+                "action_type": "rest",
+                "estimated_cost_s": 1,
+                "parameters": {
+                  "seconds": 1
+                },
+                "requested_duration": 1,
+                "strategy": "rest"
+              },
+              "relationship": null,
+              "social": null,
+              "values": {
+                "action": "rest",
+                "basis": "acquired_commitment",
+                "confidence": 0.4,
+                "context": [
+                  "dry/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery"
+                ],
+                "execution": "external",
+                "feasible": true,
+                "kind": "commitment_action_proposal",
+                "owner": "agent-1",
+                "run_id": "8bf9e025-81da-4984-8dda-478538ed9882",
+                "uncertainty": 0.6,
+                "value": "recovery"
+              }
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12356796389113332,
+            "origin": "acquired recovery preference + authored feasible rest",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.2202896598265064,
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "value": 0.30000000000000004
+            },
+            "reason": "no eligible learned preference"
+          },
+          "second_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11499305197802943,
+            "changed": true,
+            "emotional_memory": {
+              "confidence": 0.022737516226722928,
+              "context": "rain/mild/open",
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.3,
+              "weights": [
+                {
+                  "event": "life:new-context:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.023000000000000003
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11499305197802943,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.022737516226722928,
+                  "context": "rain/mild/open",
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.3,
+                  "weights": [
+                    {
+                      "event": "life:new-context:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.023000000000000003
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12517370054926408,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.022737516226722928,
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "value": 0.3
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": {
+                "action_type": "rest",
+                "estimated_cost_s": 1,
+                "parameters": {
+                  "seconds": 1
+                },
+                "requested_duration": 1,
+                "strategy": "rest"
+              },
+              "relationship": null,
+              "social": null,
+              "values": {
+                "action": "rest",
+                "basis": "acquired_commitment",
+                "confidence": 0.6,
+                "context": [
+                  "rain/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery",
+                  "native:life-policy-value-choice-one"
+                ],
+                "execution": "external",
+                "feasible": true,
+                "kind": "commitment_action_proposal",
+                "owner": "agent-1",
+                "run_id": "8bf9e025-81da-4984-8dda-478538ed9882",
+                "uncertainty": 0.4,
+                "value": "recovery"
+              }
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12517370054926408,
+            "origin": "acquired recovery preference + authored feasible rest",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.022737516226722928,
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "value": 0.3
+            },
+            "reason": "no eligible learned preference"
+          },
+          "replay": {
+            "verified": true,
+            "operations": 6,
+            "physical": {
+              "replay_matches": true,
+              "operations": 13,
+              "state_hash": "509c6fa9c7733d3964278babe804e832ff82a58c4011a8759932c399a8e0935e"
+            },
+            "hash": "b33696cc593d78f5b000c62b10a80170b3dcc703bd2ac264d2104054436e40bf"
+          }
+        },
+        "frozen": {
+          "before_fatigue": 0.28159999999999796,
+          "after_fatigue": 0.26659999999999806,
+          "real_recovery": true,
+          "regulation_selection": "rest",
+          "regulation_evidence": [],
+          "values": {
+            "acquired_preferences": {},
+            "commitments": {},
+            "declared_values": [],
+            "evidence": [],
+            "last_update": [],
+            "origin": "declared values remain separate from preferences acquired from retained public/native evidence",
+            "owner": "agent-1",
+            "revision": 0,
+            "revision_history": [],
+            "rule": "alice-identity-values-f11-1",
+            "run_id": "8bf9e025-81da-4984-8dda-478538ed9882",
+            "seen_evidence": [],
+            "summary": {
+              "claims": [],
+              "confidence": 0.0,
+              "contexts": [],
+              "evidence": [],
+              "text": "",
+              "uncertainty": 1.0
+            }
+          },
+          "first_choice": {
+            "action": "rest",
+            "duration": 5,
+            "goal": "reduce_exposure",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "second_choice": {
+            "action": "rest",
+            "duration": 5,
+            "goal": "reduce_exposure",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "first_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11505728144435466,
+            "changed": false,
+            "emotional_memory": {
+              "confidence": 0.2202896598265064,
+              "context": "dry/mild/open",
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.30000000000000004,
+              "weights": [
+                {
+                  "event": "life:idle:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.22872576504112627
+                },
+                {
+                  "event": "life:recovery:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.2010702198004176,
+                  "weight": 0.02010702198004176
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11505728144435466,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.2202896598265064,
+                  "context": "dry/mild/open",
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.30000000000000004,
+                  "weights": [
+                    {
+                      "event": "life:idle:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.22872576504112627
+                    },
+                    {
+                      "event": "life:recovery:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.2010702198004176,
+                      "weight": 0.02010702198004176
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12356796389113332,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.2202896598265064,
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "value": 0.30000000000000004
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": {
+                "action_type": "rest",
+                "estimated_cost_s": 1,
+                "parameters": {
+                  "seconds": 1
+                },
+                "requested_duration": 1,
+                "strategy": "rest"
+              },
+              "relationship": null,
+              "social": null,
+              "values": null
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12356796389113332,
+            "origin": "acquired emotional memory + authored retrieval/routing",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.2202896598265064,
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "value": 0.30000000000000004
+            },
+            "reason": "no eligible learned preference"
+          },
+          "second_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11485753783648747,
+            "changed": false,
+            "emotional_memory": {
+              "confidence": 0.022737516226722928,
+              "context": "rain/mild/open",
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.3,
+              "weights": [
+                {
+                  "event": "life:new-context:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.023000000000000003
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11485753783648747,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.022737516226722928,
+                  "context": "rain/mild/open",
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.3,
+                  "weights": [
+                    {
+                      "event": "life:new-context:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.023000000000000003
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12856155408781308,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.022737516226722928,
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "value": 0.3
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": {
+                "action_type": "rest",
+                "estimated_cost_s": 1,
+                "parameters": {
+                  "seconds": 1
+                },
+                "requested_duration": 1,
+                "strategy": "rest"
+              },
+              "relationship": null,
+              "social": null,
+              "values": null
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12856155408781308,
+            "origin": "acquired emotional memory + authored retrieval/routing",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.022737516226722928,
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "value": 0.3
+            },
+            "reason": "no eligible learned preference"
+          },
+          "replay": {
+            "verified": true,
+            "operations": 6,
+            "physical": {
+              "replay_matches": true,
+              "operations": 11,
+              "state_hash": "385cf4d867ac30aa7b412f5b680ff1750a7135524a564a1096684952fced3e19"
+            },
+            "hash": "4daef618bdd406dd6c54bc8cfaeda5ba1f0db8263d773e6a3bdfdbb78c7ab158"
+          }
+        },
+        "disconnected": {
+          "before_fatigue": 0.28159999999999796,
+          "after_fatigue": 0.26659999999999806,
+          "real_recovery": true,
+          "regulation_selection": "move_to_safety",
+          "regulation_evidence": [
+            {
+              "burden_after": 0.45299999999998863,
+              "burden_before": 0.45199999999998874,
+              "context": "strained",
+              "cost_s": 1.0,
+              "elapsed_s": 1.0,
+              "failure_streak": 1,
+              "outcome_score": 0.29965,
+              "request_id": "life-recovery",
+              "status": "completed",
+              "strategy": "rest"
+            }
+          ],
+          "values": {
+            "acquired_preferences": {
+              "recovery": {
+                "confidence": 0.4,
+                "contexts": [
+                  "dry/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery"
+                ],
+                "negative": 0,
+                "positive": 1,
+                "score": 1,
+                "uncertainty": 0.6
+              }
+            },
+            "commitments": {
+              "recovery": {
+                "basis": "acquired",
+                "commitment_id": "recovery",
+                "confidence": 0.4,
+                "contexts": [
+                  "dry/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery"
+                ],
+                "status": "active",
+                "uncertainty": 0.6,
+                "value": "recovery"
+              }
+            },
+            "declared_values": [],
+            "evidence": [
+              {
+                "context": [
+                  "dry/mild/open"
+                ],
+                "evidence_id": "native:life-recovery",
+                "kind": "native_outcome",
+                "outcome": "rest",
+                "owner": "agent-1",
+                "provenance": "native",
+                "run_id": "8bf9e025-81da-4984-8dda-478538ed9882",
+                "source": "native:life-recovery",
+                "status": "succeeded",
+                "value": "recovery"
+              }
+            ],
+            "last_update": [
+              "native:life-recovery"
+            ],
+            "origin": "declared values remain separate from preferences acquired from retained public/native evidence",
+            "owner": "agent-1",
+            "revision": 2,
+            "revision_history": [
+              {
+                "evidence_id": "native:life-recovery",
+                "kind": "event",
+                "revision": 1
+              },
+              {
+                "evidence_id": "native:life-recovery",
+                "kind": "summary",
+                "revision": 2
+              }
+            ],
+            "rule": "alice-identity-values-f11-1",
+            "run_id": "8bf9e025-81da-4984-8dda-478538ed9882",
+            "seen_evidence": [
+              {
+                "context": [
+                  "dry/mild/open"
+                ],
+                "evidence_id": "native:life-recovery",
+                "kind": "native_outcome",
+                "outcome": "rest",
+                "owner": "agent-1",
+                "provenance": "native",
+                "run_id": "8bf9e025-81da-4984-8dda-478538ed9882",
+                "source": "native:life-recovery",
+                "status": "succeeded",
+                "value": "recovery"
+              }
+            ],
+            "summary": {
+              "claims": [
+                "recovery"
+              ],
+              "confidence": 0.32,
+              "contexts": [
+                "dry/mild/open"
+              ],
+              "evidence": [
+                "native:life-recovery"
+              ],
+              "text": "Observed personal outcomes",
+              "uncertainty": 0.68
+            }
+          },
+          "first_choice": {
+            "action": "rest",
+            "duration": 5,
+            "goal": "reduce_exposure",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "second_choice": {
+            "action": "rest",
+            "duration": 5,
+            "goal": "reduce_exposure",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "first_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11505728144435466,
+            "changed": false,
+            "emotional_memory": {
+              "confidence": 0.2202896598265064,
+              "context": "dry/mild/open",
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.30000000000000004,
+              "weights": [
+                {
+                  "event": "life:idle:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.22872576504112627
+                },
+                {
+                  "event": "life:recovery:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.2010702198004176,
+                  "weight": 0.02010702198004176
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11505728144435466,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.2202896598265064,
+                  "context": "dry/mild/open",
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.30000000000000004,
+                  "weights": [
+                    {
+                      "event": "life:idle:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.22872576504112627
+                    },
+                    {
+                      "event": "life:recovery:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.2010702198004176,
+                      "weight": 0.02010702198004176
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12356796389113332,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.2202896598265064,
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "value": 0.30000000000000004
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": null,
+              "relationship": null,
+              "social": null,
+              "values": null
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12356796389113332,
+            "origin": "acquired emotional memory + authored retrieval/routing",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.2202896598265064,
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "value": 0.30000000000000004
+            },
+            "reason": "no eligible learned preference"
+          },
+          "second_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11485753783648747,
+            "changed": false,
+            "emotional_memory": {
+              "confidence": 0.022737516226722928,
+              "context": "rain/mild/open",
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.3,
+              "weights": [
+                {
+                  "event": "life:new-context:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.023000000000000003
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11485753783648747,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.022737516226722928,
+                  "context": "rain/mild/open",
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.3,
+                  "weights": [
+                    {
+                      "event": "life:new-context:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.023000000000000003
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12856155408781308,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.022737516226722928,
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "value": 0.3
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": null,
+              "relationship": null,
+              "social": null,
+              "values": null
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12856155408781308,
+            "origin": "acquired emotional memory + authored retrieval/routing",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.022737516226722928,
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "value": 0.3
+            },
+            "reason": "no eligible learned preference"
+          },
+          "replay": {
+            "verified": true,
+            "operations": 6,
+            "physical": {
+              "replay_matches": true,
+              "operations": 11,
+              "state_hash": "385cf4d867ac30aa7b412f5b680ff1750a7135524a564a1096684952fced3e19"
+            },
+            "hash": "f311c28b855d466a5b72878df116373ad8e7477a404d6dca34ea9e78151b8124"
+          }
+        }
+      },
+      "gates": {
+        "F8_real_time_costed_recovery": true,
+        "F8_improves_recovery_or_decision_quality": false,
+        "F11_two_context_acquired_choice": true,
+        "persistence": true
+      },
+      "F8_failure_reason": "Observed fatigue relief is real, but no controlled improvement from learned strategy selection has been established.",
+      "wall_s": 5.434828699988429
+    },
+    {
+      "seed": 20309,
+      "branches": {
+        "connected": {
+          "before_fatigue": 0.28159999999999796,
+          "after_fatigue": 0.26659999999999806,
+          "real_recovery": true,
+          "regulation_selection": "move_to_safety",
+          "regulation_evidence": [
+            {
+              "burden_after": 0.45299999999998863,
+              "burden_before": 0.45199999999998874,
+              "context": "strained",
+              "cost_s": 1.0,
+              "elapsed_s": 1.0,
+              "failure_streak": 1,
+              "outcome_score": 0.29965,
+              "request_id": "life-recovery",
+              "status": "completed",
+              "strategy": "rest"
+            }
+          ],
+          "values": {
+            "acquired_preferences": {
+              "recovery": {
+                "confidence": 0.4,
+                "contexts": [
+                  "dry/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery"
+                ],
+                "negative": 0,
+                "positive": 1,
+                "score": 1,
+                "uncertainty": 0.6
+              }
+            },
+            "commitments": {
+              "recovery": {
+                "basis": "acquired",
+                "commitment_id": "recovery",
+                "confidence": 0.4,
+                "contexts": [
+                  "dry/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery"
+                ],
+                "status": "active",
+                "uncertainty": 0.6,
+                "value": "recovery"
+              }
+            },
+            "declared_values": [],
+            "evidence": [
+              {
+                "context": [
+                  "dry/mild/open"
+                ],
+                "evidence_id": "native:life-recovery",
+                "kind": "native_outcome",
+                "outcome": "rest",
+                "owner": "agent-1",
+                "provenance": "native",
+                "run_id": "e3a0d529-71bd-4300-ba97-94e1a422f878",
+                "source": "native:life-recovery",
+                "status": "succeeded",
+                "value": "recovery"
+              }
+            ],
+            "last_update": [
+              "native:life-recovery"
+            ],
+            "origin": "declared values remain separate from preferences acquired from retained public/native evidence",
+            "owner": "agent-1",
+            "revision": 2,
+            "revision_history": [
+              {
+                "evidence_id": "native:life-recovery",
+                "kind": "event",
+                "revision": 1
+              },
+              {
+                "evidence_id": "native:life-recovery",
+                "kind": "summary",
+                "revision": 2
+              }
+            ],
+            "rule": "alice-identity-values-f11-1",
+            "run_id": "e3a0d529-71bd-4300-ba97-94e1a422f878",
+            "seen_evidence": [
+              {
+                "context": [
+                  "dry/mild/open"
+                ],
+                "evidence_id": "native:life-recovery",
+                "kind": "native_outcome",
+                "outcome": "rest",
+                "owner": "agent-1",
+                "provenance": "native",
+                "run_id": "e3a0d529-71bd-4300-ba97-94e1a422f878",
+                "source": "native:life-recovery",
+                "status": "succeeded",
+                "value": "recovery"
+              }
+            ],
+            "summary": {
+              "claims": [
+                "recovery"
+              ],
+              "confidence": 0.32,
+              "contexts": [
+                "dry/mild/open"
+              ],
+              "evidence": [
+                "native:life-recovery"
+              ],
+              "text": "Observed personal outcomes",
+              "uncertainty": 0.68
+            }
+          },
+          "first_choice": {
+            "action": "rest",
+            "duration": 1,
+            "goal": "acquired_recovery",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "second_choice": {
+            "action": "rest",
+            "duration": 1,
+            "goal": "acquired_recovery",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "first_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11505728144435466,
+            "changed": true,
+            "emotional_memory": {
+              "confidence": 0.2202896598265064,
+              "context": "dry/mild/open",
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.30000000000000004,
+              "weights": [
+                {
+                  "event": "life:idle:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.22872576504112627
+                },
+                {
+                  "event": "life:recovery:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.2010702198004176,
+                  "weight": 0.02010702198004176
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11505728144435466,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.2202896598265064,
+                  "context": "dry/mild/open",
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.30000000000000004,
+                  "weights": [
+                    {
+                      "event": "life:idle:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.22872576504112627
+                    },
+                    {
+                      "event": "life:recovery:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.2010702198004176,
+                      "weight": 0.02010702198004176
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12356796389113332,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.2202896598265064,
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "value": 0.30000000000000004
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": {
+                "action_type": "rest",
+                "estimated_cost_s": 1,
+                "parameters": {
+                  "seconds": 1
+                },
+                "requested_duration": 1,
+                "strategy": "rest"
+              },
+              "relationship": null,
+              "social": null,
+              "values": {
+                "action": "rest",
+                "basis": "acquired_commitment",
+                "confidence": 0.4,
+                "context": [
+                  "dry/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery"
+                ],
+                "execution": "external",
+                "feasible": true,
+                "kind": "commitment_action_proposal",
+                "owner": "agent-1",
+                "run_id": "e3a0d529-71bd-4300-ba97-94e1a422f878",
+                "uncertainty": 0.6,
+                "value": "recovery"
+              }
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12356796389113332,
+            "origin": "acquired recovery preference + authored feasible rest",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.2202896598265064,
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "value": 0.30000000000000004
+            },
+            "reason": "no eligible learned preference"
+          },
+          "second_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11499305197802943,
+            "changed": true,
+            "emotional_memory": {
+              "confidence": 0.022737516226722928,
+              "context": "rain/mild/open",
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.3,
+              "weights": [
+                {
+                  "event": "life:new-context:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.023000000000000003
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11499305197802943,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.022737516226722928,
+                  "context": "rain/mild/open",
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.3,
+                  "weights": [
+                    {
+                      "event": "life:new-context:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.023000000000000003
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12517370054926408,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.022737516226722928,
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "value": 0.3
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": {
+                "action_type": "rest",
+                "estimated_cost_s": 1,
+                "parameters": {
+                  "seconds": 1
+                },
+                "requested_duration": 1,
+                "strategy": "rest"
+              },
+              "relationship": null,
+              "social": null,
+              "values": {
+                "action": "rest",
+                "basis": "acquired_commitment",
+                "confidence": 0.6,
+                "context": [
+                  "rain/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery",
+                  "native:life-policy-value-choice-one"
+                ],
+                "execution": "external",
+                "feasible": true,
+                "kind": "commitment_action_proposal",
+                "owner": "agent-1",
+                "run_id": "e3a0d529-71bd-4300-ba97-94e1a422f878",
+                "uncertainty": 0.4,
+                "value": "recovery"
+              }
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12517370054926408,
+            "origin": "acquired recovery preference + authored feasible rest",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.022737516226722928,
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "value": 0.3
+            },
+            "reason": "no eligible learned preference"
+          },
+          "replay": {
+            "verified": true,
+            "operations": 6,
+            "physical": {
+              "replay_matches": true,
+              "operations": 13,
+              "state_hash": "a4332d35d4a3e063a76c2e96425faa30da54c3c182dc1b10777b2058431d9870"
+            },
+            "hash": "b2adc1ad0777c3422c483a252792eeb7505bdcebe34c3256cbe2f043bfa04779"
+          }
+        },
+        "frozen": {
+          "before_fatigue": 0.28159999999999796,
+          "after_fatigue": 0.26659999999999806,
+          "real_recovery": true,
+          "regulation_selection": "rest",
+          "regulation_evidence": [],
+          "values": {
+            "acquired_preferences": {},
+            "commitments": {},
+            "declared_values": [],
+            "evidence": [],
+            "last_update": [],
+            "origin": "declared values remain separate from preferences acquired from retained public/native evidence",
+            "owner": "agent-1",
+            "revision": 0,
+            "revision_history": [],
+            "rule": "alice-identity-values-f11-1",
+            "run_id": "e3a0d529-71bd-4300-ba97-94e1a422f878",
+            "seen_evidence": [],
+            "summary": {
+              "claims": [],
+              "confidence": 0.0,
+              "contexts": [],
+              "evidence": [],
+              "text": "",
+              "uncertainty": 1.0
+            }
+          },
+          "first_choice": {
+            "action": "rest",
+            "duration": 5,
+            "goal": "reduce_exposure",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "second_choice": {
+            "action": "rest",
+            "duration": 5,
+            "goal": "reduce_exposure",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "first_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11505728144435466,
+            "changed": false,
+            "emotional_memory": {
+              "confidence": 0.2202896598265064,
+              "context": "dry/mild/open",
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.30000000000000004,
+              "weights": [
+                {
+                  "event": "life:idle:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.22872576504112627
+                },
+                {
+                  "event": "life:recovery:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.2010702198004176,
+                  "weight": 0.02010702198004176
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11505728144435466,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.2202896598265064,
+                  "context": "dry/mild/open",
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.30000000000000004,
+                  "weights": [
+                    {
+                      "event": "life:idle:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.22872576504112627
+                    },
+                    {
+                      "event": "life:recovery:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.2010702198004176,
+                      "weight": 0.02010702198004176
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12356796389113332,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.2202896598265064,
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "value": 0.30000000000000004
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": {
+                "action_type": "rest",
+                "estimated_cost_s": 1,
+                "parameters": {
+                  "seconds": 1
+                },
+                "requested_duration": 1,
+                "strategy": "rest"
+              },
+              "relationship": null,
+              "social": null,
+              "values": null
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12356796389113332,
+            "origin": "acquired emotional memory + authored retrieval/routing",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.2202896598265064,
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "value": 0.30000000000000004
+            },
+            "reason": "no eligible learned preference"
+          },
+          "second_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11485753783648747,
+            "changed": false,
+            "emotional_memory": {
+              "confidence": 0.022737516226722928,
+              "context": "rain/mild/open",
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.3,
+              "weights": [
+                {
+                  "event": "life:new-context:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.023000000000000003
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11485753783648747,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.022737516226722928,
+                  "context": "rain/mild/open",
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.3,
+                  "weights": [
+                    {
+                      "event": "life:new-context:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.023000000000000003
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12856155408781308,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.022737516226722928,
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "value": 0.3
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": {
+                "action_type": "rest",
+                "estimated_cost_s": 1,
+                "parameters": {
+                  "seconds": 1
+                },
+                "requested_duration": 1,
+                "strategy": "rest"
+              },
+              "relationship": null,
+              "social": null,
+              "values": null
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12856155408781308,
+            "origin": "acquired emotional memory + authored retrieval/routing",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.022737516226722928,
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "value": 0.3
+            },
+            "reason": "no eligible learned preference"
+          },
+          "replay": {
+            "verified": true,
+            "operations": 6,
+            "physical": {
+              "replay_matches": true,
+              "operations": 11,
+              "state_hash": "01a8d648f979828bb32c7f2f915963810b4f8a5528fff86a6d3a4b1c5db30bb2"
+            },
+            "hash": "6fc7267106ff939c1cc6d4b09dbecc700e4f31033ccfe40f0ba50d93d603efe9"
+          }
+        },
+        "disconnected": {
+          "before_fatigue": 0.28159999999999796,
+          "after_fatigue": 0.26659999999999806,
+          "real_recovery": true,
+          "regulation_selection": "move_to_safety",
+          "regulation_evidence": [
+            {
+              "burden_after": 0.45299999999998863,
+              "burden_before": 0.45199999999998874,
+              "context": "strained",
+              "cost_s": 1.0,
+              "elapsed_s": 1.0,
+              "failure_streak": 1,
+              "outcome_score": 0.29965,
+              "request_id": "life-recovery",
+              "status": "completed",
+              "strategy": "rest"
+            }
+          ],
+          "values": {
+            "acquired_preferences": {
+              "recovery": {
+                "confidence": 0.4,
+                "contexts": [
+                  "dry/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery"
+                ],
+                "negative": 0,
+                "positive": 1,
+                "score": 1,
+                "uncertainty": 0.6
+              }
+            },
+            "commitments": {
+              "recovery": {
+                "basis": "acquired",
+                "commitment_id": "recovery",
+                "confidence": 0.4,
+                "contexts": [
+                  "dry/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery"
+                ],
+                "status": "active",
+                "uncertainty": 0.6,
+                "value": "recovery"
+              }
+            },
+            "declared_values": [],
+            "evidence": [
+              {
+                "context": [
+                  "dry/mild/open"
+                ],
+                "evidence_id": "native:life-recovery",
+                "kind": "native_outcome",
+                "outcome": "rest",
+                "owner": "agent-1",
+                "provenance": "native",
+                "run_id": "e3a0d529-71bd-4300-ba97-94e1a422f878",
+                "source": "native:life-recovery",
+                "status": "succeeded",
+                "value": "recovery"
+              }
+            ],
+            "last_update": [
+              "native:life-recovery"
+            ],
+            "origin": "declared values remain separate from preferences acquired from retained public/native evidence",
+            "owner": "agent-1",
+            "revision": 2,
+            "revision_history": [
+              {
+                "evidence_id": "native:life-recovery",
+                "kind": "event",
+                "revision": 1
+              },
+              {
+                "evidence_id": "native:life-recovery",
+                "kind": "summary",
+                "revision": 2
+              }
+            ],
+            "rule": "alice-identity-values-f11-1",
+            "run_id": "e3a0d529-71bd-4300-ba97-94e1a422f878",
+            "seen_evidence": [
+              {
+                "context": [
+                  "dry/mild/open"
+                ],
+                "evidence_id": "native:life-recovery",
+                "kind": "native_outcome",
+                "outcome": "rest",
+                "owner": "agent-1",
+                "provenance": "native",
+                "run_id": "e3a0d529-71bd-4300-ba97-94e1a422f878",
+                "source": "native:life-recovery",
+                "status": "succeeded",
+                "value": "recovery"
+              }
+            ],
+            "summary": {
+              "claims": [
+                "recovery"
+              ],
+              "confidence": 0.32,
+              "contexts": [
+                "dry/mild/open"
+              ],
+              "evidence": [
+                "native:life-recovery"
+              ],
+              "text": "Observed personal outcomes",
+              "uncertainty": 0.68
+            }
+          },
+          "first_choice": {
+            "action": "rest",
+            "duration": 5,
+            "goal": "reduce_exposure",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "second_choice": {
+            "action": "rest",
+            "duration": 5,
+            "goal": "reduce_exposure",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "first_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11505728144435466,
+            "changed": false,
+            "emotional_memory": {
+              "confidence": 0.2202896598265064,
+              "context": "dry/mild/open",
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.30000000000000004,
+              "weights": [
+                {
+                  "event": "life:idle:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.22872576504112627
+                },
+                {
+                  "event": "life:recovery:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.2010702198004176,
+                  "weight": 0.02010702198004176
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11505728144435466,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.2202896598265064,
+                  "context": "dry/mild/open",
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.30000000000000004,
+                  "weights": [
+                    {
+                      "event": "life:idle:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.22872576504112627
+                    },
+                    {
+                      "event": "life:recovery:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.2010702198004176,
+                      "weight": 0.02010702198004176
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12356796389113332,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.2202896598265064,
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "value": 0.30000000000000004
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": null,
+              "relationship": null,
+              "social": null,
+              "values": null
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12356796389113332,
+            "origin": "acquired emotional memory + authored retrieval/routing",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.2202896598265064,
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "value": 0.30000000000000004
+            },
+            "reason": "no eligible learned preference"
+          },
+          "second_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11485753783648747,
+            "changed": false,
+            "emotional_memory": {
+              "confidence": 0.022737516226722928,
+              "context": "rain/mild/open",
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.3,
+              "weights": [
+                {
+                  "event": "life:new-context:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.023000000000000003
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11485753783648747,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.022737516226722928,
+                  "context": "rain/mild/open",
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.3,
+                  "weights": [
+                    {
+                      "event": "life:new-context:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.023000000000000003
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12856155408781308,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.022737516226722928,
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "value": 0.3
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": null,
+              "relationship": null,
+              "social": null,
+              "values": null
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12856155408781308,
+            "origin": "acquired emotional memory + authored retrieval/routing",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.022737516226722928,
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "value": 0.3
+            },
+            "reason": "no eligible learned preference"
+          },
+          "replay": {
+            "verified": true,
+            "operations": 6,
+            "physical": {
+              "replay_matches": true,
+              "operations": 11,
+              "state_hash": "01a8d648f979828bb32c7f2f915963810b4f8a5528fff86a6d3a4b1c5db30bb2"
+            },
+            "hash": "02413af63fc0042707d5537ae72684bfe1e1134b2599961013a6fef7401520b3"
+          }
+        }
+      },
+      "gates": {
+        "F8_real_time_costed_recovery": true,
+        "F8_improves_recovery_or_decision_quality": false,
+        "F11_two_context_acquired_choice": true,
+        "persistence": true
+      },
+      "F8_failure_reason": "Observed fatigue relief is real, but no controlled improvement from learned strategy selection has been established.",
+      "wall_s": 5.372102499997709
+    },
+    {
+      "seed": 20317,
+      "branches": {
+        "connected": {
+          "before_fatigue": 0.28159999999999796,
+          "after_fatigue": 0.26659999999999806,
+          "real_recovery": true,
+          "regulation_selection": "move_to_safety",
+          "regulation_evidence": [
+            {
+              "burden_after": 0.45299999999998863,
+              "burden_before": 0.45199999999998874,
+              "context": "strained",
+              "cost_s": 1.0,
+              "elapsed_s": 1.0,
+              "failure_streak": 1,
+              "outcome_score": 0.29965,
+              "request_id": "life-recovery",
+              "status": "completed",
+              "strategy": "rest"
+            }
+          ],
+          "values": {
+            "acquired_preferences": {
+              "recovery": {
+                "confidence": 0.4,
+                "contexts": [
+                  "dry/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery"
+                ],
+                "negative": 0,
+                "positive": 1,
+                "score": 1,
+                "uncertainty": 0.6
+              }
+            },
+            "commitments": {
+              "recovery": {
+                "basis": "acquired",
+                "commitment_id": "recovery",
+                "confidence": 0.4,
+                "contexts": [
+                  "dry/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery"
+                ],
+                "status": "active",
+                "uncertainty": 0.6,
+                "value": "recovery"
+              }
+            },
+            "declared_values": [],
+            "evidence": [
+              {
+                "context": [
+                  "dry/mild/open"
+                ],
+                "evidence_id": "native:life-recovery",
+                "kind": "native_outcome",
+                "outcome": "rest",
+                "owner": "agent-1",
+                "provenance": "native",
+                "run_id": "f7f9b2b0-5c3c-439a-8d19-13a2ea955c87",
+                "source": "native:life-recovery",
+                "status": "succeeded",
+                "value": "recovery"
+              }
+            ],
+            "last_update": [
+              "native:life-recovery"
+            ],
+            "origin": "declared values remain separate from preferences acquired from retained public/native evidence",
+            "owner": "agent-1",
+            "revision": 2,
+            "revision_history": [
+              {
+                "evidence_id": "native:life-recovery",
+                "kind": "event",
+                "revision": 1
+              },
+              {
+                "evidence_id": "native:life-recovery",
+                "kind": "summary",
+                "revision": 2
+              }
+            ],
+            "rule": "alice-identity-values-f11-1",
+            "run_id": "f7f9b2b0-5c3c-439a-8d19-13a2ea955c87",
+            "seen_evidence": [
+              {
+                "context": [
+                  "dry/mild/open"
+                ],
+                "evidence_id": "native:life-recovery",
+                "kind": "native_outcome",
+                "outcome": "rest",
+                "owner": "agent-1",
+                "provenance": "native",
+                "run_id": "f7f9b2b0-5c3c-439a-8d19-13a2ea955c87",
+                "source": "native:life-recovery",
+                "status": "succeeded",
+                "value": "recovery"
+              }
+            ],
+            "summary": {
+              "claims": [
+                "recovery"
+              ],
+              "confidence": 0.32,
+              "contexts": [
+                "dry/mild/open"
+              ],
+              "evidence": [
+                "native:life-recovery"
+              ],
+              "text": "Observed personal outcomes",
+              "uncertainty": 0.68
+            }
+          },
+          "first_choice": {
+            "action": "rest",
+            "duration": 1,
+            "goal": "acquired_recovery",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "second_choice": {
+            "action": "rest",
+            "duration": 1,
+            "goal": "acquired_recovery",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "first_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11505728144435466,
+            "changed": true,
+            "emotional_memory": {
+              "confidence": 0.2202896598265064,
+              "context": "dry/mild/open",
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.30000000000000004,
+              "weights": [
+                {
+                  "event": "life:idle:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.22872576504112627
+                },
+                {
+                  "event": "life:recovery:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.2010702198004176,
+                  "weight": 0.02010702198004176
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11505728144435466,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.2202896598265064,
+                  "context": "dry/mild/open",
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.30000000000000004,
+                  "weights": [
+                    {
+                      "event": "life:idle:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.22872576504112627
+                    },
+                    {
+                      "event": "life:recovery:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.2010702198004176,
+                      "weight": 0.02010702198004176
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12356796389113332,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.2202896598265064,
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "value": 0.30000000000000004
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": {
+                "action_type": "rest",
+                "estimated_cost_s": 1,
+                "parameters": {
+                  "seconds": 1
+                },
+                "requested_duration": 1,
+                "strategy": "rest"
+              },
+              "relationship": null,
+              "social": null,
+              "values": {
+                "action": "rest",
+                "basis": "acquired_commitment",
+                "confidence": 0.4,
+                "context": [
+                  "dry/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery"
+                ],
+                "execution": "external",
+                "feasible": true,
+                "kind": "commitment_action_proposal",
+                "owner": "agent-1",
+                "run_id": "f7f9b2b0-5c3c-439a-8d19-13a2ea955c87",
+                "uncertainty": 0.6,
+                "value": "recovery"
+              }
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12356796389113332,
+            "origin": "acquired recovery preference + authored feasible rest",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.2202896598265064,
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "value": 0.30000000000000004
+            },
+            "reason": "no eligible learned preference"
+          },
+          "second_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11499305197802943,
+            "changed": true,
+            "emotional_memory": {
+              "confidence": 0.022737516226722928,
+              "context": "rain/mild/open",
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.3,
+              "weights": [
+                {
+                  "event": "life:new-context:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.023000000000000003
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11499305197802943,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.022737516226722928,
+                  "context": "rain/mild/open",
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.3,
+                  "weights": [
+                    {
+                      "event": "life:new-context:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.023000000000000003
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12517370054926408,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.022737516226722928,
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "value": 0.3
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": {
+                "action_type": "rest",
+                "estimated_cost_s": 1,
+                "parameters": {
+                  "seconds": 1
+                },
+                "requested_duration": 1,
+                "strategy": "rest"
+              },
+              "relationship": null,
+              "social": null,
+              "values": {
+                "action": "rest",
+                "basis": "acquired_commitment",
+                "confidence": 0.6,
+                "context": [
+                  "rain/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery",
+                  "native:life-policy-value-choice-one"
+                ],
+                "execution": "external",
+                "feasible": true,
+                "kind": "commitment_action_proposal",
+                "owner": "agent-1",
+                "run_id": "f7f9b2b0-5c3c-439a-8d19-13a2ea955c87",
+                "uncertainty": 0.4,
+                "value": "recovery"
+              }
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12517370054926408,
+            "origin": "acquired recovery preference + authored feasible rest",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.022737516226722928,
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "value": 0.3
+            },
+            "reason": "no eligible learned preference"
+          },
+          "replay": {
+            "verified": true,
+            "operations": 6,
+            "physical": {
+              "replay_matches": true,
+              "operations": 13,
+              "state_hash": "410101ee22c25293ebe43ab4e22830ff2ed4389b520468dcea41dd9f3d689943"
+            },
+            "hash": "327f7f85d1502bd7eb7fa9fc482931becb918132c3357d54c7d0e5011d471680"
+          }
+        },
+        "frozen": {
+          "before_fatigue": 0.28159999999999796,
+          "after_fatigue": 0.26659999999999806,
+          "real_recovery": true,
+          "regulation_selection": "rest",
+          "regulation_evidence": [],
+          "values": {
+            "acquired_preferences": {},
+            "commitments": {},
+            "declared_values": [],
+            "evidence": [],
+            "last_update": [],
+            "origin": "declared values remain separate from preferences acquired from retained public/native evidence",
+            "owner": "agent-1",
+            "revision": 0,
+            "revision_history": [],
+            "rule": "alice-identity-values-f11-1",
+            "run_id": "f7f9b2b0-5c3c-439a-8d19-13a2ea955c87",
+            "seen_evidence": [],
+            "summary": {
+              "claims": [],
+              "confidence": 0.0,
+              "contexts": [],
+              "evidence": [],
+              "text": "",
+              "uncertainty": 1.0
+            }
+          },
+          "first_choice": {
+            "action": "rest",
+            "duration": 5,
+            "goal": "reduce_exposure",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "second_choice": {
+            "action": "rest",
+            "duration": 5,
+            "goal": "reduce_exposure",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "first_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11505728144435466,
+            "changed": false,
+            "emotional_memory": {
+              "confidence": 0.2202896598265064,
+              "context": "dry/mild/open",
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.30000000000000004,
+              "weights": [
+                {
+                  "event": "life:idle:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.22872576504112627
+                },
+                {
+                  "event": "life:recovery:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.2010702198004176,
+                  "weight": 0.02010702198004176
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11505728144435466,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.2202896598265064,
+                  "context": "dry/mild/open",
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.30000000000000004,
+                  "weights": [
+                    {
+                      "event": "life:idle:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.22872576504112627
+                    },
+                    {
+                      "event": "life:recovery:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.2010702198004176,
+                      "weight": 0.02010702198004176
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12356796389113332,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.2202896598265064,
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "value": 0.30000000000000004
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": {
+                "action_type": "rest",
+                "estimated_cost_s": 1,
+                "parameters": {
+                  "seconds": 1
+                },
+                "requested_duration": 1,
+                "strategy": "rest"
+              },
+              "relationship": null,
+              "social": null,
+              "values": null
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12356796389113332,
+            "origin": "acquired emotional memory + authored retrieval/routing",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.2202896598265064,
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "value": 0.30000000000000004
+            },
+            "reason": "no eligible learned preference"
+          },
+          "second_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11485753783648747,
+            "changed": false,
+            "emotional_memory": {
+              "confidence": 0.022737516226722928,
+              "context": "rain/mild/open",
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.3,
+              "weights": [
+                {
+                  "event": "life:new-context:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.023000000000000003
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11485753783648747,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.022737516226722928,
+                  "context": "rain/mild/open",
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.3,
+                  "weights": [
+                    {
+                      "event": "life:new-context:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.023000000000000003
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12856155408781308,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.022737516226722928,
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "value": 0.3
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": {
+                "action_type": "rest",
+                "estimated_cost_s": 1,
+                "parameters": {
+                  "seconds": 1
+                },
+                "requested_duration": 1,
+                "strategy": "rest"
+              },
+              "relationship": null,
+              "social": null,
+              "values": null
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12856155408781308,
+            "origin": "acquired emotional memory + authored retrieval/routing",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.022737516226722928,
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "value": 0.3
+            },
+            "reason": "no eligible learned preference"
+          },
+          "replay": {
+            "verified": true,
+            "operations": 6,
+            "physical": {
+              "replay_matches": true,
+              "operations": 11,
+              "state_hash": "ad7bf37495444e22fc38a3df2020733833a84ced9f3c162a29cf77d25aefbf11"
+            },
+            "hash": "8a013bd67a57d5f85b3c050f11b7a020c00034da3a5573be97e0fdd45557286b"
+          }
+        },
+        "disconnected": {
+          "before_fatigue": 0.28159999999999796,
+          "after_fatigue": 0.26659999999999806,
+          "real_recovery": true,
+          "regulation_selection": "move_to_safety",
+          "regulation_evidence": [
+            {
+              "burden_after": 0.45299999999998863,
+              "burden_before": 0.45199999999998874,
+              "context": "strained",
+              "cost_s": 1.0,
+              "elapsed_s": 1.0,
+              "failure_streak": 1,
+              "outcome_score": 0.29965,
+              "request_id": "life-recovery",
+              "status": "completed",
+              "strategy": "rest"
+            }
+          ],
+          "values": {
+            "acquired_preferences": {
+              "recovery": {
+                "confidence": 0.4,
+                "contexts": [
+                  "dry/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery"
+                ],
+                "negative": 0,
+                "positive": 1,
+                "score": 1,
+                "uncertainty": 0.6
+              }
+            },
+            "commitments": {
+              "recovery": {
+                "basis": "acquired",
+                "commitment_id": "recovery",
+                "confidence": 0.4,
+                "contexts": [
+                  "dry/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery"
+                ],
+                "status": "active",
+                "uncertainty": 0.6,
+                "value": "recovery"
+              }
+            },
+            "declared_values": [],
+            "evidence": [
+              {
+                "context": [
+                  "dry/mild/open"
+                ],
+                "evidence_id": "native:life-recovery",
+                "kind": "native_outcome",
+                "outcome": "rest",
+                "owner": "agent-1",
+                "provenance": "native",
+                "run_id": "f7f9b2b0-5c3c-439a-8d19-13a2ea955c87",
+                "source": "native:life-recovery",
+                "status": "succeeded",
+                "value": "recovery"
+              }
+            ],
+            "last_update": [
+              "native:life-recovery"
+            ],
+            "origin": "declared values remain separate from preferences acquired from retained public/native evidence",
+            "owner": "agent-1",
+            "revision": 2,
+            "revision_history": [
+              {
+                "evidence_id": "native:life-recovery",
+                "kind": "event",
+                "revision": 1
+              },
+              {
+                "evidence_id": "native:life-recovery",
+                "kind": "summary",
+                "revision": 2
+              }
+            ],
+            "rule": "alice-identity-values-f11-1",
+            "run_id": "f7f9b2b0-5c3c-439a-8d19-13a2ea955c87",
+            "seen_evidence": [
+              {
+                "context": [
+                  "dry/mild/open"
+                ],
+                "evidence_id": "native:life-recovery",
+                "kind": "native_outcome",
+                "outcome": "rest",
+                "owner": "agent-1",
+                "provenance": "native",
+                "run_id": "f7f9b2b0-5c3c-439a-8d19-13a2ea955c87",
+                "source": "native:life-recovery",
+                "status": "succeeded",
+                "value": "recovery"
+              }
+            ],
+            "summary": {
+              "claims": [
+                "recovery"
+              ],
+              "confidence": 0.32,
+              "contexts": [
+                "dry/mild/open"
+              ],
+              "evidence": [
+                "native:life-recovery"
+              ],
+              "text": "Observed personal outcomes",
+              "uncertainty": 0.68
+            }
+          },
+          "first_choice": {
+            "action": "rest",
+            "duration": 5,
+            "goal": "reduce_exposure",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "second_choice": {
+            "action": "rest",
+            "duration": 5,
+            "goal": "reduce_exposure",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "first_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11505728144435466,
+            "changed": false,
+            "emotional_memory": {
+              "confidence": 0.2202896598265064,
+              "context": "dry/mild/open",
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.30000000000000004,
+              "weights": [
+                {
+                  "event": "life:idle:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.22872576504112627
+                },
+                {
+                  "event": "life:recovery:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.2010702198004176,
+                  "weight": 0.02010702198004176
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11505728144435466,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.2202896598265064,
+                  "context": "dry/mild/open",
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.30000000000000004,
+                  "weights": [
+                    {
+                      "event": "life:idle:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.22872576504112627
+                    },
+                    {
+                      "event": "life:recovery:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.2010702198004176,
+                      "weight": 0.02010702198004176
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12356796389113332,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.2202896598265064,
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "value": 0.30000000000000004
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": null,
+              "relationship": null,
+              "social": null,
+              "values": null
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12356796389113332,
+            "origin": "acquired emotional memory + authored retrieval/routing",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.2202896598265064,
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "value": 0.30000000000000004
+            },
+            "reason": "no eligible learned preference"
+          },
+          "second_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11485753783648747,
+            "changed": false,
+            "emotional_memory": {
+              "confidence": 0.022737516226722928,
+              "context": "rain/mild/open",
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.3,
+              "weights": [
+                {
+                  "event": "life:new-context:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.023000000000000003
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11485753783648747,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.022737516226722928,
+                  "context": "rain/mild/open",
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.3,
+                  "weights": [
+                    {
+                      "event": "life:new-context:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.023000000000000003
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12856155408781308,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.022737516226722928,
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "value": 0.3
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": null,
+              "relationship": null,
+              "social": null,
+              "values": null
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12856155408781308,
+            "origin": "acquired emotional memory + authored retrieval/routing",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.022737516226722928,
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "value": 0.3
+            },
+            "reason": "no eligible learned preference"
+          },
+          "replay": {
+            "verified": true,
+            "operations": 6,
+            "physical": {
+              "replay_matches": true,
+              "operations": 11,
+              "state_hash": "ad7bf37495444e22fc38a3df2020733833a84ced9f3c162a29cf77d25aefbf11"
+            },
+            "hash": "b8f5aa79d4d1e4bf151f4bf2d1d39ffecd9cbd04315c2a55e07edf1931200d7b"
+          }
+        }
+      },
+      "gates": {
+        "F8_real_time_costed_recovery": true,
+        "F8_improves_recovery_or_decision_quality": false,
+        "F11_two_context_acquired_choice": true,
+        "persistence": true
+      },
+      "F8_failure_reason": "Observed fatigue relief is real, but no controlled improvement from learned strategy selection has been established.",
+      "wall_s": 4.872002399992198
+    },
+    {
+      "seed": 20323,
+      "branches": {
+        "connected": {
+          "before_fatigue": 0.28159999999999796,
+          "after_fatigue": 0.26659999999999806,
+          "real_recovery": true,
+          "regulation_selection": "move_to_safety",
+          "regulation_evidence": [
+            {
+              "burden_after": 0.45299999999998863,
+              "burden_before": 0.45199999999998874,
+              "context": "strained",
+              "cost_s": 1.0,
+              "elapsed_s": 1.0,
+              "failure_streak": 1,
+              "outcome_score": 0.29965,
+              "request_id": "life-recovery",
+              "status": "completed",
+              "strategy": "rest"
+            }
+          ],
+          "values": {
+            "acquired_preferences": {
+              "recovery": {
+                "confidence": 0.4,
+                "contexts": [
+                  "dry/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery"
+                ],
+                "negative": 0,
+                "positive": 1,
+                "score": 1,
+                "uncertainty": 0.6
+              }
+            },
+            "commitments": {
+              "recovery": {
+                "basis": "acquired",
+                "commitment_id": "recovery",
+                "confidence": 0.4,
+                "contexts": [
+                  "dry/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery"
+                ],
+                "status": "active",
+                "uncertainty": 0.6,
+                "value": "recovery"
+              }
+            },
+            "declared_values": [],
+            "evidence": [
+              {
+                "context": [
+                  "dry/mild/open"
+                ],
+                "evidence_id": "native:life-recovery",
+                "kind": "native_outcome",
+                "outcome": "rest",
+                "owner": "agent-1",
+                "provenance": "native",
+                "run_id": "1ce5d0aa-67b7-47f4-9e2e-0ad6d809ae9e",
+                "source": "native:life-recovery",
+                "status": "succeeded",
+                "value": "recovery"
+              }
+            ],
+            "last_update": [
+              "native:life-recovery"
+            ],
+            "origin": "declared values remain separate from preferences acquired from retained public/native evidence",
+            "owner": "agent-1",
+            "revision": 2,
+            "revision_history": [
+              {
+                "evidence_id": "native:life-recovery",
+                "kind": "event",
+                "revision": 1
+              },
+              {
+                "evidence_id": "native:life-recovery",
+                "kind": "summary",
+                "revision": 2
+              }
+            ],
+            "rule": "alice-identity-values-f11-1",
+            "run_id": "1ce5d0aa-67b7-47f4-9e2e-0ad6d809ae9e",
+            "seen_evidence": [
+              {
+                "context": [
+                  "dry/mild/open"
+                ],
+                "evidence_id": "native:life-recovery",
+                "kind": "native_outcome",
+                "outcome": "rest",
+                "owner": "agent-1",
+                "provenance": "native",
+                "run_id": "1ce5d0aa-67b7-47f4-9e2e-0ad6d809ae9e",
+                "source": "native:life-recovery",
+                "status": "succeeded",
+                "value": "recovery"
+              }
+            ],
+            "summary": {
+              "claims": [
+                "recovery"
+              ],
+              "confidence": 0.32,
+              "contexts": [
+                "dry/mild/open"
+              ],
+              "evidence": [
+                "native:life-recovery"
+              ],
+              "text": "Observed personal outcomes",
+              "uncertainty": 0.68
+            }
+          },
+          "first_choice": {
+            "action": "rest",
+            "duration": 1,
+            "goal": "acquired_recovery",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "second_choice": {
+            "action": "rest",
+            "duration": 1,
+            "goal": "acquired_recovery",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "first_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11505728144435466,
+            "changed": true,
+            "emotional_memory": {
+              "confidence": 0.2202896598265064,
+              "context": "dry/mild/open",
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.30000000000000004,
+              "weights": [
+                {
+                  "event": "life:idle:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.22872576504112627
+                },
+                {
+                  "event": "life:recovery:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.2010702198004176,
+                  "weight": 0.02010702198004176
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11505728144435466,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.2202896598265064,
+                  "context": "dry/mild/open",
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.30000000000000004,
+                  "weights": [
+                    {
+                      "event": "life:idle:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.22872576504112627
+                    },
+                    {
+                      "event": "life:recovery:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.2010702198004176,
+                      "weight": 0.02010702198004176
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12356796389113332,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.2202896598265064,
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "value": 0.30000000000000004
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": {
+                "action_type": "rest",
+                "estimated_cost_s": 1,
+                "parameters": {
+                  "seconds": 1
+                },
+                "requested_duration": 1,
+                "strategy": "rest"
+              },
+              "relationship": null,
+              "social": null,
+              "values": {
+                "action": "rest",
+                "basis": "acquired_commitment",
+                "confidence": 0.4,
+                "context": [
+                  "dry/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery"
+                ],
+                "execution": "external",
+                "feasible": true,
+                "kind": "commitment_action_proposal",
+                "owner": "agent-1",
+                "run_id": "1ce5d0aa-67b7-47f4-9e2e-0ad6d809ae9e",
+                "uncertainty": 0.6,
+                "value": "recovery"
+              }
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12356796389113332,
+            "origin": "acquired recovery preference + authored feasible rest",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.2202896598265064,
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "value": 0.30000000000000004
+            },
+            "reason": "no eligible learned preference"
+          },
+          "second_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11499305197802943,
+            "changed": true,
+            "emotional_memory": {
+              "confidence": 0.022737516226722928,
+              "context": "rain/mild/open",
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.3,
+              "weights": [
+                {
+                  "event": "life:new-context:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.023000000000000003
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11499305197802943,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.022737516226722928,
+                  "context": "rain/mild/open",
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.3,
+                  "weights": [
+                    {
+                      "event": "life:new-context:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.023000000000000003
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12517370054926408,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.022737516226722928,
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "value": 0.3
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": {
+                "action_type": "rest",
+                "estimated_cost_s": 1,
+                "parameters": {
+                  "seconds": 1
+                },
+                "requested_duration": 1,
+                "strategy": "rest"
+              },
+              "relationship": null,
+              "social": null,
+              "values": {
+                "action": "rest",
+                "basis": "acquired_commitment",
+                "confidence": 0.6,
+                "context": [
+                  "rain/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery",
+                  "native:life-policy-value-choice-one"
+                ],
+                "execution": "external",
+                "feasible": true,
+                "kind": "commitment_action_proposal",
+                "owner": "agent-1",
+                "run_id": "1ce5d0aa-67b7-47f4-9e2e-0ad6d809ae9e",
+                "uncertainty": 0.4,
+                "value": "recovery"
+              }
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12517370054926408,
+            "origin": "acquired recovery preference + authored feasible rest",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.022737516226722928,
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "value": 0.3
+            },
+            "reason": "no eligible learned preference"
+          },
+          "replay": {
+            "verified": true,
+            "operations": 6,
+            "physical": {
+              "replay_matches": true,
+              "operations": 13,
+              "state_hash": "e788d999b48eb5e2fff81b3c7f5d6539a8e72c6301efac065fdefb36a86c70b5"
+            },
+            "hash": "f3a14ddebccafca163f0f2ad4ba2ce02b438328566a68ee5ea998d9ae2e4cc83"
+          }
+        },
+        "frozen": {
+          "before_fatigue": 0.28159999999999796,
+          "after_fatigue": 0.26659999999999806,
+          "real_recovery": true,
+          "regulation_selection": "rest",
+          "regulation_evidence": [],
+          "values": {
+            "acquired_preferences": {},
+            "commitments": {},
+            "declared_values": [],
+            "evidence": [],
+            "last_update": [],
+            "origin": "declared values remain separate from preferences acquired from retained public/native evidence",
+            "owner": "agent-1",
+            "revision": 0,
+            "revision_history": [],
+            "rule": "alice-identity-values-f11-1",
+            "run_id": "1ce5d0aa-67b7-47f4-9e2e-0ad6d809ae9e",
+            "seen_evidence": [],
+            "summary": {
+              "claims": [],
+              "confidence": 0.0,
+              "contexts": [],
+              "evidence": [],
+              "text": "",
+              "uncertainty": 1.0
+            }
+          },
+          "first_choice": {
+            "action": "rest",
+            "duration": 5,
+            "goal": "reduce_exposure",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "second_choice": {
+            "action": "rest",
+            "duration": 5,
+            "goal": "reduce_exposure",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "first_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11505728144435466,
+            "changed": false,
+            "emotional_memory": {
+              "confidence": 0.2202896598265064,
+              "context": "dry/mild/open",
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.30000000000000004,
+              "weights": [
+                {
+                  "event": "life:idle:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.22872576504112627
+                },
+                {
+                  "event": "life:recovery:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.2010702198004176,
+                  "weight": 0.02010702198004176
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11505728144435466,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.2202896598265064,
+                  "context": "dry/mild/open",
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.30000000000000004,
+                  "weights": [
+                    {
+                      "event": "life:idle:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.22872576504112627
+                    },
+                    {
+                      "event": "life:recovery:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.2010702198004176,
+                      "weight": 0.02010702198004176
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12356796389113332,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.2202896598265064,
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "value": 0.30000000000000004
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": {
+                "action_type": "rest",
+                "estimated_cost_s": 1,
+                "parameters": {
+                  "seconds": 1
+                },
+                "requested_duration": 1,
+                "strategy": "rest"
+              },
+              "relationship": null,
+              "social": null,
+              "values": null
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12356796389113332,
+            "origin": "acquired emotional memory + authored retrieval/routing",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.2202896598265064,
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "value": 0.30000000000000004
+            },
+            "reason": "no eligible learned preference"
+          },
+          "second_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11485753783648747,
+            "changed": false,
+            "emotional_memory": {
+              "confidence": 0.022737516226722928,
+              "context": "rain/mild/open",
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.3,
+              "weights": [
+                {
+                  "event": "life:new-context:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.023000000000000003
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11485753783648747,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.022737516226722928,
+                  "context": "rain/mild/open",
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.3,
+                  "weights": [
+                    {
+                      "event": "life:new-context:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.023000000000000003
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12856155408781308,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.022737516226722928,
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "value": 0.3
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": {
+                "action_type": "rest",
+                "estimated_cost_s": 1,
+                "parameters": {
+                  "seconds": 1
+                },
+                "requested_duration": 1,
+                "strategy": "rest"
+              },
+              "relationship": null,
+              "social": null,
+              "values": null
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12856155408781308,
+            "origin": "acquired emotional memory + authored retrieval/routing",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.022737516226722928,
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "value": 0.3
+            },
+            "reason": "no eligible learned preference"
+          },
+          "replay": {
+            "verified": true,
+            "operations": 6,
+            "physical": {
+              "replay_matches": true,
+              "operations": 11,
+              "state_hash": "450df7d056c4b5d0ccc5428f4a79997be8a9dd7a879f6aace73f93de1518816c"
+            },
+            "hash": "84da69b629954fa4a4ea4d6d8bd4d9d30f7c98b12096d2e30209d7bcd174dda5"
+          }
+        },
+        "disconnected": {
+          "before_fatigue": 0.28159999999999796,
+          "after_fatigue": 0.26659999999999806,
+          "real_recovery": true,
+          "regulation_selection": "move_to_safety",
+          "regulation_evidence": [
+            {
+              "burden_after": 0.45299999999998863,
+              "burden_before": 0.45199999999998874,
+              "context": "strained",
+              "cost_s": 1.0,
+              "elapsed_s": 1.0,
+              "failure_streak": 1,
+              "outcome_score": 0.29965,
+              "request_id": "life-recovery",
+              "status": "completed",
+              "strategy": "rest"
+            }
+          ],
+          "values": {
+            "acquired_preferences": {
+              "recovery": {
+                "confidence": 0.4,
+                "contexts": [
+                  "dry/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery"
+                ],
+                "negative": 0,
+                "positive": 1,
+                "score": 1,
+                "uncertainty": 0.6
+              }
+            },
+            "commitments": {
+              "recovery": {
+                "basis": "acquired",
+                "commitment_id": "recovery",
+                "confidence": 0.4,
+                "contexts": [
+                  "dry/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery"
+                ],
+                "status": "active",
+                "uncertainty": 0.6,
+                "value": "recovery"
+              }
+            },
+            "declared_values": [],
+            "evidence": [
+              {
+                "context": [
+                  "dry/mild/open"
+                ],
+                "evidence_id": "native:life-recovery",
+                "kind": "native_outcome",
+                "outcome": "rest",
+                "owner": "agent-1",
+                "provenance": "native",
+                "run_id": "1ce5d0aa-67b7-47f4-9e2e-0ad6d809ae9e",
+                "source": "native:life-recovery",
+                "status": "succeeded",
+                "value": "recovery"
+              }
+            ],
+            "last_update": [
+              "native:life-recovery"
+            ],
+            "origin": "declared values remain separate from preferences acquired from retained public/native evidence",
+            "owner": "agent-1",
+            "revision": 2,
+            "revision_history": [
+              {
+                "evidence_id": "native:life-recovery",
+                "kind": "event",
+                "revision": 1
+              },
+              {
+                "evidence_id": "native:life-recovery",
+                "kind": "summary",
+                "revision": 2
+              }
+            ],
+            "rule": "alice-identity-values-f11-1",
+            "run_id": "1ce5d0aa-67b7-47f4-9e2e-0ad6d809ae9e",
+            "seen_evidence": [
+              {
+                "context": [
+                  "dry/mild/open"
+                ],
+                "evidence_id": "native:life-recovery",
+                "kind": "native_outcome",
+                "outcome": "rest",
+                "owner": "agent-1",
+                "provenance": "native",
+                "run_id": "1ce5d0aa-67b7-47f4-9e2e-0ad6d809ae9e",
+                "source": "native:life-recovery",
+                "status": "succeeded",
+                "value": "recovery"
+              }
+            ],
+            "summary": {
+              "claims": [
+                "recovery"
+              ],
+              "confidence": 0.32,
+              "contexts": [
+                "dry/mild/open"
+              ],
+              "evidence": [
+                "native:life-recovery"
+              ],
+              "text": "Observed personal outcomes",
+              "uncertainty": 0.68
+            }
+          },
+          "first_choice": {
+            "action": "rest",
+            "duration": 5,
+            "goal": "reduce_exposure",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "second_choice": {
+            "action": "rest",
+            "duration": 5,
+            "goal": "reduce_exposure",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "first_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11505728144435466,
+            "changed": false,
+            "emotional_memory": {
+              "confidence": 0.2202896598265064,
+              "context": "dry/mild/open",
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.30000000000000004,
+              "weights": [
+                {
+                  "event": "life:idle:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.22872576504112627
+                },
+                {
+                  "event": "life:recovery:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.2010702198004176,
+                  "weight": 0.02010702198004176
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11505728144435466,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.2202896598265064,
+                  "context": "dry/mild/open",
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.30000000000000004,
+                  "weights": [
+                    {
+                      "event": "life:idle:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.22872576504112627
+                    },
+                    {
+                      "event": "life:recovery:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.2010702198004176,
+                      "weight": 0.02010702198004176
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12356796389113332,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.2202896598265064,
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "value": 0.30000000000000004
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": null,
+              "relationship": null,
+              "social": null,
+              "values": null
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12356796389113332,
+            "origin": "acquired emotional memory + authored retrieval/routing",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.2202896598265064,
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "value": 0.30000000000000004
+            },
+            "reason": "no eligible learned preference"
+          },
+          "second_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11485753783648747,
+            "changed": false,
+            "emotional_memory": {
+              "confidence": 0.022737516226722928,
+              "context": "rain/mild/open",
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.3,
+              "weights": [
+                {
+                  "event": "life:new-context:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.023000000000000003
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11485753783648747,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.022737516226722928,
+                  "context": "rain/mild/open",
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.3,
+                  "weights": [
+                    {
+                      "event": "life:new-context:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.023000000000000003
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12856155408781308,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.022737516226722928,
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "value": 0.3
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": null,
+              "relationship": null,
+              "social": null,
+              "values": null
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12856155408781308,
+            "origin": "acquired emotional memory + authored retrieval/routing",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.022737516226722928,
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "value": 0.3
+            },
+            "reason": "no eligible learned preference"
+          },
+          "replay": {
+            "verified": true,
+            "operations": 6,
+            "physical": {
+              "replay_matches": true,
+              "operations": 11,
+              "state_hash": "450df7d056c4b5d0ccc5428f4a79997be8a9dd7a879f6aace73f93de1518816c"
+            },
+            "hash": "52a9ac5114a999d8847348a9e48bb8cd0d9917911044d11312f65029907cd9d3"
+          }
+        }
+      },
+      "gates": {
+        "F8_real_time_costed_recovery": true,
+        "F8_improves_recovery_or_decision_quality": false,
+        "F11_two_context_acquired_choice": true,
+        "persistence": true
+      },
+      "F8_failure_reason": "Observed fatigue relief is real, but no controlled improvement from learned strategy selection has been established.",
+      "wall_s": 4.1481693999958225
+    },
+    {
+      "seed": 20333,
+      "branches": {
+        "connected": {
+          "before_fatigue": 0.28159999999999796,
+          "after_fatigue": 0.26659999999999806,
+          "real_recovery": true,
+          "regulation_selection": "move_to_safety",
+          "regulation_evidence": [
+            {
+              "burden_after": 0.45299999999998863,
+              "burden_before": 0.45199999999998874,
+              "context": "strained",
+              "cost_s": 1.0,
+              "elapsed_s": 1.0,
+              "failure_streak": 1,
+              "outcome_score": 0.29965,
+              "request_id": "life-recovery",
+              "status": "completed",
+              "strategy": "rest"
+            }
+          ],
+          "values": {
+            "acquired_preferences": {
+              "recovery": {
+                "confidence": 0.4,
+                "contexts": [
+                  "dry/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery"
+                ],
+                "negative": 0,
+                "positive": 1,
+                "score": 1,
+                "uncertainty": 0.6
+              }
+            },
+            "commitments": {
+              "recovery": {
+                "basis": "acquired",
+                "commitment_id": "recovery",
+                "confidence": 0.4,
+                "contexts": [
+                  "dry/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery"
+                ],
+                "status": "active",
+                "uncertainty": 0.6,
+                "value": "recovery"
+              }
+            },
+            "declared_values": [],
+            "evidence": [
+              {
+                "context": [
+                  "dry/mild/open"
+                ],
+                "evidence_id": "native:life-recovery",
+                "kind": "native_outcome",
+                "outcome": "rest",
+                "owner": "agent-1",
+                "provenance": "native",
+                "run_id": "ef23c552-3c67-440c-aeaa-b31e54e77497",
+                "source": "native:life-recovery",
+                "status": "succeeded",
+                "value": "recovery"
+              }
+            ],
+            "last_update": [
+              "native:life-recovery"
+            ],
+            "origin": "declared values remain separate from preferences acquired from retained public/native evidence",
+            "owner": "agent-1",
+            "revision": 2,
+            "revision_history": [
+              {
+                "evidence_id": "native:life-recovery",
+                "kind": "event",
+                "revision": 1
+              },
+              {
+                "evidence_id": "native:life-recovery",
+                "kind": "summary",
+                "revision": 2
+              }
+            ],
+            "rule": "alice-identity-values-f11-1",
+            "run_id": "ef23c552-3c67-440c-aeaa-b31e54e77497",
+            "seen_evidence": [
+              {
+                "context": [
+                  "dry/mild/open"
+                ],
+                "evidence_id": "native:life-recovery",
+                "kind": "native_outcome",
+                "outcome": "rest",
+                "owner": "agent-1",
+                "provenance": "native",
+                "run_id": "ef23c552-3c67-440c-aeaa-b31e54e77497",
+                "source": "native:life-recovery",
+                "status": "succeeded",
+                "value": "recovery"
+              }
+            ],
+            "summary": {
+              "claims": [
+                "recovery"
+              ],
+              "confidence": 0.32,
+              "contexts": [
+                "dry/mild/open"
+              ],
+              "evidence": [
+                "native:life-recovery"
+              ],
+              "text": "Observed personal outcomes",
+              "uncertainty": 0.68
+            }
+          },
+          "first_choice": {
+            "action": "rest",
+            "duration": 1,
+            "goal": "acquired_recovery",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "second_choice": {
+            "action": "rest",
+            "duration": 1,
+            "goal": "acquired_recovery",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "first_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11505728144435466,
+            "changed": true,
+            "emotional_memory": {
+              "confidence": 0.2202896598265064,
+              "context": "dry/mild/open",
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.30000000000000004,
+              "weights": [
+                {
+                  "event": "life:idle:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.22872576504112627
+                },
+                {
+                  "event": "life:recovery:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.2010702198004176,
+                  "weight": 0.02010702198004176
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11505728144435466,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.2202896598265064,
+                  "context": "dry/mild/open",
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.30000000000000004,
+                  "weights": [
+                    {
+                      "event": "life:idle:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.22872576504112627
+                    },
+                    {
+                      "event": "life:recovery:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.2010702198004176,
+                      "weight": 0.02010702198004176
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12356796389113332,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.2202896598265064,
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "value": 0.30000000000000004
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": {
+                "action_type": "rest",
+                "estimated_cost_s": 1,
+                "parameters": {
+                  "seconds": 1
+                },
+                "requested_duration": 1,
+                "strategy": "rest"
+              },
+              "relationship": null,
+              "social": null,
+              "values": {
+                "action": "rest",
+                "basis": "acquired_commitment",
+                "confidence": 0.4,
+                "context": [
+                  "dry/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery"
+                ],
+                "execution": "external",
+                "feasible": true,
+                "kind": "commitment_action_proposal",
+                "owner": "agent-1",
+                "run_id": "ef23c552-3c67-440c-aeaa-b31e54e77497",
+                "uncertainty": 0.6,
+                "value": "recovery"
+              }
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12356796389113332,
+            "origin": "acquired recovery preference + authored feasible rest",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.2202896598265064,
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "value": 0.30000000000000004
+            },
+            "reason": "no eligible learned preference"
+          },
+          "second_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11499305197802943,
+            "changed": true,
+            "emotional_memory": {
+              "confidence": 0.022737516226722928,
+              "context": "rain/mild/open",
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.3,
+              "weights": [
+                {
+                  "event": "life:new-context:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.023000000000000003
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11499305197802943,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.022737516226722928,
+                  "context": "rain/mild/open",
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.3,
+                  "weights": [
+                    {
+                      "event": "life:new-context:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.023000000000000003
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12517370054926408,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.022737516226722928,
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "value": 0.3
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": {
+                "action_type": "rest",
+                "estimated_cost_s": 1,
+                "parameters": {
+                  "seconds": 1
+                },
+                "requested_duration": 1,
+                "strategy": "rest"
+              },
+              "relationship": null,
+              "social": null,
+              "values": {
+                "action": "rest",
+                "basis": "acquired_commitment",
+                "confidence": 0.6,
+                "context": [
+                  "rain/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery",
+                  "native:life-policy-value-choice-one"
+                ],
+                "execution": "external",
+                "feasible": true,
+                "kind": "commitment_action_proposal",
+                "owner": "agent-1",
+                "run_id": "ef23c552-3c67-440c-aeaa-b31e54e77497",
+                "uncertainty": 0.4,
+                "value": "recovery"
+              }
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12517370054926408,
+            "origin": "acquired recovery preference + authored feasible rest",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.022737516226722928,
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "value": 0.3
+            },
+            "reason": "no eligible learned preference"
+          },
+          "replay": {
+            "verified": true,
+            "operations": 6,
+            "physical": {
+              "replay_matches": true,
+              "operations": 13,
+              "state_hash": "753de1e9b1867fe67a5e4d92a5f842abe88c3388be86f6370030ade6d695539d"
+            },
+            "hash": "5c1128f502d4bfaf66b09712e90e3b2d5c162e6209aa92e89401d32c0c3b877f"
+          }
+        },
+        "frozen": {
+          "before_fatigue": 0.28159999999999796,
+          "after_fatigue": 0.26659999999999806,
+          "real_recovery": true,
+          "regulation_selection": "rest",
+          "regulation_evidence": [],
+          "values": {
+            "acquired_preferences": {},
+            "commitments": {},
+            "declared_values": [],
+            "evidence": [],
+            "last_update": [],
+            "origin": "declared values remain separate from preferences acquired from retained public/native evidence",
+            "owner": "agent-1",
+            "revision": 0,
+            "revision_history": [],
+            "rule": "alice-identity-values-f11-1",
+            "run_id": "ef23c552-3c67-440c-aeaa-b31e54e77497",
+            "seen_evidence": [],
+            "summary": {
+              "claims": [],
+              "confidence": 0.0,
+              "contexts": [],
+              "evidence": [],
+              "text": "",
+              "uncertainty": 1.0
+            }
+          },
+          "first_choice": {
+            "action": "rest",
+            "duration": 5,
+            "goal": "reduce_exposure",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "second_choice": {
+            "action": "rest",
+            "duration": 5,
+            "goal": "reduce_exposure",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "first_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11505728144435466,
+            "changed": false,
+            "emotional_memory": {
+              "confidence": 0.2202896598265064,
+              "context": "dry/mild/open",
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.30000000000000004,
+              "weights": [
+                {
+                  "event": "life:idle:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.22872576504112627
+                },
+                {
+                  "event": "life:recovery:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.2010702198004176,
+                  "weight": 0.02010702198004176
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11505728144435466,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.2202896598265064,
+                  "context": "dry/mild/open",
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.30000000000000004,
+                  "weights": [
+                    {
+                      "event": "life:idle:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.22872576504112627
+                    },
+                    {
+                      "event": "life:recovery:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.2010702198004176,
+                      "weight": 0.02010702198004176
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12356796389113332,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.2202896598265064,
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "value": 0.30000000000000004
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": {
+                "action_type": "rest",
+                "estimated_cost_s": 1,
+                "parameters": {
+                  "seconds": 1
+                },
+                "requested_duration": 1,
+                "strategy": "rest"
+              },
+              "relationship": null,
+              "social": null,
+              "values": null
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12356796389113332,
+            "origin": "acquired emotional memory + authored retrieval/routing",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.2202896598265064,
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "value": 0.30000000000000004
+            },
+            "reason": "no eligible learned preference"
+          },
+          "second_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11485753783648747,
+            "changed": false,
+            "emotional_memory": {
+              "confidence": 0.022737516226722928,
+              "context": "rain/mild/open",
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.3,
+              "weights": [
+                {
+                  "event": "life:new-context:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.023000000000000003
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11485753783648747,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.022737516226722928,
+                  "context": "rain/mild/open",
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.3,
+                  "weights": [
+                    {
+                      "event": "life:new-context:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.023000000000000003
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12856155408781308,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.022737516226722928,
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "value": 0.3
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": {
+                "action_type": "rest",
+                "estimated_cost_s": 1,
+                "parameters": {
+                  "seconds": 1
+                },
+                "requested_duration": 1,
+                "strategy": "rest"
+              },
+              "relationship": null,
+              "social": null,
+              "values": null
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12856155408781308,
+            "origin": "acquired emotional memory + authored retrieval/routing",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.022737516226722928,
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "value": 0.3
+            },
+            "reason": "no eligible learned preference"
+          },
+          "replay": {
+            "verified": true,
+            "operations": 6,
+            "physical": {
+              "replay_matches": true,
+              "operations": 11,
+              "state_hash": "e225406e1bd1adf101c5b7cb3f5ac61bd7e3df3c1445246cb8ffe6af330bfc48"
+            },
+            "hash": "b753fcb06dd2d0c0a586d9ac2f79c7459e45031ed57389251b158f52a1f9dd33"
+          }
+        },
+        "disconnected": {
+          "before_fatigue": 0.28159999999999796,
+          "after_fatigue": 0.26659999999999806,
+          "real_recovery": true,
+          "regulation_selection": "move_to_safety",
+          "regulation_evidence": [
+            {
+              "burden_after": 0.45299999999998863,
+              "burden_before": 0.45199999999998874,
+              "context": "strained",
+              "cost_s": 1.0,
+              "elapsed_s": 1.0,
+              "failure_streak": 1,
+              "outcome_score": 0.29965,
+              "request_id": "life-recovery",
+              "status": "completed",
+              "strategy": "rest"
+            }
+          ],
+          "values": {
+            "acquired_preferences": {
+              "recovery": {
+                "confidence": 0.4,
+                "contexts": [
+                  "dry/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery"
+                ],
+                "negative": 0,
+                "positive": 1,
+                "score": 1,
+                "uncertainty": 0.6
+              }
+            },
+            "commitments": {
+              "recovery": {
+                "basis": "acquired",
+                "commitment_id": "recovery",
+                "confidence": 0.4,
+                "contexts": [
+                  "dry/mild/open"
+                ],
+                "evidence": [
+                  "native:life-recovery"
+                ],
+                "status": "active",
+                "uncertainty": 0.6,
+                "value": "recovery"
+              }
+            },
+            "declared_values": [],
+            "evidence": [
+              {
+                "context": [
+                  "dry/mild/open"
+                ],
+                "evidence_id": "native:life-recovery",
+                "kind": "native_outcome",
+                "outcome": "rest",
+                "owner": "agent-1",
+                "provenance": "native",
+                "run_id": "ef23c552-3c67-440c-aeaa-b31e54e77497",
+                "source": "native:life-recovery",
+                "status": "succeeded",
+                "value": "recovery"
+              }
+            ],
+            "last_update": [
+              "native:life-recovery"
+            ],
+            "origin": "declared values remain separate from preferences acquired from retained public/native evidence",
+            "owner": "agent-1",
+            "revision": 2,
+            "revision_history": [
+              {
+                "evidence_id": "native:life-recovery",
+                "kind": "event",
+                "revision": 1
+              },
+              {
+                "evidence_id": "native:life-recovery",
+                "kind": "summary",
+                "revision": 2
+              }
+            ],
+            "rule": "alice-identity-values-f11-1",
+            "run_id": "ef23c552-3c67-440c-aeaa-b31e54e77497",
+            "seen_evidence": [
+              {
+                "context": [
+                  "dry/mild/open"
+                ],
+                "evidence_id": "native:life-recovery",
+                "kind": "native_outcome",
+                "outcome": "rest",
+                "owner": "agent-1",
+                "provenance": "native",
+                "run_id": "ef23c552-3c67-440c-aeaa-b31e54e77497",
+                "source": "native:life-recovery",
+                "status": "succeeded",
+                "value": "recovery"
+              }
+            ],
+            "summary": {
+              "claims": [
+                "recovery"
+              ],
+              "confidence": 0.32,
+              "contexts": [
+                "dry/mild/open"
+              ],
+              "evidence": [
+                "native:life-recovery"
+              ],
+              "text": "Observed personal outcomes",
+              "uncertainty": 0.68
+            }
+          },
+          "first_choice": {
+            "action": "rest",
+            "duration": 5,
+            "goal": "reduce_exposure",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "second_choice": {
+            "action": "rest",
+            "duration": 5,
+            "goal": "reduce_exposure",
+            "origin": "authored_weather_baseline",
+            "parameters": {},
+            "targets": []
+          },
+          "first_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11505728144435466,
+            "changed": false,
+            "emotional_memory": {
+              "confidence": 0.2202896598265064,
+              "context": "dry/mild/open",
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.30000000000000004,
+              "weights": [
+                {
+                  "event": "life:idle:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.22872576504112627
+                },
+                {
+                  "event": "life:recovery:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.2010702198004176,
+                  "weight": 0.02010702198004176
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11505728144435466,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.2202896598265064,
+                  "context": "dry/mild/open",
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.30000000000000004,
+                  "weights": [
+                    {
+                      "event": "life:idle:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.22872576504112627
+                    },
+                    {
+                      "event": "life:recovery:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.2010702198004176,
+                      "weight": 0.02010702198004176
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12356796389113332,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.2202896598265064,
+                  "memories": [
+                    "life:idle:agent-1",
+                    "life:recovery:agent-1"
+                  ],
+                  "value": 0.30000000000000004
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": null,
+              "relationship": null,
+              "social": null,
+              "values": null
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12356796389113332,
+            "origin": "acquired emotional memory + authored retrieval/routing",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.2202896598265064,
+              "memories": [
+                "life:idle:agent-1",
+                "life:recovery:agent-1"
+              ],
+              "value": 0.30000000000000004
+            },
+            "reason": "no eligible learned preference"
+          },
+          "second_influence": {
+            "baseline": {
+              "action": "rest",
+              "duration": 5,
+              "goal": "reduce_exposure",
+              "origin": "authored_weather_baseline",
+              "parameters": {},
+              "targets": []
+            },
+            "caution_threshold": -0.11485753783648747,
+            "changed": false,
+            "emotional_memory": {
+              "confidence": 0.022737516226722928,
+              "context": "rain/mild/open",
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "origin": "retrieved own acquired journal links; authored weights",
+              "rule": "alice-emotional-memory-f5-1",
+              "value": 0.3,
+              "weights": [
+                {
+                  "event": "life:new-context:agent-1",
+                  "outcome": 0.3,
+                  "salience": 0.23,
+                  "weight": 0.023000000000000003
+                }
+              ]
+            },
+            "integrated": {
+              "communication": null,
+              "inference": null,
+              "memory": {
+                "baseline": {
+                  "action": "rest",
+                  "duration": 5,
+                  "goal": "reduce_exposure",
+                  "origin": "authored_weather_baseline",
+                  "parameters": {},
+                  "targets": []
+                },
+                "caution_threshold": -0.11485753783648747,
+                "changed": false,
+                "emotional_memory": {
+                  "confidence": 0.022737516226722928,
+                  "context": "rain/mild/open",
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "origin": "retrieved own acquired journal links; authored weights",
+                  "rule": "alice-emotional-memory-f5-1",
+                  "value": 0.3,
+                  "weights": [
+                    {
+                      "event": "life:new-context:agent-1",
+                      "outcome": 0.3,
+                      "salience": 0.23,
+                      "weight": 0.023000000000000003
+                    }
+                  ]
+                },
+                "memory_connected": true,
+                "mood_connected": true,
+                "mood_stress": 0.12856155408781308,
+                "origin": "acquired emotional memory + authored retrieval/routing",
+                "origin_detail": "authored bounded mood influence on personal learned cue",
+                "prediction": {
+                  "confidence": 0.022737516226722928,
+                  "memories": [
+                    "life:new-context:agent-1"
+                  ],
+                  "value": 0.3
+                },
+                "reason": "no eligible learned preference"
+              },
+              "regulation": null,
+              "relationship": null,
+              "social": null,
+              "values": null
+            },
+            "memory_connected": true,
+            "mood_connected": true,
+            "mood_stress": 0.12856155408781308,
+            "origin": "acquired emotional memory + authored retrieval/routing",
+            "origin_detail": "authored bounded mood influence on personal learned cue",
+            "prediction": {
+              "confidence": 0.022737516226722928,
+              "memories": [
+                "life:new-context:agent-1"
+              ],
+              "value": 0.3
+            },
+            "reason": "no eligible learned preference"
+          },
+          "replay": {
+            "verified": true,
+            "operations": 6,
+            "physical": {
+              "replay_matches": true,
+              "operations": 11,
+              "state_hash": "e225406e1bd1adf101c5b7cb3f5ac61bd7e3df3c1445246cb8ffe6af330bfc48"
+            },
+            "hash": "5338e187acbdb7f163ec2e4130f8bc9a697dcdecd9830a03da30994a22e1edff"
+          }
+        }
+      },
+      "gates": {
+        "F8_real_time_costed_recovery": true,
+        "F8_improves_recovery_or_decision_quality": false,
+        "F11_two_context_acquired_choice": true,
+        "persistence": true
+      },
+      "F8_failure_reason": "Observed fatigue relief is real, but no controlled improvement from learned strategy selection has been established.",
+      "wall_s": 4.915855100000044
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+test_disabled_native_matches_old_runtime_bodies_and_resources (test_weather_clock.WeatherClockTests.test_disabled_native_matches_old_runtime_bodies_and_resources) ... FAIL
+test_fresh_process_resume (test_weather_clock.WeatherClockTests.test_fresh_process_resume) ... FAIL
+test_invalid_config_and_new_world_only (test_weather_clock.WeatherClockTests.test_invalid_config_and_new_world_only) ... ok
+test_repeatability_fractional_resume_and_inspection (test_weather_clock.WeatherClockTests.test_repeatability_fractional_resume_and_inspection) ... ok
+test_season_boundary_and_long_calendar (test_weather_clock.WeatherClockTests.test_season_boundary_and_long_calendar) ... ok
+test_atomic_journal_inspection_backup_and_replay (test_weather_store.WeatherStoreTests.test_atomic_journal_inspection_backup_and_replay) ... ok
+test_invalid_operation_rolls_back_and_old_schema_refused (test_weather_store.WeatherStoreTests.test_invalid_operation_rolls_back_and_old_schema_refused) ... ERROR
+
+======================================================================
+ERROR: test_invalid_operation_rolls_back_and_old_schema_refused (test_weather_store.WeatherStoreTests.test_invalid_operation_rolls_back_and_old_schema_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\shutil.py", line 633, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\abc\\AppData\\Local\\Temp\\tmpv8v0ud83\\weather.sqlite'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\weather_tests\test_weather_store.py", line 27, in test_invalid_operation_rolls_back_and_old_schema_refused
+    with tempfile.TemporaryDirectory() as directory:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\shutil.py", line 635, in _rmtree_unsafe
+    onexc(os.unlink, fullname, err)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\tempfile.py", line 909, in onexc
+    _os.unlink(path)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\abc\\AppData\\Local\\Temp\\tmpv8v0ud83\\weather.sqlite'
+
+======================================================================
+FAIL: test_disabled_native_matches_old_runtime_bodies_and_resources (test_weather_clock.WeatherClockTests.test_disabled_native_matches_old_runtime_bodies_and_resources)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\weather_tests\test_weather_clock.py", line 74, in test_disabled_native_matches_old_runtime_bodies_and_resources
+    self.assertEqual(new[key], old[key], key)
+AssertionError: Lists differ: [{'en[48 chars]_m': (16.0, 16.0), 'radius_m': 1.0, 'mass_kg':[1649 chars] {}}] != [{'en[48 chars]_m': [16.0, 16.0], 'radius_m': 1.0, 'mass_kg':[1649 chars] {}}]
+
+First differing element 0:
+{'ent[47 chars]_m': (16.0, 16.0), 'radius_m': 1.0, 'mass_kg':[36 chars]: {}}
+{'ent[47 chars]_m': [16.0, 16.0], 'radius_m': 1.0, 'mass_kg':[36 chars]: {}}
+
+Diff is 2954 characters long. Set self.maxDiff to None to see it. : entities
+
+======================================================================
+FAIL: test_fresh_process_resume (test_weather_clock.WeatherClockTests.test_fresh_process_resume)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\weather_tests\test_weather_clock.py", line 54, in test_fresh_process_resume
+    self.assertEqual(w.checkpoint(), result.strip())
+AssertionError: 'UW10[8349 chars]7482252843 3.8355400357286724 90 110 180 15863733762948671326 ' != 'UW10[8349 chars]7482252843 3.8355400357286724 90 110 180 15863733762948671326'
+Diff is 8991 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 7 tests in 3.153s
+
+FAILED (failures=2, errors=1)

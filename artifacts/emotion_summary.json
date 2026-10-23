@@ -1,0 +1,938 @@
+{
+  "passed": true,
+  "wall_s": 887.395923,
+  "rows": [
+    {
+      "seed": 17011,
+      "wall_s": 358.9012645999974,
+      "arms": {
+        "learned": {
+          "actions": {
+            "danger": "move",
+            "harmless": "rest",
+            "reversal": "rest"
+          },
+          "completed": 3,
+          "rejected": 0,
+          "learned_contributions": 1,
+          "proposal_latency_mean_s": 0.17520009999983208,
+          "proposal_latency_max_s": 0.3543262999992294,
+          "costs": {
+            "danger": {
+              "simulated_s": 2.0,
+              "fatigue_delta": 0.0024404999999999982,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "harmless": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012999999999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "reversal": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.01697750000000001,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            }
+          },
+          "simulated_training_s": 843.0,
+          "sqlite_bytes": 2035712,
+          "private_state_bytes": 5109,
+          "native_final_time_s": 930.75
+        },
+        "frozen": {
+          "actions": {
+            "danger": "rest",
+            "harmless": "rest",
+            "reversal": "rest"
+          },
+          "completed": 3,
+          "rejected": 0,
+          "learned_contributions": 0,
+          "proposal_latency_mean_s": 0.19044299999950454,
+          "proposal_latency_max_s": 0.3086053999977594,
+          "costs": {
+            "danger": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012977499999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "harmless": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012999999999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "reversal": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.01697750000000001,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            }
+          },
+          "simulated_training_s": 843.0,
+          "sqlite_bytes": 1875968,
+          "private_state_bytes": 4122,
+          "native_final_time_s": 930.75
+        },
+        "disconnected": {
+          "actions": {
+            "danger": "rest",
+            "harmless": "rest",
+            "reversal": "rest"
+          },
+          "completed": 3,
+          "rejected": 0,
+          "learned_contributions": 0,
+          "proposal_latency_mean_s": 0.08151299999978316,
+          "proposal_latency_max_s": 0.08438439999736147,
+          "costs": {
+            "danger": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012977499999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "harmless": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012999999999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "reversal": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.01697750000000001,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            }
+          },
+          "simulated_training_s": 843.0,
+          "sqlite_bytes": 2035712,
+          "private_state_bytes": 5114,
+          "native_final_time_s": 930.75
+        },
+        "disabled": {
+          "actions": {
+            "danger": "rest",
+            "harmless": "rest",
+            "reversal": "rest"
+          },
+          "completed": 3,
+          "rejected": 0,
+          "learned_contributions": 0,
+          "proposal_latency_mean_s": 0.08266920000096434,
+          "proposal_latency_max_s": 0.09083660000032978,
+          "costs": {
+            "danger": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012977499999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "harmless": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012999999999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "reversal": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.01697750000000001,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            }
+          },
+          "simulated_training_s": 843.0,
+          "sqlite_bytes": 1835008,
+          "private_state_bytes": 3158,
+          "native_final_time_s": 930.75
+        }
+      },
+      "bodily": {
+        "cold": {
+          "distress": 0.999987522134323,
+          "recovery_distress": 0.40041810131260697,
+          "health": 0.9119233928571717,
+          "replay": {
+            "verified": true,
+            "operations": 92,
+            "physical": {
+              "replay_matches": true,
+              "operations": 92,
+              "state_hash": "22ea8c099b32d06763acc23120156c3ac4ee1a6b44f0ef5d82d2b274ead58e53"
+            },
+            "hash": "87a9d70b8378e8d5d7958ee5554c58a4a1e4827322fec07ca65010ebeccbd1f6"
+          }
+        },
+        "mild": {
+          "distress": 0.2486384641089139,
+          "recovery_distress": 0.3206816060542197,
+          "health": 1.0,
+          "replay": {
+            "verified": true,
+            "operations": 92,
+            "physical": {
+              "replay_matches": true,
+              "operations": 92,
+              "state_hash": "22425f7599309b14de6031e4647a570e995b83e320f8cdc3a4a7f5d813b4421d"
+            },
+            "hash": "9463e1fbf14650fbec976a84dc76fdc22a443315cfa612b97713c4b09cf12582"
+          }
+        },
+        "passed": true
+      },
+      "value_after_harm": -0.7343769027077796,
+      "value_after_reversal": 0.20252864994599581
+    },
+    {
+      "seed": 17021,
+      "wall_s": 357.71853569999803,
+      "arms": {
+        "learned": {
+          "actions": {
+            "danger": "move",
+            "harmless": "rest",
+            "reversal": "rest"
+          },
+          "completed": 3,
+          "rejected": 0,
+          "learned_contributions": 1,
+          "proposal_latency_mean_s": 0.09958146666637428,
+          "proposal_latency_max_s": 0.12245210000037332,
+          "costs": {
+            "danger": {
+              "simulated_s": 2.0,
+              "fatigue_delta": 0.0024404999999999982,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "harmless": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012999999999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "reversal": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.01697750000000001,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            }
+          },
+          "simulated_training_s": 843.0,
+          "sqlite_bytes": 2035712,
+          "private_state_bytes": 5109,
+          "native_final_time_s": 930.75
+        },
+        "frozen": {
+          "actions": {
+            "danger": "rest",
+            "harmless": "rest",
+            "reversal": "rest"
+          },
+          "completed": 3,
+          "rejected": 0,
+          "learned_contributions": 0,
+          "proposal_latency_mean_s": 0.08254770000106267,
+          "proposal_latency_max_s": 0.1024204000023019,
+          "costs": {
+            "danger": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012977499999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "harmless": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012999999999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "reversal": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.01697750000000001,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            }
+          },
+          "simulated_training_s": 843.0,
+          "sqlite_bytes": 1875968,
+          "private_state_bytes": 4122,
+          "native_final_time_s": 930.75
+        },
+        "disconnected": {
+          "actions": {
+            "danger": "rest",
+            "harmless": "rest",
+            "reversal": "rest"
+          },
+          "completed": 3,
+          "rejected": 0,
+          "learned_contributions": 0,
+          "proposal_latency_mean_s": 0.13075613333179112,
+          "proposal_latency_max_s": 0.22845990000132588,
+          "costs": {
+            "danger": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012977499999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "harmless": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012999999999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "reversal": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.01697750000000001,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            }
+          },
+          "simulated_training_s": 843.0,
+          "sqlite_bytes": 2035712,
+          "private_state_bytes": 5114,
+          "native_final_time_s": 930.75
+        },
+        "disabled": {
+          "actions": {
+            "danger": "rest",
+            "harmless": "rest",
+            "reversal": "rest"
+          },
+          "completed": 3,
+          "rejected": 0,
+          "learned_contributions": 0,
+          "proposal_latency_mean_s": 0.09398886666652591,
+          "proposal_latency_max_s": 0.1026001999998698,
+          "costs": {
+            "danger": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012977499999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "harmless": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012999999999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "reversal": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.01697750000000001,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            }
+          },
+          "simulated_training_s": 843.0,
+          "sqlite_bytes": 1835008,
+          "private_state_bytes": 3158,
+          "native_final_time_s": 930.75
+        }
+      },
+      "bodily": {
+        "cold": {
+          "distress": 0.999987522134323,
+          "recovery_distress": 0.40041810131260697,
+          "health": 0.9119233928571717,
+          "replay": {
+            "verified": true,
+            "operations": 92,
+            "physical": {
+              "replay_matches": true,
+              "operations": 92,
+              "state_hash": "62054c1939c4af4dbc355d7c3a52702ba69cca4a7a4778a0a7abcace0d73e7a7"
+            },
+            "hash": "ec1ee3fb536949e3d947a307857a9fe926b525bbeb3cf0518a9f9f35a66046d3"
+          }
+        },
+        "mild": {
+          "distress": 0.2486384641089139,
+          "recovery_distress": 0.3206816060542197,
+          "health": 1.0,
+          "replay": {
+            "verified": true,
+            "operations": 92,
+            "physical": {
+              "replay_matches": true,
+              "operations": 92,
+              "state_hash": "11f7e2751df4cb1e739456279f339b31e56f1a28b9be32be75bffc18fa4e5c3f"
+            },
+            "hash": "c154fa6f2a4fe210277bf1d330191985457bdc90048ed5f8f5bdf2baa22dcc29"
+          }
+        },
+        "passed": true
+      },
+      "value_after_harm": -0.7343769027077796,
+      "value_after_reversal": 0.20252864994599581
+    },
+    {
+      "seed": 17027,
+      "wall_s": 325.2521493000022,
+      "arms": {
+        "learned": {
+          "actions": {
+            "danger": "move",
+            "harmless": "rest",
+            "reversal": "rest"
+          },
+          "completed": 3,
+          "rejected": 0,
+          "learned_contributions": 1,
+          "proposal_latency_mean_s": 0.09246206666648504,
+          "proposal_latency_max_s": 0.09423179999794229,
+          "costs": {
+            "danger": {
+              "simulated_s": 2.0,
+              "fatigue_delta": 0.0024404999999999982,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "harmless": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012999999999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "reversal": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.01697750000000001,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            }
+          },
+          "simulated_training_s": 843.0,
+          "sqlite_bytes": 2035712,
+          "private_state_bytes": 5109,
+          "native_final_time_s": 930.75
+        },
+        "frozen": {
+          "actions": {
+            "danger": "rest",
+            "harmless": "rest",
+            "reversal": "rest"
+          },
+          "completed": 3,
+          "rejected": 0,
+          "learned_contributions": 0,
+          "proposal_latency_mean_s": 0.08315516666698386,
+          "proposal_latency_max_s": 0.08862190000218106,
+          "costs": {
+            "danger": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012977499999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "harmless": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012999999999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "reversal": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.01697750000000001,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            }
+          },
+          "simulated_training_s": 843.0,
+          "sqlite_bytes": 1875968,
+          "private_state_bytes": 4122,
+          "native_final_time_s": 930.75
+        },
+        "disconnected": {
+          "actions": {
+            "danger": "rest",
+            "harmless": "rest",
+            "reversal": "rest"
+          },
+          "completed": 3,
+          "rejected": 0,
+          "learned_contributions": 0,
+          "proposal_latency_mean_s": 0.08503120000023046,
+          "proposal_latency_max_s": 0.0925098000006983,
+          "costs": {
+            "danger": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012977499999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "harmless": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012999999999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "reversal": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.01697750000000001,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            }
+          },
+          "simulated_training_s": 843.0,
+          "sqlite_bytes": 2035712,
+          "private_state_bytes": 5114,
+          "native_final_time_s": 930.75
+        },
+        "disabled": {
+          "actions": {
+            "danger": "rest",
+            "harmless": "rest",
+            "reversal": "rest"
+          },
+          "completed": 3,
+          "rejected": 0,
+          "learned_contributions": 0,
+          "proposal_latency_mean_s": 0.09246520000063659,
+          "proposal_latency_max_s": 0.10687049999978626,
+          "costs": {
+            "danger": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012977499999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "harmless": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012999999999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "reversal": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.01697750000000001,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            }
+          },
+          "simulated_training_s": 843.0,
+          "sqlite_bytes": 1835008,
+          "private_state_bytes": 3158,
+          "native_final_time_s": 930.75
+        }
+      },
+      "bodily": {
+        "cold": {
+          "distress": 0.999987522134323,
+          "recovery_distress": 0.40041810131260697,
+          "health": 0.9119233928571717,
+          "replay": {
+            "verified": true,
+            "operations": 92,
+            "physical": {
+              "replay_matches": true,
+              "operations": 92,
+              "state_hash": "95a8c02144066caa5b7a6a55b844d861be4b473ee36d82029485db4c5c34baab"
+            },
+            "hash": "8bc7ee0a177ca458afc6e5671d5f4fe4d7623b02a960137b89bb338ffcd2fe5e"
+          }
+        },
+        "mild": {
+          "distress": 0.2486384641089139,
+          "recovery_distress": 0.3206816060542197,
+          "health": 1.0,
+          "replay": {
+            "verified": true,
+            "operations": 92,
+            "physical": {
+              "replay_matches": true,
+              "operations": 92,
+              "state_hash": "61184533867f2b3b3871ad0c1982d6bf0948685f785cae28d32779fa22dab259"
+            },
+            "hash": "6d8b199b2affd4941b11181117de7439bad27e979e6ce9783088012c52138991"
+          }
+        },
+        "passed": true
+      },
+      "value_after_harm": -0.7343769027077796,
+      "value_after_reversal": 0.20252864994599581
+    },
+    {
+      "seed": 17033,
+      "wall_s": 329.6339482000003,
+      "arms": {
+        "learned": {
+          "actions": {
+            "danger": "move",
+            "harmless": "rest",
+            "reversal": "rest"
+          },
+          "completed": 3,
+          "rejected": 0,
+          "learned_contributions": 1,
+          "proposal_latency_mean_s": 0.08769003333266785,
+          "proposal_latency_max_s": 0.08914910000021337,
+          "costs": {
+            "danger": {
+              "simulated_s": 2.0,
+              "fatigue_delta": 0.0024404999999999982,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "harmless": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012999999999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "reversal": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.01697750000000001,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            }
+          },
+          "simulated_training_s": 843.0,
+          "sqlite_bytes": 2035712,
+          "private_state_bytes": 5109,
+          "native_final_time_s": 930.75
+        },
+        "frozen": {
+          "actions": {
+            "danger": "rest",
+            "harmless": "rest",
+            "reversal": "rest"
+          },
+          "completed": 3,
+          "rejected": 0,
+          "learned_contributions": 0,
+          "proposal_latency_mean_s": 0.08604230000006889,
+          "proposal_latency_max_s": 0.08636540000225068,
+          "costs": {
+            "danger": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012977499999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "harmless": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012999999999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "reversal": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.01697750000000001,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            }
+          },
+          "simulated_training_s": 843.0,
+          "sqlite_bytes": 1875968,
+          "private_state_bytes": 4122,
+          "native_final_time_s": 930.75
+        },
+        "disconnected": {
+          "actions": {
+            "danger": "rest",
+            "harmless": "rest",
+            "reversal": "rest"
+          },
+          "completed": 3,
+          "rejected": 0,
+          "learned_contributions": 0,
+          "proposal_latency_mean_s": 0.0793306999997488,
+          "proposal_latency_max_s": 0.08626770000046236,
+          "costs": {
+            "danger": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012977499999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "harmless": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012999999999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "reversal": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.01697750000000001,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            }
+          },
+          "simulated_training_s": 843.0,
+          "sqlite_bytes": 2035712,
+          "private_state_bytes": 5114,
+          "native_final_time_s": 930.75
+        },
+        "disabled": {
+          "actions": {
+            "danger": "rest",
+            "harmless": "rest",
+            "reversal": "rest"
+          },
+          "completed": 3,
+          "rejected": 0,
+          "learned_contributions": 0,
+          "proposal_latency_mean_s": 0.08382463333449171,
+          "proposal_latency_max_s": 0.09485429999767803,
+          "costs": {
+            "danger": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012977499999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "harmless": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012999999999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "reversal": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.01697750000000001,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            }
+          },
+          "simulated_training_s": 843.0,
+          "sqlite_bytes": 1835008,
+          "private_state_bytes": 3158,
+          "native_final_time_s": 930.75
+        }
+      },
+      "bodily": {
+        "cold": {
+          "distress": 0.999987522134323,
+          "recovery_distress": 0.40041810131260697,
+          "health": 0.9119233928571717,
+          "replay": {
+            "verified": true,
+            "operations": 92,
+            "physical": {
+              "replay_matches": true,
+              "operations": 92,
+              "state_hash": "bcf108ffc0ca5549be9f2b0fdb0e671c15cb8413c168e93ecbfe59e2e7426801"
+            },
+            "hash": "535722a32f80d9046e5707d0b320a358c3f8a92ac5224a66bc067b1f4aa449bf"
+          }
+        },
+        "mild": {
+          "distress": 0.2486384641089139,
+          "recovery_distress": 0.3206816060542197,
+          "health": 1.0,
+          "replay": {
+            "verified": true,
+            "operations": 92,
+            "physical": {
+              "replay_matches": true,
+              "operations": 92,
+              "state_hash": "85cb42c92da8043cb2df201df359e23fd76e5deb15b0f96a9e3a5451b07d38de"
+            },
+            "hash": "b698c0e95bc2ad450cacec568bcc37f121f32484c8457ce6c6224e7bba901e20"
+          }
+        },
+        "passed": true
+      },
+      "value_after_harm": -0.7343769027077796,
+      "value_after_reversal": 0.20252864994599581
+    },
+    {
+      "seed": 17041,
+      "wall_s": 204.29827379999915,
+      "arms": {
+        "learned": {
+          "actions": {
+            "danger": "move",
+            "harmless": "rest",
+            "reversal": "rest"
+          },
+          "completed": 3,
+          "rejected": 0,
+          "learned_contributions": 1,
+          "proposal_latency_mean_s": 0.054649399999713445,
+          "proposal_latency_max_s": 0.06344969999918249,
+          "costs": {
+            "danger": {
+              "simulated_s": 2.0,
+              "fatigue_delta": 0.0024404999999999982,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "harmless": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012999999999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "reversal": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.01698261875000001,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            }
+          },
+          "simulated_training_s": 843.0,
+          "sqlite_bytes": 2035712,
+          "private_state_bytes": 5109,
+          "native_final_time_s": 930.75
+        },
+        "frozen": {
+          "actions": {
+            "danger": "rest",
+            "harmless": "rest",
+            "reversal": "rest"
+          },
+          "completed": 3,
+          "rejected": 0,
+          "learned_contributions": 0,
+          "proposal_latency_mean_s": 0.05726463333242767,
+          "proposal_latency_max_s": 0.06951910000134376,
+          "costs": {
+            "danger": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012982618749999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "harmless": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012999999999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "reversal": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.01698261875000001,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            }
+          },
+          "simulated_training_s": 843.0,
+          "sqlite_bytes": 1875968,
+          "private_state_bytes": 4122,
+          "native_final_time_s": 930.75
+        },
+        "disconnected": {
+          "actions": {
+            "danger": "rest",
+            "harmless": "rest",
+            "reversal": "rest"
+          },
+          "completed": 3,
+          "rejected": 0,
+          "learned_contributions": 0,
+          "proposal_latency_mean_s": 0.06479556666818098,
+          "proposal_latency_max_s": 0.07700980000299751,
+          "costs": {
+            "danger": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012982618749999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "harmless": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012999999999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "reversal": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.01698261875000001,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            }
+          },
+          "simulated_training_s": 843.0,
+          "sqlite_bytes": 2035712,
+          "private_state_bytes": 5114,
+          "native_final_time_s": 930.75
+        },
+        "disabled": {
+          "actions": {
+            "danger": "rest",
+            "harmless": "rest",
+            "reversal": "rest"
+          },
+          "completed": 3,
+          "rejected": 0,
+          "learned_contributions": 0,
+          "proposal_latency_mean_s": 0.052999266665816926,
+          "proposal_latency_max_s": 0.06041470000127447,
+          "costs": {
+            "danger": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012982618749999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "harmless": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.012999999999999994,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            },
+            "reversal": {
+              "simulated_s": 5.0,
+              "fatigue_delta": -0.01698261875000001,
+              "food_ingested_ug": 0,
+              "water_ingested_ug": 0
+            }
+          },
+          "simulated_training_s": 843.0,
+          "sqlite_bytes": 1835008,
+          "private_state_bytes": 3158,
+          "native_final_time_s": 930.75
+        }
+      },
+      "bodily": {
+        "cold": {
+          "distress": 0.999987522134323,
+          "recovery_distress": 0.40041810131260697,
+          "health": 0.9119233928571717,
+          "replay": {
+            "verified": true,
+            "operations": 92,
+            "physical": {
+              "replay_matches": true,
+              "operations": 92,
+              "state_hash": "4046021149083d52f46273835b118017727ec47ab13c675060b381a0f3084199"
+            },
+            "hash": "d1581700eb20a8d8659c7a6d4226b6ffa325feae3cd4dcb7fb871920d4be3e23"
+          }
+        },
+        "mild": {
+          "distress": 0.2486384641089139,
+          "recovery_distress": 0.3206816060542197,
+          "health": 1.0,
+          "replay": {
+            "verified": true,
+            "operations": 92,
+            "physical": {
+              "replay_matches": true,
+              "operations": 92,
+              "state_hash": "cc44e19c3de49d45a47392ddb1091c2070eb126a25f0e79c915e2d0d64420902"
+            },
+            "hash": "aaa6105c1d508851ec14d1ca263f917b8954a038166d6a2eb4aa0867f04b1157"
+          }
+        },
+        "passed": true
+      },
+      "value_after_harm": -0.7343769027077796,
+      "value_after_reversal": 0.20252864994599581
+    }
+  ],
+  "notes": [
+    "Completed native receipts imply accepted requests; this is not plan/JSON validity evidence.",
+    "60 first-action probes; each begins from a copy of its own conditioning head.",
+    "Learned safety movements cost2 simulated seconds vs baseline rest5; no matched-horizon survival advantage claimed.",
+    "Native temperature/rain probe levels vary; forced conditioning yields identical fitted cue values across seeds.",
+    "Assigned real feeding and roof setup are operator apparatus, not learned survival."
+  ]
+}

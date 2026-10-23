@@ -1,0 +1,26 @@
+{"seed": 41, "arm": "untrained_newcomer", "rate": 0.08333333333333333, "wall_s": 10.723059300000045}
+{"seed": 41, "arm": "newcomer_learned", "rate": 1.0, "wall_s": 20.63659569999993}
+{"seed": 41, "arm": "post_interference_retained", "rate": 1.0, "wall_s": 21.532317899999953}
+Traceback (most recent call last):
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\scripts\community_study.py", line 304, in <module>
+    main()
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\scripts\community_study.py", line 295, in main
+    cases.append(seed_case(args.directory, seed))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\scripts\community_study.py", line 214, in seed_case
+    raise RuntimeError(child.stderr)
+RuntimeError: Traceback (most recent call last):
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\scripts\community_study.py", line 304, in <module>
+    main()
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\scripts\community_study.py", line 268, in main
+    result = evaluate(args.db, args.seed, args.arm)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\scripts\community_study.py", line 144, in evaluate
+    preparation = setup_arm(path, seed, arm)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\scripts\community_study.py", line 130, in setup_arm
+    move(path, 'agent-1', [6, 6])
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\scripts\community_study.py", line 31, in move
+    raise ValueError('authored station route unavailable')
+ValueError: authored station route unavailable
+

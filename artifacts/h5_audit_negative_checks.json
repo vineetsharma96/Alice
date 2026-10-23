@@ -1,0 +1,26 @@
+[
+  {
+    "check": "fabricated_goal",
+    "refused": true,
+    "reason": "H5 reported goal differs from native outcome",
+    "wall_s": 0.5711725999999544
+  },
+  {
+    "check": "missing_world",
+    "refused": true,
+    "reason": "unable to open database file",
+    "wall_s": 0.36152729999957955
+  },
+  {
+    "check": "altered_receipt",
+    "refused": true,
+    "reason": "H5 report differs from durable native execution",
+    "wall_s": 0.495213799999874
+  },
+  {
+    "check": "altered_registration",
+    "refused": true,
+    "reason": "H5 frozen source mismatch",
+    "wall_s": 0.15175779999935912
+  }
+]

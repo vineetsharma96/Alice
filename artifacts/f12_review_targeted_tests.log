@@ -1,0 +1,19 @@
+.............F.....................                                      [100%]
+================================== FAILURES ===================================
+_ IntegrationF12Tests.test_real_action_interval_is_not_the_whole_telemetry_segment _
+
+self = <tests.test_integration_f12.IntegrationF12Tests testMethod=test_real_action_interval_is_not_the_whole_telemetry_segment>
+
+    def test_real_action_interval_is_not_the_whole_telemetry_segment(self):
+        observation=storage.observe(self.destination,['agent-1'])[0]
+        request={'schema_version':1,'run_id':self.run_id,'request_id':'actual-rest',
+            'agent_id':'agent-1','observation_version':observation['tick'],'action_type':'rest',
+            'target_ids':[],'parameters':{},'requested_duration':1.0}
+>       storage.step(self.destination,20,requests=[request])
+        ^^^^^^^^^^^^
+E       AttributeError: module 'underworld.storage' has no attribute 'step'
+
+tests\test_integration_f12.py:30: AttributeError
+=========================== short test summary info ===========================
+FAILED tests/test_integration_f12.py::IntegrationF12Tests::test_real_action_interval_is_not_the_whole_telemetry_segment
+1 failed, 34 passed in 13.96s

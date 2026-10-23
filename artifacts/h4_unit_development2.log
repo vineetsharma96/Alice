@@ -1,0 +1,17 @@
+test_empty_source_prevents_native_invalid_gather (test_wayfinding.WayfindingTests.test_empty_source_prevents_native_invalid_gather) ... ok
+test_location_learning_uses_native_covisit_and_is_idempotent (test_wayfinding.WayfindingTests.test_location_learning_uses_native_covisit_and_is_idempotent) ... ok
+test_location_update_rollback_and_postcommit_recovery (test_wayfinding.WayfindingTests.test_location_update_rollback_and_postcommit_recovery) ... ok
+test_missing_native_speech_proof_stops_audit (test_wayfinding.WayfindingTests.test_missing_native_speech_proof_stops_audit) ... ok
+test_native_relief_update_is_once_and_conflicting_identity_refused (test_wayfinding.WayfindingTests.test_native_relief_update_is_once_and_conflicting_identity_refused) ... ok
+test_need_choice_requires_own_learned_predictions (test_wayfinding.WayfindingTests.test_need_choice_requires_own_learned_predictions) ... ok
+test_new_cohort_has_empty_private_location_and_need_memories (test_wayfinding.WayfindingTests.test_new_cohort_has_empty_private_location_and_need_memories) ... ok
+test_old_speech_cannot_ground_current_position (test_wayfinding.WayfindingTests.test_old_speech_cannot_ground_current_position) ... ok
+test_relief_crash_recovery_preserves_native_consumption (test_wayfinding.WayfindingTests.test_relief_crash_recovery_preserves_native_consumption) ... ok
+test_report_remains_unverified_and_repeated_receive_does_not_update (test_wayfinding.WayfindingTests.test_report_remains_unverified_and_repeated_receive_does_not_update) ... ok
+test_resource_token_does_not_supply_location (test_wayfinding.WayfindingTests.test_resource_token_does_not_supply_location) ... ok
+test_saved_learner_retains_own_state_and_archive_snapshot (test_wayfinding.WayfindingTests.test_saved_learner_retains_own_state_and_archive_snapshot) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 14.623s
+
+OK

@@ -1,0 +1,22 @@
+test_composition (unittest.loader._FailedTest.test_composition) ... ERROR
+
+======================================================================
+ERROR: test_composition (unittest.loader._FailedTest.test_composition)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_composition
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\unittest\loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\tests\test_composition.py", line 10, in <module>
+    from scripts.composition_study import train
+  File "C:\Users\abc\Documents\ChatGPT\UnderWorld\scripts\composition_study.py", line 15, in <module>
+    from developmental_study import introduce, identifier, interval  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'developmental_study'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

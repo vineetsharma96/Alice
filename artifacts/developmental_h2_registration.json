@@ -8,11 +8,11 @@
   ],
   "files": {
     "underworld/developmental.py": "9dcc073a7b4597ea20230a8d6b5768a451703c90386621210321934aa202b96c",
-    "underworld/symbols.py": "683b920f09731d3c0900a79b73298146a8567062cca34801805d393aa1b7036c",
+    "underworld/symbols.py": "0b3a71f4130ee822fbb84603c455abdd5bd0957aaa5c422962d24f34b0011d29",
     "scripts/developmental_study.py": "1b7fc9520fc0a671547be2693a11bb7a06b6d2529a39c05b97c9014aa8cca7db",
     "scripts/symbol_study.py": "66c1d2c40495139addb2a677bbca1c28f2549bd7fd69b91145d9ce5e7b25ebcf",
     "tests/test_symbols.py": "fec485c25ff9b05bd68273a4ae00a457784df44a0d2ac110719f1c471fe474a1",
-    "config/developmental.toml": "a1d7302a7251a7647fe1ab4ca82933b41451995574de7b054b61b745bb7328c4",
+    "config/developmental.toml": "bc3e7172f29f06040d523e5f90ca0f59f2412435d79ebb5381b647a097e773f3",
     "docs/DEVELOPMENTAL_H2_PROTOCOL.md": "fca01d0ee213d8f2ecf524d2adcf47bbb9a99caddeb0516d39cdf0ddf08927ad",
     "docs/DEVELOPMENTAL_PROTOCOL.md": "eed0892fda729ed72c454dad86765854b45f9f1ba1b1456f7fe03b2bbca89893"
   }

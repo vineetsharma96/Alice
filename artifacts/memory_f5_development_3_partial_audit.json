@@ -1,0 +1,27 @@
+{
+  "world": "data\\memory-f5-development-3\\seed-53\\connected-corrected.sqlite",
+  "sha256": "f1d5be183097d1efafe5f495a201e91dec04d9a1fe7895350b9f6124358f3612",
+  "verified": true,
+  "peak_index_bytes": 17991,
+  "accepted": 136,
+  "completed": 137,
+  "rejections": {},
+  "actions": {
+    "drink": 13,
+    "eat": 9,
+    "gather": 22,
+    "move": 16,
+    "rest": 77
+  },
+  "simulated_s": 935.75,
+  "replay": {
+    "verified": true,
+    "operations": 278,
+    "physical": {
+      "replay_matches": true,
+      "operations": 323,
+      "state_hash": "ab8013e2d451960661a5a9f7e9736c9759f41985b6c8cc4baa775e69a2acb3df"
+    },
+    "hash": "23c876e4cfa27b31f81f98240c53b652faff4e6bb81560d63a9fe672d8cf5b11"
+  }
+}

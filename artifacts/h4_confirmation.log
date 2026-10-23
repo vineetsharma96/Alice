@@ -1,0 +1,93 @@
+{"seed": 9203, "site": 0, "arm": "enabled", "success": true, "wall_s": 2.286789900000258}
+{"seed": 9203, "site": 0, "arm": "muted", "success": true, "wall_s": 2.7518824999997378}
+{"seed": 9203, "site": 0, "arm": "scrambled", "success": false, "wall_s": 2.4148033999999825}
+{"seed": 9203, "site": 0, "arm": "identity", "success": true, "wall_s": 2.543630499999381}
+{"seed": 9203, "site": 1, "arm": "enabled", "success": true, "wall_s": 2.5950149000000238}
+{"seed": 9203, "site": 1, "arm": "muted", "success": false, "wall_s": 1.6941267000001972}
+{"seed": 9203, "site": 1, "arm": "scrambled", "success": false, "wall_s": 1.6549685999998474}
+{"seed": 9203, "site": 1, "arm": "identity", "success": false, "wall_s": 2.603154800000084}
+{"seed": 9227, "site": 0, "arm": "enabled", "success": true, "wall_s": 2.239759700000832}
+{"seed": 9227, "site": 0, "arm": "muted", "success": false, "wall_s": 1.5896621000001687}
+{"seed": 9227, "site": 0, "arm": "scrambled", "success": false, "wall_s": 1.6485595999993166}
+{"seed": 9227, "site": 0, "arm": "identity", "success": false, "wall_s": 1.703178100000514}
+{"seed": 9227, "site": 1, "arm": "enabled", "success": true, "wall_s": 3.271527800000513}
+{"seed": 9227, "site": 1, "arm": "muted", "success": true, "wall_s": 3.180327099999886}
+{"seed": 9227, "site": 1, "arm": "scrambled", "success": false, "wall_s": 2.409201000000394}
+{"seed": 9227, "site": 1, "arm": "identity", "success": true, "wall_s": 3.4452991000007387}
+{"seed": 9257, "site": 0, "arm": "enabled", "success": true, "wall_s": 2.4091730999998617}
+{"seed": 9257, "site": 0, "arm": "muted", "success": false, "wall_s": 2.3501455999994505}
+{"seed": 9257, "site": 0, "arm": "scrambled", "success": false, "wall_s": 2.232467899999392}
+{"seed": 9257, "site": 0, "arm": "identity", "success": false, "wall_s": 1.7148103999998057}
+{"seed": 9257, "site": 1, "arm": "enabled", "success": true, "wall_s": 2.7565800000002127}
+{"seed": 9257, "site": 1, "arm": "muted", "success": true, "wall_s": 2.22101769999972}
+{"seed": 9257, "site": 1, "arm": "scrambled", "success": false, "wall_s": 1.5487874999998894}
+{"seed": 9257, "site": 1, "arm": "identity", "success": true, "wall_s": 2.8654849000004106}
+{"seed": 9277, "site": 0, "arm": "enabled", "success": true, "wall_s": 2.6354520000004413}
+{"seed": 9277, "site": 0, "arm": "muted", "success": false, "wall_s": 1.7097656000005372}
+{"seed": 9277, "site": 0, "arm": "scrambled", "success": false, "wall_s": 1.672844000000623}
+{"seed": 9277, "site": 0, "arm": "identity", "success": false, "wall_s": 1.6729074000004402}
+{"seed": 9277, "site": 1, "arm": "enabled", "success": true, "wall_s": 2.213300200000049}
+{"seed": 9277, "site": 1, "arm": "muted", "success": true, "wall_s": 4.2074493000000075}
+{"seed": 9277, "site": 1, "arm": "scrambled", "success": false, "wall_s": 1.578289400000358}
+{"seed": 9277, "site": 1, "arm": "identity", "success": true, "wall_s": 2.8760193999996773}
+{"seed": 9293, "site": 0, "arm": "enabled", "success": true, "wall_s": 3.4215517000002365}
+{"seed": 9293, "site": 0, "arm": "muted", "success": true, "wall_s": 2.222947799999929}
+{"seed": 9293, "site": 0, "arm": "scrambled", "success": false, "wall_s": 2.409120299999813}
+{"seed": 9293, "site": 0, "arm": "identity", "success": true, "wall_s": 2.309600600000522}
+{"seed": 9293, "site": 1, "arm": "enabled", "success": true, "wall_s": 2.953328099999453}
+{"seed": 9293, "site": 1, "arm": "muted", "success": false, "wall_s": 1.8343565000004673}
+{"seed": 9293, "site": 1, "arm": "scrambled", "success": false, "wall_s": 3.94190879999951}
+{"seed": 9293, "site": 1, "arm": "identity", "success": false, "wall_s": 1.5679009000004953}
+{
+  "counts": {
+    "enabled": [
+      10,
+      10
+    ],
+    "muted": [
+      5,
+      10
+    ],
+    "scrambled": [
+      0,
+      10
+    ],
+    "identity": [
+      5,
+      10
+    ]
+  },
+  "rates": {
+    "enabled": 1.0,
+    "muted": 0.5,
+    "scrambled": 0.0,
+    "identity": 0.5
+  },
+  "improved_over_scrambled_seeds": 5,
+  "native_invariants": true,
+  "matched_initial_heads": true,
+  "identity_location_separate": true,
+  "scarcity_gate": true,
+  "communication_gate": true,
+  "need_policy_gate": true,
+  "h4_gate": true,
+  "wilson_intervals": {
+    "enabled": [
+      0.7224598312333834,
+      1.0
+    ],
+    "muted": [
+      0.23658959361548731,
+      0.7634104063845126
+    ],
+    "scrambled": [
+      -2.7755575615628914e-17,
+      0.2775401687666166
+    ],
+    "identity": [
+      0.23658959361548731,
+      0.7634104063845126
+    ]
+  },
+  "claim": "Bounded authored scout integration plus separately measured engineered need selection; not general independent intelligence."
+}

@@ -1,0 +1,51 @@
+{
+  "incoming_commit": "d54a007",
+  "original_baseline_commit": "1211d82",
+  "original_h3_gate_accepted": false,
+  "replacement_h3_native_verified": true,
+  "h3_counts": {
+    "untrained_newcomer": [
+      19,
+      60
+    ],
+    "newcomer_learned": [
+      60,
+      60
+    ],
+    "post_interference_retained": [
+      60,
+      60
+    ],
+    "ambiguous_unrepaired": [
+      17,
+      60
+    ],
+    "ambiguous_repaired": [
+      60,
+      60
+    ]
+  },
+  "h3_study_wall_s": 732.7794074000001,
+  "python_tests": 287,
+  "native_checks": 4,
+  "python_suite_wall_s": 468.1927255999999,
+  "final_cli_targeted_checks": 2,
+  "phase9_verified_files": 3439,
+  "phase9_advance": false,
+  "native_build_id": "832c4a705a7ceecd85d8befb3d84f4dff0d4730f024c395eba12985f0d8bd896",
+  "h1_h2_g_sources_preserved": true,
+  "h4_h5": "deferred",
+  "application_release": "unchanged G 0.14.0; no new label",
+  "evidence": {
+    "native_h3_audit": "h3_native_audit.json",
+    "full_checks": "h3_integration_checks.json",
+    "phase9": "h3_phase9_audit.json",
+    "incoming_review": "h3_incoming_review.json"
+  },
+  "limitations": [
+    "Authored teaching, tie repair and retention protection; not learned teaching or grammar.",
+    "New short research cohorts and counterfactual branches; not unattended survival or H4 cooperation.",
+    "Audits require actual local databases and original source hashes; no silent migration or missing-world pass.",
+    "Incoming six-animal expansion deferred; H1/H2/G defaults and original ecology restored."
+  ]
+}

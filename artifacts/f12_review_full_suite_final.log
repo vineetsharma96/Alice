@@ -1,0 +1,157 @@
+............................................................ [ 13%]
+..................................................................... [ 28%]
+............................................................ [ 41%]
+.................................................................... [ 56%]
+............................................................ [ 69%]
+....................................F.............. [ 80%]
+........................................................................ [ 96%]
+.................                                                        [100%]
+================================== FAILURES ===================================
+_ CoreTests.test_core_rejects_invalid_arguments (args=('--population', '0')) __
+
+self = <tests.test_scaffold.CoreTests testMethod=test_core_rejects_invalid_arguments>
+
+    def test_core_rejects_invalid_arguments(self):
+        for args in (("--population", "0"), ("--population", "65"), ("--population", "-1"),
+                     ("--width-m", "nan"), ("--dt-s", "0"), ("--seed", "-1"),
+                     ("--seed", "12x"), ("--unknown", "1"), ("--seed",)):
+            with self.subTest(args=args):
+                result = self.run_core(*args)
+>               self.assertEqual(result.returncode, 2)
+E               AssertionError: 3221225781 != 2
+
+tests\test_scaffold.py:67: AssertionError
+_ CoreTests.test_core_rejects_invalid_arguments (args=('--population', '65')) _
+
+self = <tests.test_scaffold.CoreTests testMethod=test_core_rejects_invalid_arguments>
+
+    def test_core_rejects_invalid_arguments(self):
+        for args in (("--population", "0"), ("--population", "65"), ("--population", "-1"),
+                     ("--width-m", "nan"), ("--dt-s", "0"), ("--seed", "-1"),
+                     ("--seed", "12x"), ("--unknown", "1"), ("--seed",)):
+            with self.subTest(args=args):
+                result = self.run_core(*args)
+>               self.assertEqual(result.returncode, 2)
+E               AssertionError: 3221225781 != 2
+
+tests\test_scaffold.py:67: AssertionError
+_ CoreTests.test_core_rejects_invalid_arguments (args=('--population', '-1')) _
+
+self = <tests.test_scaffold.CoreTests testMethod=test_core_rejects_invalid_arguments>
+
+    def test_core_rejects_invalid_arguments(self):
+        for args in (("--population", "0"), ("--population", "65"), ("--population", "-1"),
+                     ("--width-m", "nan"), ("--dt-s", "0"), ("--seed", "-1"),
+                     ("--seed", "12x"), ("--unknown", "1"), ("--seed",)):
+            with self.subTest(args=args):
+                result = self.run_core(*args)
+>               self.assertEqual(result.returncode, 2)
+E               AssertionError: 3221225781 != 2
+
+tests\test_scaffold.py:67: AssertionError
+__ CoreTests.test_core_rejects_invalid_arguments (args=('--width-m', 'nan')) __
+
+self = <tests.test_scaffold.CoreTests testMethod=test_core_rejects_invalid_arguments>
+
+    def test_core_rejects_invalid_arguments(self):
+        for args in (("--population", "0"), ("--population", "65"), ("--population", "-1"),
+                     ("--width-m", "nan"), ("--dt-s", "0"), ("--seed", "-1"),
+                     ("--seed", "12x"), ("--unknown", "1"), ("--seed",)):
+            with self.subTest(args=args):
+                result = self.run_core(*args)
+>               self.assertEqual(result.returncode, 2)
+E               AssertionError: 3221225781 != 2
+
+tests\test_scaffold.py:67: AssertionError
+____ CoreTests.test_core_rejects_invalid_arguments (args=('--dt-s', '0')) _____
+
+self = <tests.test_scaffold.CoreTests testMethod=test_core_rejects_invalid_arguments>
+
+    def test_core_rejects_invalid_arguments(self):
+        for args in (("--population", "0"), ("--population", "65"), ("--population", "-1"),
+                     ("--width-m", "nan"), ("--dt-s", "0"), ("--seed", "-1"),
+                     ("--seed", "12x"), ("--unknown", "1"), ("--seed",)):
+            with self.subTest(args=args):
+                result = self.run_core(*args)
+>               self.assertEqual(result.returncode, 2)
+E               AssertionError: 3221225781 != 2
+
+tests\test_scaffold.py:67: AssertionError
+____ CoreTests.test_core_rejects_invalid_arguments (args=('--seed', '-1')) ____
+
+self = <tests.test_scaffold.CoreTests testMethod=test_core_rejects_invalid_arguments>
+
+    def test_core_rejects_invalid_arguments(self):
+        for args in (("--population", "0"), ("--population", "65"), ("--population", "-1"),
+                     ("--width-m", "nan"), ("--dt-s", "0"), ("--seed", "-1"),
+                     ("--seed", "12x"), ("--unknown", "1"), ("--seed",)):
+            with self.subTest(args=args):
+                result = self.run_core(*args)
+>               self.assertEqual(result.returncode, 2)
+E               AssertionError: 3221225781 != 2
+
+tests\test_scaffold.py:67: AssertionError
+___ CoreTests.test_core_rejects_invalid_arguments (args=('--seed', '12x')) ____
+
+self = <tests.test_scaffold.CoreTests testMethod=test_core_rejects_invalid_arguments>
+
+    def test_core_rejects_invalid_arguments(self):
+        for args in (("--population", "0"), ("--population", "65"), ("--population", "-1"),
+                     ("--width-m", "nan"), ("--dt-s", "0"), ("--seed", "-1"),
+                     ("--seed", "12x"), ("--unknown", "1"), ("--seed",)):
+            with self.subTest(args=args):
+                result = self.run_core(*args)
+>               self.assertEqual(result.returncode, 2)
+E               AssertionError: 3221225781 != 2
+
+tests\test_scaffold.py:67: AssertionError
+___ CoreTests.test_core_rejects_invalid_arguments (args=('--unknown', '1')) ___
+
+self = <tests.test_scaffold.CoreTests testMethod=test_core_rejects_invalid_arguments>
+
+    def test_core_rejects_invalid_arguments(self):
+        for args in (("--population", "0"), ("--population", "65"), ("--population", "-1"),
+                     ("--width-m", "nan"), ("--dt-s", "0"), ("--seed", "-1"),
+                     ("--seed", "12x"), ("--unknown", "1"), ("--seed",)):
+            with self.subTest(args=args):
+                result = self.run_core(*args)
+>               self.assertEqual(result.returncode, 2)
+E               AssertionError: 3221225781 != 2
+
+tests\test_scaffold.py:67: AssertionError
+______ CoreTests.test_core_rejects_invalid_arguments (args=('--seed',)) _______
+
+self = <tests.test_scaffold.CoreTests testMethod=test_core_rejects_invalid_arguments>
+
+    def test_core_rejects_invalid_arguments(self):
+        for args in (("--population", "0"), ("--population", "65"), ("--population", "-1"),
+                     ("--width-m", "nan"), ("--dt-s", "0"), ("--seed", "-1"),
+                     ("--seed", "12x"), ("--unknown", "1"), ("--seed",)):
+            with self.subTest(args=args):
+                result = self.run_core(*args)
+>               self.assertEqual(result.returncode, 2)
+E               AssertionError: 3221225781 != 2
+
+tests\test_scaffold.py:67: AssertionError
+______ CoreTests.test_scene_is_seeded_bounded_and_has_stable_unique_ids _______
+
+self = <tests.test_scaffold.CoreTests testMethod=test_scene_is_seeded_bounded_and_has_stable_unique_ids>
+
+    def test_scene_is_seeded_bounded_and_has_stable_unique_ids(self):
+        first = self.run_core()
+>       self.assertEqual(first.returncode, 0, first.stderr)
+E       AssertionError: 3221225781 != 0 :
+
+tests\test_scaffold.py:45: AssertionError
+=========================== short test summary info ===========================
+SUBFAILED(args=('--population', '0')) tests/test_scaffold.py::CoreTests::test_core_rejects_invalid_arguments
+SUBFAILED(args=('--population', '65')) tests/test_scaffold.py::CoreTests::test_core_rejects_invalid_arguments
+SUBFAILED(args=('--population', '-1')) tests/test_scaffold.py::CoreTests::test_core_rejects_invalid_arguments
+SUBFAILED(args=('--width-m', 'nan')) tests/test_scaffold.py::CoreTests::test_core_rejects_invalid_arguments
+SUBFAILED(args=('--dt-s', '0')) tests/test_scaffold.py::CoreTests::test_core_rejects_invalid_arguments
+SUBFAILED(args=('--seed', '-1')) tests/test_scaffold.py::CoreTests::test_core_rejects_invalid_arguments
+SUBFAILED(args=('--seed', '12x')) tests/test_scaffold.py::CoreTests::test_core_rejects_invalid_arguments
+SUBFAILED(args=('--unknown', '1')) tests/test_scaffold.py::CoreTests::test_core_rejects_invalid_arguments
+SUBFAILED(args=('--seed',)) tests/test_scaffold.py::CoreTests::test_core_rejects_invalid_arguments
+FAILED tests/test_scaffold.py::CoreTests::test_scene_is_seeded_bounded_and_has_stable_unique_ids
+10 failed, 456 passed, 343 subtests passed in 544.15s (0:09:04)

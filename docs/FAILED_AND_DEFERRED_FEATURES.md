@@ -1,3 +1,170 @@
+# 23 October 2026 - integrated life connections and measured limits
+
+ALICE-LIFE-1 connects weather, F0-F5 memory/mood and F6-F11 social components
+to native actions on compatible save copies. Five held-out four-person worlds
+reach 180 simulated seconds; an eight-person world reaches 90, all alive with
+exact replay and zero native rejections. Native signal acquisition and
+gratitude-like reciprocation have bounded controlled evidence.
+
+Not completed: full F6 helper-reliability/repair and F7 causal-assistance gates;
+F8 learned-strategy benefit; unsupported F10 social prerequisites; historical
+H-series UW9-to-UW10W migration; long-horizon integrated sustainability. Later
+modules existing in code do not imply that these scientific gates passed.
+Read [integrated results](LIFE_INTEGRATION_REPORT.md) and [handoff](../HANDOFF.md).
+Historical entries below retain their original scope and failed outcomes.
+
+---
+
+# 22 October 2026 - W0-W6 opt-in weather validated
+
+Persistent native weather, four fictional seasons, exposure proxies and real
+material-built shelters are implemented in a separate UW10W runtime. All seven
+registered bounded gates pass across three held-out conditions; native-save audit
+recomputes actual protection, health, work, resource accounting and replay.
+Known roofs reached in1.25sim seconds; after real assigned ingredient collection,
+authored reactive construction+protection took14.25s. Four people physically share
+one capacity4 roof; overflowing occupants receive no protection.
+
+28weather checks plus the original335Python and4native checks pass. Real Edge
+desktop/mobile read-only 3D observer checks pass. One continuously saved four-person
+life reached2400sim seconds (one accelerated year), all alive/health1, no resets,
+regeneration or weather forcing;481.164wall seconds after134sim seconds of explicit
+physical setup. Food3.45kg/water9kg remain, with exact ingestion/resource closure.
+
+Three failed sharing development candidates are retained; authored priorities and
+scheduler frame lengths were corrected BEFORE untouched confirmation. Weather
+forcing's one-tick expiry bug was fixed and its failure retained. An additional
+unchanged existing utility-policy control confirms outside exposure under matched
+conditions; it is labeled supplementary after primary registration.
+
+Original G/H/gap/Phase9 sources, old worlds and build/living-d are unchanged.
+Weather requires NEW worlds and matching native/source contracts; no migration.
+Weather decisions are authored, not learned intelligence. Rain collection, storms,
+real thermoregulation, developmental weather integration, unknown-material bootstrap,
+multi-seed year-long survival and indefinite operation remain unproven/deferred.
+Read [weather report](WEATHER_SEASONS_REPORT.md) and [operations](WEATHER_OPERATIONS.md).
+Earlier entries below retain their original study scope.
+
+---
+
+# 22 October 2026 - H0-H5 adaptive gap profile verified
+
+A separate opt-in profile repairs the measured H1 online reach/outcome failure,
+adds durable need-driven plans, stale/depleted-source handling, private
+category/location symbol reuse and context-triggered physical teaching.
+Five held-out seeds: nearby acquisition 30/30 vs unchanged legacy online 0/30;
+unreachable transfer attempts 0/30 vs frozen 30/30; remote water acquisition
+and thirst relief 5/5 vs muted/scrambled/whole-message controls 0/5 each.
+Native-grounded teaching updates 10 vs muted 0. Independent native-save audit
+and all historical G/H0-H5 source registrations pass. 335 Python tests and four
+native checks pass; real Edge desktop/mobile evidence-panel checks pass.
+
+One continuous four-person life reached 1806 simulated seconds (418.850 wall
+seconds after physical warm-up), all alive/health 1, 168 completed relief goals,
+no replenishment, resets, models or operator interventions. Matched continuation
+controls both completed 28 further goals: no survival superiority is established.
+Source pins, body accounting, archive/fresh-process resume and scheduler retries
+are verified. Original worlds and failed Phase9 result remain unchanged.
+
+This closes bounded implementation gaps. Teaching choice, factorization, needs,
+motor routing and sharing remain authored. Learned grammar/conversation,
+learned teaching/request intentions, arbitrary feature transfer, semantic
+calibration and indefinite/multi-seed long survival remain unachieved.
+Read [gap report](DEVELOPMENTAL_GAP_REPORT.md),
+[prospective protocol](DEVELOPMENTAL_GAP_PROTOCOL.md) and
+[operations](DEVELOPMENTAL_GAP_OPERATIONS.md). Earlier entries below are preserved
+as historical evidence and describe their original study boundaries.
+
+---
+
+# 21 October 2026 - H5 bounded symbol sequences and operator evidence
+
+H5's prospective native reuse gate and independent audit pass: learned sequences
+complete 30/30 held-out references versus 6/30 whole-message lookup,6/30 muted,
+6/30 first-symbol and 4/30 second-symbol controls, across five confirmation seeds.
+The encoder's category/mass factorization, teaching scaffold and overlap rule
+are authored. Private symbol meanings come from native observation; this does
+not demonstrate discovered syntax, conversation or autonomous language emergence.
+
+The separate read-only operator panel displays actual signals, uncertain feature
+hypotheses/counts, source IDs, native responses and distinct teaching, learned,
+authored-decision, random-tie and protective-fallback counters. Real Edge desktop/
+mobile checks pass, including refresh, privacy boundaries, safe text display,
+missing-evidence handling and refusal of write requests.
+
+317 Python tests and four native checks pass; two additional epoch-continuity
+checks also pass. Pending messages/teaching survive archive and resume once in
+fresh processes. Study 342.164wall seconds; longest 93sim seconds, all four alive/
+health 1,300new completed native requests, zero rejections/models. These brief
+counterfactual reference branches are not unattended-survival evidence.
+
+Original G/H0-H4 registrations/worlds/reports and failed Phase9 evidence are
+preserved. Phase9 independently verifies 3439files and retains advance:false;
+its learner remains outside live policies. Earlier H1 online and G husbandry
+failures and the original rejected H3 gate remain failed. Long survival, location
+composition, autonomous requests/teaching, calibrated semantic confidence and
+unscaffolded grammar remain unestablished. No release/version/executable change,
+neural training, reproduction, new speech engine or true3D.
+
+Read [H5 results and limitations](DEVELOPMENTAL_H5_REPORT.md),
+[operations](DEVELOPMENTAL_H5_OPERATIONS.md),
+[prospective protocol](DEVELOPMENTAL_H5_PROTOCOL.md) and [handoff](../HANDOFF.md).
+Earlier records below are historical; their deferred H5 notes are superseded
+only by this narrowly measured implementation. Initial import/routing/fixture
+failures and development traces remain retained separately.
+
+---
+
+# 21 October 2026 - H4 bounded native integration
+
+H4 communication and engineered need-policy gates pass independently: 10/10
+remote-water goals enabled, 5/10 muted, 0/10 scrambled; identity alone never
+provides a location. Five depleted-source cases stop without invalid gathering.
+The separate own-need scheduler completes nine native drink goals versus zero
+under prediction ablation. 304 Python tests and four native checks pass.
+Original G/H0-H3 sources/evidence/worlds remain unchanged; Phase9's 3439-file
+audit still retains its failed outcome and its learner is excluded from live policy.
+
+This is authored scout/task integration and an engineered need scheduler, not
+autonomous scouting or language emergence. Transmitted learned requests, general
+exploration, stale-report trust, long unattended survival and H5 remain deferred.
+An entire scout circuit is not one atomic restartable transaction. Primitive and
+learning updates retain tested recovery. Initial H4 eating-duration and return-
+normalization failures are recorded; prior H1 online/G husbandry failures remain.
+No release label, packaged H4 UI/executable, neural training, reproduction or true 3D.
+
+See [H4 report](DEVELOPMENTAL_H4_REPORT.md),
+[operations](DEVELOPMENTAL_H4_OPERATIONS.md), and [handoff](../HANDOFF.md).
+Earlier records below are historical; earlier deferred H4 notes are superseded
+only by these scoped new results.
+
+---
+
+# 21 October 2026 - native developmental integration
+
+GitHub main through d54a007 is integrated and reviewed. The original dictionary-
+only H3 gate is not accepted. A separately preregistered native replacement now
+passes: newcomer, post-interference retention and authored repair each 60/60,
+versus 19/60 untrained and 17/60 unrepaired. Native receipt/private-proof audit,
+287 Python tests and four native checks pass. Original G/H1/H2 source pins and
+historical evidence are restored, not repinned; Phase9's 3439-file audit retains
+its failed result and its learner remains outside live autonomous policies.
+
+H3 remains scaffolded research: assigned tasks, authored demonstrations, count-
+based learning, explicit retention protection and tie-triggered physical repair.
+H4/H5, six-animal expansion, autonomous teaching/grammar, longer unattended
+survival, neural training, reproduction and true 3D remain deferred. The incoming
+Node world imitation was replaced with a launcher for the native application.
+The first native H3 setup attempt failed at an occupied station; its log/worlds
+are retained. The H1 online-adaptation counterexample and G husbandry failures
+remain failures. Existing worlds are not reset or replenished.
+
+See [integration results and remaining limits](H3_INTEGRATION_REVIEW.md),
+[operations](DEVELOPMENTAL_OPERATIONS.md), and [current handoff](../HANDOFF.md).
+The earlier status/evidence below is retained as its historical record.
+
+---
+
 # Milestone G - 21 October 2026
 
 Application **0.14.0 / stabilization/5** adds bounded authored pen construction,
@@ -37,7 +204,7 @@ Older entries below are historical.
 
 ---
 
-# Milestone F ï¿½ 21 October 2026
+# Milestone F — 21 October 2026
 
 Application **0.13.0**, native UW9/DB10/checkpoint 9 unchanged. Explicit new-world
 knowledge profiles, private guided operator injection, own-lesson native testing

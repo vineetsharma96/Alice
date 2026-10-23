@@ -1,4 +1,4 @@
-# Underworld Lab ï¿½ Milestone F handoff (21 October 2026)
+# Underworld Lab — Milestone F handoff (21 October 2026)
 
 Application 0.13.0 / stabilization4 with new source identity. Native UW9 / DB10 /
 checkpoint9 remains build 832c4a705a7ceecd85d8befb3d84f4dff0d4730f024c395eba12985f0d8bd896.

@@ -1,0 +1,7 @@
+test_community_cli_preserves_recruited_life_across_processes (test_learner_cli.LearnerCliTests.test_community_cli_preserves_recruited_life_across_processes) ... ok
+test_existing_life_learns_across_processes_and_init_cannot_reset_it (test_learner_cli.LearnerCliTests.test_existing_life_learns_across_processes_and_init_cannot_reset_it) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 7.047s
+
+OK

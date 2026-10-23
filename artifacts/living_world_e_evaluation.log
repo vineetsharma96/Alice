@@ -1,0 +1,61 @@
+{"seed": 929, "case": "harvest_craft", "arm": "utility", "goal_completed": false, "simulated_s": 60.0, "wall_s": 0.7174214999977266, "model_calls": 0, "errors": []}
+{"seed": 929, "case": "harvest_craft", "arm": "authored", "goal_completed": true, "simulated_s": 18.5, "wall_s": 5.136165100004291, "model_calls": 0, "errors": []}
+{"seed": 929, "case": "harvest_craft", "arm": "episodic_only", "goal_completed": true, "simulated_s": 18.5, "wall_s": 4.838946999996551, "model_calls": 0, "errors": []}
+{"seed": 929, "case": "harvest_craft", "arm": "adaptive", "goal_completed": true, "simulated_s": 18.5, "wall_s": 4.274835999996867, "model_calls": 0, "errors": []}
+{"seed": 929, "case": "harvest_craft", "arm": "model_assisted", "goal_completed": true, "simulated_s": 19.0, "wall_s": 9.259033599999384, "model_calls": 1, "errors": []}
+{"seed": 929, "case": "water_delivery", "arm": "utility", "goal_completed": false, "simulated_s": 60.0, "wall_s": 0.7790940999984741, "model_calls": 0, "errors": []}
+{"seed": 929, "case": "water_delivery", "arm": "authored", "goal_completed": true, "simulated_s": 3.5, "wall_s": 0.8482119999971474, "model_calls": 0, "errors": []}
+{"seed": 929, "case": "water_delivery", "arm": "episodic_only", "goal_completed": true, "simulated_s": 3.5, "wall_s": 0.8332682000036584, "model_calls": 0, "errors": []}
+{"seed": 929, "case": "water_delivery", "arm": "adaptive", "goal_completed": true, "simulated_s": 3.5, "wall_s": 1.1064464999944903, "model_calls": 0, "errors": []}
+{"seed": 929, "case": "water_delivery", "arm": "model_assisted", "goal_completed": true, "simulated_s": 3.5, "wall_s": 1.3658250000007683, "model_calls": 0, "errors": []}
+{"seed": 929, "case": "depleted_forage", "arm": "utility", "goal_completed": false, "simulated_s": 60.0, "wall_s": 0.9080337000050349, "model_calls": 0, "errors": []}
+{"seed": 929, "case": "depleted_forage", "arm": "authored", "goal_completed": false, "simulated_s": 0.5, "wall_s": 0.2458727000048384, "model_calls": 0, "errors": []}
+{"seed": 929, "case": "depleted_forage", "arm": "episodic_only", "goal_completed": false, "simulated_s": 0.5, "wall_s": 0.23881119998986833, "model_calls": 0, "errors": []}
+{"seed": 929, "case": "depleted_forage", "arm": "adaptive", "goal_completed": false, "simulated_s": 0.5, "wall_s": 0.23934499999450054, "model_calls": 0, "errors": []}
+{"seed": 929, "case": "depleted_forage", "arm": "model_assisted", "goal_completed": false, "simulated_s": 0.5, "wall_s": 0.6706142999901203, "model_calls": 0, "errors": []}
+{"seed": 929, "case": "blocked_site", "arm": "utility", "goal_completed": false, "simulated_s": 60.0, "wall_s": 0.8744907999935094, "model_calls": 0, "errors": []}
+{"seed": 929, "case": "blocked_site", "arm": "authored", "goal_completed": false, "simulated_s": 29.5, "wall_s": 8.05958030000329, "model_calls": 0, "errors": [{"request_id": "stable-agent-1-20", "status": "failed", "error": "NO_PLACEMENT"}, {"request_id": "stable-agent-1-21", "status": "failed", "error": "NO_PLACEMENT"}, {"request_id": "stable-agent-1-22", "status": "failed", "error": "NO_PLACEMENT"}, {"request_id": "stable-agent-1-23", "status": "failed", "error": "NO_PLACEMENT"}]}
+{"seed": 929, "case": "blocked_site", "arm": "episodic_only", "goal_completed": false, "simulated_s": 29.5, "wall_s": 7.232149000003119, "model_calls": 0, "errors": [{"request_id": "stable-agent-1-20", "status": "failed", "error": "NO_PLACEMENT"}, {"request_id": "stable-agent-1-21", "status": "failed", "error": "NO_PLACEMENT"}, {"request_id": "stable-agent-1-22", "status": "failed", "error": "NO_PLACEMENT"}, {"request_id": "stable-agent-1-23", "status": "failed", "error": "NO_PLACEMENT"}]}
+{"seed": 929, "case": "blocked_site", "arm": "adaptive", "goal_completed": false, "simulated_s": 46.0, "wall_s": 12.725263600004837, "model_calls": 0, "errors": [{"request_id": "stable-agent-1-20", "status": "failed", "error": "NO_PLACEMENT"}]}
+{"seed": 929, "case": "blocked_site", "arm": "model_assisted", "goal_completed": false, "simulated_s": 45.5, "wall_s": 18.80085179999878, "model_calls": 1, "errors": [{"request_id": "stable-agent-1-20", "status": "failed", "error": "NO_PLACEMENT"}]}
+{"seed": 929, "case": "animal_thirst", "arm": "utility", "goal_completed": false, "simulated_s": 60.0, "wall_s": 2.5821223000093596, "model_calls": 0, "errors": []}
+{"seed": 929, "case": "animal_thirst", "arm": "authored", "goal_completed": true, "simulated_s": 17.0, "wall_s": 12.040701899997657, "model_calls": 0, "errors": []}
+{"seed": 929, "case": "animal_thirst", "arm": "episodic_only", "goal_completed": true, "simulated_s": 17.0, "wall_s": 11.351424399996176, "model_calls": 0, "errors": []}
+{"seed": 929, "case": "animal_thirst", "arm": "adaptive", "goal_completed": true, "simulated_s": 17.0, "wall_s": 11.28089490000275, "model_calls": 0, "errors": []}
+{"seed": 929, "case": "animal_thirst", "arm": "model_assisted", "goal_completed": true, "simulated_s": 17.0, "wall_s": 11.123856899997918, "model_calls": 0, "errors": []}
+{"seed": 929, "case": "absent_peer", "arm": "utility", "goal_completed": false, "simulated_s": 60.0, "wall_s": 1.2762882999959402, "model_calls": 0, "errors": []}
+{"seed": 929, "case": "absent_peer", "arm": "authored", "goal_completed": false, "simulated_s": 0.5, "wall_s": 0.21662839999771677, "model_calls": 0, "errors": []}
+{"seed": 929, "case": "absent_peer", "arm": "episodic_only", "goal_completed": false, "simulated_s": 0.5, "wall_s": 0.19696869999461342, "model_calls": 0, "errors": []}
+{"seed": 929, "case": "absent_peer", "arm": "adaptive", "goal_completed": false, "simulated_s": 0.5, "wall_s": 0.19960700000228826, "model_calls": 0, "errors": []}
+{"seed": 929, "case": "absent_peer", "arm": "model_assisted", "goal_completed": false, "simulated_s": 0.5, "wall_s": 0.18517350000911392, "model_calls": 0, "errors": []}
+{"seed": 1049, "case": "harvest_craft", "arm": "utility", "goal_completed": false, "simulated_s": 60.0, "wall_s": 0.8833866999921156, "model_calls": 0, "errors": []}
+{"seed": 1049, "case": "harvest_craft", "arm": "authored", "goal_completed": true, "simulated_s": 18.0, "wall_s": 4.7737770000094315, "model_calls": 0, "errors": []}
+{"seed": 1049, "case": "harvest_craft", "arm": "episodic_only", "goal_completed": true, "simulated_s": 18.0, "wall_s": 4.110803900010069, "model_calls": 0, "errors": []}
+{"seed": 1049, "case": "harvest_craft", "arm": "adaptive", "goal_completed": true, "simulated_s": 18.0, "wall_s": 4.090437799997744, "model_calls": 0, "errors": []}
+{"seed": 1049, "case": "harvest_craft", "arm": "model_assisted", "goal_completed": true, "simulated_s": 29.0, "wall_s": 11.366273300009198, "model_calls": 1, "errors": []}
+{"seed": 1049, "case": "water_delivery", "arm": "utility", "goal_completed": false, "simulated_s": 60.0, "wall_s": 0.7372008999955142, "model_calls": 0, "errors": []}
+{"seed": 1049, "case": "water_delivery", "arm": "authored", "goal_completed": true, "simulated_s": 4.5, "wall_s": 1.5757813999953214, "model_calls": 0, "errors": []}
+{"seed": 1049, "case": "water_delivery", "arm": "episodic_only", "goal_completed": true, "simulated_s": 4.5, "wall_s": 1.4463887000019895, "model_calls": 0, "errors": []}
+{"seed": 1049, "case": "water_delivery", "arm": "adaptive", "goal_completed": true, "simulated_s": 4.5, "wall_s": 1.4360199000075227, "model_calls": 0, "errors": []}
+{"seed": 1049, "case": "water_delivery", "arm": "model_assisted", "goal_completed": true, "simulated_s": 4.5, "wall_s": 1.2134600999997929, "model_calls": 0, "errors": []}
+{"seed": 1049, "case": "depleted_forage", "arm": "utility", "goal_completed": false, "simulated_s": 60.0, "wall_s": 0.9065160999889486, "model_calls": 0, "errors": []}
+{"seed": 1049, "case": "depleted_forage", "arm": "authored", "goal_completed": false, "simulated_s": 0.5, "wall_s": 0.2228295000095386, "model_calls": 0, "errors": []}
+{"seed": 1049, "case": "depleted_forage", "arm": "episodic_only", "goal_completed": false, "simulated_s": 0.5, "wall_s": 0.18239790000370704, "model_calls": 0, "errors": []}
+{"seed": 1049, "case": "depleted_forage", "arm": "adaptive", "goal_completed": false, "simulated_s": 0.5, "wall_s": 0.18094530000234954, "model_calls": 0, "errors": []}
+{"seed": 1049, "case": "depleted_forage", "arm": "model_assisted", "goal_completed": false, "simulated_s": 0.5, "wall_s": 0.19098689999373164, "model_calls": 0, "errors": []}
+{"seed": 1049, "case": "blocked_site", "arm": "utility", "goal_completed": false, "simulated_s": 60.0, "wall_s": 0.8998125999933109, "model_calls": 0, "errors": []}
+{"seed": 1049, "case": "blocked_site", "arm": "authored", "goal_completed": false, "simulated_s": 28.0, "wall_s": 7.743270899998606, "model_calls": 0, "errors": [{"request_id": "stable-agent-1-18", "status": "failed", "error": "NO_PLACEMENT"}, {"request_id": "stable-agent-1-19", "status": "failed", "error": "NO_PLACEMENT"}, {"request_id": "stable-agent-1-20", "status": "failed", "error": "NO_PLACEMENT"}, {"request_id": "stable-agent-1-21", "status": "failed", "error": "NO_PLACEMENT"}]}
+{"seed": 1049, "case": "blocked_site", "arm": "episodic_only", "goal_completed": false, "simulated_s": 28.0, "wall_s": 7.12214700000186, "model_calls": 0, "errors": [{"request_id": "stable-agent-1-18", "status": "failed", "error": "NO_PLACEMENT"}, {"request_id": "stable-agent-1-19", "status": "failed", "error": "NO_PLACEMENT"}, {"request_id": "stable-agent-1-20", "status": "failed", "error": "NO_PLACEMENT"}, {"request_id": "stable-agent-1-21", "status": "failed", "error": "NO_PLACEMENT"}]}
+{"seed": 1049, "case": "blocked_site", "arm": "adaptive", "goal_completed": false, "simulated_s": 44.5, "wall_s": 11.818245099988417, "model_calls": 0, "errors": [{"request_id": "stable-agent-1-18", "status": "failed", "error": "NO_PLACEMENT"}]}
+{"seed": 1049, "case": "blocked_site", "arm": "model_assisted", "goal_completed": false, "simulated_s": 46.5, "wall_s": 15.249642000009771, "model_calls": 1, "errors": [{"request_id": "stable-agent-1-24", "status": "failed", "error": "NO_PLACEMENT"}, {"request_id": "stable-agent-1-27", "status": "failed", "error": "NO_PLACEMENT"}, {"request_id": "stable-agent-1-30", "status": "failed", "error": "NO_PLACEMENT"}, {"request_id": "stable-agent-1-33", "status": "failed", "error": "NO_PLACEMENT"}]}
+{"seed": 1049, "case": "animal_thirst", "arm": "utility", "goal_completed": false, "simulated_s": 60.0, "wall_s": 2.0806207000132417, "model_calls": 0, "errors": []}
+{"seed": 1049, "case": "animal_thirst", "arm": "authored", "goal_completed": true, "simulated_s": 17.0, "wall_s": 11.858399999997346, "model_calls": 0, "errors": []}
+{"seed": 1049, "case": "animal_thirst", "arm": "episodic_only", "goal_completed": true, "simulated_s": 17.0, "wall_s": 12.45305609999923, "model_calls": 0, "errors": []}
+{"seed": 1049, "case": "animal_thirst", "arm": "adaptive", "goal_completed": true, "simulated_s": 17.0, "wall_s": 10.959454100011499, "model_calls": 0, "errors": []}
+{"seed": 1049, "case": "animal_thirst", "arm": "model_assisted", "goal_completed": true, "simulated_s": 17.0, "wall_s": 13.46361400000751, "model_calls": 0, "errors": []}
+{"seed": 1049, "case": "absent_peer", "arm": "utility", "goal_completed": false, "simulated_s": 60.0, "wall_s": 0.905494800012093, "model_calls": 0, "errors": []}
+{"seed": 1049, "case": "absent_peer", "arm": "authored", "goal_completed": false, "simulated_s": 0.5, "wall_s": 0.15743680000014137, "model_calls": 0, "errors": []}
+{"seed": 1049, "case": "absent_peer", "arm": "episodic_only", "goal_completed": false, "simulated_s": 0.5, "wall_s": 0.1991163999919081, "model_calls": 0, "errors": []}
+{"seed": 1049, "case": "absent_peer", "arm": "adaptive", "goal_completed": false, "simulated_s": 0.5, "wall_s": 0.14071820001117885, "model_calls": 0, "errors": []}
+{"seed": 1049, "case": "absent_peer", "arm": "model_assisted", "goal_completed": false, "simulated_s": 0.5, "wall_s": 0.12692019999667536, "model_calls": 0, "errors": []}
+{"passed": true, "gates": {"native_integrity": true, "feasible_production": true, "scarcity_not_claimed": true, "experience_changes_choice": true}}

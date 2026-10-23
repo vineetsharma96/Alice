@@ -1,0 +1,10 @@
+{
+  "artifact": "artifacts\\f12_review_90s.json",
+  "integrated_alive": true,
+  "control_alive": true,
+  "native_state_hash_matches_control": true,
+  "integrated_replay_matches": true,
+  "source_unchanged": true,
+  "communication_feedback_changed": true,
+  "integrated_overlay_operations": 71
+}
