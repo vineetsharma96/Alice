@@ -21,8 +21,8 @@ export class WorldView {
   host.addEventListener('keydown',e=>{if(['w','a','s','d','W','A','S','D','Shift'].includes(e.key)){e.preventDefault();this.keys.add(e.key.toLowerCase());}});
   host.addEventListener('keyup',e=>this.keys.delete(e.key.toLowerCase()));host.addEventListener('blur',()=>this.keys.clear());
   this.resizeObserver=new ResizeObserver(()=>this.resize());this.resizeObserver.observe(host);
-  this.visibilityHandler=()=>{this.lastRender=0;this.frames=0;this.fps=0;this.intervals=[];this.windowStart=performance.now();};document.addEventListener('visibilitychange',this.visibilityHandler);
-  this.last=performance.now();this.lastRender=0;this.windowStart=this.last;this.alive=true;this.loop=this.loop.bind(this);this.raf=requestAnimationFrame(this.loop);
+  this.visibilityHandler=()=>{this.lastRender=0;this.frames=0;this.fps=0;this.intervals=[];this.windowStart=performance.now();if(document.hidden&&this.raf){cancelAnimationFrame(this.raf);this.raf=null;}else if(!document.hidden&&this.active&&this.alive&&!this.raf)this.raf=requestAnimationFrame(this.loop);};document.addEventListener('visibilitychange',this.visibilityHandler);
+  this.last=performance.now();this.lastRender=0;this.windowStart=this.last;this.alive=true;this.active=true;this.loop=this.loop.bind(this);this.raf=requestAnimationFrame(this.loop);
  }
  material(color){if(!this.materials.has(color))this.materials.set(color,new THREE.MeshLambertMaterial({color}));return this.materials.get(color);}
  mesh(group,shape,color,position,scale){const m=new THREE.Mesh(this.geo[shape],this.material(color));m.position.set(...position);m.scale.set(...scale);group.add(m);return m;}
@@ -86,7 +86,8 @@ export class WorldView {
  fit(){if(!this.bounds)return;const b=this.bounds,size=Math.max(b.width,b.height),half=Math.min(this.camera.fov*Math.PI/360,Math.atan(Math.tan(this.camera.fov*Math.PI/360)*this.camera.aspect)),distance=Math.hypot(b.width,b.height)*.52/Math.sin(half);this.controls.target.set(b.width/2,0,-b.height/2);this.camera.position.copy(this.controls.target).add(new THREE.Vector3(.78,.95,.92).normalize().multiplyScalar(distance));this.camera.far=Math.max(100,size*8);this.camera.updateProjectionMatrix();this.controls.update();}
  focus(id){const g=this.objects.get(id);if(!g)return;const delta=this.camera.position.clone().sub(this.controls.target).normalize().multiplyScalar(5);this.controls.target.copy(g.position).add(new THREE.Vector3(0,.5,0));this.camera.position.copy(this.controls.target).add(delta);this.controls.update();}
  resize(){const w=this.host.clientWidth,h=this.host.clientHeight;if(!w||!h)return;const scale=this.quality==='low'?.8:1;this.renderer.setPixelRatio(Math.min(devicePixelRatio,1.25)*scale);this.renderer.setSize(w,h);this.camera.aspect=w/h;this.camera.updateProjectionMatrix();this.fit();}
- setQuality(value){this.quality=value;this.visibilityHandler();this.resize();}
+  setQuality(value){this.quality=value;this.visibilityHandler();this.resize();}
+  setActive(value){if(this.active===value)return;this.active=value;if(value&&this.alive&&!this.raf){this.last=performance.now();this.lastRender=0;this.windowStart=this.last;this.raf=requestAnimationFrame(this.loop);}if(!value&&this.raf){cancelAnimationFrame(this.raf);this.raf=null;}}
  pick(event){
   if(!this.down||Math.hypot(event.clientX-this.down[0],event.clientY-this.down[1])>5||event.button!==0)return;
   const r=this.renderer.domElement.getBoundingClientRect();this.pointer.set((event.clientX-r.left)/r.width*2-1,-(event.clientY-r.top)/r.height*2+1);this.ray.setFromCamera(this.pointer,this.camera);
@@ -94,7 +95,7 @@ export class WorldView {
   for(const hit of this.ray.intersectObjects([...this.objects.values()].filter(g=>g.visible),true)){let g=hit.object;while(g&&!g.userData.id)g=g.parent;if(g){this.onSelect(g.userData.id);break;}}
  }
  loop(now){
-  if(!this.alive)return;this.raf=requestAnimationFrame(this.loop);const delta=Math.min(.05,(now-this.last)/1000);this.last=now;
+   if(!this.alive||!this.active){this.raf=null;return;}this.raf=requestAnimationFrame(this.loop);const delta=Math.min(.05,(now-this.last)/1000);this.last=now;
   if(document.hidden||this.contextLost)return;const frameMs=this.quality==='low'?1000/30:1000/60;if(now-this.lastRender<frameMs-1)return;
   const motionDelta=this.lastRender?Math.min(.05,(now-this.lastRender)/1000):delta;
   if(this.lastRender){this.intervals.push(now-this.lastRender);if(this.intervals.length>300)this.intervals.shift();}this.lastRender=now;
@@ -104,5 +105,5 @@ export class WorldView {
  }
  metrics(){const sorted=[...this.intervals].sort((a,b)=>a-b);const gl=this.renderer.getContext(),ext=gl.getExtension('WEBGL_debug_renderer_info');return {fps:this.fps,frame_ms_p50:sorted[Math.floor(sorted.length*.5)]??null,frame_ms_p95:sorted[Math.floor(sorted.length*.95)]??null,draw_calls:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles,geometries:this.renderer.info.memory.geometries,textures:this.renderer.info.memory.textures,quality:this.quality,pixel_ratio:this.renderer.getPixelRatio(),context_lost:this.contextLost,context_losses:this.contextLosses,renderer:ext?gl.getParameter(ext.UNMASKED_RENDERER_WEBGL):gl.getParameter(gl.RENDERER),canvas:[this.renderer.domElement.width,this.renderer.domElement.height],physics_dimensions:2,objects:this.objects.size};}
  project(id){const g=this.objects.get(id);if(!g)return null;const p=g.position.clone().add(new THREE.Vector3(0,.5,0)).project(this.camera),r=this.renderer.domElement.getBoundingClientRect();return {x:r.left+(p.x+1)*r.width/2,y:r.top+(1-p.y)*r.height/2};}
- dispose(){this.alive=false;cancelAnimationFrame(this.raf);document.removeEventListener('visibilitychange',this.visibilityHandler);this.resizeObserver.disconnect();this.controls.dispose();for(const g of Object.values(this.geo))g.dispose();for(const m of this.materials.values())m.dispose();this.ring.geometry.dispose();this.ring.material.dispose();this.grid?.geometry.dispose();this.grid?.material.dispose();this.renderer.dispose();}
+  dispose(){this.alive=false;cancelAnimationFrame(this.raf);this.raf=null;document.removeEventListener('visibilitychange',this.visibilityHandler);this.resizeObserver.disconnect();this.controls.dispose();for(const g of Object.values(this.geo))g.dispose();for(const m of this.materials.values())m.dispose();this.ring.geometry.dispose();this.ring.material.dispose();this.grid?.geometry.dispose();this.grid?.material.dispose();this.renderer.dispose();}
 }

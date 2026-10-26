@@ -142,3 +142,11 @@ It prefers the existing Windows executable, or uses the source virtual environme
 and `build/living-d`. `PORT` forwards the native viewer port; the existing native
 launcher options still apply. This entry point contains no separate JavaScript
 simulation, cloned learner state, invented bodies or synthetic evidence panel.
+
+For the integrated Alice dashboard, the Windows launcher accepts explicit GUI
+modes: `run.cmd --readonly --db data\my-life.sqlite --port 8781` serves the
+read-only dashboard, while `run.cmd --control --db data\my-life.sqlite
+--port 8782` starts the paused single-writer control dashboard. The aliases
+`run.cmd readonly ...` and `run.cmd control ...` are accepted too. The packaged
+executable must be rebuilt after source changes so it contains these dispatch
+flags.
