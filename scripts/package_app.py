@@ -20,9 +20,27 @@ def main():
     native=load_native();toolchain=Path(os.environ.get('UNDERWORLD_TOOLCHAIN',r'C:\mingw64\bin'))
     command=[sys.executable,'-m','PyInstaller','--noconfirm','--onefile','--console','--name','UnderworldLab',
              '--distpath',str(ROOT/'dist'),'--workpath',str(ROOT/'build/packaging'), '--specpath',str(ROOT/'build/packaging'),
-             '--paths',str(ROOT),'--paths',str(build),'--hidden-import','_underworld','--hidden-import','underworld.__main__']
+             '--paths',str(ROOT),'--paths',str(build),'--paths',str(ROOT/'build/weather'),
+             '--hidden-import','_underworld','--hidden-import','_underworld_weather','--hidden-import','underworld.__main__',
+             '--hidden-import','underworld.life_control','--hidden-import','underworld.life_viewer']
+    bundled_data=set()
+    def add_data(relative):
+        relative = Path(relative)
+        key = relative.as_posix()
+        if key in bundled_data or not (ROOT / relative).exists():
+            return
+        bundled_data.add(key)
+        command.extend(['--add-data', f'{ROOT / relative};{relative.parent.as_posix()}'])
     for file in sorted((ROOT/'underworld').glob('*.py')):command += ['--add-data',f'{file};underworld']
     command += ['--add-data',f'{ROOT / "underworld/web"};underworld/web','--add-data',f'{ROOT / "config"};config']
+    for relative in ('artifacts/emotion_registration.json', 'artifacts/weather_registration.json',
+                     'artifacts/phase9_registration.json', 'docs/PHASE9_PREREGISTRATION.md'):
+        add_data(relative)
+    for registration in ('artifacts/emotion_registration.json', 'artifacts/weather_registration.json'):
+        manifest = json.loads((ROOT / registration).read_text(encoding='utf8'))
+        for relative in manifest.get('files', {}):
+            if not relative.startswith(('underworld/', 'config/')):
+                add_data(relative)
     for name in ('libgcc_s_seh-1.dll','libstdc++-6.dll','libwinpthread-1.dll'):
         file=toolchain/name
         if file.exists():command+=['--add-binary',f'{file};.']

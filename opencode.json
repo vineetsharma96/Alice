@@ -1,0 +1,33 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "codex",
+  "mcp": {
+    "timeout": {
+      "startup": 30000,
+      "catalog": 30000,
+      "execution": 600000
+    },
+    "servers": {
+      "tinyfish": {
+        "type": "remote",
+        "url": "http://127.0.0.1:3711/mcp",
+        "oauth": false,
+        "timeout": {
+          "startup": 10000,
+          "catalog": 30000,
+          "execution": 600000
+        }
+      },
+      "playwright": {
+        "type": "local",
+        "command": ["npm", "exec", "--offline", "--", "playwright-mcp"],
+        "cwd": ".",
+        "timeout": {
+          "startup": 30000,
+          "catalog": 30000,
+          "execution": 120000
+        }
+      }
+    }
+  }
+}

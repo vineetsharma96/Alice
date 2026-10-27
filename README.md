@@ -73,7 +73,39 @@ Stop processes using a native extension before rebuilding it.
 Open [the local control page](http://127.0.0.1:8782/) after the server starts.
 The world starts **paused**. The first command creates a source world and a
 separate integrated copy; both destination paths must be new. To reopen this
-same world later, run only the second command.
+same world later, run only the second command. Run `life.py new` only once for
+those paths: it intentionally refuses to reset an existing source or life.
+If the source already exists but you need a new integrated copy, use `attach`
+with a new destination instead:
+
+```powershell
+.venv/Scripts/python.exe scripts/life.py attach --source data/my-life-source.sqlite --db data/my-life-copy.sqlite
+```
+
+### Windows executable GUI modes
+
+`run.cmd` and a rebuilt `dist\UnderworldLab.exe` accept explicit integrated-life
+GUI flags. The default launcher behavior remains the historical model-off
+desktop runner; these flags select the current Alice dashboard instead:
+
+```powershell
+.\run.cmd --readonly --db data\my-life.sqlite --port 8781
+.\run.cmd --control --db data\my-life.sqlite --port 8782
+# equivalent aliases:
+.\run.cmd readonly --db data\my-life.sqlite --port 8781
+.\run.cmd control --db data\my-life.sqlite --port 8782
+```
+
+Replace `data\my-life.sqlite` with the existing integrated-life save you want
+to open; the `--db` option is required for both modes. The `...` notation is
+only shorthand in prose and must not be typed literally.
+
+`--readonly` opens the dashboard without a writer or control endpoint.
+`--control` opens the paused dashboard and owns the single writer lease, so its
+Pause/Resume, tick, batch, run-until, cancellation, speed and guided-weather
+controls are enabled. Both modes open the browser automatically; add
+`--no-browser` for headless use. Do not run `--control` while another writer
+owns the same save.
 
 ## Manual controls
 
@@ -83,10 +115,20 @@ same world later, run only the second command.
 | One inhabitant turn | Executes the next scheduled inhabitant's policy turn. |
 | Run / Resume | Continues scheduling inhabitants with no overall tick or simulated-time limit. |
 | Pause | Stops selecting new work after the current transaction completes. |
+| Speed | Changes wall-clock pacing only; native timestep and committed physics remain unchanged. |
+| Advance batch / Run until | Runs a bounded native-tick job; completion pauses automatically. Run-until targets must align to the native timestep. |
+| Cancel job | Stops a bounded job at the next safe native tick boundary. |
 
 Closing the browser does not stop the server. Pause first to stop advancing;
 use Ctrl+C in the server terminal to close it cleanly. Restarting opens the
 same state and starts paused.
+
+The observer at the same URL now includes the complete living-world dashboard:
+calendar/day count, 2D/3D switch, inhabitant inspector, carried inventory,
+evidence-backed mood traces, directed relationships, event filters, weather
+telemetry and Advanced JSON. It also supports bounded tick batches, run-until
+simulated time and safe cancellation. See
+[the dashboard report](docs/ALICE_DASHBOARD_REPORT.md).
 
 No overall tick limit does **not** remove resource, storage or integrity bounds.
 The cognitive journal retains its 10,000-operation quota and the physical
@@ -156,8 +198,58 @@ Historical UW9 developmental worlds are not automatically migrated. Read
 | Controls | Paused startup, single tick, inhabitant turn, pause and continuous scheduling. |
 | Historical learning | H-series UW9 experiments and their private vocabularies remain preserved in their own profile; they are not migrated into integrated UW10W life. |
 
-New foundation models are **isolated JSON research modules**, not live native
-inhabitants or an extension of the integrated scheduler/viewer:
+New foundation models have standalone JSON APIs and are also connected to an
+explicit copy-only living-world bridge. They are not silently merged into
+ordinary `scripts/life.py` saves or the existing viewer; use the bridge CLI for
+a world that advances all six foundation sidecars:
+
+```powershell
+python scripts/living_bridge.py attach --source data/my-life.sqlite --db data/my-living-foundations.sqlite
+python scripts/living_bridge.py run --db data/my-living-foundations.sqlite --ticks 360 --output artifacts/my-living-foundations-90s.json
+python scripts/living_bridge.py inspect --db data/my-living-foundations.sqlite
+python scripts/living_bridge.py replay --db data/my-living-foundations.sqlite
+```
+
+The bridge preserves native authority, requires a new destination, and keeps
+the source unchanged. See [the bridge report](docs/LIVING_WORLD_BRIDGE_REPORT.md)
+for adapter boundaries and evidence.
+
+### Fluctlight-style sidecar experiment
+
+The repository also includes an additive private sidecar for new experiments.
+It records only an inhabitant's own sanitized observations, supports a
+short-lived seven-day teacher profile, health-adjusted 50–90-year lifespan
+projections for ordinary profiles, provenance-bounded survival lessons, and a
+deterministic month/year, seasonal-sun, lunar-phase, orbital-eccentricity and
+eclipse-window calendar. It does **not** add a native actor to an existing save
+or grant omniscient map knowledge.
+
+Bootstrap a teacher sidecar from one inhabitant's current perceptual view:
+
+```powershell
+python scripts/fluctlight.py bootstrap --world data/my-life.sqlite --agent agent-1 --output data/agent-1-fluctlight.json --role teacher
+python scripts/fluctlight.py calendar --seconds 1296000
+```
+
+This is intentionally separate from the frozen native weather/life save. A
+future native implementation of births, ageing, autonomous teaching, animal
+care, and lunar physics must use a new versioned world/runtime; it must not
+reinterpret the current `data/my-life.sqlite` in place.
+
+### Optional Alicization-style time dilation
+
+The control dashboard now has a user-selectable **Time dilation** option:
+
+- `Normal · 1×`
+- `Fast · 20×`
+- `Alicization nominal · 300 years / 3 weeks`
+
+The last option uses the nominal ratio `300 × 365 / 21 = 5,214.2857×` for
+wall-clock pacing. It is an experiment setting, not a time-travel claim: the
+runner still commits native ticks and journal entries one at a time, does not
+skip physics, and cannot guarantee that a real computer will complete 300
+simulated years in exactly 21 wall-clock days. It is intentionally opt-in and
+reported in `/api/life-control` as `time_dilation` with a warning.
 
 | Foundation | Implemented stages | Evidence |
 | --- | --- | --- |
@@ -167,6 +259,11 @@ inhabitants or an extension of the integrated scheduler/viewer:
 | Ageing, development and lineage | L5–L9 | [L59 report](docs/LIFECYCLE_L59_REPORT.md) |
 | Aggregate microorganisms | M0–M3 | [M03 report](docs/MICRO_ECOLOGY_M03_REPORT.md) |
 | Further microbial ecology | M4–M8; disease disabled | [M48 report](docs/MICRO_ECOLOGY_M48_REPORT.md) |
+
+Bridge status: G01/G47/L02/L59/M03/M48 are now advanced from native ticks and
+native climate in `underworld/living_world_bridge.py`; reproduction, biological
+care/mortality and M7 disease are not automatically invented where native
+contracts are absent.
 
 The review corrected mass units, soil depth, care receipts/retries, lifecycle
 rollback, checkpoint overwrites, plant nutrient spending and generation-order
@@ -199,15 +296,15 @@ these horizons does not establish sustainability or complete wellbeing.
 
 ## Verification
 
-The latest pre-push focused run on 23 October 2026 passed **77 tests and three
-subtests in 34.81 seconds**. It covered the foundation modules and fixes,
+The latest full Python run on 24 October 2026 passed **534 tests and 355
+subtests in 738.52 seconds** with `UNDERWORLD_CORE` exported to the existing
+native executable. It includes the living-world bridge, foundation modules,
 ordered integration, integrated life, code audit and manual controls.
 [Retained test output](artifacts/github_push_checks.log).
 
 Earlier integrated-life verification passed **465 tests and 352 subtests in
-944.78 seconds**, plus four native checks in 0.38 seconds. That full-suite run
-predates the latest foundation additions; it is historical evidence, not a
-fresh full-tree result. See [scope and logs](docs/LIFE_VALIDATION.md).
+944.78 seconds**, plus four native checks in 0.38 seconds. That run is now
+historical. See [scope and logs](docs/LIFE_VALIDATION.md).
 
 After building and setting the environment above, run the focused checks:
 
@@ -241,9 +338,9 @@ Source mismatches fail closed. Do not repin an old world, rescale its data or
 reset its body to make it load under new laws.
 
 `run.cmd`, `run.sh` and the optional `UnderworldLab.exe` package launch the
-**legacy UW9 desktop profile**, not the integrated manual-control runtime
-described above. A compiled executable is not included in a fresh clone.
-Keep those entry points for their documented legacy use. See
+historical model-off desktop profile by default. Use the explicit `--readonly`
+or `--control` flags above for the integrated Alice dashboard. A compiled
+executable is not included in a fresh clone. See
 [earlier instructions and milestone history](README_HISTORY.md).
 
 ## Remaining work

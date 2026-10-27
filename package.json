@@ -9,6 +9,10 @@
   },
   "dependencies": {
     "omnirush": "^2.5.9"
+  },
+  "devDependencies": {
+    "@playwright/mcp": "0.0.83",
+    "@tiny-fish/mcp": "0.1.0"
   }
 }
 

@@ -1,6 +1,11 @@
 @echo off
 setlocal
 cd /d "%~dp0"
+rem Default mode keeps the historical model-off desktop runner.
+rem Alice integrated-life modes are explicit:
+rem   run.cmd --readonly --db data\my-life.sqlite --port 8781
+rem   run.cmd --control --db data\my-life.sqlite --port 8782
+rem Aliases without the leading dashes are also accepted.
 if not "%UNDERWORLD_SOURCE%"=="1" if exist "dist\UnderworldLab.exe" (
   "dist\UnderworldLab.exe" %*
   exit /b

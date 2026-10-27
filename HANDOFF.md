@@ -1,3 +1,324 @@
+# Current Alice dashboard - 24 October 2026
+
+The Windows executable/launcher now supports explicit integrated-life GUI
+modes: `run.cmd --readonly --db ...` (read-only dashboard) and
+`run.cmd --control --db ...` (paused single-writer control dashboard). The word
+aliases `run.cmd readonly ...` and `run.cmd control ...` are also accepted.
+`underworld.app` dispatches these modes for both source and packaged launches;
+`life_viewer` and `life_control` open the browser by default, with
+`--no-browser` available for headless use. `scripts/package_app.py` now bundles
+the life/viewer hidden imports, weather extension and provenance files needed
+by the packaged modes. The rebuilt executable was smoke-tested for both modes.
+
+Launcher-focused verification: `7 passed in 7.84s`; py_compile, `npm run lint`
+and `git diff --check` passed. Packaged `--control --help` and
+`--readonly --help` passed, and temporary packaged servers returned the native
+`alice.dashboard/1` packet in both modes. The post-launcher full pytest command
+was started with the required five-minute limit and reached 23% without failure
+output before timeout; the completed `534 tests and 355 subtests` run recorded
+below predates these launcher-only changes.
+
+---
+
+The existing integrated-life observer is now a complete observer/control
+dashboard at the same `life_control.py` URL. It reads one authoritative native
+weather/life head and uses the existing writer lease and journal. The dashboard
+provides persistent run/calendar/population status, shared 2D/3D observation,
+selected-inhabitant inspection, carried inventory, evidence-backed mood
+charts with tick-aligned mean/range and event markers, directed relationship graph, filtered event timeline, native weather
+telemetry, guided weather overrides, Advanced JSON, copy/download, pause,
+resume, one tick, bounded tick batches, run-until simulated time and safe
+cancellation.
+
+New UI/backend files: `underworld/web/dashboard.html`,
+`underworld/web/dashboard.css`, `underworld/web/dashboard.js`,
+`underworld/life_viewer.py` and extended `underworld/life_control.py`.
+Dashboard telemetry is bounded to 240 retained operation/event records. Mood
+traces use recorded stress/valence/arousal updates only; explanations state
+when a cause is not recorded. Microbial counts, target-specific anger,
+reproductive events and unsupported inventory metadata are explicitly marked
+unavailable rather than guessed. See `docs/ALICE_DASHBOARD_REPORT.md`.
+
+Focused verification: `5 passed in 9.13s` for life controls,
+`17 passed in 51.46s` for integrated life, controls and the living-world bridge, py_compile,
+`node --check underworld/web/dashboard.js`, `node --check underworld/web/scene.js`
+and `npm run lint` passed. Browser verification confirmed speed selection,
+pause/resume/cancel at safe boundaries, 2D/3D switching, Advanced JSON and a
+clean loaded dashboard; screenshot:
+`artifacts/dashboard_ui_smoke.png`. No commit or push was made.
+
+The whole-tree check was then completed with the native runtime environment:
+`export UNDERWORLD_CORE="C:/Users/abc/Documents/ChatGPT/UnderWorld/build/underworld_core.exe"; python -m pytest -q`
+passed `534 tests and 355 subtests in 738.52s`.
+
+---
+
+# Current living-world bridge - 24 October 2026
+
+The six Alice foundation sidecars are now connected to an explicit copy-only
+UW10W/ALICE-LIFE-1 bridge in `underworld/living_world_bridge.py`. The bridge
+preserves native authority and writes native weather/life journals plus G01,
+G47, L02, L59, M03 and M48 state in one transaction. It accepts a compatible
+weather/F5 source or an already enrolled life copy, always requires a NEW
+destination, and refuses native changes made outside the bridge.
+
+CLI: `scripts/living_bridge.py attach/run/inspect/replay/save`. The default
+biological clock is one simulated day per L02/L59 step; use
+`--biological-step-s` for a bounded experiment. Native tree observations are
+mapped to G47 copied plants, native actor identities/time/alive state bind L02
+and L59, native climate drives G01/G47/M03/M48, and completed public native
+`give`/`speak` receipts add L02 relationship evidence. No automatic
+reproduction/care/mortality action is created; M7 disease remains disabled.
+
+Focused bridge verification: 4 tests passed in 20.61s; combined foundation
+smoke 6 passed in 24.39s; integrated life plus foundations review 21 passed
+and 3 subtests passed in 15.76s; py_compile and `npm run lint` passed. The
+correctly configured full repository run passed 534 tests and 355 subtests in
+738.52s. The first attempt had 528 passed and 2 scaffold setup errors because
+the shell-local `set UNDERWORLD_CORE=...` did not export the variable; the
+rerun with `export` passed. See `docs/LIVING_WORLD_BRIDGE_REPORT.md`. No
+commit or push was made.
+
+---
+
+# Fluctlight-style sidecar and live-session diagnosis - 25 October 2026
+
+The existing `data/my-life.sqlite` was inspected after a long manual run. It
+contains 3,322 life-policy operations at tick 17,774 / 4,443.5 simulated
+seconds. The policy history is dominated by `rest / reduce_exposure` (2,159
+baseline choices), followed by 570 supply-preparation choices, 261 drinks and
+172 eats. This explains the reported stationary period: the current frozen
+weather policy treats a completed shelter as a reason to rest, and its default
+autonomous mode does not continue general wood/fiber work or animal care.
+
+The native ecology also uses small finite animal reserves and consumes roughly
+1,000,000 ug/s food plus 1,500,000 ug/s water. With the default 250,000,000 ug
+food and 200,000,000 ug water reserves, an unreachable animal can become
+deprived within minutes of simulated time. This is a native new-world profile
+issue, not an age rule.
+
+Added without modifying the frozen weather/life source:
+
+- `underworld/fluctlight.py` — private observation-only knowledge, a seven-day
+  teacher profile, health-adjusted ordinary lifespan projection, bounded
+  survival teaching, and deterministic month/sun/moon/orbital/eclipses data.
+- `scripts/fluctlight.py` — `bootstrap`, `observe`, `new`, and `calendar` CLI.
+- `tests/test_fluctlight.py` — regression coverage.
+
+Example:
+`python scripts/fluctlight.py bootstrap --world data/my-life.sqlite --agent
+agent-1 --output data/agent-1-fluctlight.json --role teacher`
+
+The sidecar does not create a native actor or rewrite an existing save. Native
+births, ageing, autonomous teaching, revised animal mortality, and lunar
+physics still require a separately versioned new-world/runtime implementation.
+Do not modify `underworld/weather_policy.py` in place: it is pinned by the
+frozen F0-F3 registration and existing weather saves fail closed on source
+drift.
+
+Verification for this continuation: `14 passed in 7.39s` for focused policy,
+fluctlight and control tests; `npm run lint` passed; py_compile passed;
+`git diff --check` passed. The whole-tree pytest command was run with the
+required native environment and five-minute limit, reached 47% without a
+failure before timeout; the repository's recorded full suite takes about
+11–12 minutes.
+
+The control dashboard now also exposes an opt-in `time_dilation` setting with
+`normal`, `fast`, and `sao_300y_3w` presets. The Alicization nominal ratio is
+`300 * 365 / 21 = 5,214.2857x`. It changes wall-clock pacing only; native
+ticks, physics, journals, and resource accounting remain serialized and are
+not skipped. Focused time-dilation/control checks passed (`7 passed in 8.17s`),
+as did `npm run lint`, py_compile, and `git diff --check`. This is not a claim
+that the current computer can execute 300 native years in exactly three weeks.
+
+## Phase 0 — ALICE-LIFE-2 contract freeze
+
+Phase 0 began on 25 October 2026. `underworld/life_contracts.py` now defines
+sealed shadow contracts for identity, private observation, memory, body needs
+and affect traces. Every record has a profile/version envelope, owner/run/
+branch identity, native tick and observation version, source event references,
+provenance, privacy scope and canonical SHA-256 checksum. Validation rejects
+unknown versions, unknown fields, invalid privacy/provenance combinations,
+malformed ranges and checksum tampering.
+
+The records are shadow-only: no existing `ALICE-LIFE-1` database, native
+checkpoint, frozen registration or current `data/my-life.sqlite` was changed.
+The contract specification is in `docs/PHASE0_CONTRACTS.md`; regression tests
+are in `tests/test_phase0_contracts.py`. Focused verification passed:
+`16 passed in 22.50s` for Phase 0, life controls and integrated life;
+`npm run lint`, py_compile and `git diff --check` passed. The next step is
+Phase 1 persistence in a new copy-only destination, after deciding the exact
+identity/observation capture boundaries.
+
+## Phase 1 — ALICE-LIFE-2 identity and observation persistence
+
+Phase 1 started on 25 October 2026. `underworld/life_phase1.py` now enrolls a
+native weather source or an existing ALICE-LIFE-1 copy into a NEW destination.
+The source hash is checked before and after copying; an existing destination or
+already-enrolled Phase-1 source is refused. The native world and its journals
+remain authoritative and are not rewritten by sidecar capture.
+
+The new destination receives `phase1_meta`, `phase1_identity`,
+`phase1_observations` and `phase1_operations` tables. Attach persists one
+sealed identity and one private native observation per selected actor. Identity
+does not invent names or traits: `public_name` is the explicit native actor ID
+and authored/self-model mappings start empty. `capture` persists later private
+observations without advancing native time and is idempotent at the same
+native state. `identities`, `observations`, `inspect`, `replay` and `save`
+provide validated readback, bounded summaries, checksum verification and new
+backups. CLI entry point: `scripts/life_phase1.py`.
+
+The contract and boundary are documented in `docs/PHASE1_PERSISTENCE.md`;
+regression coverage is in `tests/test_phase1_persistence.py`. Verification
+passed: `16 passed in 17.00s` for Phase 0, Phase 1 and integrated-life tests;
+`python -m py_compile`, `npm run lint` and `git diff --check` passed. The first
+plain full-suite invocation reached `548 passed, 2 environment errors` because
+`UNDERWORLD_CORE` was not set. The required native-runtime rerun passed
+`550 tests and 355 subtests in 653.48s` with
+`export UNDERWORLD_CORE="C:/Users/abc/Documents/ChatGPT/UnderWorld/build/underworld_core.exe"; python -m pytest -q`.
+
+## Phase 2 — ALICE-LIFE-2 private memory persistence
+
+Phase 2 started on 26 October 2026. `underworld/life_phase2.py` now requires a
+Phase-1 destination and creates a NEW copy with private memory sidecar tables.
+It never infers memory from an operator projection or invents content. Each
+written memory requires an enrolled owner, explicit content/kind/confidence/
+salience/provenance and at least one reference to a persisted Phase-1 native
+observation or its source event ID. Records use the Phase-0 sealed memory
+contract and remain private.
+
+Corrections are append-only: a replacement is a new memory with
+`supersedes=<old-id>`, while explicit removal adds an `invalidated` event. The
+old payload is never rewritten. `memory()` and `memories()` expose the sealed
+record, effective validity and lifecycle event IDs. `replay()` verifies Phase 1,
+memory checksums, source references, owners, privacy, correction links and
+operation metadata. CLI entry point: `scripts/life_phase2.py`; boundary and
+usage are documented in `docs/PHASE2_MEMORY_PERSISTENCE.md`.
+
+Focused verification passed: `20 passed in 20.13s` for Phase 0, Phase 1,
+Phase 2 and integrated-life tests. The first Phase-2 test attempt used a
+temporary Python 3.14 runtime without the compiled weather extension; the
+validated rerun used uv-managed Python 3.12.14, matching the repository native
+extension. `python -m py_compile`, `npm run lint` and `git diff --check` passed.
+The full native-runtime suite passed `554 tests and 355 subtests in 586.87s`:
+`UNDERWORLD_CORE="C:/Users/abc/Documents/ChatGPT/UnderWorld/build/underworld_core.exe" PYTHONPATH=. uv run --python 3.12.14 --with pytest --with pybind11 pytest -q`.
+
+## Phase 3 — ALICE-LIFE-2 body-need persistence
+
+Phase 3 started on 26 October 2026. `underworld/life_phase3.py` now requires a
+Phase-2 destination and creates a NEW copy with native body-need snapshots.
+Each sealed private/native `body_need` record stores hunger, thirst, fatigue,
+health, alive, exact native tick/observation version and a reference to the
+matching Phase-1 private observation. Native state remains authoritative for
+action legality, resource transfer, health changes and death; Phase 3 creates
+no survival action, mortality rule or inferred cause.
+
+Later captures first append matching Phase-1 observations in the Phase-3 copy,
+then append body snapshots without advancing native time. Repeated capture at
+the same native state is idempotent. `body_need`, `body_needs`, `inspect`,
+`replay` and `save` provide validated readback, bounded summaries, source/body
+equality checks, tamper detection and copy-only backups. CLI entry point:
+`scripts/life_phase3.py`; documentation is in
+`docs/PHASE3_BODY_NEEDS.md`; regression coverage is in
+`tests/test_phase3_body_needs.py`.
+
+Focused verification passed: `24 passed in 24.84s` for Phase 0 through Phase 3
+and integrated life; the Phase 3-only run passed `4 passed in 5.64s`.
+`python -m py_compile`, `npm run lint` and `git diff --check` passed. The exact
+plain `python -m pytest -q` command could not start in this Windows session
+because the Microsoft Store Python alias returned `Permission denied`; the
+repository's uv-managed Python 3.12.14 focused checks are the validated Phase
+3 evidence. The prior native full suite remains the Phase 2 baseline; a new
+full suite should be run when the system Python launcher is available.
+
+## Phase 4 — ALICE-LIFE-2 affect and mood traces
+
+Phase 4 started on 26 October 2026. `underworld/life_phase4.py` now requires a
+Phase-3 destination and creates a NEW copy with private affect-trace records.
+It records the integrated runtime's existing body signals, appraisal when
+recorded, fast affect, slow mood, emotional-memory references, social changes
+and last action influence. Missing appraisal is explicitly marked
+`explanation_status=unavailable`; no hidden cause or intention is inferred and
+no second affect engine is created.
+
+Every trace is a sealed `affect_trace` with derived/private provenance and an
+exact Phase-3 body source at the same native tick. Later captures append the
+matching Phase-3 body/Phase-1 observation sidecars first and then append affect
+traces without advancing native time. Repeated capture at the same native head
+is idempotent. `affect_trace`, `affect_traces`, `inspect`, `replay` and `save`
+provide validated readback, bounded summaries, source/tick checks, tamper
+detection and copy-only backups. CLI entry point: `scripts/life_phase4.py`;
+documentation is in `docs/PHASE4_AFFECT_TRACES.md`; regression coverage is in
+`tests/test_phase4_affect_traces.py`.
+
+Focused verification passed: `28 passed in 35.39s` for Phase 0 through Phase 4
+and integrated life; the Phase 4-only run passed `4 passed in 8.27s`.
+`python -m py_compile`, `npm run lint` and `git diff --check` passed. The exact
+plain `python -m pytest -q` command again could not start because the Windows
+Microsoft Store Python alias returned `Permission denied`; Phase 4 was
+validated with uv-managed Python 3.12.14 matching the native extension. The
+last completed native full suite is the Phase 2 baseline (`554 tests and 355
+subtests`); no new full suite claim is made for Phase 4 within the five-minute
+check limit.
+
+## Phase 5 — ALICE-LIFE-2 unified lineage profile
+
+Phase 5 started on 26 October 2026. In this ALICE-LIFE-2 persistence sequence,
+Phase 5 is the unified coordinator rather than the repository's separate
+thermal/material-model Phase 5. `underworld/life_phase5.py` requires a Phase-4
+destination and creates a NEW copy with per-agent lineage snapshots. Each
+snapshot binds, by stable ID and checksum, the Phase 1 identity and exact
+private observation, Phase 2 memories sourced from that observation, the Phase
+3 body need at the same tick, and the Phase 4 affect trace at the same tick.
+
+The coordinator adds no sixth cognitive subsystem and creates no native truth.
+It first runs the Phase 4 → Phase 3 → Phase 1 sidecar capture chain, then
+appends a unified snapshot without advancing native time. Repeated capture at
+the same native state is idempotent. `snapshot`, `snapshots`, `inspect`,
+`replay` and `save` provide validated readback, bounded summaries, exact
+cross-record lineage checks, tamper detection and copy-only backups. CLI entry
+point: `scripts/life_phase5.py`; documentation is in
+`docs/PHASE5_UNIFIED_PROFILE.md`; regression coverage is in
+`tests/test_phase5_unified_profile.py`.
+
+Focused verification passed: `32 passed in 46.59s` for Phase 0 through Phase 5
+and integrated life; the Phase 5-only run passed `4 passed in 11.89s`.
+`python -m py_compile`, `npm run lint` and `git diff --check` passed. The exact
+plain `python -m pytest -q` command could not start because the Windows
+Microsoft Store Python alias returned `Permission denied`; validated Phase 5
+checks used uv-managed Python 3.12.14 matching the native extension. No new
+full-suite claim is made within the five-minute check limit.
+
+## Phase 6 — ALICE-LIFE-2 social and cultural provenance
+
+Phase 6 started on 26 October 2026. In this ALICE-LIFE-2 persistence sequence,
+`underworld/life_phase6.py` requires a Phase-5 destination and creates a NEW
+copy with an append-only ledger for optional social events and explicitly
+authored cultural artifacts. Supported event kinds are speech, gift, offer,
+response, shared task, artifact read and departure. Events require enrolled
+participants and Phase-1 observation/source-event references; no cooperation,
+trust, native action or automatic scientific progress is forced.
+
+Artifacts are private by default. `write_artifact` stores a bounded procedure,
+book, report or tool with source references. Ordinary listing omits content; a
+non-owner receives content only through `read_artifact`, which requires an
+enrolled reader, source reference and records an `artifact_read` event. This is
+modeled access, not omniscient telemetry. All records are checksummed and
+`replay` validates Phase 1–5, source references, owners, participants, artifact
+access and operation envelopes. CLI entry point: `scripts/life_phase6.py`;
+documentation is in `docs/PHASE6_SOCIAL_CULTURE.md`; regression coverage is in
+`tests/test_phase6_social_culture.py`.
+
+Focused verification passed: `35 passed in 59.24s` for Phase 0 through Phase 6
+and integrated life; the Phase 6-only run passed `3 passed in 8.75s`.
+`python -m py_compile`, `npm run lint` and `git diff --check` passed. The exact
+plain `python -m pytest -q` command could not start because the Windows
+Microsoft Store Python alias returned `Permission denied`; Phase 6 focused
+checks used uv-managed Python 3.12.14 matching the native extension. No full
+suite claim is made for Phase 6 within the five-minute check limit.
+
+---
+
 # Active manual session - 23 October 2026
 
 User requested manual control with no overall tick limit. Launcher:

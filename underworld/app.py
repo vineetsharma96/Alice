@@ -28,6 +28,14 @@ def validate_model_off(path):
 
 def main(argv=None):
     argv=list(sys.argv[1:] if argv is None else argv)
+    if argv[:1] in (['--control'], ['control']):
+        from .life_control import main as control_main
+        sys.argv=[sys.argv[0],*argv[1:]]
+        return control_main()
+    if argv[:1] in (['--readonly'], ['--life-readonly'], ['readonly']):
+        from .life_viewer import main as viewer_main
+        sys.argv=[sys.argv[0],*argv[1:]]
+        return viewer_main()
     if argv[:1]==['--cli']:
         if getattr(sys,'frozen',False) and argv[1:2]==['run']:
             raise SystemExit('AppContainer experiments require the source Python runtime; use the desktop bounded runner here.')

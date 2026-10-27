@@ -1,3 +1,75 @@
+# Current Alice dashboard - 24 October 2026
+
+The Windows launcher now exposes explicit integrated-life GUI modes:
+`run.cmd --readonly --db ...` opens the read-only Alice dashboard, while
+`run.cmd --control --db ...` opens the paused single-writer control dashboard;
+`readonly` and `control` word aliases are accepted. The packaged executable
+was rebuilt with the dynamic life/viewer imports, weather extension and
+provenance files required by these modes. Both packaged modes returned the
+native `alice.dashboard/1` packet in temporary smoke runs.
+
+Launcher-focused verification: `7 passed in 7.84s`; py_compile,
+`npm run lint` and `git diff --check` passed. The most recent completed full
+suite (`534 tests and 355 subtests`) predates these launcher-only changes; the
+post-change five-minute `python -m pytest -q` attempt reached 23% without
+failure output before timeout.
+
+---
+
+The existing integrated-life UI now serves a complete observer/control
+dashboard from `underworld/life_viewer.py` and `underworld/life_control.py`.
+It uses the authoritative native weather/life head, existing writer lease and
+journal. The dashboard includes persistent simulation/calendar/population
+status, shared 2D/3D views, selected-inhabitant inspector, evidence-backed
+mood charts with tick-aligned mean/range and event markers, directed relationships, bounded event timeline, weather/exposure
+telemetry, guided weather override controls, Advanced JSON and copy/download.
+Controls include pause/resume, one tick, one turn, speed, bounded tick batch,
+run-until simulated time and safe cancellation. Jobs never change the native
+timestep, cannot overlap, and return paused after completion.
+
+New dashboard files: `underworld/web/dashboard.html`,
+`underworld/web/dashboard.css`, `underworld/web/dashboard.js`. Backend
+telemetry is bounded to 240 retained records and explicitly labels unsupported
+microbial counts, reproductive fields, target-specific anger and inventory
+metadata. See `docs/ALICE_DASHBOARD_REPORT.md`.
+
+Focused verification: life controls `5 passed in 9.13s`; integrated life,
+controls and bridge `17 passed in 51.46s`; py_compile, browser module parsing and
+`npm run lint` passed. Browser smoke confirmed speed selection,
+pause/resume/cancel at safe boundaries, 2D/3D switching and a clean loaded
+dashboard. Screenshot:
+`artifacts/dashboard_ui_smoke.png`.
+
+---
+
+# Current living-world bridge - 24 October 2026
+
+`underworld/living_world_bridge.py` and `scripts/living_bridge.py` now connect
+the G01/G47/L02/L59/M03/M48 sidecars to a new copy of a compatible UW10W/
+ALICE-LIFE-1 world. Native time, bodies, resources, weather, action validation
+and receipts remain authoritative. The bridge commits native weather/life
+journals and its sidecar state atomically, records a hash-chained operation
+journal, supports idempotent retry, backup, resume and combined replay, and
+rejects source mutation or native advancement outside the bridge.
+
+The adapter binds native seed/bounds/climate to G01; native trees to copied
+G47 plant records; native actor IDs/time/alive state to L02/L59; and native
+climate/resource observations to M03/M48 habitats. Completed public native
+`give` and `speak` receipts create L02 directional relationship evidence.
+Native actors are represented as non-reproductive residents because UW10W does
+not expose reproductive roles; care/mortality are not fabricated. M7 disease
+remains disabled. Detailed mappings and limitations are in
+`docs/LIVING_WORLD_BRIDGE_REPORT.md`.
+
+Focused bridge evidence: `4 passed in 20.61s`; combined bridge/foundation
+smoke: `6 passed in 24.39s`; integrated life plus foundation review:
+`21 passed, 3 subtests passed in 15.76s`; py_compile and `npm run lint` passed.
+The correctly configured full repository run passed `534 tests and 355
+subtests in 738.52s`. An earlier shell-local environment assignment caused
+two scaffold setup errors; the rerun exported `UNDERWORLD_CORE` and passed.
+
+---
+
 # Current foundation review - 23 October 2026
 
 Reviewed the latest other-agent G01/G47, L02/L59 and M03/M48 additions.

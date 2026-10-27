@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alice — Living world dashboard</title>
+  <link rel="stylesheet" href="/dashboard.css">
+  <script type="module" src="/dashboard.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-lockup">
+      <span class="eyebrow">ALICE / LIVING WORLD</span>
+      <h1>Field dashboard</h1>
+    </div>
+    <div class="header-meta">
+      <span id="connection" class="status-chip" role="status">Connecting</span>
+      <span id="world-label">World not loaded</span>
+    </div>
+  </header>
+
+  <section class="status-strip" aria-label="Persistent simulation status">
+    <div class="status-cell status-primary"><span class="cell-label">Run state</span><strong id="run-state">Connecting</strong><small id="run-detail">Waiting for telemetry</small></div>
+    <div class="status-cell"><span class="cell-label">Seed</span><strong id="seed">—</strong><small id="laws">—</small></div>
+    <div class="status-cell wide"><span class="cell-label">Simulation clock</span><strong id="elapsed">—</strong><small id="calendar">—</small></div>
+    <div class="status-cell"><span class="cell-label">Tick</span><strong id="tick">—</strong><small id="tick-rate">—</small></div>
+    <div class="status-cell"><span class="cell-label">Population</span><strong id="population-total">—</strong><small id="population-detail">—</small></div>
+    <div class="status-cell"><span class="cell-label">Observed speed</span><strong id="observed-speed">—</strong><small>simulation seconds / wall second</small></div>
+  </section>
+
+  <section class="control-bar" aria-label="Simulation controls">
+    <div class="control-group primary-controls">
+      <button id="pause-resume" class="button-primary">Resume</button>
+      <button id="step-one">Advance 1 tick</button>
+       <label class="compact-field">Speed <select id="speed"><option value="1">1×</option><option value="5">5×</option><option value="20">20×</option></select></label>
+       <label class="compact-field">Time dilation <select id="time-dilation"><option value="normal">Normal · 1×</option><option value="fast">Fast · 20×</option><option value="sao_300y_3w">Alicization nominal · 300 years / 3 weeks</option></select></label>
+    </div>
+    <div class="control-group batch-controls">
+      <label class="compact-field">Ticks <input id="batch-ticks" type="number" min="1" max="100000" value="100"></label>
+      <button id="step-batch">Advance batch</button>
+      <label class="compact-field">Run until s <input id="run-until" type="number" min="0" step="0.25" placeholder="e.g. 3600"></label>
+      <button id="run-until-button">Run until</button>
+      <button id="cancel-job" class="button-danger" disabled>Cancel job</button>
+    </div>
+    <div class="control-group view-controls">
+      <button id="view-2d" class="view-toggle active" aria-pressed="true">2D map</button>
+      <button id="view-3d" class="view-toggle" aria-pressed="false">3D view</button>
+      <button id="advanced-toggle" class="quiet-button" aria-pressed="false">Advanced</button>
+    </div>
+  </section>
+  <p id="control-notice" class="inline-notice" role="status"></p>
+  <p id="error" class="error-banner" role="alert" hidden></p>
+
+  <main class="dashboard-grid">
+    <section class="world-card panel" aria-labelledby="world-title">
+      <div class="panel-heading">
+        <div><span class="eyebrow">OBSERVATION</span><h2 id="world-title">The world now</h2></div>
+        <div class="heading-actions"><span id="world-subtitle" class="muted">Authoritative native state</span><button id="focus-selected" class="text-button">Follow selected</button></div>
+      </div>
+      <div id="map-2d" class="map-shell" aria-label="Top-down two-dimensional world map"><svg id="map-svg" role="img" aria-label="Top-down world map"></svg></div>
+      <div id="map-3d" class="map-shell map-3d-shell" aria-label="Three-dimensional visualization of the same two-dimensional mechanics" hidden><div id="viewport"></div><div id="render-error" hidden><strong>3D unavailable</strong><span id="render-reason"></span></div></div>
+      <div class="map-footer"><span>2D mechanics / 3D visualization</span><span id="map-source">Waiting for source</span></div>
+      <div class="legend"><span class="legend-dot inhabitant">Inhabitant</span><span class="legend-dot animal">Animal</span><span class="legend-dot plant">Plant</span><span class="legend-dot resource">Resource</span><span class="legend-dot selected-dot">Selected</span></div>
+    </section>
+
+    <aside class="inspector-column">
+      <section class="panel inspector-card" aria-labelledby="inspector-title">
+        <div class="panel-heading"><div><span class="eyebrow">SELECTED INHABITANT</span><h2 id="inspector-title">Inspector</h2></div><select id="agent" aria-label="Selected inhabitant"></select></div>
+        <div class="identity-block"><div><strong id="person-name">—</strong><span id="person-id">—</span></div><span id="life-stage" class="tag">Unknown stage</span></div>
+        <p id="current-task" class="task-callout">No current task recorded.</p>
+        <div id="needs" class="needs-grid"></div>
+        <div class="inspector-section"><h3>Carrying</h3><div id="inventory" class="inventory-list"></div><p id="inventory-note" class="muted small"></p></div>
+        <div class="inspector-section"><h3>Why this action?</h3><p id="decision-reason" class="plain-copy">No decision evidence recorded.</p><details class="advanced-only"><summary>Decision record</summary><pre id="decision-raw"></pre></details></div>
+        <div class="inspector-section"><h3>Recent outcomes</h3><ol id="recent-actions" class="compact-list"></ol></div>
+      </section>
+      <section class="panel weather-card" aria-labelledby="weather-title">
+        <div class="panel-heading"><div><span class="eyebrow">ENVIRONMENT</span><h2 id="weather-title">Weather &amp; exposure</h2></div><span id="weather-mode" class="tag">Natural</span></div>
+        <div class="weather-readout"><strong id="weather-type">—</strong><span id="temperature">—</span></div>
+        <div class="weather-facts"><span><b>Rain</b><em id="rainfall">—</em></span><span><b>Wind</b><em id="wind">—</em></span><span><b>Daylight</b><em id="daylight">—</em></span><span><b>Season</b><em id="season">—</em></span></div>
+        <p id="exposure" class="muted small">Exposure data unavailable.</p>
+        <details class="weather-controls"><summary>Guided weather intervention</summary><p class="muted small">Only guided worlds accept this control. The native runtime records the override and returns to natural weather after its duration.</p><div class="weather-form"><label>Duration (s)<input id="weather-duration" type="number" min="1" max="3600" value="60"></label><label>Temperature °C<input id="weather-temperature" type="number" min="-40" max="50" value="12"></label><label>Rain mm/h<input id="weather-rain" type="number" min="0" max="100" value="0"></label><label>Cloud fraction<input id="weather-cloud" type="number" min="0" max="1" step="0.1" value="0"></label><label>Wind X m/s<input id="weather-wind-x" type="number" min="-100" max="100" value="0"></label><label>Wind Y m/s<input id="weather-wind-y" type="number" min="-100" max="100" value="0"></label></div><button id="apply-weather">Apply recorded override</button><p id="weather-intervention-status" class="muted small"></p></details>
+      </section>
+    </aside>
+
+    <section class="panel charts-card" aria-labelledby="charts-title">
+      <div class="panel-heading"><div><span class="eyebrow">RECORDED SIGNALS</span><h2 id="charts-title">Mood and bodily state</h2></div><div class="chart-controls"><label>Measure <select id="chart-measure"><option value="stress">Slow stress</option><option value="valence">Mood valence</option><option value="arousal">Arousal</option></select></label><label>Window <select id="chart-window"><option value="all">All retained</option><option value="20">Last 20 samples</option><option value="60">Last 60 samples</option></select></label></div></div>
+      <p class="muted small">Immediate affect and slower mood are separate traces. Missing history is shown as a gap; this view never invents values between records.</p>
+      <svg id="mood-chart" class="chart" role="img" aria-label="Selected inhabitant mood history"></svg>
+      <div id="chart-legend" class="chart-legend"></div>
+      <details class="derived-note"><summary>What this chart means</summary><p id="chart-explanation">Stress and valence come from recorded life operations. A combined wellbeing score is not derived here.</p></details>
+    </section>
+
+    <section class="panel timeline-card" aria-labelledby="timeline-title">
+      <div class="panel-heading"><div><span class="eyebrow">AUDIT TRAIL</span><h2 id="timeline-title">Event timeline</h2></div><div class="timeline-filters"><label><input id="event-search" type="search" placeholder="Search events" aria-label="Search events"></label><label><input type="checkbox" class="event-filter" value="all" checked> All</label><label><input type="checkbox" class="event-filter" value="mood_update" checked> Mood</label><label><input type="checkbox" class="event-filter" value="tick" checked> Ticks</label><label><input type="checkbox" class="event-filter" value="death" checked> Deaths</label></div></div>
+      <div id="timeline" class="timeline-list"></div>
+    </section>
+
+    <section class="panel population-card" aria-labelledby="population-title">
+      <div class="panel-heading"><div><span class="eyebrow">POPULATION</span><h2 id="population-title">Who is here</h2></div><span id="population-warning" class="muted small"></span></div>
+      <div class="population-metrics" id="population-metrics"></div>
+      <div class="population-bars" id="population-bars"></div>
+      <p class="muted small">Biological sex, gender identity, births and deaths are shown only when the authoritative runtime records them. Unknown is not guessed.</p>
+    </section>
+
+    <section class="panel relationship-card" aria-labelledby="relationship-title">
+      <div class="panel-heading"><div><span class="eyebrow">SOCIAL STRUCTURE</span><h2 id="relationship-title">Directed relationships</h2></div><select id="relationship-measure"><option value="trust">Trust</option><option value="affection">Affection</option><option value="familiarity">Familiarity</option><option value="partnership">Partnership</option></select></div>
+      <div id="relationship-graph" class="relationship-graph" role="img" aria-label="Directed relationship graph"></div>
+      <p id="relationship-note" class="muted small">Arrow direction matters. Select an edge to compare A → B with B → A.</p>
+      <div id="relationship-detail" class="relationship-detail"></div>
+    </section>
+
+    <section class="panel advanced-panel advanced-only" aria-labelledby="advanced-title">
+      <div class="panel-heading"><div><span class="eyebrow">TECHNICAL VIEW</span><h2 id="advanced-title">Advanced telemetry</h2></div><div><button id="copy-raw" class="text-button">Copy JSON</button><button id="download-raw" class="text-button">Download</button></div></div>
+      <pre id="raw-json" class="raw-json"></pre>
+    </section>
+  </main>
+
+  <footer><span id="footer-source">Read-only telemetry from the native life world.</span><span>Observer time never advances the simulation.</span></footer>
+</body>
+</html>
